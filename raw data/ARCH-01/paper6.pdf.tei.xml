@@ -1,0 +1,1144 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">The SoftGIS approach to local knowledge</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2008-06-16">16 June 2008</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">H</forename><surname>Rantanen</surname></persName>
+							<email>heli.rantanen@tkk.fi</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Architecture</orgName>
+								<orgName type="laboratory">Laboratory of Urban Planning and Design</orgName>
+								<orgName type="institution">Helsinki University of Technology</orgName>
+								<address>
+									<postBox>P.O. Box 1300</postBox>
+									<postCode>02015</postCode>
+									<settlement>TKK</settlement>
+									<country key="FI">Finland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">M</forename><surname>Kahila</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Centre for Urban and Regional Studies</orgName>
+								<orgName type="institution">Helsinki University of Technology</orgName>
+								<address>
+									<postBox>P.O. Box 9300</postBox>
+									<postCode>02015</postCode>
+									<settlement>TKK</settlement>
+									<country key="FI">Finland</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">The SoftGIS approach to local knowledge</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2008-06-16">16 June 2008</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6207E43ED3A74E712D978E9240E8FD64</idno>
+					<idno type="DOI">10.1016/j.jenvman.2007.08.025</idno>
+					<note type="submission">Received 30 September 2006 Received in revised form 30 April 2007 Accepted 29 August 2007</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-09-02T20:29+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>SoftGIS Urban planning Participation Local knowledge Geographical information system</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The aim of the SoftGIS approach is to support urban planning processes and decision-making. SoftGIS aims to present a more comprehensive understanding of local knowledge. This is realized by the mapping of local knowledge and its integration into urban planning practices. SoftGIS is a multidisciplinary approach where different Internet-and GIS-based methods are developed to gather and process local knowledge. In this article we present the theoretical background to the SoftGIS approach as well as two case studies.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>In urban planning processes the planners utilize information in various forms. Knowledge produced by different stakeholders and organizations is gathered and managed to support decision-making and planning of the physical environment. Knowledge of the residents' perceived quality and use of their living environment is particularly needed <ref type="bibr" target="#b29">(Kytta ¨and Kahila, 2006)</ref>. In our paper the experiential ''soft'' knowledge of the residents is included in the definition of local knowledge. Traditionally this local knowledge is often considered to be ''opinion'' or ''belief'' and thereby dismissed, since the planning system still relies mostly on ''hard'' technical knowledge and professional expertise <ref type="bibr" target="#b7">(Fischer, 2000;</ref><ref type="bibr" target="#b38">Puustinen, 2004)</ref>. It also seems that the methods of collecting and processing local knowledge are inadequate, and therefore the planning process itself cannot incorporate this knowledge properly <ref type="bibr" target="#b5">(Coburn, 2003;</ref><ref type="bibr" target="#b44">Staffans, 2004)</ref>. Public meetings are still the most common way to communicate with the residents. In addition, surveys and questionnaires are used to gather residents' preferences and opinions. These methods, however, are often laborious and reach only a few residents. The aim is to develop an approach that supports participative map-based methods that utilize the Internet environment. The challenge of our study is to embed local knowledge into urban planning processes in such a way that a more comprehensive knowledge base for decision-making can be attained.</p><p>The residents' local knowledge concerning their living environment is often invisible, qualitative and vague, and thus difficult to collect. One way to improve its connection to planning is to find out the location of this knowledge, the precise nature of it, and also whether people are able to bring it forth accordingly. Spatiallyreferenced information has usually been handled in a geographical information system (GIS) that faces new challenges when managing spatial data produced by the residents. There is a need for enhanced techniques in order to gather, handle, analyse and visualize behavioural and experiential knowledge. The Internet, and especially Internet-based GIS, offer suitable platforms to develop new methods to explore local knowledge. The Internet is already seen as a central component of public participatory GIS (PPGIS) delivery <ref type="bibr" target="#b49">(Weiner et al., 2003)</ref>. Residents, however, are still usually unable to produce or govern their own soft data, as these GIS applications are still top-down by nature and interaction between the residents and the planners is often one-way <ref type="bibr" target="#b45">(Talen, 2000)</ref>.</p><p>The objective of the SoftGIS approach presented herein is to increase the understanding of how local knowledge can be gathered, examined and analysed, and how this knowledge can be processed further. In the SoftGIS approach, Internet-based methods are developed to support the use of local knowledge in research, communicative planning practices and long-span development processes. In our two case studies, local knowledge is managed in two different ways. SoftGIS research concentrates on analysing experiential knowledge of the residents with GIS and quantitative techniques, and delivering it to both academic and urban planning practices. The Development Forum functions as an open collaborative learning environment, where experiential knowledge is mapped together with the so-called formal knowledge.</p><p>SoftGIS approach is trans-and multidisciplinary by nature. The multidisciplinary roots of our work are in urban planning, organization and learning studies, geography and environmental psychology. The theoretical background of the SoftGIS approach consists of theories of communicative planning, the concepts of community of practice and theory of knowledge-building. We then examine the interaction between an individual and his living environment, and present some applicable definitions of local knowledge. The possibilities of GIS and Internet-based public participative GIS (PPGIS) in designing SoftGIS methods are studied. We introduce two SoftGIS case studies, designed and realized in Finland in the Helsinki University of Technology. Finally, we present conclusions and raise further questions of what is required to incorporate local knowledge into collaborative planning process.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Communicative turn and knowledge-building in planning</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.">Communicative turn in urban planning</head><p>The theoretical base of our study relates to communicative planning theory and the so-called communicative turn in planning. After the Second World War, planning theories emphasized functionality and objectivity. Planning was therefore seen as a rational activity, in which the outcome of the process is more important than the process itself. <ref type="bibr" target="#b46">(Taylor, 1998;</ref><ref type="bibr" target="#b31">Lapintie, 2003)</ref>. Decisions were made by comparison of alternatives given by professionals and were as such based on rational and objective reasoning <ref type="bibr" target="#b46">(Taylor, 1998)</ref>. Professionals and experts were supposed to be able to consider what the best solution was for both the citizens and the society as a whole. Values, beliefs and experiences of the residents seldom fit into this rationality.</p><p>Communicative planning is procedural by nature, which means that it underlines the content and progress of the planning process. When the process is fair and open, the stakeholders can more easily accept, as well as commit themselves to, the outcome of the process. In communicative planning, the goal-setting phase should especially be collaborative, as this stage is strongly affected by the set of values and ideas of each person involved. <ref type="bibr" target="#b16">(Healey, 1992;</ref><ref type="bibr" target="#b39">Puustinen, 2006)</ref>. Hence, communicative planning is not only a new planning praxis incorporating new communicative methods and interactive processes but also a political agenda which deals with the questions of direct and representative democracy, new practices of governance and the empowerment of the citizen <ref type="bibr" target="#b31">(Lapintie, 2003)</ref>. Consequently, there is a growing need for new skills and new ways of thinking.</p><p>The theoretical background of communicative planning is based on advocacy planning <ref type="bibr" target="#b6">(Davidoff, 1965)</ref>. Davidoff argues that planning action is not value-neutral and suggests that political and social values should be discussed and examined within the profession of planners. <ref type="bibr" target="#b9">Friedmann (1973)</ref> introduced the concept of transactive planning. He states that the knowledge of the planner is different from the knowledge of the other involved actors. The planner and the client can, however, learn from each other in a process in which the knowledge of both actors undergoes a major change. Planners must be truly connected to the local community, as a shared experience is an important foundation for trust in a planning process <ref type="bibr" target="#b10">(Friedmann, 1998)</ref>. <ref type="bibr" target="#b8">Forester (1989)</ref> emphasizes practical communicative action and the role of the planner in a planning process. Communicative planning requires that both the planners and the residents and other local stakeholders elaborate their communicative skills. In addition, basic information concerning a certain planning issue should be available for all in order to create a ''public sphere of communication'' <ref type="bibr" target="#b15">(Habermas, 1984)</ref>.</p><p>According to <ref type="bibr" target="#b19">Heng and de Moor (2003)</ref>, this Habermasian ideal of equal opportunities for social actors to communicate is partially being realized through the Internet. The Internet enables both efficient distribution of information and two-way interaction. Faceto-face meetings and conversations are certainly needed, but Internet-based tools have an increasingly important role in communicative planning processes (e.g. <ref type="bibr" target="#b21">Kangas and Store, 2003;</ref><ref type="bibr" target="#b44">Staffans, 2004;</ref><ref type="bibr" target="#b52">Yeh and Webster, 2004)</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.">Knowledge-building in a community of practice</head><p>Communicative planning theory recognizes the roles of different stakeholders in the process <ref type="bibr" target="#b17">(Healey, 1997)</ref>. It is important to understand how people act and interact during the planning process. People who are actively involved in a planning process form a group which has a common interest. <ref type="bibr" target="#b50">Wenger (1998)</ref> has introduced the concept of community of practice, which in his words consists of people who share a concern or a passion for something they dodand learn how to do it better as they interact regularly. The concept includes a domain of interest, which reflects an area of knowledge that brings the community together. Community is a group of people for whom the domain of interest is relevant. Finally, practice is the body of knowledge, methods, tools, stories, etc. that members share and develop together <ref type="bibr" target="#b50">(Wenger, 1998)</ref>. In our study, people are brought together by a common interest in issues concerning their living environment, e.g. zoning, construction projects, traffic arrangements and environmental quality, thus forming a loose community of practice.</p><p>According to <ref type="bibr" target="#b50">Wenger (1998)</ref>, acting in a community of practice can be seen as a learning process in a ''social learning system''. Over time, the actors in a community of practice accumulate knowledge in their domain. This has a positive effect on their ability to act individually and collectively. It takes time and continuous interaction for a community of practice to develop a shared practice through a repertoire of resources like experiences, stories, tools, etc. <ref type="bibr" target="#b50">(Wenger, 1998)</ref>. The communities use all kinds of tools to support their activities. These can be meetings or print media, but also Internet-based tools such as wikis, blogs, RSS and others. What is interesting is the integration of these technologies into local activities and processes <ref type="bibr" target="#b51">(Wenger et al., 2005)</ref>.</p><p>Urban planning can be considered as a huge knowledgebuilding process that includes multiple stakeholders who communicate and learn from each other <ref type="bibr" target="#b44">(Staffans, 2004)</ref>. <ref type="bibr" target="#b42">Scardamalia and Bereiter (2003)</ref> point out that knowledge-building occurs when a community learns to assimilate their ideas into larger contexts. Knowledge-building recognizes the importance of creating new knowledge: it is the production and continual improvement of ideas which have value to a community, and it happens when available public knowledge is worked and used together on common forums like meetings or virtual environments <ref type="bibr" target="#b42">(Scardamalia and Bereiter, 2003)</ref>. Physical environment is an important domain of interest for the residents. In everyday life, people ''shape places'' by sharing common places and discussing them <ref type="bibr" target="#b17">(Healey, 1997)</ref>. We therefore need to study the interaction of people and their physical environment more closely.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Place-based experiences and local knowledge</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.">Interaction between individuals and the living environment</head><p>The traditional approach to humanistic geography emphasizes experiences, awareness and knowledge of the individuals and their conditions, without forgetting physical places <ref type="bibr" target="#b25">(Kwan, 2004)</ref>. Environmental psychology studies the transaction and interaction between humans and environment <ref type="bibr" target="#b0">(Altman and Rogoff, 1987</ref>). An interdisciplinary framework needs to be built and applied for an understanding of the complex relationship between an individual and the environment <ref type="bibr" target="#b20">(Horelli, 2002)</ref>. Disciplines of environmental psychology, human geography and geographical information systems offer a promising and comprehensive base from which it can be achieved.</p><p>In environmental psychologydand especially in transactional frameworkdthe person's relationship to the environment is considered as a dynamic and interactive system <ref type="bibr">(Kytta ¨, 2003)</ref>. According to Kytta ¨, humans are active agents who can have an influence on their environment and who are also able to shape it by, e.g., building their own gardens or creating pathways in the woods. On the other hand the material, social and cultural environments have an influence on people and their behaviour <ref type="bibr">(Kytta ¨, 2003)</ref>. <ref type="bibr">Kytta ¨(2003)</ref> and <ref type="bibr" target="#b18">Heft (1997)</ref> have introduced the notion of affordances to environmental psychology. Through this, their aim is to bring back the actual physical environment to the field of environmental psychology, where the active role of the physical environment has often been paradoxically ignored. The SoftGIS research also focuses on this point.</p><p>An affordance is not a characteristic of the environment, nor a characteristic of the individual, but rather something in between. The concept can be expanded to include also the emotional, social and socio-cultural opportunities and restrictions that an environment offers <ref type="bibr">(Kytta ¨, 2003</ref><ref type="bibr" target="#b27">(Kytta ¨, , 2004))</ref>. Affordance has traditionally referred to the perceived opportunities and restrictions concerning the actions of a person in a given environment <ref type="bibr" target="#b13">(Gibson, 1979)</ref>. Objects and other things are not perceived as such but rather as functionally meaningful units <ref type="bibr">(Kytta ¨, 2003</ref><ref type="bibr" target="#b27">(Kytta ¨, , 2004))</ref>.</p><p>The connections between the physical environment, the perceived environmental quality and the personal ''quality factors'' of the inhabitants are still something of an unknown quantity. It is quite well recognized what these quality factors are, e.g., closeness to nature, peacefulness, quietness and a sense of security and safety. We do not, however, know how reachable they are and their exact location. The tracking of quality factors of the residents in an urban environment results in the formation of a ''quality network''. Urban environment can be seen as a functional system, consisting of a multitude of individual quality networks, where each inhabitant can create her/his own quality network according to preference, abilities, personal projects, mobility possibilities, as well as restrictions and dangers <ref type="bibr" target="#b28">(Kytta ¨and Kahila, 2005</ref><ref type="bibr">, 2006)</ref>. Mapping of the quality networks of the residents and their behaviour in their living environment generates new kinds of spatial local knowledge. In the following section we describe the versatile definitions of local knowledge and focus on how these definitions are applied to planning.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.">Local knowledge</head><p>It has been argued that what differentiates knowledge from information is that knowledge presupposes values and beliefs and is closely connected with action <ref type="bibr" target="#b47">(Tsoukas, 2006)</ref>. The definition of knowledge thereby emphasizes the meaning of human involvement. Yet there also seems to be a difference between ''hard' <ref type="bibr">' and ''soft'' knowledge (Scho ¨n, 1996)</ref>. The rationalist and technologic approach to knowledge underlines exact information and the unambiguous and objective nature of hard knowledge. This knowledge is often formally articulated and stored in, for example, registers. On the other hand, local knowledge is often considered soft. It is personal knowledge <ref type="bibr" target="#b37">(Polanyi, 1998)</ref> and thus subjective and based on experiences and perceptions. <ref type="bibr" target="#b9">Friedmann (1973)</ref> distinguishes the direct personal knowledge of the residents or clients from the indirect or processed knowledge of the professionals. Authentic and personal dialogue between these actors is necessary for ''joining knowledge to action'' <ref type="bibr" target="#b9">(Friedmann, 1973)</ref>. Sometimes, however, the local knowledge of the residents is not considered knowledge at all: it is seen as an opinion or belief without sufficient scientific or rational base <ref type="bibr" target="#b7">(Fischer, 2000;</ref><ref type="bibr" target="#b39">Puustinen, 2006)</ref>. This conception of local knowledge and its status in planning is common among practising planners. It is, however, important to understand that the planners, too, should acknowledge the versatile nature of their own knowledge: it is sometimes hard to distinguish formal expert knowledge from experiential knowledge, in the expert's opinion <ref type="bibr" target="#b22">(Khakee et al., 2000)</ref>.</p><p>Local knowledge has also been described as ''traditional'' or ''indigenous'' <ref type="bibr" target="#b7">(Fischer, 2000)</ref>. It was applied in anthropology and studies among native people, mostly in undeveloped countries. <ref type="bibr" target="#b11">Geertz (1983)</ref> has emphasized the ''cultural frames of knowing'', seeing things from the native's point of view, through their own experiences. The phenomenological approach to local knowledge originates in humanistic geography and concentrates on the identity and meaning of place. Places are meaningful, as they have identities and meanings for the inhabitants <ref type="bibr" target="#b40">(Relph, 1976)</ref>. Local knowledge can also be social, when it includes experiential and situated knowledge of the local contexts of actions and settings in one's environment <ref type="bibr" target="#b5">(Coburn, 2003;</ref><ref type="bibr" target="#b35">Pa ¨iva ¨nen et al., 2005)</ref>. Consequently, social knowledge may be quantitative (statistics, employment rates, etc.) and qualitative (meanings and values of the individuals and communities). It can also constitute knowledge of the potentials and risks of certain places.</p><p>Local knowledge has often referred to the concept of tacit knowledge <ref type="bibr" target="#b37">(Polanyi, 1998)</ref>. Tacit knowledge is deeply personal and intuitional knowledge that is hard or impossible to articulate. Especially in organizational theories there is a need to capture and convert the tacit into explicit, so that it can be utilized in the organization <ref type="bibr" target="#b33">(Nonaka and Takeuchi, 1995)</ref>. This definition of tacit knowledge seems, however, to be theoretically weak. <ref type="bibr" target="#b47">Tsoukas (2006)</ref> argues that capturing, translating and converting tacit knowledge into an explicit form is not possible. It can only be displayed through interaction. In our research, we emphasize the fact that local knowledge is produced in diverse interactions, and therefore there is a need to find new ways to collect and connect knowledge. In any case, both the knowledge and the descriptions of actions gathered from the people should be analysed closely. Their connections and contexts should also be described, as the diversity and richness of the phenomena will not otherwise open up <ref type="bibr" target="#b2">(Barth, 2002)</ref>. Accordingly, in our study local knowledge is spatially referenced personal knowledge. After this knowledge has been gathered, it undergoes a processdcollaborative, scientific or otherdin which it is analysed and formed. After this it can be expressed, discussed and processed further.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Mapping local knowledge</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1.">GIS and experience-based data</head><p>Spatially referenced information is mostly managed with a geographical information system (GIS). GIS has its roots in different disciplines like geography, computer science, spatial planning and census administration. GIS is generally used to collect, handle, store and visualize spatial data. With the help of GIS it is possible to build digital maps and to analyse spatial data <ref type="bibr" target="#b14">(Goodchild, 2000;</ref><ref type="bibr" target="#b23">Kraak, 2001)</ref>. Overall, in research and in other tasks GIS facilitates spatial thinking throughout the entire process <ref type="bibr" target="#b36">(Pavlovskaya, 2006)</ref>.</p><p>The context also influences the way GIS is studied. It is still quite common for GIS to be seen only as a technical tool and therefore the focus is on its technical development. GIS is considered as software equipped with scientific tools that are developed for spatial analysis. To expand this view, it is important to make a distinction between research utilizing traditional GIS methods and research on the use of GIS <ref type="bibr" target="#b34">(Nyerges et al., 2002)</ref>. An important notion is that GIS should not be considered as a static but rather as a dynamic system that is constantly under reconstruction <ref type="bibr" target="#b36">(Pavlovskaya, 2006)</ref>.</p><p>GIS is mostly used as a quantitative research method. It has relied heavily on hard, formal information because it has usually been more readily available. GIS is at its best when dealing with quantitative data that is considered unambiguous, measurable and precise <ref type="bibr" target="#b36">(Pavlovskaya, 2006)</ref>. The growing need for integrating qualitative data into GIS has raised questions concerning the usability of GIS in mapping soft knowledge <ref type="bibr" target="#b24">(Kwan, 2000</ref><ref type="bibr" target="#b25">(Kwan, , 2004;;</ref><ref type="bibr" target="#b36">Pavlovskaya, 2006)</ref>.</p><p>Location is of great importance in any pattern of human behaviour, and the use of GIS in the examination of social spatial patterns is crucial <ref type="bibr" target="#b48">(Vaattovaara, 2001)</ref>. GIS is conceptualized differently when one tries to handle experiential or behavioural geographical information. Currently GIS is widely used in mapping spatial patterns and distributions. Far fewer examples exist of mapping non-measurable properties of place, such as human experience, social hierarchies, power relations and theoretical relationships <ref type="bibr" target="#b36">(Pavlovskaya, 2006)</ref>. Recently GIS has been utilized in analysis and in theoretical understanding of disaggregate human spatial behaviour, e.g. travelling, migration, residential mobility and decision-making <ref type="bibr" target="#b24">(Kwan, 2000)</ref>. Despite this, experiential knowledge is still new to the GIS environment. Recently, GIS has been used as a tool in collaborative planning processes too. It has proved to be useful in managing different kinds of information, though there is a lot to do in order to utilize experiential knowledge more effectively.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2.">Interactive and public participative GIS</head><p>At the moment, there are quite a few Internet-based experiments that, at some level, connect public participation and GIS (PPGIS). In some studies in the PPGIS field, the starting-point has been application-driven and so the theoretical base of these experiments has sometimes been inadequate <ref type="bibr">(Balram and Dragic ´evic</ref> ´, 2006). In the SoftGIS approach, besides developing applications and tools, the aim is to give theoretical background to the study.</p><p>Many local government agencies have a long history of using GIS and spatial information in their urban planning tasks. Some have also been supportive in facilitating citizen access to spatial data and GIS. In addition to the authorities, community groups and nongovernmental organizations have started to use GIS <ref type="bibr" target="#b12">(Ghose and Elwood, 2003)</ref>. In research and development projects, GIS is increasingly used as a platform that connects different actors in a participation process. Professional planners, decision-makers, researchers and residents are interested in how GIS can be a part of community participation in the context of neighbourhood revitalization, urban planning and decision-making <ref type="bibr" target="#b49">(Weiner et al., 2003)</ref>. GIS can also be societal, as citizens and stakeholder groups share and access a common database <ref type="bibr" target="#b14">(Goodchild, 2000)</ref>. The complexity of societal issues makes collaborative GIS research and application quite usable in planning and in decision-making <ref type="bibr" target="#b1">(Balram and Dragic ´evic ´, 2006)</ref>.</p><p>Today, Internet-based GIS applications reach at low cost large groups of people and help them to familiarize themselves with geographical information. The recent development of free open source GIS applications has produced numerous map applications, ''wiki maps'', community maps, neighbourhood maps, etc. Anyone can explore spatial information with an easy-to-use interface. Map applications that are, however, controlled by the citizens themselves or that allow people to produce spatial information are still rare <ref type="bibr" target="#b49">(Weiner et al., 2003)</ref>.</p><p>Internet-based PPGIS aims to facilitate, mediate and empower, and through this builds up the capacity of the local community <ref type="bibr" target="#b4">(Carver et al., 2001;</ref><ref type="bibr" target="#b32">McCall, 2003)</ref>. From the point of view of local development projects, PPGIS can improve their outcome and scope for action, and it can work as a mediator between the projects and local priorities <ref type="bibr" target="#b32">(McCall, 2003)</ref>. There are still, however, many practical and organizational problems to solve. PPGIS initiatives have been criticized for not having an attachment to true decisionmaking. There are often separate projects with no continuity, since the projects are realized and governed by outsiders instead of local actors <ref type="bibr" target="#b32">(McCall, 2003)</ref>. The challenge is to link PPGIS more efficiently to participatory processes in an area as a whole.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3.">SoftGIS approach</head><p>The SoftGIS approach relies on collecting, analysing and delivering soft knowledge produced by the residents and other local actors in a certain area. This soft knowledge is based on residents' personal experiences of their living environment, and it thereby forms a special place-based layer of memories, meanings and values. The SoftGIS approach uses Internet-based methods in which interactive maps have a central role. In SoftGIS, planning is seen as a participative and communicative process. The aim is to incorporate local knowledge into the planning process and aggregate and support it in this way. Appropriate tools support communicative transactions during the different phases of the planning process (see Fig. <ref type="figure" target="#fig_0">1</ref>). When the tools are designed, usability and bottom-up approach are essential. In consequence, easy-to-use interfaces are built for people who are not familiar with GIS. Open source software<ref type="foot" target="#foot_0">foot_0</ref> is utilized in order to build affordable and flexible solutions. After local knowledge is gathered, it can be analysed and used by researchers and urban planners.</p><p>In this paper, the SoftGIS approach is applied in two ways:</p><p>In SoftGIS research, a web questionnaire with a mapping tool is developed for the residents to map the experiential knowledge of their living environment. The questionnaire is a website  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">Case studies</head><p>The SoftGIS approach has been developed in Helsinki University of Technology (see acknowledgements). The method has been inspired by several research projects utilizing Internet-based map applications that have concentrated on collecting local knowledge from local actors about their living environment. Among the first ones in Finland was a Planning Game for Children,<ref type="foot" target="#foot_1">foot_1</ref> which was an Internet-based design game that mediated children's environmental visions <ref type="bibr">(Kytta ¨et al., 2003)</ref>. Another was an application that studied school surroundings and art. <ref type="foot" target="#foot_2">3</ref> An early example was also the My Maunula -map, in which the residents in one neighbourhood in Helsinki could comment on their living environment. <ref type="foot" target="#foot_3">4</ref> They also had the possibility of seeing the mapped comments of other inhabitants. In Turku<ref type="foot" target="#foot_4">foot_4</ref> an application was launched to support cooperation between residents and city authorities. Abroad the most often cited example is the Virtual Slaithwaite project developed in Leeds University <ref type="bibr" target="#b4">(Carver et al., 2001)</ref>. Another important example has been the study of argumentation maps, in which maps and supportive discussions are linked with the help of information technology <ref type="bibr" target="#b41">(Rinner, 2001)</ref>. 5.1. SoftGIS in researchdthe case of Ja ¨rvenpa ¨a The first SoftGIS research was realized in Finland in the city of Ja ¨rvenpa ¨a ¨(see Fig. <ref type="figure" target="#fig_2">2</ref>). The study was carried out in late 2004 and it was open for three months (October-December 2004). Technically the application was based on JavaScript and HTML. Compared with traditional surveys the Internet allowed us to include new functions to the questionnaire (e.g. mapping tool) and to pay more attention to the design and usability of the method. The questionnaire was made easy-to-use and suitable for all age groups. Special attention was paid to the mapping tool and to the quality of the maps. Aerial photos in a scale of 1:4000 were used and the orientation was improved by highlighting of houses and landmarks and the addition of street names. Owing to technical restrictions, it was only possible to map point data. In this application, respondents did not have a chance to view other respondents' answers because this could have affected the reliability of the results as well as respondents' answers.</p><p>In the following sections we will show how versatile these mapped ''soft'' data are and introduce a new way to study residents' experiences. We processed the gathered soft data with traditional quantitative and qualitative research methods and GIS techniques. This enabled us to study experiential knowledge in diverse ways and to combine it with statistical census data and data of built-up areas. Some of our results are highlighted in this paper. They are presented in detail in the report by <ref type="bibr" target="#b29">Kytta ¨and Kahila (2006)</ref> and on our website. <ref type="foot" target="#foot_5">6</ref>In Ja ¨rvenpa ¨a ¨427 inhabitants filled in the Internet questionnaire. The distribution of respondents according to different background variables did not differ from the usual respondent profile of studies in this field. Respondents defined their personal quality factors (what they preferred and disliked) as regards the living environment. Out of these data, we classified quality factors into 15 positive and 14 negative factor classes. After defining positive and negative factors, the respondents located them on the map of Ja ¨rvenpa ¨a ¨. 241 respondents located 627 positive quality factors and 514 negative ones altogether (see Fig. <ref type="figure" target="#fig_3">3a</ref> and<ref type="figure">b</ref>). In addition to these, we asked the respondents to map their daily routines (shops, day care centres, schools, etc.). Every mapped point had different attributes and location information. In this sense, they all had a different story to tell. These different points are scattered throughout the city of Ja ¨rvenpa ¨a ¨. Already in macro-scale it is interesting to see how these points cluster, what kinds of hotspots can be found and to consider the possible reasons for this clustering or scattering. Positive points do not cluster as much as the negative ones.</p><p>Coordinate points of homes as well as quality factors allowed us to count the distance between the respondent's home as well as the distance between quality and everyday places. These locations create a kind of anchor-point in every individual's quality network. It was interesting to see that respondents' networks were actually quite small. Distances between homes and quality places were, in general, very short. In current urban planning discussion, however, people are assumed to move and travel more and be less attached to their immediate surroundings <ref type="bibr" target="#b3">(Bauman, 1998)</ref>. Sixty-eight percent of all positive points and 51% of negative ones were located less than 1 km from home. Most basic services were located near home. Only workplaces were located further away.</p><p>Combining soft knowledge with GIS gave us a chance to study residents' perceptions in relation to the actual structure of the city. We implemented different GIS techniques (e.g. buffering) as a means to utilize available geographical information (e.g. census data, data of housing, information on parks and forests). We came up with interesting results in relation to the density of city structure and the actualization of the residents' quality factors. Compact city structure seems to weaken the actualization of residents' quality factors. On the other hand, the degree of the actualization of perceived quality factors was associated with the perceived health and wellbeing of the respondents.</p><p>By collecting local knowledge efficiently, we receive data that differ from the register-based formal data. With the help of GIS techniques we can combine both types of information and examine how different factors within the physical environment affect and relate to experiences, preferences, behaviour and perceived health and wellbeing. This kind of analysed and spatially referenced information of residents' experiences is easy to transfer into planning practices and decision-making processesdand it also offers comparable information for different cities and areas.</p><p>In autumn 2006 new SoftGIS applications were opened in four new communities in Finland. In Turku, a special SoftGIS was launched to study the quality factors of children and youths.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2.">Development Forum of Espoon keskus</head><p>With its 35,000 inhabitants Espoon keskus is one of the five subcentres of the City of Espoo, which is the second largest city in Finland, situated next to the capital city of Helsinki. Today Espoon keskus is undergoing many kinds of development projects. The problem is that even though most information concerning the area today is digital and distributed via the Internet it is hard to find since it is so dispersed.</p><p>The aim of the Development Forum<ref type="foot" target="#foot_6">foot_6</ref> is to bring together different kinds of local knowledge, both formal expert knowledge of the authorities, and informal experiential knowledge of the residents, concentrating on issues dealing with physical environment and planning. The Development Forum is designed and is maintained in coordination with the municipal authorities, local residents' associations and academic researchers. It is partially based on the experiences received from the My Maunula map, where people commented on their physical environment by mapping pleasant, unpleasant and unsafe places. The Development Forum functions as a shared platform and storage facility for all kinds of local knowledge. It offers a repertoire of resources for its users, who can then form a new community of practice. It uses a content management system (Joomla<ref type="foot" target="#foot_7">foot_7</ref> ), which offers tools for data creation, moderation and publishing. Components like discussion forums, news sections and advertisement boards are also used. Picture galleries are maintained by local activists. Spatially referred data are linked to articles and discussion topics in other parts of the site. The most important planning processes like the renewal of the administrative centre of Espoon keskus are stored as ''process charts'', which give context and background to comments and other information found in the maps.</p><p>At the moment there are two mapping applications which were realized by MapServer software. MapServer is an open source development environment for building online map applications.<ref type="foot" target="#foot_8">foot_8</ref> A Local Knowledge Map is a map application in which local data are linked to places either as points or areas. Administrators of the site can add new data into the system with an easy (point and click) system. Links to official information concerning a certain area can be combined with statements by the residents' associations, news from local magazines or photographs. The map interface brings them into the same local layer. A user can zoom into a map, select a topic (ongoing, archived or future zoning, statements of the associations, etc.) and submit a search. The application shows the results both as spots and areas on the map and as a list. When a certain spot on a map is clicked, the system shows the head-notes of all the articles that have been attached to it (see Fig. <ref type="figure" target="#fig_4">4</ref>). Depending on the type of the searched information, the user can decide which links to follow further.</p><p>The commentary map offers a platform for local mapping. Users can put different kinds of symbols onto a map: negative comments, positive comments and ideas (see Fig. <ref type="figure" target="#fig_5">5</ref>). A comment can be attached to each symbol. As the user saves his/her comments at the end of a session, some background information is requested. Everyone can survey the comments by using these variables. It is also possible to produce simple theme maps with time-related spatial information. If a comment or an idea on a map raises issues, those can be linked to messages at the discussion forum. All commentary data can be transferred into the municipality's GIS, and a certain ''community layer'' is formed. A planner can then view these local data, and new in-depth analyses can be made.</p><p>The possibility of tailoring a personal spatial questionnaire with a Mapping Tool by means of a commentary map is going to be realized, too. Many projects benefit from the chance to make their own commentary maps. When we were talking to planners about the results of an earlier project in Maunula, it seemed that timelimited surveys on certain planning issues are the most wanted ones. For example, a questionnaire combined with a commentary map could be of use during the early phases of planning. Commentary maps preserve all information, which makes it possible to monitor the changes in the area in a very simple way. Of course, the spots on the map do not represent the final ''truth'' of the area, but they can give some important weak signals or inside information which otherwise might be neglected. Monitoring the changes in the map can help planners and decision-makers to recognize what is going on in the area in general.</p><p>The aim of our study in Espoon keskus is to find out what kind of local knowledge the Development Forum produces, and how it is utilized in planning processes. Another question is whether the Development Forum will become a platform that enhances new collaborative practices as well as knowledge-building among the stakeholders. The site is designed, maintained and controlled by a multi-actor body of local stakeholders like residents' associations, representatives of the city of Espoo, entrepreneurs and people from other projects. After the project, local actors will continue to govern the site independently, in cooperation with the authorities and the researchers. In this way, a new collaborative way of managing local knowledge is tested. The Development Forum was opened in October 2006, and its results will be published in 2008.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.">Conclusion</head><p>The motivation for the development of the SoftGIS approach has been derived from the practical and organizational problems relating to the handling of the residents' local knowledge in a planning process. This soft knowledge has been gathered and studied extensively, but it has not been systematically attached to places. We emphasize that attaching soft knowledge to places makes it more usable. Furthermore, we argue that local knowledge would be taken into account more seriously in planning institutions only if it is processed alongside other geographical information. In this paper we have shown two different ways to collect and process local knowledge. Mapping local knowledge makes previously unmapped phenomena visible and therefore more usable in decision-making.</p><p>The SoftGIS approach aims to support the planning process from the goal-setting phase to follow-up and evaluation. Local knowledge helps authorities to identify and define local needs concerning environmental issues <ref type="bibr" target="#b7">(Fischer, 2000)</ref>. When the residents are involved in the process, they are more committed to the outcome of it. We aim to enhance the possibilities to influence planning in its early phasedand even before the official process has begun. In this sense, communicative planning should be seen as a learning process where knowledge is altered. New local knowledge can thus be created.</p><p>Because local knowledge is very versatile, it can be processed in different ways. It can be analysed with different scientific methods or handled in open forums where it is open to discussion. When local knowledge is processed in interaction with other stakeholders, the knowledge changes and evolves into a more comprehensive understanding of what is crucial and important locally. On the other hand, when analysed soft knowledge is studied together with hard knowledge, the results help us to seek answers to topics concerning local needs and problems. We argue that there is a need for multi-level and diverse knowledge in the current planning process.</p><p>The success and impact of the SoftGIS approach in planning processes is dependent, however, on the willingness of the planners and decision-makers to use this knowledge and these methods in their work. Learning from each other requires cooperation, open dialogue, willingness to accept information and ability to change earlier assumptions and decisions <ref type="bibr" target="#b44">(Staffans, 2004)</ref>. The planners and decision-makers still have the power to choose what knowledge to use in certain situationsdand also how to use it. This choice is based on their own professional and individual values. Consequently, we should study further how local knowledge is really assimilated in planning practices and decisionmaking. The SoftGIS approach promotes, but also requires, an open planning process supported by new methods. Local knowledge should be valued, produced and utilized by both the planning professionals and the residents.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .</head><label>1</label><figDesc>Fig.1. SoftGIS approach to urban planning process. Urban planning is presented as a continuous process where time, place and people form a variable centre (continuously developing area). With the help of SoftGIS methods, planning projects (e.g. zoning and traffic planning) interact with the local development process in certain places at a certain time, thus affecting it and producing new knowledge for the process.</figDesc><graphic coords="4,302.91,66.73,249.11,224.33" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head/><label/><figDesc>where respondents proceed step by step by answering open and closed questions about their perceptions of their living environment. The data produced by residents are analysed in quantitative and qualitative methods by researchers. With the help of GIS techniques, the perceptions of the residents are combined with the information of the register-based data concerning the physical structure of the city. The outcome of the analysis and part of the raw data are delivered to the local planners. When we study this behavioural knowledge together with hard knowledge, we are able to produce new results for planning practices and decision-making processes with regard to how the physical environment affects the behaviour and experiences of the inhabitants. The Development Forum functions as a local collaborative learning environment, where interactive maps are combined with a content management system. The residents' experiential knowledge is mapped and presented on an open platform together with formal or hard knowledge produced by the authorities. The focus is on the process of creating and altering local knowledge in a common forum which can be accessed by anyone and which is governed by local actors. The bottom-up approach includes an easy-to-use interface and constant cooperation with local users. Tools for independent knowledge-building and content management are also offered. Local authorities with their expert knowledge about planning issues can contribute to the discussion forums. Thus the usersdresidents, other local actors and plannersdform a new kind of community of practice.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 2. Interface of SoftGIS Ja ¨rvenpa ¨a ¨.</figDesc><graphic coords="5,103.52,66.73,398.13,355.63" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 3 .</head><label>3</label><figDesc>Fig. 3. Positive(a) and negative (b) quality factors in Ja ¨rvenpa ¨a ¨.</figDesc><graphic coords="6,34.41,66.73,248.02,579.57" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 4 .</head><label>4</label><figDesc>Fig. 4. Local Knowledge Map.</figDesc><graphic coords="7,61.63,66.73,481.99,304.67" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 5 .</head><label>5</label><figDesc>Fig. 5. Commentary map.</figDesc><graphic coords="8,57.37,66.73,470.83,366.46" type="bitmap"/></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="1" xml:id="foot_0"><p>Software whose source code is free and made available to the public (www. wikipedia.org).H. Rantanen, M. Kahila / Journal of Environmental Management 90(2009) 1981-1990  </p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2" xml:id="foot_1"><p>www.kaupunginosat.net/seikkailu/.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="3" xml:id="foot_2"><p>www.taideareena.fi.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="4" xml:id="foot_3"><p>www.kaupunginosat.net/maunula/kartta/.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="5" xml:id="foot_4"><p>http://map3.centroid.fi/avointurku/.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="6" xml:id="foot_5"><p>www.softgis.fi.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="7" xml:id="foot_6"><p>www.espoonkeskus.fi.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="8" xml:id="foot_7"><p>See: http://www.joomla.org.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="9" xml:id="foot_8"><p>See: http://mapserver.gis.umn.edu.</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>The research reported in this paper has been conducted in the collaborative OPUS research project (<ref type="url" target="http://opus.tkk.fi">http://opus.tkk.fi</ref>) at <rs type="institution">Helsinki University of Technology</rs>. The scientific partners in OPUS are the <rs type="institution">Laboratory of Urban Planning and Design, Department of Architecture</rs> and the <rs type="institution">Enterprise Simulation Laboratory Simlab, Department of Computer Science and Engineering</rs>. The authors are grateful for the creative research effort of the whole multidisciplinary OPUS research team, which has made this paper possible. We cannot thank <rs type="person">Aija Staffans</rs> and <rs type="person">Marketta Kytta ¨enough</rs> for their contribution to this paper.</p></div>
+			</div>			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">World views in psychology: trait, transactional, organismic and transactional perspectives</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Altman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Rogoff</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Handbook of Environmental Psychology</title>
+		<editor>
+			<persName><forename type="first">D</forename><surname>Stokols</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">I</forename><surname>Altman</surname></persName>
+		</editor>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>Wiley</publisher>
+			<date type="published" when="1987">1987</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="7" to="40"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Collaborative Geographic Information Systems: Origins, Boundaries, and Structures</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Balram</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dragic ´evic ´</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Collaborative Geographic Information Systems</title>
+		<editor>
+			<persName><forename type="first">S</forename><surname>Balram</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">S</forename><surname>Dragic ´evic ´</surname></persName>
+		</editor>
+		<meeting><address><addrLine>UK</addrLine></address></meeting>
+		<imprint>
+			<publisher>Idea Group Publishing</publisher>
+			<date type="published" when="2006">2006</date>
+			<biblScope unit="page" from="1" to="22"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Toward the richer description and analysis of cultural phenomena</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Barth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Anthropology Beyond the Culture</title>
+		<editor>
+			<persName><forename type="first">R</forename><surname>Fox</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">B</forename><surname>King</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Oxford</addrLine></address></meeting>
+		<imprint>
+			<publisher>Berg</publisher>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Bauman</surname></persName>
+		</author>
+		<title level="m">Globalization. The Human Consequences</title>
+		<meeting><address><addrLine>Cambridge</addrLine></address></meeting>
+		<imprint>
+			<publisher>Polity Press</publisher>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Public participation, GIS, and cyberdemocracy: evaluating on-line spatial decision support systems</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Carver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Evans</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kingston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Turton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Environment and Planning B: Planning and Design</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="907" to="921"/>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Bringing Local Knowledge into Environmental Decision Making: Improving Urban Planning for Communities at risk</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Coburn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Planning Education and Research</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="420" to="433"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Advocacy and pluralism in planning</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Davidoff</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">A Reader in Planning Theory</title>
+		<editor>
+			<persName><forename type="first">A</forename><surname>Faludi</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Oxford</addrLine></address></meeting>
+		<imprint>
+			<publisher>Pergamon Press</publisher>
+			<date type="published" when="1965">1965. 1973</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<author>
+			<persName><forename type="first">F</forename><surname>Fischer</surname></persName>
+		</author>
+		<title level="m">Citizens, Experts, and the Environment. The Politics of Local Knowledge</title>
+		<meeting><address><addrLine>Durham and London</addrLine></address></meeting>
+		<imprint>
+			<publisher>Duke University Press</publisher>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<author>
+			<persName><forename type="first">J</forename><surname>Forester</surname></persName>
+		</author>
+		<title level="m">Planning in the Face of Power</title>
+		<meeting><address><addrLine>Berkeley and Los Angeles</addrLine></address></meeting>
+		<imprint>
+			<publisher>University of California Press</publisher>
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<monogr>
+		<title level="m" type="main">Retracking America. A Theory of Transactive Planning</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Friedmann</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1973">1973</date>
+			<publisher>Anchor Press/Doubleday</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">The new political economy of planning: the rise of the civil society</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Friedmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Cities for Citizens</title>
+		<editor>
+			<persName><forename type="first">M</forename><surname>Douglass</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">J</forename><surname>Friedmann</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Chichester</addrLine></address></meeting>
+		<imprint>
+			<publisher>John Wiley &amp; Sons</publisher>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<title level="m" type="main">Local Knowledge. Further Essays in Interpretative Anthropology</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Geertz</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1983">1983. 2000</date>
+			<publisher>Basic Books</publisher>
+			<pubPlace>USA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Public participation GIS and Local Political Context: Propositions and Research Directions</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ghose</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Elwood</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">URISA Journal</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="17" to="24"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>APA II</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<title level="m" type="main">The Ecological Approach to Visual Perception</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Gibson</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1979">1979</date>
+			<publisher>Houghton Mifflin</publisher>
+			<pubPlace>London</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">The current status of GIS and spatial analysis</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">F</forename><surname>Goodchild</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Geographical Systems</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="5" to="10"/>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">The Theory of Communicative Action</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Habermas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Reason and the Rationalization of Society</title>
+		<meeting><address><addrLine>Cambridge</addrLine></address></meeting>
+		<imprint>
+			<publisher>Polity Press</publisher>
+			<date type="published" when="1984">1984</date>
+			<biblScope unit="volume">1</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Planning Through Debate: The Communicative Turn in Planning Theory</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Healey</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Town Planning Review</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="143" to="162"/>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Collaborative Planning</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Healey</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Shaping Places in Fragmented Societies</title>
+		<meeting><address><addrLine>Hampshire and London</addrLine></address></meeting>
+		<imprint>
+			<publisher>McMillan Press</publisher>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">The relevance of Gibson's ecological approach to perception for environment-behavior studies</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Heft</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Environment, Behavior and Design</title>
+		<editor>
+			<persName><forename type="first">G</forename><forename type="middle">T</forename><surname>Moore</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Marans</surname></persName>
+		</editor>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>Plenum Press</publisher>
+			<date type="published" when="1997">1997</date>
+			<biblScope unit="volume">4</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">From Habermas's communicative theory to practice on the internet</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Heng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>De Moor</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Information Systems Journal</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="331" to="352"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">A Methodology of Participatory Planning</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Horelli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Handbook of Environmental Psychology</title>
+		<editor>
+			<persName><forename type="first">R</forename><surname>Bechtel</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">A</forename><surname>Churchman</surname></persName>
+		</editor>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>John Wiley</publisher>
+			<date type="published" when="2002">2002</date>
+			<biblScope unit="page" from="607" to="628"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Internet and teledemocracy in participatory planning of natural resources management</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kangas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Store</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Landscape and Urban Planning</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page" from="89" to="101"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Expert and experiential knowledge in planning</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Khakee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Barbanente</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Borri</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Operational Research Society</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page" from="776" to="788"/>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Trends in cartography</title>
+		<author>
+			<persName><forename type="first">M.-J</forename><surname>Kraak</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Web Cartography. Developments and Prospects</title>
+		<editor>
+			<persName><forename type="first">M.-J</forename><surname>Kraak</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">A</forename><surname>Brown</surname></persName>
+		</editor>
+		<meeting><address><addrLine>London and New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>Taylor &amp; Francis</publisher>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Analysis of human spatial behavior in a GIS environment: Recent developments and future prospects</title>
+		<author>
+			<persName><forename type="first">M.-P</forename><surname>Kwan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Geographic Systems</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="85" to="90"/>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Beyond Difference: From Canonical Geography to Hybrid Geographies</title>
+		<author>
+			<persName><forename type="first">M.-P</forename><surname>Kwan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annals of Association of American Geographers</title>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="page" from="756" to="763"/>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Children in outdoor contexts. Affordances and independent mobility in the assessment of environmental child friendliness</title>
+		<author>
+			<persName><forename type="first">¨</forename><surname>Kytta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename></persName>
+		</author>
+		<ptr target="http://lib.tkk.fi/Diss/2003/isbn9512268736/isbn9512268736.pdf"/>
+	</analytic>
+	<monogr>
+		<title level="m">Teknilli-nen korkea-koulu. Yhdyskuntasuunnittelun tutkimus-ja koulutuskeskuksen julkaisuja A 28</title>
+		<meeting><address><addrLine>Otamedia, Espoo</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2003-06">2003. 6.2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">The extent of children's independent mobility and the number of actualized affordances as criteria of a child-friendly environment</title>
+		<author>
+			<persName><forename type="first">¨</forename><surname>Kytta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Environmental Psychology</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="179" to="198"/>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">The perceived quality factors of the environment and their ecoefficient accessibility</title>
+		<author>
+			<persName><forename type="first">¨</forename><surname>Kytta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kahila</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 1st European COST E-39 Conference</title>
+		<editor>
+			<persName><forename type="first">C</forename><surname>Gallis</surname></persName>
+		</editor>
+		<editor>
+			<persName><surname>Th</surname></persName>
+		</editor>
+		<meeting>the 1st European COST E-39 Conference<address><addrLine>Thessaloniki</addrLine></address></meeting>
+		<imprint>
+			<publisher>Medical &amp; Scientific Publishers</publisher>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>Forests, trees and human health and wellbeing</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">PehmoGISdelinympa ¨risto ¨n koetun laadun kartoittajana</title>
+		<author>
+			<persName><forename type="first">¨</forename><surname>Kytta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kahila</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Yhdyskuntasuunnittelun tutkimus-ja koulutuskeskuksen julkaisuja B 90</title>
+		<meeting><address><addrLine>Espoo</addrLine></address></meeting>
+		<imprint>
+			<publisher>Otamedia</publisher>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">An internet-based design game as a mediator of children's environmental visions</title>
+		<author>
+			<persName><forename type="first">¨</forename><surname>Kytta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kaaja</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Horelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Environment &amp; Behavior</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="127" to="151"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Suunnittelun pradigman muutokset ja tieto/valta</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Lapintie</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Yhdyskuntasuunnittelu</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="9" to="25"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Seeking good governance in participatory-GIS</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mccall</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Habitat International</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="549" to="573"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<monogr>
+		<author>
+			<persName><forename type="first">I</forename><surname>Nonaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Takeuchi</surname></persName>
+		</author>
+		<title level="m">The Knowledge-Creating Company. How Japanese Companies Create the Dynamics of Innovation</title>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>Oxford University Press</publisher>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Data-gathering strategies for socialbehavioural research about participatory geographical information system use</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Nyerges</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Jankowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Drew</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Geographical information science</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1" to="22"/>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<monogr>
+		<author>
+			<persName><forename type="first">J</forename><surname>Pa ¨iva ¨nen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kohl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Manninen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Sairinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">¨</forename><surname>Kytta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename></persName>
+		</author>
+		<title level="m">Sosiaalisten vaikutusten arviointi kaavoituksessa. Avauksia sisa ¨lto ¨o ¨n ja menetelmiin. Suomen ympa ¨risto ¨766</title>
+		<meeting><address><addrLine>Helsinki</addrLine></address></meeting>
+		<imprint>
+			<publisher>Edita Prima</publisher>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Theorizing with GIS: a tool for critical geographies?</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pavlovskaya</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Environment and Planning A</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="2003" to="2020"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<monogr>
+		<title level="m" type="main">Personal Knowledge. Towards a Post-Critical Philosophy</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Polanyi</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1958">1998. 1958</date>
+			<publisher>Routledge</publisher>
+			<pubPlace>London</pubPlace>
+		</imprint>
+	</monogr>
+	<note>First edition</note>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<monogr>
+		<author>
+			<persName><forename type="first">S</forename><surname>Puustinen</surname></persName>
+		</author>
+		<title level="m">Yhdyskuntasuunnittelu ammattina. Suomalaiset kaavoittajat ja 2000-luvun haasteet. Suomen ympa ¨risto ¨715</title>
+		<meeting><address><addrLine>Helsinki</addrLine></address></meeting>
+		<imprint>
+			<publisher>Edita Prima</publisher>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Suomalainen kaavoittajaprofessio ja suunnittelun kommunikatiivisen ka ¨a ¨nteen haaste</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Puustinen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Yhdyskuntasuunnittelun tutkimus-ja koulutuskeskuksen julkaisuja A 34</title>
+		<meeting><address><addrLine>Espoo</addrLine></address></meeting>
+		<imprint>
+			<publisher>Frenckellin kirjapaino Oy</publisher>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<monogr>
+		<author>
+			<persName><forename type="first">E</forename><surname>Relph</surname></persName>
+		</author>
+		<title level="m">Place and Placeness</title>
+		<meeting><address><addrLine>Pion, London</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="1976">1976</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Argumentation maps: GIS-based discussion support for on-line planning</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Rinner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Environment and Planning B: Planning and Design</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="847" to="863"/>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Knowledge building</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Scardamalia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Bereiter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Encyclopedia of Education</title>
+		<editor>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Guthrie</surname></persName>
+		</editor>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>Macmillan Reference</publisher>
+			<date type="published" when="2003">2003</date>
+			<biblScope unit="page" from="1370" to="1373"/>
+		</imprint>
+	</monogr>
+	<note>second ed</note>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<monogr>
+		<title level="m" type="main">The Reflective Practitioner. How Professionals Think in Action</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Scho ¨n</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1983">1996. 1983</date>
+			<publisher>Avebury</publisher>
+		</imprint>
+	</monogr>
+	<note>First Edition</note>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><surname>Staffans</surname></persName>
+		</author>
+		<title level="m">Vaikuttavat asukkaat. Yhdyskuntasuunnittelun tutkimus-ja koulutuskeskuksen julkaisuja A 29</title>
+		<meeting><address><addrLine>Helsinki</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+		<respStmt>
+			<orgName>Yliopistopaino</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">BottomUp GIS. A new tool for individual and group expression in participatory planning</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Talen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the American Planning Association</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page" from="279" to="294"/>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<monogr>
+		<title level="m" type="main">Urban Planning Theory since 1945</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Taylor</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1998">1998</date>
+			<publisher>Sage Publications</publisher>
+			<pubPlace>London</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<monogr>
+		<title level="m" type="main">Complex Knowledge: Studies in Organizational Epistemology</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tsoukas</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2006">2006</date>
+			<publisher>University Press</publisher>
+			<pubPlace>Oxford</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Residential differentiation studies by GIS</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vaattovaara</surname></persName>
+		</author>
+		<ptr target="http://www.unece.org/stats/documents/2001/09/gis/20.e.pdf"/>
+	</analytic>
+	<monogr>
+		<title level="s">Conference of European Statisticians</title>
+		<imprint>
+			<date type="published" when="2001-08">2001. 8.2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Community participation and geographic information systems</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Weiner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Harris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">T</forename><surname>Craig</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Community Participation and Geographic Information Systems</title>
+		<meeting><address><addrLine>London and New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>Taylor and Francis</publisher>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<monogr>
+		<author>
+			<persName><forename type="first">E</forename><surname>Wenger</surname></persName>
+		</author>
+		<title level="m">Community of Practice: Learning, Meaning and Identity</title>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>Cambridge University Press</publisher>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Technologies for communities</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Wenger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>White</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Rowe</surname></persName>
+		</author>
+		<ptr target="http://technologyforcommunities.com/CEFRIO_Book_Chapter_v_5.2.pdf"/>
+	</analytic>
+	<monogr>
+		<title level="j">CEFRIO book</title>
+		<imprint>
+			<date type="published" when="2005-06">2005. 6.6.2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Planning, government, information and the Internet</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G O</forename><surname>Yeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Webster</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Environment and Planning B: Planning and Design</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="163" to="165"/>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>editorial</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>
