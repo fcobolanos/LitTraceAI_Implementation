@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Hybrid AC/DC Static Transmission Expansion Planning Using a New Efficient Iterated Greedy Algorithm</title>
+				<funder ref="#_MVxwMDZ">
+					<orgName type="full">Ecuador</orgName>
+				</funder>
+				<funder ref="#_cntKRCC #_PfdtXrn #_AXf6veD #_paSksAs">
+					<orgName type="full">unknown</orgName>
+				</funder>
+				<funder ref="#_v67aUma">
+					<orgName type="full">VLIR-UOS, Belgium Short Initiative</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>IEEE</publisher>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2023-11-06">2023-11-06</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jorge</forename><forename type="middle">E</forename><surname>Idrovo</surname></persName>
+							<email>jorge.idrovo@ucuenca.edu.ec</email>
+						</author>
+						<author>
+							<persName><forename type="first">Mateo</forename><forename type="middle">D</forename><surname>Llivisaca</surname></persName>
+							<email>mateo.llivisaca@ucuenca.edu.ec</email>
+						</author>
+						<author>
+							<persName><roleName>Senior Member, IEEE</roleName><forename type="first">Santiago</forename><forename type="middle">P</forename><surname>Torres</surname></persName>
+							<email>santi-ago.torres@ucuenca.edu.ec</email>
+						</author>
+						<author>
+							<persName><forename type="first">Christian</forename><surname>Blum</surname></persName>
+							<email>christian.blum@csic.es</email>
+						</author>
+						<author>
+							<persName><forename type="first">Hakan</forename><surname>Ergun</surname></persName>
+							<email>hakan.ergun@esat.kuleuven.be</email>
+						</author>
+						<author>
+							<persName><roleName>Senior Member, IEEE</roleName><forename type="first">Dirk</forename><surname>Van Hertem</surname></persName>
+							<email>dirk.vanhertem@esat.kuleuven.be</email>
+						</author>
+						<author>
+							<persName><forename type="first">José</forename><surname>Jara-Alvear</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Ximena</forename><forename type="middle">P</forename><surname>Gavela</surname></persName>
+							<email>xi-mena.gavela@epn.edu.ec</email>
+						</author>
+						<author>
+							<persName><forename type="first">Daniela</forename><surname>Ballari</surname></persName>
+							<email>dballari@uazuay.edu.ec</email>
+						</author>
+						<author>
+							<persName><forename type="first">Miguel</forename><forename type="middle">A</forename><surname>Torres</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Ana</forename><forename type="middle">F</forename><surname>Zurita</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Fabian</forename><surname>Calero</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Rommel</forename><surname>Aguilar</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jhery</forename><surname>Saavedra</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Electrical, Electronics, and Telecommunica- tions Engineering (DEET)</orgName>
+								<orgName type="laboratory">Artificial Intelligence Research Institute (IIIA)</orgName>
+								<orgName type="institution">University of Cuenca</orgName>
+								<address>
+									<settlement>Cuenca</settlement>
+									<country key="EC">Ecuador</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Electrical Engineering Department ESAT</orgName>
+								<orgName type="laboratory">Electa Research Group</orgName>
+								<orgName type="institution">Spanish National Research Council (CSIC)</orgName>
+								<address>
+									<settlement>Catalonia</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">KU Leuven</orgName>
+								<address>
+									<settlement>Heverlee</settlement>
+									<country key="BE">Belgium</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="laboratory">CIENER Research Group</orgName>
+								<orgName type="institution">and EnergyVille</orgName>
+								<address>
+									<settlement>Genk</settlement>
+									<country key="BE">Belgium</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">Department of Electrical En- gineering</orgName>
+								<orgName type="institution">University of Azuay (UDA)</orgName>
+								<address>
+									<settlement>Cuenca</settlement>
+									<country key="EC">Ecuador</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">Instituto de Estudios de Régimen Seccional del Ecuador" Faculty of Science and Technology</orgName>
+								<orgName type="institution">Escuela Politécnica Nacional</orgName>
+								<address>
+									<settlement>Quito</settlement>
+									<country key="EC">Ecuador</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="department">Escuela Superior Politécnica del Litoral</orgName>
+								<orgName type="institution">University of Azuay</orgName>
+								<address>
+									<settlement>Cuenca</settlement>
+									<country key="EC">Ecuador</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff7">
+								<orgName type="institution">ESPOL</orgName>
+								<address>
+									<settlement>Guayaquil</settlement>
+									<country key="EC">Ecuador</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Hybrid AC/DC Static Transmission Expansion Planning Using a New Efficient Iterated Greedy Algorithm</title>
+					</analytic>
+					<monogr>
+						<title level="m">2023 IEEE PES Innovative Smart Grid Technologies Latin America (ISGT-LA)</title>
+						<imprint>
+							<publisher>IEEE</publisher>
+							<biblScope unit="page" from="515" to="519"/>
+							<date type="published" when="2023-11-06"/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D413200321F5F8645ACF6389497A9E9F</idno>
+					<idno type="DOI">10.1109/isgt-la56058.2023.10328220</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-01T12:00+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>AC/DC networks</term>
+					<term>heuristics</term>
+					<term>HVDC</term>
+					<term>optimization</term>
+					<term>transmission expansion planning</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>In recent years, High Voltage Direct Current (HVDC) transmission has become a technically and economically feasible technology, to the point that HVDC networks integrated with AC systems are being developed. However, only a few research works address Transmission Network Expansion Planning (TNEP) considering both AC and DC networks. To develop an AC/DC TNEP approach, precise models that describe the behavior of the transmission lines and their associated converter stations in DC are required. This article proposes a formulation based on a non-convex model and a heuristic optimization method to solve the AC/DC TNEP. The implementation is based on Julia using the Garver AC/DC 6-bus, the IEEE 14-bus AC/DC, and IEEE AC 24-bus test systems.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>The TNEP problem aims to determine all the changes in the transmission infrastructure necessary to meet the balance between demand and generation at the lowest cost, within a planning horizon <ref type="bibr" target="#b0">[1]</ref>. However, the issues related to TNEP have changed over the years as the energy system has evolved.</p><p>HVDC systems are currently a technically and economically feasible technology. This technology has outstanding characteristics compared to high voltage alternating current (HVAC) transmission such as: i) It is mainly preferred for supplying large amounts of power through underground cables, ii) it does not present stability problems when transmitting over long distances, and iii) HVDC's allows for an asynchronous connection of AC systems <ref type="bibr" target="#b1">[2]</ref>.</p><p>Currently, there are some research works that deal with the use of HVDC networks in the TNEP problem. In <ref type="bibr" target="#b2">[3]</ref>, a robust multistage TNEP linear model of hybrid high-voltage AC-DC networks is proposed. A hybrid algorithm for AC/DC TNEP using a stochastic simulation method and a mixed-integer linear formulation (MILP), neglecting the converter station model, is presented in <ref type="bibr" target="#b3">[4]</ref>. In <ref type="bibr" target="#b4">[5]</ref>, a dynamic hybrid TNEP linearized model using HVAC and a multiterminal voltage source converter (VSC) based on HVDC alternatives is presented. That model is formulated as a MILP problem and considers the costs of converting existing HVAC transmission lines to HVDC lines. In <ref type="bibr" target="#b5">[6]</ref>, a model where shunt compensation allows more flexibility to the expansion options is proposed. The TNEP problem is solved using a combination of nonlinear programming and differential evolution (DE). In <ref type="bibr" target="#b6">[7]</ref>, different relaxations and approximations of the DC grid TNEP problem are presented.</p><p>This article focuses on developing a full non-convex mathematical model and its solution method to solve the hybrid AC/DC TNEP. Section II presents the formulation and mathematical model. The optimization approach based on an iterated greedy algorithm is presented in Section III. In Section IV, results using several test systems are presented. The conclusions are summarized in Section V.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. FORMULATION</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. DC network model</head><p>The resistor r d , in the DC link, is divided by the number of poles p d (2 for this work). The power flow in the DC lines is defined as follows:</p><formula xml:id="formula_0">P dc,loss = (r d /p d ) • (I dc ef ) 2<label>(1)</label></formula><formula xml:id="formula_1">P dc ef = U dc e • p d f ∈Λ dc (U dc e -U dc f )/(r d )<label>(2)</label></formula><p>where P dc,loss are the DC line losses, I, U are the DC current and voltage respectively and P dc ef is the power flow in the DC nodes (e and f ).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. AC/DC converter station model</head><p>The AC/DC converter station model consists of 1) a transformer with taps and impedance in series, 2) a filter as shunt susceptance, 3) a phase reactor as series impedance, and 4) a power-electronic AC/DC converter. The mathematical models of each element of the converter used in the proposed approach are detailed in <ref type="bibr" target="#b8">[9]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. AC network</head><p>The nodal active and reactive power flows in the AC network are represented in (3) -(4) as follows:</p><formula xml:id="formula_2">P ac ij = U i • j∈Λ ac U j • (G ij • cos θ ij + B ij • sin θ ij )<label>(3)</label></formula><formula xml:id="formula_3">Q ac ij = U i • j∈Λ ac U j • (G ij • sin θ ij -B ij • cos θ ij ) (<label>4</label></formula><formula xml:id="formula_4">)</formula><p>where U is the nodal voltage, G is the series conductance, and B is the series susceptance, for i -j branches.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>D. TNEP mathematical model</head><p>In the proposed formulation, the objective function of the classical TNEP problem is divided into two sub-problems: i) The economic problem of transmission expansion solved by using the proposed heuristic, and ii) the operational problem solved using mathematical programming-based approaches. The AC and DC network equations are solved at each step. In addition, the losses in the elements based on power electronics are neglected <ref type="bibr" target="#b7">[8]</ref>. For the TNEP AC/DC this definition is expanded considering the costs of adding DC transmission lines and AC/DC converters. In this way, the economic problem for transmission expansion planning is defined as follows:</p><formula xml:id="formula_5">min v = ij c ac ij • n ij + ef c dc ef • n ef + cv c cv • n cv + w (5)</formula><p>subject to:</p><formula xml:id="formula_6">0 ≤ n ij ≤ n ij (6) 0 ≤ n ef ≤ n ef (7) 0 ≤ n cv ≤ 2 • n ef (<label>8</label></formula><formula xml:id="formula_7">)</formula><p>where v is the objective function, c ac ij is the cost of n added AC circuits between nodes i and j, c dc ef is the cost of n added DC circuits between nodes e and f , c cv is the cost of n cv added converters, and w represents the load shedding cost for active and reactive power for the operational sub-problem.</p><p>The operational sub-problem is formulated as follows:</p><formula xml:id="formula_8">min w = k (α 1 • R P k + α 2 • R Q k )<label>(9)</label></formula><p>subject to: P dc cv + P dc ef + P L = 0 (10)</p><formula xml:id="formula_9">P cv + P ac ij -P G + P L -R ac P = 0<label>(11)</label></formula><formula xml:id="formula_10">Q cv + Q ac ij -Q G + Q L -R ac Q = 0<label>(12)</label></formula><formula xml:id="formula_11">P G ≤ P G ≤ P G<label>(13)</label></formula><formula xml:id="formula_12">Q G ≤ Q G ≤ Q G (14) R P ≤ R P ≤ R P (15) R Q ≤ R Q ≤ R Q (16) U i ≤ U i ≤ U i<label>(17)</label></formula><formula xml:id="formula_13">U dc e ≤ U i ≤ U dc e (<label>18</label></formula><formula xml:id="formula_14">)</formula><p>where P and Q are the active and reactive power flow for AC and DC circuits, cv converters, generation (G) and load (L), respectively. R P and R Q model the active and reactive load shedding by using fictitious generators connected to the load buses. α 1 and α 2 are penalty coefficients due to the contribution of the fictitious active and reactive power generators, respectively. If w &gt; 0, then load shedding is required to make the current transmission topology a feasible one. Normally, α 1 is set to high values to penalize the objective function in case of load shedding. In this work, α 2 is set to zero, because the fictitious generators contribute only with active power. Active and reactive power limits of existing and fictitious generators are defined in ( <ref type="formula" target="#formula_11">13</ref>) -( <ref type="formula">16</ref>), respectively. Voltage limits are defined in ( <ref type="formula" target="#formula_12">17</ref>) - <ref type="bibr" target="#b16">(18)</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. ITERATED GREEDY ALGORITHM</head><p>The proposed optimization approach (see Algorithm 1) consists of two steps:</p><p>1. Initial solution (s): The so-called Forward heuristic starts from zero added lines. It consists of adding, one by one, all the candidate transmission circuits (l i ) to the system. For each added circuit, an AC optimal power flow (Eq. ( <ref type="formula">7</ref>) -( <ref type="formula">16</ref>)) is performed to verify the feasibility of the current topology, and the resulting w value is passed to Eq. ( <ref type="formula" target="#formula_0">1</ref>). This is performed until the first feasible topology (w = 0) is found, yielding the first feasible objective function value v. Figure <ref type="figure" target="#fig_0">1</ref> shows the forward method used to construct the initial solution vector. 2. Optimization algorithm: Iterated Greedy (IG) <ref type="bibr" target="#b14">[16]</ref> is a metaheuristic that generates a sequence of solutions using two main steps: destruction and (re-)construction. During the destruction step, some solution components are removed from the currently best solution. This is done according to a destruction rate (d), which may be fixed or varying (with a step size of 10%) from a range [d LB , d UB ]. Then Forward is applied in order to obtain a new candidate solution. If this new solution is better than the currently best one, the new solution is taken as the new currently best solution. The algorithm stops after m consecutive non-improving iterations and returns the best solution found. In this work, we set m = 6. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. RESULTS</head><p>To develop the optimization model, the modeling layer JuMP <ref type="bibr" target="#b10">[11]</ref> in Julia <ref type="bibr" target="#b9">[10]</ref> was used. In addition, PowerModels <ref type="bibr" target="#b11">[12]</ref> and PowerModelsACDC <ref type="bibr" target="#b12">[13]</ref> were used to solve the AC Optimal Power Flow (AC-OPF). Ipopt [14] was used as solver for the AC-OPF. In this article, AC and AC/DC test systems have been used. For the AC simulations, the Garver 6-bus and the IEEE 24-bus test systems were used. Details of these test systems can be found in <ref type="bibr" target="#b0">[1]</ref>, <ref type="bibr" target="#b15">[17]</ref> and <ref type="bibr" target="#b16">[18]</ref>. In addition, modified Garver 6-bus and IEEE 14-bus test systems were used for the AC/DC tests. Full information on these systems can be found in <ref type="bibr">[14]</ref>. For all systems, the maximum allowed number of circuits per right of way is five. For each test, 10 experiments, varying the destruction rate, were performed. The results were obtained using Julia parallel processing with 2 and 8 processors, on an Intel i7, 2.80GHz, 16GB RAM PC.</p><p>The criteria used to evaluate the results are:</p><p>1) Robustness, e.g., the ability to obtain the same bestfound solution for as many trials as possible, as measured by the success rate. In this article, a success rate higher than 90% is considered a robust result. 2) Performance, e.g., the required computation time to find the optimal solution. Performance can also be measured by the average number of the objective function eval-uations or the average number of iterations required to obtain the best solution.</p><p>A. Garver 6-bus system This system has 6 buses with a total power demand of 720 MW and 152 Mvar, 6 transmission lines and an installed capacity of 1,140 MW. For this system, 15 candidate links are considered for expansion. The proposed scenario for this system allows the generators to deliver a different level of power at any time between its limits.</p><p>Table <ref type="table">I</ref> shows the resulting transmission topology obtained by the proposed approach. The lowest cost found is 160 ($ × 10 3 ) which matches the one found in <ref type="bibr" target="#b15">[17]</ref>, <ref type="bibr" target="#b16">[18]</ref>, which is considered the optimal solution. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>New lines 6</head><p>Total ($ × 10 3 ) 160</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. IEEE 24-bus system</head><p>This system has 24 buses, a total power demand of 8,550 MW and 1,740 Mvar, 34 transmission lines and a maximum generation power of 8,866 MW. 41 candidate right-of-ways are considered for expansion. For this system, a scenario with non-dispatchable generation is analyzed. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>New lines 4</head><p>Total ($ × 10 3 ) 110</p><p>Table <ref type="table">II</ref> shows the AC circuit additions after applying the proposed approach. The minimum cost found is 110 ($×10 3 ), which matches the one found in <ref type="bibr" target="#b15">[17]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Performance analysis for the AC test systems</head><p>Performance results are shown in Table <ref type="table">III</ref>-A for the Garver AC test system. The solution method found the optimal solution after 2 iterations, for all the trials. The best performance is obtained using a destruction rate of 20%. The lowest average time obtained is 2 seconds with 8 processors.</p><p>Table <ref type="table">III</ref>-B shows the performance of the solution method for the the IEEE 24-bus AC system. For all the destruction rates, the solution method is very robust. However, a 30% destruction rate allows achieving the optimal solution in the shortest time. The lowest average time obtained is 24 seconds with 8 processors.  E. AC/DC 14-bus system This system has 14 buses with a total load of 777 MW and 220.5 MVar, an installed capacity of 1197 MW and 20 AC transmission lines. As it does not have any DC circuit, it is expected that the proposed approach integrates these circuits into the system. This scenario considers dispatchable generation, 14 DC buses, 14 DC converters, and 213 candidate DC transmission links interconnecting the DC buses.  Table V presents the final topology for this scenario. Two added DC transmission circuits with the cost of 12.8 ($ × 10 3 ) is the solution that was obtained.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>F. Performance for AC/DC test systems</head><p>The performance results for the first Garver AC/DC hybrid system are shown in Table VI-A. For a 50% destruction rate, the solution method does not find the lowest cost topology. Destruction rates of 20-30-40% present very robust results and higher performance. The best performance is obtained using a 30% destruction rate. The lowest average time of 16 seconds is obtained using 8 processors.</p><p>On the other hand, the results for the AC/DC 14-bus system are shown in Table VI-B. Again, the best performance is obtained for a 30% destruction rate. The implemented parallel processing allows obtaining the solution in 104 seconds, which demonstrates the quality of the proposed approach considering the large search space.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>G. Solution method convergence</head><p>The curves presented in Figure <ref type="figure" target="#fig_3">2</ref> show-in the context of the Garver AC/DC test system-how the optimal solution is obtained with an increasing number of iterations. The convergence to the optimal solution is obtained in less than 15 iterations, using a 30% destruction rate. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>V. CONCLUSIONS</head><p>The continuous technological improvements, the growing need for energy, and the advantages of HVDC technology,</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .</head><label>1</label><figDesc>Fig.1. Forward method -Initial solution vector s<ref type="bibr" target="#b13">[15]</ref> </figDesc><graphic coords="2,345.38,569.12,184.25,94.86" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Algorithm 1 Forward -Initial solution s 3 :</head><label>13</label><figDesc>Iterated Greedy (IG) pseudo-code 1: d := dLB 2: m := 0 for i in n do 4: si := run ACOP F (li) 5: end for 6: s := minimum(si) Iterated Greedy 7: while m ≤ 6 do 8: s p := DestroyPartially(s, d) 9: s ′ := Reconstruct(s p ) 10: if s ′ is better than s then 11: d + [0(f ixed) or 10%] while 22: output: s, the best solution found</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head/><label/><figDesc>Total ($ × 10 3 )12.8</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 2. Solution method convergence for the Garver AC/DC test system.</figDesc><graphic coords="4,345.38,519.69,184.26,122.84" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head/><label/><figDesc>For this scenario allowing dispatchable generation, there is only one AC candidate transmission path. Meanwhile, the DC candidate's expansion circuits consist of six DC buses, six DC converters (one for each bus), and 11 DC transmission paths interconnecting the six DC buses. The cost of each multiterminal converter at the end of the DC lines is considered.TableIVshows the lowest cost solution of 22.7 ($ × 10 3 ).</figDesc><table><row><cell/><cell/><cell/><cell/><cell/><cell>TABLE III</cell><cell/><cell/><cell/><cell/><cell/></row><row><cell/><cell/><cell/><cell cols="4">PERFORMANCE FOR AC SYSTEMS</cell><cell/><cell/><cell/><cell/></row><row><cell/><cell/><cell/><cell cols="6">A. GARVER 6-BUS SYSTEM: DISPATCHABLE GENERATION, 10 TRIALS</cell><cell/><cell/></row><row><cell/><cell/><cell/><cell>2 processors</cell><cell/><cell/><cell/><cell/><cell>8 processors</cell><cell/><cell/></row><row><cell>Destruction rate</cell><cell>Success (%)</cell><cell>Aver. N. Eval</cell><cell>Aver. Iter</cell><cell>Min. Cost. ($ × 10 3 )</cell><cell>Aver. Time (s)</cell><cell>Success (%)</cell><cell>Aver. N. Eval</cell><cell>Aver. Iter</cell><cell>Min. Cost. ($ × 10 3 )</cell><cell>Aver. Time (s)</cell></row><row><cell>20%</cell><cell>100</cell><cell>135</cell><cell>2</cell><cell>160</cell><cell>5</cell><cell>100</cell><cell>135</cell><cell>2</cell><cell>160</cell><cell>2</cell></row><row><cell>30%</cell><cell>100</cell><cell>150</cell><cell>2</cell><cell>160</cell><cell>6</cell><cell>100</cell><cell>150</cell><cell>2</cell><cell>160</cell><cell>2</cell></row><row><cell>40%</cell><cell>100</cell><cell>150</cell><cell>2</cell><cell>160</cell><cell>6</cell><cell>100</cell><cell>150</cell><cell>2</cell><cell>160</cell><cell>2</cell></row><row><cell>50%</cell><cell>100</cell><cell>165</cell><cell>2</cell><cell>160</cell><cell>7</cell><cell>100</cell><cell>165</cell><cell>2</cell><cell>160</cell><cell>2</cell></row><row><cell>30%-60%</cell><cell>100</cell><cell>150</cell><cell>2</cell><cell>160</cell><cell>6</cell><cell>100</cell><cell>150</cell><cell>2</cell><cell>160</cell><cell>2</cell></row><row><cell/><cell/><cell/><cell cols="6">B. IEEE 24-BUS SYSTEM: NON-DISPATCHABLE GENERATION, 10 TRIALS</cell><cell/><cell/></row><row><cell/><cell/><cell/><cell>2 processors</cell><cell/><cell/><cell/><cell/><cell>8 processors</cell><cell/><cell/></row><row><cell>Destruction rate</cell><cell>Success (%)</cell><cell>Aver. N. Eval</cell><cell>Aver. Iter</cell><cell>Min. Cost. ($ × 10 3 )</cell><cell>Aver. Time (s)</cell><cell>Success (%)</cell><cell>Aver. N. Eval</cell><cell>Aver. Iter</cell><cell>Min. Cost. ($ × 10 3 )</cell><cell>Aver. Time (s)</cell></row><row><cell>20%</cell><cell>100</cell><cell>599</cell><cell>6</cell><cell>110</cell><cell>82</cell><cell>100</cell><cell>580</cell><cell>6</cell><cell>110</cell><cell>26</cell></row><row><cell>30%</cell><cell>100</cell><cell>554</cell><cell>4</cell><cell>110</cell><cell>75</cell><cell>100</cell><cell>549</cell><cell>4</cell><cell>110</cell><cell>24</cell></row><row><cell>40%</cell><cell>100</cell><cell>615</cell><cell>5</cell><cell>110</cell><cell>93</cell><cell>100</cell><cell>676</cell><cell>5</cell><cell>110</cell><cell>29</cell></row><row><cell>50%</cell><cell>100</cell><cell>607</cell><cell>5</cell><cell>110</cell><cell>94</cell><cell>100</cell><cell>886</cell><cell>6</cell><cell>110</cell><cell>38</cell></row><row><cell>30%-60%</cell><cell>100</cell><cell>574</cell><cell>4</cell><cell>110</cell><cell>83</cell><cell>100</cell><cell>652</cell><cell>5</cell><cell>110</cell><cell>28</cell></row><row><cell cols="2">D. AC/DC Garver 6-bus system</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>TABLE V ADDED</head><label>V</label><figDesc>LINES FOR THE LOWEST COST. AC/DC 14-BUS SYSTEM WITH DISPATCHABLE GENERATION</figDesc><table/></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>Authorized licensed use limited to: ESCUELA POLITECNICA DEL LITORAL (ESPOL). Downloaded on August 22,2025 at 19:59:42 UTC from IEEE Xplore. Restrictions apply.</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>VI. ACKNOWLEDGEMENTS</head><p>This work was supported by the energy transition fund project <rs type="projectName">NEPTUNE</rs> organized by the <rs type="programName">FPS economy</rs>, S.M.E.s, Self-employed and Energy, <rs type="funder">VLIR-UOS, Belgium Short Initiative</rs> Project <rs type="grantNumber">EC2022SIN342A101</rs>, and <rs type="projectName">I+D+I-XVII-2022</rs><rs type="grantNumber">-69</rs> <rs type="projectName">CEDIA</rs> Project, <rs type="funder">Ecuador</rs>. Moreover, <rs type="person">C. Blum</rs> was supported by grants <rs type="grantNumber">PID2019-104156GB-I00</rs> and <rs type="grantNumber">TED2021-129319B-I00</rs> funded by <rs type="grantNumber">MCIN/AEI/10</rs>.<rs type="grantNumber">13039/501100011033</rs>,</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funded-project" xml:id="_v67aUma">
+					<idno type="grant-number">EC2022SIN342A101</idno>
+					<orgName type="project" subtype="full">NEPTUNE</orgName>
+					<orgName type="program" subtype="full">FPS economy</orgName>
+				</org>
+				<org type="funded-project" xml:id="_cntKRCC">
+					<idno type="grant-number">-69</idno>
+					<orgName type="project" subtype="full">I+D+I-XVII-2022</orgName>
+				</org>
+				<org type="funded-project" xml:id="_MVxwMDZ">
+					<idno type="grant-number">PID2019-104156GB-I00</idno>
+					<orgName type="project" subtype="full">CEDIA</orgName>
+				</org>
+				<org type="funding" xml:id="_PfdtXrn">
+					<idno type="grant-number">TED2021-129319B-I00</idno>
+				</org>
+				<org type="funding" xml:id="_AXf6veD">
+					<idno type="grant-number">MCIN/AEI/10</idno>
+				</org>
+				<org type="funding" xml:id="_paSksAs">
+					<idno type="grant-number">13039/501100011033</idno>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>among other factors, directly affect the TNEP problem. These challenges demand the use of more accurate TNEP formulations. This article proposes a mathematical formulation that can be solved using an Iterated Greedy metaheuristic. The Forward heuristic is used as the construction engine for the candidate solutions. The results indicate rather high robustness and very promising time performance for all the scenarios. For the AC systems, the expected results were obtained in lower computing times than those obtained in <ref type="bibr" target="#b15">[17]</ref> and <ref type="bibr" target="#b16">[18]</ref>, demonstrating the high performance of the algorithm. For the AC/DC systems, the results are also encouraging. Full success rates were obtained in relatively low calculation times, demonstrating high performance and robustness.</p><p>The parameter that most affects the performance of our approach is the destruction rate. A 30% destruction rate presented the best performance, which is the only parameter that must be tuned.</p><p>Julia's parallel processing tool reduced drastically the computation time even for the largest search spaces.</p><p>The proposed formulation results in a general formulation for the AC/DC static TNEP planning when using heuristic solution methods. If the DC and converter terms are neglected, the classical AC formulation is obtained. More research work is undergoing to apply this approach for even more realistic electric power networks.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Power system transmission network expansion planning using AC model</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Rider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Garcia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Romero</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Generation, Transmission &amp; Distribution</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="731" to="742"/>
+			<date type="published" when="2007-10">Oct. 2007</date>
+			<publisher>IET</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">R</forename><surname>Padiyar</surname></persName>
+		</author>
+		<title level="m">HVDC Power Transmission</title>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>Wiley</publisher>
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Robust Transmission Expansion Planning of Ultrahigh-Voltage AC-DC Hybrid Grids</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Industry Applications</title>
+		<imprint>
+			<biblScope unit="volume">58</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="3294" to="3302"/>
+			<date type="published" when="2022-06">May-June 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Hybrid AC/DC Transmission Expansion Planning</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Lotfjou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Fu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shahidehpour</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Power Delivery</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1620" to="1628"/>
+			<date type="published" when="2012-07">July 2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Hybrid AC/DC Transmission Expansion Planning Considering HVAC to HVDC Conversion Under Renewable Penetration</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Moradi-Sepahvand</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Amraee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Power Systems</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="579" to="591"/>
+			<date type="published" when="2021-01">Jan. 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Integrated AC/DC transmission expansion planning model considering VSC-MTDC systems</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>De Araujo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Pissolato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Castro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P C</forename><surname>Torres</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">IEEE Power &amp; Energy Society General Meeting</title>
+		<imprint>
+			<date type="published" when="2017">2017. 2017</date>
+			<biblScope unit="page" from="1" to="5"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Relaxations and approximations of HVdc grid TNEP problem</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dave</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ergun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Van Hertem</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Electric Power Systems Research</title>
+		<imprint>
+			<biblScope unit="volume">192</biblScope>
+			<biblScope unit="page">106683</biblScope>
+			<date type="published" when="2020-11">Nov. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Optimal Power Flow for AC-DC Grids: Formulation, Convex Relaxation, Linear Approximation, and Implementation</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ergun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dave</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Van Hertem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Geth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Power Systems</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="2980" to="2990"/>
+			<date type="published" when="2019-07">July 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Hybrid AC/DC optimal power flow for meshed HVDC grids: Case studies</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ergun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dave</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>An</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Van Hertem</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">15th IET International Conference on AC and DC Power Transmission</title>
+		<meeting><address><addrLine>ACDC</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2019">2019. 2019</date>
+			<biblScope unit="page" from="1" to="6"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Julia: A Fast Dynamic Language for Technical Computing</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bezanson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Karpinski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">B</forename><surname>Shah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Edelman</surname></persName>
+		</author>
+		<idno>abs/1209.5145</idno>
+	</analytic>
+	<monogr>
+		<title level="j">CoRR</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">JuMP: A modeling language for mathematical optimization</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Dunning</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Huchette</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lubin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">SIAM Review</title>
+		<imprint>
+			<biblScope unit="volume">59</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="295" to="320"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">PowerModels. JL: An Open-Source Framework for Exploring Power Flow Formulations</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Coffrin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bent</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sundar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lubin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Power Systems Computation Conference (PSCC)</title>
+		<imprint>
+			<date type="published" when="2018">2018. 2018</date>
+			<biblScope unit="page" from="1" to="8"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<title level="m" type="main">PowerModelsACDC</title>
+		<author>
+			<persName><surname>Electa-Git</surname></persName>
+		</author>
+		<ptr target="https://github.com/Electa-Git/PowerModelsACDC.jl"/>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Seifi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sepasian</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Electric Power System Planning: Issues, Algorithms and Solutions</title>
+		<imprint>
+			<biblScope unit="volume">01</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">A simple and effective iterated greedy algorithm for the permutation flowshop scheduling problem</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ruiz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Stützle</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">European Journal of Operational Research</title>
+		<imprint>
+			<biblScope unit="volume">177</biblScope>
+			<biblScope unit="issue">º 3</biblScope>
+			<biblScope unit="page" from="2033" to="2049"/>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Expansion planning for smart transmission grids using AC model and shunt compensation</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Torres</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Castro</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IET Generation, Transmission &amp; Distribution</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="966" to="975"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<title level="m" type="main">Transmission system expansion planning using DC-AC models and non-linear programming techniques</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Rider</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2006">2006</date>
+			<pubPlace>Sao Paulo, Brazil</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>University of Campinas</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">D.Sc. Thesis in Portuguese</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

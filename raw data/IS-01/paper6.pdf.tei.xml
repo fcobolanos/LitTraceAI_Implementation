@@ -1,0 +1,1618 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Critical citations in knowledge construction and citation analysis: from paradox to definition</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Springer Science and Business Media LLC</publisher>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2022-01-11">11 January 2022</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Frederique</forename><surname>Bordignon</surname></persName>
+							<email>frederique.bordignon@enpc.fr</email>
+							<idno type="ORCID">0000-0002-4918-9137</idno>
+							<affiliation key="aff0">
+								<orgName type="institution">Ecole des Ponts</orgName>
+								<address>
+									<settlement>Marne-la-Vallée</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">LISIS</orgName>
+								<orgName type="institution" key="instit1">INRAE</orgName>
+								<orgName type="institution" key="instit2">Univ Gustave Eiffel</orgName>
+								<orgName type="institution" key="instit3">CNRS</orgName>
+								<address>
+									<settlement>Marne-la-Vallée</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Critical citations in knowledge construction and citation analysis: from paradox to definition</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Scientometrics</title>
+						<title level="j" type="abbrev">Scientometrics</title>
+						<idno type="ISSN">0138-9130</idno>
+						<idno type="eISSN">1588-2861</idno>
+						<imprint>
+							<publisher>Springer Science and Business Media LLC</publisher>
+							<biblScope unit="volume">127</biblScope>
+							<biblScope unit="issue">2</biblScope>
+							<biblScope unit="page" from="959" to="972"/>
+							<date type="published" when="2022-01-11">11 January 2022</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">2E041AE6A41A43D95C0FD8234DD51DBA</idno>
+					<idno type="DOI">10.1007/s11192-021-04226-0</idno>
+					<note type="submission">Received: 26 March 2021 / Accepted: 25 November 2021 /</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-25T13:48+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>Criticism • Critical citation</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Critical citations are lacking a common definition in relation to extant research on knowledge construction and citation analysis, whereas studies on these topics seem to provide a fully relevant theoretical framework, making criticism an essential phenomenon for the progress of science. We propose to explain this paradox by the fact that a citation seems to have a positive polarity by default and that a polarity shift is the result of a stronger commitment on the part of the author. This results in the use of specific cue words. By studying the labels (and their associated definitions) that 53 other studies equated with the concept of critical citation, we identified 3 functions on which to base the definition of critical citation: "to criticize", "to compare" and "to question" other works. While these studies seem to consider the criticize function as central and probably more frequent, the analysis of a corpus of 51 text snippets containing a citation (all retrieved from those same studies) reveals that the citations considered as critical by these same authors are often comparisons between results rather than blunt attacks against the cited works. This three-function based definition and the set of wordings gathered in this study provide a new basis for the design of tools dedicated to citation polarity detection. Indeed, the lexical and grammatical markers characterizing comparison must be taken into account in addition to those expressing a negative evaluation and those expressing doubt.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p>In studies about knowledge construction, criticism has a prominent place since it is considered as "the life blood of science" <ref type="bibr" target="#b39">(MacRoberts &amp; MacRoberts, 1984)</ref>. Indeed, there is a consensus that scientific knowledge is constructed through critical debate. Nevertheless, critical citation is hardly introduced in these theoretical frameworks, although they seem to ideally embrace the concept. We propose here to explore this paradox and to take advantage of it to propose a definition of critical citation. We will then review a number of works related to citation analysis in general, and also works related to academic criticism, some of which include a reflexive approach to citation.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">3</head><p>Based on these studies in scientometrics, sociology of science, psychology or natural language processing, our objective is to understand the concept of critical citation in order to propose a definition that can be useful to these same disciplines. Finally, we will validate this definition by confronting it with a corpus of critical citation contexts specially designed for this study.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>The paradox of the critical citation</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Some seemingly ideal theoretical frameworks for the critical citation concept</head><p>In science studies, there is a common view that knowledge construction is achieved by continuous questioning of previous research produced by researchers, including one's own work. Therefore, we might expect the critical citation of a scientific production to be a possible realization of this process of questioning. As a starting point, we consider a citation to be the explicit reference to another scientific piece of work within the full-text of a scientific publication, and thus consider a critical citation to be one that carries a negative connotation towards to the cited work.</p><p>Influential works in sociology of science offered ideal theoretical frameworks for hosting the concept of critical citation by giving an essential role to academic criticism for the advancement of science. Indeed, they introduced principles suggesting that criticism was a normal or even normative practice, as for example with:</p><p>• The falsification process, introduced by <ref type="bibr" target="#b50">Popper (1959)</ref>, who considers knowledge construction as an incremental process involving conjectures, refutations, a dialectical process of learning from errors. • Organized skepticism, introduced by <ref type="bibr" target="#b41">Merton (1973)</ref>, who presents it as a norm that invites researchers to criticize the work of their peers by systematically questioning previous claims. • Paradigm shifts, defined by <ref type="bibr" target="#b32">Kuhn (1970)</ref>, occurring after a period of consensus and normal science, when unsolved anomalies accumulate.</p><p>As social activities, falsification or skepticism are expected to occur through the phenomenon of critical citations. We could also expect that increased critical citations towards works of a paradigm are the early stages or even the causes of the ensuing crisis.</p><p>In sociology of science, some researchers <ref type="bibr" target="#b20">(Gilbert, 1977;</ref><ref type="bibr" target="#b33">Latour, 1987)</ref> suggest that citations (or references or footnotes) are a rhetorical strategy adopted by authors in their scientific writing to persuade the reader that their propositions are valid. As such, scientists cite to defend their claims against attack, advance their interests, convince others, and gain a dominant position in their scientific community <ref type="bibr" target="#b5">(Bornmann &amp; Daniel, 2008;</ref><ref type="bibr" target="#b62">Tahamtan &amp; Bornmann, 2019)</ref>.</p><p>And according to <ref type="bibr" target="#b33">Latour (1987)</ref>, nothing is off limits; on the subject of intertextuality (i.e. the use of source texts), he states: "Whatever the tactics, the general strategy is easy to grasp: do whatever you need to the former literature to render it as helpful as possible for the claims you are going to make. The rules are simple enough: weaken your enemies, paralyze those you cannot weaken… help your allies if they are attacked… oblige your enemies to fight one another; if you are not sure of winning, be humble and understated.". But in practice, the critical citation does not seem to be part of the range of "weapons" available to authors and <ref type="bibr" target="#b8">Cheng and Unsworth (2016)</ref> conclude that explicit criticism to subvert the opposed study is not the preferred rhetorical option.</p><p>While these basic principles may have informed some works on academic criticism in a broader sense, they have not been directly invoked to introduce the concept of critical citation within works on citation analysis. One possible explanation for this is that these works have initially considered a citation to have a positive value by default.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Positive polarity by default</head><p>In sociology of science, there is an alternative conceptual approach (to the socio-constructivist on mentioned earlier) that considers a citation as a reward. This is <ref type="bibr" target="#b41">Merton's (1973)</ref> point of view: he explains that citations are a kind of symbolic currency that allows one to acknowledge an intellectual debt to the cited authors. Citations are "the pellets of peer recognition" <ref type="bibr" target="#b42">(Merton, 1988)</ref>. Researchers are therefore willing to share their ideas by publishing them and claiming authorship. And they are also motivated by the hope that their work will be recognized by their peers, especially in the form of future citations. This echoes Newton's aphorism <ref type="bibr" target="#b46">(Newton, 1675)</ref>: "If I have seen further it is by standing on the shoulders of Giants" and <ref type="bibr" target="#b41">Merton (1973)</ref> communal norm that sees science as a collective effort from researchers to contribute to the construction of knowledge. This approach cannot be fully valid for critical citations, as they do not convey peer recognition in a supportive way. However, they do have the same role as other citations in that they do credit the cited authors for their intellectual contribution, regardless of whether it is disputed.</p><p>Clearly, for the influential researchers we have mentioned so far, a citation is not considered as critical, however, the frameworks they propose are suitable for this option, in that they all include the critical debate as an essential process. Therefore, a citation seems to have a positive polarity by default. This is confirmed more explicitly by <ref type="bibr" target="#b57">Small (2004)</ref>, when he says about a possible theory of citation: "Such a theory must encompass the spectrum of observed behaviours from the most common forms such as ceremonial or perfunctory citation to the less common deviant cases, such as negative citation, self-citation, and misattribution.". This is the line of thinking that <ref type="bibr" target="#b35">Lin (2018)</ref> has "inadvertently" adopted in his citation annotation protocol: "as long as a citation does not carry a negational attitude, it is considered confirmative."</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Polarity shift</head><p>Be it in studies on knowledge construction in general or those on citation analysis, citation has a positive polarity by default, although this is not clearly stated by the authors. Whilst it is the context that makes a reference become a citation <ref type="bibr" target="#b21">(Gilbert &amp; Woolgar, 1974)</ref>, this context could therefore also shift the polarity from positive (or neutral) to negative, with dedicated lexical markers. Moreover, if we take the example of a single reference, introduced only in the bibliography but never mentioned in the text, it is in fact impossible to determine the stance of the citing author towards the work or the author associated with this reference, except perhaps to have precise knowledge of the cited work and to place it in relation to the author's entire contribution in the citing text. There is every reason to believe that an "orphan" reference constitutes a positive or at least neutral citation by default. However, this practice is tending to disappear, especially as journals now often require in their guidelines that all references be present in the text (there must be differences between disciplines and publishers, and this is a hypothesis that would need to be confirmed by a dedicated study). <ref type="bibr" target="#b13">Erikson and Erlandson (2014)</ref> explain that with a citation, giving credit is an act of distancing, or showing that the cited idea is borrowed from someone else and as a consequence, this weakens the citing author's arguments. In our opinion, with a critical citation, the movement is reversed and the citing author regains control and asserts his position by disputing what he is actually citing. At the same time, he/she acquires authorship over the questioning or refutation he/she expresses, whereas in a positive or neutral citation, it is mainly a matter of crediting another researcher. The polarity shift, expressed by a critical citation, is the result of a strong commitment on the part of the author, at least stronger than in a positive or neutral citation. A far as researchers' behavior is concerned, a critical citation is not equivalent to an anonymous negative comment on a post-publication peerreview platform (e.g.: PubPeer), or to an anonymous negative vote on an online site (e.g.: Stack Exchange, used by <ref type="bibr" target="#b18">Geras et al (2020)</ref> to model the impact of a "dislike button" for publications).</p><p>In the following section, we will endeavour to define what a critical citation is by trying to identify what causes this polarity shift.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Towards a definition of critical citation</head><p>In this section, we will first examine the results of three publications that are entirely dedicated to critical citations. Then, we will broaden the scope of our consideration by relying both on typologies of citations and also on studies that have focused on the analysis of critical discourse in academic writings. For the latter, we have focused on those addressing the problem of citation, leaving aside those that deal with academic criticism in a general way by proposing rhetorical analyses of discourse, independently of the citation contexts <ref type="bibr" target="#b27">(Hunston, 1993;</ref><ref type="bibr" target="#b70">Zou and Hyland 2020)</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>What extant research reveals</head><p>We have identified three publications dedicated to critical citations:</p><p>• A note from <ref type="bibr" target="#b39">MacRoberts and MacRoberts (1984)</ref> pointing out the low number of "negational references" and seeking to explain this. • An article from <ref type="bibr" target="#b7">Catalini et al. (2015)</ref> analysing "negative citations" in Immunology, and also looking at the profile of papers receiving "negative citations"; those are identified automatically. • A communication from <ref type="bibr" target="#b3">Bertin and Atanassova (2016)</ref> showing, with automated retrieval, the distribution of "negational citations" in the IMRaD structure of articles.</p><p>First, all three publications agree that critical citations are very infrequent, 2.4% in the Catalini et al.'s study. These results are consistent with many other studies that have counted this type of citation along with positive or neutral ones. The rate is less than 3% in several studies that have used manually annotated corpora <ref type="bibr" target="#b7">(Cano, 1989;</ref><ref type="bibr" target="#b35">Lin, 2018;</ref><ref type="bibr" target="#b47">Oppenheim &amp; Renn, 1978;</ref><ref type="bibr" target="#b58">Spiegel-Rosing, 1977)</ref> or automatic retrieval <ref type="bibr" target="#b3">(Bertin &amp; Atanassova, 2016;</ref><ref type="bibr" target="#b7">Catalini et al., 2015;</ref><ref type="bibr" target="#b59">Stremersch et al., 2015)</ref>. Furthermore, Catalini et al. showed that few papers receive at least one criticism (7.1% according to their corpus in immunology). They also show that critical citations were more likely to come from scientists who were close in discipline and social distance to the cited scholars as it may be socially costly to negatively cite the work of a local colleague. <ref type="bibr" target="#b39">MacRoberts and MacRoberts (1984)</ref> state that critical citations are toned down, disguised, or away from important people. This is true for academic criticism in general, characterized by caution and politeness, even if this has evolved over the years <ref type="bibr" target="#b52">(Salager-Meyer, 1998)</ref> and may vary from one genre to another <ref type="bibr" target="#b70">(Zou and Hyland 2020)</ref> or from one language to another <ref type="bibr" target="#b53">(Salager-Meyer et al., 2003)</ref>. At last, the study made by <ref type="bibr" target="#b3">Bertin and Atanassova (2016)</ref> shows that the Methods section contains very few critical citations. The largest number of them are found in the Discussion section, then in the Results and Introduction sections. These citations mainly focus on findings rather than methods or theories.</p><p>The critical citation itself seems to have inspired few dedicated studies, nevertheless it is almost always included in the many citation typologies that we have been able to examine. Moreover, in their recent meta-analysis of citing motivations, <ref type="bibr" target="#b38">Lyu et al. (2021)</ref> identified 25 studies (out of 38 included in their study) that clearly described one of the motivations of the citers as being to criticize. It is difficult to reconcile all these classification schemes insofar as they were not developed for the same purposes, depending on whether they were intended, for example, to facilitate the annotation of corpora or to automate the identification of distinct types of citations in texts, and also depending on whether the aim was to examine the reader's point of view or that of the citing author, even if his/her motives can only be assumed.</p><p>To build on this extensive work, we used a simple yet original method: we identified in these typologies all the labels used to categorize critical citations, according to the intuitive definition we adopted above. In addition, we identified all the ways in which citations of this type are referred to in the literature on citation analysis, even if no typology was proposed or used. Finally, in the course of our reading we also identified all the examples provided by authors (in supplementary material, and also often in the main body of their studies) and thus constituted a corpus of critical citations which we in turn make available <ref type="bibr" target="#b4">(Bordignon, 2021)</ref>.</p><p>The first observation we can make is that, even if research on knowledge construction has not fully integrated it and if few studies are dedicated to it, critical citation is nevertheless well present in the literature on citation in the fields of scientometrics, linguistics and natural language processing. In the 53 publications we reviewed, we identified 56 wordings or class labels that we examined to refine a definition of critical citation. From then on, we think that such a definition could be based on 3 functions:</p><p>• To criticize, that is to point out a weakness or a fault in the cited work, the only target in the citation context. It is not only a review or a critique but a bad assessment of the cited work, associated with a negative opinion. The labels contain for example the following words: critical, reject, deny, weakness, negatively evaluated. • To compare, with the aim of expressing that one study is better than another, without necessarily including one's own work (it can be 2 other publications). There is more objectivity in this function, even if in the end it can be an opinion as well. The labels contain for example the following words: comparison, contrast, disagree, juxtapositional. • To question, i.e., to convey concerns, doubts, and uncertainty about the cited work. The labels contain for example the following words: challenging, problematized, discussed, mixed opinion.</p><p>As far as syntax is concerned, the criticize and question functions are performed in citation contexts that only mention the target publication(s), as in the following examples:</p><p>(1) Thus, the full model proposed by <ref type="bibr">Nietzsche [3]</ref> has remained empirically unproven.</p><p>(2) Chiang ( <ref type="formula">2005</ref>) introduced a constituent feature to reward phrases that match a syntactic tree but did not yield significant improvement.</p><p>(3) However, Koskenniemi himself understood that his initial implementation had significant limitations in handling non-concatenative morphotactic processes.</p><p>In contrast, for the compare function, the citation context mentions at least two works (often including the author's own), as in the two following examples:</p><p>(4) Our results appear to contradict those of <ref type="bibr">[35]</ref>.</p><p>(5) For the Penn <ref type="bibr">Treebank, Ratnaparkhi (1996)</ref> reports an accuracy of 96.6% using the Maximum Entropy approach, our much simpler and therefore faster HMM approach delivers 96.7%.</p><p>We have tested and proven this proposal by successfully classifying all the labels found in the literature according to these three non-mutually exclusive options. It is important to say that we have taken into account the explanations and definitions given by the authors themselves to elaborate this classification. This is what led us on several occasions to include a label that overlaps two functions in Table <ref type="table" target="#tab_0">1</ref>. A specific column indicates whether the label is part of a typology or not.</p><p>In order to evaluate the frequency of the 3 functions in the literature examined, we have developed a simple scale: when a label overlaps with 2 functions, we apply a coefficient of 0.5. Sometimes the same label (with the same meaning) is used in several publications, so we take it into account by counting them for each publication. Consequently, if we stick to the wordings and labels proposed by the researchers, the criticize function is the most frequent (nearly 68%), then the question and the compare function (both above 15%).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>What corpus analysis reveals</head><p>As we read through the works presented in Table <ref type="table" target="#tab_0">1</ref>, we have identified and retained the examples that the authors of these works gave to illustrate what they considered to be critical citations. We could compile a corpus of 51 citances (i.e., citations and the text surrounding them) and labelled them according to the three functions. One could almost say that it reveals another paradox. Indeed, the annotated corpus reveals a completely different distribution with only 25.5% of examples of citations that can be characterized according to the criticize function, and more than 60% in the compare function. Once again, there is a difference between the theoretical frameworks emphasizing on direct criticism while data shows mainly comparison strategies (Fig. <ref type="figure" target="#fig_4">1</ref>).</p><p>This result confirms that it is important to integrate the compare function in the definition of critical citation. This may have consequences in the design of tools for automatic citation polarity detection. Indeed, the lexical and grammatical markers characterizing comparison and showing that one paper is "better" than another must be taken into account <ref type="bibr">(e.g.: better, faster, lower, improve, simpler, to contradict…)</ref> in addition to those expressing judgment or negative evaluation and those expressing doubt. These are the elements that</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Table 1 Distribution of classes and wordings according to the critical citation functions</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Class or wording</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Typology To criticize</head><p>To compare To question "Negative" (questioning and challenging) <ref type="bibr" target="#b69">(Zhang et al., 2013)</ref> Yes X A citation is marked negative if it explicitly points to a weakness of the target paper. It is also marked as negative if it is compared to another paper and deemed worse in some way. <ref type="bibr" target="#b0">(Abu-Jbara et al., 2013;</ref><ref type="bibr" target="#b31">JHA et al., 2017)</ref> Yes X X Active criticism <ref type="bibr" target="#b13">(Erikson &amp; Erlandson, 2014)</ref> Yes X Citation polarity or sentiment: negative <ref type="bibr" target="#b1">(Athar, 2014;</ref><ref type="bibr" target="#b29">Di Iorio et al., 2013;</ref><ref type="bibr" target="#b25">Hernández-Alvarez et al., 2017;</ref><ref type="bibr" target="#b60">Sula &amp; Miller, 2014)</ref> Yes  Disagreement <ref type="bibr" target="#b8">(Cheng &amp; Unsworth, 2016;</ref><ref type="bibr" target="#b14">Frost, 1979;</ref><ref type="bibr" target="#b19">Giannoni, 2005;</ref><ref type="bibr" target="#b24">Hassan &amp; Serenko, 2019;</ref><ref type="bibr" target="#b45">Murray et al., 2020;</ref><ref type="bibr" target="#b60">Sula &amp; Miller, 2014)</ref> No X X Disclaiming the work or ideas of others (negative claims) <ref type="bibr" target="#b15">(Garfield, 1964)</ref> Yes X Dispute or correct <ref type="bibr" target="#b63">(Tang &amp; Safer, 2008)</ref> Yes X X Disputing priority claims of others (negative homage) <ref type="bibr" target="#b15">(Garfield, 1964)</ref> Yes X X Disputive <ref type="bibr" target="#b55">(Scite, 2019)</ref> Yes X X X Engaging citations-Identifying inconsistencies in source's position <ref type="bibr" target="#b23">(Harwood, 2009)</ref> Yes X Engaging citations-Praising but then identifying problems with the source <ref type="bibr" target="#b23">(Harwood, 2009)</ref> Yes X Improve: the relationship that one work is obviously better than another <ref type="bibr" target="#b66">(Wang et al., 2012)</ref> Yes X</p><p>In case of negation, the citing article rejects conclusions of the cited article. <ref type="bibr" target="#b59">(Stremersch et al., 2015)</ref> Yes X Juxtapositional <ref type="bibr" target="#b24">(Hassan &amp; Serenko, 2019;</ref><ref type="bibr" target="#b43">Moravcsik, 1988;</ref><ref type="bibr" target="#b61">Swales, 1986)</ref> Yes X Mixed opinion <ref type="bibr" target="#b14">(Frost, 1979;</ref><ref type="bibr" target="#b38">Lyu et al., 2021)</ref> Yes X Negational citations <ref type="bibr" target="#b3">(Bertin &amp; Atanassova, 2016;</ref><ref type="bibr" target="#b7">Cano, 1989;</ref><ref type="bibr" target="#b9">Chubin &amp; Moitra, 1975;</ref><ref type="bibr" target="#b24">Hassan &amp; Serenko, 2019;</ref><ref type="bibr" target="#b34">Li et al., 2013;</ref><ref type="bibr" target="#b35">Lin, 2018;</ref><ref type="bibr" target="#b39">MacRoberts &amp; MacRoberts, 1984;</ref><ref type="bibr" target="#b44">Moravcsik &amp; Murugesan, 1975;</ref><ref type="bibr" target="#b61">Swales, 1986)</ref> Yes/ No X Negative citations <ref type="bibr" target="#b2">(Ball, 2015;</ref><ref type="bibr" target="#b7">Catalini et al., 2015;</ref><ref type="bibr" target="#b30">Di Iorio et al., 2018;</ref><ref type="bibr" target="#b13">Erikson &amp; Erlandson, 2014;</ref><ref type="bibr" target="#b18">Geras et al., 2020;</ref><ref type="bibr" target="#b31">Jha et al., 2017;</ref><ref type="bibr" target="#b37">Liu, 2017;</ref><ref type="bibr" target="#b54">Schneider et al., 2020;</ref><ref type="bibr" target="#b56">Shadish et al., 1995;</ref><ref type="bibr" target="#b57">Small, 2004;</ref><ref type="bibr">Teufel et al., 2006a;</ref><ref type="bibr" target="#b67">White, 2004;</ref><ref type="bibr" target="#b68">Yu, 2014;</ref><ref type="bibr" target="#b69">Zhang et al., 2013)</ref> Yes/No X Negative credit <ref type="bibr" target="#b6">(Brooks, 1985)</ref> Yes X Negative-The weakness of the cited work is discussed <ref type="bibr" target="#b34">(Li et al., 2013)</ref> Yes X X  <ref type="bibr" target="#b36">(Lipetz, 1965;</ref><ref type="bibr" target="#b67">White, 2004)</ref> No This reference has deficiencies that contrast to the strengths of your article. <ref type="bibr" target="#b56">(Shadish et al., 1995)</ref> Yes X X This reference illustrates a perspective or finding that contradicts a perspective or finding in your article <ref type="bibr" target="#b56">(Shadish et al., 1995)</ref> Yes X This reference reported unique or anomalous findings <ref type="bibr" target="#b56">(Shadish et al., 1995)</ref> Yes </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conclusion and perspectives</head><p>In this study, we start from the observation that there was a lack of definition for critical citation in relation to the numerous works on knowledge construction and citation analysis, whereas research on these topics seems to provide a fully relevant theoretical framework, making criticism an essential phenomenon for the progress of science.</p><p>We propose to explain this paradox by the fact that a citation seems to have a positive polarity by default and that the polarity shift is the result of a strong commitment on the part of the author, at least stronger than in a perfunctory citation. This stronger stance might be associated with a higher social cost <ref type="bibr" target="#b7">(Catalini et al., 2015)</ref> that can explain why critical citations are so scarce and also why it seems easier to criticize anonymously on post-publication peer review platforms like PubPeer, and also in book reviews <ref type="bibr" target="#b70">(Zou and Hyland 2020)</ref> where criticism is by essence the rules of the genre.</p><p>By studying the labels (and their associated definitions) that 53 studies equated with the concept of critical citation, we identified 3 functions on which to base the definition of critical citation: "to criticize", "to compare" and "to question" other works. While these studies seem to consider the criticize function as central and probably more frequent, the analysis of the corpus revealed that the citations considered as critical by these same authors are often comparisons between results or methods rather than blunt attacks against the cited work.</p><p>This work is not only a literature review, it provides a hitherto non-existent synthesis of the phenomenon and also a definition based on three functions that can serve as a basis for future research. Indeed, we believe that it can contribute to the current studies on the automatic retrieval of critical citations. The stakes are high since these tools can be used to identify controversies related to certain claims and to understand how science progresses or, on the contrary, where it fails to self-correct, even though there are weak signals that could be detected thanks to the critical citations they contain.</p><p>In this endeavour, we therefore believe that it would be possible to tackle another complex problem where a positive (or neutral) citation of a study is made while this study cites other works and criticizes them. Scientometric studies that use citation networks to detect communities do not take this phenomenon into account. Only the presence or absence of citations matters in the construction of an intellectual affinity network. We also intend to compare the utter absence of citations (either as an outright absence, or from a given period) with the occurrence of critical citations. It is likely that not citing at all is stronger from a criticism point of view than a critical citation itself.</p><p>Furthermore, although it is regrettable and not compatible with the Declaration on Research Assessment <ref type="bibr">(DORA members, 2013)</ref>, many research administrators rely on the number of overall citations and related indicators in their evaluation of researchers. These calculations can have consequences for funding grants or career advancement. With the possibility of differentiating types of citations, it is conceivable that evaluation could be better conducted. Nevertheless, one must be careful of the potential risks of gaming the metrics, with, for example, the temptation that some researchers might have to critically cite a competitor. It is therefore essential that such tools are highly reliable.</p><p>Finally, we have seen that critical citations are not quite common in written academic discourse. Proposing a reflection on critical citations is also a way of rehabilitating them and even encouraging them, since there is already a consensus that criticism is essential to the progress of knowledge construction.</p><p>Funding ANR-16-IDEX-0003-ISITE FUTURE.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head/><label/><figDesc>partially not supported by cited work<ref type="bibr" target="#b17">(Garzone &amp; Mercer, 2000)</ref> Yes X Citing work is totally not supported by cited work<ref type="bibr" target="#b17">(Garzone &amp; Mercer, 2000)</ref> Yes X Citing work partially disputes some aspect of cited work (Garzone &amp; Mercer, present the current proposition as replacing an alternative one.(Cheng &amp; Unsworth,    </figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head/><label/><figDesc>work points out the weakness or limitation of another work (Wang et al.introduce some alternative position but reject or dismiss it. (Cheng &amp; Unsworth, 2016) Yes X Describe challenges and limits (Zhang et al., 2013) Yes X Direct attack upon existing claims (Salager-Meyer, 2017) No X</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>X</head><label/><figDesc>Results of citing article disprove, put into question the data as interpretation of cited source (Spiegel-Rosing,</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head/><label/><figDesc>Comparison (current work is better than cited work) (Hernández-Alvarez &amp; Gomez, 2016; Teufel et al.critique on the weaknesses or inadequacies of the opposed study (Cheng &amp; Unsworth, 2016) No X contribute to the shift from positive/neutral to negative polarity and are therefore the very essence of critical citations.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 1</head><label>1</label><figDesc>Fig. 1 Critical citation functions according to labels retrieved from the reviewed studies vs examples of critical citations retrieved from those studies</figDesc><graphic coords="10,49.29,57.85,340.80,119.52" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 (</head><label>1</label><figDesc/><table><row><cell>continued)</cell><cell>Class or wording</cell></row></table></figure>
+		</body>
+		<back>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Availability of data and material</head> <ref type="bibr" target="#b4">Bordignon, F. (2021)</ref><p>. A dataset of critical citations contexts. Mendeley Data, V1. <ref type="url" target="https://doi">https:// doi</ref>. org/ 10. 17632/ 2v5d3 bpydb.1</p></div>
+			</div>
+
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Purpose and Polarity of Citation: Towards NLP-based Bibliometrics</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Abu-Jbara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ezra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Radev</surname></persName>
+		</author>
+		<ptr target="https://www.aclweb.org/anthology/N13-1067"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2013 conference of the North American Chapter of the association for computational linguistics: HUMAN language technologies</title>
+		<meeting>the 2013 conference of the North American Chapter of the association for computational linguistics: HUMAN language technologies<address><addrLine>Atlanta, Georgia</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2013">2013. January6, 2021</date>
+			<biblScope unit="page" from="596" to="606"/>
+		</imprint>
+	</monogr>
+	<note>Presented at the NAACL-HLT 2013</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m" type="main">Sentiment analysis of scientific citations</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Athar</surname></persName>
+		</author>
+		<ptr target="http://www.cl.cam.ac.uk/"/>
+		<imprint>
+			<date type="published" when="2014-07-18">2014. July 18, 2019</date>
+			<biblScope unit="volume">856</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Science papers rarely cited in negative ways</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ball</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature.2015.18643</idno>
+		<ptr target="https://doi.org/10.1038/nature.2015.18643"/>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Weak links and strong meaning: The complex phenomenon of negational citations</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bertin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Atanassova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="s">CEUR workshop proceedings</title>
+		<imprint>
+			<biblScope unit="volume">1567</biblScope>
+			<biblScope unit="page" from="14" to="25"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">A dataset of critical citations contexts</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Bordignon</surname></persName>
+		</author>
+		<idno type="DOI">10.17632/2v5d3bpydb.1</idno>
+		<ptr target="https://doi.org/10.17632/2v5d3bpydb"/>
+	</analytic>
+	<monogr>
+		<title level="j">Mendeley Data</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">What do citation counts measure? A review of studies on citing behavior</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bornmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Daniel</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/00220410810844150</idno>
+		<ptr target="https://doi.org/10.1108/002204108108441"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Documentation</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="45" to="80"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Private acts and public objects: An investigation of citer motivations</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Brooks</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/asi.4630360402</idno>
+		<ptr target="https://doi.org/10.1002/asi.4630360402"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the American Society for Information Science</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="223" to="229"/>
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Citation behavior: Classification, utility, and location</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Cano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Catalini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Lacetera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Oettl</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.1502280112</idno>
+		<ptr target="https://doi.org/10.1073/pnas.1502280112"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the American Society for Information Science</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="13823" to="13826"/>
+			<date type="published" when="1989">1989. 2015</date>
+		</imprint>
+	</monogr>
+	<note>Proceedings of the National Academy of Sciences</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Stance-taking as negotiating academic conflict in applied linguistics research article discussion sections</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">W</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Unsworth</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jeap.2016.09.001</idno>
+		<ptr target="https://doi.org/10.1016/j.jeap.2016.09.001"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of English for Academic Purposes</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="43" to="57"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Content analysis of references: Adjunct or alternative to citation counting</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Chubin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Moitra</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Social Studies of Science</title>
+		<imprint>
+			<biblScope unit="page" from="423" to="441"/>
+			<date type="published" when="1975">1975</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Representation and negotiation of complementary and alternative medicine: A citation context analysis</title>
+		<author>
+			<persName><forename type="first">J.-A</forename><forename type="middle">B</forename><surname>Danell</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/1075547011413140</idno>
+		<ptr target="https://doi.org/10.1177/1075547011413140"/>
+	</analytic>
+	<monogr>
+		<title level="j">Science Communication</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="299" to="333"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Ensemble-style Self-training on Citation Classification</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Schäfer</surname></persName>
+		</author>
+		<ptr target="https://www.aclweb.org/anthology/I11-1070"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of 5th international joint conference on natural language processing</title>
+		<title level="s">Asian Federation of Natural Language Processing</title>
+		<meeting>5th international joint conference on natural language processing<address><addrLine>Chiang Mai, Thailand</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2011-03-25">2011. March 25, 2021</date>
+			<biblScope unit="page" from="623" to="631"/>
+		</imprint>
+	</monogr>
+	<note>Presented at the IJC-NLP 2011</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">San Francisco declaration on research assessment</title>
+		<author>
+			<orgName type="collaboration">DORA members</orgName>
+		</author>
+		<ptr target="https://sfdora.org/"/>
+	</analytic>
+	<monogr>
+		<title level="j">DORA</title>
+		<imprint>
+			<date type="published" when="2013-03-15">2013. March 15, 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">A taxonomy of motives to cite</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Erikson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Erlandson</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/0306312714522871</idno>
+		<ptr target="https://doi.org/10.1177/0306312714522871"/>
+	</analytic>
+	<monogr>
+		<title level="j">Social Studies of Science</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="625" to="637"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">The use of citations in literary research: A preliminary classification of citation functions</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">O</forename><surname>Frost</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Library Quarterly: Information, Community, Policy</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="399" to="414"/>
+			<date type="published" when="1979">1979</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<title level="m" type="main">Can citation indexing be automated? In Statistical association methods for mechanized documentation: Symposium proceedings</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Garfield</surname></persName>
+		</author>
+		<idno>269</idno>
+		<imprint>
+			<date type="published" when="1964">1964. 1964</date>
+			<publisher>National Bureau of Standards Mliscellaneous Publication</publisher>
+			<biblScope unit="page" from="189" to="192"/>
+			<pubPlace>Washington</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Washington</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><forename type="middle">S G P O</forename></persName>
+		</author>
+		<ptr target="http://www.garfield.library.upenn.edu/essays/V1p084y1962-73.pdf"/>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Towards an automated citation classifier</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Garzone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Mercer</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/3-540-45486-1_28</idno>
+		<ptr target="https://doi.org/10.1007/3-540-45486-1_"/>
+	</analytic>
+	<monogr>
+		<title level="m">Canadian AI</title>
+		<title level="s">Lecture notes in computer science</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2000">2000. 2000</date>
+			<biblScope unit="volume">1822</biblScope>
+			<biblScope unit="page" from="337" to="346"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Should we introduce a dislike button for academic articles</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Geras</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Siudem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gagolewski</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/asi.24231</idno>
+		<ptr target="https://doi.org/10.1002/asi.24231"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Association for Information Science and Technology</title>
+		<imprint>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="221" to="229"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Negative evaluation in academic discourse. A comparison of English and Italian research articles</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Giannoni</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/030631277700700112</idno>
+		<ptr target="https://doi.org/10.6092/LeF_20_p71"/>
+	</analytic>
+	<monogr>
+		<title level="j">Linguistica e Filologia</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="71" to="99"/>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Referencing as persuasion</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Gilbert</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/030631277700700112</idno>
+		<ptr target="https://doi.org/10.1177/030631277700700112"/>
+	</analytic>
+	<monogr>
+		<title level="j">Social Studies of Science</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="113" to="122"/>
+			<date type="published" when="1977">1977</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">The quantitative study of science: An examination of the literature</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Gilbert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Woolgar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science Studies</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="279" to="294"/>
+			<date type="published" when="1974">1974</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">How citation distortions create unfounded authority: Analysis of a citation network</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Greenberg</surname></persName>
+		</author>
+		<idno type="DOI">10.1136/bmj.b2680</idno>
+		<ptr target="https://doi.org/10.1136/bmj.b2680"/>
+	</analytic>
+	<monogr>
+		<title level="j">BMJ (online)</title>
+		<imprint>
+			<biblScope unit="volume">339</biblScope>
+			<biblScope unit="issue">7714</biblScope>
+			<biblScope unit="page" from="210" to="213"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">An interview-based study of the functions of citations in academic writing across two disciplines</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Harwood</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.pragma.2008.06.001</idno>
+		<ptr target="https://doi.org/10.1016/j.pragma.2008.06.001"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Pragmatics</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="497" to="518"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Patterns of citations for the growth of knowledge: A Foucauldian perspective</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Hassan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Serenko</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/JD-08-2018-0125</idno>
+		<ptr target="https://doi.org/10.1108/JD-08-2018-0125"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Documentation</title>
+		<imprint>
+			<biblScope unit="volume">75</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="593" to="611"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Citation function, polarity and influence classification</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hernández-Alvarez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Gomez Soriano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Martínez-Barco</surname></persName>
+		</author>
+		<idno type="DOI">10.1017/S1351324916000346</idno>
+		<ptr target="https://doi.org/10.1017/S1351324916000346"/>
+	</analytic>
+	<monogr>
+		<title level="j">Natural language engineering</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<date type="published" when="2017">2017</date>
+			<publisher>Cambridge University Press</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Survey about citation context analysis: Tasks, techniques, and resources</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hernández-Alvarez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Gomez</surname></persName>
+		</author>
+		<idno type="DOI">10.1017/S1351324915000388</idno>
+		<ptr target="https://doi.org/10.1017/S13513249150003"/>
+	</analytic>
+	<monogr>
+		<title level="j">Natural Language Engineering</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="327" to="349"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Professional conflict-Disagreement in academic discourse</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hunston</surname></persName>
+		</author>
+		<idno type="DOI">10.1075/z.64.08hun</idno>
+		<ptr target="https://doi.org/10.1075/z.64"/>
+	</analytic>
+	<monogr>
+		<title level="j">Text and Technology</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1075/z.64.08hun</idno>
+		<imprint>
+			<biblScope unit="page">8</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Towards the automatic identification of the nature of citations</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Di Iorio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Nuzzolese</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Peroni</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of 3rd workshop on semantic publishing</title>
+		<meeting>3rd workshop on semantic publishing<address><addrLine>SePublica; Montpellier</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2013">2013. 2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<title level="m" type="main">Investigating facets to characterise citations for scholars</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Di Iorio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Limpens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Peroni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rotondi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Tsatsaronis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Achtsivassilis</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-030-01379-0_11</idno>
+		<ptr target="https://doi.org/10.1007/978-3-030-01379-0_"/>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="150" to="160"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">NLP-driven citation analysis for scientometrics</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A.-A</forename><surname>Jbara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Qazvinian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Radev</surname></persName>
+		</author>
+		<idno type="DOI">10.1017/S1351324915000443</idno>
+		<ptr target="https://doi.org/10.1017/S13513249150004"/>
+	</analytic>
+	<monogr>
+		<title level="j">Natural Language Engineering</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="93" to="130"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<monogr>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kuhn</surname></persName>
+		</author>
+		<title level="m">The structure of scientific revolutions</title>
+		<imprint>
+			<publisher>The University Of Chicago Press Books</publisher>
+			<date type="published" when="1970">1970</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<monogr>
+		<author>
+			<persName><forename type="first">B</forename><surname>Latour</surname></persName>
+		</author>
+		<title level="m">Science in action: How to follow scientists and engineers through society</title>
+		<imprint>
+			<publisher>Harvard University Press</publisher>
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+	<note>revised edn.</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Towards fine-grained citation function classification</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Meyers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Grishman</surname></persName>
+		</author>
+		<ptr target="https://nyuscholars.nyu.edu/en/publications/towards-fine-grained-citation-function-classification"/>
+	</analytic>
+	<monogr>
+		<title level="m">Presented at the 9th International Conference on Recent Advances in Natural Language Processing, RANLP 2013</title>
+		<imprint>
+			<date type="published" when="2013-01-06">2013. January 6, 2021</date>
+			<biblScope unit="page" from="402" to="407"/>
+		</imprint>
+	</monogr>
+	<note>International conference recent advances in natural language processing, RANLP</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">An analysis of citation functions in the humanities and social sciences research from the perspective of problematic citation analysis assumptions</title>
+		<author>
+			<persName><forename type="first">C.-S</forename><surname>Lin</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11192-018-2770-2</idno>
+		<ptr target="https://doi.org/10.1007/s11192-018-2770-2"/>
+	</analytic>
+	<monogr>
+		<title level="j">Scientometrics</title>
+		<imprint>
+			<biblScope unit="volume">116</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="797" to="813"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Improvement of the selectivity of citation indexes to science literature through inclusion of citation relationship indicators</title>
+		<author>
+			<persName><forename type="first">B.-A</forename><surname>Lipetz</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/asi.5090160207</idno>
+		<ptr target="https://doi.org/10.1002/asi.5090160207"/>
+	</analytic>
+	<monogr>
+		<title level="j">American Documentation</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="81" to="90"/>
+			<date type="published" when="1965">1965</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<monogr>
+		<title level="m" type="main">Sentiment analysis of citations using Word2vec</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Liu</surname></persName>
+		</author>
+		<ptr target="http://arxiv.org/abs/1704.00177[cs"/>
+		<imprint>
+			<date type="published" when="2017-03-25">2017. March 25, 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">The classification of citing motivations: A meta-synthesis</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lyu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Ruan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Cheng</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11192-021-03908-z</idno>
+		<ptr target="https://doi.org/10.1007/s11192-021-03908-z"/>
+	</analytic>
+	<monogr>
+		<title level="j">Scientometrics</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">The negational reference: Or the art of dissembling</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Macroberts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">R</forename><surname>Macroberts</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/030631284014001006</idno>
+		<ptr target="https://doi.org/10.1177/030631284014001006"/>
+	</analytic>
+	<monogr>
+		<title level="j">Social Studies of Science</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="91" to="94"/>
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">The rhetorical management of academic criticism in research article abstracts</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Martin-Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Burgess</surname></persName>
+		</author>
+		<idno type="DOI">10.1515/text.2004.007</idno>
+		<ptr target="https://doi.org/10.1515/text.2004.007"/>
+	</analytic>
+	<monogr>
+		<title level="j">Text-Interdisciplinary Journal for the Study of Discourse</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="171" to="195"/>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<monogr>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">K</forename><surname>Merton</surname></persName>
+		</author>
+		<title level="m">The sociology of science : Theoretical and empirical investigations</title>
+		<imprint>
+			<publisher>University of Chicago Press</publisher>
+			<date type="published" when="1973">1973</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">The Matthew Effect in Science, II cumulative advantage and the symbolism of intellectual property</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">K</forename><surname>Merton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Isis</title>
+		<imprint>
+			<biblScope unit="volume">79</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="606" to="623"/>
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Citation context classification of a citation classic concerning citation context classification</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Moravcsik</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/030631288018003005</idno>
+		<ptr target="https://doi.org/10.1177/030631288018003005"/>
+	</analytic>
+	<monogr>
+		<title level="j">Social Studies of Science</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="515" to="521"/>
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Some results on the function and quality of citations</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Moravcsik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Murugesan</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/030631277500500106</idno>
+		<ptr target="https://doi.org/10.1177/030631277500500106"/>
+	</analytic>
+	<monogr>
+		<title level="j">Social Studies of Science</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="86" to="92"/>
+			<date type="published" when="1975">1975</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<monogr>
+		<title level="m" type="main">Measuring disagreement in science</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Murray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Lamers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Boyack</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Larivière</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Sugimoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Van Eck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Waltman</surname></persName>
+		</author>
+		<idno>Seminar-28/08</idno>
+		<imprint>
+			<date type="published" when="2020-08-28">2020. 2020. August 28, 2020</date>
+		</imprint>
+	</monogr>
+	<note>Presented at the CWTS online</note>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">I</forename><surname>Newton</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1675">1675</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Highly cited old papers and the reasons why they continue to be cited</title>
+		<author>
+			<persName><forename type="first">Isaac</forename><surname>Newton Letter To</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Robert</forename><surname>Hooke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Oppenheim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Renn</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/asi.4630290504</idno>
+		<ptr target="https://doi.org/10.1002/asi.4630290504"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the American Society for Information Science</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="225" to="231"/>
+			<date type="published" when="1978">1978</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">A classification of citation roles for the social sciences and related fields</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">C</forename><surname>Peritz</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/BF02147226</idno>
+		<ptr target="https://doi.org/10.1007/BF02147226"/>
+	</analytic>
+	<monogr>
+		<title level="j">Scientometrics</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="303" to="312"/>
+			<date type="published" when="1983">1983</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">FaBiO and CiTO: Ontologies for describing bibliographic resources and citations</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Peroni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Shotton</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.websem.2012.08.001</idno>
+		<ptr target="https://doi.org/10.1016/j.websem.2012.08.001"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Web Semantics</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="33" to="43"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<monogr>
+		<title level="m" type="main">The logic of scientific discovery</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">R</forename><surname>Popper</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1959">1959</date>
+			<publisher>Routledge</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Rhetorical evolution of oppositional discourse in French academic writing. Oppositional discourse in academic writing</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Salager-Meyer</surname></persName>
+		</author>
+		<idno type="DOI">10.7146/hjlcb.v13i25.25583</idno>
+		<ptr target="https://doi.org/10.7146/hjlcb.v13i25.25583"/>
+	</analytic>
+	<monogr>
+		<title level="j">HERMES-Journal of Language and Communication in Business</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">25</biblScope>
+			<biblScope unit="page">23</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Le discours aigre-doux de la controverse scientifique: Évolution de la rhétorique des confrontations académiques</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Salager-Meyer</surname></persName>
+		</author>
+		<idno type="DOI">10.4000/asp.2711</idno>
+		<ptr target="https://doi.org/10.4000/asp.2711"/>
+	</analytic>
+	<monogr>
+		<title level="j">Asp</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">22</biblScope>
+			<biblScope unit="page" from="29" to="50"/>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">The scimitar, the dagger and the glove: Intercultural differences in the rhetoric of criticism in Spanish, French and English Medical Discourse (1930-1995)</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Salager-Meyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Á</forename><surname>Alcaraz Ariza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Zambrano</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0889-4906(02)00019-4</idno>
+		<ptr target="https://doi.org/10.1016/S0889-4906(02)00019-4"/>
+	</analytic>
+	<monogr>
+		<title level="j">English for Specific Purposes</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="223" to="247"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Continued post-retraction citation of a fraudulent clinical trial report, 11 years after it was retracted for falsifying data</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Hill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Whitehorn</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11192-020-03631-1</idno>
+		<ptr target="https://doi.org/10.1007/s11192-020-03631-1"/>
+	</analytic>
+	<monogr>
+		<title level="j">Scientometrics</title>
+		<imprint>
+			<biblScope unit="volume">125</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="2877" to="2913"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<monogr>
+		<title level="m" type="main">How are citations classified? Scite help desk</title>
+		<author>
+			<persName><surname>Scite</surname></persName>
+		</author>
+		<ptr target="https://help.scite.ai/en-us/article/how-are-citations-classified-1a9j78t/"/>
+		<imprint>
+			<date type="published" when="2019-03-13">2019. March 13, 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Author judgements about works they cite: Three studies from psychology journals</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Shadish</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Tolliver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Sen Gupta</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/030631295025003003</idno>
+		<ptr target="https://doi.org/10.1177/030631295025003003"/>
+	</analytic>
+	<monogr>
+		<title level="j">Social Studies of Science</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="477" to="498"/>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">On the shoulders of Robert Merton: Towards a normative theory of citation</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Small</surname></persName>
+		</author>
+		<idno type="DOI">10.1023/B:SCIE.0000027310.68393.bc</idno>
+		<ptr target="https://doi.org/10.1023/B:SCIE.0000027310.68393.bc"/>
+	</analytic>
+	<monogr>
+		<title level="j">Scientometrics</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<date type="published" when="2004">2004</date>
+			<publisher>Springer</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Science studies: Bibliometric and content analysis</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Spiegel-Rosing</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/030631277700700111</idno>
+		<ptr target="https://doi.org/10.1177/030631277700700111"/>
+	</analytic>
+	<monogr>
+		<title level="j">Social Studies of Science</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="97" to="113"/>
+			<date type="published" when="1977">1977</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Unraveling scientific impact: Citation types in marketing journals</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Stremersch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Camacho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Vanneste</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Verniers</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/J.IJRESMAR.2014.09.004</idno>
+		<ptr target="https://doi.org/10.1016/J.IJRESMAR.2014.09.004"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Research in Marketing</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="64" to="77"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Citations, contexts, and humanistic discourse: Toward automatic extraction and classification</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Sula</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Miller</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/llc/fqu019</idno>
+		<ptr target="https://doi.org/10.1093/llc/fqu019"/>
+	</analytic>
+	<monogr>
+		<title level="j">Literary and Linguistic Computing</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="452" to="464"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Citation analysis and discourse analysis</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Swales</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/applin/7.1.39</idno>
+		<ptr target="https://doi.org/10.1093/applin/7.1.39"/>
+	</analytic>
+	<monogr>
+		<title level="j">Applied Linguistics</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="39" to="56"/>
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">What do citation counts measure? An updated review of studies on citations in scientific documents published between 2006 and 2018</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Tahamtan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bornmann</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11192-019-03243-4</idno>
+		<ptr target="https://doi.org/10.1007/s11192-019-03243-4"/>
+	</analytic>
+	<monogr>
+		<title level="j">Scientometrics</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="50"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">Author-rated importance of cited references in biology and psychology publications</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Safer</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/00220410810858047</idno>
+		<ptr target="https://doi.org/10.1108/002204108108580"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Documentation</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="246" to="272"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">Automatic classification of citation function</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Teufel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Siddharthan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Tidhar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">EMNLP '06 Proceedings of the 2006 conference on empirical methods in natural language processing</title>
+		<meeting><address><addrLine>Sydney</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2006">2006b</date>
+			<biblScope unit="page" from="103" to="110"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">An annotation scheme for citation function Simone</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Teufel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Siddharthan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Tidhar</surname></persName>
+		</author>
+		<idno type="DOI">10.5555/1654595.1654612</idno>
+		<ptr target="https://doi.org/10.5555/1654595.16546"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 7th SIGdial workshop on discourse and dialogue</title>
+		<meeting>the 7th SIGdial workshop on discourse and dialogue</meeting>
+		<imprint>
+			<date type="published" when="2006">2006</date>
+			<biblScope unit="page" from="80" to="87"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">Analysis of reference relationships among research papers, based on citation context</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Villavicencio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Watanabe</surname></persName>
+		</author>
+		<idno type="DOI">10.1142/S0218213012400040</idno>
+		<ptr target="https://doi.org/10.1142/S02182130124000"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal on Artificial Intelligence Tools</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">02</biblScope>
+			<biblScope unit="page">1240004</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">Citation Analysis And Discourse Analysis revisited</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">D</forename><surname>White</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/applin/25.1.89</idno>
+		<ptr target="https://doi.org/10.1093/applin/25.1"/>
+	</analytic>
+	<monogr>
+		<title level="j">Applied Linguistics</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="89" to="116"/>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">Automated citation sentiment analysis: What can we learn from biomedical researchers</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Yu</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/meet.14505001084</idno>
+		<ptr target="https://doi.org/10.1002/meet.14505001084"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the ASIST Annual Meeting</title>
+		<meeting>the ASIST Annual Meeting</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="volume">50</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title level="a" type="main">Citation content analysis (CCA): A framework for syntactic and semantic analysis of citation content</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Milojević</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/asi.22850</idno>
+		<ptr target="https://doi.org/10.1002/asi.22850"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the American Society for Information Science and Technology</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="1490" to="1503"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title level="a" type="main">Managing evaluation: Criticism in two academic review genres</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">(</forename><surname>Zou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">)</forename><surname>Joanna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hyland</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.esp.2020.03.004</idno>
+		<ptr target="https://doi.org/10.1016/j.esp.2020.03.004"/>
+	</analytic>
+	<monogr>
+		<title level="j">English for Specific Purposes</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page" from="98" to="112"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

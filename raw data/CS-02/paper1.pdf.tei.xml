@@ -1,0 +1,1817 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Knowledge graph validation by integrating LLMs and human-in-the-loop</title>
+				<funder ref="#_8XEucrw">
+					<orgName type="full">Austrian Science Fund (FWF) BILAI</orgName>
+				</funder>
+				<funder ref="#_EXG6zzf">
+					<orgName type="full">HOnEst</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">European Union</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Elsevier BV</publisher>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2025-09">9 April 2025 0306</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Stefani</forename><surname>Tsaneva</surname></persName>
+							<email>stefani.tsaneva@wu.ac.at</email>
+							<idno type="ORCID">0000-0002-0895-6379</idno>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Data, Process and Knowledge Management</orgName>
+								<orgName type="institution">Vienna University of Economics and Business</orgName>
+								<address>
+									<addrLine>Welthandelsplatz 1</addrLine>
+									<postCode>1020</postCode>
+									<settlement>Vienna</settlement>
+									<country key="AT">Austria</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Danilo</forename><surname>Dessì</surname></persName>
+							<email>danilo.dessi@gesis.org</email>
+							<idno type="ORCID">0000-0003-3843-3285</idno>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Computer Science Department</orgName>
+								<orgName type="department" key="dep2">College of Computing and Informatics</orgName>
+								<orgName type="institution" key="instit1">University of Sharjah</orgName>
+								<orgName type="institution" key="instit2">University City</orgName>
+								<address>
+									<settlement>Sharjah</settlement>
+									<country key="AE">United Arab Emirates</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Francesco</forename><surname>Osborne</surname></persName>
+							<email>francesco.osborne@open.ac.uk</email>
+							<idno type="ORCID">0000-0001-6557-3131</idno>
+							<affiliation key="aff2">
+								<orgName type="department">Knowledge Media Institute</orgName>
+								<orgName type="institution">The Open University</orgName>
+								<address>
+									<addrLine>Walton Hall</addrLine>
+									<postCode>MK7 6AA</postCode>
+									<settlement>Milton Keynes</settlement>
+									<country key="GB">United Kingdom</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Business and Law</orgName>
+								<orgName type="institution">University of Milano Bicocca</orgName>
+								<address>
+									<addrLine>Via Bicocca degli Arcimboldi 8</addrLine>
+									<postCode>20126</postCode>
+									<settlement>Milan</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Marta</forename><surname>Sabou</surname></persName>
+							<email>marta.sabou@wu.ac.at</email>
+							<idno type="ORCID">0000-0001-9301-8418</idno>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Data, Process and Knowledge Management</orgName>
+								<orgName type="institution">Vienna University of Economics and Business</orgName>
+								<address>
+									<addrLine>Welthandelsplatz 1</addrLine>
+									<postCode>1020</postCode>
+									<settlement>Vienna</settlement>
+									<country key="AT">Austria</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Knowledge graph validation by integrating LLMs and human-in-the-loop</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Information Processing &amp; Management</title>
+						<title level="j" type="abbrev">Information Processing &amp; Management</title>
+						<idno type="ISSN">0306-4573</idno>
+						<imprint>
+							<publisher>Elsevier BV</publisher>
+							<biblScope unit="volume">62</biblScope>
+							<biblScope unit="issue">5</biblScope>
+							<biblScope unit="page">104145</biblScope>
+							<date type="published" when="2025-09">9 April 2025 0306</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">04E7CC3B2AB1C186C2C00592610133B7</idno>
+					<idno type="DOI">10.1016/j.ipm.2025.104145</idno>
+					<note type="submission">Received 14 September 2024; Received in revised form 26 February 2025; Accepted 10 March 2025</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-06T18:17+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>Knowledge graph validation Large language models Hybrid human-AI workflows</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Ensuring the quality of knowledge graphs (KGs) is crucial for the success of the intelligent applications they support. Recent advances in large language models (LLMs) have demonstrated human-level performance across various tasks, raising the question of their potential for KG validation. In this work, we explore the role of LLMs in human-centric KG validation workflows, examining different collaboration strategies between LLMs and domain experts. We propose and evaluate nine distinct approaches, ranging from fully automated validation to hybrid methods that combine expert oversight with AI assistance. These workflows are tested within a real-world KG construction pipeline used to generate the Computer Science Knowledge Graph (CS-KG), a large-scale resource designed to support scientometric tasks such as trend forecasting and hypothesis generation. CS-KG comprises 41 million statements represented as 350 million triples within the Computer Science domain. Our findings show that integrating LLMs into the CS-KG verification process enhances precision by 12%, improving alignment with expert-level validation. However, this comes at the cost of recall, resulting in a 5% decrease in the overall F1 score. In contrast, a hybrid approach which involves both human-in-the-loop and LLM modules, yields the best overall results, improving F1 score by 5% with minimal human involvement.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>Knowledge graphs (KGs) are conceptual models that structure domain knowledge, integrated from various sources, and stored in a machine-readable and understandable format <ref type="bibr" target="#b17">(Hogan et al., 2021;</ref><ref type="bibr" target="#b33">Peng, Xia, Naseriparsa, &amp; Osborne, 2023)</ref>. KGs are employed in a variety of intelligent applications <ref type="bibr" target="#b32">(Paulheim, 2017)</ref> supporting tasks such as question answering <ref type="bibr" target="#b52">(Yani &amp; Krisnadhi, 2021)</ref>, recommender systems <ref type="bibr" target="#b16">(Guo et al., 2020)</ref>, and exploratory search <ref type="bibr" target="#b30">(Nuzzolese, Presutti, Gangemi, Peroni, &amp; Ciancarini, 2017)</ref>. KGbased solutions have been adopted across various domain such as medicine <ref type="bibr" target="#b24">(Li et al., 2020)</ref>, production &amp; manufacturing <ref type="bibr" target="#b49">(Wang, Cheng, Qi, &amp; Tao, 2024;</ref><ref type="bibr" target="#b50">Xu &amp; Dang, 2023)</ref>, tourism <ref type="bibr" target="#b6">(Chessa et al., 2023)</ref>, and education <ref type="bibr" target="#b43">(Su &amp; Zhang, 2020)</ref>. In the scientometrics domain, scientific KGs have recently gained significant interest as a solution for knowledge-based content exploration of scientific works <ref type="bibr" target="#b10">(Dessí, Osborne, Reforgiato Recupero, Buscaldi, &amp; Motta, 2022b;</ref><ref type="bibr" target="#b11">Dessì et al., 2020;</ref><ref type="bibr" target="#b19">Jaradeh et al., 2019;</ref><ref type="bibr" target="#b28">Meloni et al., 2023;</ref><ref type="bibr"/> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.">Semantic resources evaluation workflows</head><p>A fully manual KG creation process, which involves trained domain experts and knowledge engineers, can produce higher quality resources than a fully automated approach. However, scalability becomes a significant challenge, especially for large-scale KGs. As an alternative, a human-centric KG validation, typically implying the annotation of triples as true or false by human contributors, can be included in an automated creation workflow to ensure the removal of incorrectly represented statements. Several research directions have emerged, trying to approach this issue from different angles.</p><p>Semi-automatic KG generation. Human-in-the-loop approaches have been incorporated as a final step in KG extraction workflows containing some level of automation. For instance, in <ref type="bibr" target="#b26">Lossio-Ventura et al. (2018)</ref>, HiL validation is carried out as part of the triple extraction step from medical literature to eliminate noisy triples. A similar workflow is also described in <ref type="bibr" target="#b38">Rumin1 and Mekterović (2019)</ref>, where human judgment is added as the last stage of the KG extraction workflow. While these works avoid the manual efforts of creating the KG, they introduce a bottleneck at the validation stage.</p><p>Triple selection for HiL annotation. Several approaches have been implemented to reduce the amount of triples requiring manual validation. In <ref type="bibr" target="#b8">Demartini, Difallah, and Cudré-Mauroux (2013)</ref>, HiL annotation is conducted to verify the results of an entity-linking prediction task, with triples being validated only if the prediction confidence score falls below a certain threshold. A similar approach combined with further contradiction reasoning is employed in <ref type="bibr" target="#b25">Li et al. (2017)</ref> to select which triples to manually annotate.</p><p>Triple prioritization for HiL annotation. The minimization of triples to be checked by a HiL is also discussed in <ref type="bibr" target="#b31">Ojha and Talukdar (2017)</ref>, where triples are prioritized based on the amount of additional triples, whose correctness can be inferred from the annotation. This line of work is continued in <ref type="bibr" target="#b15">Gao et al. (2019)</ref> and <ref type="bibr" target="#b36">Qi, Zheng, Hong, and Zou (2022)</ref> by optimizing the cost and duration of the manual annotations and computational efforts.</p><p>HiL assistance. A semi-automatic workflow focusing on assisting human validators is presented in <ref type="bibr" target="#b34">Pomp, Lipp, and Meisen (2019)</ref>. In this approach, human contributors are assisted by an automatic tool using reasoning to provide suggestions based on previously validated constraints and identified inconsistencies.</p><p>In the mentioned examples, the KG validation task is performed by the human annotators while automated approaches either generate the triples to be checked <ref type="bibr" target="#b26">(Lossio-Ventura et al., 2018;</ref><ref type="bibr" target="#b38">Rumin1 &amp; Mekterović, 2019)</ref>, aim to reduce the amount of triples to be verified <ref type="bibr" target="#b8">(Demartini et al., 2013;</ref><ref type="bibr" target="#b15">Gao et al., 2019;</ref><ref type="bibr" target="#b25">Li et al., 2017;</ref><ref type="bibr" target="#b31">Ojha &amp; Talukdar, 2017;</ref><ref type="bibr" target="#b36">Qi et al., 2022)</ref>, or assist the human annotator with automated suggestions <ref type="bibr" target="#b34">(Pomp et al., 2019)</ref>. In parallel, various automated KG validation techniques have been investigated, which we summarize next.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.">Automated validation of semantic resources</head><p>Automatic KG extraction approaches typically face a trade off between the scope and quality of the resulting resource <ref type="bibr" target="#b32">(Paulheim, 2017)</ref>. As a result, several research directions have emerged focusing on automated validation of semantic resources, specifically addressing tasks such as completion and error-detection <ref type="bibr" target="#b32">(Paulheim, 2017)</ref>.</p><p>Related work has approached these tasks following various methods such as utilizing KG embeddings <ref type="bibr" target="#b2">(Bordes, Usunier, Garcia-Duran, Weston, &amp; Yakhnenko, 2013;</ref><ref type="bibr" target="#b12">Dettmers, Minervini, Stenetorp, &amp; Riedel, 2018;</ref><ref type="bibr" target="#b29">Nickel, Tresp, &amp; Kriegel, 2012)</ref>, graph features <ref type="bibr" target="#b3">(Borrego, Ayala, Hernández, Rivero, &amp; Ruiz, 2021)</ref> or transformers <ref type="bibr">(Dessí et al., 2022a;</ref><ref type="bibr" target="#b20">Jaradeh, Singh, Stocker, &amp; Auer, 2021;</ref><ref type="bibr" target="#b53">Yao, Mao, &amp; Luo, 2019)</ref>, developed to classify newly generated triples as valid or invalid. For KG completion, for instance, in <ref type="bibr" target="#b20">Jaradeh et al. (2021)</ref>, a classifier is trained on existing KG triples and subsequently applied to assess the validity of newly generated triples. Similarly, in <ref type="bibr">Dessí et al. (2022a)</ref>, a classifier is trained on a reliable subset of the KG and then used to determine whether uncertain triples are erroneous.</p><p>Recently, however, LLMs have demonstrated impressive human-level performance on tasks, typically completed by human contributors across various domains <ref type="bibr" target="#b7">(Chiang &amp; Lee, 2023;</ref><ref type="bibr" target="#b42">Sallam et al., 2024)</ref> without additional training required. Therefore, next, we discuss relevant LLM-based approaches in the Semantic Web domain, with focus on the validation of semantic resources.</p><p>Validating semantic resources with LLMs. Over the last years LLMs have attracted much research interest from the Semantic Web community. LLMs have been widely explored for some knowledge engineering tasks such as the creation or completion of semantic resources, e.g., <ref type="bibr">Carta et al. (2023), Trajanoska, Stojanov, and</ref><ref type="bibr" target="#b44">Trajanov (2023)</ref>, <ref type="bibr" target="#b55">Zhang, Reklos, Jain, Peñuela, and Simperl (2023)</ref>, <ref type="bibr" target="#b56">Zhu et al. (2024)</ref>. However, the evaluation of semantic resources with LLMs has only recently received interest.</p><p>In <ref type="bibr" target="#b21">Khorashadizadeh et al. (2023)</ref>, the authors include a triple validation step, using LLMs, in their KG generation workflow. Yet, they do not provide quantitative details on the performance of this validation approach or compare it to other methods.</p><p>In <ref type="bibr" target="#b14">Fathallah et al. (2024)</ref>, the focus is on designing a prompt-chain for generating ontologies, including a validation stage where errors are identified through external services (such as OOPS Poveda-Villalón, Gómez-Pérez, &amp; Suárez-Figueroa, 2014 and an ontology reasoner) and corrected by LLMs. The paper introduces several successfully corrected examples from the generation of the Wine Ontology.<ref type="foot" target="#foot_0">foot_0</ref> However, the authors do not specify whether the validation performance was tested in a concrete experimental setup.</p><p>The identification of ontology modeling defects through LLMs has been investigated in <ref type="bibr" target="#b47">Tsaneva, Vasic et al. (2024)</ref>. While the study reports validation accuracy of 96%, the carried out experiment relied on a small dataset from the Pizza Ontology. <ref type="foot" target="#foot_1">3</ref>In <ref type="bibr" target="#b46">Tsaneva, Herwanto, and Sabou (2024)</ref>, the authors propose the development of knowledge engineering task-specific assessment tests and evaluate various LLMs based on their ability to validate ontology axioms. The benchmark aims to assess LLM capabilities, drawing inspiration from qualification tests typically used for crowdworkers.</p><p>In <ref type="bibr" target="#b0">Allen and Groth (2024)</ref>, the authors investigate incorrect &amp; missing class membership relations in ontologies using LLMs. They experiment with relations extracted from public knowledge graphs in the general domain and across various LLMs. However, the dataset size and examined relation types are limited.</p><p>Recently, in <ref type="bibr" target="#b37">Regino and Dos Reis (2025)</ref>, the LLM-based validation of newly generated KG triples with focus on inconsistency detection has been explored. The authors investigate four fundamental aspects: aligning classes and properties, standardizing URIs, ensuring semantic consistency, and verifying syntactic accuracy.</p><p>While the reviewed literature indicates the potential of LLMs for validating semantic resources, proposed approaches are still in preliminary stages, tested on a small dataset or lack experimental evaluation. Additionally, there is a lack of studies exploring how the designed solutions should be best integrated into existing KG generation pipelines, i.e., whether they could fully replace previous automated/manual approaches or they should serve as a complementary tool.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3.">Human-machine collaboration workflows</head><p>In the knowledge graph validation field, a study classifies validation approaches into methods based on human-annotation, statistics/learning, rules, and hybrid approaches that combine two or more of these methods <ref type="bibr" target="#b51">(Xue &amp; Zou, 2023)</ref>. The authors argue that hybrid approaches have the potential to overcome the limitations of each separate method. While human-machine collaboration lacks thorough investigations in the Semantic Web community, possible interactions between human contributors and automated approaches have received research interests in various communities.</p><p>Collaborative workflows, illustrating the roles and responsibilities in hybrid human-AI teams have been explored for moral decision making in the medical domain <ref type="bibr" target="#b48">(van Stijn, Neerincx, ten Teije, &amp; Vethman, 2021)</ref>. The work highlights levels of involvement of each agent (human or AI) and the expected advantages and disadvantages in terms of workload, accountability, and ethical concerns.</p><p>A recent positioning paper identifies different levels of collaborations between human annotators and LLMs for relevance judgment tasks <ref type="bibr" target="#b13">(Faggioli et al., 2023)</ref>. The authors discuss the implications of using LLM annotations compared to a traditional HiL approach, considering factors such as budget and quality. They discuss potential benefits and scenario implementations across a spectrum from fully manual to fully automated approaches <ref type="bibr" target="#b13">(Faggioli et al., 2023)</ref>, organized in the following categories:</p><p>• Human judgment implies that (1) the annotations are completed manually by human participants, who perform the tasks without any support or (2) human annotators are supported by tools (e.g., document clustering) but ultimately remain the sole judges of the triple correctness. • AI assistance can be implemented in various ways with different levels of responsibility. For instance, LLMs can be employed to generate summaries or other contextual information to help the human judges in their annotations. Moreover, a task partitioning can be established where each agent focuses on tasks suited for their capabilities. • Human verification describes a human-in-the-loop workflow, where human participants judge the results of an automated approach and correct them if needed. A novel implementation, motivated by the ''preference-testing'' concept, suggests that two LLMs can provide judgments and a human participant can choose the more relevant example. • Fully automated workflows treat LLM judgments as reliable sources, which can completely replace human judges.</p><p>In this study, we consider interaction workflows identified in the literature, and provide experimental results for various collaboration workflows applied to a concrete use case: the validation of automatically extracted triples, part of the Computer Science Knowledge Graph, which we describe in the next section.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Use case: Validating the computer science knowledge graph</head><p>The Computer Science Knowledge Graph (CS-KG) describes a vast collection of claims extracted from 6.7 million scientific articles in the field of Computer Science. In CS-KG, scientific claims are represented as triples in the form &lt;subject, predicate, object&gt;, describing the relation (predicate) between two entities (subject and object). The knowledge graph contains about 10M entities, classified within the five categories Method, Task, Material, Metric, and OtherEntity, and connected through 179 object properties <ref type="bibr">(Dessí et al., 2022a</ref><ref type="bibr" target="#b10">(Dessí et al., , 2022b))</ref>.</p><p>For instance, the triple &lt;support vector machine,outperforms,decision tree&gt;, refers to the claim that the entity support vector machine of type Method outperforms the entity decision tree of type Method. Since often no objective truth can be determined, as in the given example, CS-KG claims should be considered only within the context of the articles, they are linked to <ref type="bibr" target="#b10">Dessí et al. (2022b)</ref>. CS-KG supports a variety of tasks such as advanced literature search and trend forecasting by integrating content from various sources. Thus, the coverage of the knowledge graph is of high importance. However, it is equally important to identify and discard erroneous facts before they are incorporated into the final version of the knowledge graph.</p><p>In this section, we first explain the rationale for selecting CS-KG as our use case. Next, we present SCICERO, the generation pipeline employed to construct CS-KG. Finally, we describe the evaluation process used to assess the quality of the resulting resource.</p><p>Use case motivation. We selected CS-KG as our use case for two main reasons:</p><p>• Significance and Adoption. CS-KG has attracted significant research interest and has been integrated into various applications, demonstrating its relevance and value as a resource. For instance, it has been incorporated into a research support system proposed in <ref type="bibr" target="#b40">Salatino, Mannocci, Osborne, Rehm, Schimmler, et al. (2024)</ref>, which enables scientists to explore scientific literature, state-of-the-art methodologies for specific tasks, and available scientific artifacts. In <ref type="bibr" target="#b1">Alonso, Dessí, Meloni, and Reforgiato Recupero (2025)</ref>, the authors introduce a resume-to-job matching method that identifies the most suitable open positions based on an applicant's skills. They further propose an extension of their framework which leverages CS-KG to recommend relevant patents or articles, helping job candidates enhance their expertise in preparation for applications. CS-KG has also been employed in experimental investigations to facilitate the retrieval of papers within specific subfields of Computer Science <ref type="bibr" target="#b22">(Kovacevic, El-Ebshihy, Piroi, &amp; Rauber, 2024)</ref>. Further research leveraging CS-KG and its predecessor, AI-KG <ref type="bibr" target="#b11">(Dessì et al., 2020)</ref>, includes entity extraction from scientific publications <ref type="bibr" target="#b23">(Li &amp; Daoutis, 2021)</ref>, scholarly article classification <ref type="bibr" target="#b18">(Hoppe, Dessì, &amp; Sack, 2021)</ref>, and knowledge graph completion <ref type="bibr" target="#b4">(Borrego et al., 2022)</ref>. • Ease of use for HiL evaluation. The SCICERO pipeline was evaluated on a CS-KG subset containing 3.6𝐾 triples. This dataset includes not only the final ground truth label of each evaluated triple but also individual annotations from three experts. Consequently, the SCICERO gold standard enables the simulation of HiL experiments without requiring additional manual effort. Furthermore, the domain of CS-KG aligns with the expertise of the authors of this paper, facilitating access to a pool of knowledgeable experts who can support HiL approaches. These factors were instrumental in conducting the experiments presented in this study.</p><p>Generation of CS-KG. Fig. <ref type="figure" target="#fig_0">1</ref> displays the architecture of the SCICERO pipeline <ref type="bibr">(Dessí et al., 2022a)</ref>, which extracts triples from scientific literature to generate CS-KG. The pipeline takes as input a set of scientific texts related to the field of Computer Science, along with an ontology that defines the domain's semantics. SCICERO then generates knowledge graph triples through three main stages: extraction, entity and relationship handling, and validation.</p><p>In the extraction stage the framework applies the CSO classifier <ref type="bibr" target="#b41">(Salatino, Osborne, &amp; Motta, 2022)</ref>, which identifies research topics described in a scientific publication, according to the Computer Science Ontology,<ref type="foot" target="#foot_2">foot_2</ref> and revised NLP modules from the CoreNLP suite <ref type="bibr" target="#b27">(Manning et al., 2014)</ref> to produce sets of initially extracted triples 𝑇 1 ...𝑇 𝑛 . Extracted entities and relationships are further processed in the entity and relationship handling stage by, e.g., merging similar entities and discarding generic terms, thus resulting in an integrated set of triples, 𝑇 . Lastly, the triple set is sent for a validation aiming to reduce noisy and erroneous triples. The validation stage contains two modules -a transformer-based validator and an ontology-based validator, which we will briefly describe next.</p><p>The transformer validator relies on the support of a triple, i.e., the number of textual sources from which the triple was extracted. As such the support-level 𝑠 can be interpreted as confidence of the correctness of the triple. Following this intuition, the triple set 𝑇 is split into 𝑇 𝑟𝑒𝑙𝑖𝑎𝑏𝑙𝑒 , containing triples with a high support (e.g., 𝑠 ≥ 5, that is triples which were extracted from 5 or more documents), and 𝑇 𝑢𝑛𝑐𝑒𝑟𝑡𝑎𝑖𝑛 (e.g., 𝑠 ≤ 5). Next, 𝑇 𝑛𝑒𝑔𝑎𝑡𝑖𝑣𝑒 is produced by corrupting triples of 𝑇 𝑟𝑒𝑙𝑖𝑎𝑏𝑙𝑒 and a transformer model is fine-tuned with 𝑇 𝑟𝑒𝑙𝑖𝑎𝑏𝑙𝑒 and 𝑇 𝑛𝑒𝑔𝑎𝑡𝑖𝑣𝑒 . Lastly, a prediction is made for each triple from 𝑇 𝑢𝑛𝑐𝑒𝑟𝑡𝑎𝑖𝑛 resulting in two new sets of triples predicted as correct 𝑇 𝑐𝑜𝑛𝑠𝑖𝑠𝑡𝑒𝑛𝑡 and incorrect 𝑇 𝑡-𝑑𝑖𝑠𝑐𝑎𝑟𝑑𝑒𝑑 .</p><p>The ontology validator takes as input 𝑇 𝑐𝑜𝑛𝑠𝑖𝑠𝑡𝑒𝑛𝑡 and 𝑇 𝑟𝑒𝑙𝑖𝑎𝑏𝑙𝑒 and ensures the removal of triples which are not aligned with the domain ontology. Thus, a triple containing a subject or object of a type not specified as the domain and range for the triple relation are discarded (𝑇 𝑜-𝑑𝑖𝑠𝑐𝑎𝑟𝑑𝑒𝑑 ). For instance, the ontology defines the relation uses, indicating that an entity instance of type Method, Metric, OtherEntity, or Task uses an instance of type Method, Metric, OtherEntity, Task, or Material.</p><p>The triple &lt;dbpedia, uses, core_nlp&gt; describes the relation between the entity dbpedia, classified as Material, and the entity core_nlp of type Method. The given triple does not comply to the ontological schema since no entity of type Material can use an entity of type Method. Thus, it will be discarded. Evaluation. SCICERO and all its components have been evaluated on a subset of 3.6𝐾 triples. The KG generation achieves a precision of 75%, a recall of 79%, and an F1 score of 77%. The validation modules contribute to an over 20% increase in precision, highlighting the critical role of the validation stage. Additional information on the implementation of SCICERO and CS-KG is available in <ref type="bibr">Dessí et al. (2022a)</ref> and <ref type="bibr" target="#b10">Dessí et al. (2022b)</ref>.</p><p>In this paper, we aim to further enhance the quality of the generated triples by looking into possible extensions of the SCICERO validation stage with new validation modules based on LLMs and human expertise.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Integrating LLMs and HiL into the SCICERO validation</head><p>Human validation has frequently been envisioned as an addition to automated KG generation workflows to ensure the quality of the produced knowledge graphs. We investigate possible extensions of the SCICERO pipeline with an additional human validator module. Building on recent advances in LLMs research, which have shown expert-level results for KG validation <ref type="bibr" target="#b47">(Tsaneva, Vasic et al., 2024)</ref>, we also investigate an additional LLM validator module. We explore both workflows, where the LLM validator fully replaces the human validator as well as scenarios where LLMs and human annotators collaborate in the KG validation task.</p><p>This section discusses potential SCICERO extension workflows, with a particular focus on the level of collaboration between distinct validation modules. Formally, let 𝑇 be a set of input triples, 𝑆 be the SCICERO pipeline, and 𝑉 the outcome of the triple validation. We want to introduce one or both modules 𝑀 𝑗 , where 𝑗 ∈ {𝐻𝑖𝐿, 𝐿𝐿𝑀}, such that the enhanced pipeline 𝑆 +𝑀 𝑗 archives better performance in terms of precision, recall, and F1 score, compared to 𝑆 alone in validating the triples to be added to CS-KG. We build on top of our recent work <ref type="bibr" target="#b45">(Tsaneva, Dessì, Osborne, &amp; Sabou, 2024)</ref>, where we perform a preliminary investigation of possible SCICERO extensions to select the most meaningful workflows which lead to the best performance scores. In the following section (Section 5) we discuss two experiments with concrete implementation details for the LLM and human validator modules.</p><p>In Table <ref type="table">1</ref>, we categorize potential extension workflows based on the level of collaboration between the integrated LLM and the human validator. Specifically, we classify these workflows according to the four categories introduced in Faggioli et al. ( <ref type="formula">2023</ref>): human judgment, AI assistance, human verification, and full automation. Sections 4.1-4.4 provide a detailed description of each workflow and define the expected roles of the corresponding validation modules.</p><p>Additionally, we differentiate the types of the incorporated validation methods according to the classification from <ref type="bibr" target="#b51">Xue and Zou (2023)</ref>. In Figs. 2-10, statistics and learning-based methods are displayed in red. Rule-based methods are shown in yellow and human-based methods are displayed in purple.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1.">Human judgment</head><p>We first explore possible positions of the human validator module within the SCICERO pipeline without involving an LLM. Since the original SCICERO pipeline already contains two automated validators, we consider several alternative configurations:</p><p>Human validation (workflow 1 in Table <ref type="table">1</ref>). For a completely manual annotation process without any tool-support the SCICERO pipeline needs to be modified. This involves replacing the entire SCICERO validation stage with a human validator module as illustrated in Fig. <ref type="figure" target="#fig_1">2</ref>. While this workflow ensures full decision control by the human annotators, it is not a scalable solution for the validation of large resources such as CS-KG. <ref type="table">1</ref>). An intuitive extension of SCICERO with human validation implies the positioning of the human validator module at the end of the SCICERO pipeline (see Fig. <ref type="figure" target="#fig_3">3</ref>). In this scenario, the automated transformer and ontology validators can be seen as filters that the human judges utilize in order to reduce the pool of triples that need to be verified. The ontology validator relies on expert-defined rules that apply to the domain, while the transformer validator can be adjusted with the desired triple support level. By placing the human validator at the end, humans retain full control of what is included in the final KG while automated tools support the removal of noisy triples. This workflow is particularly useful when the primary validation goal is to further enhance the precision of the resulting KG triples.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Human validation after SCICERO (workflow 2 in Table</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Table 1</head><p>Possible extensions of SCICERO, employing various levels of interaction among human and LLM validations, following the interaction classification from <ref type="bibr" target="#b13">Faggioli et al. (2023)</ref>.  Partial human validation after SCICERO (workflow 3 in Table <ref type="table">1</ref>). While sending all triples to the human validator module ensures the highest level of human oversight, this solution does not scale well for large resources since the manual efforts are enormous. Thus, we also consider a version of this workflow, where the human validator is only involved for the annotation of selected triples. Specifically, human annotation is added only for triples with limited literature support (Fig. <ref type="figure" target="#fig_4">4</ref>). Although not every triple is manually reviewed before it is added to the KG, human oversight can be ensured by the selection of an appropriate reliability threshold for the transformer validator and establishing rules, to be followed by the ontology validator, with domain experts. Following the task-partitioning idea from <ref type="bibr" target="#b13">Faggioli et al. (2023)</ref>, workflow 3 can also be classified as an example of AI assistance since human judges take control over 𝑇 𝑐𝑜𝑛𝑠𝑖𝑠𝑡𝑒𝑛𝑡 , while the automated validators takes care of 𝑇 𝑟𝑒𝑙𝑖𝑎𝑏𝑙𝑒 . However, in this paper we focus on the interaction between the human validator and LLM validator modules and thus consider the interaction in the workflow as human judgment. Next, we propose an extension of workflow 3 more closely fitting the AI (LLM) assistance paradigm.  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Collaboration level Workflow</head><note type="other">Figure</note></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2.">AI assistance</head><p>Balanced competence partitioning (workflow 4 in Table <ref type="table">1</ref>). Intuitively, LLMs are likely to be more capable at validating statements that often occur in literature because of the availability of a larger training dataset. In contrast, human judges might struggle reviewing statement extracted from numerous sources, especially if contradictory results are presented. Therefore, we propose a workflow where LLMs deal with triples linked to a higher amount of scientific texts (i.e., triples with high support), while human participants focus on triples for which only a few references are available (i.e., triples with low support). Fig. <ref type="figure">5</ref> visualizes the capability-based task partitioning between the LLM validator (for 𝑇 𝑟𝑒𝑙𝑖𝑎𝑏𝑙𝑒 ) and the human validator (for 𝑇 𝑐𝑜𝑛𝑠𝑖𝑠𝑡𝑒𝑛𝑡 ) after the original SCICERO validation modules.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3.">Human verification</head><p>A typical human verification workflow, where human participants judge the results of an automated approach, does not reduce the number of triples to be verified since all triples would be annotated both within the LLM validator module and the human validator module. Moreover, an over-or under-reliance on the LLM might affect the judgment capabilities of the human participants.</p><p>To address this issue, we adopt the ''preference-testing'' strategy from <ref type="bibr" target="#b13">Faggioli et al. (2023)</ref>, and apply it to the triple validation task such that a human judge is involved only whenever a disagreement among automated validation modules occurs. <ref type="table">1</ref>). The original SCICERO evaluation revealed that 34% of the triples removed by the transformer validator were in fact correct triples. In contrast, 35% of 𝑇 𝑐𝑜𝑛𝑠𝑖𝑠𝑡𝑒𝑛𝑡 triples, added to the KG, were incorrect <ref type="bibr">(Dessí et al., 2022a)</ref>. To address this, as shown in Fig. <ref type="figure">6</ref>, an additional LLM validator module can be integrated to re-evaluate triples before their removal or addition to the KG. The disagreement paradigm can be employed whenever the LLM validator produces an output different from the original SCICERO validation modules. Following the intuition that triples verified as correct by several distinct automated approaches are likely to be correct, human participants can focus only on annotating triples where no conclusive decision could be established.    <ref type="table">1</ref>). The previously proposed workflow can be adopted based on the main KG validation goals to reduce the manual efforts. For instance, workflow 6 (Fig. <ref type="figure" target="#fig_6">7</ref>) follows the disagreement strategy only for the removal of triples and not for triple additions to the KG. Such an approach is especially useful whenever a higher KG coverage is desired. In comparison, for use cases with high KG precision requirements, such as those in the medical domain, the disagreement strategy might only be added for the addition of triples, to allow human participants to focus on removing misleading information.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Human validation upon correctness disagreement (workflow 5 in Table</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Human validation upon triple removal disagreement (workflow 6 in Table</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.4.">Fully automated</head><p>We propose two integration approaches of the LLM module within the SCICERO framework. <ref type="table">1</ref>). In this setup, the LLM validator is assumed to be better performing than the SCICERO automated validation and is therefore added as a last step of the workflow to ensure no noisy triples are included in the final KG. The transformer and ontology validators are utilized as filters reducing the LLM annotation costs, however, the final decision is taken by the LLM. <ref type="table">1</ref>). An alternative workflow, exploiting the task-partitioning paradigm, is shown in Fig. <ref type="figure" target="#fig_8">9</ref>. The LLM validator module is integrated before the removal of triples or addition of triples with lower scientific support (i.e, triples belonging to 𝑇 𝑢𝑛𝑐𝑒𝑟𝑡𝑎𝑖𝑛 ). This workflow is the fully automated replication of workflow 5, however, instead of involving a HiL on disagreement, the annotation by the LLM is considered reliable and is used as the final decision. <ref type="table">1</ref>). Building on related work in the field of LLMs <ref type="bibr" target="#b7">(Chiang &amp; Lee, 2023;</ref><ref type="bibr" target="#b47">Tsaneva, Vasic et al., 2024)</ref>, we also propose a workflow in which the original SCICERO validation stage is entirely replaced by an LLM-based validator, as illustrated in Fig. <ref type="figure" target="#fig_9">10</ref>. This workflow allows the investigation of the capabilities of LLMs as standalone annotators, compared to the performance achieved with the integration of the LLM within the SCICERO validation stage.  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>SCICERO integration with the LLM validator (workflow 7 in Table</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>SCICERO with LLM validator approval for 𝑇 𝑢𝑛𝑐𝑒𝑟𝑡𝑎𝑖𝑛 (workflow 8 in Table</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Complete LLM validation (workflow 9 in Table</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">Experiment design and implementation</head><p>To evaluate each of the nine SCICERO validation workflows described in Section 4, we designed two experiments that differ in the dataset used and the implementation of the validator modules. It is important to emphasize that this study does not aim to evaluate the HiL or LLM validation modules in isolation. Instead, our objective is to assess their integration within an existing KG generation pipeline and to analyze the benefits of incorporating both LLMs and HiL in the validation stage. Therefore, we do not assess these modules separately using standard triple classification benchmarks.</p><p>An overview of the experimental investigation is illustrated in Fig. <ref type="figure" target="#fig_10">11</ref>. We first conducted a large-scale simulation (Experiment A) using the adopted workflows to validate 3.6𝐾 triples. In this setting, the human validator module was simulated using the annotations of the original domain experts from the SCICERO evaluation <ref type="bibr">(Dessí et al., 2022a)</ref>, who manually classified each triple as either true or false. Our objective was to evaluate these collaborative workflows based on (1) precision, recall, and F1 scores, and (2) scalability, by analyzing the required number of HiL and LLM annotations. In Experiment B, we validated the findings of Experiment A by implementing an actual human validator module, comprising a pool of recruited domain experts. Given the additional manual effort required, this experiment was conducted on a representative subset of 600 triples from the original dataset.</p><p>We introduce the used dataset in Section 5.1 and describe the experimental setups of experiments A and B in Sections 5.2 and 5.3 respectively.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.1.">Experimental data</head><p>For the experimental investigations we make use of (1) CS-KG-3600: a gold standard created during the original SCICERO <ref type="bibr">(Dessí et al., 2022a)</ref> evaluation,<ref type="foot" target="#foot_3">foot_3</ref> and (2) CS-KG-600: a subset of this gold standard allowing for testing of additional validation implementations. Human validator. Because of the large size of the dataset (3.6𝐾 triples), to reduce the annotation efforts of the experiment, we simulate human-in-the-loop validations for the complete dataset by leveraging the original expert annotations used to create the gold standard. For each triple 𝑡, the gold standard dataset contains three binary expert annotations and the aggregated final ground truth value 𝐴 𝑡 = {𝑎 1 , 𝑎 2 , 𝑎 3 , 𝑎 𝑔𝑡 }, 𝑎 𝑖 ∈ {0, 1}. For each triple 𝑡 we select a single random expert judgment 𝑎 𝑟 ∈ {𝑎 1 , 𝑎 2 , 𝑎 3 } to allow the reusability of the previously established gold standard while limiting biases introduced by the usage of the gold standard within the validation stage. Within the evaluation of the proposed SCICERO workflows, the selected random annotation 𝑎 𝑟 is compared against the ground truth value 𝑎 𝑔𝑡 .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3.">Experiment B: Real-life validation of CS-KG-600</head><p>The second experiment (right hand-side of Fig. <ref type="figure" target="#fig_10">11</ref>) focuses on a realistic implementation of the human validator module. We perform the experiment on the subset CS-KG-600 to reduce additional manual annotation efforts.</p><p>LLM validator. For the LLM validator implementation we reuse the produced LLM annotations previously described in Section 5.2. Since CS-KG-600 is sampled from CS-KG-3600, no additional LLM annotation had to be carried out.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Human validator.</head><p>• Binary triple validation task. Given a set of triples 𝑇 , where each triple 𝑡 is represented as 𝑡 = (𝑠𝑢𝑏𝑗𝑒𝑐𝑡, 𝑟𝑒𝑙𝑎𝑡𝑖𝑜𝑛, 𝑜𝑏𝑗𝑒𝑐𝑡), and triple context 𝐶 𝑡 = (𝑠𝑢𝑏𝑗𝑒𝑐𝑡_𝑡𝑦𝑝𝑒, 𝑜𝑏𝑗𝑒𝑐𝑡_𝑡𝑦𝑝𝑒, 𝑓 𝑖𝑙𝑒_𝑖𝑑𝑠), containing the types of the subject and object nodes as well the identifiers of the files where the triples were extracted from. The goal is to classify each triple as true or false, formalized as 𝑉 (𝑡, 𝐶𝑡) ∶ 𝑇 → {0, 1}. • Sample size. To minimize the annotation efforts, only triples which are sent to the human validator module in one of the workflows 2-9 are annotated. In total, 333 triples were reviewed. • Annotators background. The annotators were four advanced PhD researchers with Computer Science (or equivalent) background, who did not have any involvement in the creation of CS-KG, SCICERO or the initial gold standard creation. They were asked to judge whether a triple is correct or incorrect according to their expertise and support in scientific literature. • Annotation environment. The annotations were performed using Google Sheets, where each triple was presented in natural language, displaying the subject, object, and relation, along with the types of the subject and object. During the annotation process, participants had access to the files associated with the articles from which each triple was extracted and could use digital libraries such as Scopus<ref type="foot" target="#foot_8">foot_8</ref> to browse through additional scientific content in order to provide an informed decision.</p><p>Example triples provided to the annotators with contextual information are shown in Table <ref type="table" target="#tab_0">3</ref>. The first columns represent the triple elements. Let us consider the validation of the triple &lt;natural language processing, uses, word segmentation&gt; as an example. As contextual information, the annotators are provided with the knowledge that both natural language processing and word segmentation are classified as Task. Additionally, they are given the identifiers of three files from which the triple was extracted. To access the original papers, they were instructed to use OpenAlex. <ref type="foot" target="#foot_9">10</ref> For instance, the file identified as 2110300018 can be accessed at <ref type="url" target="https://openalex.org/works/w2110300018">https://openalex.org/works/w2110300018</ref>. • Annotation strategy. Each triple was first annotated by a single expert. In cases where the expert had doubts about the correctness of a triple, a second expert was asked for a judgment. If the annotations were inconclusive, a discussion among the two experts took place and if no agreement could be reached, a third expert was involved and the final decision was reached through majority vote. Each annotator worked at their own pace, and, following the necessary discussions, the final annotations were completed within a week. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.">Results</head><p>In this section, we present the results achieved with the nine validation workflows in each of the conducted experiments.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.1.">Experiment A -Results of the large scale simulation on CS-KG-3600</head><p>For the first experiment, we utilized the SCICERO complete gold standard to simulate the proposed extended SCICERO workflows and implemented the human validator module such that a random expert annotation from the ground truth is used within the workflows. Table <ref type="table" target="#tab_1">4</ref> shows an overview of the workflow performance in terms of precision, recall and F1 scores as well as additional efforts added to SCICERO, i.e., the amount of triples to undergo an LLM (𝑁 𝐿𝐿𝑀 ) or human (𝑁 𝐻𝑢𝑚𝑎𝑛 ) validation. The scores are color-coded for an easy overview of the improvements (in green) and losses (in red), introduced by each workflow with respect to the original SCICERO performance on the datasets. We discuss our results along the four categories of workflows from Human Judgment to Full Automation.</p><p>Notably, the human judgment workflows offer precision improvements of 8%-18% with possible recall losses (up to 8%). While the F1 improvements are prominent for this workflow type, the number of triples to be manually evaluated, especially for workflows 1 and 2, are considerably high (≥ 1.8𝐾) and as such, these workflows are only suitable for small-size resources. For workflow 3, the amount of manual annotations was significantly reduced by leveraging the capabilities of the SCICERO validators to filter reliable triples. While the precision is lowest compared to other workflows of this type, the F1 score is still increased to 80%, similarly to workflow 2 (81%), in which three times more triples are annotated.</p><p>In the AI assistance category, workflow 4, which extended the workflow 3 manual validation with an additional LLM validator module, further improves the precision to 90% (+15% from the SCICERO baseline) when the GPT-4o model is used. Nevertheless, the loss in recall (-13%) results in a small F1 score decrease (-1%). As such, this workflow is suitable for evaluation campaigns where a high precision of the KG is required, while the KG coverage is not a main priority.</p><p>The workflows from the human verification interaction-level type lead to score improvements in all performance scores while keeping the human annotations to a minimum (&lt; 13% of the total triples). Workflow 5 improves the precision by up to 5% by utilizing GPT-4o while workflow 6 reaches up to 8% recall increase when using Claude Sonnet.</p><p>The fully automated workflows showcase the capabilities of the LLM validator module. Workflow 7 and 8 manage to increase the precision by 3%-12% with no additional manual efforts when using GPT-4o. Workflow 9, which relies solely on LLM-based validation, is the only workflow that leads to an overall decrease in precision and F1 scores. This outcome highlights the crucial role of integrating LLMs with other automated approaches to enhance performance.</p><p>The experiment highlighted the strengths and limitations of different automation levels that integrate LLMs with human-in-theloop approaches. While human-judgment workflows yield the most significant improvements over the original SCICERO pipeline, they are labor-intensive and poorly suited for evaluating large-scale knowledge graphs. At the other end of the spectrum, the workflows based on full automation exhibited the highest scalability, albeit at the cost of some performance. In contrast, AI Assistance workflows can partially address scalability challenges and enhance precision but suffer from low recall. The human-verification approach seems to offer the best trade-off between performance and manual effort, as it effectively improves overall results while minimizing human intervention.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.2.">Experiment B -Results of the real-life validation of CS-KG-600</head><p>For the second experiment, we utilized CS-KG-600, a subset of the SCICERO gold standard, and conducted an additional human-in-the-loop annotation campaign. Table <ref type="table" target="#tab_2">5</ref> provides a overview of the performance achieved by the various workflows.</p><p>Similarly to Experiment A, the human judgment workflows increase the precision results compared to the SCICERO baseline (+ 4%-8%). However, in contrast to the results from Experiment A, the added benefit is not as high and the losses in recall and F1 score are significant (up to -35%). Performance decreases were expected since in Experiment A the ground truth was used within the simulated workflows. These results can further be explained by the domain expertise level of the involved human participants (senior vs junior experts). However, further investigations are needed to explore other factors, which may have influenced the scores.</p><p>It should be noted that because of the high manual efforts in the validation following workflow 1, we do not test this entire workflow in Experiment B. The values in Table <ref type="table" target="#tab_2">5</ref> are estimations based on the annotations performed for the remaining workflows (56% of the CS-KG-600 dataset).</p><p>Surprisingly, the fully automated and AI-assisted workflows result in a higher increase in precision (+ 5%-12% when using GPT-4o), compared to the performance obtained using human judgment. As with the previous experiment, there is a trade-off with the recall scores which decrease by up to 20%. An exception is the implementation of workflow 8 with the Claude Sonnet model, which leads to overall improved performance scores. However, these effects are not consistently observed across models, and further investigation is needed to determine whether similar performance can be reliably replicated.</p><p>Human verification workflows, as in Experiment A, lead to balanced performance improvements across all tested LLMs. The increase is rather small (+4% precision in workflow 4; +3% recall in workflow 5). However, it is noteworthy that these gains come without any trade-offs in other performance metrics.</p><p>The optimal workflow should be selected based on the main evaluation objective and the available resources. As demonstrated in our experiments, precision scores can be enhanced both with and without additional manual intervention. While fully manual or fully automated workflows inherently involve a trade-off between precision and recall, human-in-the-loop verification strategies effectively improve overall performance while minimizing manual effort.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="7.">Conclusion</head><p>The automated generation of knowledge graphs enables extensive content coverage of the represented domains. However, such automatically curated resources often contain quality issues. To ensure the quality of the generated KGs and the success of the applications relying on them, validation is a crucial step in the generation process. This paper explores innovative validation approaches for knowledge graphs that combine human-in-the-loop techniques with LLMs. Specifically, we investigate potential workflows that integrate LLMs and human contributors at varying levels of automation (RQ1) and evaluate their strengths and limitations (RQ2) in terms of both performance metrics (precision, recall, and F1 score) and scalability.</p><p>We validate the Computer Science Knowledge Graph (CS-KG) as a use case. CS-KG is a valuable resource that integrates scientific claims from millions of publications, facilitating the analysis of research trends and supporting various scientometric tasks <ref type="bibr" target="#b10">(Dessí et al., 2022b)</ref>. Thus, it is fundamental to ensure the quality of the knowledge graph by removing misleading or incorrectly extracted statements. To this end, we extend SCICERO -the pipeline used to produce CS-KG -by integrating LLMs and HiL within its validation stage.</p><p>This section presents a summary of the key contributions and findings of our research. Additionally, we discuss the limitations, propose directions for future research, and outline open issues and remaining challenges.</p><p>Contributions. We extend SCICERO by integrating additional LLMs and human-based validator modules and make the following contributions to the field:</p><p>• Human-LLM collaboration investigation. We present an overview of possible SCICERO extensions, incorporating LLMs and/or human-in-the-loop validation techniques. We explore a spectrum of collaboration levels, raging from fully manual human judgments and AI-assisted annotations to human verification and full automation. This results in nine different workflows combining HiL and LLMs. • LLM-based KG validation. We propose a concrete implementation of an LLM-sourced KG triple annotation and asses the achieved validation performance of three LLMs. • Experimental evaluation. We conduct two experimental investigations using the SCICERO gold standard, consisting of 3.6𝐾 triples, to empirically evaluate the strength and limitations of each of the nine proposed collaborative validation workflows. As such, we empirically shed light on the trade-offs of various human-LLM combination possibilities. To the best of our knowledge, we pioneer the empirical exploration of the trade-offs of such hybrid workflows on large-scale datasets for the task of KG validation. • Annotation collection. We publish the collected annotations produced in the LLM and HiL validation modules online<ref type="foot" target="#foot_10">foot_10</ref> to allow the reproducibility of our work as well as the exploration of further workflows and in-depth experiments by fellow researchers.</p><p>Main findings. Our experimental investigation yields the following key insights, relevant to the community:</p><p>• Weak performance of standalone LLM validation. LLMs, when used independently, fail to deliver highly accurate KG triple validations (up to 70% precision, workflow 9). However, when combined with other automated validation methods, as in workflows 7 &amp; 8, precision improves significantly, reaching up to 87%.</p><p>• Human-level validation by integrated LLMs. The integration of LLMs into the SCICERO pipeline produces results comparable to, and in some cases better than, SCICERO workflows, including a human-in-the-loop. Concretely, in Experiment B, workflow 7 achieves 85% precision and outperforms the human judgment workflows by 4%-8%. • Superior hybrid human-LLM collaboration. The integration of LLMs and human annotators successfully balances precision and recall, overcoming trade-off limitations observed in workflows that rely solely on either human expertise or LLM-sourced annotations. These improvements are shown by workflows 5 &amp; 6 in both experimental setups across tested LLMs. • LLM disagreement strategy for HiL involvement. A promising method for reducing human intervention is the disagreement strategy employed by workflows 5 &amp; 6: when two automated validators produce inconsistent annotations, human contributors can resolve the conflict. If both automated methods agree, their validation can be considered reliable and manual checks can be avoided.</p><p>Limitations and outlook. Despite the valuable insights gained in this study, several limitations and challenges remain:</p><p>• Single use case. This study focuses on a single KG generation pipeline -SCICERO-to enable a detailed and in-depth analysis of a concrete use case. Since several components of SCICERO are specifically designed for the Computer Science domain, the implementation developed for this study cannot be directly applied to other domains. However, the theoretical framework explored in this study, along with the nine workflows, was designed to be domain-independent and can be readily implemented in various fields with minimal or no modifications. Similarly, the insights gained from our study can inform the development of novel systems that integrate HiL approaches and LLMs. Furthermore, even the specific framework modeled on CS-KG can be adapted to other domains by adjusting the extraction components and incorporating a relevant domain ontology. Nevertheless, such adaptations require additional domain expertise and evaluation efforts, which fall beyond the scope of this study. To further validate and generalize our findings, we plan to conduct a series of follow-up experiments to assess the adaptability of the proposed workflows across different domains and KG generation solutions. • Further SCICERO integration. Future work will involve scaling up the evaluation by applying the validation pipelines to a larger subset of CS-KG to further validate the findings of this study. Moreover, we intend to utilize the extended SCICERO pipelines to generate different versions of CS-KG, allowing for a cross validation and analysis of tasks enabled by the KG such as forecasting of research dynamics. • LLM (prompt) variability. While our implementation, which utilized three different LLMs, produces human-level annotations, further studies are necessary to assess the impact of prompt modifications and model selection on overall performance. Future work could explore workflows that integrate retrieval-augmented generation (RAG) and evaluate how relevant contextual information impacts performance. • Scalability. Although the hybrid human-LLM SCICERO extensions reduce manual efforts significantly, scalability remains a challenge for large resources containing millions of triples. Further investigations will explore ways to extend SCICERO with other strategies such as triple annotation priority to prevent bottlenecks while maintaining high validation quality. We also plan to investigate an experimental setup that integrates multiple SCICERO workflows. This approach would enable dynamic selection of the most suitable workflow based on real-time assessments of both human and LLM resource availability. • Evaluating LLM annotations. In this paper, LLM annotations have solely been compared against human-generated annotations. However, our experiments indicate that LLMs can outperform junior experts. Further research is needed to re-evaluate current ground truth creation methods and explore new measurements to detect cases when LLMs exceed human expertise.</p><p>Validating semantic resources using LLMs is a complex challenge. In this work, we contribute to the field by proposing and evaluating various workflows that incorporate HiL methods, LLMs, or a combination of both, applied to a large-scale resource. Our findings underscore the strengths and limitations of each approach, demonstrating the potential of LLMs as a valuable complement for generating high-quality knowledge graphs at scale. Additionally, our insights into hybrid workflows integrating HiL and LLMs are relevant to researchers working on other knowledge-intensive tasks beyond KG validation. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>CRediT authorship contribution statement</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Declaration of Generative AI and AI-assisted technologies in the writing process</head><p>During the preparation of this work the authors used ChatGPT4 in order to suggest improvements to the readability and language of the manuscript. After using this tool/service, the author(s) reviewed and edited the content as needed and take(s) full responsibility for the content of the published article.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Declaration of competing interest</head><p>The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. The SCICERO pipeline, used to generate the Computer Science Knowledge Graph.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 2. Workflow 1: Human validation in place of the original SCICERO validation.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head/><label/><figDesc>validation as a final step of SCICERO's validation. Experts are supported in the removal of noisy triples but have full decision control over triple additions to the KG. 3 Fig. 4 Partial human validation for low-support triples (𝑇 𝑐𝑜𝑛𝑠𝑖𝑠𝑡𝑒𝑛𝑡 ) as a final step of SCICERO's validation. Highly supported triples (𝑇 𝑐𝑜𝑛𝑠𝑖𝑠𝑡𝑒𝑛𝑡 ) are directly added to the KG. AI Assistance 4 Fig. 5 Balanced competence partitioning. Human validation for low-support triples (𝑇 𝑐𝑜𝑛𝑠𝑖𝑠𝑡𝑒𝑛𝑡 ) and LLM validation of highly supported triples (𝑇 𝑐𝑜𝑛𝑠𝑖𝑠𝑡𝑒𝑛𝑡 ). Human Verification 5 Fig. 6 Human validation triple correctness upon disagreement. LLM validation of 𝑇 𝑡-𝑑𝑖𝑠𝑐𝑎𝑟𝑑𝑒𝑑 and 𝑇 𝑐𝑜𝑛𝑠𝑖𝑠𝑡𝑒𝑛𝑡 triples. Human validation whenever the LLM module disagrees with the original SCICERO validators. 6 Fig. 7 Human validation upon triple removal disagreement. LLM validation of 𝑇 𝑡-𝑑𝑖𝑠𝑐𝑎𝑟𝑑𝑒𝑑 . Human validation whenever the LLM disagrees with the original SCICERO validators. triples verification added to SCICERO's validation stage. LLMs take the final judgment. 8 Fig. 9 LLM-based triples verification after SCICERO's original automated validation for 𝑇 𝑐𝑜𝑛𝑠𝑖𝑠𝑡𝑒𝑛𝑡 . 9 Fig. 10 LLM-based triples verification. Replacement of the SCICERO validation through an LLM validation.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 3 .</head><label>3</label><figDesc>Fig. 3. Workflow 2: Human validation integration as a last step of the SCICERO validation.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 4 .</head><label>4</label><figDesc>Fig. 4. Workflow 3: Partial human validation integration as a last step of the SCICERO validation for low-support triples (𝑇 𝑐𝑜𝑛𝑠𝑖𝑠𝑡𝑒𝑛𝑡 ).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 5 .Fig. 6 .</head><label>56</label><figDesc>Fig. 5. Workflow 4: Balanced competence partitioning. Human judges validate 𝑇 𝑐𝑜𝑛𝑠𝑖𝑠𝑡𝑒𝑛𝑡 triples while LLMs judge triples belonging to 𝑇 𝑟𝑒𝑙𝑖𝑎𝑏𝑙𝑒 .</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>InformationFig. 7 .</head><label>7</label><figDesc>Fig. 7. Workflow 6: Human validation upon triple removal disagreement among the LLM validation and SCICERO transformer validator.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Fig. 8 .</head><label>8</label><figDesc>Fig. 8. Workflow 7: SCICERO integration with an LLM for triple addition approval.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Fig. 9 .</head><label>9</label><figDesc>Fig. 9. Workflow 8: SCICERO integration with an LLM validator for triple addition approval of 𝑇 𝑢𝑛𝑐𝑒𝑟𝑡𝑎𝑖𝑛 triples.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>InformationFig. 10 .</head><label>10</label><figDesc>Fig. 10. Workflow 9: LLM validation in place of the original SCICERO validation.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>Fig. 11 .</head><label>11</label><figDesc>Fig. 11. Overview of the two experiment setups: Experiment A, conducted on the full CS-KG-3600 dataset by simulating the human validator module, and Experiment B, leveraging a subset CS-KG-600 and a concrete human validator implementation.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head>Fig. 12 .</head><label>12</label><figDesc>Fig.12. Initial instructions prompt sent to the LLM, introducing the annotation task, expected behavior and response format to be followed.</figDesc><graphic coords="12,153.40,52.08,237.60,133.20" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><head>Stefani Tsaneva :</head><label>Tsaneva</label><figDesc>Writing -review &amp; editing, Writing -original draft, Visualization, Validation, Project administration, Methodology, Investigation, Formal analysis, Data curation, Conceptualization. Danilo Dessì: Writing -review &amp; editing, Data curation, Conceptualization. Francesco Osborne: Writing -review &amp; editing, Data curation, Conceptualization. Marta Sabou: Writing -review &amp; editing, Supervision, Project administration, Funding acquisition, Conceptualization.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 3</head><label>3</label><figDesc>Example triples and the provided context in the format presented to the annotators.</figDesc><table><row><cell>Subject</cell><cell>Relation</cell><cell>Object</cell><cell>Subject type</cell><cell>Object type</cell><cell>Files</cell></row><row><cell>natural language processing</cell><cell>uses</cell><cell>word segmentation</cell><cell>Task</cell><cell>Task</cell><cell>2110300018, 158142204, 2146654604</cell></row><row><cell>information integration</cell><cell>acquires</cell><cell>patient address</cell><cell>Task</cell><cell>Other Entity</cell><cell>2849896015</cell></row><row><cell>semantic profile representation</cell><cell>acquires</cell><cell>document classification</cell><cell>Method</cell><cell>Task</cell><cell>2039759410</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 4</head><label>4</label><figDesc>Experiment A results on the CS-KG-3600 dataset in terms of precision (P), recall (R), F1 scores and additional resource efforts provided as 𝑁 𝐿𝐿𝑀 and 𝑁 𝐻𝑢𝑚𝑎𝑛 . The best score for each workflow across LLMs is shown in bold and the best scores per workflow type are underlined.</figDesc><table><row><cell cols="2">Workflow</cell><cell/><cell/><cell>Performance</cell><cell/><cell cols="2">Annotations</cell></row><row><cell>ID</cell><cell>Fig.</cell><cell>Model</cell><cell>P</cell><cell>R</cell><cell>F1</cell><cell>𝑁 𝐿𝐿𝑀</cell><cell>𝑁 𝐻𝑢𝑚𝑎𝑛</cell></row><row><cell cols="2">SCICERO</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell/><cell>Fig. 1</cell><cell>-</cell><cell>75%</cell><cell>79%</cell><cell>77%</cell><cell>-</cell><cell>-</cell></row><row><cell cols="2">Human Judgment</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>1</cell><cell>Fig. 2</cell><cell>-</cell><cell>88%</cell><cell>87%</cell><cell>87%</cell><cell>-</cell><cell>3.6K</cell></row><row><cell>2</cell><cell>Fig. 3</cell><cell>-</cell><cell>93%</cell><cell>71%</cell><cell>81%</cell><cell>-</cell><cell>1.8K</cell></row><row><cell>3</cell><cell>Fig. 4</cell><cell>-</cell><cell>83%</cell><cell>77%</cell><cell>80%</cell><cell>-</cell><cell>600</cell></row><row><cell cols="2">AI Assistance</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell/><cell/><cell>gpt-4o</cell><cell>90%</cell><cell>66%</cell><cell>76%</cell><cell>1.2K</cell><cell>600</cell></row><row><cell>4</cell><cell>Fig. 5</cell><cell>claude sonnet</cell><cell>87%</cell><cell>69%</cell><cell>77%</cell><cell>1.2K</cell><cell>600</cell></row><row><cell/><cell cols="2">llama 3.3 70B</cell><cell>85%</cell><cell>73%</cell><cell>79%</cell><cell>1.2K</cell><cell>600</cell></row><row><cell cols="3">Human Verification</cell><cell/><cell/><cell/><cell/><cell/></row><row><cell/><cell/><cell>gpt-4o</cell><cell>80%</cell><cell>82%</cell><cell>81%</cell><cell>1.1K</cell><cell>423</cell></row><row><cell>5</cell><cell>Fig. 6</cell><cell>claude sonnet</cell><cell>78%</cell><cell>86%</cell><cell>82%</cell><cell>1.1K</cell><cell>444</cell></row><row><cell/><cell cols="2">llama 3.3 70B</cell><cell>78%</cell><cell>86%</cell><cell>82%</cell><cell>1.1K</cell><cell>442</cell></row><row><cell/><cell/><cell>gpt-4o</cell><cell>75%</cell><cell>83%</cell><cell>79%</cell><cell>505</cell><cell>158</cell></row><row><cell>6</cell><cell>Fig. 7</cell><cell>claude sonnet</cell><cell>75%</cell><cell>87%</cell><cell>81%</cell><cell>505</cell><cell>324</cell></row><row><cell/><cell cols="2">llama 3.3 70B</cell><cell>75%</cell><cell>86%</cell><cell>80%</cell><cell>505</cell><cell>331</cell></row><row><cell cols="2">Full Automation</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell/><cell/><cell>gpt-4o</cell><cell>87%</cell><cell>62%</cell><cell>72%</cell><cell>1.8K</cell><cell>-</cell></row><row><cell>7</cell><cell>Fig. 8</cell><cell>claude sonnet</cell><cell>81%</cell><cell>69%</cell><cell>75%</cell><cell>1.8K</cell><cell>-</cell></row><row><cell/><cell cols="2">llama 3.3 70B</cell><cell>80%</cell><cell>73%</cell><cell>76%</cell><cell>1.8K</cell><cell>-</cell></row><row><cell/><cell/><cell>gpt-4o</cell><cell>78%</cell><cell>77%</cell><cell>77%</cell><cell>1.1K</cell><cell>-</cell></row><row><cell>8</cell><cell>Fig. 9</cell><cell>claude sonnet</cell><cell>74%</cell><cell>87%</cell><cell>80%</cell><cell>1.1K</cell><cell>-</cell></row><row><cell/><cell cols="2">llama 3.3 70B</cell><cell>72%</cell><cell>86%</cell><cell>79%</cell><cell>1.1K</cell><cell>-</cell></row><row><cell/><cell/><cell>gpt-4o</cell><cell>70%</cell><cell>70%</cell><cell>70%</cell><cell>3.6K</cell><cell>-</cell></row><row><cell>9</cell><cell>Fig. 10</cell><cell>claude sonnet</cell><cell>61%</cell><cell>85%</cell><cell>71%</cell><cell>3.6K</cell><cell>-</cell></row><row><cell/><cell cols="2">llama 3.3 70B</cell><cell>58%</cell><cell>89%</cell><cell>70%</cell><cell>3.6K</cell><cell>-</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 5</head><label>5</label><figDesc>Experiment B results on the CS-KG-600 dataset in terms of precision (P), recall (R), F1 scores and additional resource efforts provided as 𝑁 𝐿𝐿𝑀 and 𝑁 𝐻𝑢𝑚𝑎𝑛 . The best score for each workflow across LLMs is shown in bold and the best scores per workflow type are underlined. Scores marked with a star ( * ) are estimated based on a subset annotation.</figDesc><table><row><cell cols="2">Workflow</cell><cell/><cell/><cell>Performance</cell><cell/><cell cols="2">Annotations</cell></row><row><cell>ID</cell><cell>Fig.</cell><cell>Model</cell><cell>P</cell><cell>R</cell><cell>F1</cell><cell>𝑁 𝐿𝐿𝑀</cell><cell>𝑁 𝐻𝑢𝑚𝑎𝑛</cell></row><row><cell cols="2">SCICERO</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell/><cell>Fig. 1</cell><cell>-</cell><cell>73%</cell><cell>77%</cell><cell>75%</cell><cell>-</cell><cell>-</cell></row><row><cell cols="2">Human Judgment</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell/><cell>1</cell><cell>Fig. 2</cell><cell>77%*</cell><cell>55%*</cell><cell>64%*</cell><cell>-</cell><cell>600</cell></row><row><cell/><cell>2</cell><cell>Fig. 3</cell><cell>81%</cell><cell>42%</cell><cell>56%</cell><cell>-</cell><cell>300</cell></row><row><cell/><cell>3</cell><cell>Fig. 4</cell><cell>77%</cell><cell>67%</cell><cell>72%</cell><cell>-</cell><cell>100</cell></row><row><cell cols="2">AI Assistance</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell/><cell/><cell>gpt-4o</cell><cell>84%</cell><cell>57%</cell><cell>68%</cell><cell>200</cell><cell>100</cell></row><row><cell>4</cell><cell>Fig. 5</cell><cell>claude sonnet</cell><cell>81%</cell><cell>57%</cell><cell>67%</cell><cell>200</cell><cell>100</cell></row><row><cell/><cell cols="2">llama 3.3 70B</cell><cell>80%</cell><cell>63%</cell><cell>71%</cell><cell>200</cell><cell>100</cell></row><row><cell cols="3">Human Verification</cell><cell/><cell/><cell/><cell/><cell/></row><row><cell/><cell/><cell>gpt-4o</cell><cell>77%</cell><cell>77%</cell><cell>77%</cell><cell>178</cell><cell>72</cell></row><row><cell>5</cell><cell>Fig. 6</cell><cell>claude sonnet</cell><cell>75%</cell><cell>83%</cell><cell>79%</cell><cell>178</cell><cell>75</cell></row><row><cell/><cell cols="2">llama 3.3 70B</cell><cell>74%</cell><cell>82%</cell><cell>78%</cell><cell>178</cell><cell>61</cell></row><row><cell/><cell/><cell>gpt-4o</cell><cell>73%</cell><cell>80%</cell><cell>76%</cell><cell>78</cell><cell>26</cell></row><row><cell>6</cell><cell>Fig. 7</cell><cell>claude sonnet</cell><cell>73%</cell><cell>84%</cell><cell>78%</cell><cell>78</cell><cell>50</cell></row><row><cell/><cell cols="2">llama 3.3 70B</cell><cell>73%</cell><cell>83%</cell><cell>78%</cell><cell>78</cell><cell>46</cell></row><row><cell cols="2">Full Automation</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell/><cell/><cell>gpt-4o</cell><cell>85%</cell><cell>59%</cell><cell>70%</cell><cell>300</cell><cell>-</cell></row><row><cell>7</cell><cell>Fig. 8</cell><cell>claude sonnet</cell><cell>80%</cell><cell>63%</cell><cell>71%</cell><cell>300</cell><cell>-</cell></row><row><cell/><cell cols="2">llama 3.3 70B</cell><cell>78%</cell><cell>71%</cell><cell>74%</cell><cell>300</cell><cell>-</cell></row><row><cell/><cell/><cell>gpt-4o</cell><cell>78%</cell><cell>76%</cell><cell>77%</cell><cell>178</cell><cell>-</cell></row><row><cell>8</cell><cell>Fig. 9</cell><cell>claude sonnet</cell><cell>74%</cell><cell>85%</cell><cell>79%</cell><cell>178</cell><cell>-</cell></row><row><cell/><cell cols="2">llama 3.3 70B</cell><cell>72%</cell><cell>84%</cell><cell>77%</cell><cell>178</cell><cell>-</cell></row><row><cell/><cell/><cell>gpt-4o</cell><cell>68%</cell><cell>69%</cell><cell>69%</cell><cell>600</cell><cell>-</cell></row><row><cell>9</cell><cell>Fig. 10</cell><cell>claude sonnet</cell><cell>61%</cell><cell>81%</cell><cell>69%</cell><cell>600</cell><cell>-</cell></row><row><cell/><cell cols="2">llama 3.3 70B</cell><cell>56%</cell><cell>87%</cell><cell>68%</cell><cell>600</cell><cell>-</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2" xml:id="foot_0"><p>Wine Ontology -https://www.w3.org/TR/owl-guide/wine.rdf Information Processing and Management 62 (2025) 104145</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="3" xml:id="foot_1"><p>Pizza Ontology -https://protege.stanford.edu/ontologies/pizza/pizza.owl Information Processing and Management 62 (2025) 104145</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="4" xml:id="foot_2"><p>Computer Science Ontology -https://scholkg.kmi.open.ac.uk/cskg/ontology Information Processing and Management 62 (2025) 104145</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="5" xml:id="foot_3"><p>The gold standard is available under https://github.com/danilo-dessi/SKG-pipeline/tree/main/eval Information Processing and Management</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="62" xml:id="foot_4"><p>(2025)  104145</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="6" xml:id="foot_5"><p>GPT-4o -https://openai.com/index/gpt-4o-system-card</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="7" xml:id="foot_6"><p>Claude Sonnet -https://www.anthropic.com/news/claude-3-5-sonnet</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="8" xml:id="foot_7"><p>Llama 3.3 -https://www.llama.com/docs/model-cards-and-prompt-formats/llama3_3 Information Processing and Management 62 (2025) 104145</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="9" xml:id="foot_8"><p>Scopus -https://www.scopus.com/</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="10" xml:id="foot_9"><p>OpenAlex -https://openalex.org/</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="11" xml:id="foot_10"><p>Knowledge Graph Triple Validation by LLMs and Human-in-the-Loop [Data set]. Zenodo. https://doi.org/10.5281/zenodo.13730203 Information Processing and Management 62 (2025) 104145</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>We thank all data annotators for their involvement and contributions. This research was funded in whole or in part by the <rs type="funder">Austrian Science Fund (FWF) BILAI</rs> (<rs type="grantNumber">10.55776/COE12</rs>) and <rs type="funder">HOnEst</rs> (V 745) projects. For open access purposes, the author has applied a CC BY public copyright license to any author accepted manuscript version arising from this submission. Additionally, the work was supported by the <rs type="projectName">PERKS</rs> (<rs type="grantNumber">101120323</rs>) project, co-funded by the <rs type="funder">European Union</rs>. Views and opinions expressed are, however, those of the authors only and do not necessarily reflect those of the European Union. Neither the European Union nor the granting authority can be held responsible for them.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_8XEucrw">
+					<idno type="grant-number">10.55776/COE12</idno>
+				</org>
+				<org type="funded-project" xml:id="_EXG6zzf">
+					<idno type="grant-number">101120323</idno>
+					<orgName type="project" subtype="full">PERKS</orgName>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Table 2</head><p>Overview of the LLMs employed for the experiment, their version, and the date of the conducted experiment.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Model Version Experiment Date</head><p>GPT-4o gpt-4o-2024-05-13 May 22nd, 2024 Claude Sonnet claude-3-5-sonnet-20241022 Jan 31st, 2025 Llama 3.3 70B Llama-3.3-70B-Instruct a Feb 14, 2025</p><p>a We utilized the model available on Hugging Fac's platform accessible at <ref type="url" target="https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct">https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct</ref> CS-KG-3600. For the SCICERO evaluation, a 3.6𝐾 triples set was sampled from the generated CS-KG, including equal amounts (600) of triples from each of the following categories:</p><p>• triples with very high support levels (∈ 𝑇 𝑟𝑒𝑙𝑖𝑎𝑏𝑙𝑒 )</p><p>• triples with high support levels (∈ 𝑇 𝑟𝑒𝑙𝑖𝑎𝑏𝑙𝑒 )</p><p>• triples with low support levels (∈ 𝑇 𝑐𝑜𝑛𝑠𝑖𝑠𝑡𝑒𝑛𝑡 )</p><p>• triples labeled as incorrect by the transformer validator (∈ 𝑇 𝑡-𝑑𝑖𝑠𝑐𝑎𝑟𝑑𝑒𝑑 )</p><p>• triples removed by the ontology validator (∈ 𝑇 𝑜-𝑑𝑖𝑠𝑐𝑎𝑟𝑑𝑒𝑑 )</p><p>• randomly produced triples (𝑇 𝑟𝑎𝑛𝑑𝑜𝑚 ) generated by replacing the head or tail of CS-KG triples.</p><p>The triples were manually evaluated by 3 senior researchers in the Computer Science field and the annotations were aggregated using a majority voting strategy to determine the ground truth value for each triple. Further details are available in <ref type="bibr">Dessí et al. (2022a)</ref>.</p><p>CS-KG-600. We create a smaller representative dataset for exploration and findings validation purposes. CS-KG-600 is sampled from CS-KG-3600 and consists of 100 randomly selected triples from each of the six subsets contained within the gold standard.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2.">Experiment A: Large scale simulation on CS-KG-3600</head><p>In this section, we describe the implementation of each newly added validation module for the first experiment (left-hand side of Fig. <ref type="figure">11</ref>). This experiment was conducted on the full CS-KG-3600 gold standard.</p><p>LLM validator. The LLM module is implemented as follows:</p><p>• Binary triple validation task. Given a set of triples 𝑇 , where each triple 𝑡 is represented as 𝑡 = (𝑠𝑢𝑏𝑗𝑒𝑐𝑡, 𝑟𝑒𝑙𝑎𝑡𝑖𝑜𝑛, 𝑜𝑏𝑗𝑒𝑐𝑡), the goal is to classify each triple as true or false, formalized as 𝑉 (𝑡) ∶ 𝑇 → {0, 1}. • Employed LLMs. We employed three alternative LLMs in our experiment: GPT-4o, 6 Claude Sonnet, 7 and Llama 3.3. 8 These models are among the highest-performing in the field and have each demonstrated superior performance across a wide range of tasks in previous studies. In particular, the GPT family has demonstrated excellent performance in class membership relation validation <ref type="bibr" target="#b0">(Allen &amp; Groth, 2024)</ref>. Similarly, GPT-4o and Claude Sonnet have achieved expert-level ontology axiom validations, exceeding the results of open source models <ref type="bibr" target="#b46">(Tsaneva, Herwanto et al., 2024)</ref>. Additionally, we aimed to include an open model to accommodate scenarios where deploying a local solution is essential for validating private resources. While privacy concerns were not a factor in this study, since CS-KG exclusively extracts information from publicly available scholarly publications, we acknowledge that on-premise LLMs may be necessary in other applications. Since recent studies have shown that Llama 3 70B outperforms other open models in triple consistency validation <ref type="bibr" target="#b37">(Regino &amp; Dos Reis, 2025)</ref>, we select its successor -Llama 3.3 -as on open source model for our experiments. Table <ref type="table">2</ref> outlines the specific versions of the models employed in our study, along with the corresponding dates on which each experiment was performed. • LLM prompting. Fig. <ref type="figure">12</ref> shows the initial instructions sent to the LLM model, introducing the annotation task and specifying the expected format of the response. Initial investigation revealed that requesting only the triple id and a binary judgment often resulted in incomplete or excessive judgments, which was addressed by requiring the complete triples to be included in the response.</p><p>After the behavior of the LLM is defined, batches of 100 triples without any additional contextual information are sent for validation. In cases where the response did not match the required response format, the annotation was ignored and the same batch was sent again. To mimic a typical crowdsourcing experiment, we used the model's default parameters settings (e.g., temperature) and sent each batch of triples three consecutive times. The final judgment for each triple was determined using a majority vote aggregation of all responses.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data availability</head><p>The SCICERO gold standard and collected annotations from the experiments are available at <ref type="url" target="https://github.com/danilo-dessi/SKG-pipeline/blob/main/eval/">https://github.com/danilo-dessi/ SKG-pipeline/blob/main/eval/</ref> and <ref type="url" target="https://doi.org/10.5281/zenodo.13730203">https://doi.org/10.5281/zenodo.13730203</ref>.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Evaluating class membership relations in knowledge graphs using large language models</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">P</forename><surname>Allen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">T</forename><surname>Groth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The semantic web: ESWC satellite events</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">A novel approach for job matching and skill recommendation using transformers and the o*net database</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Alonso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dessí</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Meloni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Reforgiato Recupero</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.bdr.2025.100509</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.bdr.2025.100509"/>
+	</analytic>
+	<monogr>
+		<title level="j">Big Data Research</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page">100509</biblScope>
+			<date type="published" when="2025">2025</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Translating embeddings for modeling multi-relational data</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bordes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Usunier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Garcia-Duran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Weston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Yakhnenko</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">CAFE: Knowledge graph completion using neighborhood-aware features</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Borrego</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ayala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Hernández</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Rivero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ruiz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Engineering Applications of Artificial Intelligence</title>
+		<imprint>
+			<biblScope unit="volume">103</biblScope>
+			<biblScope unit="page">104302</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Completing scientific facts in knowledge graphs of research concepts</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Borrego</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dessì</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Hernández</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Recupero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ruiz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="125867" to="125880"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<monogr>
+		<title level="m" type="main">Iterative zero-shot LLM prompting for knowledge graph construction</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Carta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Giuliani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Piano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Podda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Pompianu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">G</forename><surname>Tiddia</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2307.01128</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Data-driven methodology for knowledge graph generation within the tourism domain</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chessa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Fenu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Recupero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Salatino</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="67567" to="67599"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Can large language models be an alternative to human evaluations</title>
+		<author>
+			<persName><forename type="first">C.-H</forename><surname>Chiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lee</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2023.acl-long.870</idno>
+		<ptr target="http://dx.doi.org/10.18653/v1/2023.acl-long.870"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 61st annual meeting of the association for computational linguistics</title>
+		<meeting>the 61st annual meeting of the association for computational linguistics</meeting>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Large-scale linked data integration using probabilistic reasoning and crowdsourcing</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Demartini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Difallah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Cudré-Mauroux</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s00778-013-0324-z</idno>
+		<ptr target="http://dx.doi.org/10.1007/s00778-013-0324-z"/>
+	</analytic>
+	<monogr>
+		<title level="j">VLDB Journal</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="665" to="687"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">SCICERO: A deep learning and NLP approach for generating scientific knowledge graphs in the computer science domain</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dessí</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Recupero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Buscaldi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.knosys.2022.109945</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.knosys.2022.109945"/>
+	</analytic>
+	<monogr>
+		<title level="j">Knowledge-Based Systems</title>
+		<imprint>
+			<biblScope unit="volume">258</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">CS-KG: A large-scale knowledge graph of research entities and claims in computer science</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dessí</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Reforgiato Recupero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Buscaldi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-031-19433-7_39</idno>
+		<ptr target="http://dx.doi.org/10.1007/978-3-031-19433-7{_}39"/>
+	</analytic>
+	<monogr>
+		<title level="m">The semantic web -ISWC 2022</title>
+		<imprint>
+			<publisher>Springer International Publishing</publisher>
+			<date type="published" when="2022">2022b</date>
+			<biblScope unit="page" from="678" to="696"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">AI-KG: an automatically generated knowledge graph of artificial intelligence</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dessì</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Reforgiato Recupero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Buscaldi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sack</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-030-62466-8_9</idno>
+		<ptr target="http://dx.doi.org/10.1007/978-3-030-62466-8{_}9"/>
+	</analytic>
+	<monogr>
+		<title level="m">The semantic web-ISWC 2020: 19th international semantic web conference, proceedings</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="127" to="143"/>
+		</imprint>
+	</monogr>
+	<note>part II 19</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Convolutional 2d knowledge graph embeddings</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Dettmers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Minervini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Stenetorp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Riedel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the AAAI conference on artificial intelligence</title>
+		<meeting>the AAAI conference on artificial intelligence</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">32</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Perspectives on large language models for relevance judgment</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Faggioli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Dietz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">L A</forename><surname>Clarke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Demartini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hagen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hauff</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3578337.3605136</idno>
+		<ptr target="http://dx.doi.org/10.1145/3578337.3605136"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2023 ACM SIGIR international conference on theory of information retrieval</title>
+		<meeting>the 2023 ACM SIGIR international conference on theory of information retrieval</meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="39" to="50"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">NeOn-GPT: A large language model-powered pipeline for ontology learning</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Fathallah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Das</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>De Giorgis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Poltronieri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Haase</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Kovriguina</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The semantic web: ESWC satellite events</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Efficient knowledge graph accuracy evaluation</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">E</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Sisman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">L</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yang</surname></persName>
+		</author>
+		<idno type="DOI">10.14778/3342263.3342642</idno>
+		<ptr target="http://dx.doi.org/10.14778/3342263.3342642"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the VLDB Endowment</title>
+		<meeting>the VLDB Endowment</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="1679" to="1691"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">A survey on knowledge graph-based recommender systems</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zhuang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Qin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Xiong</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/IAEAC50856.2021.9390863</idno>
+		<ptr target="http://dx.doi.org/10.1109/IAEAC50856.2021.9390863"/>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Knowledge and Data Engineering</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="3549" to="3568"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Knowledge graphs</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hogan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Blomqvist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cochez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Melo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">D</forename><surname>Gutierrez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename></persName>
+		</author>
+		<idno type="DOI">10.1145/3447772</idno>
+		<ptr target="http://dx.doi.org/10.1145/3447772"/>
+	</analytic>
+	<monogr>
+		<title level="j">ACM Computing Surveys</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Understanding class representations: An intrinsic evaluation of zero-shot text classification</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Hoppe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dessì</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sack</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the workshop on deep learning for knowledge graphs (DL4KG</title>
+		<title level="s">CEUR workshop proceedings</title>
+		<editor>
+			<persName><forename type="first">M</forename><surname>Alam</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">D</forename><surname>Buscaldi</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">M</forename><surname>Cochez</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Recupero</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">H</forename><surname>Sack</surname></persName>
+		</editor>
+		<meeting>the workshop on deep learning for knowledge graphs (DL4KG</meeting>
+		<imprint>
+			<date type="published" when="2021">2021. 2021</date>
+			<biblScope unit="volume">3034</biblScope>
+		</imprint>
+	</monogr>
+	<note>co-located with the 20th international semantic web conference</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Open Research Knowledge Graph: Next generation infrastructure for semantic scholarly knowledge</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Y</forename><surname>Jaradeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Oelen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">E</forename><surname>Farfar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Prinz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>D'souza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kismihók</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3360901.3364435</idno>
+		<ptr target="http://dx.doi.org/10.1145/3360901.3364435"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 10th international conference on knowledge capture</title>
+		<meeting>the 10th international conference on knowledge capture</meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="243" to="246"/>
+		</imprint>
+	</monogr>
+	<note>K-CAP '19</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Triple classification for scholarly knowledge graph completion</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Y</forename><surname>Jaradeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Stocker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Auer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 11th knowledge capture conference</title>
+		<meeting>the 11th knowledge capture conference</meeting>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="225" to="232"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Exploring in-context learning capabilities of foundation models for generating knowledge graphs from text</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Khorashadizadeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Mihindukulasooriya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tiwari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Groppe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Groppe</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2305.08804</idno>
+	</analytic>
+	<monogr>
+		<title level="m">TEXT2KG/biKE@eSWC</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Extending content-based scientific knowledge graphs with research results</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Kovacevic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>El-Ebshihy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Piroi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rauber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">located with the the 1st Austrian symposium on AI, robotics, and vision (AIROV24)</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note>KG-neSy workshop</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Unsupervised key-phrase extraction and clustering for classification scheme in scientific publications</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Daoutis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">35th AAAI conference on artificial inteligence</title>
+		<title level="s">CEUR workshop proceedings</title>
+		<editor>
+			<persName><forename type="first">A</forename><forename type="middle">P B</forename><surname>Veyseh</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">F</forename><surname>Dernoncourt</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">T</forename><forename type="middle">H</forename><surname>Nguyen</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">W</forename><surname>Chang</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Celi</surname></persName>
+		</editor>
+		<imprint>
+			<date type="published" when="2021">2021. 2025</date>
+			<biblScope unit="volume">2831</biblScope>
+			<biblScope unit="page">104145</biblScope>
+		</imprint>
+	</monogr>
+	<note>Information Processing and Management</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Real-world data medical knowledge graph: construction and applications</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Jiang</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.artmed.2020.101817</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.artmed.2020.101817"/>
+	</analytic>
+	<monogr>
+		<title level="j">Artificial Intelligence in Medicine</title>
+		<imprint>
+			<biblScope unit="volume">103</biblScope>
+			<biblScope unit="page">101817</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Refining automatically extracted knowledge bases using crowdsourcing</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">S</forename><surname>Sheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Xian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Cui</surname></persName>
+		</author>
+		<idno type="DOI">10.1155/2017/4092135</idno>
+		<ptr target="http://dx.doi.org/10.1155/2017/4092135"/>
+	</analytic>
+	<monogr>
+		<title level="j">Computational Intelligence and Neuroscience</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="17"/>
+			<date type="published" when="2017">2017. 2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">OC-2-KB: Integrating crowdsourcing into an obesity and cancer knowledge base curation system</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Lossio-Ventura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Hogan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Modave</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Yang</surname></persName>
+		</author>
+		<idno type="DOI">10.1186/s12911-018-0635-5</idno>
+		<ptr target="http://dx.doi.org/10.1186/s12911-018-0635-5"/>
+	</analytic>
+	<monogr>
+		<title level="j">BMC Medical Informatics and Decision Making</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">The stanford CoreNLP natural language processing toolkit</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Surdeanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bauer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Finkel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bethard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Mcclosky</surname></persName>
+		</author>
+		<idno type="DOI">10.3115/V1/P14-5010</idno>
+		<ptr target="http://dx.doi.org/10.3115/V1/P14-5010"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 52nd annual meeting of the association for computational linguistics, ACL</title>
+		<title level="s">The Association for Computer Linguistics</title>
+		<meeting>the 52nd annual meeting of the association for computational linguistics, ACL</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="55" to="60"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Integrating conversational agents and knowledge graphs within the scholarly domain</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Meloni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Angioni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Salatino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Recupero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ieee Access</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="22468" to="22489"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Factorizing yago: scalable machine learning for linked data</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nickel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Tresp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-P</forename><surname>Kriegel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 21st international conference on world wide web</title>
+		<meeting>the 21st international conference on world wide web</meeting>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="page" from="271" to="280"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Aemoo: Linked data exploration based on knowledge patterns</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Nuzzolese</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Presutti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gangemi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Peroni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ciancarini</surname></persName>
+		</author>
+		<idno type="DOI">10.3233/SW-160222</idno>
+		<ptr target="http://dx.doi.org/10.3233/SW-160222"/>
+	</analytic>
+	<monogr>
+		<title level="j">Semantic Web</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="87" to="112"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Kgeval: Accuracy estimation of automatically constructed knowledge graphs</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ojha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Talukdar</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/d17-1183</idno>
+		<ptr target="http://dx.doi.org/10.18653/v1/d17-1183"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. conf. empirical methods in natural language processing</title>
+		<meeting>conf. empirical methods in natural language processing</meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="1741" to="1750"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Knowledge graph refinement: A survey of approaches and evaluation methods</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Paulheim</surname></persName>
+		</author>
+		<idno type="DOI">10.3233/SW-160218</idno>
+		<ptr target="http://dx.doi.org/10.3233/SW-160218"/>
+	</analytic>
+	<monogr>
+		<title level="j">Semantic Web Journal</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="489" to="508"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Knowledge graphs: Opportunities and challenges</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Xia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Naseriparsa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10462-023-10465-9</idno>
+		<ptr target="http://dx.doi.org/10.1007/s10462-023-10465-9"/>
+	</analytic>
+	<monogr>
+		<title level="j">Artificial Intelligence Review</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="page" from="1" to="32"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">You are missing a concept! Enhancing ontology-based data access with evolving ontologies</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pomp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lipp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Meisen</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/ICOSC.2019.8665620</idno>
+		<ptr target="http://dx.doi.org/10.1109/ICOSC.2019.8665620"/>
+	</analytic>
+	<monogr>
+		<title level="m">IEEE 13th int. conf. semantic computing</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="98" to="105"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">OOPS!(ontology pitfall scanner!): An on-line tool for ontology evaluation</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Poveda-Villalón</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gómez-Pérez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Suárez-Figueroa</surname></persName>
+		</author>
+		<idno type="DOI">10.4018/ijswis.2014040102</idno>
+		<ptr target="http://dx.doi.org/10.4018/ijswis.2014040102"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal on Semantic Web and Information Systems (IJSWIS)</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="7" to="34"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Evaluating knowledge graph accuracy powered by optimized human-machine collaboration</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Qi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zou</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3534678.3539233</idno>
+		<ptr target="http://dx.doi.org/10.1145/3534678.3539233"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 28th ACM SIGKDD conference on knowledge discovery and data mining</title>
+		<meeting>the 28th ACM SIGKDD conference on knowledge discovery and data mining</meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="1368" to="1378"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Can LLMs be knowledge graph curators for validating triple insertions?</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Regino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Reis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the workshop on generative AI and knowledge graphs (GenAIK)</title>
+		<meeting>the workshop on generative AI and knowledge graphs (GenAIK)</meeting>
+		<imprint>
+			<date type="published" when="2025">2025</date>
+			<biblScope unit="page" from="87" to="99"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">LOD construction through SupervisedWeb relation extractionand crowd validation</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Rumin1</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Mekterović</surname></persName>
+		</author>
+		<idno type="DOI">10.13052/jwe1540-9589.18137</idno>
+		<ptr target="http://dx.doi.org/10.13052/jwe1540-9589.18137"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Web Engineering</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="229" to="256"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Knowledge4COVID-19: A semantic-based approach for constructing a COVID-19 related knowledge graph from various sources and analyzing treatments' toxicities</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sakor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Jozashoori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Niazmand</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rivas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Bougiatiotis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Aisopos</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.websem.2022.100760</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.websem.2022.100760"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Web Semantics</title>
+		<imprint>
+			<biblScope unit="volume">75</biblScope>
+			<biblScope unit="page">100760</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">4Th international workshop on scientific knowledge: Representation, discovery, and assessment</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Salatino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mannocci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Rehm</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Schimmler</surname></persName>
+		</author>
+		<ptr target="CEUR-WS"/>
+	</analytic>
+	<monogr>
+		<title level="s">CEUR WORKSHOP pROCEEDINGS</title>
+		<imprint>
+			<biblScope unit="volume">3780</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">CSO Classifier 3.0: a scalable unsupervised method for classifying documents in terms of research topics</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Salatino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/S00799-021-00305-Y</idno>
+		<ptr target="http://dx.doi.org/10.1007/S00799-021-00305-Y"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal on Digital Libraries</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="91" to="110"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Human versus artificial intelligence: Chatgpt-4 outperforming bing, bard, ChatGPT-3.5, and humans in clinical chemistry multiple-choice questions</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sallam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Al-Salahat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Eid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Egger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Puladi</surname></persName>
+		</author>
+		<idno type="DOI">10.1101/2024.01.08.24300995</idno>
+		<ptr target="http://dx.doi.org/10.1101/2024.01.08.24300995"/>
+	</analytic>
+	<monogr>
+		<title level="j">MedRxiv</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Automatic construction of subject knowledge graph based on educational big data</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Su</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3396452.3396458</idno>
+		<ptr target="http://dx.doi.org/10.1145/3396452.3396458"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2020 3rd international conference on big data and education</title>
+		<meeting>the 2020 3rd international conference on big data and education<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="30" to="36"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<monogr>
+		<title level="m" type="main">Enhancing knowledge graph construction using large language models</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Trajanoska</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Stojanov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Trajanov</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2305.04676</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<monogr>
+		<title level="m" type="main">Enhancing scientific knowledge graph generation pipelines with LLMs and human-in-the-loop</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tsaneva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dessì</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sabou</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2024">2024. ISWC 2024</date>
+		</imprint>
+	</monogr>
+	<note>4th international workshop on scientific knowledge: representation, discovery, and assessment, co-located with the 23rd international semantic web conference</note>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<monogr>
+		<title level="m" type="main">Benchmarking ontology validation capabilities of LLMs</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tsaneva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Herwanto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sabou</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note>In The 23rd international semantic web conference 2024, special session on harmonising generative AI and semantic web technologies</note>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">LLM-driven ontology evaluation: Verifying ontology restrictions with ChatGPT</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tsaneva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Vasic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sabou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The semantic web: ESWC satellite events</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Team design patterns for moral decisions in hybrid intelligent systems: A case study of bias mitigation</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Van Stijn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Neerincx</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ten Teije</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Vethman</surname></persName>
+		</author>
+		<ptr target="CEUR-WS"/>
+	</analytic>
+	<monogr>
+		<title level="s">CEUR workshop proceedings</title>
+		<imprint>
+			<biblScope unit="volume">2846</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">IDS-KG: An industrial dataspace-based knowledge graph construction approach for smart maintenance</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Qi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Tao</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jii.2024.100566</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.jii.2024.100566"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Industrial Information Integration</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page">100566</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Data-driven causal knowledge graph construction for root cause analysis in quality problem solving</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Dang</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/00207543.2022.2078748</idno>
+		<ptr target="http://dx.doi.org/10.1080/00207543.2022.2078748"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Production Research</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="3227" to="3245"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Knowledge graph quality management: A comprehensive survey</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Xue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zou</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TKDE.2022.3150080</idno>
+		<ptr target="http://dx.doi.org/10.1109/TKDE.2022.3150080"/>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Knowledge and Data Engineering</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="4969" to="4988"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Challenges, techniques, and trends of simple knowledge graph question answering: a survey</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Krisnadhi</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/info12070271</idno>
+		<ptr target="http://dx.doi.org/10.3390/info12070271"/>
+	</analytic>
+	<monogr>
+		<title level="j">Information</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page">271</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<monogr>
+		<title level="m" type="main">KG-BERT: BERT for knowledge graph completion</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Luo</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1909.03193</idno>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Quality assessment methodologies for linked open data</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zaveri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rula</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Maurino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Pietrobon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lehmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Auer</surname></persName>
+		</author>
+		<idno type="DOI">10.3233/SW-150175</idno>
+		<ptr target="http://dx.doi.org/10.3233/SW-150175"/>
+	</analytic>
+	<monogr>
+		<title level="j">Semantic Web Journal</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="5"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<monogr>
+		<author>
+			<persName><forename type="first">B</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Reklos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Jain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Peñuela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Simperl</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2309.08491</idno>
+		<title level="m">Using large language models for knowledge engineering (LLMKE): A case study on wikidata</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">LLMs for knowledge graph construction and reasoning: Recent capabilities and future opportunities</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Qiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yao</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11280-024-01297-w</idno>
+		<ptr target="http://dx.doi.org/10.1007/s11280-024-01297-w"/>
+	</analytic>
+	<monogr>
+		<title level="j">World Wide Web</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

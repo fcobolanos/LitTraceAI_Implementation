@@ -1,0 +1,2245 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Towards a practice-based framework for supply chain resilience in the context of additive manufacturing technology adoption</title>
+				<funder ref="#_YrT8q9M">
+					<orgName type="full">Fundação para a Ciência e a Tecnologia</orgName>
+				</funder>
+				<funder ref="#_WdEk38a #_NqbwDn2 #_uFGm9DC">
+					<orgName type="full">Fundação para a Ciência e a Tecnologia (FCT-MCTES)</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2024-03-30">30 Mar 2024.</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Bardia</forename><surname>Naghshineh</surname></persName>
+							<email>b.naghshineh@fct.unl.pt</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Mechanical and Industrial Engineering</orgName>
+								<orgName type="laboratory">UNIDEMI</orgName>
+								<orgName type="institution" key="instit1">NOVA School of Science and Technology</orgName>
+								<orgName type="institution" key="instit2">NOVA University Lisbon</orgName>
+								<address>
+									<settlement>Caparica</settlement>
+									<country>Portugal;</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Helena</forename><surname>Carvalho</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Mechanical and Industrial Engineering</orgName>
+								<orgName type="laboratory">UNIDEMI</orgName>
+								<orgName type="institution" key="instit1">NOVA School of Science and Technology</orgName>
+								<orgName type="institution" key="instit2">NOVA University Lisbon</orgName>
+								<address>
+									<settlement>Caparica</settlement>
+									<country>Portugal;</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Laboratório Associado de Sistemas Inrteligentes</orgName>
+								<address>
+									<settlement>LASI</settlement>
+									<country key="PT">Portugal</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Towards a practice-based framework for supply chain resilience in the context of additive manufacturing technology adoption</title>
+					</analytic>
+					<monogr>
+						<idno type="ISSN">0951-192X (Print) 1362-3052 (Online)</idno>
+						<imprint>
+							<date type="published" when="2024-03-30">30 Mar 2024.</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">E968505A4C2484B06D04A19FF84E68DD</idno>
+					<idno type="DOI">10.1080/0951192X.2024.2333011</idno>
+					<note type="submission">Received 27 June 2023 Accepted 14 March 2024</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-08-27T15:11+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Additive manufacturing</term>
+					<term>3D printing</term>
+					<term>Resilience practices</term>
+					<term>Supply chain capabilities</term>
+					<term>Supply chain vulnerabilities</term>
+					<term>Exploratory survey research</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Additive manufacturing (AM), also known as 3D printing, is widely believed to enhance supply chain resilience (SCR). However, there is a lack of empirical frameworks to provide directions for practitioners and scholars in this regard. Motivated by the dynamic capabilities view, this exploratory survey research aims to overcome this gap. To this end, empirical data are collected from a heterogeneous sample of experts involved in different industries at the forefront of AM. These data are used to explore pathways through which AM adoption leads to enhancing SCR via different resilience practices. More specifically, the collected data are analyzed to explain how AM adoption affects different resilience practices and how these practices in turn affect SCR. Based on these findings, a preliminary practice-based framework is developed that can support practitioners in deploying AM-enabled resilience practices aimed at generating the supply chain (SC) capabilities necessary for dealing with SC vulnerabilities and therefore enhancing SCR. Moreover, relevant propositions are put forward that reflect these findings and open up avenues for future research.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>In today's unpredictable and turbulent markets, supply chain (SC) vulnerabilities are an issue of significance for many firms around the world <ref type="bibr" target="#b11">(Christopher and Peck 2004)</ref>. SC vulnerabilities are fundamental factors that make a firm susceptible to disruptions (e.g. pandemics, natural disasters, geopolitical unrest), thus undermining its supply chain resilience (SCR) <ref type="bibr">(Pettit, Fiksel, and</ref><ref type="bibr">Croxton 2010, Pettit et al. 2013</ref>). To deal with SC vulnerabilities, firms strive to develop SC capabilities, which are attributes that enable them to anticipate and overcome disruptions <ref type="bibr" target="#b54">(Pettit, Croxton, and Fiksel 2013;</ref><ref type="bibr" target="#b56">Pettit, Fiksel, and Croxton 2010)</ref>. To build SC capabilities and enhance their SCR, many firms are inclined toward adopting Industry 4.0 technologies <ref type="bibr" target="#b23">(Hägele, Grosse, and Ivanov 2023)</ref>. This trend became quite evident during the COVID-19 pandemic when many industrial firms focused on evaluating the opportunities that arise from the adoption of these digital technologies to enhance SCR <ref type="bibr" target="#b3">(Belhadi et al. 2021;</ref><ref type="bibr" target="#b27">Ivanov, Blackhurst, and Das 2021)</ref>.</p><p>Recent empirical studies such as <ref type="bibr" target="#b81">Zouari et al. (2020)</ref> and <ref type="bibr" target="#b2">Balakrishnan and Ramanathan (2021)</ref> mention the importance of adopting digital technologies such as additive manufacturing (AM) to enhance SCR. However, the literature lacks adequate empirical results to specify the opportunities that arise from adopting AM technology for enhancing SCR <ref type="bibr" target="#b0">(Ali and Gölgeci 2019;</ref><ref type="bibr" target="#b25">Iftikhar et al. 2022</ref>). This gap is highlighted by <ref type="bibr">Naghshineh and Carvalho (2022a)</ref>, who performed a systematic search and review of the literature to propose the potential implications of AM technology adoption for SCR. They posit that adopting AM technology affects the state of the SC in ways that influence important SC capabilities and vulnerabilities that underlie SCR. There are dispersed pieces of evidence in extant literature that support their proposition. For example, AM technology enables the distributed manufacturing of products in locations closer to customers (e.g. localized manufacturing/on-site manufacturing), considerably reducing their delivery lead time <ref type="bibr" target="#b17">(Durão et al. 2017;</ref><ref type="bibr" target="#b47">Naghshineh, Fragoso, and Carvalho 2023)</ref>. Reducing delivery lead time is a resilience practice that improves SC adaptability <ref type="bibr" target="#b6">(Carvalho et al. 2022)</ref>, helping to cope with SC vulnerabilities such as unpredictability in customer demand and therefore enhancing SCR <ref type="bibr" target="#b54">(Pettit, Croxton, and Fiksel 2013;</ref><ref type="bibr" target="#b56">Pettit, Fiksel, and Croxton 2010)</ref>.</p><p>Given the opportunity to deploy such AMenabled resilience practices, different firms are willing to adopt this technology to build SC capabilities against SC vulnerabilities and enhance their SCR <ref type="bibr" target="#b43">(Mellor, Hao, and Zhang 2014;</ref><ref type="bibr" target="#b55">Pettit, Croxton, and Fiksel 2019)</ref>. This assertion is in line with <ref type="bibr" target="#b2">Balakrishnan and Ramanathan (2021)</ref>, who posit that using digital technologies such as AM 'will encourage the firm's supply chain resilience practices', and <ref type="bibr" target="#b81">Zouari et al. (2020)</ref> who posit that adopting digital technologies such as AM improves the SC capabilities necessary to enhance SCR. Thus, in line with the dynamic capabilities view, understanding how AM technology adoption can affect resilience practices is important for developing the SC capabilities necessary to deal with SC vulnerabilities <ref type="bibr">(Naghshineh and Carvalho 2022b;</ref><ref type="bibr" target="#b55">Pettit, Croxton, and Fiksel 2019)</ref> and therefore enhancing SCR <ref type="bibr" target="#b10">(Chowdhury and Quaddus 2017;</ref><ref type="bibr" target="#b57">Ponomarov and Holcomb 2009)</ref>. However, to the best of the authors' knowledge, to date, no empirical study has focused on investigating the implications of AM technology adoption for SC capabilities and vulnerabilities that underlie SCR while considering the role of resilience practices. Hence, this study aims to overcome this knowledge gap and put forward a practice-based framework based on empirical evidence by addressing the following research questions (RQs):</p><p>RQ1. How does AM technology adoption affect different resilience practices? RQ2. How do AM-enabled resilience practices affect different SC capabilities and vulnerabilities that underlie SCR? Moreover, by drawing on the answers to the mentioned RQs, propositions are put forward to address the following RQ:</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RQ3. What opportunities would AM technology adoption present for enhancing SCR via different resilience practices?</head><p>The remainder of this paper is organized as follows. In section two, the theoretical background is presented and the theoretical perspective leading to the conception of the research model is discussed. In section three, the research methodology is described. In section four, the results are discussed and compared with the literature to derive the theoretical implications of the study, which are summarized in the form of propositions. Subsequently, in section five, a practice-based framework is put forward that outlines the managerial implications of the study. Finally, in section six, conclusions are drawn and directions for future research are suggested.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Theoretical background</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.">Additive manufacturing and supply chain resilience</head><p>The adoption of digital technologies brings about fundamental changes in the SC <ref type="bibr" target="#b15">(Dolgui and Ivanov 2020)</ref>, 'and SCR in particular' <ref type="bibr" target="#b27">(Ivanov, Blackhurst, and Das 2021)</ref>. AM is a digital technology that uses raw materials and computer-aided design (CAD) software to produce objects layer by layer on a build platform (ISO/ASTM 52900 2021). The ability to produce physical objects directly from raw materials using digital design files renders AM a 'direct digital manufacturing' technology <ref type="bibr" target="#b20">(Ford and Despeisse 2016)</ref>.</p><p>Recently, AM has received considerable attention from the industry and the research community, mainly due to its ability to support supply chain management (SCM) practices <ref type="bibr" target="#b81">(Zouari, Ruel, and Viale 2020)</ref>, particularly resilience practices aimed at dealing with SC vulnerabilities and enhancing SCR <ref type="bibr" target="#b2">(Balakrishnan and Ramanathan 2021;</ref><ref type="bibr">Naghshineh and Carvalho 2022b)</ref>. For instance, with the outbreak of the COVID-19 pandemic, AM has been used globally in response to ongoing shortages in the medical SC, relieving strained healthcare systems around the world <ref type="bibr" target="#b39">(Kunovjanek and Wankmüller 2020</ref>). An important use case of AM during this period was displayed by Formlabs (a 3D printing technology developer and manufacturer headquartered in the US), which launched a support network by pooling multiple 3D printers in different locations to address the critical shortage of medical parts and devices. One of the main adoption features of AM technology that has made it successful in dealing with this problem is the distributed manufacturing of medical parts and devices close to their point of use <ref type="bibr" target="#b73">(Verboeket et al. 2021)</ref>. This AM adoption feature would allow manufacturers to considerably reduce the delivery lead times and costs of medical parts and devices, thus improving the resilience of the medical SC <ref type="bibr" target="#b17">(Durão et al. 2017;</ref><ref type="bibr" target="#b73">Verboeket et al. 2021)</ref>.</p><p>As a resilience practice, reducing delivery lead time augments adaptability <ref type="bibr" target="#b6">(Carvalho et al. 2022)</ref>, which is the capability of the SC to swiftly readjust and respond to arising SC vulnerabilities <ref type="bibr" target="#b54">(Pettit, Croxton, and Fiksel 2013;</ref><ref type="bibr" target="#b56">Pettit, Fiksel, and Croxton 2010)</ref>. This is an instance where the adoption of AM technology enables firms to exercise a resilience practice (i.e. reduce delivery lead time) to develop an SC capability (i.e. adaptability), which is necessary for reducing the vulnerability of the SC to disruptions, therefore enhancing SCR <ref type="bibr" target="#b6">(Carvalho et al. 2022;</ref><ref type="bibr">Naghshineh and Carvalho 2022b)</ref>.</p><p>In this work, SCR is considered a higher-order construct composed of a set of SC capabilities that are necessary to deal with SC vulnerabilities <ref type="bibr">(Pettit, Croxton, and</ref><ref type="bibr">Fiksel 2013, 2019;</ref><ref type="bibr" target="#b56">Pettit, Fiksel, and Croxton 2010;</ref><ref type="bibr" target="#b57">Ponomarov and Holcomb 2009)</ref>. This consideration is based on the seminal works of <ref type="bibr" target="#b56">Pettit et al. (2010</ref><ref type="bibr" target="#b54">Pettit et al. ( , 2013))</ref>, who define SCR as an exhaustive set of interlinked SC capabilities and vulnerabilities. According to <ref type="bibr" target="#b56">Pettit et al. (2010)</ref>, 'supply chain resilience increases as capabilities increase and vulnerabilities decrease'. Moreover, they state that 'linkages exist between each vulnerability and a specific set of capabilities', which can be controlled to improve SCR.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.">Research gap</head><p>The authors critically reviewed empirical studies that imply adopting AM technology contributes to building SC capabilities by enabling certain resilience practices (Table <ref type="table" target="#tab_0">1</ref>). However, no empirical study was found that explicitly delineated the effects of AM technology adoption on different resilience practices, explaining how various SC capabilities and vulnerabilities that underlie SCR would be affected as a result. Hence, based on the following two premises: a) adopting digital technologies such as AM 'will encourage the firm's supply chain resilience practices' <ref type="bibr" target="#b2">(Balakrishnan and Ramanathan 2021)</ref>; and b) 'resilience practices are a means of achieving SC capabilities' <ref type="bibr" target="#b6">(Carvalho et al. 2022)</ref> for dealing with SC vulnerabilities and enhancing SCR <ref type="bibr" target="#b56">(Pettit, Fiksel, and Croxton 2010</ref><ref type="bibr" target="#b54">, 2013</ref><ref type="bibr">,2019;</ref><ref type="bibr" target="#b57">Ponomarov and Holcomb 2009)</ref>, this study aims to explore how AM technology adoption affects different resilience practices (RQ1), and how these practices would, in turn, affect different SC capabilities and vulnerabilities that underlie SCR (RQ2). Subsequently, an empirical framework together with propositions will be put forward, reflecting the opportunities that AM technology adoption would present for enhancing SCR via different resilience practices (RQ3). Given these considerations, the research model is conceptualized in Figure <ref type="figure" target="#fig_0">1</ref>. It should be noted that the arrows in this model do not represent cause-and-effect relationships, but rather the effect that each research variable has on the other.</p><p>To control the scope of this study, nine resilience practices and their metrics were selected from <ref type="bibr" target="#b6">Carvalho et al. (2022)</ref> (Table <ref type="table">2</ref>), which proved to be more relevant in the context of AM technology adoption and SCM (see Table <ref type="table" target="#tab_0">1</ref>). The metrics were used as observable items to collect data from the industry and empirically examine how AM adoption affects different resilience practices aimed at building different SC capabilities for dealing with SC vulnerabilities, thus enhancing SCR. The definitions for the identified SC capabilities and vulnerabilities along with their subfactors, which define each SC capability/vulnerability in more detail, are available in Appendix A.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3.">Theoretical lens</head><p>From a theoretical perspective, the dynamic capabilities view is employed to investigate the subject matter. The use of established theoretical perspectives helps to identify the underlying relationships between the research variables and contributes to the generalizability of the findings <ref type="bibr" target="#b77">(Walker et al. 2015)</ref>. The most established theoretical lenses to view the concept of SCR are the resource-based view and dynamic capabilities view <ref type="bibr" target="#b36">(Kochan and Nowicki 2018;</ref><ref type="bibr" target="#b71">Tukamuhabwa et al. 2015)</ref>.</p><p>While the resource-based view regards technology adoption as a resource for improving the firm's performance <ref type="bibr" target="#b78">(Wernerfelt 1984)</ref>, it fails to consider the dynamic nature of the SC in which the firm operates <ref type="bibr" target="#b7">(Cavusgil, Seggie, and Talay 2007;</ref><ref type="bibr" target="#b69">Towill 1991)</ref>, which is particularly important in the context of SCR <ref type="bibr" target="#b57">(Ponomarov and Holcomb 2009)</ref>. This shortcoming is addressed by the dynamic capabilities view, whereby investing in resources (e.g. technology  adoption) and deploying the necessary SCM practices (e.g. resilience practices) are considered in conjunction with the dynamic nature of the SC to achieve distinctive capabilities that help the firm gain a sustainable competitive advantage <ref type="bibr" target="#b57">(Ponomarov and Holcomb 2009;</ref><ref type="bibr" target="#b67">Teece, Pisano, and Shuen 1997)</ref>. In other words, from the dynamic capabilities perspective, investing in technology adoption (e.g. AM adoption) is an SCM strategy for developing SC capabilities and gaining a competitive advantage over other players in the market, especially in dynamic SC environments that are constantly under pressure due to impending SC vulnerabilities <ref type="bibr" target="#b31">(Kalaitzi et al. 2019;</ref><ref type="bibr" target="#b66">Teece 2014)</ref>.</p><p>Relevantly, by enabling resilience practices, AM technology adoption helps to develop the necessary SC capabilities to deal with SC vulnerabilities. This assertion is corroborated by <ref type="bibr" target="#b2">Balakrishnan and Ramanathan (2021)</ref> who posit that adopting digital technologies such as AM 'will encourage the firm's supply chain resilience practices <ref type="bibr">', and Carvalho et al. (2022)</ref> who state that 'resilience practices generate the capabilities that the SC needs to reduce the severity of disturbances as well as the recovery time while keeping the costs at a reasonable level'.</p><p>Unlike many studies using the resource-based view and dynamic capabilities view that fall short of identifying processes, resources, and pathways to develop SC capabilities <ref type="bibr" target="#b10">(Chowdhury and Quaddus 2017)</ref>, this study aims to put forward a preliminary Additive Manufacturing-Supply Chain Resilience practices (AM-SCRP) framework that allows the identification of suitable pathways to building SC capabilities for mitigating SC vulnerabilities via deploying AM-enabled resilience practices, thus enhancing SCR.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Research methodology</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.">Research design and instrumentation</head><p>In this study, exploratory survey research was employed as it is particularly useful at 'the early stages of research into a phenomenon, when the objective is to gain preliminary insight on a topic' <ref type="bibr" target="#b21">(Forza 2002)</ref>, especially in the area of operations and SCM. As <ref type="bibr" target="#b21">Forza (2002)</ref> states, 'Descriptive and exploratory survey research are important and widely used in OM [Operations Management]'. Contrary to case studies and interviews, this research method allows targeting larger samples to gain preliminary insights and is more likely to lead to the participation of experts who are not easy to get hold of <ref type="bibr" target="#b1">(Babbie 1990)</ref>.</p><p>This study implements a mixed-methods exploratory survey research design similar to that of <ref type="bibr" target="#b16">Durach et al. (2017)</ref>, who investigated the impacts of AM technology adoption on the SC. They used a combination of Likert scale questions and text fields to collect both quantitative and qualitative data in the form of expert perceptions and explanations. Similarly, in this study, experts with experience in the fields of AM technology and SCM were targeted for collecting quantitative and qualitative empirical data. Likert scale questions and open-ended text fields were used to capture the experts' perceptions and explanations of how AM technology adoption affects the resilience practices under study (see Table <ref type="table">2</ref>). Furthermore, these data were used to explicate how AM technology adoption affects different SC capabilities and vulnerabilities that underlie SCR via these resilience practices, thus affecting SCR.</p><p>The survey questionnaire (see Appendix B) included general questions regarding the country, Table <ref type="table">2</ref>. Resilience practices and their metrics adapted from <ref type="bibr" target="#b6">Carvalho et al. (2022)</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Resilience practices Metrics Change the production schedule</head><p>Ease (cost and time) of changing the production schedules Reduce delivery lead time Ease (cost) of reducing delivery lead time Use maximum capacity Ease (cost and time) of adjusting the production capacity Reduce response time Ease (cost) of reducing production lead time Supply chain common response</p><p>The degree of cooperation with other firms in the supply chain Align supply chain information systems Ease (cost and time) of exchanging reliable and timely information with supply chain partners Use alternative suppliers Number of available alternatives for sources of supply Use alternative production sites Number of available alternatives for production sites Use alternative transport modes Number of available alternatives for transporting goods and material industry sector, SC tier, etc., as well as questions regarding the AM processes and applications that the companies developed. To devise the Likert scale questions, the empirically well-grounded metrics representing the resilience practices in <ref type="bibr" target="#b6">Carvalho et al. (2022)</ref> were used. These questions were based on a five-point scale (where 1 signified 'Very low effect' and 5 signified 'Very high effect') aimed at assessing the experts' perceptions of the extent to which the use of AM technology affects different resilience practices in their SC operations. Moreover, open-ended text fields were provided right after each Likert scale question, allowing the experts to explain the reasons for their Likert scale responses. The questionnaire was first reviewed by an expert and an academic in the field and then pilot tested in multiple companies that were using AM technology. After making improvements based on their feedback, the questionnaire was administered online using Google Forms, which was accompanied by a cover letter describing the purpose of the survey and ensuring the anonymity of the experts and their companies.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.">Sampling and data collection</head><p>To investigate the subject matter from the industry's viewpoint, an exploratory survey was conducted among experts who were involved in industries with more experience in using AM technology. According to the report by <ref type="bibr" target="#b79">Wohlers (2021)</ref>: '3D printing and additive manufacturing global state of the industry', AM is widely adopted by the automotive, aerospace, energy, and medical industries, among others. Moreover, according to <ref type="bibr" target="#b68">Tortorella et al. (2022)</ref>, conducting 'cross-sectional survey-based studies' with 'multiple respondents from several SC sectors and tiers' tends to yield a more holistic view of the contribution of Industry 4.0 technologies such as AM to SCR. This is corroborated by <ref type="bibr" target="#b53">Patil et al. (2023)</ref>, who explicitly state that they selected a heterogeneous sample of experts from several industries 'to allow for the emergence of alternative explanations' and 'capture a range of viewpoints' concerning the contingent adoption of AM technology in different SCs. Therefore, to find a heterogeneous sample of experts who worked for companies in the aforementioned industries, the expert sampling method was employed using the LinkedIn professional network platform. It is worth noting that the LinkedIn platform is already used for expert sampling by relevant works in this field, e.g. <ref type="bibr" target="#b40">Kurpjuweit et al. (2021)</ref>. Using this sampling method, professionals with expertise in the AM and SCM fields were found worldwide in the aforementioned industries, who otherwise would have been very difficult to find via probability sampling techniques. Different search keywords (e.g. 'Production manager', 'Operations manager', 'Managing director', 'Supply chain manager', etc., together with 'Additive manufacturing' and '3D printing') were used to search for registered professionals on the LinkedIn platform. The search returned 417 expert profiles, of which 400 were selected after reviewing the accuracy of the search results. This selection process was performed by carefully considering the evidence in each profile (e.g. work experience, skillset, role in the company, educational background, licenses and certifications) to ensure that the expert had knowledge and experience in using AM technology. The experts in the sample had an average working experience of 9 years in the AM field (mainly in managerial positions), indicating an appropriate level of experience for taking part in the survey.</p><p>Subsequently, 400 invitations accompanied by a brief description of the survey and a weblink to the online questionnaire were sent out over the course of December 2021. Completed questionnaires were sent back from mid-December 2021 until the end of January 2022. After sending reminders to late responders during this period, 69 completed questionnaires were returned, corresponding to a response rate of 17.3%. However, 9 questionnaires were discarded because they contained multiple unanswered questions and unfilled text fields, resulting in 60 usable questionnaires. This sample size is similar to the sample sizes in exploratory surveys performed by <ref type="bibr" target="#b24">Hübner et al. (2016)</ref> and <ref type="bibr" target="#b32">Kembro and Norrman (2022)</ref>, which are 60 and 50 respectively.</p><p>To ensure that the derived sample possessed the characteristics of the intended target population, its descriptive analysis was compared with the aforementioned report by <ref type="bibr" target="#b79">Wohlers (2021)</ref>, which indicated a high level of similarity. For instance, the reported percentages in Table <ref type="table" target="#tab_1">3</ref> regarding the industry sector of the companies were found to conform with the diffusion of AM technology adoption among different industries reported by <ref type="bibr" target="#b79">Wohlers (2021)</ref>. Furthermore, the derived percentages in Table <ref type="table" target="#tab_2">4</ref> regarding the adopted AM processes and their applications in the sample were also benchmarked against the report by Wohlers (2021), which resulted in a high level of similarity as well. Hence, this comparison helped validate the representativeness of the derived sample, which can be prone to researcher bias when using the expert sampling technique <ref type="bibr" target="#b60">(Sharma 2017)</ref>.</p><p>Moreover, as shown in Table <ref type="table" target="#tab_1">3</ref>, the sample includes a 'diverse range of participants and companies, which could lead to more robust findings and a more in-depth understanding of the subject' <ref type="bibr" target="#b4">(Belhadi et al. 2022)</ref>. This is also endorsed by <ref type="bibr" target="#b68">Tortorella et al. (2022)</ref> who recommend conducting 'cross-sectional survey-based studies' at the interface of Industry 4.0 technologies such as AM and SCR 'with multiple respondents from several SC sectors and tiers'. Along the same lines, as the sample is composed of companies operating in rather developed economies, the findings are likely to be robust, as Industry 4.0 technologies such as AM are more mature in developed economies <ref type="bibr" target="#b75">(Wagire et al. 2021)</ref>. This is also in line with <ref type="bibr" target="#b4">Belhadi et al. (2022)</ref>, who suggest that the 'exploration of AM technology adoption in developed nations' is an important avenue for research.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.">Data analysis method</head><p>To understand how AM adoption affects the resilience practices under study, initially, the average scores of the experts' quantitative answers to the Likert scale questions were computed. Similar to <ref type="bibr" target="#b16">Durach et al. (2017)</ref>, <ref type="bibr" target="#b30">Jiang et al. (2017)</ref>, and <ref type="bibr" target="#b72">Ukobitz and Faullant (2021)</ref> among others, this study employs this descriptive statistical analysis method to project experts' perceptions regarding the subject matter. Likewise, to estimate to what degree the experts agreed on the subject matter, the level of dispersion in the answers was considered by calculating the standard deviation (SD). It should be noted that before proceeding with the analysis of the Likert scale responses, Cronbach's α was used to assess the reliability of the scales <ref type="bibr" target="#b12">(Cronbach 1951)</ref>. The Cronbach's α was 0.89, surpassing the widely accepted value of 0.70, and therefore confirming the reliability of the scales (O' <ref type="bibr">Leary-Kelly and Vokurka 1998)</ref>.</p><p>Next, to explain how AM adoption affects the resilience practices under study, consequently  affecting the SC capabilities and vulnerabilities that underlie SCR, a two-step qualitative data analysis process was performed. To begin this process, specific research dimensions (i.e. coding criteria) were required to help analyze and summarize the experts' qualitative explanations based on the same underlying criteria <ref type="bibr" target="#b44">(Miles and Huberman 1994)</ref>. To this end, the AM-SCR framework by <ref type="bibr">Naghshineh and Carvalho (2022a)</ref> was used as a) it provides a comprehensive list of AM adoption features and barriers that affect the metrics representing the resilience practices in this study, and b) it provides a comprehensive list of SC capabilities and vulnerabilities that are related to these metrics.</p><p>In the first step of this process, the AM-SCR framework was used to code the explanations. For example, the explanation 'Producing on site and on demand means no transportation costs and shorter delivery lead times' (industry expert) was coded as 'Distributed manufacturing', which, according to the AM-SCR framework, is an AM adoption feature. This explanation was provided by an expert to complement his Likert scale response on how AM affects the metric 'Ease (cost) of reducing delivery lead time', which represents the resilience practice 'Reduce delivery lead time' (see Table <ref type="table">2</ref>). In the second step, the AM-SCR framework was used to identify the SC capabilities and vulnerabilities that would be affected by the resilience practices under study. For example, according to the AM-SCR framework, 'Distributed manufacturing' enhances the 'Adaptability' of the SC by reducing delivery lead time, thus mitigating the vulnerability of the SC to 'Turbulence' that is caused by 'Unpredictability in customer demand'. This two-step process is exemplified in Figure <ref type="figure" target="#fig_1">2</ref>, which illustrates how the aforementioned research dimensions enabled the analysis of the experts' explanations to explicate how AM technology adoption affects the resilience practices under study, consequently affecting the SC capabilities and vulnerabilities that underlie SCR. Additionally, supporting evidence from the literature (i.e. secondary data) was sought to triangulate the findings. For instance, the excerpt shown in Figure <ref type="figure" target="#fig_2">3</ref> lends support to the validity of the mentioned example in Figure <ref type="figure" target="#fig_1">2</ref>.</p><p>This two-step process allowed the authors to code, sort, and display the qualitative data in a structured manner and draw conclusions accordingly (more illustrative examples are available in Appendix C). This process was performed multiple times to ensure the relevance and transparency of the findings <ref type="bibr" target="#b44">(Miles and Huberman 1994)</ref>. Subsequently, multiple pathways were explored that originate from AM adoption and lead to interlinked SC capabilities and vulnerabilities via the resilience practices under study, which will be discussed in the following section.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Results and discussion</head><p>The results of the quantitative data analysis (Likertscale responses) are presented in Table <ref type="table" target="#tab_3">5</ref>. In the subsections that follow, the effects of AM adoption on each resilience practice and the ensuing implications for SC capabilities and vulnerabilities that underlie SCR are discussed based on the employed qualitative data analysis. In addition, propositions are put forward at the end of each subsection that summarize the theoretical implications of the study, proposing the potential opportunities that AM adoption would present for enhancing SCR via different resilience practices.  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1.">Change the production schedule</head><p>The experts' answers revealed that AM adoption has the highest effect on the ease (in terms of cost and time) of changing production schedules. Moreover, the dispersion in the quantitative answers was the lowest, indicating a consensus among the experts regarding the enhancing effect of AM on this resilience practice. This effect was attributed to different AM features, among which fast production setup and tool-less manufacturing were the most pronounced features. Some experts explained that production setup through AM is rather fast and easy, providing the flexibility to quickly change the production plans to meet erratic customer demands without incurring high costs. 'Highly agile, fast to program and start a job' (industry expert). Also, it was noted that the tool-less nature of AM further enhances this flexibility and allows manufacturers to quickly switch their printers to different products to manage sudden changes in customer demands. 'We commonly switch the machines to different products to manage changes in demand' (industry expert) is an illustrative explanation in this regard.</p><p>Another mentioned AM feature was the need for fewer materials and inventory compared to conventional manufacturing methods (CM), making it easier to change the production schedules, thus enhancing the flexibility to fulfill erratic customer orders on short notice. For instance, according to an expert, 'BOM [bill of materials] is first level (raw materials only)', meaning that there are fewer materials and inventory in AM settings. This is because only raw materials and 3D models in the form of digital files (e.g. digital inventory) are required as input to print a complex part, whereas in CM, the BOM is normally composed of different components and subassemblies (i.e. multilevel BOM).</p><p>Given these AM features, a demand-pull SCM strategy can be deployed where production is postponed until customer demand is materialized (i.e. Flexibility (Production postponement)). In this way, it will be easier to deal with erratic customer demands (i.e. Turbulence (Unpredictability in customer demand)) as well as potential customer disruptions (i.e. Supplier/Customer Disruptions (Customer disruptions)) by being able to change the production schedules quickly.</p><p>However, certain barriers were also mentioned that inhibit the enhancing effect of AM adoption on changing production schedules. Slow production speed and low throughput rate (i.e. the rate at which parts can be printed from start to finish) were noted to hinder the timely changing of production plans by eroding the processing times, thus making it difficult to respond to sudden changes in customer demands. Excessive post-processing was mentioned as another barrier that takes away from AM's agility to quickly fulfill customer orders. For instance, an expert noted, 'overall is less agile if the part requires complex machining and other post processes'. Another mentioned barrier is the present instability in AM processes that can hinder the timely completion of the production plans. One of the experts explained that production planning is rather easy with AM, especially when compared to CM; however, unsteady AM processes may cause problems. Lastly, information and communication technology (ICT) inadequacies were identified as another barrier. For instance, an expert noted that 'there is no good MES <ref type="bibr">[Manufacturing Execution Systems]</ref> solution quite yet in the market.' MES provides 'a common user interface and data management system' (Saenz de Ugarte, Artiba and Pellerin 2009), helping to establish proper data management, thus facilitating AM operations.</p><p>Proposition 1. AM adoption has a high positive effect on changing the production schedules, which enhances the flexibility in order fulfillment. This mitigates the unpredictability in customer demands as well as customer disruptions.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2.">Reduce delivery lead time</head><p>Reducing delivery lead time is the second resilience practice that is highly affected by AM adoption. The dispersion in the quantitative answers was relatively low, implying general agreement among the experts.</p><p>Primarily, emphasis was placed on the distributed manufacturing and on-demand manufacturing of parts. As two of the experts explained respectively, 'Producing on site and on demand means no transportation costs and shorter delivery lead times' and 'AM is much cheaper and faster than traditional methods, especially as it cuts transportation costs and times.' Since the need for the distribution and delivery of parts is reduced via these AM features, adaptability (i.e. Adaptability (Lead time reduction)) will increase against shortages in distribution capacity (i.e.</p><p>Resource limits (Distribution capacity)) as well as sudden changes in customer demands that may necessitate faster delivery lead times. Furthermore, design freedom and part consolidation were two other interrelated AM features pointed out by the experts. One expert explained that 'Delivery lead time is reduced not just due to reduced manufacturing lead time, but also due to reduced part development lead time powered by the high degree of additive manufacturing design freedom', whereas another expert explained that 'With AM lead times for products can be reduced due to fewer parts and elimination of many assembly processes.' Therefore, not only will SC adaptability increase against possible distribution capacity shortages and erratic customer demands, but there will also be fewer cases of inventory theft and damage (i.e. Deliberate Threats (Piracy and theft)). Moreover, rapid prototyping of some parts with AM was noted to reduce delivery lead time. For instance, one expert explained that AM is a 'Good option to reduce the lead time for prototype components (i.e. 3D printed samples can simulate airbags, sub-components or vehicle parts and be used for testing purposes).' In this way, the manufacturing firm can go through multiple iterations during the product development phase, allowing it to quickly develop and deliver complex products that conform with customer demands, hence increasing the adaptability of the SC to erratic customer demands.</p><p>Despite all the highlighted advantages that AM adoption presents for reducing delivery lead time, excessive post-processing requirements can act as a barrier. For instance, an expert noted that 'Lead time is longer if machining is required.' Under this circumstance, adaptability to changes in customer demands becomes rather difficult since postprocessing steps can be costly and time-consuming.</p><p>Proposition 2. AM adoption has a high positive effect on reducing delivery lead time, which enhances adaptability. This mitigates limited distribution capacity, unpredictability in customer demands, and piracy and theft.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3.">Use maximum capacity</head><p>The answers indicated that AM adoption has a high effect on the ease (in terms of cost and time) with which the adopting firm can adjust its production capacity. The derived SD score indicated that there was consensus among the experts regarding the enhancing effect of AM on the use of maximum capacity. This effect was mainly attributed to the possibility of manufacturing parts/products on demand and in small batches. Multiple experts mentioned that it is easy to change the production capacity when needed, e.g. 'It is not a problem to adjust production to closely match demand' or 'We can scale up production capacity very quickly when needed'. It was noted that as an automated manufacturing method, AM can bring about efficiency, e.g. 'Automated system. The same number of operators can operate more machines' (industry expert), supporting the notion of economies of technology whereby it is possible to operate multiple machines by a single operator <ref type="bibr" target="#b70">(Tuck, Hague, and Burns 2007)</ref>, thus generating outputs with minimal resource requirements (i.e. Efficiency (Asset utilization)). Hence, these AM adoption features would allow the manufacturer to adjust its production capacity efficiently (i.e. without incurring high costs and time) to address the unpredictability in customer demand.</p><p>Nevertheless, limited build volumes and low throughput rate were identified as two interrelated barriers that inhibit the enhancing effect of AM adoption on utilizing maximum production capacity. One expert explained that 'The change of the production capacity is only easy up to the maximum building chamber volume. If more parts are needed, the job preparation and the post material recycling steps make it difficult', drawing attention to AM's low throughput rate as a barrier, which is mainly caused by the limited build volumes of the 3D printers. Additionally, the lack of multi-material printing was considered to make the job preparation somewhat challenging. 'If machines are dedicated to a particular material but are flexible in processing other materials, time and labor must be spent to clean out the old material, change machine parameters, run tests, etc. before capacity can be modified using the new desired material' (industry expert). This AM barrier is also mentioned by <ref type="bibr" target="#b19">Eyers et al. (2018)</ref>, where all the cases in their study considered material loading a laborintensive task. This condition is exacerbated by frequent material changeovers since extensive cleaning of the printers becomes necessary before a different type of material can be loaded into them. Lastly, it was noted that the high cost of AM processes, especially in Metal AM, makes it difficult to scale up the production capacity cost-efficiently to fulfill customer orders that are placed at short notice. According to an expert, 'Metal AM technology is still very expensive, and it's difficult to justify increasing capacity for short run projects and demand variability'. Another reason for this issue was mentioned to be the high cost of industrial-grade AM machines. As one expert explained, 'Industrial machines are expensive. So it is not easy to scale up and not cheap either. Making a decision to install new machines can take time.' Proposition 3. AM adoption has a high positive effect on the use of maximum capacity, which enhances efficiency. This mitigates the unpredictability in customer demands.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.4.">Reduce response time</head><p>The quantitative answers indicated that AM adoption has a high effect on the ease with which production lead time can be reduced. Moreover, the derived SD indicated consensus among the experts' opinions. Rapid prototyping and rapid manufacturing of parts were highlighted as prominent AM features that help reduce production lead time. One expert noted that 'Rapid design iteration with additive gets to functional components faster.' These AM features not only enable the adopting firm to quickly develop new products to respond to unpredictable customer demands but also help it to deal with competitive innovations that stem from fierce competition in the market (i.e. External pressures (Competitive innovation)). This is especially true when viewed from the dynamic capabilities perspective, where the firm needs to constantly adapt to rapidly changing markets by developing new products to gain a competitive advantage (Leonard-Barton 1992; Teece, Pisano, and Shuen 1997). Furthermore, tool-less manufacturing via AM leads to a fast turnaround time, which is the time needed to design, print, and post-process a part. 'No tooling means fast production turnaround' (industry expert). Apart from these AM features, attention was also drawn to fast production setup and part consolidation, both of which contribute to reducing the response time. 'Faster and cheaper to build and install new AM production line' and 'Simplified and faster production process due to reduction of parts in subassemblies' were among the explanations given by different experts that refer to these AM features. By reducing response time, these AM features boost the adaptability of the SC to develop new customized products that comply with erratic customer demands.</p><p>Nevertheless, some barriers exist that take away from AM's enhancing effect on reducing response time. Excessive post-processing was pointed out by some experts. One expert explained that 'the production time is rather comparable to conventional manufacturing, since AM also includes significant postprocessing.' Slow production speed was implicitly mentioned by another expert, who stated that 'New machines are especially much more performant and quicker.' Moreover, unstable AM processes hinder reducing the response time. According to an expert, 'AM may or may not save production time. It depends on the process, the materials, postprocessing steps, etc.'</p><p>In other words, some AM processes are not completely reliable, which may lead to unforeseen failures that disrupt the firm's production operations (i.e. Turbulence (Unforeseen technology failures)), and as a consequence prolong the production lead time. Finally, the high cost of industrial-grade AM machines was mentioned multiple times. For instance, one expert noted that 'The lower production time is offset by the higher machine costs.' In summary, these barriers can undermine AM's ability to reduce production lead time to quickly adapt and respond to unpredictable customer demand.</p><p>Proposition 4. AM adoption has a high positive effect on reducing response time, which enhances adaptability. This mitigates the unpredictability in customer demands and competitive innovations. However, unforeseen technology failures may deteriorate due to the present instability in AM processes.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.5.">Supply chain common response</head><p>Overall, the experts perceived the effect of AM technology adoption on the degree of cooperation with other firms in the SC to be moderate. Close collaboration was mentioned in the experts' explanations multiple times. There were several explanations similar to 'We cooperate very frequently and at a high level with both customers and suppliers.' (industry expert), supporting the notion that the adoption of AM technology requires close collaboration with suppliers and customers throughout the SC. Apart from generating new ideas based on the customers' requirements, which helps the adopting firm to maintain its market position (i.e. Market position (Customer relationships)) against external pressures stemming from competitive innovations, close collaboration with partners in an AM SC can also help the firm to deal with other SC vulnerabilities such as unpredictability in customer demands as well as potential customer or supplier disruptions (i.e. Supplier/Customer Disruptions (Supplier disruptions)), particularly through AM-enabled postponement of orders (i.e. Collaboration (Postponement of orders)). This corroborates the findings of <ref type="bibr">Naghshineh and Carvalho (2022b)</ref>, who identify close collaboration with SC partners as a practice aimed at mitigating different SC vulnerabilities, e.g. supplier capacity limitations. Moreover, close collaboration with SC partners aimed at developing AM technology can help avoid quality problems that may cause SC vulnerabilities such as customer disruptions. 'We are collaborating on technology development to ensure we are getting the right quality' (industry expert). Similarly, an expert explained that 'Cooperation with business partners is very important. Especially before and after every transaction (raw material acquisition and post processing).'</p><p>Along the same lines, consumer-centric production and co-design/co-creation were explained as two other AM features, both of which are likely to have similar implications in terms of SC capabilities and vulnerabilities. Through a consumer-centric business model based on co-design/co-creation, the firm has better prospects of maintaining a stronger and longer-term relationship with its customers, especially as these AM features can help the firm to better deal with erratic customer demands and provide products that properly fit customer needs, thus avoiding potential customer disruptions. For the most part, the findings indicate that AM technology adoption leads to a more integrated SC by promoting cooperation between SC members (i.e. the adopting firm, suppliers, and customers).</p><p>With respect to the existing barriers, complications regarding intellectual property (IP) rights were mentioned several times by the experts. For instance, 'Could be higher but there are constraints about IP' (industry expert). This is the case since many firms are concerned with infringements that may occur after sharing sensitive information (e.g. 3D models and design data) with other SC members. It was noted that the lack of methods and regulatory frameworks (e.g. copyright frameworks, patents, trademarks, and licensing) for dealing with potential infringements exacerbates this situation. Moreover, a lack of trust in AM was mentioned as a barrier that hinders SC common response. As one expert noted, 'There are still some doubts regarding AM in many industries that require more cooperation'. Lastly, the lack of consumer awareness and acceptance was pointed out as another barrier by the experts. These barriers negatively affect the level of cooperation among SC members, thus reducing the capability of the SC to meet customer demands.</p><p>Proposition 5. AM adoption has a moderate positive effect on practicing SC common response, which improves market position and collaboration. This mitigates competitive innovations, unpredictability in customer demands, and supplier/customer disruptions.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.6.">Align supply chain information systems</head><p>The experts' answers indicated that AM has a moderate effect on the ease (in terms of cost and time) with which SC partners can exchange reliable and timely information. The dispersion in the Likert scale responses was rather high, implying different opinions among the experts. Many experts emphasized the possibility of sharing information using digital files in an AM setting (i.e. digital file distribution) and making inventory management easier using digital inventory instead of finished goods inventory (FGI). These AM features improve the visibility of the SC by facilitating the exchange of information between SC partners (i.e. Visibility (Information exchange)). Therefore, through improved SC visibility, it would be easier to interact with other SC members, e.g. outsourcing production (i.e. Connectivity (Degree of outsourcing)). Moreover, this improvement in SC visibility would also help mitigate supplier disruptions and the unpredictability in customer demand.</p><p>AM technology adoption also facilitates inventory management due to its compatibility with different information systems. According to an expert, 'Since</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>AM is a digital process, it is amenable and compatible with other digital technologies for sharing information: MES [Manufacturing Execution System], MRP [Material Requirement Planning], ERP [Enterprise Resource</head><p>Planning], etc.' This flexibility in inventory management (i.e. Flexibility (Inventory management)) is likely to facilitate demand forecasting (i.e. Anticipation (Demand forecasting)), especially when dealing with unpredictability in customer demands that can lead to other SC vulnerabilities such as production capacity shortages (i.e. Resource limits (Production capacity)). Some experts considered the digital nature of AM to be a contributing factor to information exchange. Therefore, by taking advantage of AM's digital nature, it would be easier to participate in exchanging information with other SC members (i.e. Collaboration (Collaborative information sharing)) and perform collaborative forecasting (i.e. Collaboration (Collaborative forecasting)) to deal with unpredictability in customer demands and customer disruptions. Lastly, it was noted that AMenabled distributed manufacturing may as well serve as an incentive for SC members to align their information systems. As one expert noted, 'One design already produced in the US can be replicated in Europe in real time, if the same equipment is available, or in a few days with different equipment.'</p><p>However, despite all the mentioned advantages, some experts expressed concerns about potential IP rights complications. Two experts mentioned that 'Too much is at stake in terms of IP' and that there are 'IP restrictions.' This impediment negatively affects the capability of the firm to share information with other SC members and perform tasks such as collaborative forecasting, turning continuous information flow for everyday operations into an SC vulnerability (i.e. Connectivity (Reliance upon information flow)). Also, this situation leaves the firm's technology and products vulnerable to industrial espionage (i.e. Deliberate threats (Industrial espionage)). Another relevant barrier in many AM SCs is inadequate ICT. 'We still have to work on streamlining the information flow between the sites' is an explanation given by an expert that draws attention to this barrier. Furthermore, ICT inadequacies can lead to cybersecurity issues, increasing the risk of data breaches. Thus, in the absence of adequate ICT, connectivity issues may arise that undermine the capability of the firm to exchange reliable and timely information with SC partners, therefore causing SC vulnerability to reliance on information flow. Proposition 6. AM adoption has a moderate positive effect on aligning SC information systems, which enhances visibility, anticipation, flexibility in order fulfillment, and collaboration. This mitigates the degree of outsourcing, supplier and customer disruptions, unpredictability in customer demands, and production capacity shortages. However, reliance on information flow and industrial espionage may deteriorate due to potential IP rights complications and ICT inadequacies.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.7.">Use alternative suppliers</head><p>The quantitative answers indicated that the effect of AM technology adoption on the use of alternative sources of supply is moderate. There was no considerable dispersion in the answers, implying general agreement between the experts. Although no particular AM features emerged from the explanations, multiple AM barriers were detected that inhibit the number of available alternatives for sources of supply.</p><p>The most pronounced barrier that emerged from the explanations was the limited variety and supply of AM materials and industrial-grade machines. 'There is a high dependency on a small number of suppliers in the industry, which means we are single sourcing materials and machines. This is something we are working to change, as it means high risk of supply' and 'A stable delivery network (every time more than one supplier for each material) is necessary for additive manufacturing' are two illustrative explanations provided by different experts in this regard. According to an expert, this situation is further exacerbated when AM machines are supplied as closedsource systems (vs. open-source systems), which can only work with specific materials. 'Too many closed systems do not allow for a variety of feedstock suppliers' (industry expert). Moreover, as some experts noted, the AM market is still young and many patents protect the suppliers by forcing customers to only work with them (i.e. vendor/customer lockin). 'In my opinion, same as other technologies/fields. Even less I might say as the market is young and still many patents protect suppliers and force you to work with them' (industry expert). Altogether, the limited variety and supply of AM materials and industrialgrade machines reduce the sourcing flexibility of the manufacturing firm as there are only few alternative suppliers available (i.e. Flexibility (Alternate suppliers)). This situation can give rise to interrelated SC vulnerabilities such as a shortage of production capacity at the manufacturing firm due to a shortage of raw materials (i.e. Resource limits (Raw material availability)) or machines caused by the limited number of suppliers. In other words, this situation creates a high degree of dependence on the capacity of a limited number of suppliers (i.e. Resource limits (Supplier capacity)) to provide the necessary input materials and machines for production to take place at the manufacturing firm (i.e. Connectivity (Reliance upon specialty sources).</p><p>The second most pronounced barrier was the lack of regulation and standardization of AM materials. 'Raw material supply is maturing but qualification presents a barrier to switching suppliers quickly' (industry expert). The present lack of regulation and standardization necessitates extensive quality assurance (QA) and quality control (QC) procedures to be carried out by manufacturers in-house, which can become a burdensome task. Moreover, the lack of regulation and standardization makes the traceability of AM materials difficult. Thus, the traceability of AM materials should be ensured by manufacturers, which according to an expert compels them to 'audit and validate the suppliers in more detail'. Multiple experts also mentioned the high cost of AM materials as a barrier. These barriers can also reduce the sourcing flexibility of raw materials, causing the same SC vulnerabilities that were discussed earlier in this subsection. For instance, the lack of regulation and standardization of AM materials coupled with their limited traceability can make multiple-sourcing difficult and lead to dependency on a limited number of suppliers whose materials meet the quality standards of the manufacturing firm, while the high cost of AM materials can limit the production capacity of the manufacturing firm.</p><p>Furthermore, some experts remarked that the high cost of industrial-grade AM machines is another barrier that makes multiple-sourcing even more difficult. It was also noted that the lack of AM process standards turns the qualification of new machine suppliers into a rigorous task. These barriers can also give rise to SC vulnerabilities to production capacity as well as reliance on a limited number of qualified machine suppliers.</p><p>Proposition 7. AM adoption has a moderate negative effect on the use of alternative suppliers, which diminishes the flexibility in sourcing, causing vulnerabilities to raw materials availability, supplier capacity, production capacity, and reliance on specialty sources.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.8.">Use alternative production sites</head><p>The effect of AM adoption on the use of alternative production sites was perceived to be low, with moderate dispersion in the experts' quantitative answers when compared to other resilience practices. Distributed manufacturing was the most pronounced AM feature that enables the use of alternative production sites. It was noted that 'At the cost of a printer and few other ancillary equipment, production can be set up almost anywhere' (industry expert), supporting the notion of local manufacturing whereby it is possible to gain access to geographically dispersed production facilities. An important implication of this AM-enabled resilience practice is the capability to distribute production facilities at different locations (i.e. Dispersion (Distributed capacity)), hence avoiding the concentration of production capacity in one location (i.e. Sensitivity (Concentration of capacity)). This also helps mitigate the risk of deliberate misconduct such as terrorism and sabotage (i.e. Deliberate threats (Terrorism and sabotage)), as well as piracy and theft. According to an expert, 'If one production site is down, we are able to divert production to another site.' In other words, the firm will have the flexibility (i.e. Flexibility (Reallocation of production)) and the adaptability (i.e. Adaptability (Rerouting of requirements)) to adjust its operations promptly and gain access to adequate production and distribution capacities to fulfill and deliver the customer orders in the face of disruptions. For instance, mobile manufacturing by means of AM technology, which is intrinsically another form of AM-enabled distributed manufacturing, can improve SCR in the mentioned ways. According to <ref type="bibr" target="#b64">Stillström and Jackson (2007)</ref>, mobility in manufacturing is 'the ability to change between geographically different places with little penalty in time, effort, cost, or performance'. This concept was evident in many of the explanations given by the experts.</p><p>Along the same lines, it was noted that 'AM can enable local or regional production reducing the effects of delays in shipping and other disruptions' (industry expert). This would enable the firm to protect itself against potential supplier/customer disruptions that may take place at different nodes across the SC. 'Having a backup plant for additional capacity is fairly easy to setup' (industry expert), implying the possibility of pooling the necessary production capacity from alternative production sites. Capacity pooling helps buffer the negative effects of disruptions <ref type="bibr" target="#b33">(Khajavi, Partanen, and Holmström 2014)</ref>, e.g. the ripple effect or bullwhip effect <ref type="bibr" target="#b29">(Jain, Wadhwa, and Deshmukh 2009)</ref>, thus increasing the manufacturing flexibility of the firm against unexpended surges in demand. As <ref type="bibr" target="#b28">Ivanov et al. (2019)</ref> state, 'The core of additive manufacturing applications to SCM is the usage of 3D printers at different stages in the SC to increase manufacturing flexibility'.</p><p>However, explanations such as 'More specialized production infrastructure is required for additive compared to subtractive' or 'Harder to invest due to higher infrastructure cost and capital cost' by different experts revealed the lack of specialized infrastructure as a barrier that can impede the use of alternative production sites as a resilience practice, limiting production and distribution capacities in this case. An illustrative example of this issue is the underdeveloped ICT infrastructure of many firms for transferring AM digital files <ref type="bibr" target="#b37">(Kumar et al. 2022;</ref><ref type="bibr" target="#b74">Verboeket and Krikke 2019)</ref>. Also, the high cost of machine infrastructure for industrial-grade AM inhibits flexibility in production capacity. If the firm does not have a specialized infrastructure in place, one option is to outsource the production operations to AM service providers/bureaus. As one expert explained, 'AM is becoming more mainstream and there is a good chance a company can have alternative production options', which implies the possibility of outsourcing production to AM service providers/bureaus in different locations.</p><p>This practice can open up opportunities for gaining access to markets that are geographically dispersed (i.e. Dispersion (Dispersion of markets)), thus expanding the scale and extent of the firm's supply network (i.e. Connectivity (Scale and extent of supply network)) and establishing a globally distributed SC (i.e. Connectivity (Import/export channels)). In this instance, despite increased dependence on external entities <ref type="bibr" target="#b53">(Patil et al. 2023)</ref>, outsourcing production may still help the firm to mitigate potential supplier/customer disruptions.</p><p>Proposition 8. AM adoption has a low positive effect on the use of alternative production sites, which enhances dispersion, flexibility, and adaptability. This mitigates concentration of capacity, terrorism and sabotage, piracy and theft, the scale and extent of supply network, import/export channels, supplier/ customer disruptions, and production and distribution capacity shortages. However, when production is outsourced to AM service providers/bureaus, the degree of interdependence on external entities increases.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.9.">Use alternative transport modes</head><p>AM technology adoption was perceived to have the lowest effect on the use of different modes of transport, with the highest dispersion in the answers. The most noticeable AM features in the explanations were digital file distribution and digital inventory, both of which were considered to be enablers of distributed manufacturing. As one expert explained, 'AM can eliminate the transportation of goods and materials since production could theoretically be located as close as possible to the point of use.' He continued, 'AM parts are represented by digital files so inventory can be digital too and production can take place on demand.' This explanation emphasizes some key benefits of distributed AM, i.e. reduction of transportation by manufacturing on demand close to the point of use. Also, the ability to store parts as digital inventory (vs. FGI) and distribute them digitally can further reduce the need for physical storage and transportation of parts throughout the SC. As noted by an expert, 'With AM, we will move from transcontinental transport problem (container, packaging, inventory redundancies) to last mile transport.' Moreover, another expert explained that it is 'Easy to use multiple transportation methods'. This is particularly true because AM materials normally come in fewer types and basic forms; therefore, it is easier to transport them with alternative modes of transport. As Ford and Despeisse (2016) also state, 'Logistics are simplified as fewer, more basic material inputs are needed'.</p><p>Furthermore, parts can be printed in transit using transport vehicles that are equipped with 3D printers (i.e. mobile manufacturing), reducing the lead time and improving flexibility in terms of production capacity. Notably, this manufacturing method is particularly feasible for small batch production because there is no need for productspecific tools or complex machine setups, making it possible to equip transport vehicles with 3D printers. Lastly, an expert mentioned that it is possible to use typical courier services to ship 3D-printed parts, as they are normally printed in low volumes. All these AM features add to flexibility in order fulfillment by allowing the parts to be delivered via different transport modes and routing options (i.e. Flexibility (Alternate distribution channels)), thus mitigating potential shortages in distribution and production capacities. Also, such AM-enabled freedom in transportation and distribution helps the adopting firm to deal with potential geopolitical disruptions, which can lead to supplier disruptions and negatively affect the import/export of products in overextended SCs (i.e. Turbulence (Exposure to geopolitical disruptions)).</p><p>Despite all the mentioned AM features, the average score of the quantitative answers still indicated a low effect of AM adoption on the use of alternative transport modes. With reference to potential barriers, it was noted that the 'Transport of hazardous powders is slower' (industry expert). In the case of hazardous materials, distribution capacity may become limited since transportation requires special care and conditions, limiting the flexibility to swiftly alternate between different transport modes and routing options. However, as this issue also applies to other production methods, it was not considered an adoption barrier in the context of AM technology adoption and SCR. Proposition 9. AM technology adoption has a low positive effect on the use of alternative transport modes, which enhances flexibility in order fulfillment. This mitigates production and distribution capacity shortages, supplier disruptions, and exposure to geopolitical disruptions.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">Managerial implications</head><p>This study aimed to develop a preliminary practice-based framework that can help managers and policymakers make more informed decisions about how to improve SCR via different resilience practices in a context where AM technology is used. Drawing on the gathered empirical data, it was possible to explain how AM technology adoption affects different resilience practices and how these resilience practices, in turn, affect various SC capabilities and vulnerabilities that underlie SCR. In doing so, various pathways were explored that originate from the identified AM adoption features/barriers and lead to 48 sets of interlinked SC capabilities and vulnerabilities via the resilience practices under study (see Section 4 for details). These pathways are marked by black/red arrows in the AM-SCRP framework (Figure <ref type="figure" target="#fig_3">4</ref>), where the red arrows represent the pathways that lead to the deterioration of SC capabilities and consequently their related SC vulnerabilities. Moreover, the AM barriers highlighted in red are the cause of this deterioration, as explained throughout Section 4.</p><p>As indicated in the AM-SCRP framework, AM adoption affects SC 'Flexibility' via the resilience practices 'Change the production schedule', 'Align supply chain information systems', 'Use alternative suppliers', 'Use alternative production sites', and 'Use alternative transport modes'. Firstly, the findings suggest that AM adoption has a high positive effect on changing production schedules, which in turn enhances flexibility in order fulfillment by facilitating production postponement. For instance, storing parts as digital inventory (rather than FGI) in an AM setting makes it easier to change the production schedules by moving the order penetration point (OPP) upstream the SC toward the make-to-order (MTO) policy <ref type="bibr" target="#b74">(Verboeket and Krikke 2019)</ref>, thus facilitating production postponement when compared to the make-to-stock (MTS) policy. This flexibility in production postponement, in turn, allows the firm to better deal with the unpredictability in customer demands and potential customer disruptions. However, barriers such as slow production speed, low throughput rate, or excessive post-processing requirements take away from this flexibility. Secondly, AM technology adoption has a moderate positive effect on aligning SC information systems, which tends to enhance flexibility in order fulfillment by facilitating inventory management (e.g. digital inventory vs. FGI). This flexibility in inventory management allows the firm to mitigate the unpredictability in customer demands and potential shortages in production capacity. Thirdly, AM adoption has a moderate negative effect on the use of alternative suppliers as there are multiple existing barriers to the supply of AM materials and industrialgrade AM machines (see Figure <ref type="figure" target="#fig_3">4</ref>), which reduce the flexibility of the SC in sourcing, causing interrelated SC vulnerabilities to raw material availability, supplier capacity, production capacity, and reliance on specialty sources. These findings support the proposition put forward by <ref type="bibr">Naghshineh and Carvalho (2022b)</ref> that 'SC vulnerabilities caused by AM adoption barriers negatively affect SCR'. Fourthly, AM adoption has a low positive effect on the use of alternative production sites. Nonetheless, this effect increases the flexibility of the SC in order fulfillment by making it possible to reallocate production to different sites through distributed manufacturing, mobile manufacturing, capacity pooling, or even outsourcing production to AM service providers/bureaus. This increase in flexibility allows the firm to mitigate possible shortages in distribution and production capacities. However, the lack of specialized production infrastructure inhibits the positive effect of AM adoption on this resilience practice. Lastly, AM technology adoption has a low positive effect on the use of alternative transport modes. Nevertheless, this effect improves the flexibility of the SC in order fulfillment by making it easier to alternate between different distribution channels (i.e. transportation modes and routing options), which is attributed to different AM adoption features such as fewer materials and inventory. This feature, for instance, facilitates the use of different transport options, as raw materials can be more easily adapted to alternative modes of transport. The resultant flexibility, in turn, mitigates SC vulnerabilities to shortages in production and distribution capacities, as well as potential supplier and geopolitical disruptions. Overall, the findings are in accordance with <ref type="bibr" target="#b13">Delic and Eyers (2020)</ref> who state that AM adoption improves SC flexibility. In contrast, however, this study shows how adopting AM technology can deteriorate the flexibility of the SC in sourcing by limiting the use of alternative suppliers, therefore causing SC vulnerabilities that negatively affect SCR.</p><p>AM adoption affects 'Adaptability' via the resilience practices 'Reduce delivery lead time', 'Reduce response time', and 'Use alternative production sites'. Firstly, the findings suggest that AM adoption has a high positive effect on reducing delivery lead time, which augments SC adaptability. For instance, AM enables the consolidation of many parts into one complex part utilizing a high degree of design freedom. Not only does this allow the adopting firm to better respond to unpredictable customer demands for complex parts/products, but it also reduces the need for warehousing and distribution of many subcomponents along the SC, thus reducing SC vulnerabilities to distribution capacity shortages, as well as instances of inventory theft and damage. Another important AM feature that contributes to reducing delivery lead time is the ondemand manufacturing of parts close to their point of use. However, excessive post-processing inhibits the effectiveness of AM adoption in this case. Secondly, AM adoption has a high positive effect on reducing response time, enhancing the ability of the firm to quickly adapt its operations to respond to sudden challenges or opportunities. AM features such as rapid prototyping and rapid manufacturing of parts empowered by tool-less manufacturing and fast production setup help reduce the production lead time, thus reducing the response time. This will help increase the adaptability of the SC to respond to vulnerabilities caused by the unpredictability in customer demands and competitive innovations in the market. As Niaki and Nonino (2017) state, 'AM is most advantageous in market environments characterized by demand for customization and flexible parts', referring to contemporary market environments where frequent competitive innovations drive many firms to quickly adapt their product portfolios to erratic customer demands to gain a competitive advantage, which is in line with the dynamic capabilities view of the firm. However, slow production speed and excessive post-processing requirements are among the barriers that inhibit the enhancing effect of AM adoption on this resilience practice. Moreover, the present instability in AM processes can lead to unforeseen failures in production operations, thus prolonging the response time. Thirdly, AM adoption has a low positive effect on the use of alternative production sites, which helps improve adaptability. In the case of disruptions, AM-enabled distributed manufacturing allows the firm to promptly reroute its production to different facilities/sites (i.e. capacity pooling) or even to other manufacturing firms (i.e. outsourcing production), thereby mitigating SC vulnerabilities caused by shortages in production and distribution capacities. Nonetheless, provisioning a specialized infrastructure -at each and every production site -to ensure consistent AM operations can be difficult, which inhibits the enhancing effect of AM on the use of alternative production sites.</p><p>AM adoption affects 'Dispersion' via the resilience practice 'Use alternative production sites'. According to the findings, AM adoption has a low positive effect on the use of alternative production sites, which tends to positively influence distributed capacity and dispersion of markets. AM features such as distributed manufacturing enable the firm to set up production facilities at various locations and avoid SC vulnerabilities that stem from high level of SC density, deliberate threats such as terrorism and sabotage, or even piracy and theft. These AM features also allow the firm to expand the scale and extent of its supply network by gaining access to international markets. Nevertheless, the lack of specialized production infrastructure is a barrier that inhibits the enhancing effect of AM adoption on this resilience practice. Issues such as affording expensive AM machine infrastructure and/or establishing a secure IT infrastructure create this barrier. Furthermore, outsourcing production to AM service providers/bureaus can increase SC vulnerability due to increased dependence on external entities.</p><p>AM technology adoption affects 'Collaboration' via the resilience practices 'Supply chain common response' and 'Align supply chain information systems'. Firstly, the findings suggest that AM adoption has a moderate positive effect on practicing SC common response. This effect positively influences SC collaboration, particularly by enabling postponement of orders. AM-enabled consumercentric methods of production tend to mitigate SC vulnerabilities caused by the unpredictability in customer demands and customer disruptions. However, potential IP rights complications and the lack of consumer awareness and trust in the technology inhibit the enhancing effect of AM adoption on this resilience practice. Secondly, AM adoption has a moderate positive effect on aligning SC information systems, which tends to positively affect collaborative information sharing and forecasting with SC partners. For instance, the opportunity to manufacture parts in a decentralized SC setting (i.e. distributed manufacturing) via AM motivates SC partners to align their information systems to enable this production method. Such an initiative aimed at improving collaborative information sharing would, in turn, reduce SC vulnerabilities to unpredictability in customer demand and customer disruptions. For the most part, these findings complement those of <ref type="bibr" target="#b50">Oettmeier and Hofmann (2016)</ref> and <ref type="bibr" target="#b42">Luomaranta and Martinsuo (2020)</ref>, who state that AM adoption promotes collaboration throughout the SC. However, it should also be noted that potential IP rights complications and ICT inadequacies are barriers that not only negatively affect collaborative information sharing and forecasting capabilities but can also cause SC vulnerabilities to industrial espionage and dependence on continuous information flow. This is because digitalizing the SC with AM technology requires coordination and real-time communication between different information systems throughout the SC; therefore, the SC can become 'vulnerable to cyberattacks. These attacks can include industrial espionage, IP leakage, or even production sabotage' <ref type="bibr" target="#b65">(Tang and Veelenturf 2019)</ref>.</p><p>As shown in the AM-SCRP framework (Figure <ref type="figure" target="#fig_3">4</ref>), AM adoption affects 'Visibility' and 'Anticipation' via the resilience practice 'Align supply chain information systems'. More specifically, AM features such as digital inventory or digital file distribution, which empower the distributed manufacturing of parts across the SC, incentivize SC members to align their information systems, hence improving SC visibility and anticipation capabilities. This improvement in SC visibility not only facilitates the outsourcing of operations but also mitigates the vulnerability of the SC to supplier disruptions that originate from upstream SC. Additionally, by staying aligned and connected, forecasting methods can be used more effectively to anticipate the unpredictability in customer demand that originates from downstream the SC, hence improving SCR <ref type="bibr" target="#b48">(Naghshineh and Lotfi 2019)</ref>. Nonetheless, ICT inadequacies and IP rights complications not only inhibit the enhancing effect of AM adoption on this resilience practice but can also cause SC vulnerability to dependence on continuous information flow for everyday operations, calling for a secure ICT infrastructure.</p><p>AM technology adoption affects 'Efficiency' via the resilience practice 'Use maximum capacity'. The findings suggest that AM adoption has a high positive effect on using maximum capacity due to different features such as automated manufacturing and small batch production. These features support the notion of economies of technology and can help solve the dilemma concerning economies of scale. For instance, economies of technology would be possible by allocating a single operator to control multiple AM machines, reducing labor and manpower costs. Moreover, as parts/products can be produced in small batches or even as one-offs, the manufacturing firm is not constrained by economies of scale. Therefore, such features make AM an ideal technology for easily adjusting production capacity, which allows the adopting firm to efficiently use the resources at its disposal, thus generating outputs with minimal resource requirements. This efficiency in production helps the manufacturing firm to cope with the unpredictability in customer demand, especially when considering time and cost factors. These findings lend support to <ref type="bibr" target="#b4">Belhadi et al. (2022)</ref> who argue that AM adoption increases SC efficiency. However, currently, barriers such as limited build volumes and lack of multi-material printing undermine AM's ability to easily adjust production capacity, thus negatively affecting efficiency due to incurred time and cost penalties.</p><p>Lastly, AM adoption affects 'Market position' via the resilience practice 'Supply chain common response'. The findings suggest that AM adoption has a moderate positive effect on practicing SC chain common response, mainly due to co-design/cocreation and consumer-centric production, which allow the customer to be involved in the design and production phases of a product. By allowing customers to co-design and co-create the products, not only can the firm respond better to the unpredictability in their demands and generate customer satisfaction, but it can also cope with external competitive innovations more effectively, thus consolidating its position in the market. However, concerns for IP rights as well as lack of consumer awareness and trust in AM are barriers that inhibit the enhancing effect of AM adoption on this resilience practice.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.">Conclusion and future work</head><p>In line with the dynamic capabilities view of the firm toward technology adoption, the objective of this study was to investigate the implications of AM technology adoption for SCR while considering the role of resilience practices. More specifically, this study aimed to explore how AM technology adoption affects different resilience practices, and subsequently, how AM-enabled resilience practices help the adopting firm to develop SC capabilities to deal with SC vulnerabilities, thus enhancing SCR. To factor in the viewpoint of the industry on the subject matter, an exploratory survey was conducted whereby both quantitative and qualitative empirical data were collected from a heterogeneous sample of experts working for companies involved in different industries that had adopted various AM processes for a wide range of applications. The quantitative data were used to estimate to what extent AM adoption affects different resilience practices, while the qualitative data were analyzed to explain the effects of AM adoption on the resilience practices and how they would in turn affect the SC capabilities and vulnerabilities that underlie SCR. Subsequently, the findings were triangulated through comparison with the existing evidence in the AM and SCM literature. Thus, a preliminary practice-based framework based on empirical data from industry was put forward (Figure <ref type="figure" target="#fig_3">4</ref>), which clarifies the underlying relationships between AM technology adoption, resilience practices, and SC capabilities and vulnerabilities that underlie SCR. Moreover, these findings were used to put forward propositions that indicate the opportunities that AM technology adoption would present for enhancing SCR.</p><p>The contributions of this study are manyfold. At the interface of digital technologies and SCR, 'many past studies are still conceptual and lack empirical corroboration' <ref type="bibr" target="#b25">(Iftikhar et al. 2022)</ref>. Therefore, by conducting an exploratory survey in different industries, this study addressed an unexplored theme in the body of literature based on empirical evidence. Moreover, as the survey targeted companies operating in developed economies, the findings are more likely to be generalizable since digital technologies such as AM are more mature in developed economies <ref type="bibr" target="#b75">(Wagire et al. 2021)</ref>. Additionally, by drawing on empirical insights sought from experts involved in different industries and countries, practical knowledge was derived in the context of AM technology adoption and SCR management that can be applied across international markets <ref type="bibr" target="#b2">(Balakrishnan and Ramanathan 2021)</ref>. This led to putting forward testable propositions informed by empirical insights concerning the opportunities that AM technology adoption would present for enhancing SCR, which can be examined by future research in different contexts. Furthermore, using this practical knowledge, the conceptual AM-SCR framework put forward by <ref type="bibr">Naghshineh and Carvalho (2022a)</ref> was refined and transformed into a preliminary practicebased framework (i.e. AM-SCRP) that can be tested by practitioners and policymakers.</p><p>One of the main contributions of the AM-SCR P framework is the specification of various resilience practices that are linked to certain SC capabilities and vulnerabilities. Hence, in the face of impending SC vulnerabilities, the AM-SCR P framework can help practitioners and policymakers decide which AM-enabled resilience practices to deploy for developing necessary SC capabilities, thereby generating SCR. Moreover, this framework helps practitioners and policymakers to evaluate the adoption features of AM technology that enable resilience practices, while also highlighting the potential barriers that not only inhibit the enhancing effects of AM technology adoption in this regard but may also give rise to certain SC vulnerabilities. While there are a handful of broad-based frameworks in the literature that present a general overview of the impacts of different digital technologies on SCR (e.g. <ref type="bibr" target="#b23">Hägele, Grosse, and Ivanov 2023;</ref><ref type="bibr" target="#b28">Ivanov, Dolgui, and Sokolov 2019;</ref><ref type="bibr" target="#b62">Spieske and Birkel 2021)</ref>, to the best of the authors' knowledge, to date, no empirical framework -other than the AM-SCRP framework -outlines the implications of AM technology adoption for SCR while considering the role of resilience practices. Hence, this study managed to address a noticeable gap in the body of literature regarding 'Additive Manufacturing Enabled Supply Chain Management' <ref type="bibr" target="#b61">(Sonar, Khanzode, and Akarte 2022)</ref>, particularly for managing SCR <ref type="bibr" target="#b27">(Ivanov, Blackhurst, and Das 2021;</ref><ref type="bibr" target="#b68">Tortorella et al. 2022)</ref>.</p><p>Regarding the research limitations, first, the resilience practices under study had to be limited in number to control the scope of the research. However, future research may extend upon the findings of this study by exploring more resilience practices. Moreover, as this research is the first to empirically explore the implications of AM technology adoption for SCR while considering the mediating role of different resilience practices, rather than claiming generalizability of the results, generic propositions are put forward that are open to further validation and refinement. Therefore, future research should conduct single or multiple case studies to test these propositions and validate the AM-SCRP framework in certain industries with specific AM processes and SC settings. Conducting such studies would result in context-specific variations of the AM-SCRP framework, thus advancing this preliminary framework. Last but not least, as AM technology progresses and its adoption barriers gradually disappear, longitudinal research can help estimate the change in the effectiveness of AMenabled resilience practices over time.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Conceptual research model.</figDesc><graphic coords="5,92.13,614.56,425.16,76.92" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Illustrative example of the two-step qualitative data analysis.</figDesc><graphic coords="9,92.13,578.13,425.16,61.20" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. Text segment from Durão et al. (2017).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. Additive manufacturing-supply chain resilience practices (AM-SCRP) framework (see the online version for colors).</figDesc><graphic coords="18,63.78,249.30,481.92,458.28" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 .</head><label>1</label><figDesc>Resilience practices and SC capabilities in the context of AM adoption and SCM.</figDesc><table><row><cell>Study</cell><cell>Resilience practices</cell><cell>Employed metrics</cell><cell>SC capabilities</cell></row><row><cell>Belhadi et al. (2022)</cell><cell>Exchange information</cell><cell>Cost and time</cell><cell>Increased visibility</cell></row><row><cell/><cell>SC common response</cell><cell/><cell>Increased collaboration</cell></row><row><cell/><cell>Use maximum capacity</cell><cell/><cell>Increased flexibility</cell></row><row><cell>Ukobitz and Faullant (2021)</cell><cell>Reduce response time</cell><cell>Cost and time</cell><cell>Increased adaptability</cell></row><row><cell>Verboeket et al. (2021)</cell><cell>Reduce delivery lead time</cell><cell cols="2">Cost and delivery lead time Increased adaptability</cell></row><row><cell>Delic and Eyers (2020)</cell><cell>Change the production schedule (via</cell><cell>Cost and time of changing</cell><cell/></row><row><cell/><cell>production postponement)</cell><cell>the schedules</cell><cell/></row></table><note><p>Use maximum capacity Total cost and lead time Increased flexibility Reduce waste Waste rate and total cost Increased efficiency Knofius, van der Heijden, and Zijm (2016) Reduce delivery lead time Resupply lead time Increased adaptability Use alternative suppliers Number of supply options Increased flexibility (in sourcing) Oettmeier and Hofmann (2016) SC common response Material and product quality Increased collaboration Reduce delivery lead time Delivery lead time Increased adaptability Rylands et al.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 3 .</head><label>3</label><figDesc>Descriptive analysis of the sample.</figDesc><table><row><cell/><cell>Frequency</cell><cell>Percent</cell><cell/><cell>Frequency</cell><cell>Percent</cell></row><row><cell>Country</cell><cell/><cell/><cell>Industry sector</cell><cell/><cell/></row><row><cell>Austria</cell><cell>2</cell><cell>3%</cell><cell>Aerospace</cell><cell>12</cell><cell>20%</cell></row><row><cell>Canada</cell><cell>4</cell><cell>7%</cell><cell>Automotive</cell><cell>14</cell><cell>23%</cell></row><row><cell>Denmark</cell><cell>1</cell><cell>2%</cell><cell>Engineering services</cell><cell>10</cell><cell>17%</cell></row><row><cell>China</cell><cell>4</cell><cell>7%</cell><cell>Energy (equipment and spare parts)</cell><cell>11</cell><cell>18%</cell></row><row><cell>France</cell><cell>2</cell><cell>3%</cell><cell>Medical</cell><cell>13</cell><cell>22%</cell></row><row><cell>Finland</cell><cell>1</cell><cell>2%</cell><cell>Total</cell><cell>60</cell><cell>100%</cell></row><row><cell>Germany Italy Netherlands</cell><cell>11 2 3</cell><cell>18% 3% 5%</cell><cell>Supply chain tier 2 nd tier supplier 1 st tier supplier</cell><cell>18 32</cell><cell>30% 53%</cell></row><row><cell>Portugal</cell><cell>1</cell><cell>2%</cell><cell>Focal company</cell><cell>10</cell><cell>17%</cell></row><row><cell>Spain</cell><cell>2</cell><cell>3%</cell><cell>Total</cell><cell>60</cell><cell>100%</cell></row><row><cell>Sweden</cell><cell>1</cell><cell>2%</cell><cell>Experts' positions</cell><cell/><cell/></row><row><cell>Switzerland</cell><cell>1</cell><cell>2%</cell><cell>AM engineer</cell><cell>12</cell><cell>20%</cell></row><row><cell>United Kingdom</cell><cell>10</cell><cell>16%</cell><cell>AM manager</cell><cell>14</cell><cell>24%</cell></row><row><cell>United States</cell><cell>15</cell><cell>25%</cell><cell>Managing director</cell><cell>10</cell><cell>17%</cell></row><row><cell>Total</cell><cell>60</cell><cell>100%</cell><cell>Operations manager</cell><cell>11</cell><cell>18%</cell></row><row><cell>Company size</cell><cell/><cell/><cell>Production manager</cell><cell>8</cell><cell>13%</cell></row><row><cell>&lt;50 employees</cell><cell>20</cell><cell>33%</cell><cell>Supply chain manager</cell><cell>5</cell><cell>8%</cell></row><row><cell>50-250 employees</cell><cell>12</cell><cell>20%</cell><cell>Total</cell><cell>60</cell><cell>100%</cell></row><row><cell>&gt;250 employees</cell><cell>28</cell><cell>47%</cell><cell/><cell/><cell/></row><row><cell>Total</cell><cell>60</cell><cell>100%</cell><cell/><cell/><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 4 .</head><label>4</label><figDesc>Descriptive analysis of the AM processes and their applications in the sample.</figDesc><table><row><cell>AM processes</cell><cell>Frequency</cell><cell>Percent</cell><cell>AM applications</cell><cell>Frequency</cell><cell>Percent</cell></row><row><cell>Powder bed fusion</cell><cell>50</cell><cell>32%</cell><cell>Direct part manufacturing</cell><cell>56</cell><cell>39%</cell></row><row><cell>Sheet lamination</cell><cell>4</cell><cell>3%</cell><cell>Rapid prototyping</cell><cell>52</cell><cell>36%</cell></row><row><cell>Directed energy deposition</cell><cell>12</cell><cell>8%</cell><cell>Rapid tooling</cell><cell>24</cell><cell>17%</cell></row><row><cell>Vat photopolymerization</cell><cell>24</cell><cell>16%</cell><cell>Maintenance, repair, and overhaul</cell><cell>12</cell><cell>8%</cell></row><row><cell>Material extrusion</cell><cell>34</cell><cell>23%</cell><cell>Total</cell><cell>144</cell><cell>100%</cell></row><row><cell>Material jetting</cell><cell>10</cell><cell>7%</cell><cell/><cell/><cell/></row><row><cell>Binder jetting</cell><cell>16</cell><cell>11%</cell><cell/><cell/><cell/></row><row><cell>Total</cell><cell>150</cell><cell>100%</cell><cell/><cell/><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 5 .</head><label>5</label><figDesc>Quantitative data analysis results.</figDesc><table><row><cell>Resilience practices</cell><cell>Mean</cell><cell>SD</cell><cell>Effect</cell><cell>Rank</cell></row><row><cell>Change the production schedule Reduce delivery lead time Use maximum capacity Reduce response time Supply chain common response Align supply chain information systems Use alternative suppliers Use alternative production sites Use alternative transport modes</cell><cell>4.04 3.78 3.56 3.52 3.38 3.25 2.69 2.48 2.18</cell><cell>1.01 1.18 1.21 1.28 1.22 1.47 1.28 1.34 1.63</cell><cell>High High High High Moderate Moderate Moderate Low Low</cell><cell>1 st 2 nd 3 rd 4 th 5 th 6 th 7 th 8 th 9 th</cell></row></table><note><p><p>Note:</p>The score for Cronbach's α is 0.89 indicating the reliability of the scales.</p></note></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>The first author acknowledges <rs type="funder">Fundação para a Ciência e a Tecnologia (FCT-MCTES)</rs> for its financial support via the <rs type="grantName">Doctoral</rs> grant <rs type="grantNumber">PRT/BD/152828/2021</rs> (<rs type="programName">MIT Portugal Program</rs>). The second author acknowledges <rs type="funder">Fundação para a Ciência e a Tecnologia (FCT-MCTES)</rs> for its financial support via the projects <rs type="grantNumber">UIDB/00667/2020</rs> and <rs type="grantNumber">UIDP/00667/2020</rs> (<rs type="projectName">UNIDEMI</rs>).</p></div>
+			</div>
+			<div type="funding">
+<div><head>Funding</head><p>The work was supported by the <rs type="funder">Fundação para a Ciência e a Tecnologia</rs> [<rs type="grantNumber">PRT/BD/152828/2021</rs>].</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_WdEk38a">
+					<idno type="grant-number">PRT/BD/152828/2021</idno>
+					<orgName type="grant-name">Doctoral</orgName>
+					<orgName type="program" subtype="full">MIT Portugal Program</orgName>
+				</org>
+				<org type="funding" xml:id="_NqbwDn2">
+					<idno type="grant-number">UIDB/00667/2020</idno>
+				</org>
+				<org type="funded-project" xml:id="_uFGm9DC">
+					<idno type="grant-number">UIDP/00667/2020</idno>
+					<orgName type="project" subtype="full">UNIDEMI</orgName>
+				</org>
+				<org type="funding" xml:id="_YrT8q9M">
+					<idno type="grant-number">PRT/BD/152828/2021</idno>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data availability statement</head><p>The participants of this study did not give written consent for their data to be shared publicly, so due to the sensitive nature of the research supporting data is not available.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Disclosure statement</head><p>No potential conflict of interest was reported by the author(s).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Declaration of generative AI and AI-assisted technologies</head><p>No Generative AI or AI-assisted technologies have been used in the writing and preparation of this manuscript.</p><p>Appendix A -Definitions for the SC capabilities and SC vulnerabilities and their subfactors adapted from <ref type="bibr" target="#b54">Pettit et al. (2013)</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>SC capability Definition</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>SC capability subfactor(s) Definition</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Flexibility (in sourcing)</head><p>Capability to promptly adjust inputs or the mode of receiving inputs.</p><p>Alternate suppliers Capability to find alternative sources of supply for key inputs, e.g. raw material.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Flexibility</head><p>(in order fulfillment)</p><p>Capability to promptly adjust outputs or the mode of delivering outputs.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Reallocation of production</head><p>Capability to promptly reallocate jobs/orders to different production units or among alternative suppliers.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Production postponement</head><p>Capability to postpone production to better respond to demand.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Inventory management</head><p>Capability to efficiently manage inventory (e.g. cycle stock, safety stock) at different SC nodes (e.g. warehouses, distribution centers, retail locations, etc.).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Alternate distribution channels</head><p>Capability to promptly alter modes of transport as well as the routing options for outbound shipments.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Adaptability</head><p>Capability to adjust operations to respond to challenges or opportunities.</p><p>Lead time reduction Capability to further reduce lead times.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Rerouting of requirements</head><p>Capability to promptly reallocate jobs/orders to different production facilities or among alternative suppliers.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Dispersion</head><p>Capability to widely distribute or decentralize assets. Distributed capacity Capability to distribute the production facilities at various locations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Dispersion of markets</head><p>Capability to sell products to customers in different geographic locations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Collaboration</head><p>Capability to work effectively with other firms for mutual interest.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Collaborative forecasting</head><p>Capability to utilize collaborative demand forecasting techniques through information sharing.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Collaborative information sharing</head><p>Capability to transparently share information among SC members to improve collaborative decision-making.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Postponement of orders</head><p>Capability to postpone orders when the production capacity is disrupted.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Visibility</head><p>Capability to gain knowledge about the SC environment as well as the status of the operating assets.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Information exchange</head><p>Capability to regularly exchange information with other SC members, e.g. customers, suppliers, etc.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Efficiency</head><p>Capability to generate outputs with minimal resource requirements.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Asset utilization</head><p>Capability to efficiently utilize assets to generate outputs.</p><p>Market Position Capability of a firm in maintaining its position in specific markets.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Customer relationships</head><p>Capability to maintain strong, long-term relationships with customers.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Anticipation</head><p>Capability to detect impending events. Demand forecasting Capability to use forecasting methods effectively.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>SC vulnerability Definition</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>SC vulnerability subfactor(s) Definition</head><p>Turbulence Recurrent changes in external factors that are beyond the firm's control.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Unpredictability in customer demand</head><p>Erratic customer demand for products.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Exposure to geopolitical disruptions</head><p>Recurrent disruptions in imports/exports because of geopolitical turmoil.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Unforeseen technology failures</head><p>Frequent unforeseen failures in technology that disrupt operations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Resource limits</head><p>Output constraints caused by the unavailability of production factors.</p><p>Distribution capacity Limited capacity for product distribution.</p><p>Production capacity Limited production capacity.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Raw material availability</head><p>Limited supply of raw materials for production.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplier capacity</head><p>Limited supplier capacity.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Connectivity</head><p>Degree of dependence on external entities.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Scale and extent of supply network</head><p>The number of members in the SC.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Reliance upon specialty sources</head><p>Dependence on specialty components or materials for production.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Import/export channels</head><p>Access to globally distributed SCs.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Reliance upon information flow</head><p>Dependence on continuous information flow for everyday operations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Degree of outsourcing</head><p>The extent to which operations are outsourced to external entities.</p><p>(Continued)</p><p>Appendix B -Questionnaire (supplemental online material) </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>SC vulnerability Definition</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>SC vulnerability subfactor(s) Definition</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Deliberate threats</head><p>Deliberate misconduct to cause financial/human harm or disrupt operations.</p><p>Industrial espionage Technologies or products being compromised by industrial espionage.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Piracy and theft</head><p>Vandalism and theft of products.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Terrorism and sabotage</head><p>Acts of terrorism or sabotage that target personnel or facilities.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplier/ Customer disruptions</head><p>Vulnerability of customers and suppliers to outside forces or disruptions.</p><p>Supplier disruptions Suppliers facing serious disruptions frequently.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Customer disruptions</head><p>Customers facing serious disruptions frequently.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Sensitivity</head><p>Importance of carefully controlled conditions for process and product integrity.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Concentration of capacity</head><p>Geographic concentration and/or co-dependence of production facilities or suppliers.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>External pressures</head><p>Business constraints or barriers caused by external influences, which do not specifically target the firm.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Competitive innovation</head><p>Frequent competitive innovations that threaten the firm's product portfolio.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Where Is Supply Chain Resilience Research Heading? A Systematic and Co-Occurrence Analysis</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Ali</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Gölgeci</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/IJPDLM-02-2019-0038</idno>
+		<ptr target="https://doi.org/10.1108/IJPDLM-02-2019-0038"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Physical Distribution &amp; Logistics Management</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="793" to="815"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<author>
+			<persName><forename type="first">E</forename><surname>Babbie</surname></persName>
+		</author>
+		<title level="m">Survey Research Methods</title>
+		<meeting><address><addrLine>Stamford, CT</addrLine></address></meeting>
+		<imprint>
+			<publisher>Cengage Learning</publisher>
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">The Role of Digital Technologies in Supply Chain Resilience for Emerging Markets' Automotive Sector</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Balakrishnan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Ramanathan</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/SCM-07-2020-0342</idno>
+		<ptr target="https://doi.org/10.1108/SCM-07-2020-0342"/>
+	</analytic>
+	<monogr>
+		<title level="j">Supply Chain Management: An International Journal</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="654" to="671"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Manufacturing and Service Supply Chain Resilience to the COVID-19 Outbreak: Lessons Learned from the Automobile and Airline Industries</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Belhadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kamble</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J C</forename><surname>Jabbour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gunasekaran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">O</forename><surname>Ndubisi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Venkatesh</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.techfore.2020.120447</idno>
+		<ptr target="https://doi.org/10.1016/j.techfore.2020.120447"/>
+	</analytic>
+	<monogr>
+		<title level="j">Technological Forecasting &amp; Social Change</title>
+		<imprint>
+			<biblScope unit="volume">163</biblScope>
+			<biblScope unit="page">120447</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Building Supply Chain Resilience and Efficiency Through Additive Manufacturing: An Ambidextrous Perspective on the Dynamic Capability View</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Belhadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Kamble</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Venkatesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J C</forename><surname>Jabbour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Benkhati</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijpe.2022.108516</idno>
+		<ptr target="https://doi.org/10.1016/j.ijpe.2022.108516"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Production Economics</title>
+		<imprint>
+			<biblScope unit="volume">249</biblScope>
+			<biblScope unit="page">108516</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Additive Manufacturing for Consumer-Centric Business Models: Implications for Supply Chains in Consumer Goods Manufacturing</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bogers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Hadar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bilberg</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.techfore.2015.07.024</idno>
+		<ptr target="https://doi.org/10.1016/j.techfore.2015.07.024"/>
+	</analytic>
+	<monogr>
+		<title level="j">Technological Forecasting &amp; Social Change</title>
+		<imprint>
+			<biblScope unit="volume">102</biblScope>
+			<biblScope unit="page" from="225" to="239"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">The Resilience of On-Time Delivery to Capacity and Material Shortages: An Empirical Investigation in the Automotive Supply Chain</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Carvalho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Naghshineh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Govindan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Cruz-Machado</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cie.2022.108375</idno>
+		<ptr target="https://doi.org/10.1016/j.cie.2022.108375"/>
+	</analytic>
+	<monogr>
+		<title level="j">Computers &amp; Industrial Engineering</title>
+		<imprint>
+			<biblScope unit="volume">171</biblScope>
+			<biblScope unit="page">108375</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Dynamic Capabilities View: Foundations and Research Agenda</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Cavusgil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Seggie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Talay</surname></persName>
+		</author>
+		<idno type="DOI">10.2753/MTP1069-6679150205</idno>
+		<ptr target="https://doi.org/10.2753/MTP1069-6679150205"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Marketing Theory &amp; Practice</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="159" to="166"/>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">The Perceived Value of Additively Manufactured Digital Spare Parts in Industry: An Empirical Investigation</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Chekurov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Metsä-Kortelainen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Salmi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Roda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jussila</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijpe.2018.09.008</idno>
+		<ptr target="https://doi.org/10.1016/j.ijpe.2018.09.008"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Production Economics</title>
+		<imprint>
+			<biblScope unit="volume">205</biblScope>
+			<biblScope unit="page" from="87" to="97"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Simulation Based Method Considering Design for Additive Manufacturing and Supply Chain: An Empirical Study of Lamp Industry</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Chiu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">H</forename><surname>Lin</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/IMDS-07-2015-0266</idno>
+		<ptr target="https://doi.org/10.1108/IMDS-07-2015-0266"/>
+	</analytic>
+	<monogr>
+		<title level="j">Industrial Management &amp; Data Systems</title>
+		<imprint>
+			<biblScope unit="volume">116</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="322" to="348"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Supply Chain Resilience: Conceptualization and Scale Development Using Dynamic Capability Theory</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M H</forename><surname>Chowdhury</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Quaddus</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijpe.2017.03.020</idno>
+		<ptr target="https://doi.org/10.1016/j.ijpe.2017.03.020"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Production Economics</title>
+		<imprint>
+			<biblScope unit="volume">188</biblScope>
+			<biblScope unit="page" from="185" to="204"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Building the Resilient Supply Chain</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Christopher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Peck</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/09574090410700275</idno>
+		<ptr target="https://doi.org/10.1108/09574090410700275"/>
+	</analytic>
+	<monogr>
+		<title level="j">The International Journal of Logistics Management</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="1" to="13"/>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Coefficient Alpha and the Internal Structure of Tests</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">J</forename><surname>Cronbach</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/BF02310555</idno>
+		<ptr target="https://doi.org/10.1007/BF02310555"/>
+	</analytic>
+	<monogr>
+		<title level="j">Psychometrika</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="297" to="334"/>
+			<date type="published" when="1951">1951</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">The Effect of Additive Manufacturing Adoption on Supply Chain Flexibility and Performance: An Empirical Analysis from the Automotive Industry</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Delic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Eyers</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijpe.2020.107689</idno>
+		<ptr target="https://doi.org/10.1016/j.ijpe.2020.107689"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Production Economics</title>
+		<imprint>
+			<biblScope unit="volume">228</biblScope>
+			<biblScope unit="page">107689</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Additive Manufacturing: Empirical Evidence for Supply Chain Integration and Performance from the Automotive Industry</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Delic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Eyers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mikulic</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/SCM-12-2017-0406</idno>
+		<ptr target="https://doi.org/10.1108/SCM-12-2017-0406"/>
+	</analytic>
+	<monogr>
+		<title level="j">Supply Chain Management: An International Journal</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="604" to="621"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Exploring Supply Chain Structural Dynamics: New Disruptive Technologies and Disruption risks</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dolgui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ivanov</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijpe.2020.107886</idno>
+		<ptr target="https://doi.org/10.1016/j.ijpe.2020.107886"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Production Economics</title>
+		<imprint>
+			<biblScope unit="volume">229</biblScope>
+			<biblScope unit="page">107886</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">The Impact of Additive Manufacturing on Supply Chains</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">F</forename><surname>Durach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kurpjuweit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Wagner</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/IJPDLM-11-2016-0332</idno>
+		<ptr target="https://doi.org/10.1108/IJPDLM-11-2016-0332"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Physical Distribution &amp; Logistics Management</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="954" to="971"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Additive Manufacturing Scenarios for Distributed Production of Spare Parts</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">F C</forename><surname>Durão</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Christ</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Zancul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Anderl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Schützer</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s00170-017-0555-z</idno>
+		<ptr target="https://doi.org/10.1007/s00170-017-0555-z"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Advanced Manufacturing Technology</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="869" to="880"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">E-Commerce Channels for Additive Manufacturing: An Exploratory Study</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Eyers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T</forename><surname>Potter</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/JMTM-08-2013-0102</idno>
+		<ptr target="https://doi.org/10.1108/JMTM-08-2013-0102"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Manufacturing Technology Management</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="390" to="411"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">The Flexibility of Industrial Additive Manufacturing Systems</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Eyers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T</forename><surname>Potter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gosling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Naim</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/IJOPM-04-2016-0200</idno>
+		<ptr target="https://doi.org/10.1108/IJOPM-04-2016-0200"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Operations &amp; Production Management</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="2313" to="2343"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Additive Manufacturing and Sustainability: An Exploratory Study of the Advantages and Challenges</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Despeisse</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jclepro.2016.04.150</idno>
+		<ptr target="https://doi.org/10.1016/j.jclepro.2016.04.150"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Cleaner Production</title>
+		<imprint>
+			<biblScope unit="volume">137</biblScope>
+			<biblScope unit="page" from="1573" to="1587"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Survey Research in Operations Management: A Process-Based Perspective</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Forza</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/01443570210414310</idno>
+		<ptr target="https://doi.org/10.1108/01443570210414310"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Operations &amp; Production Management</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="152" to="194"/>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Impact of Additive Manufacturing on Aircraft Supply Chain Performance</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ghadge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Karantoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chaudhuri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Srinivasan</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/JMTM-07-2017-0143</idno>
+		<ptr target="https://doi.org/10.1108/JMTM-07-2017-0143"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Manufacturing Technology Management</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="846" to="865"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Supply Chain Resilience: A Tertiary Study</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hägele</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">H</forename><surname>Grosse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ivanov</surname></persName>
+		</author>
+		<idno type="DOI">10.1504/IJISM.2023.127660</idno>
+		<ptr target="https://doi.org/10.1504/IJISM.2023.127660"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Integrated Supply Management</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="52" to="81"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Retail Logistics in the Transition from Multi-Channel to Omni-Channel</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hübner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wollenburg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Holzapfel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Mena</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Bourlakis</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/IJPDLM-08-2015-0179</idno>
+		<ptr target="https://doi.org/10.1108/IJPDLM-08-2015-0179"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Physical Distribution &amp; Logistics Management</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="issue">6/7</biblScope>
+			<biblScope unit="page" from="562" to="583"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Digital Innovation, Data Analytics, and Supply Chain Resiliency: A Bibliometric-Based Systematic Literature Review</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Iftikhar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Ali</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Arslan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tarba</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10479-022-04765-6</idno>
+		<ptr target="https://doi.org/10.1007/s10479-022-04765-6"/>
+	</analytic>
+	<monogr>
+		<title level="j">Annals of Operations Research</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="24"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<idno>ISO/ASTM 52900</idno>
+		<title level="m">Additive manufacturing -general principles -fundamentals and vocabulary</title>
+		<meeting><address><addrLine>West Conshohocken</addrLine></address></meeting>
+		<imprint>
+			<publisher>ASTM International</publisher>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Supply Chain Resilience and Its Interplay with Digital Technologies: Making Innovations Work in Emergency Situations</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ivanov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Blackhurst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Das</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/IJPDLM-03-2021-409</idno>
+		<ptr target="https://doi.org/10.1108/IJPDLM-03-2021-409"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Physical Distribution &amp; Logistics Management</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="97" to="103"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">The Impact of Digital Technology and Industry 4.0 on the Ripple Effect and Supply Chain Risk Analytics</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ivanov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dolgui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Sokolov</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/00207543.2018.1488086</idno>
+		<ptr target="https://doi.org/10.1080/00207543.2018.1488086"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Production Research</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="829" to="846"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Enhancing Flexibility in Supply Chains: Modelling Random Demands and Non-Stationary Supply Information</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Jain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wadhwa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">G</forename><surname>Deshmukh</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/09511920902866070</idno>
+		<ptr target="https://doi.org/10.1080/09511920902866070"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Computer Integrated Manufacturing</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="812" to="822"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Predicting the Future of Additive Manufacturing: A Delphi Study on Economic and Societal Implications of 3D Printing for 2030</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kleer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">T</forename><surname>Piller</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.techfore.2017.01.006</idno>
+		<ptr target="https://doi.org/10.1016/j.techfore.2017.01.006"/>
+	</analytic>
+	<monogr>
+		<title level="j">Technological Forecasting &amp; Social Change</title>
+		<imprint>
+			<biblScope unit="volume">117</biblScope>
+			<biblScope unit="page" from="84" to="97"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Supply Chains Under Resource Pressure: Strategies for Improving Resource Efficiency and Competitive Advantage</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kalaitzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Matopoulos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bourlakis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Tate</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/IJOPM-02-2019-0137</idno>
+		<ptr target="https://doi.org/10.1108/IJOPM-02-2019-0137"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Operations &amp; Production Management</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="1323" to="1354"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">The Transformation from Manual to Smart Warehousing: An Exploratory Study with Swedish Retailers</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kembro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Norrman</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/IJLM-11-2021-0525</idno>
+		<ptr target="https://doi.org/10.1108/IJLM-11-2021-0525"/>
+	</analytic>
+	<monogr>
+		<title level="j">The International Journal of Logistics Management</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="107" to="135"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Additive Manufacturing in the Spare Parts Supply Chain</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Khajavi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Partanen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Holmström</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.compind.2013.07.008</idno>
+		<ptr target="https://doi.org/10.1016/j.compind.2013.07.008"/>
+	</analytic>
+	<monogr>
+		<title level="j">Computers in Industry</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="50" to="63"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Risk Reduction in New Product Launch: A Hybrid Approach Combining Direct Digital and Tool-Based Manufacturing</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Khajavi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Partanen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Holmström</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tuomi</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.compind.2015.08.008</idno>
+		<ptr target="https://doi.org/10.1016/j.compind.2015.08.008"/>
+	</analytic>
+	<monogr>
+		<title level="j">Computers in Industry</title>
+		<imprint>
+			<biblScope unit="volume">74</biblScope>
+			<biblScope unit="page" from="29" to="42"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Selecting Parts for Additive Manufacturing in Service Logistics</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Knofius</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Van Der Heijden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">H</forename><surname>Zijm</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/JMTM-02-2016-0025</idno>
+		<ptr target="https://doi.org/10.1108/JMTM-02-2016-0025"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Manufacturing Technology Management</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="915" to="931"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Supply Chain Resilience: A Systematic Literature Review and Typological Framework</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Kochan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Nowicki</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/IJPDLM-02-2017-0099</idno>
+		<ptr target="https://doi.org/10.1108/IJPDLM-02-2017-0099"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Physical Distribution &amp; Logistics Management</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="842" to="865"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Barriers to Adoption of Industry 4.0 and Sustainability: A Case Study with SMEs</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Raut</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Aktas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">E</forename><surname>Narkhede</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">V</forename><surname>Gedam</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/0951192X.2022.2128217</idno>
+		<ptr target="https://doi.org/10.1080/0951192X.2022.2128217"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Computer Integrated Manufacturing</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="657" to="677"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">How Will the Diffusion of Additive Manufacturing Impact the Raw Material Supply Chain Process?</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kunovjanek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Reiner</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/00207543.2019.1661537</idno>
+		<ptr target="https://doi.org/10.1080/00207543.2019.1661537"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Production Research</title>
+		<imprint>
+			<biblScope unit="volume">58</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="1540" to="1554"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">An Analysis of the Global Additive Manufacturing Response to the COVID-19 Pandemic</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kunovjanek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wankmüller</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/JMTM-07-2020-0263</idno>
+		<ptr target="https://doi.org/10.1108/JMTM-07-2020-0263"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Manufacturing Technology Management</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="75" to="100"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Blockchain in Additive Manufacturing and Its Impact on Supply Chains</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kurpjuweit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Schmidt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Klöckner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Wagner</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/jbl.12231</idno>
+		<ptr target="https://doi.org/10.1111/jbl.12231"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Business Logistics</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="46" to="70"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Core Capabilities and Core Rigidities: A Paradox in Managing New Product Development</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Leonard-Barton</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/smj.4250131009</idno>
+		<ptr target="https://doi.org/10.1002/smj.4250131009"/>
+	</analytic>
+	<monogr>
+		<title level="j">Strategic Management Journal</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="111" to="125"/>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Supply Chain Innovations for Additive Manufacturing</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Luomaranta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Martinsuo</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/IJPDLM-10-2018-0337</idno>
+		<ptr target="https://doi.org/10.1108/IJPDLM-10-2018-0337"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Physical Distribution &amp; Logistics Management</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="54" to="79"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Additive Manufacturing: A Framework for Implementation</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mellor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Hao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijpe.2013.07.008</idno>
+		<ptr target="https://doi.org/10.1016/j.ijpe.2013.07.008"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Production Economics</title>
+		<imprint>
+			<biblScope unit="volume">149</biblScope>
+			<biblScope unit="page" from="194" to="201"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<monogr>
+		<title level="m" type="main">Qualitative Data Analysis: An Expanded Sourcebook</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Miles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Huberman</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1994">1994</date>
+			<pubPlace>New Delhi</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">The Implications of Additive Manufacturing Technology Adoption for Supply Chain Resilience: A Systematic Search and Review</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Naghshineh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Carvalho ; A</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijpe.2021.108387</idno>
+		<ptr target="https://doi.org/10.1016/j.ijpe.2021.108387"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Production Economics</title>
+		<imprint>
+			<biblScope unit="volume">247</biblScope>
+			<biblScope unit="page">108387</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Exploring the Interrelations Between Additive Manufacturing Adoption Barriers and Supply Chain Vulnerabilities: The Case of an Original Equipment Manufacturer</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Naghshineh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Carvalho</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/JMTM-04-2022-0148</idno>
+		<ptr target="https://doi.org/10.1108/JMTM-04-2022-0148"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Manufacturing Technology Management</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="1473" to="1489"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Rethinking Additive Manufacturing for Spare Parts Supply Chain Management</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Naghshineh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fragoso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Carvalho</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/08956308.2023.2207970</idno>
+		<ptr target="https://doi.org/10.1080/08956308.2023.2207970"/>
+	</analytic>
+	<monogr>
+		<title level="j">Research-Technology Management</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page">7970</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Enhancing Supply Chain Resilience: An Empirical Investigation</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Naghshineh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lotfi</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/CRR-09-2018-0002</idno>
+		<ptr target="https://doi.org/10.1108/CRR-09-2018-0002"/>
+	</analytic>
+	<monogr>
+		<title level="j">Continuity &amp; Resilience Review</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="47" to="62"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Impact of Additive Manufacturing on Business Competitiveness: A Multiple Case Study</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">K</forename><surname>Niaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Nonino</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/JMTM-01-2016-0001</idno>
+		<ptr target="https://doi.org/10.1108/JMTM-01-2016-0001"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Manufacturing Technology Management</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="56" to="74"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Impact of Additive Manufacturing Technology Adoption on Supply Chain Management Processes and Components</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Oettmeier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Hofmann</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/JMTM-12-2015-0113</idno>
+		<ptr target="https://doi.org/10.1108/JMTM-12-2015-0113"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Manufacturing Technology Management</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="944" to="968"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Additive Manufacturing Technology Adoption: An Empirical Analysis of General and Supply Chain-Related Determinants</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Oettmeier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Hofmann</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11573-016-0806-8</idno>
+		<ptr target="https://doi.org/10.1007/s11573-016-0806-8"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Business Economics</title>
+		<imprint>
+			<biblScope unit="volume">87</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="97" to="124"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">The Empirical Assessment of Construct Validity</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">W</forename><surname>O'leary-Kelly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Vokurka</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0272-6963(98)00020-5</idno>
+		<ptr target="https://doi.org/10.1016/S0272-6963(98)00020-5"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Operations Management</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="387" to="405"/>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Investigating Contingent Adoption of Additive Manufacturing in Supply Chains</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Patil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Niranjan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Narayanamurthy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Narayanan</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/IJOPM-05-2022-0286</idno>
+		<ptr target="https://doi.org/10.1108/IJOPM-05-2022-0286"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Operations &amp; Production Management</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="489" to="519"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Ensuring Supply Chain Resilience: Development and Implementation of an Assessment Tool</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Pettit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Croxton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Fiksel</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/jbl.12009</idno>
+		<ptr target="https://doi.org/10.1111/jbl.12009"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Business Logistics</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="46" to="76"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">The Evolution of Resilience in Supply Chain Management: A Retrospective on Ensuring Supply Chain Resilience</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Pettit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Croxton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Fiksel</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/jbl.12202</idno>
+		<ptr target="https://doi.org/10.1111/jbl.12202"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Business Logistics</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="56" to="65"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Ensuring Supply Chain Resilience: Development of a Conceptual Framework</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Pettit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Fiksel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Croxton</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/j.2158-1592.2010.tb00125.x</idno>
+		<ptr target="https://doi.org/10.1002/j.2158-1592.2010.tb00125.x"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Business Logistics</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="21"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Understanding the Concept of Supply Chain Resilience</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">Y</forename><surname>Ponomarov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Holcomb</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/09574090910954873</idno>
+		<ptr target="https://doi.org/10.1108/09574090910954873"/>
+	</analytic>
+	<monogr>
+		<title level="j">The International Journal of Logistics Management</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="124" to="143"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">The Adoption Process and Impact of Additive Manufacturing on Manufacturing Systems</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Rylands</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Böhme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Gorkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Fan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Birtchnell</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/JMTM-12-2015-0117</idno>
+		<ptr target="https://doi.org/10.1108/JMTM-12-2015-0117"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Manufacturing Technology Management</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="969" to="989"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Manufacturing Execution System-a Literature Review</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Saenz De Ugarte</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Artiba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Pellerin</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/09537280902938613</idno>
+		<ptr target="https://doi.org/10.1080/09537280902938613"/>
+	</analytic>
+	<monogr>
+		<title level="j">Production Planning &amp; Control</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="525" to="539"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Pros and Cons of Different Sampling Techniques</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Sharma</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Applied Research</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="749" to="752"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Additive Manufacturing Enabled Supply Chain Management: A Review and Research Directions</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sonar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Khanzode</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Akarte</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/09722629221087308</idno>
+		<ptr target="https://doi.org/10.1177/09722629221087308"/>
+	</analytic>
+	<monogr>
+		<title level="j">Vision: The Journal of Business Perspective</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="147" to="162"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Improving Supply Chain Resilience Through Industry 4.0: A Systematic Literature Review Under the Impressions of the COVID-19 Pandemic</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Spieske</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Birkel</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cie.2021.107452</idno>
+		<ptr target="https://doi.org/10.1016/j.cie.2021.107452"/>
+	</analytic>
+	<monogr>
+		<title level="j">Computers &amp; Industrial Engineering</title>
+		<imprint>
+			<biblScope unit="volume">158</biblScope>
+			<biblScope unit="page">107452</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">The Additive Manufacturing Innovation: A Range of Implications</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Steenhuis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Pretorius</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/JMTM-06-2016-0081</idno>
+		<ptr target="https://doi.org/10.1108/JMTM-06-2016-0081"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Manufacturing Technology Management</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="122" to="143"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">The Concept of Mobile Manufacturing</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Stillström</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jackson</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jmsy.2008.03.002</idno>
+		<ptr target="https://doi.org/10.1016/j.jmsy.2008.03.002"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Manufacturing Systems</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">3-4</biblScope>
+			<biblScope unit="page" from="188" to="193"/>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">The Strategic Role of Logistics in the Industry 4.0 Era</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">P</forename><surname>Veelenturf</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.tre.2019.06.004</idno>
+		<ptr target="https://doi.org/10.1016/j.tre.2019.06.004"/>
+	</analytic>
+	<monogr>
+		<title level="j">Transportation Research Part E: Logistics &amp; Transportation Review</title>
+		<imprint>
+			<biblScope unit="volume">129</biblScope>
+			<biblScope unit="page" from="1" to="11"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">The Foundations of Enterprise Performance: Dynamic and Ordinary Capabilities in an (Economic) Theory of Firms</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Teece</surname></persName>
+		</author>
+		<idno type="DOI">10.5465/amp.2013.0116</idno>
+		<ptr target="https://doi.org/10.5465/amp.2013.0116"/>
+	</analytic>
+	<monogr>
+		<title level="j">Academy of Management Perspectives</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="328" to="352"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">Dynamic Capabilities and Strategic Management</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Teece</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pisano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Shuen</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/(SICI)1097-0266(199708)18:7%3C509:AID-SMJ882%3E3.0.CO;2-Z</idno>
+		<ptr target="https://doi.org/10.1002/(SICI)1097-0266(199708)18:7&lt;509:AID-SMJ882&gt;3.0"/>
+	</analytic>
+	<monogr>
+		<title level="j">Strategic Management Journal</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="509" to="533"/>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">Contributions of Industry 4.0 to Supply Chain Resilience</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Tortorella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">S</forename><surname>Fogliatto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">K</forename><surname>Chan</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/IJLM-12-2020-0494</idno>
+		<ptr target="https://doi.org/10.1108/IJLM-12-2020-0494"/>
+	</analytic>
+	<monogr>
+		<title level="j">The International Journal of Logistics Management</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="547" to="566"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title level="a" type="main">Supply Chain Dynamics</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Towill</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/09511929108944496</idno>
+		<ptr target="https://doi.org/10.1080/09511929108944496"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Computer Integrated Manufacturing</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="197" to="208"/>
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title level="a" type="main">Rapid Manufacturing: Impact on Supply Chain Methodologies and Practice</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Tuck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Hague</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Burns</surname></persName>
+		</author>
+		<idno type="DOI">10.1504/IJSOM.2007.011459</idno>
+		<ptr target="https://doi.org/10.1504/IJSOM.2007.011459"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Services and Operations Management</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="22"/>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<title level="a" type="main">Supply Chain Resilience: Definition, Review and Theoretical Foundations for Further Study</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">R</forename><surname>Tukamuhabwa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Stevenson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Busby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zorzini</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/00207543.2015.1037934</idno>
+		<ptr target="https://doi.org/10.1080/00207543.2015.1037934"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Production Research</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="issue">18</biblScope>
+			<biblScope unit="page" from="5592" to="5623"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<analytic>
+		<title level="a" type="main">Leveraging 3D Printing Technologies: The Case of Mexico's Footwear Industry</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ukobitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Faullant</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/08956308.2021.1864919</idno>
+		<ptr target="https://doi.org/10.1080/08956308.2021.1864919"/>
+	</analytic>
+	<monogr>
+		<title level="j">Research-Technology Management</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="20" to="30"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<analytic>
+		<title level="a" type="main">Additive Manufacturing for Localized Medical Parts Production: A Case Study</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Verboeket</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Khajavi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Krikke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Salmi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Holmström</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/ACCESS.2021.3056058</idno>
+		<ptr target="https://doi.org/10.1109/ACCESS.2021.3056058"/>
+	</analytic>
+	<monogr>
+		<title level="j">Institute of Electrical and Electronics Engineers Access</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="25818" to="25834"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<analytic>
+		<title level="a" type="main">The Disruptive Impact of Additive Manufacturing on Supply Chains: A Literature Study, Conceptual Framework and Research Agenda</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Verboeket</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Krikke</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.compind.2019.07.003</idno>
+		<ptr target="https://doi.org/10.1016/j.compind.2019.07.003"/>
+	</analytic>
+	<monogr>
+		<title level="j">Computers in Industry</title>
+		<imprint>
+			<biblScope unit="volume">111</biblScope>
+			<biblScope unit="page" from="91" to="107"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b75">
+	<analytic>
+		<title level="a" type="main">Development of Maturity Model for Assessing the Implementation of Industry 4.0: Learning from Theory and Practice</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Wagire</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Joshi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P S</forename><surname>Rathore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jain</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/09537287.2020.1744763</idno>
+		<ptr target="https://doi.org/10.1080/09537287.2020.1744763"/>
+	</analytic>
+	<monogr>
+		<title level="j">Production Planning &amp; Control</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="603" to="622"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b76">
+	<analytic>
+		<title level="a" type="main">Additive Manufacturing's Impact and Future in the Aviation Industry</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Wagner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">O</forename><surname>Walton</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/09537287.2016.1199824</idno>
+		<ptr target="https://doi.org/10.1080/09537287.2016.1199824"/>
+	</analytic>
+	<monogr>
+		<title level="j">Production Planning &amp; Control</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">13</biblScope>
+			<biblScope unit="page" from="1124" to="1130"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b77">
+	<analytic>
+		<title level="a" type="main">Theoretical Perspectives in Operations Management: An Analysis of the Literature</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Walker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Chicksand</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Radnor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Watson</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/IJOPM-02-2014-0089</idno>
+		<ptr target="https://doi.org/10.1108/IJOPM-02-2014-0089"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Operations &amp; Production Management</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="1182" to="1206"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b78">
+	<analytic>
+		<title level="a" type="main">A Resource-Based View of the Firm</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Wernerfelt</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/smj.4250050207</idno>
+		<ptr target="https://doi.org/10.1002/smj.4250050207"/>
+	</analytic>
+	<monogr>
+		<title level="j">Strategic Management Journal</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="171" to="180"/>
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b79">
+	<monogr>
+		<title level="m" type="main">3D Printing and Additive Manufacturing Global State of the Industry</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wohlers</surname></persName>
+		</author>
+		<ptr target="https://wohlersassociates.com/product/wohlers-report-2021/"/>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<publisher>Wohlers Associates</publisher>
+		</imprint>
+	</monogr>
+	<note type="report_type">Annual Worldwide Progress Report</note>
+</biblStruct>
+
+<biblStruct xml:id="b80">
+	<analytic>
+		<title level="a" type="main">Supply Chain Implications of Additive Manufacturing: A Holistic Synopsis Through a Collection of Case Studies</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Zanoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ashourpour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bacchetti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zanardini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Perona</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s00170-019-03430-w</idno>
+		<ptr target="https://doi.org/10.1007/s00170-019-03430-w"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Advanced Manufacturing Technology</title>
+		<imprint>
+			<biblScope unit="volume">102</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="3325" to="3340"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b81">
+	<analytic>
+		<title level="a" type="main">Does Digitalising the Supply Chain Contribute to Its Resilience?</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Zouari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ruel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Viale</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/IJPDLM-01-2020-0038</idno>
+		<ptr target="https://doi.org/10.1108/IJPDLM-01-2020-0038"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Physical Distribution &amp; Logistics Management</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="149" to="180"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

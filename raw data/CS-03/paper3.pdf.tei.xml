@@ -1,0 +1,1600 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Accessibility, usability, and security evaluation of universities’ prospective student web pages: a comparative study of Europe, North America, and Oceania</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Springer Science and Business Media LLC</publisher>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2022-01-30">2022-01-30</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Şevval</forename><forename type="middle">Seray</forename><surname>Macakoğlu</surname></persName>
+							<idno type="ORCID">0000-0003-3166-4611</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Serhat</forename><surname>Peker</surname></persName>
+							<idno type="ORCID">0000-0002-6876-3982</idno>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Management Information Systems</orgName>
+								<orgName type="institution">İzmir Bakircay University</orgName>
+								<address>
+									<settlement>İzmir</settlement>
+									<country key="TR">Turkey</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">İhsan</forename><forename type="middle">Tolga</forename><surname>Medeni</surname></persName>
+							<idno type="ORCID">0000-0002-0642-7908</idno>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Management Information Systems</orgName>
+								<orgName type="institution">Ankara Yıldırım Beyazıt University</orgName>
+								<address>
+									<settlement>Ankara</settlement>
+									<country key="TR">Turkey</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Accessibility, usability, and security evaluation of universities’ prospective student web pages: a comparative study of Europe, North America, and Oceania</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Universal Access in the Information Society</title>
+						<title level="j" type="abbrev">Univ Access Inf Soc</title>
+						<idno type="ISSN">1615-5289</idno>
+						<idno type="eISSN">1615-5297</idno>
+						<imprint>
+							<publisher>Springer Science and Business Media LLC</publisher>
+							<biblScope unit="volume">22</biblScope>
+							<biblScope unit="issue">2</biblScope>
+							<biblScope unit="page" from="671" to="683"/>
+							<date type="published" when="2022-01-30"/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">86951800B03CAC5E1B0F1F354C1A9B13</idno>
+					<idno type="DOI">10.1007/s10209-022-00869-9</idno>
+					<note type="submission">Accepted: 10 January 2022</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-11T13:36+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Human-computer interaction</term>
+					<term>Web information systems</term>
+					<term>Web usability</term>
+					<term>Web accessibility</term>
+					<term>Web security</term>
+					<term>Web performance evaluation</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Universities' prospective student web pages aim to disseminate information about their academic and social opportunities to their stakeholders; therefore, they must be accessible, of high quality of use and reliable. This article presents the accessibility, usage performance, and security analysis of prospective student web pages of 330 universities from three continents, namely Europe, North America, and Oceania. For this purpose, university websites were selected based on the Webometrics ranking, and online automated test tools were used. The results showed that websites at universities in North America paid more attention to accessibility and quality of use on prospective student web pages, followed by Oceanian and European websites. Evaluated websites had low compliance levels according to the WCAG 2.0 guideline. No major problems were identified in terms of usability and security, but there were certain points for improvement. Moreover, we present and discuss recommendations to developers and administrators for websites to resolve accessibility, usability, and security breaches and provide information equally to all stakeholders. Hence, this analysis report provides feedback to web developers to improve accessibility, quality of use, and security issues of university websites and their prospective student web pages.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">Introduction</head><p>With the rapid spread of the use of Internet, the promotion of the services offered has also been facilitated through websites and having a website has become essential for institutions and organizations. Websites also play an important role for universities. The widespread use of e-learning, open learning, and distance learning also makes it a necessity for a university to have a website <ref type="bibr" target="#b0">[1]</ref>. University web pages allow universities to announce their opportunities to the world and increases their competitive power around the world as well.</p><p>University websites not only provide information for current students, but also assist in attracting prospective students. The corresponding pages of university websites help students in a university and a faculty selection. Moogan <ref type="bibr" target="#b1">[2]</ref> stated that university websites are the most frequently referenced source of information after the university prospectus. In an another study, 94% of prospective students stated that they would examine the website before considering a university <ref type="bibr">[3]</ref>. Moreover, college websites have become a marketing tool targeting prospective students <ref type="bibr" target="#b3">[4]</ref>.</p><p>University websites contain various pages that present different information to their stakeholders. There are special pages that provide information for prospective students who have a wide audience among the stakeholders. Prospective student pages provide general information about the university, academic information, academic units, campus, and application conditions. Prospective student links provide a user-oriented home page in which students can use the necessary information and terminology, creating a welcoming environment for students <ref type="bibr" target="#b3">[4]</ref>.</p><p>With the popularity of website evaluation, many researchers have conducted studies in different areas to improve website quality. In this manner, widely used application areas include e-commerce, government, education, and medical sectors <ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref><ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref><ref type="bibr" target="#b21">[22]</ref><ref type="bibr" target="#b22">[23]</ref>. The criteria for evaluating a website can be: usability, authority, performance, traffic rank, link popularity, functionality, accessibility, security, design patterns, HTML syntax analysis, and browser compatibility <ref type="bibr" target="#b23">[24]</ref>. These evaluations can be made by expert assessment, automated tools, or user experience methods. Automated testing tools are a quick and easy way to test the quality of websites. There are many available automated testing tools for this purpose. Using such tools, it is possible to evaluate accessibility of websites in a time and cost-effective manner. The quality levels of the websites reviewed in the literature indicate the need for a tool-based approach to support manual testing.</p><p>Rowland <ref type="bibr" target="#b24">[25]</ref> emphasizes the importance of access to education for students with disabilities, especially via the Internet. Thus, accessibility is a key factor for university websites. The Web Content Accessibility Guidelines (WCAG) produced by the World Wide Web Consortium (W3C) have been adopted globally by higher education institutions to ensure accessibility <ref type="bibr" target="#b25">[26]</ref>. The level of individuals accessing, understanding, interacting, and navigating a website can be measured with accessibility analysis. Similarly, usability is an important issue for university websites and their quality. It is necessary to pay attention to the application of certain design principles on university websites. Usability inspections test the loading speed of the home page, page size, and number of broken links <ref type="bibr" target="#b26">[27,</ref><ref type="bibr" target="#b27">28]</ref>. Another important criterion for websites is security; it increases the risk of the site being attacked if the system is not up to date and the communication is not made over an encrypted channel. Websites that have become vulnerable to attacks such as SQL injection and cross-site scripting may cause service interruptions and data loss, or become completely dysfunctional <ref type="bibr" target="#b16">[17]</ref>.</p><p>It is clear from a recent literature review <ref type="bibr" target="#b28">[29]</ref> that most of the studies in this field have evaluated universities' home pages, while there has been no work investigating the prospective student web pages as well. Further, according to this review <ref type="bibr" target="#b28">[29]</ref>, the related studies on university web pages from Europe are quite low, and very few works have compared the performances of university web pages from different countries. In view of these research gaps, the purpose of this study is to comprehensively assess the prospective student web pages of universities from three continents, namely, Europe, North America, and Oceania, in terms of accessibility, usability, and security. This study attempts to eliminate gaps in the literature by analyzing prospective student pages with automated test tools according to these three basic criteria. In addition, the main accessibility and usability problems on prospective student web pages are determined according to WCAG 2.0. Finally, the study presents recommendations for improving the quality of prospective student web pages by identifying accessibility, usability, and security issues.</p><p>The rest of this study is organized as follows: in Sect. 2, a literature review is presented that includes studies conducted by different researchers in terms of accessibility, usability, and security of websites, and reviews of university websites. The definition of the data used within the scope of the study, the tools used for the analysis of these websites, and the evaluation process are explained in Sect. 3. We provide the results obtained as a result of accessibility, usability, and security analyses in Sect. 4. In Sect. 5, suggestions and discussion points are given for solving web accessibility, usability, and security issues. In the last section, the study concludes and possible directions for future studies are presented.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2">Literature review</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1">Web accessibility</head><p>Accessibility evaluation of websites is carried out to verify whether all individuals (including people with disabilities) are equal in accessing information <ref type="bibr" target="#b29">[30]</ref>. Most of the accessibility analyses in current studies used the WCAG 2.0 guide published by the World Wide Web Consortium (W3C) in 2008 <ref type="bibr" target="#b30">[31]</ref>. WCAG is designed to be widely applied to different web technologies now and in the future and can be tested with a combination of automated testing tools and human evaluation <ref type="bibr" target="#b31">[32]</ref>. Within the scope of this study, websites were analyzed using automated evaluation tools. There are many different web accessibility evaluation tools <ref type="bibr" target="#b32">[33]</ref>. Automated web accessibility evaluation tools are used to identify potential accessibility issues, and these tools are also useful for manual review <ref type="bibr" target="#b33">[34]</ref>. Website accessibility analysis using automatic evaluation tools has been discussed in many studies.</p><p>In one such study, researchers compared the accessibility of university websites in India with top university websites in different countries <ref type="bibr" target="#b34">[35]</ref>. While HERA was used for manual testing, the Firefox Accessibility Evaluation Toolbar and the TAW tool were used for automated testing. Although most countries have accessibility guidelines for educational institutions, the results show that only 50% of websites comply with these guidelines. Ismailova and Inal <ref type="bibr" target="#b5">[6]</ref> examined government websites in Kyrgyzstan, Azerbaijan, Kazakhstan, and Turkey for accessibility and quality in use. Accessibility analysis of 16 websites for each country was performed using the AChecker online tool <ref type="bibr" target="#b35">[36]</ref>. The accessibility analysis results showed that all four countries violated many checkpoints and the least accessibility error occurred on Kazakh government websites. Tashtoush et al. <ref type="bibr" target="#b36">[37]</ref> conducted accessibility testing of Arabic and English versions of government websites randomly, selected from ten countries. These accessibility tests were performed using the AChecker, TAW <ref type="bibr" target="#b37">[38]</ref>, WAVE <ref type="bibr" target="#b38">[39]</ref>, and Sort Site <ref type="bibr" target="#b39">[40]</ref> tools, using the same procedures for both the English and Arabic versions. Researchers examined accessibility issues of 20 government websites in Bangladesh <ref type="bibr" target="#b17">[18]</ref>. The results showed that Bangladeshi government websites contain a high rate of accessibility errors. The research was performed by using various tools like TAW, WAVE, CCA, Total Validator, CynthiaSays, Keyboard Accessibility, and Readability test.</p><p>Kaur et al. <ref type="bibr" target="#b14">[15]</ref> aimed to analyze the accessibility of the websites of 280 hospitals in major cities of India. Accessibility tests were performed only with the online test tool TAW. As a result of the evaluations, a total of 22,491 errors were found, which meant an average of 80.32 errors per website. Accessibility, usability, and security assessment were discussed in a study on banking websites in Turkey <ref type="bibr" target="#b40">[41]</ref>. A total of 32 banking websites were analyzed according to the WCAG 2.0 guidelines criteria. The results showed that the websites evaluated had significant accessibility, usability, and vulnerability issues.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2">Web usability</head><p>ISO 9241-11 interprets usability as "the extent to which the system, product or service can be used and satisfied by specified users to achieve certain goals" <ref type="bibr" target="#b41">[42]</ref>. In one study, McCloskey revealed a significant and positive relationship between trust and ease of use <ref type="bibr" target="#b42">[43]</ref>. The importance of usability in the study of online behaviors has been emphasized in human-computer interaction (HCI) and information systems (IS) research <ref type="bibr" target="#b43">[44]</ref>. The literature presents studies evaluating the usability of websites operating in areas such as education, social media, and government.</p><p>Youngblood and Mackiewicz <ref type="bibr" target="#b44">[45]</ref> investigated the relationship between availability rates of municipal government websites in Alabama, USA, and population and per capita income. W3C's online HTML Validation Service and the WAVE tool were used for evaluation. Karaim and Inal <ref type="bibr" target="#b18">[19]</ref> analyzed the Management of Scholarships website based on Nielsen's heuristic assessment. The results showed that the website had many usability problems. Kaur et al. <ref type="bibr" target="#b45">[46]</ref> evaluated the websites of universities in Punjab using four automatic evaluation tools (Pingdom, GTmetrix, Website Grader, and Site Speed Checker) and presented comparative results based on various factors. Zarish et al. <ref type="bibr" target="#b46">[47]</ref> created a comprehensive study by evaluating the websites from different aspects such as Accessibility, Content, Design, Mobile Readiness, Page Analysis, Performance, Search Engine Optimization, Security and Usability. In the study, the researchers examined Pakistan's educational websites using three automated tools (Qualidator, Website Grader, and Website Analyzer) and ranked the sites according to their scores as a result of the analysis. In another study <ref type="bibr" target="#b47">[48]</ref>, usability analysis of seven social media websites was performed with three different automated evaluation tools Pingdom, GTmetrix, and Website Grader.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3">Web security</head><p>Ratnasingam argues that security is actually a big problem and points out the potential for a hacker to hijack or destroy an application <ref type="bibr" target="#b48">[49]</ref>. In this context, related studies in the literature including security analysis of websites were examined.</p><p>Dukes et al. <ref type="bibr" target="#b49">[50]</ref> compared automated tools and manual testing methods for vulnerability detection. The result of the evaluation showed that some problems can be detected by expert observation and determined manually, but more errors can be detected by using these two methods together. Alarifi et al. <ref type="bibr" target="#b50">[51]</ref> evaluate the security of the most visited and popular Arab websites. In the security analysis, the status of carrying malware, being on the black list and having up-to-date software, is investigated in 7000 different domains. Researchers use APIs such as Sucuri SiteCheck, McAfee SiteAdvisor, Google Safe Browsing, and Norton offered by many well-known web browsers to detect suspicious situations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.4">Related work on universities websites</head><p>The web is probably the main showcase for universities, but in the near future the virtual institution may be as important and representative as a real institution <ref type="bibr" target="#b51">[52]</ref>. The fact that higher education institutions have many stakeholders also supports the mentioned prediction. University web pages present various information about academic programs, course contents, student affairs, teaching facilities, campus facilities, etc. <ref type="bibr" target="#b52">[53]</ref>. Higher education institutions' websites have an important role in providing information to prospective students, current students, faculty, and graduates <ref type="bibr" target="#b53">[54]</ref>. There are various studies in the literature in which websites of higher education institutions are evaluated according to different criteria.</p><p>Patricia Acosta-Vargas et al. <ref type="bibr" target="#b6">[7]</ref> evaluated the web sites of 20 universities in North America, Latin America, Europe, Asia, Africa, and Oceania ranked by Webometrics for accessibility. As a result of the evaluation, it was seen that even the websites of universities with high academic prestige did not reach an acceptable level of compliance. The results of an another study <ref type="bibr" target="#b54">[55]</ref> examining the accessibility problems of websites of 348 universities in Latin America selected randomly from Webometrics showed that there were many problems related to website accessibility. Researchers at Griffith and Princess Nora University conducted accessibility assessments of 20 universities and 180 websites. Three pages of each university, the home page, the admission page, and a course description page were tested with the AChecker automated evaluation tool, and the results were compared with the studies conducted between 2005 and 2015. Comparison of the reviews in the literature showed that the issue of accessibility continues to attract the attention of universities, educational institutions, developers, and professors <ref type="bibr" target="#b55">[56]</ref>. In another study, researchers examined the accessibility of websites of Higher Education Institutions in Cyprus. Three automated tools (TAW, EIII page Checker, and WAVE) were used against the WCAG 2.0 standard. Findings showed that no one passed the test without any errors. Many of the websites have reached low availability levels <ref type="bibr" target="#b56">[57]</ref>. Ringlaben et al. <ref type="bibr" target="#b57">[58]</ref> evaluated special education department websites in the USA. A total of 51 websites were tested using the AChecker and Bobby tools for evaluation. While almost all of the websites examined were found to have accessibility problems, it was stated that 39% of the websites had problems that need to be resolved urgently. Nir and Immerman <ref type="bibr" target="#b58">[59]</ref> conducted a study that included the websites of higher education institutions in Israel. The findings showed that all web pages examined had accessibility problems. In another study that evaluated home pages of universities in Spain, Chile, and Mexico, researchers analyzed the top 15 universities in the Webometrics rankings <ref type="bibr" target="#b7">[8]</ref>. Verkijika and De Wet <ref type="bibr" target="#b8">[9]</ref> aimed to examine the accessibility issues of 26 university websites in South Africa. As a result of the analysis, it was found that all of the websites were incompatible with WCAG 2.0. The most common error identified is a broken connection problem, and 4 of the websites failed the Google Mobile-friendly Test.</p><p>Kaur et al. <ref type="bibr" target="#b59">[60]</ref> used two automated tools, Site Analyzer and Qualidator, to assess the usability levels of 10 Education Universities in the Punjab region. Researchers present rating and usability rates according to the evaluation criteria for each university as a result of the evaluation. Ismailova and Kimsanova <ref type="bibr" target="#b27">[28]</ref> evaluated the accessibility, usability, and security aspects of 42 university websites in Kyrgyzstan using the EvalAccess automatic evaluation tool. These websites have been found to violate many checkpoints in the WCAG 1.0 guide. In addition, it has been observed that websites give a low priority to the security problem. It is stated that most of the websites that use content management systems (corresponding to 81% of the websites) are outdated and therefore have a security vulnerability.</p><p>Regarding Turkey, Yerlikaya and Durdu <ref type="bibr" target="#b60">[61]</ref> examined the accessibility problems of 20 university websites, randomly selected based on URAP (University Ranking by Academic Performance) scores. Analysis of findings shows that there is no university website that meets the accessibility criteria. Similarly, Akgül <ref type="bibr" target="#b61">[62]</ref> has reported similar problems examining the websites of public and private universities in Turkey. Researchers have stated that private university websites are better than state university websites but emphasized that more resources should be allocated for accessibility problems. Kurt <ref type="bibr" target="#b62">[63]</ref> examined the availability of 10 randomly selected university websites. Websites were tested using the Web Accessibility Checker, AChecker, and SortSite automated testing tools. As a result of the analysis, the researcher found all websites to have accessibility problems. In the following years, in an initial study, the author observed the development of websites using the same data <ref type="bibr" target="#b10">[11]</ref>. Compared to the author's previous study, it was observed that the accessibility problems of websites were reduced.</p><p>Considering the gap in the literature, in this study, the status of university web pages developed for prospective students is evaluated in a unique context. The prospective student pages of universities may be an example of the main showcase described by Aguillo et al. <ref type="bibr" target="#b51">[52]</ref>. The commercial interests of these pages, which are primarily intended for prospective students and parents, are an undeniable fact. In this context, this study was conducted to better understand the accessibility, usability, and security problems of web pages and to guide the developers.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3">Methodology</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1">Data</head><p>This study evaluated the prospective students' web pages of universities from three continents, Europe, North America, and Oceania, in terms of accessibility, usability, and security. The rankings in the "Webometrics Ranking of World Universities" developed by the Cybermetrics Lab were taken into account when choosing the university <ref type="bibr" target="#b63">[64]</ref>. The English versions of the websites of the universities included in these rankings were examined, and the top 10 universities with prospective student pages for each country were determined.</p><p>Countries that do not have a university in the ranking, do not have enough universities, or do not have a page for prospective students were not included to the study. Thus, 330 universities from 33 countries (10 university pages for each university) were selected and evaluated. The country and Webometrics ranking information of the selected universities are given in Table <ref type="table" target="#tab_0">1</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2">Tools and techniques</head><p>Automatic evaluation tools such as TAW were used for web accessibility analysis. Each prospective student page was evaluated using the test tool according to WCAG 2.0 standards. The summary and details of the report presented by the TAW tool provide an overview based on accessibility guides grouped into perceivable, operable, understandable, and robust categories <ref type="bibr" target="#b64">[65]</ref>. In this report, the results of detected situations in each success criterion are presented in terms of the following categories: "Problems found", "No problems found", "A human review is recommended" and "Unable to perform automatic review". Within the scope of the study, only results related to categories of "Problems found" and "No problems found" were considered and discussed. The TAW tool has been used by many researchers such as Akgül and Vatansever <ref type="bibr" target="#b65">[66]</ref> and Ismail and Kuppusamy <ref type="bibr" target="#b66">[67]</ref>, and its effectiveness has shown in related studies.</p><p>The GTmetrix online test tool <ref type="bibr" target="#b67">[68]</ref> was used for usability testing. This tool allows to calculate the overall speed score and rating of the web page, the loading speed, the total page size, and the total number of requests. The tool was used by Muhammad Bilal, Zhi Yu, Shuyi Song, and Can Wang <ref type="bibr" target="#b15">[16]</ref> when testing Pakistani and Chinese government websites to calculate load time and page size. GTmetrix measures the performance of the site in various aspects and presents the performance score from the Google Lighthouse test. Performance score influences the GTmetrix Grade, which provides information on how fast the page is performing. This performance score is calculated based on the page's performance against six key metrics. These six basic metrics are as follows:</p><p>• First contentful paint (FCP); • Speed index (SI); • Largest contentful paint (LCP); • Time to interactive (TTI); • Total blocking time (TBT); • Cumulative layout shift (CLS); Each performance criterion generated by the GTmetrix was compared with a certain threshold value, and the result forms the performance score. Within the scope of our study, the fully loaded time, first contentful paint, speed index, and total blocking time metrics were analyzed. Fully Loaded Time specifies the time the web page loads completely, and this time is directly related to six metrics. It cannot be considered a clear performance indicator for users as it waits for the page to complete all data loading and for the JavaScript code to stop executing. First contentful paint (FCP) is a metric that gives information about the time it takes for text, images, etc., on the page to start loading and rendering on the page. Speed index (SI) is a metric that shows how quickly a web page's visible content fills up. SI is directly related to other performance metrics, so it is an appropriate metric for benchmarking page performance. Total blocking time (TBT) is a metric that refers to the amount of time users are blocked from interacting on a web page. This metric accounts for 25% of the performance score and has the highest rate among other metrics.</p><p>The Sucuri test tool was used for security testing of websites <ref type="bibr" target="#b68">[69]</ref>. According to Csontos et al. <ref type="bibr" target="#b19">[20]</ref>, this testing tool examines the details of websites in sufficient detail to help determine whether a particular website represents a security risk to users. The Sucuri tool presents the risk level of the website, the status of using TLS (SSL), the status of using the website engine or the programming language it was developed in, the server type and version in the report. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4">Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1">Accessibility results</head><p>Website accessibility provides equal opportunities for all users, including people with disabilities, to perceive, understand, navigate, and interact with a website. This section presents the results of the accessibility analysis of prospective student websites using the TAW automated testing tool. Using the TAW tool, 312 websites (18 websites in the dataset could not be tested due to timeout) were found to have accessibility requirements that were not met in compliance level AA. Considering the error distributions of all evaluated websites, the errors in the robust principle had the highest error rate with a share of about 45%, and the understandable principle had the lowest error rate with 5%. Figure <ref type="figure">1</ref> shows the number of accessibility problems per website across the four basic principles, i.e., perceivable, operable, understandable, and robust. Looking at these results, the continent with the minimum number of errors per website in all principles is North America.</p><p>Table <ref type="table" target="#tab_1">2</ref> shows the best and worst performing countries in the three continents when looking at the total number of errors. The country with the lowest number of errors per website was Spain, followed by the UK, Sweden, the USA, and Italy. On the other hand, Denmark, Finland, Portugal, Switzerland, and Belarus had the highest number of accessibility errors per website.</p><p>Table <ref type="table" target="#tab_2">3</ref> provides an overview of the number of checkpoints in the WCAG 2.0 guidelines and shows their distribution by continent. The overall column shows the total number of errors violated for the corresponding checkpoint and the percentage of universities that this checkpoint is violated. Similarly, in the results by continents, the percentage of websites violating the specified checkpoint for the corresponding continent and the number of accessibility errors per website for the relevant continent and checkpoint are presented. The highest rate of accessibility errors was at conformance level A. As an overview of the results, the most frequently violated success criteria were 1.1.1 (Text alternative missing) and 4.1.1 (Parsing), which were violated by more than 85% of websites, followed by 1.3.1-Info and Relationships and 2.4.4-Link Purpose. On the other hand, 2.4.2 Page Title is the least violated checkpoint by websites. This result indicates that there are headings that describe the purpose and subject of prospective student pages. Over 75% of websites met checkpoint 3.1.1-Language of Page. This shows that the language used by default on all pages is understandable by the program.  All prospective student web pages on the Oceanian continent were found to violate checkpoint 4.1.2-Name, Role, Value. Likewise, 1.1.1-Non-text Content and 4.1.1-Parsing checkpoints were also violated by almost all of the web pages on this continent. On the other hand, the North American continent showed the best performance for the 3.1.1-Language of Page checkpoint.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2">Usability results</head><p>Page sizes and loading times of 313 prospective student web pages (17 websites in the dataset could not be tested due to timeout and security issues) were analyzed with the online test tool GTmetrix. In the performance grade results, values are determined from A to F, where A corresponds to the best performance grade and F to the worst performance grade.</p><p>Table <ref type="table" target="#tab_3">4</ref> shows the distribution of performance grades. While 5% of the websites evaluated had an A performance score, more than half of the websites reached C and D performance score. Almost a third of web pages had performance grades of E and F.</p><p>The percentages of performance grades distribution by continent are presented in Fig. <ref type="figure" target="#fig_1">2</ref>. Two-thirds of prospective student web pages in Europe had below-average performance grades (D, E, and F); 45% of prospective student web pages in North America had an A performance score. The  rate of websites with E and F performance scores in North America was 5%; in this context, it can be said that the best performance belongs to web pages in North America. Table <ref type="table" target="#tab_4">5</ref> contains a summary of the quality performance values of the websites by continent. Fully loaded time of a prospective student web page in Europe exceeded 35 s. Web pages in North America were within an acceptable range for this metric. The list of the top 5 and bottom 5 countries according to the average full load time of the websites is given in Table <ref type="table" target="#tab_5">6</ref> in detail. Canada and the USA had less than 3 s to load, which was the best performance among all countries. The country with the longest fully loaded time was the UK, followed by Turkey, Hungary, New Zealand, and Russia. The average fully loaded time for these countries was more than 7 s, which was more than the overall average for all continents. Likewise, the mean values of the first contentful paint metric were compared with the threshold values. The results showed that web pages in North America were considered acceptable but could be improved. Web pages in Europe and Oceania were found to take much longer than recommended for this metric. Within the speed index, the average values of web pages in Europe averaged longer than recommended time based on threshold values. The total blocking time metric values showed that at least one website on every continent exceeded the recommended threshold. In general, the blocking time of websites for average values is at an acceptable level.</p><p>In the analysis, the total page size of the websites was also discussed. In Table <ref type="table" target="#tab_6">7</ref>, the total size of the websites was analyzed, and the threshold ranges were determined according to the general averages. At least 50% of universities on each continent had a page size of less than 2.4 MB, which is considered generally acceptable performance. Looking at the overall distribution by continents, the results showed that prospective student web pages in European countries had less page size. Almost half of web pages in Oceania have a page size of more than 2.4 MB, which increases the risk of slow loading and clicks.</p><p>Table <ref type="table" target="#tab_7">8</ref> presents a list of the top five countries based on the number of websites in the 0-1.4 MB (very good) and 4.5 MB and above (very bad) ranges. In this context, 80% of the websites in Germany were in this range and had the best performance. This performance was followed by Italy and Romania. On the other hand, three of the websites exceeding 4.5 MB page size belonged to Belarus, which was the maximum number of websites in this range for a country.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3">Security results</head><p>Within the scope of the security analysis, the risk levels of the websites were examined. The SUCURI tool groups the risk levels as: minimal, low, medium, high, and critical. More than half of the websites evaluated have a low risk level. As a result of the analysis, a website with the minimum risk level was not found. In this context, the percentage distribution of the risk levels of the sites to the continents is shown in Fig. <ref type="figure">3</ref>. The distribution of risk levels across all continents showed a majority at low and medium levels. The majority of prospective student web pages on the Oceanian continent were found to be at low risk levels. Critical risk web pages comprised less than 1% of all websites, and these websites belonged to the European continent. Overall, the analysis results showed that Oceania had the best performance, followed by Europe and North America with similar performance.</p><p>Table <ref type="table" target="#tab_8">9</ref> presents the general distribution of web servers. The distribution of web servers across all continents showed that the most frequently used web server was Apache with almost 50%. This rate was followed by the Nginx web server with approximately one-third usage rate. The distribution of web server types by continents is given in Fig. <ref type="figure" target="#fig_2">4</ref>. Likewise, Apache was the most frequently used web server on almost all continents, followed by Nginx.</p><p>Additionally, a quarter of the websites in North America and Oceania and about 40% of the websites in Europe were publicly publishing the version information of their web servers. When the websites for which the version information was accessed were examined, the problem of using outdated software on the web servers was detected. As a result of the analysis, 20% of the servers had old versions.</p><p>In the last phase of the security analysis, the use of TLS (SSL) encryption on websites was investigated, and the results revealed that 25 out of 330 websites do not use SSL encryption.  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5">Discussion and conclusion</head><p>In this study, we examined the prospective student web pages of the leading universities in three continents, namely Europe, North America, and Oceania, in terms of accessibility, security and quality of use. According to the results of the analysis, the performances of the websites in three continents, Europe, North America, and Oceania, are ranked, and these rankings are presented in Table <ref type="table" target="#tab_9">10</ref>.</p><p>Based on the rankings in Table <ref type="table" target="#tab_9">10</ref>, we can deduce that university websites that rank higher in terms of web presence have less accessibility problems, the desired information can be accessed in a shorter time, and fewer security problems are detected. Therefore, it can be concluded that there is a relationship between web presence and web accessibility, usability, and security.</p><p>For the accessibility evaluation, 330 selected prospective student web pages were evaluated using the automated tool TAW, based on the WCAG 2.0 guidelines. The results showed that prospective student web pages had critical accessibility issues. For this reason, it can be concluded that prospective student web pages cannot be used effectively and satisfactorily by all stakeholders, especially by disabled prospective students. The TAW tool did not detect an error for conformance level AA, but results showed that none of the websites evaluated met the minimum conformance level A. In the comparison of the number of errors per web page, web pages in the continent of North America performed best, while the continent of Oceania performed worst. The results of this study determined that the most frequently violated check points at compliance level A were 1.1.1-Non-text Content and 4.1.1-Parsing. The results show similar performance to previous research studies <ref type="bibr" target="#b6">[7,</ref><ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b27">28,</ref><ref type="bibr" target="#b69">70]</ref> in web accessibility analysis of university homepages. In short, the results of the analysis show that similar accessibility errors on the university home pages are also present on the web pages for prospective students. For this reason, we recommend that developers and administrators pay attention to guidelines such as WCAG 2.0 when designing websites with a large number of stakeholders, such as university and prospective student websites.</p><p>In terms of usability, the performance scores, loading times, and page sizes of the web pages for prospective students were examined. Page performance control results show that more than half of the websites have performance values below the acceptable level. In an overview of the websites, countries in North America had the best performance in the continent and cross-country rankings, followed by Oceanian and European countries. Eighty percentage of websites in North America had an acceptable performance grade. Almost two-thirds of European websites had below-average performance values. Additionally, increased page load times are associated with HTTP request counts and page sizes. The  overall page size analysis results showed that about one-third of websites exceeded the average level. We offer suggestions on optimizing image sizes, reducing the number of queries, and reducing the size of the website. With the use of web optimization applications, developers will increase the performance of the pages by combining or minifying HTML, CSS, and JavaScript content. Within the scope of security analysis of web pages, among the websites evaluated, Oceania showed the best performance, followed by North America and Europe. The analysis of SSL encryption results showed that more than 90% of websites provide secure communication. More than a third of the websites evaluated publicly publish the version information of their web servers, increasing the risk of websites being hacked. Prospective student pages in the European continent constitute a large part of this rate. One should bear in mind that it is important to take such security measures in order to reduce the risk of attack and enable secure communication.</p><p>This analysis study was performed using online automated testing tools. Therefore, the limitation of the study is that the evaluation was performed using only automated test tools. Within the scope of future studies, especially within the scope of accessibility and usability criteria, the missing aspect will be completed by focusing on the user experience.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 7 E</head><label>17</label><figDesc>Fig. 1 Accessibility error distributions of the continents across the four basic principles</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2</head><label>2</label><figDesc>Fig. 2 Percentage of performance grades by continent</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 4</head><label>4</label><figDesc>Fig. 4 Percentage of web servers by continent</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1</head><label>1</label><figDesc>Countries included in the study and the Webometrics ranking median</figDesc><table><row><cell>Country</cell><cell>Continent</cell><cell>Median of</cell></row><row><cell/><cell/><cell>the ranking</cell></row><row><cell>USA</cell><cell>North America</cell><cell>8.5</cell></row><row><cell>UK</cell><cell>Europe</cell><cell>80</cell></row><row><cell>Canada</cell><cell>North America</cell><cell>109</cell></row><row><cell>Australia</cell><cell>Oceania</cell><cell>114</cell></row><row><cell>Germany</cell><cell>Europe</cell><cell>115.5</cell></row><row><cell>Sweden</cell><cell>Europe</cell><cell>131.5</cell></row><row><cell>Netherlands</cell><cell>Europe</cell><cell>193</cell></row><row><cell>Italy</cell><cell>Europe</cell><cell>212</cell></row><row><cell>Spain</cell><cell>Europe</cell><cell>271</cell></row><row><cell>France</cell><cell>Europe</cell><cell>321</cell></row><row><cell>Finland</cell><cell>Europe</cell><cell>401.5</cell></row><row><cell>Belgium</cell><cell>Europe</cell><cell>411.5</cell></row><row><cell>Switzerland</cell><cell>Europe</cell><cell>516</cell></row><row><cell>Austria</cell><cell>Europe</cell><cell>557</cell></row><row><cell>Ireland</cell><cell>Europe</cell><cell>964</cell></row><row><cell>Turkey</cell><cell>Europe</cell><cell>1048</cell></row><row><cell>Russian Federation</cell><cell>Europe</cell><cell>1094</cell></row><row><cell>Portugal</cell><cell>Europe</cell><cell>1148</cell></row><row><cell>New Zealand</cell><cell>Oceania</cell><cell>1168</cell></row><row><cell>Poland</cell><cell>Europe</cell><cell>1216.5</cell></row><row><cell>Czech Republic</cell><cell>Europe</cell><cell>1271</cell></row><row><cell>Hungary</cell><cell>Europe</cell><cell>1385</cell></row><row><cell>Norway</cell><cell>Europe</cell><cell>1499</cell></row><row><cell>Romania</cell><cell>Europe</cell><cell>2724.5</cell></row><row><cell>Slovakia</cell><cell>Europe</cell><cell>3474</cell></row><row><cell>Bulgaria</cell><cell>Europe</cell><cell>3584.5</cell></row><row><cell>Ukraine</cell><cell>Europe</cell><cell>3864.5</cell></row><row><cell>Belarus</cell><cell>Europe</cell><cell>4416</cell></row><row><cell>Denmark</cell><cell>Europe</cell><cell>5678</cell></row><row><cell>Lithuania</cell><cell>Europe</cell><cell>8062.5</cell></row><row><cell>Latvia</cell><cell>Europe</cell><cell>9011.5</cell></row><row><cell>Serbia</cell><cell>Europe</cell><cell>10,708.5</cell></row><row><cell>Croatia</cell><cell>Europe</cell><cell>12,798</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2</head><label>2</label><figDesc>Top and bottom five countries in the ranking of accessibility errors per website</figDesc><table><row><cell>Country</cell><cell>Continent</cell><cell>Number of</cell></row><row><cell/><cell/><cell>errors per</cell></row><row><cell/><cell/><cell>website</cell></row><row><cell>Spain</cell><cell>Europe</cell><cell>18.67</cell></row><row><cell>UK</cell><cell>Europe</cell><cell>22.22</cell></row><row><cell>Sweden</cell><cell>Europe</cell><cell>23.10</cell></row><row><cell>USA</cell><cell>North America</cell><cell>23.30</cell></row><row><cell>Italy</cell><cell>Europe</cell><cell>25.13</cell></row><row><cell>Belarus</cell><cell>Europe</cell><cell>72.44</cell></row><row><cell>Switzerland</cell><cell>Europe</cell><cell>90</cell></row><row><cell>Portugal</cell><cell>Europe</cell><cell>96.89</cell></row><row><cell>Finland</cell><cell>Europe</cell><cell>113.30</cell></row><row><cell>Denmark</cell><cell>Europe</cell><cell>159.60</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 3</head><label>3</label><figDesc>Violations of success criteria at conformance level A</figDesc><table><row><cell>Success criteria</cell><cell>Overall</cell><cell/><cell cols="2">Continents</cell><cell/><cell/><cell/><cell/></row><row><cell/><cell/><cell/><cell cols="4">Europe (n = 273) North America</cell><cell cols="2">Oceania</cell></row><row><cell/><cell/><cell/><cell/><cell/><cell>(n = 19)</cell><cell/><cell>(n = 20)</cell><cell/></row><row><cell/><cell>%</cell><cell>Total</cell><cell>%</cell><cell>Avg</cell><cell>%</cell><cell>Avg</cell><cell>%</cell><cell>Avg</cell></row><row><cell>1.1.1-Non-text Content</cell><cell>85.58</cell><cell>2173</cell><cell>84.98</cell><cell>8.34</cell><cell>84.21</cell><cell>4.31</cell><cell>95</cell><cell>8.95</cell></row><row><cell>1.3.1-Info and Relationships</cell><cell>84.94</cell><cell>2128</cell><cell>85.35</cell><cell>8.11</cell><cell>78.95</cell><cell>5.33</cell><cell>85</cell><cell>8.32</cell></row><row><cell>2.4.2-Page Titled</cell><cell>2.24</cell><cell>7</cell><cell>2.20</cell><cell>1</cell><cell>0</cell><cell>0</cell><cell>5</cell><cell>0.05</cell></row><row><cell>2.4.4-Link Purpose</cell><cell>81.41</cell><cell>3302</cell><cell>83.88</cell><cell>13.45</cell><cell>68.42</cell><cell>3.77</cell><cell>60</cell><cell>9.05</cell></row><row><cell>3.1.1-Language of Page</cell><cell>17.63</cell><cell>69</cell><cell>19.05</cell><cell>1</cell><cell>5.26</cell><cell>1</cell><cell>10</cell><cell>0.84</cell></row><row><cell>3.2.2-On Input</cell><cell>23.72</cell><cell>95</cell><cell>21.61</cell><cell>1.27</cell><cell>26.32</cell><cell>1.40</cell><cell>50</cell><cell>0.68</cell></row><row><cell>3.3.2-Labels or Instructions</cell><cell>62.18</cell><cell>682</cell><cell>61.17</cell><cell>3.32</cell><cell>68.42</cell><cell>2.46</cell><cell>70</cell><cell>5</cell></row><row><cell>4.1.1-Parsing</cell><cell>85.58</cell><cell>5459</cell><cell>84.25</cell><cell>21.30</cell><cell>94.74</cell><cell>13.28</cell><cell>95</cell><cell>16.95</cell></row><row><cell>4.1.2-Name, Role, Value</cell><cell>77.24</cell><cell>904</cell><cell>74.36</cell><cell>3.55</cell><cell>94.74</cell><cell>2.83</cell><cell>100</cell><cell>6.95</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 4</head><label>4</label><figDesc>Distribution of GTmetrix grades</figDesc><table><row><cell>GTmetrix Grade (A-F)</cell><cell>Number of websites</cell></row><row><cell>A (excellent)</cell><cell>16 (5.11%)</cell></row><row><cell>B (good)</cell><cell>34 (10.86%)</cell></row><row><cell>C (average)</cell><cell>83 (26.52%)</cell></row><row><cell>D (below average)</cell><cell>82 (26.20%)</cell></row><row><cell>E (bad)</cell><cell>50 (15.97%)</cell></row><row><cell>F (very bad)</cell><cell>48 (15.34%)</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 5</head><label>5</label><figDesc>Quality performance summary of websites by continent</figDesc><table><row><cell>Performance</cell><cell>Continents</cell><cell/><cell/></row><row><cell>metrics</cell><cell>Europe (n = 273)</cell><cell>North Amer-</cell><cell>Oceania (n = 20)</cell></row><row><cell/><cell/><cell>ica (n = 20)</cell><cell/></row><row><cell cols="2">Fully loaded time (s)</cell><cell/><cell/></row><row><cell>Min</cell><cell>1.5</cell><cell>0.903</cell><cell>1.5</cell></row><row><cell>Mean</cell><cell>5.77</cell><cell>2.82</cell><cell>6.27</cell></row><row><cell>Max</cell><cell>35.6</cell><cell>6.4</cell><cell>12.9</cell></row><row><cell cols="2">First contentful paint (s)</cell><cell/><cell/></row><row><cell>Min</cell><cell>0.513</cell><cell>0.262</cell><cell>0.619</cell></row><row><cell>Mean</cell><cell>2.32</cell><cell>1.03</cell><cell>1.79</cell></row><row><cell>Max</cell><cell>10.5</cell><cell>3.1</cell><cell>3.8</cell></row><row><cell cols="2">Speed index (s)</cell><cell/><cell/></row><row><cell>Min</cell><cell>1.1</cell><cell>0.419</cell><cell>0.916</cell></row><row><cell>Mean</cell><cell>3.01</cell><cell>1.36</cell><cell>2.35</cell></row><row><cell>Max</cell><cell>18.3</cell><cell>3.4</cell><cell>5</cell></row><row><cell cols="2">Total blocking time (ms)</cell><cell/><cell/></row><row><cell>Min</cell><cell>0</cell><cell>0</cell><cell>0</cell></row><row><cell>Mean</cell><cell>56.48</cell><cell>50.05</cell><cell>87.45</cell></row><row><cell>Max</cell><cell>814</cell><cell>396</cell><cell>449</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5"><head>Table 6</head><label>6</label><figDesc>Ranking of countries by average fully loaded times</figDesc><table><row><cell>Country</cell><cell>Continent</cell><cell>Average of fully</cell></row><row><cell/><cell/><cell>loaded time (s)</cell></row><row><cell>Canada</cell><cell>North America</cell><cell>2.73</cell></row><row><cell>USA</cell><cell>North America</cell><cell>2.91</cell></row><row><cell>Bulgaria</cell><cell>Europe</cell><cell>4.13</cell></row><row><cell>Czech Republic</cell><cell>Europe</cell><cell>4.31</cell></row><row><cell>France</cell><cell>Europe</cell><cell>4.34</cell></row><row><cell>Russian Federation</cell><cell>Europe</cell><cell>7.60</cell></row><row><cell>New Zealand</cell><cell>Oceania</cell><cell>7.73</cell></row><row><cell>Hungary</cell><cell>Europe</cell><cell>8.42</cell></row><row><cell>Turkey</cell><cell>Europe</cell><cell>8.55</cell></row><row><cell>UK</cell><cell>Europe</cell><cell>12.31</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_6"><head>Table 7</head><label>7</label><figDesc>Distributions of total sizes of websites</figDesc><table><row><cell>Total page size</cell><cell cols="2">Number of websites</cell><cell/></row><row><cell>(MB)</cell><cell cols="2">Europe (n = 273) North</cell><cell>Oceania (n = 20)</cell></row><row><cell/><cell/><cell>America</cell><cell/></row><row><cell/><cell/><cell>(n = 20)</cell><cell/></row><row><cell cols="2">0-1.4 (very good) 122 (%44.69)</cell><cell>6 (%30)</cell><cell>4 (%20)</cell></row><row><cell>1.5-2.4 (good)</cell><cell>65 (%23.81)</cell><cell>7 (%35)</cell><cell>7 (%35)</cell></row><row><cell cols="2">2.5-3.4 (average) 28 (%10.26)</cell><cell>3 (%15)</cell><cell>6 (%30)</cell></row><row><cell>3.5-4.4 (bad)</cell><cell>22 (%8.06)</cell><cell>2 (%10)</cell><cell>1 (%5)</cell></row><row><cell>4.5 and above</cell><cell>36 (%13.19)</cell><cell>2 (%10)</cell><cell>2 (%10)</cell></row><row><cell>(very bad)</cell><cell/><cell/><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_7"><head>Table 8</head><label>8</label><figDesc>Ranking of countries according to the number of websites in the "very good" and "very bad" ranges</figDesc><table><row><cell>Country</cell><cell>Continent</cell><cell>Number</cell></row><row><cell/><cell/><cell>of web-</cell></row><row><cell/><cell/><cell>sites</cell></row><row><cell>0-1.4 MB (very good) range</cell><cell/><cell/></row><row><cell>Germany</cell><cell>Europe</cell><cell>8</cell></row><row><cell>Italy</cell><cell>Europe</cell><cell>7</cell></row><row><cell>Romania</cell><cell>Europe</cell><cell>7</cell></row><row><cell>Austria</cell><cell>Europe</cell><cell>6</cell></row><row><cell>Bulgaria</cell><cell>Europe</cell><cell>6</cell></row><row><cell>Norway</cell><cell>Europe</cell><cell>6</cell></row><row><cell cols="2">4.5 MB and above (very bad) range</cell><cell/></row><row><cell>Belarus</cell><cell>Europe</cell><cell>3</cell></row><row><cell>Denmark</cell><cell>Europe</cell><cell>2</cell></row><row><cell>Belgium</cell><cell>Europe</cell><cell>2</cell></row><row><cell>Poland</cell><cell>Europe</cell><cell>2</cell></row><row><cell>Finland</cell><cell>Europe</cell><cell>2</cell></row><row><cell>UK</cell><cell>Europe</cell><cell>2</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_8"><head>Table 9</head><label>9</label><figDesc>Distribution of web servers</figDesc><table><row><cell>Type of web server</cell><cell>Number of websites</cell></row><row><cell>Apache</cell><cell>152 (46.06%)</cell></row><row><cell>Nginx</cell><cell>86 (26.06%)</cell></row><row><cell>Microsoft-IIS</cell><cell>22 (6.67%)</cell></row><row><cell>Other</cell><cell>29 (8.79%)</cell></row><row><cell>Unknown</cell><cell>41 (12.42%)</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_9"><head>Table 10</head><label>10</label><figDesc>Continent rankings in all assessments</figDesc><table><row><cell>Assessment</cell><cell>Europe</cell><cell>North</cell><cell>Oceania</cell></row><row><cell/><cell/><cell>America</cell><cell/></row><row><cell>Web accessibility</cell><cell/><cell/><cell/></row><row><cell>Conformance level AA</cell><cell>2</cell><cell>1</cell><cell>3</cell></row><row><cell>Web usability</cell><cell/><cell/><cell/></row><row><cell>Loading time</cell><cell>3</cell><cell>1</cell><cell>2</cell></row><row><cell>Page size</cell><cell>1</cell><cell>2</cell><cell>3</cell></row><row><cell>Web security</cell><cell/><cell/><cell/></row><row><cell>Risk analysis</cell><cell>3</cell><cell>2</cell><cell>1</cell></row></table></figure>
+		</body>
+		<back>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Publisher's Note Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.</p><p>View publication stats</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">University website quality characteristics and success: lecturers' perspective</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Almahamid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Tweiqat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Almanaseer</surname></persName>
+		</author>
+		<idno type="DOI">10.1504/IJBIS.2016.075717</idno>
+		<ptr target="https://doi.org/10.1504/IJBIS.2016.075717"/>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Bus. Inf. Syst</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="41" to="61"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Can a higher education institution's marketing strategy improve the student-institution match?</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">J</forename><surname>Moogan</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/09513541111159068</idno>
+		<ptr target="https://doi.org/10.1108/095135411111590"/>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Educ. Manag</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="570" to="589"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">The importance of university web pages in selecting a higher education institution</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Schimmel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Motley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Marco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Eschenfelder</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Res. High. Educ. J</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="16"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Evaluating the effectiveness of college web sites for prospective students</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">G</forename><surname>Ford</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Coll. Admiss</title>
+		<imprint>
+			<biblScope unit="volume">212</biblScope>
+			<biblScope unit="page" from="26" to="31"/>
+			<date type="published" when="2001">2001. 2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Intensifying online loyalty! the power of website quality and the perceived value of consumer/ seller relationship</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">C</forename><surname>Tsao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Hsieh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M Y</forename><surname>Lin</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/IMDS-07-2015-0293</idno>
+		<ptr target="https://doi.org/10.1108/IMDS-07-2015-0293"/>
+	</analytic>
+	<monogr>
+		<title level="j">Ind. Manag. Data Syst</title>
+		<imprint>
+			<biblScope unit="volume">116</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="1987" to="2010"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Web site accessibility and quality in use: a comparative study of government Web sites in Kyrgyzstan, Azerbaijan, Kazakhstan and Turkey</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ismailova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Inal</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-016-0490-z</idno>
+		<ptr target="https://doi.org/10.1007/s10209-016-0490-z"/>
+	</analytic>
+	<monogr>
+		<title level="j">Univers. Access Inf. Soc</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="987" to="996"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Evaluation of the web accessibility of higher-education websites</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Acosta-Vargas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lujan-Mora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Salvador-Ullauri</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename></persName>
+		</author>
+		<idno type="DOI">10.1109/ITHET.2016.7760703</idno>
+		<ptr target="https://doi.org/10.1109/ITHET.2016.7760703"/>
+	</analytic>
+	<monogr>
+		<title level="m">2016 15th Int. Conf. Inf. Technol. Based High. Educ. Training</title>
+		<meeting><address><addrLine>ITHET</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2016">2016. 2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Web accessibility evaluation of top-ranking university Web sites in Spain, Chile and Mexico</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Máñez-Carvajal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Cervera-Mérida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Fernández-Piqueras</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-019-00702-w</idno>
+		<ptr target="https://doi.org/10.1007/s10209-019-00702-w"/>
+	</analytic>
+	<monogr>
+		<title level="j">Univers. Access Inf. Soc</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="179" to="184"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Accessibility of South African university websites</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">F</forename><surname>Verkijika</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>De Wet</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-018-0632-6</idno>
+		<ptr target="https://doi.org/10.1007/s10209-018-0632-6"/>
+	</analytic>
+	<monogr>
+		<title level="j">Univers. Access Inf. Soc</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="201" to="210"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Accessibility evaluation of top university websites: a comparative study of Kyrgyzstan, Azerbaijan, Kazakhstan and Turkey</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ismailova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Inal</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-017-0541-0</idno>
+		<ptr target="https://doi.org/10.1007/s10209-017-0541-0"/>
+	</analytic>
+	<monogr>
+		<title level="j">Univers. Access Inf. Soc</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="437" to="445"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Accessibility of Turkish university Web sites</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kurt</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-016-0468-x</idno>
+		<ptr target="https://doi.org/10.1007/s10209-016-0468-x"/>
+	</analytic>
+	<monogr>
+		<title level="j">Univers. Access Inf. Soc</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="505" to="515"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Universities of the Kyrgyz Republic on the Web: accessibility and usability</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ismailova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kimsanova</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-016-0481-0</idno>
+		<ptr target="https://doi.org/10.1007/s10209-016-0481-0"/>
+	</analytic>
+	<monogr>
+		<title level="j">Univers. Access Inf. Soc</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">A comparison of websites from Spanish, American and British Hospitals</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Llinás</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Mira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lorenzo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Aibar</surname></persName>
+		</author>
+		<idno type="DOI">10.3414/ME0474</idno>
+		<ptr target="https://doi.org/10.3414/ME0474"/>
+	</analytic>
+	<monogr>
+		<title level="j">Methods Inf. Med</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page" from="124" to="130"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Webometrics-based analysis and ranking of Iranian hospital websites</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Shadpour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Teimourpour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Asadi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Hosp. Res</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="77" to="84"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Evaluating the accessibility, usability and security of Hospitals websites: an exploratory study</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kaur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Agrawal</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">7th Int Conf. Cloud Comput. Data Sci. Eng</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="674" to="680"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Evaluate Accessibility and Usability Issues of Particular China and Pakistan Government Websites</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bilal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/ICAIBD.2019.8836990</idno>
+		<ptr target="https://doi.org/10.1109/ICAIBD.2019.8836990"/>
+	</analytic>
+	<monogr>
+		<title level="m">2019 2nd Int. Conf. Artif. Intell. Big Data</title>
+		<meeting><address><addrLine>ICAIBD</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2019">2019. 2019</date>
+			<biblScope unit="page" from="316" to="322"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Web site accessibility, usability and security: a survey of government web sites in Kyrgyz Republic</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ismailova</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-015-0446-8</idno>
+		<ptr target="https://doi.org/10.1007/s10209-015-0446-8"/>
+	</analytic>
+	<monogr>
+		<title level="j">Univers. Access Inf. Soc</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="257" to="264"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Accessibility analysis of Bangladesh government websites based on WCAG 2.0</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ahmed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Islam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M H</forename><surname>Sunny</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/IEMTRONICS51293.2020.9216445</idno>
+		<ptr target="https://doi.org/10.1109/IEMTRONICS51293.2020.9216445"/>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Comput. Sci. Mob. Comput</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="157" to="167"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Usability and accessibility evaluation of Libyan government websites</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">A</forename><surname>Karaim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Inal</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-017-0575-3</idno>
+		<ptr target="https://doi.org/10.1007/s10209-017-0575-3"/>
+	</analytic>
+	<monogr>
+		<title level="j">Univers. Access Inf. Soc</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="207" to="216"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Accessibility, usability, and security evaluation of Hungarian government websites</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Csontos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Heckl</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-020-00716-9</idno>
+		<ptr target="https://doi.org/10.1007/s10209-020-00716-9"/>
+	</analytic>
+	<monogr>
+		<title level="j">Univers. Access Inf. Soc</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Web accessibility of healthcare Web sites of Korean government and public agencies: a user test for persons with visual impairment</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">J</forename><surname>Yi</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-018-0625-5</idno>
+		<ptr target="https://doi.org/10.1007/s10209-018-0625-5"/>
+	</analytic>
+	<monogr>
+		<title level="j">Univers. Access Inf. Soc</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="41" to="56"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Web accessibility analysis on government of India websites based on WCAG</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sinha</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/IEMTRONICS51293.2020.9216445</idno>
+		<ptr target="https://doi.org/10.1109/IEMTRONICS51293.2020.9216445"/>
+	</analytic>
+	<monogr>
+		<title level="m">IEMTRONICS 2020 -Int. IOT, Electron. Mechatronics Conf. Proc</title>
+		<imprint>
+			<date type="published" when="2020-03">March, 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">A usability assessment of e-government websites in Sub-Saharan Africa</title>
+		<author>
+			<persName><forename type="first">Formunyuy</forename><surname>Verkijika</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>De Wet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijinfomgt.2017.11.003</idno>
+		<ptr target="https://doi.org/10.1016/j.ijinfomgt.2017.11.003"/>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Inf. Manage</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="20" to="29"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Web structural metrics evaluation</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Alsmadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T</forename><surname>Al-Taani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">A</forename><surname>Zaid</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/DeSE.2010.43</idno>
+		<ptr target="https://doi.org/10.1109/DeSE.2010.43"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. -3rd Int. Conf. Dev. eSystems Eng. DeSE</title>
+		<meeting>-3rd Int. Conf. Dev. eSystems Eng. DeSE</meeting>
+		<imprint>
+			<date type="published" when="2010">2010. 2010</date>
+			<biblScope unit="page" from="225" to="230"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Accessibility of the Internet in postsecondary education: Meeting the challenge</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Rowland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Univers. Web Access. Symp</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">A Quest for website accessibility in higher education institutions</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Harper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dewaters</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.iheduc.2008.06.007</idno>
+		<ptr target="https://doi.org/10.1016/j.iheduc.2008.06.007"/>
+	</analytic>
+	<monogr>
+		<title level="j">Internet High. Educ</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="160" to="164"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<title level="m" type="main">Designing web usability</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Nielsen</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2000">2000</date>
+			<pubPlace>New Riders</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Universities of the Kyrgyz Republic on the Web: accessibility and usability</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ismailova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kimsanova</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-016-0481-0</idno>
+		<ptr target="https://doi.org/10.1007/s10209-016-0481-0"/>
+	</analytic>
+	<monogr>
+		<title level="j">Univers. Access Inf. Soc</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1017" to="1025"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><surname>Campoverde-Molina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Luján-Mora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Valverde</surname></persName>
+		</author>
+		<title level="m">Accessibility of university websites worldwide: a systematic literature review</title>
+		<meeting><address><addrLine>Berlin Heidelberg</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<monogr>
+		<ptr target="https://www.w3.org/WAI/fundamentals/accessibility-intro/"/>
+		<title level="m">Introduction to Web Accessibility | Web Accessibility Initiative (WAI) | W3C</title>
+		<imprint>
+			<date type="published" when="2021-03">Apr. 03, 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<ptr target="https://www.w3.org/WAI/standards-guidelines/wcag/docs/"/>
+		<title level="m">WCAG 2 Documents | Web Accessibility Initiative (WAI) | W3C</title>
+		<imprint>
+			<date type="published" when="2021-03">Apr. 03, 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">15 years of stanca act: are italian public universities websites accessible? Univers</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">R</forename><surname>Barricelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Casiraghi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dattolo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rizzi</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-020-00711-0</idno>
+		<ptr target="https://doi.org/10.1007/s10209-020-00711-0"/>
+	</analytic>
+	<monogr>
+		<title level="j">Access Inf. Soc</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="185" to="200"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Web Accessibility Evaluation Tools List</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Eggert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Abou-Zahra</surname></persName>
+		</author>
+		<ptr target="https://www.w3.org/WAI/ER/tools/"/>
+	</analytic>
+	<monogr>
+		<title level="m">Developed by the Education and Outreach Working Group</title>
+		<imprint>
+			<date type="published" when="2016-04-26">2016. Apr. 26, 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Selecting Web Accessibility Evaluation Tools</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Abou-Zahra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Steenhout</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Keen</surname></persName>
+		</author>
+		<ptr target="https://www.w3.org/WAI/test-evaluate/tools/selecting/"/>
+	</analytic>
+	<monogr>
+		<title level="m">Web Accessibility Initiative (WAI)</title>
+		<imprint>
+			<date type="published" when="2017-04-26">2017. Apr. 26, 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Accessibility analysis of websites of educational institutions</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Kesswani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kumar</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.pisc.2016.04.031</idno>
+		<ptr target="https://doi.org/10.1016/j.pisc.2016.04.031"/>
+	</analytic>
+	<monogr>
+		<title level="j">Perspect. Sci</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="210" to="212"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<monogr>
+		<ptr target="https://achecker.ca/checker/index.php"/>
+		<title level="m">IDI Web Accessibility Checker : Web Accessibility Checker</title>
+		<imprint>
+			<date type="published" when="2021-03">Apr. 03, 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">The Arabian E-Government Websites Accessibility: A Case study</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tashtoush</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Darabseh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Al-Sarhan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">7th Int. Conf. Inf. Commun. Syst</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="276" to="281"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<monogr>
+		<ptr target="https://www.tawdis.net/?lang=en"/>
+		<title level="m">TAW | Web accessibility and W3C standardization services</title>
+		<imprint>
+			<date type="published" when="2021-06-19">Jun. 19, 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<monogr>
+		<title level="m" type="main">WAVE Web Accessibility Evaluation Tool</title>
+		<ptr target="https://wave.webaim.org/"/>
+		<imprint>
+			<date type="published" when="2021-03">Apr. 03, 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<monogr>
+		<ptr target="https://www.powermapper.com/products/sortsite/"/>
+		<title level="m">Website Error Checker: Accessibility &amp; Link Checker -Sort-Site</title>
+		<imprint>
+			<date type="published" when="2021-03">Apr. 03, 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Banking websites in Turkey: an accessibility, usability and security evaluation</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Akgül</surname></persName>
+		</author>
+		<idno type="DOI">10.20491/isarder.2018.396</idno>
+		<ptr target="https://doi.org/10.20491/isarder.2018.396"/>
+	</analytic>
+	<monogr>
+		<title level="j">J. Bus. Res. -Turk</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="782" to="796"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<monogr>
+		<title level="m" type="main">Ergonomic requirements for ofce work with visual display terminals (VDTs)-part 11 guidance on usability 2018</title>
+		<author>
+			<persName><surname>Iso/Iec</surname></persName>
+		</author>
+		<idno>ISO/ IEC 9241-11</idno>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">The importance of ease of use, usefulness, and trust to online consumers: an examination of the technology acceptance model with older consumers</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Mccloskey</surname></persName>
+		</author>
+		<idno type="DOI">10.4018/978-1-59904-295-4.ch015</idno>
+		<ptr target="https://doi.org/10.4018/978-1-59904-295-4.ch015"/>
+	</analytic>
+	<monogr>
+		<title level="j">End User Comput. Challenges Technol. Emerg. Tools Appl</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page" from="259" to="276"/>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Turning visitors into customers: A usability-centric perspective on purchase behavior in electronic channels</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Venkatesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Agarwal</surname></persName>
+		</author>
+		<idno type="DOI">10.1287/mnsc.1050.0442</idno>
+		<ptr target="https://doi.org/10.1287/mnsc.1050.0442"/>
+	</analytic>
+	<monogr>
+		<title level="j">Manage. Sci</title>
+		<imprint>
+			<biblScope unit="volume">52</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="367" to="382"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">A usability analysis of municipal government website home pages in Alabama</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">E</forename><surname>Youngblood</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mackiewicz</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.giq.2011.12.010</idno>
+		<ptr target="https://doi.org/10.1016/j.giq.2011.12.010"/>
+	</analytic>
+	<monogr>
+		<title level="j">Gov. Inf. Q</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="582" to="588"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">An empirical performance evaluation of universities website</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kaur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kaur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Kaur</surname></persName>
+		</author>
+		<idno type="DOI">10.5120/ijca2016910922</idno>
+		<ptr target="https://doi.org/10.5120/ijca2016910922"/>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Comput. Appl</title>
+		<imprint>
+			<biblScope unit="volume">146</biblScope>
+			<biblScope unit="issue">15</biblScope>
+			<biblScope unit="page" from="10" to="16"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Analyzing usability of educational websites using automated tools</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Zarish</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Habib</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Islam</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/ICCISci.2019.8716462</idno>
+		<ptr target="https://doi.org/10.1109/ICCISci.2019.8716462"/>
+	</analytic>
+	<monogr>
+		<title level="m">Int Conf. Comput. Inf. Sci. ICCIS 2019</title>
+		<imprint>
+			<date type="published" when="2019">2019. 2019</date>
+			<biblScope unit="page" from="2019" to="2022"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Usability evaluation of social media websites</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">W</forename><surname>Jun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">Z</forename><surname>Xiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">A</forename><surname>Ismail</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Goy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Yi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mod. Eng. Technol. Sci</title>
+		<imprint>
+			<biblScope unit="volume">03</biblScope>
+			<biblScope unit="issue">01</biblScope>
+			<biblScope unit="page" from="216" to="221"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">The importance of technology trust in Web services security</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ratnasingam</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/09685220210447514</idno>
+		<ptr target="https://doi.org/10.1108/09685220210447514"/>
+	</analytic>
+	<monogr>
+		<title level="j">Inf. Manag. Comput. Secur</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="255" to="260"/>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<monogr>
+		<title level="m" type="main">A Case Study on Web Application Security Testing with Tools and Manual Testing</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Dukes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Yuan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Akowuah</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="4" to="9"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Security analysis of top visited Arabic Web sites</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Alarifi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Alsaleh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Al-Salman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Int. Conf. Adv. Commun. Technol. ICACT</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="173" to="178"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Webometric ranking of world universities: Introduction, methodology, and future developments</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">F</forename><surname>Aguillo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Ortega</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fernández</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/03797720802254031</idno>
+		<ptr target="https://doi.org/10.1080/03797720802254031"/>
+	</analytic>
+	<monogr>
+		<title level="j">High. Educ. Eur</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="issue">2-3</biblScope>
+			<biblScope unit="page" from="233" to="244"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Exploring the relationship between web presence and web usability for universities: a case study from Turkey</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Peker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kucukozer-Cavdar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Cagiltay</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/PROG-04-2014-0024</idno>
+		<ptr target="https://doi.org/10.1108/PROG-04-2014-0024"/>
+	</analytic>
+	<monogr>
+		<title level="j">Progr. Electron. Libr. Inf. Syst</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="157" to="174"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">The importance of Higher Education Website and its Usability</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Manzoor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Hussain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ahmed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Iqbal</surname></persName>
+		</author>
+		<idno type="DOI">10.14419/ijbas.v1i2.73</idno>
+		<ptr target="https://doi.org/10.14419/ijbas.v1i2.73"/>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Basic Appl. Sci</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="150" to="163"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Challenges to assess accessibility in higher education websites: a comparative study of Latin america universities</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Acosta-Vargas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Acosta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lujan-Mora</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/ACCESS.2018.2848978</idno>
+		<ptr target="https://doi.org/10.1109/ACCESS.2018.2848978"/>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="36500" to="36508"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Accessibility evaluation of top-ranking university websites in world, oceania, and arab categories for home, admission, and course description webpages</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Alahmadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Drew</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Open Flex. Distance Learn</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="7" to="24"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">The accessibility of Cyprus Islands' higher education institution websites</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">I</forename><surname>Işeri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Uyar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ü</forename><surname>Ilhan</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.procs.2017.11.333</idno>
+		<ptr target="https://doi.org/10.1016/j.procs.2017.11.333"/>
+	</analytic>
+	<monogr>
+		<title level="j">Procedia Comput. Sci</title>
+		<imprint>
+			<biblScope unit="volume">120</biblScope>
+			<biblScope unit="page" from="967" to="974"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Accessibility of American university special education departments' web sites</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ringlaben</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Packard</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-013-0302-7</idno>
+		<ptr target="https://doi.org/10.1007/s10209-013-0302-7"/>
+	</analytic>
+	<monogr>
+		<title level="j">Univers. Access Inf. Soc</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="249" to="254"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Evaluation of Web content accessibility in an Israeli institution of higher education Univers</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Laufer Nir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rimmerman</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-018-0615-7</idno>
+		<ptr target="https://doi.org/10.1007/s10209-018-0615-7"/>
+	</analytic>
+	<monogr>
+		<title level="j">Access Inf. Soc</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="663" to="673"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Analysis of website usability evaluation methods</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kaur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kaur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Kaur</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 10th INDIACom; 2016 3rd Int. Conf. Comput. Sustain. Glob. Dev. INDIACom 2016</title>
+		<meeting>10th INDIACom; 2016 3rd Int. Conf. Comput. Sustain. Glob. Dev. INDIACom 2016</meeting>
+		<imprint>
+			<date type="published" when="2016-12">December. 2016</date>
+			<biblScope unit="page" from="1043" to="1046"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Evaluation of accessibility of university websites: a case from turkey</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yerlikaya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">O</forename><surname>Durdu</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-319-58753-0_94</idno>
+		<ptr target="https://doi.org/10.1007/978-3-319-58753-0_94"/>
+	</analytic>
+	<monogr>
+		<title level="j">Commun. Comput. Inf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">714</biblScope>
+			<biblScope unit="page" from="663" to="668"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Accessibility, usability, quality performance, and readability evaluation of university websites of Turkey: a comparative study of state and private universities</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Akgül</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-020-00715-w</idno>
+		<ptr target="https://doi.org/10.1007/s10209-020-00715-w"/>
+	</analytic>
+	<monogr>
+		<title level="j">Univers. Access Inf. Soc</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="157" to="170"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">The accessibility of university web sites: The case of Turkish universities</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kurt</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-010-0190-z</idno>
+		<ptr target="https://doi.org/10.1007/s10209-010-0190-z"/>
+	</analytic>
+	<monogr>
+		<title level="j">Univers. Access Inf. Soc</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="101" to="110"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<monogr>
+		<ptr target="http://www.webometrics.info/en"/>
+		<title level="m">Ranking Web of Universities: Webometrics ranks 30000 institutions</title>
+		<imprint>
+			<date type="published" when="2021-03-24">January. July. Mar. 24, 2021</date>
+		</imprint>
+	</monogr>
+	<note>Universities, Webometrics, Bibliometrics, Altmetrics</note>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<monogr>
+		<title level="m" type="main">Exploring the differences between five accessibility evaluation tools</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pădure</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Pribeanu</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">Web accessibility evaluation of government websites for people with disabilities in Turkey</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Akgül</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Vatansever</surname></persName>
+		</author>
+		<idno type="DOI">10.12720/joams.4.3.201-210</idno>
+		<ptr target="https://doi.org/10.12720/joams.4.3.201-210"/>
+	</analytic>
+	<monogr>
+		<title level="j">J. Adv. Manag. Sci</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="201" to="210"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">Web accessibility investigation and identification of major issues of higher education websites with statistical measures: A case study of college websites</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ismail</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Kuppusamy</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jksuci.2019.03.011</idno>
+		<ptr target="https://doi.org/10.1016/j.jksuci.2019.03.011"/>
+	</analytic>
+	<monogr>
+		<title level="j">J. King Saud Univ. -Comput. Inf. Sci</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<monogr>
+		<title level="m" type="main">GTmetrix | Website Performance Testing and Monitoring</title>
+		<ptr target="https://gtmetrix.com/"/>
+		<imprint>
+			<date type="published" when="2021-06-19">Jun. 19, 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title/>
+		<ptr target="https://sucuri.net/"/>
+	</analytic>
+	<monogr>
+		<title level="j">Sucuri -Complete Website Security, Protection &amp; Monitoring</title>
+		<imprint>
+			<date type="published" when="2021-06-19">Jun. 19, 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title level="a" type="main">Accessibility analysis of higher education institution websites of Portugal</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ismail</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Kuppusamy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Paiva</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-019-00653-2</idno>
+		<ptr target="https://doi.org/10.1007/s10209-019-00653-2"/>
+	</analytic>
+	<monogr>
+		<title level="j">Univers. Access Inf. Soc</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="685" to="700"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

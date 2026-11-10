@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Mapping of Surface Deformation and Displacement Associated with the 6.5 Magnitude Botswana Earthquake of 3 April 2017 Using DInSAR Analysis</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Geophysics and Remote Sensing Unit</orgName>
+								<orgName type="institution">Council for Geoscience</orgName>
+								<address>
+									<settlement>Pretoria</settlement>
+									<country key="ZA">South Africa</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Mapping of Surface Deformation and Displacement Associated with the 6.5 Magnitude Botswana Earthquake of 3 April 2017 Using DInSAR Analysis</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A51AC6511A153C284010C0AA12D4F33B</idno>
+					<idno type="DOI">10.7494/geom.2020.14.4.81</idno>
+					<note type="submission">Received: 17 January 2020; accepted: 5 May 2020</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-09-01T12:22+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>differential interferometric synthetic aperture radar (DInSAR)</term>
+					<term>interferometry</term>
+					<term>Sentinel-1</term>
+					<term>Botswana earthquake</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The DInSAR analysis was performed for mapping surface deformation and displacement associated with the 6.5 magnitude Botswana earthquake of 3 April 2017 using Sentinel-1 data and SNAP. The analyses involved: coregistration of SAR images, interferogram formation, debursting, merging of sub-swaths, topographic phase removal, phase filtering, phase unwrapping, orthorectification and calculation of vertical displacement for two situations (unmasked and masked with a layer of coherence ≥0.6). The vertical displacement for the unmasked situation ranged from -122 mm to +136 mm whereas in the masked layer it ranged from -84 mm to +122 mm. Negative surface deformation (subsidence) is seen in the epicentre region and eastern, north-eastern, northern areas of the image whereas major positive surface deformations (uplift) are seen in the south-western, western and north-western corner part. Comparison of displacements with geology revealed that major deformation occurred in the Karoo basalts and lesser surface deformation has occurred in the Lebung Group rocks of the northern, NE and SW region. The elongated shape of deformation near the epicentre and positive vertical displacement seen towards the SW of the epicentre and negative vertical displacement seen towards NE of the epicentre reveals that the region has undergone uplifting and subsidence on either side of the area close to the epicentre (similar to faulting in a NW or SE direction). The boundaries of the uplift and subsidence regions inferred as long lineaments were digitised as faults. Comparison of the deformation with existing seismotectonic map revealed the existence of some north-westerly faults seen in the region.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>In the evening of 3 April 2017 (at South African Standard time of 19:40), an earthquake of 6.5 magnitude occurred in the Central District region of Botswana, an area with no historic record of seismicity and no active faults. The epicentre of this earthquake identified by Council for Geoscience (CGS) seismic monitoring stations is at South 22.565°, East 25.134° (Fig. <ref type="figure" target="#fig_0">1</ref>) though USGS identified its epicentre initially at South 22.62°, East 25.15° at a depth of 11 km and later at 22.678°S 25.156°E at a depth of 29 km <ref type="bibr" target="#b0">[1]</ref>. This tremor shook the country's capital, Gaborone, and was reported to be felt in many places of neighbouring countries viz. South Africa, Zimbabwe and Swaziland. The epicentre was near the south-eastern border of the Central Kgalahari Game Reserve and within about 130 km from Moiyabane village. It was the second largest earthquake recorded in Botswana after the 6.7 magnitude earthquake which occurred in Maun in the year 1952 <ref type="bibr" target="#b1">[2]</ref>. The epicentre area of the earthquake is covered by wind-blown sediments. The depth of the event was at 29 km <ref type="bibr" target="#b0">[1]</ref> in a felsic lower crust where ductile deformation is expected <ref type="bibr" target="#b2">[3]</ref>. According to USGS <ref type="bibr" target="#b0">[1]</ref>, the moment-tensor calculations imply that the earthquake occurred as the result of slip on a northwest-trending fault centred in the lower-crust. The earthquake occurred as the result of broad-scale regional tectonic stresses that are similar to those responsible for producing the East-African rift system <ref type="bibr" target="#b0">[1]</ref>. Radar interferometry involving use of Synthetic Aperture Radar (SAR) images acquired by satellites has widely been applied to study the surface deformation and displacements taking place because of earthquakes, volcanic eruptions, landslides etc. <ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref>. Sentinel-1A is a European radar imaging satellite launched in 2014 and its synthetic aperture radar (SAR) instrument emits C band radio (micro) waves and receives their reflection from the ground. The Sentinel-1 SAR images are freely available for download through the Copernicus programme via European Space Agency's Sentinels Scientific Data Hub (<ref type="url" target="https://scihub.copernicus.eu/">https://scihub.copernicus.eu/</ref>). Using this SAR data, fairly accurate regional scale displacement/deformation maps have been generated using the differential interferometric synthetic aperture radar (DInSAR) technique by researchers in different parts of the world, including displacement mapping due to subsurface nuclear blasts <ref type="bibr" target="#b7">[8]</ref>.</p><p>Previous work on the 3 April 2017 Botswana earthquake has focussed on aeromagnetic, gravity and DInSAR analysis results surrounding the epicentre to reveal the causative faulting, finding any association of anthropogenic activity to trigger it and its source characteristics <ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref>. The aim of this research was to map the extent and level of surface deformation and range of vertical displacement over a wide area associated with a major earthquake that had shaken many places in Botswana including neighbouring country of South Africa using an open source software. The phase interferogram and vertical displacement obtained from DInSAR analysis will help to identify the extent and degree of surface deformation manifested as upward and downward movements. This paper shows the surface deformation mapping and displacement analysis results over a wide area (manifested through wrapped and unwrapped phase interferograms and vertical displacements) obtained from radar interferometric analysis using SNAP Desktop (an open source) software by applying the DInSAR technique on two sub-swaths of Sentinel-1 SAR data acquired on 30 March 2017 and 11 April 2017. An attempt was also made to compare the surface deformation and displacement with the simplified bedrock geology, existing seismotectonic map of the area and to delineate evident faulting from the deformation and displacement analysis results.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Data Used for Interferometric Analysis</head><p>Sentinel-1 SAR scenes covering the Central District region of Botswana were searched in the Copernicus Scientific Data Hub at <ref type="url" target="https://scihub.copernicus.eu/dhus/#/home">https://scihub.copernicus.eu/ dhus/#/home</ref> and two Interferometric Wide (IW) scenes acquired on 30 March and 11 April 2017 were identified as available suitable data before and post-earthquake event and were downloaded for interferometric analysis. The Interferometric Wide (IW) swath mode of Sentinel-1 acquires data with a 250 km swath at 5 m by 20 m spatial resolution for single look <ref type="bibr" target="#b11">[12]</ref>. IW mode captures three sub-swaths using Terrain Observation with Progressive Scans SAR (TOPSAR). The downloaded data have dual polarisation bands (VH and VV) and their zipped version files size ranged from 4 to 4.5 GB. The interferometric analysis was performed using the VV polarisation sub-swaths of Sentinel-1 data and SRTM 1 Second DEM having 30 m resolution.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Methodology and Data Processing Techniques Used and Results Obtained</head><p>The DInSAR technique provides an image, called a differential interferogram, representing ground motion or surface deformation occurring between the SAR data acquisitions with a centrimetric accuracy and a decametric resolution <ref type="bibr" target="#b12">[13]</ref>. It is possible to detect and quantify the ground motion or displacement that occurred between two SAR data acquisition by applying two pass DInSAR technique. The DInSAR technique relies on the processing of at least two SAR images of the same portion of the Earth's surface acquired in the same orientation from slightly different positions (spatial baseline). The phase difference of an interferogram can have contributions from five different sources viz. flat earth phase, topographic effect or contribution, surface deformation contribution, atmospheric contribution and phase noise <ref type="bibr" target="#b13">[14]</ref>. The displacement is calculated by differentiating the phase component of the two co-registered SAR images after removing the component of topographic effect. The DInSAR technique for surface deformation mapping involves mainly the following steps: registration of two SAR data, differential interferogram generation, interferogram flattening (topographic phase removal), removal of residual orbital errors, phase filtering, phase unwrapping, calculation of displacement and orthorectification using Range Doppler terrain correction.</p><p>The two pass DInSAR technique available in Sentinel-1 Toolbox of SNAP software was used/applied for the differential interferometric analysis using Sentinel-1 SAR (single look complex or SLC) data acquired on two dates (prior to the earthquake event of 3 April 2017 and after the event) in order to identify the location and amplitude of surface deformation or ground displacement. The differential interferometric analysis applied in this study for surface deformation mapping involved the following major steps: coregistration of two Sentinel-1 SAR images for chosen sub-swaths, interferogram formation, debursting to remove the blank areas, merging of sub-swaths, topographic phase removal, phase filtering, phase unwrapping, calculation of vertical displacement and orthorectification.</p><p>The SNAP software has interferometric tools for SAR Coregistration, Range and Azimuth Spectral Filtering, Coherence Estimation, Interferogram Formation, Topographic Phase Removal, Phase Filtering, Exporting filtered phase for phase unwrapping using SNAPHU program, Importing Unwrapped phase and converting unwrapped phase to height or vertical displacement (through a math function). These tools and techniques were applied on selected pairs of downloaded data sets for the present interferometric analysis. For this analysis, the following operators viz. S-1 TOPS Coregistration, Interferogram Formation, S-1 TOPS Deburst and S-1 TOPS Merge available in SNAP software were used to generate an interferogram covering the area of interest. Finally, the obtained results of DInSAR analysis were compared with the simplified geological map and examined with seismotectonic maps to establish the cause of the earthquake.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.">Phase Unwrapping</head><p>The flattened phase interferogram provides fringes -an ambiguous measurement of the relative terrain altitude only known within 2π phase cycles of the unknown absolute phase signal due to the 2π cyclic nature (2π-modulus) of the interferometric phase. Such a phase interferogram is called wrapped and will show distinctive jumps (wraps) of magnitude 2π (measured phase being 'wrapped' onto the range -π to +π). For most quantitative applications, the consecutive fringes present in the interferogram will then have to be unwrapped; this involves interpolating over the 0 to 2π phase jumps to produce a continuous deformation field. Phase unwrapping is the process of removing the 2π ambiguity from the wrapped phase. The phase unwrapping solves the ambiguity of interferogram by integrating phase difference between neighbouring pixels. The phase unwrapping involves reconstructing the physically continuous phase variation by adding or subtracting multiples of 2π, and thereby suppressing the phase jumps. After adding or deleting any integer number of altitudes of ambiguity (equivalent to an integer number of 2π phase cycles) the phase variation between two points on a flattened interferogram provides a measurement of the actual altitude variation. Two-dimensional phase unwrapping is the process of recovering unambiguous phase data from a two-dimensional array of phase values known only in 2π modulus of absolute phase signal <ref type="bibr" target="#b14">[15]</ref>.</p><p>Phase unwrapping algorithms (like SNAPHU or Goldstein) are used to reconstruct the absolute interferometric phase from its wrapped values. The SNAP software does not have an algorithm for phase unwrapping; however, it has an algorithm to export the phase data for unwrapping in SNAPHU program. Phase unwrapping for this study was done using SNAPHU software written in the C programming language and developed by the Stanford Radar Interferometry Research Group at Stanford University, USA <ref type="bibr" target="#b15">[16]</ref>. Later, the unwrapped phase was imported into SNAP software using the SNAPHU Import tool after specifying another data layer (phase filtered interferogram) having metadata and geocodings.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.">Displacement Map Generation from Unwrapped Phase Interferogram</head><p>The slant range motion (displacement) in metric units is generally obtained from the unwrapped phase interferogram in slant range using the Equation (1).</p><formula xml:id="formula_0">4 unw d = φ λ ÷ π<label>(1)</label></formula><p>where: d -displacement in slant range direction, ϕ unw -unwrapped phase, λ -wavelength of SAR instrument, π = 3.14.</p><p>It is possible to convert the slant range motion or displacement into an absolute up/down motion (when looking for crustal uplift/subsidence) by considering the local incidence angle of the SAR scene. The local incidence angle constitutes the global incidence angle of the satellite, while acquiring the scene, and the slope of the terrain. For accurate assessment of the absolute up/down motion (vertical displacement), it is essential to ultimately tie the displacement layer with some stable point where it is considered that no motion occurred or the point where it is known to have some uplift/subsidence occurred (based on information from GPS or other field survey methods). The generation of a vertical displacement map from the unwrapped phase interferogram in slant range (non-geocoded) was performed using the following equation in Band Maths tool of SNAP software:</p><formula xml:id="formula_1">_ 4 cos unw inc vert displ φ ⋅ λ = -π ⋅ θ<label>(2)</label></formula><p>where: ϕ unw -unwrapped phase, λ -wavelength of SAR instrument (57 mm for Sentinel-1 SAR instrument), θ inc -incident angle <ref type="bibr" target="#b16">[17]</ref>.</p><p>In this equation, the cos value of θ inc in radians actually converts displacement in line-of-sight (LOS) or slant range direction to vertical and thus this equation gives displacement preferentially in vertical direction instead of LOS direction.</p><p>The range of the calculated vertical displacement value is between -50.86 mm and 45.54 mm for 95% of all pixel values of the image. Some known point far from the epicentre having low vertical displacement has to be identified and its displacement value can be used to calculate the displacement relative to such a reference point. A reference point (having coordinates of 24.221424° East and 23.27569° South) far from the location of the epicentre was identified from the vertical displacement image and its vertical displacement of -7.37105 mm was read as a reference elevation point for estimating vertical displacement relative to a reference point. Later, vertical displacement relative to the chosen reference point was calculated after identifying its calculated vertical displacement value using the following expression in Band Maths: vert-displ_ref = vert_displ +&lt;ref-point_value&gt;.</p><p>The quality and reliability of unwrapped results much depends on the coherence of the images used. Reliable results of displacement or surface deformation can only be expected in areas of high coherence. The coherence values for the two Sentinel-1 scenes used ranged from 0.004 to 0.946. To improve the quality of the results, a mask of areas of high coherence (≥0.6) was created using the Band Maths tool. The mask of areas with high coherence values (≥0.6) was applied on the vertical displacement map and after masking areas of low coherence, a final layer of vertical displacement was generated. The resulting coloured layer of vertical displacement is shown in Figure <ref type="figure">3</ref> and its values ranged from -44 mm to 51 mm for 95% of all pixel values of the image. Areas of positive surface deformation (uplift zones) values in millimetres are shown in green, yellow, orange and red shades whereas areas of negative surface deformation (subsidence zones) are shown in shades of blue, purple and black in Figure <ref type="figure">3</ref>. The calculated vertical displacement relative to a reference point in radar geometry/coordinates is shown in Figure <ref type="figure">2</ref> and its values ranged from -43.5 mm to 52.9 mm for 95% of all pixel values of the image.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.">Orthorectification of Unwrapped Phase Interferogram and Displacement</head><p>The final processing stage involves geocoding the results, which resamples the interferogram and displacement from the acquisition geometry (related to direction of satellite path), into the desired geographic projection using SRTM DEM. Five layers (wrapped phase, unwrapped phase, coherence and vertical displacement and masked vertical displacement) were orthorectified using Range Doppler Terrain Correction algorithm. The DEM used in this process was the 1 second SRTM data downloaded automatically by the SNAP software. The orthorectified wrapped and unwrapped phase interferograms are shown in Figures <ref type="figure" target="#fig_2">4</ref> and<ref type="figure">5</ref> respectively (on the interleaf). Some colour manipulation was performed on the unwrapped phase interferogram and vertical displacement as shown in Figures <ref type="figure">5</ref><ref type="figure" target="#fig_3">6</ref><ref type="figure" target="#fig_4">7</ref>(on the interleaf) in order to make area of major surface deformation clearer and to identify areas of no deformation (zero values).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Discussion of DInSAR Analysis Results and Displacement</head><p>A close examination of the unwrapped phase interferogram (Fig. <ref type="figure">5</ref>) reveals that significant surface deformation is noticed around the location of the epicentre of the earthquake (red coloured patch in oval shape), and towards the south-western (blue and black colours), western (blue patch) and north-eastern (red patch) regions. The vertical displacement for the unmasked layer displayed in 100% pixel values ranges from -122 mm to +136 mm whereas in the masked layer displaying 100% of all pixel values, it ranges from -84 mm to +122 mm. The vertical displacement for the unmasked layer displayed for 95% of all pixel values shown in Figure <ref type="figure" target="#fig_3">6</ref> (on the interleaf) is in millimetres values ranging from 55 mm to 79 mm. The vertical displacement for the high coherence layer (masked out for coherence ≤0.06) displayed for 95% of all pixel values (Fig. <ref type="figure" target="#fig_4">7</ref>) ranges from -60 mm to +90 mm. Figures 6 and 7 show that negative surface deformation (subsidence) shown in shades of black, purple and blue is seen in the region of epicentre and eastern, north-eastern, northern areas of the image whereas major positive surface deformation (uplift) areas (shown in shades of red, orange and yellow) are seen in the south-western, western and north-western corner part of the image scene. The calculated positive vertical displacement values seen in Figure <ref type="figure" target="#fig_3">6</ref> towards the south-west of the epicentre and negative vertical displacement values seen towards north-east of the epicentre reveals that the Central District region of Botswana has undergone uplifting and subsidence on either side of the area close to the epicentre and this surface deformation is similar to some faulting in a north-west or south-east direction. The elongated shape of deformation near the epicentre supports this observation.   A zoomed view of the vertical displacements seen around the epicentre of the earthquake is shown in Figure <ref type="figure" target="#fig_5">8</ref>. Subsidence ranging from -10 mm to -40 mm is seen around the epicentre region. Contrastingly, some uplift ranging from 20 mm to 50 mm is noticed in the areas that are in the west, south-west and north-east of the epicentre region. A zoomed view of vertical displacement (in mm) having coherence ≥0.6 and surrounding the earthquake epicentre is shown in Figure <ref type="figure" target="#fig_6">9</ref>. Areas of maximum subsidence are at the centre and subsidence is decreasing outward with a zone of zero displacement in a ring form and some uplift is seen outwards. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1.">Comparison of Deformation Layer with the Simplified Geological Map</head><p>An attempt was made to find out whether there is any relationship of the extent of the surface deformation associated with the earthquake with the bedrock geology of the study area. The simplified bedrock geological map of Botswana (in shapefile format) was downloaded from the Botswana Geoscience Portal (available at <ref type="url" target="http://geoscienceportal.geosoft.com/Botswana/Results">http:// geoscienceportal.geosoft.com/Botswana/Results</ref>) and a portion of the geology covering the extent of the merged interferogram was extracted (Fig. <ref type="figure" target="#fig_7">10</ref>). Later, the interferogram and vertical displacement layers were exported as geotiff files and viewed along with the geological layer in ArcGIS software for knowing the geographical locations and identifying the names of the geological units that is underlain by areas of higher deformation. A comparison of the surface deformation interferogram with the geological/ lithostratigraphic units (Fig. <ref type="figure" target="#fig_0">11</ref>) reveals that the major surface deformation is seen around epicentre region underlain by the geological unit of Karoo basalts (belonging to Jurassic System Upper Karoo Supergroup and containing Flood basalt, variably amygdaloidal with minor siliciclastic sedimentary interbeds and lenses) and the Lebung Group rock (belonging to Triassic to Jurassic System Upper Karoo Supergroup and containing orange, red or white sandstone, locally calcareous with reddish siltstone increasingly common downwards) seen in the far northern part. Lesser deformation is noticed in the Archean rocks seen in the north of the scene.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Fig. 11. Unwrapped deformation interferogram viewed with bedrock geology</head><p>A comparison of vertical displacements with bedrock geology (Fig. <ref type="figure" target="#fig_8">12</ref>) reveals that major surface deformation occurred in the Karoo basalts (subsidence of 55 mm near epicentre and uplift of 79 mm towards south-west of epicentre at a distance of 80-90 km) and lesser surface deformation has occurred in the Lebung Group (sand stone bearing sedimentary rock) seen far from the epicentre at a distance of 80-100 km. The displacement observed in the Lebung Group seen in the north-western, northern, north-eastern and south-western region of the SAR scene is a subsidence of 10-40 mm towards north-east of epicentre, uplift of 10-60 mm towards south-west of epicentre and uplift of 10-35 mm towards north-west of epicentre. The Archaen rock has undergone less deformation (uplift ranging 10-20 mm). There are patches of no deformation in the Karoo basalts, Lebung Group and Archaen rocks. Some of these patches of no deformation area are seen in lineament forms. These observations of surface deformation with subsidence and uplift, especially in a parallel linear fashion surrounding the epicentre, clearly indicate that some faults have occurred near the epicentre in the north-western or south-eastern direction as a result of the earthquake of magnitude 6.5.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2.">Examination of the Earthquake Location with the Existing Seismotectonic Map</head><p>An attempt made to look at the seismotectonic map of Meghraoui et al. <ref type="bibr" target="#b17">[18]</ref> covering central southern Africa reveals that some north-westerly faults are present in the Central District region of Botswana and towards south east, east and west of the epicentre of this earthquake. This finding suggests that the faulting that might have happened in the region near the epicentre of the 6.5 magnitude would be linked to some existing fault in the region having the same orientation (some north-westerly fault that was not mapped earlier). The investigation by Midzi et al. <ref type="bibr" target="#b18">[19]</ref> on the distributions of locations of aftershocks of this earthquake exhibited a north west-south east orientation in two clusters closer to the epicentre extending for about 25 km and 19 km in length. These observations also support the existence of some fault development in a north west-south east orientation close to the locations of this earthquake. Preliminary findings obtained from the studies of Midzi et al. <ref type="bibr" target="#b18">[19]</ref> also suggest the possibility of existence of a 65 km long north west-south east trending seismicity zone with an active fault in Botswana as revealed through the locations and magnitude of aftershocks.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3.">Findings Available from Investigations in Literature Using High-Resolution Aeromagnetic and Gravity Data and Other DInSAR Analysis</head><p>Kolawole et al. <ref type="bibr" target="#b8">[9]</ref> used high-resolution aeromagnetic and gravity data integrated with Differential Interferometric Synthetic Aperture Radar (DInSAR) analysis using commercial GAMMA software to investigate the fault that ruptured. Their first results showed that the ruptured fault trace delineated by DInSAR aligns with a distinct NW striking and NE dipping magnetic lineament within the Precambrian basement. The fault plane solution and numerical modelling by Kolawole et al. <ref type="bibr" target="#b8">[9]</ref> indicated that the cause of the earthquake was 1.8 m displacement along a NW striking and NE dipping normal fault, rupturing at 21-24 km depth. According to <ref type="bibr" target="#b8">[9]</ref>, this seismic event was due to extensional reactivation of a crustal-scale Precambrian thrust splay within the Limpopo-Shashe orogenic belt. Geophysical investigation of the epicentre region by Kolawole et al. <ref type="bibr" target="#b8">[9]</ref> and Gardonio et al. <ref type="bibr" target="#b2">[3]</ref> showed that the earthquake was natural, related to deep mantle fluids moving up the crust and causing the extensional reactivation of an ancient thrust fault. Albano et al. <ref type="bibr" target="#b9">[10]</ref> suggested that the 3 April 2017 Botswana earthquake can be classified as a natural intraplate earthquake. These studies provided additional information for explaining the development or existence of a fault that ruptured for the cause of this earthquake.</p><p>The differential interferogram and vertical displacement generated by Albano et al. <ref type="bibr" target="#b9">[10]</ref> using the GAMMA software shown in Figure <ref type="figure" target="#fig_9">13</ref> reveals similar results obtained in this study though the location of the epicentre does not perfectly match the epicentre shown in Figure <ref type="figure" target="#fig_8">12</ref>. The maximum observed Line of Sight (LoS) displacement shown in Figure <ref type="figure" target="#fig_8">12</ref> is approximately 5 cm and it matches with the vertical displacement of 5.4 cm shown in Figure <ref type="figure" target="#fig_0">11</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.4.">Delineation of Faults from the Displacement Layer</head><p>On examining the unwrapped phase interferogram and displacement layers shown in Figures <ref type="figure">5</ref> and<ref type="figure" target="#fig_3">6</ref>, it was found that the region towards the south-west direction from the location of earthquake epicentre has undergone subsidence whereas the region towards the northwest from the epicentre has undergone uplift and a zone of no subsidence and vertical displacement is also seen around the epicentre. A region of no deformation and vertical displacement (subsidence) is also noticed towards the north-eastern part with a region of uplift to the south-west of the region of no deformation and a region of subsidence to the north-east of the region of no deformation. The linear boundaries of these three regions with uplift and subsidence can be inferred as some lineaments or fault lines. The vertical displacement layer was exported as a geotiff file and displayed in ArcMAP software. These three identified lineaments were digitised in ArcMap as fault traces inferred from the DInSAR product (Fig. <ref type="figure" target="#fig_10">14</ref>). Later, the digitised inferred fault traces were overlaid with the georeferenced map of interpreted faults from Albano et al. <ref type="bibr" target="#b9">[10]</ref>. Using this overlay, the deep basement faults and Palaeoproterozoic faults could be digitised in ArcMap. These three sets of digitised faults were merged as a single layer of faults using the merge tool of Geoprocessing Toolbox item available in ArcMap and a map depicting these faults was made (Fig. <ref type="figure" target="#fig_11">15</ref>). The orientation of the inferred fault traces from InSAR matches with the orientation of the Palaeoproterozoic thrust fault seen near the epicentre. An attempt was made to display the locations of aftershocks of the earthquake with the merged faults. It was noted from this display that some locations of the aftershocks were lying on the inferred fault lines and the trend (orientation) identified from the locations of aftershocks matched with the orientations of the inferred fault lines. It was also found that most of the locations of the aftershocks and the location of the main event lay in between the two inferred fault lines. Source: figure adopted with written permission from Albano et al. <ref type="bibr" target="#b9">[10]</ref> Based on the magnitude of relative movements identified from the InSAR products in the region of the epicentre, and aftershocks bounded by two inferred fault lines, it can be said that this region has undergone some host and graben rifting or tensional faulting characterised by a region of subsidence (like a graben feature) and a region of uplift towards north-east of the epicentre (like a host feature) and a region of subsidence (graben) further north-east of the area of study. The relative uplift towards south-western region is higher (10-83 mm) as compared to the relative uplift (10-40 mm) towards north-eastern region. The tensional rifting could be due to regional uplifting and it could also be due to regional subsidence due to natural tectonic process or anthropogenic activity like hydraulic fracking (injection of fracking fluids to subsurface regions and extraction of natural gas or dewatering at some other places). Preliminary qualitative investigations by Albano et al. <ref type="bibr" target="#b9">[10]</ref> ruled out the possibility of anthropogenic activity of coal bed methane extraction through dewatering by the Lesedi project of Botswana (located greater than 20 km distance to the epicentre) for the cause of this earthquake. However, more detailed and quantitative investigations are needed to confirm the cause of this earthquake and to assess the impact of any underground stress perturbations induced by tectonic process or any other anthropogenic activities near the area of earthquake occurrence.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">Conclusions</head><p>This study illustrated usefulness of Synthetic Aperture Radar (SAR) data using radar interferometry (DInSAR technique) in mapping surface deformation and displacement associated with the 6.5 magnitude earthquake of 3 April 2017 occurred in the Central District region of Botswana. The SAR data used in this analysis were two scenes of Sentinel-1 SAR data acquired on 30 March 2017 and 11 April 2017 in Interferometric Wide (IW) format. The surface deformation occurred as a result of this earthquake was mainly in some places surrounding the epicentre location and the south-western, western and north-eastern regions of the SAR data. The calculated vertical displacement ranged from -44 mm (inferred as subsidence around the epicentre and the north-eastern of the area) to +52 mm (inferred as uplift towards the south-western part of the region of epicentre). Positive vertical displacement (uplift) values seen towards the south-west of the epicentre and negative vertical displacement (subsidence) values seen towards north-east of the epicentre indicates that the Central District region of Botswana might have undergone uplifting and subsidence on either side of the area close to the epicentre and this surface deformation is similar to some faulting in a north-west or south-east direction. The elongated shape for the surface deformation near the epicentre confirms this observation. Comparison of surface deformation with bedrock geology revealed that major surface deformation (subsidence and uplift) has occurred in the Karoo basalts and lesser surface deformation (subsidence and uplift) has occurred in the Lebung Group (sand stone bearing sedimentary rock) seen in the northern, north-eastern and south-western region of the SAR scene. Examination of the surface deformation seen in the unwrapped phase interferogram and vertical displacement layer, along</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. Map showing the location of the epicentre of earthquake of 3 April 2017 (6.5 M w )</figDesc><graphic coords="2,115.29,328.65,251.31,253.52" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2 .Fig. 3 .</head><label>23</label><figDesc>Fig. 2. Calculated vertical displacement relative to a reference point in SAR geometry (slant range)</figDesc><graphic coords="7,66.52,110.34,320.51,117.79" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 4 .</head><label>4</label><figDesc>Fig. 4. Orthorectified wrapped phase interferogram of Central District region of Botswana (IW2 and IW3 sub-swaths) using Sentinel-1 data of 30 March 2017 and 11 April 2017</figDesc><graphic coords="9,39.33,138.52,365.38,369.11" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 6 .</head><label>6</label><figDesc>Fig. 6. Orthorectified layer of vertical displacement from Sentinel-1 (with colour manipulation to show regions of no subsidence in pink) overlaid with roads</figDesc><graphic coords="10,74.65,136.70,368.54,371.70" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 7 .</head><label>7</label><figDesc>Fig. 7. Orthorectified layer of vertical displacement (masked out with areas of low coherence) and overlaid with roads</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 8 .</head><label>8</label><figDesc>Fig. 8. A zoomed view of the vertical displacements (subsidence of -10 mm to -40 mm) seen around the epicentre of the earthquake</figDesc><graphic coords="11,42.52,137.40,368.54,435.84" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Fig. 9 .</head><label>9</label><figDesc>Fig. 9. Zoomed view of vertical displacement [mm] around the epicentre of the Botswana earthquake (coherence ≥0.6)</figDesc><graphic coords="12,56.38,129.48,368.82,442.29" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Fig. 10 .</head><label>10</label><figDesc>Fig. 10. Bedrock geology covering the extent of unwrapped phase interferogram</figDesc><graphic coords="13,69.47,232.62,314.60,349.74" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Fig. 12 .</head><label>12</label><figDesc>Fig. 12. Vertical displacement layer viewed in Google Earth Pro software along with bedrock geology (reduced opacity)</figDesc><graphic coords="15,42.52,187.27,368.50,387.09" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Fig. 13 .</head><label>13</label><figDesc>Fig. 13. Differential interferogram and displacement available from literature using the commercial GAMMA softwareSource: figure adopted with written permission from Albano et al.<ref type="bibr" target="#b9">[10]</ref> </figDesc><graphic coords="17,42.52,205.10,368.50,151.64" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>Fig. 14 .</head><label>14</label><figDesc>Fig. 14. Inferred fault traces associated with the 3 April 2017 Mw 6.5 Botswana earthquake</figDesc><graphic coords="18,56.22,62.09,368.64,437.50" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head>Fig. 15 .</head><label>15</label><figDesc>Fig. 15. Inferred fault traces associated with the 3 April 2017 Mw 6.5 Botswana earthquake overlaid with the interpreted faults from Albano et al. [10]</figDesc><graphic coords="19,56.77,193.30,340.00,312.51" type="bitmap"/></figure>
+		</body>
+		<back>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>with seismotectonic maps, revealed the presence of some north-westerly faults near the epicentre region of the earthquake. There is some possibility that the faulting that might have happened in the region near the epicentre would be linked to some existing fault in the region having the same orientation.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">-132 km WSW of Moijabana, Botswana</title>
+		<idno>USGS: M 6.5</idno>
+		<ptr target="https://earthquake.usgs.gov/earthquakes/eventpage/us10008e3k#executive[access:27.09"/>
+		<imprint>
+			<date type="published" when="2017">2017. 2018</date>
+			<publisher>USGS</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">The earthquake was natural</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Chida</surname></persName>
+		</author>
+		<ptr target="access:27.09"/>
+	</analytic>
+	<monogr>
+		<title level="m">The Voice Newspaper Botswana</title>
+		<imprint>
+			<publisher>Geoscience Institute</publisher>
+			<date type="published" when="2017-04-04">April 4, 2017. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">The April 2017 Mw 6.5 Botswana Earthquake: An Intraplate Event Triggered by Deep Fluids</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Gardonio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jolivet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Calais</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Leclère</surname></persName>
+		</author>
+		<idno type="DOI">10.1029/2018gl078297</idno>
+		<ptr target="https://doi.org/10.1029/2018gl078297"/>
+	</analytic>
+	<monogr>
+		<title level="j">Geophysical Research Letters</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="issue">17</biblScope>
+			<biblScope unit="page" from="8886" to="8896"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Advances in three-dimensional deformation mapping from satellite radar observations: application to the 2003 Bam earthquake</title>
+		<author>
+			<persName><forename type="first">Jo</forename><surname>Min-Jeo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hyung-Sup</forename><surname>Jung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sung-Ho</forename><surname>Chae</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/19475705.2018.1473293</idno>
+		<ptr target="https://doi.org/10.1080/19475705.2018.1473293"/>
+	</analytic>
+	<monogr>
+		<title level="j">Geomatics, Natural Hazards and Risk</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="678" to="690"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Sentinel-1 observation of the 2017 Sangsefid earthquake, northeastern Iran: Rupture of a blind reserve-slip fault near the Eastern Kopeh Dagh</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yangmao</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.tecto.2018.03.009</idno>
+		<ptr target="https://doi.org/10.1016/j.tecto.2018.03.009"/>
+	</analytic>
+	<monogr>
+		<title level="j">Tectonophysics</title>
+		<imprint>
+			<biblScope unit="volume">731</biblScope>
+			<biblScope unit="issue">732</biblScope>
+			<biblScope unit="page" from="131" to="138"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Mapping three-dimensional surface deformation by combining multiple-aperture interferometry and conventional interferometry: Application to the June 2007 eruption of Kilauea volcano, Hawaii</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Jung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Won</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Poland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Miklius</surname></persName>
+		</author>
+		<ptr target="access:12.09.2020"/>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE. Geoscience and Remote Sensing Letters</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="34" to="38"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Deformation responses of slow moving landslides to seasonal rainfall in the Northern Apennines, measured by InSAR</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Bayer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Simoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mulas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Corsini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Schmidt</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.geomorph.2018.02.020</idno>
+		<ptr target="https://doi.org/10.1016/j.geomorph.2018.02.020"/>
+	</analytic>
+	<monogr>
+		<title level="j">Geomorphology</title>
+		<imprint>
+			<biblScope unit="volume">308</biblScope>
+			<biblScope unit="page" from="293" to="306"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Sentinel maps North Korean nuclear blast aftermath</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Amos</surname></persName>
+		</author>
+		<ptr target="access:28.03"/>
+	</analytic>
+	<monogr>
+		<title level="j">BBC</title>
+		<imprint>
+			<date type="published" when="2016-04-21">April 21, 2016. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Aeromagnetic, gravity, and Differential Interferometric Synthetic Aperture Radar analyses reveal the causative fault of the 3 April 2017 Mw 6.5 Moiyabana, Botswana, earthquake</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Kolawole</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Atekwana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Malloy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Stamps</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Grandin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Abdelsalam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Leseane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Shemang</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/2017gl074620</idno>
+		<ptr target="https://doi.org/10.1002/2017gl074620"/>
+	</analytic>
+	<monogr>
+		<title level="j">Geophysical Research Letters</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="issue">17</biblScope>
+			<biblScope unit="page" from="8837" to="8846"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<monogr>
+		<title level="m" type="main">Did Anthropogenic Activities Trigger the 3 April 2017 Mw 6.5 Botswana Earthquake? Remote Sensing</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Albano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Polcari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Bignami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Moro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Saroli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Stramondo</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/rs9101028</idno>
+		<ptr target="https://doi.org/10.3390/rs9101028"/>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="1" to="12"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Source characteristics of the 2017 Mw 6.4 Moijabana, Botswana earthquake, a rare lower-crustal event within an ancient zone of weakness</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Materna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Heng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Salman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bürgmann</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.epsl.2018.11.007</idno>
+		<ptr target="https://doi.org/10.1016/j.epsl.2018.11.007"/>
+	</analytic>
+	<monogr>
+		<title level="j">Earth and Planetary Science Letters</title>
+		<imprint>
+			<biblScope unit="volume">506</biblScope>
+			<biblScope unit="page" from="348" to="359"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<ptr target="27.09"/>
+		<title level="m">ESA: Interferometric Wide Swath, User Guides, Sentinel-1 SAR. ESA</title>
+		<imprint>
+			<date type="published" when="2016">2016. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">The displacement of the Landers earthquake mapped by radar interferometry</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Massonnet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rossi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Carmona</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Adragna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Peltzer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Feigl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Rabaute</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">364</biblScope>
+			<biblScope unit="issue">6433</biblScope>
+			<biblScope unit="page" from="138" to="142"/>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<author>
+			<persName><forename type="first">L</forename><surname>Veci</surname></persName>
+		</author>
+		<ptr target="http://step.esa.int/docs/tutorials/S1TBX%20Stripmap%20Interferometry%20with%20Sentinel-1%20Tutorial.pdf"/>
+		<title level="m">TOPS Interferometry Tutorial. Sentinel-1 Toolbox</title>
+		<imprint>
+			<publisher>Array Systems Computing Inc. and ESA</publisher>
+			<date type="published" when="2015-09-27">2015. 27.09.2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Network approaches to two-dimensional phase unwrapping: intractability and two new algorithms</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">W</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Zebker</surname></persName>
+		</author>
+		<idno type="DOI">10.1364/JOSAA.17.000401</idno>
+		<ptr target="https://doi.org/10.1364/JOSAA.17.000401"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Optical Society of America A</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="401" to="414"/>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<ptr target="http://web.stanford.edu/group/radar/softwareandlinks/sw/snaphu/[access:27.09.2018"/>
+		<title level="m">SNAPHU: Statistical-Cost, Network-Flow Algorithm for Phase Unwrapping</title>
+		<imprint>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+		<respStmt>
+			<orgName>Stanford ; Stanford University</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<title level="m" type="main">Surface subsidence monitoring with NEST</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Walter</surname></persName>
+		</author>
+		<ptr target="https://saredu.dlr.de/unit/insar_deformation[access:27.09.2018"/>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+		<respStmt>
+			<orgName>Institute of Geotechnical Engineering and Mine Surveying, TU Clausthal</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">Tutorial -SAR Interferometry</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">The seismotectonic map of Africa</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Meghraoui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Amponsah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ayadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ayele</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ateba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bensuleman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Delvaux</surname></persName>
+		</author>
+		<idno type="DOI">10.18814/epiiugs/2016/v39i1/89232</idno>
+		<ptr target="https://doi.org/10.18814/epiiugs/2016/v39i1/89232"/>
+	</analytic>
+	<monogr>
+		<title level="j">Episodes</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="9" to="18"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">The 03 April 2017 Botswana M6.5 earthquake: Preliminary results</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Midzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Saunders</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Manzunzu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Kwadiba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Jele</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mantsha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">T</forename><surname>Marimira</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jafrearsci.2018.03.027</idno>
+		<ptr target="https://doi.org/10.1016/j.jafrearsci.2018.03.027"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of African Earth Sciences</title>
+		<imprint>
+			<biblScope unit="volume">143</biblScope>
+			<biblScope unit="page" from="187" to="194"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

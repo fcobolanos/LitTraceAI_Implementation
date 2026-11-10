@@ -1,0 +1,1034 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Artificial intelligence and communication technologies in academia: faculty perceptions and the adoption of generative AI</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Aya</forename><surname>Shata</surname></persName>
+							<email>aya.shata@unlv.edu</email>
+							<idno type="ORCID">0000-0003-1599-8179</idno>
+							<affiliation key="aff0">
+								<orgName type="department">Hank Greenspun School of Journalism and Media Studies</orgName>
+								<orgName type="institution">University of Nevada</orgName>
+								<address>
+									<addrLine>Las Vegas 4505 S. Maryland Parkway</addrLine>
+									<postBox>Box #45007</postBox>
+									<postCode>89154-5007</postCode>
+									<settlement>Las Vegas</settlement>
+									<region>NV</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kendall</forename><surname>Hartley</surname></persName>
+							<idno type="ORCID">0000-0003-3953-6008</idno>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Teaching and Learning</orgName>
+								<orgName type="institution">University of Nevada</orgName>
+								<address>
+									<addrLine>Las Vegas 4505 S. Maryland Parkway</addrLine>
+									<postBox>Box #453005</postBox>
+									<postCode>89154-3005</postCode>
+									<settlement>Las Vegas</settlement>
+									<region>NV</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Artificial intelligence and communication technologies in academia: faculty perceptions and the adoption of generative AI</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">2DC8446035FDBFD8145C1CC0F2E07FCE</idno>
+					<idno type="DOI">10.1186/s41239-025-00511-7</idno>
+					<note type="submission">Received: 25 October 2024 Accepted: 10 February 2025</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-08-27T15:12+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Artificial intelligence</term>
+					<term>Communication technology</term>
+					<term>Higher education</term>
+					<term>Technology adoption</term>
+					<term>Faculty</term>
+					<term>Trust</term>
+					<term>Self-efficacy</term>
+					<term>Social influence</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Artificial intelligence (AI) is ushering in an era of potential transformation in various fields, especially in educational communication technologies, with tools like ChatGPT and other generative AI (GenAI) applications. This rapid proliferation and adoption of GenAI tools have sparked significant interest and concern among college professors, who are dealing with evolving dynamics in digital communication within the classroom. Yet, the effect and implications of GenAI in education remain understudied. Therefore, this study employs the Technology Acceptance Model (TAM) and the Social Cognitive Theory (SCT) as theoretical frameworks to explore higher education faculty's perceptions, attitudes, usage, and motivations, as the underlying factors that influence their adoption or rejection of GenAI tools. A survey was conducted among fulltime higher education faculty members (N = 294) recruited from two mid-size public universities in the US. Results found that college professors' perceived usefulness of AI predicted their attitudes and intention to use and adopt the technology, more than their perceived ease of use. Trust and social reinforcement strongly influenced college professors' GenAI adoption decisions and acted as significant mediators to better understand the relationship between TAM and SCT. Findings emphasized the power of social dynamics in shaping professors' self-efficacy, attitudes, and use of GenAI. Trust enhances peer influence and affects how perceived usefulness shapes users' willingness to adopt technology, whereas self-efficacy has a minimal impact. This research provides valuable insights that inform higher education policies aimed at improving the educational experience for college students in an AI-driven workforce.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p>Generative AI (GenAI) has quickly become particularly consequential in higher education. Recent research indicates that 43% of adults aged 18-29 have used ChatGPT <ref type="bibr" target="#b23">(McClain, 2024)</ref>. This is up from 33% just nine months earlier. Higher education faculty face a rapidly changing classroom dynamic as these widely used, multimodal tools raise numerous opportunities and challenges. This study investigates these opportunities and challenges by exploring the current use and perspectives of higher education faculty regarding GenAI, the most recent additions to the educational communications and media technologies toolbox.</p><p>Generative AI (GenAI) is defined as a technology that leverages deep learning models to generate human-like content (e.g., images, words) in response to prompts <ref type="bibr" target="#b21">(Lim et al., 2023)</ref>. Examples of interactive text-based GenAI include OpenAI's ChatGPT, Google's Gemini, Anthropic's Claude, and Meta.AI. Multimodal GenAI tools are also becoming more widespread and are changing the landscape of educational media creation. Image development tools like DALL-E or Midjourney can be used to create visual content. Video development is rapidly advancing with tools such as Open AI's Sora and RunwayML. Taken together, the potential for creating more engaging and diverse digital educational materials is substantial.</p><p>Like most arenas, applications in the higher education context are rapidly emerging, and ever-increasing capabilities make it difficult to identify the most salient use cases. Teaching examples include the development of case studies and assessment items for a given topic. Research examples include support for qualitative data analysis. Logistical support includes the capacity to generate captions for images and videos. The latest LLM models have also introduced an incredible leap in the accuracy of speech-to-text transcription.</p><p>While artificial intelligence is not new and has been studied for years (decades in some fields), the rapid proliferation and adoption of GenAI tools have generated widespread concern and interest among educators and researchers <ref type="bibr" target="#b37">(Yusuf et al., 2024)</ref>. This interest has moved AI implications beyond the original academic disciplines such as computer science, information management, and other STEM fields. The implications for communication and education technologies beyond the academy's STEM disciplines are now garnering greater attention and are the target of this study. Our focus is on the implications for non-STEM fields where academicians likely do not have a deep grasp of the underlying technology. While this limits the generalizability, it provides valuable insights into the emerging impact of artificial intelligence on disciplines that have traditionally been less influenced by such technologies.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Literature review</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>AI in higher education</head><p>Artificial Intelligence is not a new phenomenon; its applications in higher education have been studied for decades <ref type="bibr" target="#b16">(Hartley et al., 2024)</ref>. Recent advances in the technology underlying AI applications have dramatically improved general capabilities <ref type="bibr" target="#b24">(Mollick, 2024)</ref>. These advances have introduced numerous new challenges and opportunities for higher education faculty <ref type="bibr" target="#b37">(Yusuf et al., 2024)</ref>.</p><p>The role of GenAI in academia and its implications for faculty are emerging and complex. One researcher conceptualizes the use of GenAI as 'co-intelligence' <ref type="bibr" target="#b24">(Mollick, 2024)</ref>, which is consistent with the admonition that these new tools are best conceived as assistants or collaborators. Researchers have also identified its paradoxes, as it can be viewed as supportive and adversarial, effective and inaccurate, popular and banned <ref type="bibr" target="#b21">(Lim et al., 2023)</ref>. Academic tasks such as teaching, service, and research all intersect with GenAI. Early research utilizing GenAI to accomplish tasks such as providing writing feedback has fallen short compared to human evaluators <ref type="bibr" target="#b30">(Steiss et al., 2024)</ref>. However, the tools are improving rapidly as is our understanding of how and when to utilize ChatGPT. The study noted above utilized ChatGPT version 3.5. A study comparing ChatGPT version 3.5 with 4.0 on the United States Medical Licensing Exam found marked improvement. 3.5 demonstrated an accuracy of 47.7%, while 4.0 leaped to 87.2% <ref type="bibr" target="#b29">(Shieh et al., 2024)</ref>. Whether or not this improvement translates into higher scores for students remains unclear.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Faculty and student perceptions of AI</head><p>Some have argued that the responsibility of preparing students for the future dictates preparation for a "society powered by AI" <ref type="bibr" target="#b8">(Chiu, 2024)</ref>. A rapidly expanding body of research has provided initial insights into GenAI's import to higher education. In a comparison of faculty and student perceptions of writing with AI tools, researchers found disagreements regarding the acceptable use of GenAI <ref type="bibr" target="#b4">(Barrett &amp; Pack, 2023)</ref>. Interestingly, these differences indicated a more positive view of GenAI by teachers than students. Work prior to the introduction of ChatGPT indicates that positive views of GenAI for learning might be justified. In a meta-analysis of the use of text-based chatbots in education, researchers found numerous advantages for students <ref type="bibr" target="#b20">(Labadze et al., 2023)</ref>. More recent work has supported the finding of improved performance in the short-term, however, there are also reasons to believe that GenAI use is better viewed as a 'crutch' that, when removed, can result in decreased understanding in the longer term <ref type="bibr" target="#b21">(Lim et al., 2023)</ref>. A common concern among educators is the potential for Gen AI to result in a decline in student's cognitive and logical skills <ref type="bibr" target="#b37">(Yusuf et al., 2024)</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Technology adoption</head><p>To understand the interaction between higher education faculty and GenAI, it is useful to look at technology adoption frameworks. The Technology Acceptance Model (TAM) suggests that technology acceptance is strongly influenced by its perceived ease of use (PEU) and perceived usefulness (PU) <ref type="bibr" target="#b11">(Davis, 1989;</ref><ref type="bibr" target="#b14">Granić &amp; Marangunić, 2019;</ref><ref type="bibr" target="#b34">Venkatesh et al., 2003)</ref>. Faculty perceptions of ease of use and usefulness are thus essential avenues to explore GenAI's implications for higher education. Another relevant framework is the Unified Theory of Acceptance and Use of Technology (UTAUT), which acknowledges the value of TAM constructs, and adds social influence and facilitating conditions to drive behavioral intention to use a technology <ref type="bibr" target="#b33">(Venkatesh et al., 2016)</ref>. To explore the social and personal factors, the Social Cognitive Theory (SCT) serves as another theoretical framework that explains the technology acceptance process <ref type="bibr" target="#b2">(Bandura, 1999)</ref>. In this study, we combine TAM and SCT to have a better understanding of college professors' uses of GenAI.</p><p>In brief, the behavioral intention to use technology will be directly related to the attitude towards the technology, which is in turn influenced by the perceived ease of use (PEU) and the perceived usefulness (PU) of the technology. In addition, other factors discussed below will contribute to the adoption equation.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Attitude</head><p>The user's attitude towards the technology and innovation can significantly influence the adoption of new technologies. Users' attitudes towards technological advancements are crucial in determining whether or not they will embrace innovations <ref type="bibr" target="#b11">(Davis, 1989;</ref><ref type="bibr" target="#b14">Granić &amp; Marangunić, 2019)</ref>. Regarding AI, individuals' attitudes and comfort levels can greatly influence acceptance and integration into various aspects of the education system <ref type="bibr" target="#b6">(Bower et al., 2024)</ref>. Preliminary studies suggest that faculty attitudes toward Gen AI are mixed <ref type="bibr" target="#b6">(Bower et al., 2024)</ref>. While a majority of faculty perceive the potential for major impact, these same faculty are more familiar with the technology.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>PEU/PU</head><p>One's attitude towards technology can be influenced by its perceived ease of use and its perceived usefulness <ref type="bibr" target="#b12">(Davis et al., 1989;</ref><ref type="bibr" target="#b14">Granić &amp; Marangunić, 2019)</ref>. These factors become critical as higher education faculty consider the adoption and inclusion of communication technologies.</p><p>The arrival of ChatGPT in November 2022 was significant in part because it introduced an approachable avenue for people to interact with an advanced large language model. Prior to this, Generative AI application users were largely limited to those with coding knowledge or domain-specific expertise. However, the perceived ease of use is somewhat limited in that the early interfaces were predominantly text-based. As the interfaces have developed to better match user needs, perceptions have and will improve. For example, ChatGPT, Claude and Gemini can now display preview windows that include working drafts of images, charts, tables, or code, substantially improving the ease of use <ref type="bibr" target="#b15">(Gupta et al., 2024)</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Self-efficacy</head><p>When considering attitudes and perceptions of new technology, a helpful framework is Bandura's social cognitive theory, which postulates the importance of content-specific self-efficacy in pursuing knowledge <ref type="bibr" target="#b3">(Bandura, 2002;</ref><ref type="bibr" target="#b34">Venkatesh et al., 2003)</ref>. Self-efficacy refers to an individual's belief in their ability to succeed in a given context or content area. Technology self-efficacy can play an essential mediating role in technology acceptance <ref type="bibr" target="#b14">(Granić &amp; Marangunić, 2019;</ref><ref type="bibr" target="#b18">Holden &amp; Rada, 2011)</ref>. For example, perceived ease of use was associated with self-efficacy in undergraduate students engaged in technology-supported self-directed learning <ref type="bibr" target="#b26">(Pan, 2020)</ref>. The intention to use and adopt GenAI tools is likely similarly influenced by self-efficacy for these emerging technologies. Users who have committed significant time to its use will be more likely to confidently use GenAI compared to those who have had limited engagement.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Social reinforcement</head><p>Research has also addressed the important role of social reinforcement. This can be defined as the degree to which users believe that their social networks feel it is important that they adopt a particular technology <ref type="bibr" target="#b22">(Marikyan et al., 2023)</ref>. While a recent meta-analysis concluded that the social influence association with behavior was nonsignificant, it did find an overall significant impact on attitudes <ref type="bibr" target="#b22">(Marikyan et al., 2023)</ref>. The rapid adoption of GenAI, major investments by major corporations, and extensive media coverage have resulted in substantial direct and indirect pressure on individuals toward adoption. These influences, of course, vary between cultures and disciplines. For example, the impact of GenAI on college composition courses has garnered substantial negative attention. Social cognitive theory acknowledges our enhanced capacity for observational learning and the vital role of social interactions <ref type="bibr" target="#b2">(Bandura, 1999)</ref>. This capacity, combined with the widespread discussion, will likely influence users' perceptions, attitudes, and self-efficacy toward using GenAI. In line with prior work in technology adoption <ref type="bibr" target="#b33">(Venkatesh et al., 2016)</ref>, we operationalize social influence as social reinforcement, reflecting the impact of others' opinions and behaviors on an individual's decision to use the technology.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Trust</head><p>Trust becomes a key consideration when investigating the adoption of new technologies. Trust can be described as the willingness of an individual to accept information from another, with the expectation that the information provider is accurate <ref type="bibr" target="#b35">(Wu et al., 2011)</ref>. A meta-analysis of technology adoption studies identified trust as strongly associated with PEU and PU <ref type="bibr" target="#b22">(Marikyan et al., 2023)</ref>. For example, <ref type="bibr" target="#b9">Choung et al. (2022)</ref> explored the role of trust in adopting AI voice assistant technology, and found trust significantly influenced both perceived usefulness of the AI voice assistant and users' attitudes toward it, which subsequently elevated usage intention. Similarly, <ref type="bibr" target="#b31">Tanantong and Wongras (2024)</ref> examined the use of AI in recruitment by human resources and found that while trust does not affect intention directly, it significantly influenced both perceived usefulness and ease of use. These findings underscore that trust has a significant impact on perceived ease of use, perceived usefulness, and attitudes toward GenAI.</p><p>Social networks and trust are integral for the diffusion of new technologies (Busken, 2020). According to Busken, once individuals recognize the potential benefits of a technology, it is necessary to build trust that the innovation will deliver the promised advantages. To achieve this, continuous reinforcement from social circles are key for developing trust in technology. This suggests that social reinforcement can influence trust perceptions which in turn influence the likelihood of technology adoption, particularly in the context of GenAI. Overall, trust becomes uniquely important when it comes to GenAI adoption, given the widespread concerns about the propensity towards hallucinations in the major models.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Current study</head><p>The purpose of this study is to improve our understanding of higher education faculty's perceptions, usage, and attitudes toward GenAI, with a focus on identifying motivations and barriers through the framework of existing research and technology adoption theories. In particular, we investigate the technological, social and psychological factors that have been demonstrated as relevant. These factors include those identified in TAM and SCT in addition to perceptions of Trust (Fig. <ref type="figure">1</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Proposed research questions and hypotheses</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RQ1: Does the TAM model perform similarly with GenAI as it does with other technologies?</head><p>H1 (a) Perceived Usefulness and (b) Perceived Ease of Use will positively influence College Professors' attitudes towards GenAI. H2 (a) Perceived Usefulness, (b) Perceived Ease of Use, and (c) College Professors' attitudes will positively influence behavioral intention to use GenAI.</p><p>H3 Perceived Ease of Use will positively influence College Professors' Perceived Usefulness of using GenAI.</p><p>H4 College Professors' attitudes toward GenAI will mediate the relationship between (a) Perceived Usefulness and (b) Perceived Ease of Use on their Behavioral Intention to Use GenAI.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RQ2: What is the relationship between the TAM model (PU and PEU) and the SCT (self-efficacy and social reinforcement) in understanding GenAI adoption?</head><p>H5 GenAI self-efficacy positively influences (a) Perceived Ease of Use, (b) College Professors' attitudes, and (c) behavioral intention to use GenAI.</p><p>H6 Social Reinforcement positively influences (a) Perceived Usefulness, (b) Perceived Ease of Use, (c) College Professors' attitudes, and (d) self-efficacy toward GenAI.</p><p>H7 Social reinforcement will mediate the relationship between (a) Perceived Ease of Use, and (b) Perceived Usefulness on college professors' behavioral intentions to use GenAI.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Fig. 1 Conceptual Framework and Hypotheses Summary</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Participants</head><p>An online survey was designed using Qualtrics with full-time higher education faculty members recruited from two mid-size public U.S. universities, one on the East Coast and one in the Southwest, to participate in this study. The sample represented all faculty members in the social sciences and humanities disciplines as they use GenAI in a similar manner that differs fundamentally from its application in STEM disciplines.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Procedures</head><p>The study procedures started by creating an email list for all faculty members obtained from the email directory available online, then filtered by discipline to include only social sciences and humanities. Using Qualtrics email distribution, we sent an email inviting them to participate in the study with a link to the survey. Upon clicking the link, they begin by giving their consent and answering a filter question about whether they have ever used GenAI; if they say no, we ask questions about why, current perceptions, concerns about AI, and any future intention, followed by some demographics questions then the survey is terminated. If they said yes, they have used GenAI, they continue to the main survey, where they start by reporting their comfort with technology, their use of GenAI technology in teaching, research, and service, and their views and concerns about GenAI. Then, it covered the main TAM theoretical constructs, followed by some demographic questions. Also, a couple of attention-check questions were added to the survey to ensure respondents were paying sufficient attention and avoid speeding through the survey or giving random answers that could harm data quality. Data collection took place from January to March 2024.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Measures</head><p>All the theoretical constructs in this study used existing measures, adapted to fit the AI context and measured using multi-item scales validated in previous research.</p><p>Behavior Intention, is the intention level to adopt GenAI, was measured using a five-point likert scale adapted from <ref type="bibr" target="#b36">(Youk &amp; Park, 2023)</ref> with four statements such as "I will be willing to use the AI technology in the future" (α = 0.957).</p><p>Perceived Usefulness. The degree to which a person believes that using GenAI technology would enhance his or her job performance <ref type="bibr" target="#b13">(Davis et al., 2024)</ref>. This construct was measured using a five-point Likert scale adapted from both <ref type="bibr" target="#b18">(Holden &amp; Rada, 2011;</ref><ref type="bibr" target="#b36">Youk &amp; Park, 2023)</ref> with seven statements such as "Using the Gen. Technology improves my performance in my job" (α = 0.906).</p><p>Perceived ease of use, is the degree to which a person believes that using GenAI would be free from effort, was measured with a nine-item, five-point Likert scale adapted from <ref type="bibr" target="#b18">(Holden &amp; Rada, 2011)</ref> including statements such as "I find it easy to get the technology to do what I want it to do" (α = 0.874).</p><p>AI self-efficacy is the users' personal confidence towards successfully and purposefully using the GenAI technology. The scale is adopted from <ref type="bibr" target="#b18">(Holden &amp; Rada, 2011)</ref>. The construct used a ten-point Guttman scale (1 = not at all confident to 10 = totally confident) such as "I could complete any desired task using GenAI technology if there was no one around to tell me what to do as I go. " (α = 0.931).</p><p>Attitudes toward GenAI, refers to an individual's overall affective and cognitive evaluation of a new technology. This was measured with a four-item using a fivepoint Likert scale adapted from <ref type="bibr" target="#b9">(Choung et al., 2022)</ref> including statements such as "I feel positive toward GenAI" (α = 0.931).</p><p>Social Reinforcement refers to the extent that technology was encouraged by others within their reference group or social networks. This was measured with a seven-item using a five-point Likert scale adapted from <ref type="bibr" target="#b10">(Compeau &amp; Higgins, 1995)</ref> and composed of five statements such as Respondents were asked to assess to what extent the use of GenAI was encouraged by "your job, manager, peers, friend, family, co-workers, subordinates. " (α = 0.858).</p><p>Trust assesses the psychological state of having positive expectations about GenAI <ref type="bibr" target="#b9">(Choung et al., 2022)</ref>. We adapted a scale from <ref type="bibr" target="#b19">Huh et al., (2005)</ref> that asked respondents to rate GenAI on four items using a five-point scale (believable, trustworthy, credible, and reliable) (α = 0.870).</p><p>Comfort with technology measures the acceptance, use and overall level of comfort with technology. Here, it was measured using a five-point Likert scale adapted from <ref type="bibr" target="#b28">(Rosen et al., 2013</ref>) that consisted of six items such as "I feel that I get more accomplished because of technology" (α = 0.820).</p><p>Finally, AI concerns included nine items obtained from media reports and discussions with many practitioners. Each item was assessed on a five-item scale and the measure was obtained by averaging the score of the nine items (e.g., plagiarism, copyright, accountability, originality etc.) (α = 0.842).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Sample characteristics</head><p>A total sample size of 294 higher-education faculty completed the survey. The sample consisted of Full Professors (24.5%), Associate Professors (23%), Assistant Professors (19%), Faculty in residence (7.5%), Adjunct Faculty (6.5%), and Visiting Faculty (6.5%). Of the sample, 82% did not hold an administrative position. They had multiple years of experience, 35% for 20 + years of experience, 21% between 9 and 14 years, 20% between 4 and 8 years, 15% between 15 and 20 years. Participants were Females (45%), Males (43%), Prefer not to answer (6%), and Non-binary/others (2%). Participants identified as Caucasian (69%), Black or African American (7%), Asian or Pacific Islander (7%), Hispanic (6%), Mixed race and others (3%). Their age ranged from 41-50 (25%), 51-60 (23%), 31-40 (21%), 61-70 (15%). Only 66.4% of college professors have reported that they used GenAI before.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Research questions</head><p>RQ1: Does the TAM model perform similarly with GenAI as it does with other technologies? RQ2: What is the relationship between the TAM model (PU and PEU) and the SCT (self-efficacy and social reinforcement) in understanding GenAI adoption? RQ3: How does Trust influence the relationship between the TAM model (PU and PEU) and the SCT (self-efficacy and social reinforcement) in understanding GenAI adoption?</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head><p>A series of statistical analyses were conducted to test the study hypotheses. The first research question involves evaluating the hypotheses related to the TAM with GenAI technology. For the first hypothesis, a multiple regression was run to predict College Professors' attitudes toward using GenAI from (a) Perceived Usefulness (PU) and (b) Perceived Ease of Use (PEU). Results found that both variables statistically significantly predicted the attitude to use GenAI [F (2, 188) = 108.476, p &lt; 0.001, R 2 = 0.536], accounting for 54% of the variance. The PU [β = 0.655, t(188) = 12.221, p &lt; 0.001] and PEU [β = 0.163, t(188) = 3.040, p &lt; 0.01] were found to positively predict the attitude to use GenAI. Hence, H1 (a,b) was fully supported (see Table <ref type="table" target="#tab_0">1</ref>).</p><p>Similarly, for the second hypothesis, a multiple regression was run to predict College Professors' behavioral intention to use GenAI from (a) PU, (b) PEU, and (c) attitudes. Results indicated that the model explained 58% of the variance and that the model was a significant predictor of behavioral intention to use GenAI [F (3, 187) = 85.84, p &lt; 0.001, R 2 = 0.579]. Only the PU [β = 0.347, t(187) = 5.07, p &lt; 0.001] and attitude [β = 0.462, t(187) = 6.6307, p &lt; 0.001] were found to positively predict behavioral intention to use GenAI, but PEU was not significant (p = 0.645). Hence, H2 (a, c) were only supported (see Table <ref type="table" target="#tab_0">1</ref>).</p><p>The third hypothesis predicted College Professors' PU of using GenAI from PEU. Results found that the model was significant [F (1, 193) = 30.112, p &lt; 0.001, R 2 = 0.135], accounting for 14% of the variance, and PEU [β = 0.367, t(193) = 5.487, p &lt; 0.001] was found to positively predict Perceived Usefulness to use GenAI. Hence, H3 was supported.</p><p>To test the H4 hypothesis, we conducted a mediation analysis using the SPSS PROCESS macro <ref type="bibr" target="#b17">(Hayes, 2017)</ref> to examine whether attitudes mediate the relationship between (a) PU and (b) PEU on college Professors' behavior intention to use GenAI. Using model 4, we ran a bootstrap analysis with the default 5000 iterations. For PU, results indicated that the model was a significant predictor of attitude [F(2, 188) = 129.20, p &lt; 0.01, R2 = 0.58] with 58% accounting for the variance. Results showed that attitudes mediated the relation between PU and behavior intention (B = 0.39, 95% CI of 0.24 to 0.56). While for PEU, results indicated that the model was a significant predictor of attitude [F(2, 188) = 102.49, p &lt; 0.01, R2 = 0.52] with 52% accounting for the variance. Results showed that attitudes mediated the relation between PEU and behavior intention (B = 0.41, 95% CI of 0.27 to 0.58). Thus, only H4 (a,b) was fully supported (see Fig. <ref type="figure" target="#fig_0">2</ref>).</p><p>The second research question and its corresponding hypotheses aims to integrate and examine the TAM model with SCT theory. The fifth hypothesis is about self-efficacy. A multivariate multiple regression was run to assess how self-efficacy influences Professors' (a) PEU, (b) attitudes and (c) behavioral intention to use GenAI. Results found that GenAI Self-efficacy statistically significantly predicted PEU (b = 0.131, p &lt; 0.001, 95% CI [0.090, 0.172]), but neither predicted attitude (p = 0.113), nor behavioral intention to use GenAI (p = 0.571). Thus, only H5a is supported (see Table <ref type="table" target="#tab_1">2</ref>).</p><p>For the sixth hypothesis, a multivariate multiple regression was run to examine the influence of social reinforcement on PU, PEU, attitude and self-efficacy. Results found that Social Reinforcement statistically significantly predicted all the variables; PU (b = 0.348, p &lt; 0.001, 95% CI [0.220, 0.477]), PEU (b = 0.161, p &lt; 0.01, 95% CI [0.055, 0.268]), attitude (b = 0.335, p &lt; 0.001, 95% CI [0.185, 0.485]), and self-efficacy (b = 0.357, p &lt; 0.05, 95% CI [0.013, 0.702]). Thus, all H6 (a,b,c,d) was fully supported (see Table <ref type="table" target="#tab_1">2</ref>).</p><p>To test the seventh hypothesis, we conducted a mediation analysis using the SPSS PROCESS macro <ref type="bibr" target="#b17">(Hayes, 2017)</ref> to examine whether social reinforcement mediates the relationship between (a) PEU and (b) PU and College Professors' behavioral intention to use GenAI. Using model 4, we ran a bootstrap analysis with the default 5000 iterations. For PEU, results showed that the model was significant [F(2, 189) = 15.19, p &lt; 0.01, R 2 = 0.14] and that social reinforcement mediated the relation between PEU and behavior intention (B = 0.05, 95% CI of 0.00 to 0.12) (See Fig. <ref type="figure">3</ref>). However, for PU, mediation was not established because the regression coefficient between social reinforcement and behavior intention was not significant at (p = 0.49) and the Zero falls within the confidence interval range (-0.07 to 0.03). This is explained by the direct effect (B = 0.79) being nearly identical to the total effect (B = 0.78), suggesting there was no indirect effect. Hence, H7a was only supported.</p><p>The third research question and its corresponding hypotheses address trust perception. For the eighth hypothesis, a multivariate multiple regression found that Trust sta-  <ref type="table" target="#tab_1">2</ref>. Thus, <ref type="figure">H8 (a,</ref><ref type="figure">b,</ref><ref type="figure">c,</ref><ref type="figure">d</ref>) was fully supported (see Table <ref type="table" target="#tab_1">2</ref>).</p><p>Since Trust was one of the strong factors that influenced the TAM model, and to answer the ninth hypothesis, we conducted a moderation analysis using model 1 with the SPSS PROCESS macro <ref type="bibr" target="#b17">(Hayes, 2017)</ref> to assess whether Trust moderates the relation between PU and behavioral intention towards GenAI. For PU, results indicated that the overall model was significant <ref type="bibr">[F(3, 191)</ref> = 68.41, p &lt; 0.01, R 2 = 0.52]. The interaction between PU and Trust was significant (B = -0.21, SE = 0.06, t = -3.81, p &lt; 0.05), indicating that the relationship between PU and behavior intention depends on the level of Trust. Analysis revealed that the simple slopes at different levels of Trust (e.g., low, medium, and high levels) are all positive, indicating that the PU has a positive effect on the behavior intention at all levels of Trust. However, the magnitude of this positive effect decreases as the Trust increases. Thus, the relationship between the PU on behavior intention was stronger when the Trust was low (B = 0.85, SE = 0.08, t(191) = 11.21, p &lt; 0.001) compared to when it was high (B = 0.48, SE = 0.09, t(191) = 5.24, p &lt; 0.001). Thus, H9 was supported (see Fig. <ref type="figure" target="#fig_2">4</ref>).</p><p>For hypothesis ten, we conducted a mediation analysis using the SPSS PROCESS macro <ref type="bibr" target="#b17">(Hayes, 2017)</ref> to examine whether Trust mediates the relationship between social reinforcement and behavior intention to use GenAI. Using model 4, results indicated that the model was significant [F(2, 189) = 24.20, p &lt; 0.01, R2 = 0.20] and that trust mediated the relation between social reinforcement and behavior intention (B = 0.11, 95% CI of 0.04 to 0.19). It is worth noting that only the indirect effect was significant, while the direct effect was not significant (p = 0.079). Hence, H10 was supported (see Fig. <ref type="figure">5</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p>By integrating the TAM model and SCT theory, this study explored higher education faculty's perceptions, attitudes, and experiences regarding GenAI. It also examines the potential benefits and drawbacks, motivations and concerns, and factors behind adopting or rejecting GenAI tools. Overall, our results offer theoretical support for the proposed model to evaluate GenAI adoption decisions among college processors (see Table <ref type="table">3</ref>). with GenAI. In contrast, perceived usefulness (PU) demonstrates a strong influence on behavioral intentions to use GenAI, both directly and indirectly through attitudes.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Trust</head><p>Overall, trust emerges as the most significant predictor influencing all factors (PU, PEU, SR, SE, Att) related to the decision to adopt GenAI technology, closely followed by social reinforcement. In this study, trust refers to perceptions of believability, credibility, reliability, and trustworthiness. Findings show that trust in technology has a direct effect on Professors' belief that it will enhance their performance, i.e., perceptions of usefulness. It can also foster a sense of simplicity, which, in turn, boosts their self-efficacy-their confidence in their ability to effectively utilize the technology. Increased trust can lead to more positive attitudes and stronger intentions to adopt GenAI technology. This is particularly relevant in light of the prevailing concerns surrounding this controversial technology <ref type="bibr" target="#b15">(Gupta et al., 2024)</ref>; professors' level of trust can dispel their concerns and significantly shape their perceptions, attitudes, and subsequent decisions regarding its adoption. Thus, educational institutions need to offer clear information while addressing any misinformation to alleviate fear and skepticism about GenAI and build trust.</p><p>Moderation analysis revealed that trust significantly influences the relationship between perceived usefulness and the intention to adopt GenAI technology. However, this effect is conditional, with the impact becoming weaker at higher levels of trust. This suggests that when professors have a high level of trust in the technology, they may rely less on its perceived usefulness or prioritize their trust over perceived usefulness to determine their intention to adopt it. Conversely, when trust is low, professors will need clearer and more compelling reasons for adoption, leading them to rely heavily on perceptions of usefulness as a motivating factor to encourage them to adopt the technology. Overall, this highlights trust as a strong factor that can potentially overshadow other essential factors like perceived usefulness.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Social reinforcement</head><p>The results indicate that social reinforcement serves as another significant predictor for most factors that affect the decisions to adopt, particularly because social reinforcement is a common factor across the Social Cognitive Theory <ref type="bibr" target="#b2">(Bandura, 1999)</ref> and various technology adoption theories <ref type="bibr" target="#b14">(Granić &amp; Marangunić, 2019;</ref><ref type="bibr" target="#b33">Venkatesh et al., 2016)</ref>. This finding is consistent with similar investigations in other fields such as healthcare <ref type="bibr" target="#b27">(Roppelt et al., 2024)</ref> and journalism <ref type="bibr" target="#b32">(Trang et al., 2024)</ref>. This underscores the critical role of social interactions and social environments in shaping professors' perceptions, attitudes, and decisions regarding the adoption of GenAI technology. Specifically, results found that social reinforcement has a direct and positive influence on perceptions of usefulness and ease of use, fostering favorable attitudes and encouraging the overall decision to adopt the GenAI technology. Additionally, reinforcement from one's social circles can positively influence professors' belief in their own ability to use and adopt the GenAI (self-efficacy); the belief that "if others can do it, so can I" serves to motivate and facilitate adoption among peers. Therefore, these findings suggest that social dynamics play a big role in decisions to adopt GenAI technology. This effect is important given that GenAI technology is associated with various ethical concerns, prompting many individuals to approach it with caution. Thus, social interactions with peers, conversations and positive feedback and experiences shared by others within their social groups, and discussion within the departmental, college and university levels can all influence perceptions, attitudes and use of the technology. This suggests that expectations and behaviors of a social group can influence one's disposition toward GenAI technology and its perceived value. If using a particular technology becomes common within a community, individuals are more likely to adopt it.</p><p>Additionally, mediation analysis showed that with social reinforcement as a mediator, there was no mediating indirect effect between perceived usefulness and behavior intention, only a direct effect. This means that once professors perceive GenAI technology to be useful, they will use it. They do not need further reinforcement from their social networks. This explains why the direct effect was nearly identical to the total effect. On the other hand, for perceived ease of use, there was a significant mediation effect on behavioral intention to use GenAI. This suggests that perceptions of easiness are amplified when reinforced by others within social circles who have used it or hold positive attitudes towards the new technology, leading to a higher likelihood of adoption.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Trust and social reinforcement</head><p>The mediation analysis showed there was no direct effect from social reinforcement in behavioral intention, but there was a significant indirect effect of trust mediating the relationship between social reinforcement and behavioral intention. This means that while social reinforcement alone does not directly influence intention, it enhances trust, which subsequently increases the likelihood of technology adoption. This is because such social interactions can be a validation and reinforcement that enhance one's trust, as well as it can help reduce uncertainty or alleviate doubts, thus feeling more confident to use it. However, simply receiving social reinforcement does not directly lead to an intention to use the technology because it depends on the credibility of the source and pre-existing views that can make them skeptical and more resistant to positive views shared by others.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Self-efficacy</head><p>The results indicated that self-efficacy can only influence perceptions of ease of use, which is in line with past research showing a positive relationship between technology self-efficacy and perceived ease of use <ref type="bibr" target="#b18">(Holden &amp; Rada, 2011)</ref>. This is logical because more confidence in one's ability to use GenAI will lead to perceived mastery and ease of use. However, results also indicated that this confidence alone is insufficient to generate positive attitudes or behavioral intentions to use GenAI, suggesting that the issue may not lie in the ability to use the technology but rather in the ongoing concerns and controversies surrounding its use. This finding aligns with past research that the relationship between self-efficacy and behavioral intentions is often mixed and not always significant <ref type="bibr" target="#b18">(Holden &amp; Rada, 2011;</ref><ref type="bibr" target="#b25">Motshegwe &amp; Batane, 2015)</ref>. Attitudes and behavioral intentions are shaped by a broader set of cognitive, social, and contextual factors such as values, beliefs, institutional support, trust, and peer influence, which may overshadow the influence of self-efficacy alone. According to <ref type="bibr" target="#b0">Bandura (1997)</ref>, four factors impact self-efficacy in different ways: mastery of experiences, social modeling, verbal persuasion, and emotional responses. These factors highlight the complexity of self-efficacy, with social reinforcement and trust playing significant roles in shaping it. This suggests that self-efficacy, while important, is not the sole driver of attitudes or behavioral intentions, which are instead shaped by a much wider range of considerations.</p><p>Another possible explanation for the limited significance of self-efficacy, despite faculty feeling capable of using AI technology (i.e., high self-efficacy), they may question its relevance or effectiveness. This skepticism can undermine their intentions to use the technology, which helps explain why perceived usefulness had a stronger impact on attitudes and behavioral intentions than ease of use. Additionally, resistance may also arise from faculty being accustomed to traditional teaching methods, concerns about increased workload or time commitments to use the AI technology, or perceived threats to autonomy. Therefore, while faculty may have the self-efficacy to use AI, they may still hold negative attitudes or fail to integrate it into their work.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conclusion</head><p>This study integrated the TAM model and SCT theory to explore higher education faculty's perceptions, attitudes, motivations, and concerns and examines the potential benefits, drawbacks, and factors behind adopting or rejecting GenAI tools. Results found theoretical support for the proposed model to evaluate GenAI adoption. Specifically, findings show that communicating the practical benefits of GenAI is necessary for GenAI adoption. However, perceived ease alone is insufficient to encourage adoption, but when coupled with positive attitudes and social circles, it becomes influential in encouraging adoption. Furthermore, trust and social reinforcement are major and critical players in influencing GenAI adoption decisions. There is a social dynamic involved in the GenAI adoption process that can shape professors' perceptions, attitudes, and decisions. Positive social interactions can enhance trust by acting as a validation or reinforcement of one's views, as well as can reduce uncertainty or alleviate doubts, which increases the likelihood of technology adoption.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Implications, future studies, and limitations</head><p>This study explores the perspective of higher education faculty regarding the utilization and adoption of GenAI. A deeper understanding of educators' perspectives can shape higher education policies and guide university leaders, policymakers and educators in enhancing the educational experience for college students in an AI-driven workforce. As trust plays a pivotal role in the adoption of GenAI, educational institutions need to provide transparent information and address misinformation to reduce fear and skepticism surrounding the technology, while effectively communicating its practical benefits and functionalities to build credibility. Given the significant role of social dynamics in shaping faculty attitudes toward GenAI, constructive social dialogue and shared experiences within departments, colleges, and universities can greatly influence perceptions of new technologies. Thus, fostering a supportive social environment can deepen our understanding of the potential impacts of GenAI in educational settings, contributing to a more informed and equitable approach to improving educational practices and outcomes.</p><p>Future studies could further explore the role of institutional support and messaging regarding the use of AI. Although self-efficacy had a minimal impact on faculty adoption decisions, further investigation into the underlying reasons is necessary, as it can influence the effective utilization of this technology and provide a better understanding of faculty behaviors. Given the substantive ethical issues surrounding GenAI, it is a technology that will likely follow a less typical adoption path, particularly in higher education. For example, uncertainty regarding the faculty's use of AI for writing that does not 'cross the line' will cause many to pause. Therefore, it is crucial to address concerns related to the responsible and ethical use of GenAI. Institutions also face ongoing decisions regarding the availability of AI tools that are often embedded in existing software. Additionally, using qualitative methods offers a deeper understanding of how faculty members perceive GenAI technology, its ethical considerations, and its potential impact on their teaching practices. Incorporating open-ended questions within the different areas of use could further elucidate the findings. Research should examine how the adoption of GenAI varies across academic disciplines and cultural contexts, identifying unique challenges and opportunities within each field. Given the rapid developments in GenAI, longitudinal research is necessary to assess how perceptions and uses of GenAI evolve over time.</p><p>The targeted sampling strategy of non-STEM fields partially limits the generalizability of this study. There is little doubt that educators beyond the scope of this population will differ in their views of the role of GenAI in their work. Furthermore, the study was conducted with two mid-sized research-intensive public universities in the U.S that may have limited generalizability to other educational contexts compared to smaller institutions, private universities, teaching-intensive and international settings, potentially leading to different outcomes. The reliance on self-report data regarding potentially controversial topics may result in responses that might be viewed as more favorable at the expense of accuracy. Additionally, the study's focus on a specific point in time may not capture evolving attitudes or changes in behaviors, especially as GenAI technology rapidly advances. Another potential limitation is self-selection bias can influence the findings and limit the generalizability of the results. Consequently, the results may not fully reflect the diversity of perspectives, behaviors, or experiences within the broader population. Finally, while we studied the role of trust and social reinforcement, several factors can affect faculty AI adoption such as institutional support and culture, training and professional development, and discipline or areas of specialization.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 2</head><label>2</label><figDesc>Fig. 2 TAM Mediation Analysis (H4)</figDesc><graphic coords="10,129.46,648.62,336.36,58.92" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head/><label/><figDesc>tistically significantly influenced PU (b = 0.525, p &lt; 0.001, 95% CI [0.402, 0.648]), PEU (b = 0.316, p &lt; 0.001, 95% CI [0.212, 0.421]), attitude (b = 0.630, p &lt; 0.001, 95% CI [0.493, 0.768]), and behavioral intention to use GenAI (b = 0.503, p &lt; 0.001, 95% CI [0.354, 0.652]), as shown in Table</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 4</head><label>4</label><figDesc>Fig. 4 Moderation with Trust</figDesc><graphic coords="12,170.08,88.58,255.12,152.76" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head/><label/><figDesc/><graphic coords="6,128.56,88.58,338.16,212.28" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1</head><label>1</label><figDesc>Multiple regression with TAM</figDesc><table><row><cell/><cell>Attitude</cell><cell/><cell>Behavioral Intention</cell><cell/></row><row><cell/><cell>β</cell><cell>Sig</cell><cell>β</cell><cell>Sig</cell></row><row><cell>Perceived usefulness</cell><cell>0.655</cell><cell>0.000</cell><cell>0.347</cell><cell>0.000</cell></row><row><cell>Perceived ease of use</cell><cell>0.163</cell><cell>0.003</cell><cell>-</cell><cell>0.645</cell></row><row><cell>Attitude</cell><cell>-</cell><cell>-</cell><cell>0.462</cell><cell>0.000</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2</head><label>2</label><figDesc>Comparison of Factors affecting Technology Adoption</figDesc><table><row><cell/><cell>Self-efficacy</cell><cell/><cell cols="2">Social reinforcement</cell><cell>Trust</cell><cell/></row><row><cell/><cell>B</cell><cell>Sig</cell><cell>B</cell><cell>Sig</cell><cell>B</cell><cell>Sig</cell></row><row><cell>Perceived usefulness</cell><cell>-</cell><cell>0.551</cell><cell>0.348</cell><cell>0.000</cell><cell>0.525</cell><cell>0.000</cell></row><row><cell>Perceived ease of use</cell><cell>0.131</cell><cell>0.000</cell><cell>0.161</cell><cell>0.003</cell><cell>0.316</cell><cell>0.000</cell></row><row><cell>Attitude</cell><cell>-</cell><cell>0.113</cell><cell>0.335</cell><cell>0.000</cell><cell>0.630</cell><cell>0.000</cell></row><row><cell>Behavior intention</cell><cell>-</cell><cell>0.571</cell><cell>0.238</cell><cell>0.003</cell><cell>0.503</cell><cell>0.000</cell></row><row><cell>Trust</cell><cell>0.072</cell><cell>0.011</cell><cell>0.232</cell><cell>0.001</cell><cell>-</cell><cell>-</cell></row><row><cell>Self-efficacy</cell><cell>-</cell><cell>-</cell><cell>0.357</cell><cell>0.042</cell><cell>0.466</cell><cell>0.011</cell></row><row><cell>Social reinforcement</cell><cell>0.061</cell><cell>0.042</cell><cell>-</cell><cell>-</cell><cell>0.254</cell><cell>0.001</cell></row></table><note><p>Fig. 3 Social Reinforcement Mediation Analysis (H7)</p></note></figure>
+		</body>
+		<back>
+
+			
+			<div type="acknowledgement">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Acknowledgements</head><p>Not applicable.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"> <ref type="bibr">Shata and Hartley Int J Educ Technol High Educ (2025)</ref> <p>22:14</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RQ3: How does Trust influence the relationship between the TAM model (PU and PEU) and the SCT (self-efficacy and social reinforcement) in understanding GenAI adoption?</head><p>H8 Trust in GenAI positively influences (a) Perceived Usefulness, (b) Perceived Ease of Use, (c) attitudes, and (d) behavioral intention toward GenAI. H9 Trust will moderate the relationship between Perceived Usefulness and college professors' behavioral intentions to use GenAI. H10 Trust will mediate the relationship between social reinforcement and college professors' behavioral intentions to use GenAI.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods</head><p>This study employed a survey design to explore higher education faculty's perceptions, attitudes, uses, and experiences regarding GenAI. The primary objective was to examine the potential motivations, barriers and factors underlying the adoption or rejection of GenAI tools among university professors. <ref type="bibr">Shata and Hartley Int J Educ Technol High Educ (2025)</ref> 22:14</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>TAM</head><p>All hypotheses derived from the Technology Acceptance Model (TAM) were found to be statistically significant. Results indicated that perceived usefulness exerts a considerably stronger influence on attitudes and, specifically, on behavioral intentions compared to perceived ease of use. This highlights the importance of demonstrating the practical benefits of GenAI technology to encourage its adoption. Notably, while PEU did not demonstrate a direct significant effect on college professors' behavioral intentions to use GenAI (p = 0.645), it exhibited a significant indirect mediation effect on behavioral intentions through attitudes. Specifically, mediation analysis revealed that of the total effect (B = 0.498), the indirect effect accounted for (B = 0.413), whereas the direct effect was relatively minor, at (B = 0.085). Thus, the indirect effect predominantly explains the relationships within the model. These findings suggest that perceptions of ease of use of GenAI alone are insufficient to drive adoption among professors, but when these perceptions are coupled with positive attitudes toward GenAI, they can significantly enhance the likelihood of adoption. This indicates that professors may need compelling reasons and motivations to engage      Author contributions AS: conception, design of the work, acquisition, analysis, interpretation of data, drafted the work, Approved the submitted version (and any substantially modified version that involves the author's contribution to the study); Agreed both to be personally accountable for the author's own contributions and to ensure that questions related to the accuracy or integrity of any part of the work, even ones in which the author was not personally involved, are appropriately investigated, resolved, and the resolution documented in the literature. KH: design of the work, acquisition, interpretation of data, drafted the work, Approved the submitted version (and any substantially modified version that involves the author's contribution to the study); Agreed both to be personally accountable for the author's own contributions and to ensure that questions related to the accuracy or integrity of any part of the work, even ones in which the author was not personally involved, are appropriately investigated, resolved, and the resolution documented in the literature.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Funding</head><p>The research was not supported by external funding organizations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Availability of data and material</head><p>The datasets used and/or analyzed during the current study are available from the corresponding author on reasonable request.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Declarations</head><p>Ethics approval and consent to participate This manuscript has not been published or submitted for review to any other outlet. The study was reviewed and approved by the University of Nevada, Las Vegas Office of Research Integrity.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Competing interests</head><p>The authors declare that they have no financial or non-financial competing interests. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Publisher's Note</head><p>Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">Self-efficacy: The exercise of control</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bandura</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">Freeman</forename></persName>
+		</author>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Social cognitive theory: An agentic perspective</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bandura</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/1467-839X.00024</idno>
+		<ptr target="https://doi.org/10.1111/1467-839X.00024"/>
+	</analytic>
+	<monogr>
+		<title level="j">Asian Journal of Social Psychology</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="21" to="41"/>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Social cognitive theory in cultural context</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bandura</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/1464-0597.00092</idno>
+		<ptr target="https://doi.org/10.1111/1464-0597.00092"/>
+	</analytic>
+	<monogr>
+		<title level="j">Applied Psychology</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="269" to="290"/>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Not quite eye to A.I.: Student and teacher perspectives on the use of generative artificial intelligence in the writing process</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Barrett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pack</surname></persName>
+		</author>
+		<idno type="DOI">10.1186/s41239-023-00427-0</idno>
+		<ptr target="https://doi.org/10.1186/s41239-023-00427-0"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Educational Technology in Higher Education</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">59</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Hartley</forename><surname>Shata</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int J Educ Technol High Educ</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page">14</biblScope>
+			<date type="published" when="2025">2025</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">How should we change teaching and assessment in response to increasingly powerful generative Artificial Intelligence? Outcomes of the ChatGPT teacher survey</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bower</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Torrington</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W M</forename><surname>Lai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Petocz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Alfano</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10639-023-12405-0</idno>
+		<ptr target="https://doi.org/10.1007/s10639-023-12405-0"/>
+	</analytic>
+	<monogr>
+		<title level="j">Education and Information Technologies</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Spreading information and developing trust in social networks to accelerate diffusion of innovations</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Buskens</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.tifs.2020.10.040</idno>
+		<ptr target="https://doi.org/10.1016/j.tifs.2020.10.040"/>
+	</analytic>
+	<monogr>
+		<title level="j">Trends in Food Science Technology</title>
+		<imprint>
+			<biblScope unit="volume">106</biblScope>
+			<biblScope unit="page" from="485" to="488"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Future research recommendations for transforming higher education with generative AI</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">K F</forename><surname>Chiu</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.caeai.2023.100197</idno>
+		<ptr target="https://doi.org/10.1016/j.caeai.2023.100197"/>
+	</analytic>
+	<monogr>
+		<title level="j">Computers and Education: Artificial Intelligence</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">100197</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Trust in AI and its role in the acceptance of AI technologies</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Choung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>David</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ross</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/10447318.2022.2050543</idno>
+		<ptr target="https://doi.org/10.1080/10447318.2022.20505"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Human-Computer Interaction</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="1727" to="1739"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Application of social cognitive theory to training for computer skills</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Compeau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Higgins</surname></persName>
+		</author>
+		<idno type="DOI">10.1287/isre.6.2.118</idno>
+		<ptr target="https://doi.org/10.1287/isre.6.2.118"/>
+	</analytic>
+	<monogr>
+		<title level="j">Information Systems Research</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="118" to="143"/>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Perceived usefulness, perceived ease of use, and user acceptance of information technology</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">D</forename><surname>Davis</surname></persName>
+		</author>
+		<idno type="DOI">10.2307/249008</idno>
+		<ptr target="https://doi.org/10.2307/249008"/>
+	</analytic>
+	<monogr>
+		<title level="j">MIS Quarterly</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="319" to="340"/>
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">User acceptance of computer technology: A comparison of two theoretical models</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">D</forename><surname>Davis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">P</forename><surname>Bagozzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">R</forename><surname>Warshaw</surname></persName>
+		</author>
+		<idno type="DOI">10.1287/mnsc.35.8.982</idno>
+		<ptr target="https://doi.org/10.1287/mnsc.35.8.982"/>
+	</analytic>
+	<monogr>
+		<title level="j">Management Science</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="982" to="1003"/>
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">D</forename><surname>Davis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Granić</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Marangunić</surname></persName>
+		</author>
+		<title level="m">The technology acceptance model: 30 years of TAM</title>
+		<imprint>
+			<publisher>Springer International Publishing AG</publisher>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Technology acceptance model in educational context: A systematic literature review</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Granić</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Marangunić</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/bjet.12864</idno>
+		<ptr target="https://doi.org/10.1111/bjet.12864"/>
+	</analytic>
+	<monogr>
+		<title level="j">British Journal of Educational Technology</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="2572" to="2593"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Adoption and impacts of generative artificial intelligence: Theoretical underpinnings and research agenda</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Gupta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Nair</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mishra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ibrahim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bhardwaj</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jjimei.2024.100232</idno>
+		<ptr target="https://doi.org/10.1016/j.jjimei.2024.100232"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Information Management Data Insights</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">100232</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Artificial intelligence supporting independent student learning: An evaluative case study of ChatGPT and learning to code</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hartley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hayak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><forename type="middle">H</forename><surname>Ko</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Education Sciences</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">120</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<title level="m" type="main">Introduction to mediation, moderation, and conditional process analysis: A regression-based approach</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Hayes</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<publisher>Guilford publications</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Understanding the influence of perceived usability and technology self-efficacy on teachers' technology acceptance</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Holden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rada</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/15391523.2011.10782576</idno>
+		<ptr target="https://doi.org/10.1080/15391523.2011.10782576"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Research on Technology in Education</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="343" to="367"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Factors affecting trust in on-line prescription drug information and impact of trust on behavior following exposure to DTC advertising</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Huh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Delorme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">N</forename><surname>Reid</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Health Communication</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="711" to="731"/>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Role of AI chatbots in education: Systematic literature review</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Labadze</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Grigolia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Machaidze</surname></persName>
+		</author>
+		<idno type="DOI">10.1186/s41239-023-00426-1</idno>
+		<ptr target="https://doi.org/10.1186/s41239-023-00426-1"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Educational Technology in Higher Education</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">56</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Generative AI and the future of education: Ragnarök or reformation? A paradoxical perspective from management educators</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gunasekara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Pallant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">I</forename><surname>Pallant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Pechenkina</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijme.2023.100790</idno>
+		<ptr target="https://doi.org/10.1016/j.ijme.2023.100790"/>
+	</analytic>
+	<monogr>
+		<title level="j">The International Journal of Management Education</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">100790</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Technology acceptance research: Meta-analysis</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Marikyan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Papagiannidis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Stewart</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/01655515231191177</idno>
+		<ptr target="https://doi.org/10.1177/016555152311911"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Information Science</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<monogr>
+		<title level="m" type="main">Americans' use of ChatGPT is ticking up, but few trust its election information</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Mcclain</surname></persName>
+		</author>
+		<ptr target="https://www.pewresearch.org/short-reads/2024/03/26/americans-use-of-chatgpt-is-ticking-up-but-few-trust-its-election-information/"/>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+		<respStmt>
+			<orgName>Pew Research Center</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<author>
+			<persName><forename type="first">E</forename><surname>Mollick</surname></persName>
+		</author>
+		<ptr target="http://ebookcentral.proquest.com/lib/unlv/detail.action?docID=30848006"/>
+		<title level="m">Co-Intelligence: Living and Working with AI</title>
+		<imprint>
+			<publisher>Penguin Publishing Group</publisher>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Factors influencing instructors' attitudes toward technology integration</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Motshegwe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Batane</surname></persName>
+		</author>
+		<idno type="DOI">10.18785/jetde.0801.01</idno>
+		<ptr target="https://doi.org/10.18785/jetde.0801"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Educational Technology Development and Exchange (JETDE)</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Technology acceptance, technological self-efficacy, and attitude toward technology-based self-directed learning: Learning motivation as a mediator</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Pan</surname></persName>
+		</author>
+		<idno type="DOI">10.3389/fpsyg.2020.564294</idno>
+		<ptr target="https://doi.org/10.3389/fpsyg.2020.564294"/>
+	</analytic>
+	<monogr>
+		<title level="j">Frontiers in Psychology</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Artificial intelligence in healthcare institutions: A systematic literature review on influencing factors</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Roppelt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">K</forename><surname>Kanbach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kraus</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.techsoc.2023.102443</idno>
+		<ptr target="https://doi.org/10.1016/j.techsoc.2023.102443"/>
+	</analytic>
+	<monogr>
+		<title level="j">Technology in Society</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="page">102443</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">The media and technology usage and attitudes scale: An empirical investigation</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">D</forename><surname>Rosen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Whaling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Carrier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">A</forename><surname>Cheever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rokkum</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Computers in Human Behavior</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="2501" to="2511"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Assessing ChatGPT 4.0's test performance and clinical diagnostic accuracy on USMLE STEP 2 CK and clinical case reports</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Shieh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Tran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Freed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Majety</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41598-024-58760-x</idno>
+		<ptr target="https://doi.org/10.1038/s41598-024-58760-x"/>
+	</analytic>
+	<monogr>
+		<title level="j">Scientific Reports</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<date type="published" when="2024">2024. 9330</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Comparing the quality of human and ChatGPT feedback of students' writing</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Steiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tate</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Graham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cruz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hebert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Moon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Tseng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Warschauer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Olson</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.learninstruc.2024.101894</idno>
+		<ptr target="https://doi.org/10.1016/j.learninstruc.2024.101894"/>
+	</analytic>
+	<monogr>
+		<title level="j">Learning and Instruction</title>
+		<imprint>
+			<biblScope unit="volume">91</biblScope>
+			<biblScope unit="page">101894</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">A UTAUT-based framework for analyzing users' intention to adopt artificial intelligence in human resource recruitment: A case study of Thailand</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tanantong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Wongras</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Systems</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">28</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Understanding the adoption of artificial intelligence in journalism: An empirical study in vietnam</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">T N</forename><surname>Trang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Chien Thang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">D</forename><surname>Hai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">T</forename><surname>Phuong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">Q</forename><surname>Quy</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/21582440241255241</idno>
+		<ptr target="https://doi.org/10.1177/215824402412552"/>
+	</analytic>
+	<monogr>
+		<title level="j">SAGE Open</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">21582440241255240</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<monogr>
+		<title level="m" type="main">Unified Theory of Acceptance and Use of Technology: A Synthesis and the Road Ahead</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Venkatesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Y L</forename><surname>Thong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Xu</surname></persName>
+		</author>
+		<idno>Paper 2800121</idno>
+		<ptr target="https://papers.ssrn.com/abstract=2800121"/>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">SSRN Scholarly</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">User acceptance of information technology: Toward a unified view</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Venkatesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Morris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">B</forename><surname>Davis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">D</forename><surname>Davis</surname></persName>
+		</author>
+		<idno type="DOI">10.2307/30036540</idno>
+		<ptr target="https://doi.org/10.2307/30036540"/>
+	</analytic>
+	<monogr>
+		<title level="j">MIS Quarterly</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="425" to="478"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">A meta-analysis of the impact of trust on technology acceptance model: Investigation of moderating influence of subject and context type</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zheng</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijinfomgt.2011.03.004</idno>
+		<ptr target="https://doi.org/10.1016/j.ijinfomgt.2011.03.004"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Information Management</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="572" to="581"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Who is (communicatively more) responsible behind the wheel? Applying the theory of communicative responsibility to TAM in the context of using navigation technology</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Youk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Park</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Human-Machine Communication</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">11</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Generative AI and the future of higher education: A threat to academic integrity or reformation? Evidence from multicultural perspectives</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Yusuf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Pervin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Román-González</surname></persName>
+		</author>
+		<idno type="DOI">10.1186/s41239-024-00453-6</idno>
+		<ptr target="https://doi.org/10.1186/s41239-024-00453-6"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Educational Technology in Higher Education</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">21</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

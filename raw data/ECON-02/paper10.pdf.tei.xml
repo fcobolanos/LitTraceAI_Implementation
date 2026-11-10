@@ -1,0 +1,1305 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Productive integration, economic recession and employment in Europe: an assessment based on vertically integrated sectors</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2020-12-24">24 December 2020</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Davide</forename><surname>Villani</surname></persName>
+							<email>davide.villani@open.ac.uk</email>
+							<affiliation key="aff0">
+								<orgName type="department">Goldsmiths College</orgName>
+								<orgName type="institution" key="instit1">The Open University (UK)</orgName>
+								<orgName type="institution" key="instit2">University of London</orgName>
+								<address>
+									<addrLine>Milton Keynes</addrLine>
+									<settlement>London</settlement>
+									<country key="GB">England</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Marta</forename><surname>Fana</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Joint Research Centre</orgName>
+								<orgName type="institution">European Commission</orgName>
+								<address>
+									<settlement>Seville</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Productive integration, economic recession and employment in Europe: an assessment based on vertically integrated sectors</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2020-12-24">24 December 2020</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">14003EFFEEC26BBBF4FCC30EC8FE7AC9</idno>
+					<idno type="DOI">10.1007/s40812-020-00178-3</idno>
+					<note type="submission">Received: 16 July 2020 / Revised: 17 November 2020 / Accepted: 20 November 2020 /</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-09-02T20:24+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Vertically integrated labour</term>
+					<term>Covid-19</term>
+					<term>Global value chains</term>
+					<term>Productive integration</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The Covid-19 crisis has revamped the discussion about the redefinition of GVC. This paper contributes to the debate, analysing the productive relationships between European countries in four key manufacturing activities. In particular, the paper addresses two objectives. First, it maps the degree of productive integration in Europe, focusing on the generation of employment in the production of exported intermediate inputs and final goods. Second, it provides a preliminary assessment of the potential impact on employment that the current economic crisis will have on some manufacturing activities across Europe. The analysis is realised employing the concept of vertically integrated labour <ref type="bibr" target="#b35">(Pasinetti 1973)</ref> which allows to account for the employment directly and indirectly involved in the production of final goods. The estimations are derived from Multi-Regional Input-Output tables to map the supply chain and to differentiate between the employment involved in the production of exported intermediate inputs and final goods. The results show that most of the employment involved in the production of final output of the activities studied in the paper is linked to international trade. Although Europe shows a high degree of productive links, there are important differences in the modality of insertion in the productive structure of European countries. Moreover, the impact on the level of employment due to the current economic crisis can be significant, affecting more than 1.3 million of people in Europe. These results are relevant to policy makers, who should consider carefully the high degree of linkages of the European economies when designing industrial policies and measure of support to the economy.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">Introduction</head><p>After approximately a decade from the global financial collapse, a new crisis, triggered by the Covid-19 pandemics, is shaking the global economy. The effects on the economy are likely to be prolonged, in what already appears to be the most severe economic downturn since the Great Depression <ref type="bibr" target="#b17">(Gopinath 2020)</ref>.</p><p>Most of the studies published so far that deal with the consequences of the current crisis are concerned with aggregate figures like GDP (IMF 2020) or with the direct sectoral repercussion (e.g. McKenzie 2020), neglecting the indirect impact that the economic lockdown imposed across countries and the loss in final demand will have on the supply chain. However, for a thorough assessment of the implications of an external shock on the productive system it is important to focus not only on the effects that it may have on a specific industry, but also the backward linkages of the supply chain. The relevance of Global Value Chains (GVC) and the role of trade in intermediate goods <ref type="bibr" target="#b24">(Johnson and Noguera 2012;</ref><ref type="bibr" target="#b26">Kleinert 2003;</ref><ref type="bibr" target="#b34">Miroudot et al. 2009)</ref>, impose a systemic consideration of the production processes.</p><p>The paper addresses these aspects by focusing on two research objectives: first, it maps the degree of productive integration of four productive activities in Europe, focusing on the generation of employment in the production of exported intermediate inputs and final goods. Second, the paper provides a preliminary assessment of the potential impact of the ongoing economic crisis on the level of employment in some manufacturing activities across Europe. To the best of our knowledge, this is the first study to assess the impact in these activities with a similar degree of detail at the European level. While the present research will not engage directly with forecasts regarding the impact of the current Covid-19 crisis on the degree of integration of the European supply chain, it offers useful elements to consider the possible propagation mechanisms, along the supply chain, of the Covid-19 crisis and to design effective industrial policies.</p><p>The analysis considers four key activities of the European manufacturing: Manufacture of Motor Vehicles; Manufacture of Other Transport Equipment; Manufacture of Computers, Electronics and Optical goods; Manufacture of Textiles,<ref type="foot" target="#foot_0">foot_0</ref> using the notion of subsystem <ref type="bibr" target="#b43">(Sraffa 1960</ref>) and vertically integrated labour <ref type="bibr" target="#b35">(Pasinetti 1973)</ref>.</p><p>This approach enables to quantify the amount of employment that depends, directly and indirectly, on these four activities (henceforth, the term subsystems will be used to denote the focus on both direct and indirect relations of production). In particular, the empirical analysis will distinguish between the employment involved in the production of intermediate and final goods (for domestic and foreign consumption) and differentiate the impact among 27 European countries. Calculations are performed in a Multi-Regional Input-Output (MRIO) framework which allows 1 3</p><p>Journal of <ref type="bibr">Industrial and Business Economics (2021) 48:137-157</ref> to account for the role played by international trade (of intermediate and final products) in the production process.</p><p>What emerges from the empirical analysis is the predominance of foreign markets: most of the employment in these four subsystems can be associated to the production of exported goods (both in intermediate and final goods). Moreover, the multi-regional level of analysis allows to establish which countries are more exposed to the downturn in the level of activity due to a breakdown of the value chain, both in terms of production and final consumption. Then, the paper provides some preliminary estimates of the potential impact, in terms of jobs losses, of the current economic crisis in the four subsystems studied here. We find that the impact on the employment levels in these subsystems can be significant, and especially concentrated in the Automotive supply chain. These findings have important implications for economic policy. Industrial strategies and the recovery measures that will be put in place should take into consideration the high degree of productive linkages existing among European countries. The high reliance on exports implies that uncoordinated domestic measures alone may be insufficient in stimulating economic recovery. Finally, the paper argues that ideal economic policies should aim at reverting the disparity that has mounted in the last decades in Europe <ref type="bibr" target="#b20">(Guarascio and Simonazzi 2016)</ref> in terms of productive capacity and technological catch up.</p><p>The paper is organised as follow, Sect. 2 presents the relevant literature and discusses it in light of our objectives. Section 3 describes in detail the methodology used for the calculation of vertically integrated labour. Section 4 presents the results of the empirical analysis and Sect. 5 discusses the main findings and some relevant policy issues.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2">Literature review and discussion</head><p>The economic crisis induced by the Covid-19 pandemic is going to have a deep impact on economic activity <ref type="bibr" target="#b23">(IMF 2020;</ref><ref type="bibr" target="#b30">Maliszewska et al. 2020)</ref>. However, the negative shock will be heterogeneous across industries and countries since some manufacturing activities are more exposed to the current crisis than others. One of the aspects that characterises the current situation is the variety of disruptions channels which derive from both the supply and demand side. On the supply side, both physical distancing and economic lockdown had, although different across countries, a direct impact on the production processes of good and services, where the intensity of the productive disruptions is reinforced by the strong supply chain links. On the demand side, the drop in aggregate demand and the postponement of the purchase of durable goods are likely to have long-lasting effects on production <ref type="bibr" target="#b2">(Baldwin and Tomiura 2020)</ref>. These aspects are especially relevant for the four industries analysed in this paper. These activities represent 20.5% of total employment at the industry level in European manufacturing. Their importance is even more striking when considering the indirect relations of production. If we account also for the employed generated indirectly in the production of the final output of these industries, the share of employment amount to 35% of the total activated by manufacturing in Europe (see Sect. 4 for details). Another common aspect is that the four industries analysed in this paper have been classified as non-essential in most countries and had to partially or completely stop producing during the peak of the pandemic <ref type="bibr" target="#b13">(Fana et al. 2020)</ref> which, in combination with the strong reduction in final demand that they are likely to suffer, may lead to a sizeable reduction in the employment levels. Lockdown measures had a great impact on the level of activity. <ref type="bibr" target="#b16">Giammetti et al. (2020)</ref> estimate that the lockdown measures had an impact of approximately 52% of circulating value added. These findings are in line with those performed including a richer pool of countries, that estimate a reduction between 30 and 50% of the level of activity during the first lockdown (OECD 2020a).</p><p>When assessing the impact of an economic shock on the productive structure, the high level of interdependence of manufacturing activities in Europe, both in terms of productive linkages and as source of demand of final products (Eurofound 2019), imposes to focus not only on the direct, industry-level, relations of production, but also to acknowledge the indirect effects on the industries that provide intermediate inputs. Some researchers are already considering the possibility that the ongoing crisis may lead to a deep rearrangement of the international productive processes, fuelling the reshoring of western companies (e.g. see <ref type="bibr" target="#b41">Seric and Winkler 2020;</ref><ref type="bibr" target="#b46">Strange 2020)</ref>. This discussion links with the existing contributions that focus on the process of deglobalization and reshoring (for an overview see De <ref type="bibr" target="#b10">Backer et al. 2016)</ref>. While there is some evidence of reshoring in some activities in the last decade, this is not sufficient to constitute a reversal in the aggregate trend <ref type="bibr" target="#b1">(Bailey and De Propris 2014;</ref><ref type="bibr" target="#b25">Kinkel 2014)</ref>. In fact, reshoring is, so far, a limited phenomenon among European firms and mostly confined to companies that move back production from Asia but not from other European countries <ref type="bibr" target="#b9">(Dachs et al. 2019)</ref>. Another possibility that is being considered is that the supply chains will become more regionalised <ref type="bibr" target="#b53">(Zhan et al. 2020)</ref>. According to this view, instead of counting with strong global/intercontinental links, supply chains may be reoriented towards the exploitation of productive links in a certain region/continent. This latter scenario would be extremely relevant for the European context, where many countries are distributed in a relatively small geographical area. Independently from the evolution of the GVC reconfiguration that will follow the current economic crisis, it is paramount to examine the potential impact of the current economic crisis on the existing productive structure in the context of the high degree of productive integration existing in Europe. While the present research will not engage directly with forecasts regarding the impact of the current Covid-19 crisis on the degree of integration of the European supply chain, it offers useful elements to consider the possible propagation mechanisms, along the supply chain, of the Covid-19 crisis and to design effective industrial policies.</p><p>The importance that offshoring and trade in intermediate inputs play in the productive integration of Europe has been highlighted by the literature. For example, <ref type="bibr" target="#b31">Marin (2006)</ref> shows the expansion of German and Austrian companies in Eastern European (EE) countries to offshore intermediate steps of production. <ref type="bibr" target="#b34">Miroudot et al. (2009)</ref>  This analysis relates to the recent debate around the growth model to be implemented. As noted in the literature, core countries (e.g. Germany) underwent a reorganisation of their trade and manufacturing, with a shift in exports from Southern European (SE)<ref type="foot" target="#foot_1">foot_1</ref> countries towards China and an expansion of their industrial base in the Eastern periphery <ref type="bibr" target="#b6">(Celi et al. 2019)</ref>. The increasing international competition has been often employed as a justification to implement internal devaluation strategies, whose aim is to foster exports rather than favouring domestic demand <ref type="bibr" target="#b51">(Uxó et al. 2014)</ref>. This reconfiguration of the European Value Chains has been accompanied by different trends in sectoral specialisation which, in turn, shaped the dynamics of the occupational structures across European regions. As shown by <ref type="bibr">Gräbner et al. (2020a, b)</ref> Germany is characterised by a higher share of exports in more complex goods than SE countries while Eastern European countries have benefitted from a structural upgrade <ref type="bibr" target="#b44">(Stöllinger 2016)</ref>. <ref type="bibr" target="#b21">Hurley et al. (2019)</ref> show that in some EE countries like Poland the share of medium and high paid workers has increased more than at the European level while SE has been characterised by the increase in low-paid jobs. In this sense, <ref type="bibr" target="#b7">Celi et al. (2020)</ref> report that, since 2010, SE countries have witnessed a boom in the number of firms in services like the Tourism industry, reducing the presence of manufacturing firms, while core countries experienced the opposite trend. Similar to these studies, our research contributes to the literature regarding the pattern of specialisation and job creation in Europe. By distinguishing between the employment embodied in the trade of intermediate and the employment that does not leave the domestic supply chain it is possible to provide a characterisation of the type of insertion of a certain country in the supply chain. For example, a high generation of employment associated to the trade in intermediate inputs indicates a high reliance on the decision of production taken by companies located in third countries.</p><p>With respect to the second objective, this paper provides a preliminary study about the potential impact of the ongoing economic downturn on the employment generated in these subsystems. At this stage, it is not easy to quantify the effect that the ongoing crisis will have in terms of jobs loss. The impact on employment will be largely influenced by the duration of the pandemic and by the response adopted by policy makers to support both the supply and demand side (see Sect. 4 for a detailed discussion). It is however possible to provide some estimates of the consequences that the current crisis could have on the industries directly involved in this analysis and on the industries taking part indirectly in the supply chain as provider of intermediate inputs. This analysis will consider the direct impact as well as the indirect effects. The relevance of considering the fall in the level of trade in intermediates following economic crises has been documented in different works (e.g. <ref type="bibr" target="#b0">Alessandria et al. 2010)</ref> together with the necessity of accounting for the indirect spillovers of a fall in final demand on other countries <ref type="bibr" target="#b4">(Bems et al. 2010</ref>). These aspects are especially valid for the activities studied in this paper, given the high participation intermediate suppliers and the high degree of outsourcing (e.g. see <ref type="bibr">Sturgeon et al. 2008 on Automotive)</ref>.</p><p>Overall, this analysis is essential to design effective economic policies. Industrial policies are coming back on the agenda <ref type="bibr" target="#b52">(Wade 2012;</ref><ref type="bibr" target="#b40">Rullani et al. 2016</ref>) and, at least formally, are at the centre of the European strategy for the upcoming years (EC 2019). However, as it has been highlighted by some authors <ref type="bibr" target="#b5">(Celi et al. 2018;</ref><ref type="bibr" target="#b44">Stöllinger 2016</ref>), the process of productive integration and participation in GVC has not benefitted equally all European countries. One of the risks of the ongoing economic crisis is that the existing polarisation will be deepened, similarly to what happened in the previous recent economic crises, and that given the existing productive structures SE countries will be the most affected <ref type="bibr">(Gräbner et al. 2020a, b)</ref>. Because of the productive heterogeneity and the high level of productive linkages of the European manufacturing, domestic uncoordinated policies may be insufficient to restore the employment level. In this sense, Portella-Carbó and Dejuan ( <ref type="formula">2019</ref>) have showed that an uncoordinated expansionary fiscal policy at the European level may reinforce the productive disparities between core and peripheral areas in Europe. In theory, this crisis could be the opportunity to reopen the debate about the imbalances that have manifested in the Europe in the last decades (see <ref type="bibr" target="#b42">Simonazzi et al. 2013)</ref>. Along these lines, different contributions highlight the necessity of a collective response to the crisis. <ref type="bibr" target="#b8">Coveri et al. (2020)</ref> advocate for a coordinated industrial policy that aims at reducing the productive asymmetries that have grown in Europe in the last decades, with a special attention at the vulnerability that derives from hyper specialisation in some segments of the supply chain. As it will be argued below, the concentration in some parts of the supply chain (e.g. in the production of exported intermediate inputs) may increase the degree of vulnerability of some countries. The need for coordinated monetary, fiscal and industrial policies is especially important in the current context, with an accentuated global crisis which affects both the demand and the supply side <ref type="bibr" target="#b3">(Baldwin and Weder Di Mauro, 2020)</ref> and would need a considerable revision of the current inflexible policy framework (for a discussion see <ref type="bibr" target="#b7">Celi et al. 2020;</ref><ref type="bibr" target="#b38">Pianta et al. 2020)</ref>.</p><p>In order to promote coordinated productive policies, it is essential to have a clear picture of the productive links and their geographical distribution. This would provide valuable elements to design economic measures that take into consideration the specificities of the supply chains, at the domestic and European level. As an empirical exercise aimed at stating the importance of productive integration, we restrict our analysis to a selection of manufacturing industries. Although this choice does not allow to draw conclusions for the whole manufacturing sectors in Europe, it permits to focus on some specificities of the selected activities. The selection made in the paper considers the heterogeneity of industrial activities in that our four sectors </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3">Methodology</head><p>In order to deal with our research objectives, this paper employs the notion of vertically integrated labour, based on the concept of vertically integrated sectors or subsystems <ref type="bibr" target="#b35">(Pasinetti 1973</ref>). One of the major advantages of this approach is that it allows to deal with both direct and indirect relations of production. This means that it is possible to account not only for the direct impacts of a loss in activity in the specific industry under analysis, but to quantify also the (indirect) effects on the industries that provide intermediate inputs to a given industry (and on the industries that provide intermediate goods to the intermediate inputs industries and so on). <ref type="foot" target="#foot_2">3</ref>Vertically integrated labour is calculated as follows. Using a Multi-Regional Input-Output (MRIO) framework, the vector of total output is equal to the sum of intermediate inputs produced and net output:</p><p>where Z represents the multi-regional transactions matrix composed by r * s submatrices. Each sub-matrix rs on the main (r = s) diagonal represents the matrix of domestic transactions, and off-diagonal sub-matrices are the matrices of international transactions of intermediate inputs, i.e. imported inputs (see <ref type="bibr">Miller and Blair 2009, Chapter 3)</ref>. Each industry in column j in the submatrix rs (dimension i * j) demands intermediate inputs from the industries indicated in rows i. The term x is the multi-regional vector 4 of total output, y the multi-regional vector of net output (i.e. final demand) and i is the sum-vector of appropriate length. Expression (1) can be reformulated as:</p><p>where</p><formula xml:id="formula_0">A is the MRIO matrix of technical coefficients. Each technical coefficient ( a rs ij = z rs ij x s j</formula><p>) indicates input from industry i and country r demanded for the production process of sector j in country s. Following few manipulations, the vector of total output can be expressed as:</p><p>(1) = +</p><p>(2) = +</p><p>where I is the identity matrix and ( -) -1 is the MRIO Leontief inverse matrix of dimension ri * sj. Pre-multiplying the right-hand side of Eq. (3) by the vector of direct labour coefficients ( T l = ̂ -1 , where l is the vector of employment by indus- try), we finally obtain the vector of vertically integrated labour as:</p><p>where the vector of vertically integrate labour ( T vi ) represents the amount of total labour needed in each subsystem j in country s to satisfy the level of final demand. The focus on the subsystem, instead of industry level implies that the values in T vi represent the number of units of labour employed directly and indirectly (i.e. in the production, direct and indirect, of the intermediate inputs and so on) in each subsystem and country in the production of final output. The vector T vi in Eq. ( <ref type="formula">4</ref>) is a concise indicator that does not differentiate between the employment generated domestically or in other countries, i.e. via the demand of imported inputs of production. As argued above, this is a crucial aspect to take into consideration in contemporary manufacturing activities, since a consistent part of the workforce is employed in the production of intermediate inputs that are then employed in different countries and industries.</p><p>To differentiate between the domestic and imported employment demanded by a given subsystem it is sufficient to employ the diagonalised vector of direct labour coefficients in Eq. ( <ref type="formula">4</ref>), so that: By doing so, we obtain a matrix of vertically integrated labour ( vi ) where the cells of each column indicate the employment needed from the activity i and country r in the production of subsystem j in country s.</p><p>Data employed for the estimations of this paper are obtained from the World Input-Output Database <ref type="bibr" target="#b49">(Timmer et al. 2015)</ref>. This database provides MRIO tables that map the global economy with data for 43 countries (and one "rest of the world" region) and 56 industries organised at the 2 digit ISIC 4 level <ref type="bibr" target="#b50">(Timmer et al. 2016</ref>). The estimations are based on the most recent year available in the database, 2014. Although it would have been ideal to have more updated data, this database provides a good approximation of the existing productive structure.</p><p>Note that this approach is based on physical units of labour that are embodied in the final production of goods which reflects the standard demand-driven orientation of the original Leontief model <ref type="bibr" target="#b29">(Leontief 1944)</ref>. Furthermore, another significant aspect of this type of analysis is that the variable of interest (i.e. vertically integrated labour) is expressed in physical terms as units of employment that are directly and indirectly employed in the production of a certain final output which represents a difference to other MRIO estimations based on value added (e.g. OECD Trade in Values Added database). By expressing the unit of interest in physical terms, this approach allows to focus on the technical features of the productive chain without</p><formula xml:id="formula_1">(3) = ( -) -1 (4) T vi = T l ( -) -1 ̂ (5) vi = ̂ ( -) -1 ̂ 1 3</formula><p>Journal of Industrial and Business Economics (2021) 48:137-157 being influenced by wage differentials across countries. In this way, only technical changes that affect the amount of labour employed in the production process are grasped by the vector (and matrix) of vertically integrated labour, being neutral to the evolution of unit labour costs.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4">Results</head><p>This section presents the empirical results for a selection of manufacturing activities in Europe: Automotive, Other transportation, Computers and electronics and Textiles.</p><p>The first look at the results is represented by the estimation of the number of people employed by subsystem. Differently from the standard industry-level studies, the estimates at the subsystem level capture the number of workers employed in those industries that directly and indirectly participate in the production of final output in each subsystem. Figure <ref type="figure" target="#fig_1">1</ref> shows that all these activities involve a higher amount of labour at the subsystem level than they do at the direct (industry) level. The difference between industry and subsystem level is particularly marked for Automotive and Other Transportation, indicating the relevance of the backward linkages that the production of the final goods in these subsystems entail.</p><p>In order to account for the role played by intermediate inputs in the generation of employment, for each country and subsystem, we further split, from the matrix of vertically integrated labour vi , the total amount of labour between the labour force that is generated by the foreign demand of intermediate inputs and the fraction involved (directly and indirectly) in the domestic production of final goods.</p><p>Figure <ref type="figure">2</ref> illustrates the total amount of employment activated by these subsystems in 2000 and 2014 and differentiates between the participation of the employment embodied in the production of exported intermediates inputs and the labour that is embodied in the domestic production of final goods. First, it is worth noticing that the total European labour force involved in the four subsystems has diminished considerably between 2000 and 2014, with the only exception of the Other Transportation subsystem. This aspect reflects the process of downsizing of the manufacturing activities recorded at the beginning of the century which has been enhanced by the process of offshoring and the increase in the number of extra-European competitors <ref type="bibr" target="#b45">(Stöllinger et al. 2013)</ref>. Moreover, this reduction should not be imputed to the outsourcing process that took place at the industry level, since this figure does not refer exclusively to direct employment but also includes the indirect relations of production. Second, the share of labour involved in the production of exported intermediate goods and services grew remarkably between 2000 and 2014 among all the subsystems. Approximately 40% of the total European employment is activated by the trade in intermediate inputs showing the increasing fragmentation of the production processes within European economies.</p><p>For a more detailed assessment of the relative importance of these subsystems in terms of employment creation across European countries, the first four columns in Table <ref type="table" target="#tab_1">1</ref> show the distribution of the total employment by subsystem across European countries while the last column represents the share of total employment of each country over total employment in Europe. A share of labour created in a certain subsystem that is higher than the share of total employment of the country at the European level (last column) indicates that the subsystem has a relatively higher relevance for the country compared to its average participation in European employment. From this table it can be appreciated that the four subsystems are particularly relevant for Germany and the non-Baltic Eastern European (EE) countries. <ref type="foot" target="#foot_4">5</ref> These countries record at least two subsystems whose share of employment is above the participation of the country in the total European employment. The only other case in the sample that count with at least two subsystems above the average is Italy (in the Other Transportation and Textiles subsystems). All other countries count one or zero subsystems whose share of employment is above their total participation in European employment. The importance of the network between Germany and non-Baltic EE countries in Automotive evidenced in the literature (e.g. <ref type="bibr" target="#b5">Celi et al. 2018;</ref><ref type="bibr">IMF 2013</ref>) is also emerging from the table. These are the only countries that account for an absorption of labour in the Automotive subsystem that is substantially higher than their share in total European employment. Another interesting aspect is that in all SE countries Textile, the only Low-tech activity among the four analysed in this paper, is the most important subsystem in terms of output generation. Nevertheless, looking exclusively at the total generation of employment by subsystem provides only partial information. To the purpose of this paper it is important to distinguish between the type of employment generated since the incidence of intermediate inputs in the generation of employment is not uniform across countries. In fact, even in countries where a certain subsystem is particularly significant in the generation of employment (e.g. non-Baltic EE countries and Germany in Automotive), the participation in the GVC is not equivalent. Figure <ref type="figure">3</ref> displays, for each country and subsystem, the share of vertically integrated labour absorbed by the production of intermediate inputs that are then assembled in third countries. This data can be considered a proxy of dependence of a country on the final stages of production realised elsewhere. The higher this share, the higher the degree of dependence from other countries' final production and their decisions of allocation of production in other countries. A pattern of specialisation based on the production of intermediate inputs which will be assembled and/or consumed elsewhere makes this production more vulnerable to external demand and shocks, out of control from national industrial and fiscal policies.</p><p>What emerges from this picture is that the Automotive subsystem accounts for the highest share of labour activated in intermediate inputs. In this case, only three countries (Germany, Spain, and Great Britain) record less than 40% of total labour involved in the production of exported intermediate goods. The level of involvement of labour in exported intermediate inputs is lower if we look at the other subsystems, although it is still very significant. In the case of Other Transportation and Computer and Electronics subsystems, only seven and nine countries respectively have less than 40% of total employment that is activated by the production of exported intermediate inputs. Textiles is the only subsystem where most of the countries account for less than 40% of labour that is activated by the trade in intermediates, denoting a higher role of the domestic supply chain in the generation of employment.</p><p>As to the geographical distribution, it appears that EE countries participate mostly as producers of intermediate goods and services which are then finally assembled in other countries. This is particularly valid for Automotive, with a share of exported intermediates between 60 and 80% in Poland and Czech Republic, and Other transportation subsystems. At the same time, the relative importance for this group of countries is lower in the manufacture of Computers and Electronics and Textile subsystem. On the other hand, the fact that countries like Germany record lower shares of labour involved in exported-intermediate inputs of production testifies the role of this country as final assembler/producer of final goods.</p><p>All in all, the empirical evidence reported confirms the strand of literature pointing to the strong productive integration characterising Europe as well as the structural dependence of EE countries on the production of intermediate inputs (especially in the Automotive and Other Transportation subsystems). SE countries show a lower participation in the production of exported intermediates. Note that this is especially valid for Textiles, which is also where three countries (Greece, Italy and Portugal) record a relative specialisation. This aspect indicates that in these countries the great majority of labour activated in this subsystem is maintained in the domestic supply chain.</p><p>By construction, all the employment that is not embodied in intermediate exported inputs, is devoted to the domestic production of final goods. This amount of labour force can, in turn, be divided between the amount of employment that is needed to produce final goods for domestic consumption and final goods that are exported to third countries. As noted by <ref type="bibr">Strange (2020, p. 462</ref>) the interest about the reconfiguration of GVC should not draw the attention away from the fact that many products (and jobs) are strongly dependent from the production of final exported goods and services. Table <ref type="table" target="#tab_2">2</ref> indicates that over the four subsystems, between 49% (Textiles) and 69% (Other Transportation) of the employment that is not generated in the production of exported intermediate inputs, is activated by the production of final goods that are exported. These figures prove the high degree of dependency of European labour on international trade. Therefore, it can be concluded that, in all the subsystems analysed in this paper, the great majority of the labour force is involved in international trade, whether in the production of goods and services that are exported as intermediate inputs or as final goods. This aspect should be considered carefully by policymakers since, given the high degree of dependence on external markets, country-level and uncoordinated policies risk to have a dispersed and limited effect. Finally, given the strong productive linkages that exist within these subsystems, it is worth asking about the potential impact of the ongoing crisis in terms of potential jobs loss and be aware of the risk of possible deepening of the disparities that could follow an economic downturn. Although we must be cautious when drawing parallelisms between past and current events, recent experience has proven that the economic recessions in the European arena can foster divergent trends across countries. In this sense, the response to the Global Financial crisis <ref type="bibr">(2008)</ref><ref type="bibr">(2009)</ref> and the debt crisis (2011-2012) is paradigmatic. Even though the drop of demand affected all countries in Europe, the harsh austerity policies that were implemented in SE countries fuelled divergent trends in Europe. Employing Input-Output analysis, <ref type="bibr" target="#b15">Garbellini et al. (2014)</ref> demonstrate that while austerity measures impacted the level of activity in the Eurozone, some core countries (e.g. Germany, Austria) responded to this shock looking outward the European space, replacing the drop in demand of the European periphery with more intense relationships with BRIC countries. These tendencies contributed to the divergent path of growth of SE countries compared to core countries. The consolidation of the divergent trends in Europe and the negative role of austerity policies has been shown also by <ref type="bibr" target="#b27">Kohler and Stockhammer (2020)</ref>, while <ref type="bibr">Gräbner et al. (2020a, b)</ref> show that income, unemployment and technological capabilities between core and periphery have diverged considerably after 2008.</p><p>In the present analysis, we build the estimations of the possible repercussions on employment using McKenzie (2020) forecast that, for 2020 reports a drop of 13% in the global production of the Automotive sector, 8% for Computer and Electronics and Textiles and 5% for Other Transportation. At this stage, it is still not possible to provide a precise analysis of the extent of the shock on the existing productive structures. Assuming that the fall in the level of final demand by industry will be distributed evenly across European countries, Fig. <ref type="figure" target="#fig_4">4</ref> shows the impact that the economic recession may have in terms of employment. Note that the assumption that the impact of the drop in demand will be equally distributed across European countries is a strong one. Much of the impact in terms of job loss will depend on the consequences that the Covid-19 crisis will have in terms of activity and on the measures put in place by the governments and international institutions to contrast the crisis. Moreover, most countries have implemented job retention schemes to support more vulnerable workers reducing at least in the very short terms the impact in terms of job loss. However, these measures differ in their extent (duration, selection criteria etc.) and are meant to be temporary <ref type="bibr">(OECD 2020b)</ref>. This implies that the impact on the employment due to the Covid-19 crisis may not be fully tangible in the short run but will need a period to adjust. Furthermore, the fiscal stimuli that will be introduced in the upcoming years may reduce the negative impact in terms of employment and countries that have a more active role in industrial policies may react more effectively than others. At the same time, changes in the patterns in final demand may favour some countries rather than others. For example, the growth of digitalisation and automation may boost those activities related to the Computers and Electronic subsystem, compared to more traditional activities such as Textiles. Finally, the modality of insertion in the productive chain may place countries in different positions when designing industrial policies. Countries that are mainly providers of intermediate inputs may be in a more fragile position in designing expansive measures compared to other countries (that lead the production process). Acknowledging these aspects, as an empirical exercise, we believe that it is still useful to offer a preliminary scenario of the potential impact of the crisis which takes into account direct and indirect relation of production as well as the international linkages of production. This exercise allows to visualise the potential degree of pervasiveness of the economic downturns on the European economy. Moreover, the analysis proposed in Fig. <ref type="figure" target="#fig_4">4</ref> distinguishes between jobs involved directly in the production of final goods (domestically consumed or exported) and those involved indirectly in the production of intermediate goods.</p><p>Over the four subsystems 1.3 million people can be affected by the drop in the level of activity. The impact is expected to be particularly marked in the Automotive subsystem, as a result of the high amount of labour that it generates in Europe (see Fig. <ref type="figure">2</ref>) and the expectation of a more accentuated reduction of output compared to the other industries. Given the relatively higher importance of the German-non-Baltic EE network (Table <ref type="table" target="#tab_1">1</ref>), it is likely that these countries would be more affected by the downturn. In EE countries this impact will affect predominantly the activities that provide exported intermediate inputs, while in Germany the repercussions 1 3</p><p>Journal of Industrial and Business Economics (2021) 48:137-157 would be more evident in the activities involved in the domestic production of final goods. Textiles is expected to be the second most hit subsystem. In this case, the effects on employment are likely to be more localised, since the employment in this subsystem is less dependent on the exports of intermediate inputs compared to the others. Given the importance of this subsystem (see Table <ref type="table" target="#tab_1">1</ref>), SE countries are more exposed to the fall in final demand in this subsystem.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5">Conclusions</head><p>The Covid-19 crisis is going to have deep repercussions on the European economies. This paper provides a preliminary assessment of the consequences that it may have in terms of jobs loss in four subsystems which employ (directly and indirectly) more that 13 million of workers at the European level.</p><p>A first aspect that emerges from this analysis is the high degree of dependence of employment on foreign demand via the export of intermediate inputs or final goods. Around two thirds of total employment in these subsystems is generated in the production of goods and services that are exported (as intermediate inputs or final goods). The impact on jobs generated by these subsystems can potentially be considerable, involving more than 1.3 million of people in Europe. The effects of the crisis are likely to be deeper in the Automotive subsystem, which is also the subsystem which accounts for the most developed network of indirect productive relations.</p><p>One crucial consequence of the trade in intermediate in the last decades is that an increasing share of employment is linked to the decisions taken by companies located elsewhere, which makes employment more vulnerable to decisions taken in third countries. Despite the growth in intermediate is a generalised trend, the intensity of production of intermediate inputs is not uniform across countries. What emerges from our study is a divide between Germany, EE and SE countries. In particular, Germany is specialised in more technologically advanced subsystems. In this country, the amount of employment generated by these subsystems is considerable and it is mostly concentrated in the domestic supply chain, as testified by the low share of employment embodied in the exports of intermediate inputs. The four subsystems analysed in this paper are also very important for the EE block. However, their participation in the productive chain is at odds with respect to Germany. In fact, these countries contribute mainly as providers of exported intermediate inputs of production which puts them in a more fragile (dependent) position in the production network as they are highly reliant on the investment decisions taken in other countries. Finally, these subsystems are relatively less important for the generation of employment in SE countries. Here, the most relevant subsystem is Textiles. Moreover, in this case, the productive network is more domestic centred since the great majority of employment (direct and indirect) activated by this subsystem is embodied in the domestic production of final goods.</p><p>In light of these results, we can advance some considerations regarding the future of European production networks. It is possible that the Covid-19 crisis will contribute to reshape the GVC. However, it is important to be cautious when tackling the hypothesis that a significant process of reshoring within Europe will take place soon. Unless there will be new differentiated and prolonged production lockdown measures or a radical institutional reconfiguration, it is reasonable to expect that the strong dependence on external markets will persist. European countries will still be highly dependent on external markets, at least in the short run. Moreover, it is not to exclude that the process of offshoring may intensify. Firms may be willing to exploit even more the wage differentials (which, in a context of high unemployment will possibly be maintained) pursuing further relocation of production in third countries to reinforce their profitability. This process may also be facilitated by geographical proximity and by the European infrastructure which plays a relevant role in facilitating productive integration <ref type="bibr" target="#b28">(Landesmann and Stöllinger 2019)</ref>.</p><p>The evidence provided here shows that the impact on employment of the COVID crisis is going to be severe and spread across countries. As a consequence, the measures that will be implemented by policymakers should consider the existing productive relationships across European supply chains. National policy measures are undoubtfully welcome in order to restore the level of activity and employment. However, the high dependence on foreign markets, via the exports of intermediate inputs and final goods, indicates that domestic fiscal expansion alone may be insufficient to restore employment levels, since most of the employment is dependent on external demand. Previous episodes have proven that economic crises can boost divergent trends in the European arena. Given the possibility that regional chains will be favoured compared to GVC <ref type="bibr" target="#b53">(Zhan et al. 2020)</ref>, it is crucial that policy makers in the EU design coordinated policy measures across countries in line with what has been proposed elsewhere (e.g. <ref type="bibr" target="#b8">Coveri et al. 2020;</ref><ref type="bibr">Gräbner et al. 2020a, b)</ref>. Moreover, industrial policies should be implemented, conceiving an evolving context and be concerned with the modification of the existing productive configuration <ref type="bibr" target="#b37">(Pianta 2015)</ref>. Since an undifferentiated fiscal stimulus would not affect evenly European countries, it is necessary to implement catching-up measures aimed at the conversion and upgrading of the productive structure of the peripheral areas of Europe that do not benefit from the existing specialisation pattern. This, of course, would imply the deep reconsideration of the stringent European regulations that have so far impeded the development of such policies <ref type="bibr" target="#b38">(Pianta et al. 2020)</ref>. There is no doubt that the current crisis will impact on the European economies. What is contended today is the response that institutions will be able to put in place. Given the primary role that the public sphere is expected to have in this picture, this new context may also allow to tackle pending crucial aspects regarding productive integration in Europe.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head/><label/><figDesc>Journal ofIndustrial and Business Economics (2021) 48:137-157    differ in their contribution to overall EU value added, value of intermediate inputs and their employment share over total EU-27 employment. The four sectors are characterised by different levels of technological content, according to the classification proposed by Galindo-Rueda and Verger (2016), with Computer and Electronics being High Tech; Automotive being Medium-High Tech and Textiles being classified as Medium-Low Tech. According to this classification, Other transportation includes both High Tech (Air and Spacecrafts) and Medium-High Tech (Railroad and Ship building) activities.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 1</head><label>1</label><figDesc>Fig. 1 Number of labour units (thousands) employed at the direct-industry level and subsystem for the whole sample of European countries. Year 2014. Source: Author's elaboration using the WIOD database</figDesc><graphic coords="9,77.97,58.11,283.44,160.56" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 2 3</head><label>23</label><figDesc>Fig. 2 Share of employment involved in the production of exported intermediate inputs over total employment and units of employment (thousands) by subsystem in 2000 and 2014 for the whole sample of European countries. Source: Author's elaboration using the WIOD database</figDesc><graphic coords="10,55.29,58.11,328.80,171.48" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 3 3</head><label>33</label><figDesc>Fig. 3 Share of labour involved in the production of exported intermediate inputs by subsystem. Year 2014. Source: Author's elaboration using the WIOD database</figDesc><graphic coords="12,53.85,58.11,331.68,323.88" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 4</head><label>4</label><figDesc>Fig. 4 Estimated loss of units (thousands) of employment by subsystem in 2020. Source: Author's elaboration using the WIOD database (year = 2014) and Baker and McKenzie (2020) forecast for the fall in global production of each sector</figDesc><graphic coords="15,77.97,58.11,283.44,149.64" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head/><label/><figDesc>stress that European countries have experienced a considerable increase in trade in intermediate goods at the beginning of the 2000s. More recently, Timmer et al. (2013) account for the generalised increase of employment activated by the production of intermediate inputs and the rise of imported intermediates versus Journal of Industrial and Business Economics (2021) 48:137-157domestically sourced intermediate inputs. Overall, these works provide precious insights about the general trends witnessed in the manufacturing sectors in Europe. None of these studies, however, provide a thorough mapping of the role of European trade in intermediates for the four activities considered in this paper.For this reason, and in relation to our first objective, this paper maps the degree of integration in the four economic activities mentioned earlier. In particular, we are interested in understanding what type of employment (whether for the production of intermediate exported inputs or final goods) is activated by the four subsystems across European countries.</figDesc><table><row><cell>1 3</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 1</head><label>1</label><figDesc>Distribution of the vertically integrated labour across countries and subsystems (as % of the total European labour by subsystem) and share of each country's total employment in Europe (last column).</figDesc><table><row><cell cols="3">Source: Author's calculations based on WIOD data</cell><cell/><cell/><cell/></row><row><cell/><cell>Autom</cell><cell>Other Transp.</cell><cell>Comp and elec-</cell><cell>Textiles</cell><cell>Total</cell></row><row><cell/><cell/><cell/><cell>tronics</cell><cell/><cell/></row><row><cell>Austria</cell><cell>1.6</cell><cell>1.4</cell><cell>1.9</cell><cell>1.0</cell><cell>1.9</cell></row><row><cell>Belgium</cell><cell>1.7</cell><cell>1.3</cell><cell>1.6</cell><cell>1.4</cell><cell>2.0</cell></row><row><cell>Bulgaria</cell><cell>1.0</cell><cell>1.1</cell><cell>1.3</cell><cell>5.4</cell><cell>1.6</cell></row><row><cell>Cyprus</cell><cell>0.1</cell><cell>0.0</cell><cell>0.1</cell><cell>0.3</cell><cell>0.2</cell></row><row><cell>Czech Republic</cell><cell>5.8</cell><cell>2.8</cell><cell>4.3</cell><cell>2.0</cell><cell>2.3</cell></row><row><cell>Germany</cell><cell>33.8</cell><cell>26.2</cell><cell>27.7</cell><cell>9.4</cell><cell>19.0</cell></row><row><cell>Denmark</cell><cell>0.4</cell><cell>0.5</cell><cell>1.2</cell><cell>0.4</cell><cell>1.2</cell></row><row><cell>Spain</cell><cell>5.7</cell><cell>6.9</cell><cell>3.7</cell><cell>7.7</cell><cell>8.0</cell></row><row><cell>Estonia</cell><cell>0.1</cell><cell>0.2</cell><cell>0.4</cell><cell>0.5</cell><cell>0.3</cell></row><row><cell>Finland</cell><cell>0.4</cell><cell>0.9</cell><cell>2.4</cell><cell>0.6</cell><cell>1.1</cell></row><row><cell>France</cell><cell>6.9</cell><cell>15.9</cell><cell>7.2</cell><cell>6.3</cell><cell>12.1</cell></row><row><cell>Great Britain</cell><cell>7.6</cell><cell>10.2</cell><cell>9.6</cell><cell>4.2</cell><cell>13.6</cell></row><row><cell>Greece</cell><cell>0.5</cell><cell>0.4</cell><cell>0.7</cell><cell>2.3</cell><cell>1.8</cell></row><row><cell>Hungary</cell><cell>3.1</cell><cell>1.2</cell><cell>4.3</cell><cell>1.8</cell><cell>1.9</cell></row><row><cell>Ireland</cell><cell>0.4</cell><cell>0.3</cell><cell>1.5</cell><cell>0.4</cell><cell>0.8</cell></row><row><cell>Italy</cell><cell>8.4</cell><cell>13.1</cell><cell>8.2</cell><cell>20.3</cell><cell>10.8</cell></row><row><cell>Lithuania</cell><cell>0.2</cell><cell>0.2</cell><cell>0.4</cell><cell>1.5</cell><cell>0.6</cell></row><row><cell>Luxemburg</cell><cell>0.1</cell><cell>0.1</cell><cell>0.2</cell><cell>0.1</cell><cell>0.2</cell></row><row><cell>Latvia</cell><cell>0.1</cell><cell>0.3</cell><cell>0.3</cell><cell>0.5</cell><cell>0.4</cell></row><row><cell>Malta</cell><cell>0.0</cell><cell>0.0</cell><cell>0.1</cell><cell>0.1</cell><cell>0.1</cell></row><row><cell>Netherlands</cell><cell>2.1</cell><cell>3.2</cell><cell>4.0</cell><cell>1.6</cell><cell>3.9</cell></row><row><cell>Polonia</cell><cell>8.6</cell><cell>6.6</cell><cell>8.4</cell><cell>9.1</cell><cell>6.9</cell></row><row><cell>Portugal</cell><cell>1.2</cell><cell>0.8</cell><cell>1.5</cell><cell>7.2</cell><cell>2.0</cell></row><row><cell>Rumania</cell><cell>5.3</cell><cell>3.8</cell><cell>3.8</cell><cell>13.1</cell><cell>3.9</cell></row><row><cell>Slovakia</cell><cell>2.2</cell><cell>0.7</cell><cell>1.5</cell><cell>1.4</cell><cell>1.0</cell></row><row><cell>Slovenia</cell><cell>0.5</cell><cell>0.3</cell><cell>0.6</cell><cell>0.7</cell><cell>0.4</cell></row><row><cell>Sweden</cell><cell>2.0</cell><cell>1.7</cell><cell>3.2</cell><cell>0.7</cell><cell>2.1</cell></row><row><cell>Total</cell><cell>100.0</cell><cell>100.0</cell><cell>100.0</cell><cell>100.0</cell><cell>100.0</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 2</head><label>2</label><figDesc>The role of exports of final goods in employment creation by subsystem. Year 2014. Source: Author's elaboration using the WIOD database</figDesc><table><row><cell>Textiles</cell><cell/></row><row><cell>Comp. and elec-</cell><cell>tronics</cell></row><row><cell>Other transport</cell><cell/></row><row><cell>Automotive</cell><cell/></row></table><note><p>Journal of Industrial and Business Economics (2021) 48:137-157</p></note></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="1" xml:id="foot_0"><p>For simplicity, hereafter these activities will be referred to as, respectively, Automotive; Other Transportation, Computer and Electronics, and Textiles.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2" xml:id="foot_1"><p>Greece, Italy, Portugal and Spain.   </p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="3" xml:id="foot_2"><p>For an illustration of this point see Pasinetti(Pasinetti, 1977, Chapter  </p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_3"><p>4).4  Lower-case bold letters denote vectors and upper-case bold letters matrices. All vectors are column vectors unless explicitly denoted by the superscript T . The superscript ̂ refers to a diagonalised vector.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="5" xml:id="foot_4"><p>Non-Baltic Easter European countries: Bulgaria, Czech Republic, Slovenia, Slovakia, Hungary, Poland and Romania.</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>The authors would like to thank <rs type="person">Álvaro Del Moral Jiménez</rs>, <rs type="person">Enrique Fernández-Macías</rs> and <rs type="person">Gabriel Brondino</rs> for their useful support.</p></div>
+<div><head>Funding Not applicable.</head></div>
+<div><head>Data availability</head><p>The authors can provide access to data and material.</p></div>
+<div><head>Compliance with ethical standards</head></div>
+			</div>			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conflict of interest</head><p>The authors do not report any conflict of interest.</p><p>Publisher's Note Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">The great trade collapse of 2008-09: An inventory adjustment?</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Alessandria</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Kaboski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Midrigan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IMF Economic Review</title>
+		<imprint>
+			<biblScope unit="volume">58</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="254" to="294"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Manufacturing reshoring and its limits: The UK automotive case</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Bailey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>De Propris</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/cjres/rsu019</idno>
+		<ptr target="https://doi.org/10.1093/cjres/rsu019"/>
+	</analytic>
+	<monogr>
+		<title level="j">Cambridge Journal of Regions, Economy and Society</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="379" to="395"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Thinking ahead about the trade impact of COVID-19</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Baldwin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Tomiura</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Economics in the Time of COVID-19</title>
+		<editor>
+			<persName><forename type="first">R</forename><surname>Baldwin</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">B</forename><forename type="middle">Weder</forename><surname>Di</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Mauro</forename></persName>
+		</editor>
+		<meeting><address><addrLine>London</addrLine></address></meeting>
+		<imprint>
+			<publisher>CEPR Press</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="59" to="72"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Introduction</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Baldwin</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Weder Di</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Mauro</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Economics in the Time of COVID-19</title>
+		<editor>
+			<persName><forename type="first">R</forename><surname>Baldwin</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">B</forename><surname>Weder</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Di</forename><surname>Maur</surname></persName>
+		</editor>
+		<meeting><address><addrLine>London</addrLine></address></meeting>
+		<imprint>
+			<publisher>CEPR Press</publisher>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Demand spillovers and the collapse of trade in the global recession</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bems</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Yi</surname></persName>
+		</author>
+		<idno type="DOI">10.1057/imfer.2010.15</idno>
+		<ptr target="https://doi.org/10.1057/imfer.2010"/>
+	</analytic>
+	<monogr>
+		<title level="j">IMF Economic Review</title>
+		<imprint>
+			<biblScope unit="volume">58</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="295" to="326"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<monogr>
+		<author>
+			<persName><forename type="first">G</forename><surname>Celi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ginzburg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Guarascio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Simonazzi</surname></persName>
+		</author>
+		<idno type="DOI">10.1057/imfer.2010.15</idno>
+		<title level="m">Crisis in the European Monetary Union</title>
+		<meeting><address><addrLine>Oxon</addrLine></address></meeting>
+		<imprint>
+			<publisher>Routledge</publisher>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Unravelling the Roots of the EMU Crisis. Structural Divides, Uneven Recoveries and Possible Ways Out</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Celi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Guarascio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Simonazzi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Intereconomics</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="23" to="30"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">A fragile and divided European Union meets Covid-19: Further disintegration or 'Hamiltonian moment</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Celi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Guarascio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Simonazzi</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s40812-020-00165-8</idno>
+		<ptr target="https://doi.org/10.1007/s40812-020-00165-8"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Industrial and Business Economics</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="411" to="424"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Supply chain contagion and the role of industrial policy</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Coveri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Cozza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Nascia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zanfei</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s40812-020-00167-6</idno>
+		<ptr target="https://doi.org/10.1007/s40812-020-00167-6"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Industrial and Business Economics</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="467" to="482"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Backshoring of production activities in European manufacturing</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Dachs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kinkel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jäger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Palčič</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.pursup.2019.02.003</idno>
+		<ptr target="https://doi.org/10.1016/j.pursup.2019.02.003"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Purchasing and Supply Management</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Reshoring: Myth or Reality? OECD Science</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>De Backer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Menon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Desnoyers-James</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Moussiegt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Technology and Industry Policy Papers</title>
+		<imprint>
+			<biblScope unit="issue">27</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<title level="m" type="main">A vision for the European Industry until 2030</title>
+		<author>
+			<persName><surname>Ec</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<publisher>European Commission</publisher>
+			<pubPlace>Luxembourg</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<title level="m" type="main">The future of manufacturing in Europe</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<publisher>Publications Office of the European Union</publisher>
+			<pubPlace>Luxembourg</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Employment impact of Covid-19 crisis: From short term effects to long terms prospects</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Torrejón Pérez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Fernández-Macías</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s40812-020-00168-5</idno>
+		<ptr target="https://doi.org/10.1007/s40812-020-00168-5"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Industrial and Business Economics</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="391" to="410"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">OECD Taxonomy of Economic Activities Based on R&amp;D Intensity</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Galindo-Rueda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Verger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">OECD Science, Technology and Industry Working Papers</title>
+		<imprint>
+			<date type="published" when="2016">2016. 2016/04</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Domestic demand and global production in the Eurozone: A multi-regional input-output assessment of the global crisis</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Garbellini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Marelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Wirkierman</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/02692171.2013.872086</idno>
+		<ptr target="https://doi.org/10.1080/02692171.2013.87208"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Review of Applied Economics</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="336" to="364"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">The Italian value chain in the pandemic: The input-output impact of Covid-19 lockdown</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Giammetti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Papi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Teobaldelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ticchi</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s40812-020-00164-9</idno>
+		<ptr target="https://doi.org/10.1007/s40812-020-00164-9"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Industrial and Business Economics</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="483" to="497"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<author>
+			<persName><forename type="first">G</forename><surname>Gopinath</surname></persName>
+		</author>
+		<ptr target="https://blogs.imf.org/2020/04/14/the-great-lockdown-worst-economic-downturn-since-the-great-depression/"/>
+		<title level="m">The Great Lockdown: Worst Economic Downturn Since the Great Depression</title>
+		<imprint>
+			<date type="published" when="2020-05-12">2020. 12 May 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<title level="m" type="main">Pandemic pushes polarisation: The Corona crisis and macroeconomic divergence in the Eurozone</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gräbner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Heimberger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kapeller</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2020">2020a</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Ifso Working Paper</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Is the Eurozone disintegrating? Macroeconomic divergence, structural polarisation, trade and fragility</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gräbner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Heimberger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kapeller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Schütz</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/cje/bez059</idno>
+		<ptr target="https://doi.org/10.1093/cje/bez05"/>
+	</analytic>
+	<monogr>
+		<title level="j">Cambridge Journal of Economics</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="647" to="669"/>
+			<date type="published" when="2020">2020b</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">A polarized country in a polarized Europe: An industrial policy for Italy's renaissance</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Guarascio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Simonazzi</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s40812-016-0042-9</idno>
+		<ptr target="https://doi.org/10.1007/s40812-016-0042-9"/>
+	</analytic>
+	<monogr>
+		<title level="j">Economia e Politica Industriale</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="315" to="322"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hurley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">F</forename><surname>Macias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bisello</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Vacas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fana</surname></persName>
+		</author>
+		<title level="m">European Jobs Monitor 2019: Shifts in the employment structure at regional level</title>
+		<meeting><address><addrLine>Luxembourg</addrLine></address></meeting>
+		<imprint>
+			<publisher>Publications Office of the European Union</publisher>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note>European Jobs Monitor series</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<title level="m" type="main">IMF Multi-Country Report</title>
+		<idno>No. 13/263</idno>
+		<imprint>
+			<date type="published" when="2013-08">2013. August</date>
+			<publisher>IMF</publisher>
+		</imprint>
+	</monogr>
+	<note type="report_type">IMF Country Report</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName><surname>Imf</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="s">World Economic Outlook</title>
+		<imprint>
+			<date type="published" when="2020-04">2020. April</date>
+		</imprint>
+	</monogr>
+	<note>Chapter 1</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Accounting for intermediates: Production sharing and trade in value added</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Noguera</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jinteco.2011.10.003</idno>
+		<ptr target="https://doi.org/10.1016/j.jinteco.2011.10.003"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of International Economics</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="224" to="236"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Future and impact of backshoring-Some conclusions from 15 years of research on German practices</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kinkel</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.pursup.2014.01.005</idno>
+		<ptr target="https://doi.org/10.1016/j.pursup.2014.01.005"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Purchasing and Supply Management</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="63" to="65"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Growing trade in intermediate goods: Outsourcing, global sourcing, or increasing importance of MNE networks</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kleinert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Review of International Economics</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="464" to="482"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<title level="m" type="main">Growth models in advanced countries before and after the 2008 crisis: Competitiveness, financial cycles and austerity</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kohler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Stockhammer</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2008">2020. 2008</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">PKES Working Paper</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Structural change, trade and global production networks: An 'appropriate industrial policy' for peripheral and catching-up economies</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Landesmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Stöllinger</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.strueco.2018.04.001</idno>
+		<ptr target="https://doi.org/10.1016/j.strueco.2018.04.001"/>
+	</analytic>
+	<monogr>
+		<title level="j">Structural Change and Economic Dynamics</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page" from="7" to="23"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Output, Employment, Consumption and Investment</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Leontief</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Quarterly Journal of Economics</title>
+		<imprint>
+			<biblScope unit="volume">58</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="290" to="314"/>
+			<date type="published" when="1944">1944</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<title level="m" type="main">The Potential Impact of COVID-19 on GDP and Trade A Preliminary Assessment</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Maliszewska</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mattoo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Mensbrgghe</surname></persName>
+		</author>
+		<idno>N.</idno>
+		<imprint>
+			<date type="published" when="2020">2020. 9211. April</date>
+			<biblScope unit="page" from="1" to="24"/>
+		</imprint>
+	</monogr>
+	<note type="report_type">Policy Research Working Paper</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">A new international division of labor in Europe: Outsourcing and offshoring to East-Central and Eastern Europe</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Marin</surname></persName>
+		</author>
+		<idno type="DOI">10.4324/9780203892527</idno>
+		<ptr target="https://doi.org/10.4324/9780203892527"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the European Economic Association</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">2-3</biblScope>
+			<biblScope unit="page" from="612" to="626"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<monogr>
+		<author>
+			<persName><forename type="first">B</forename><surname>Mckenzie</surname></persName>
+		</author>
+		<ptr target="https://www.bakermckenzie.com/en/insight/publications/2020/04/beyond-covid-19-supply-chain"/>
+		<title level="m">Beyond COVID-19: Supply Chain Resilience Holds Key to Recovery</title>
+		<imprint>
+			<date type="published" when="2020-05-12">2020. 12 May 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<monogr>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Miller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">D</forename><surname>Blair</surname></persName>
+		</author>
+		<title level="m">Input-Output Analysis</title>
+		<meeting><address><addrLine>Cambridge</addrLine></address></meeting>
+		<imprint>
+			<publisher>Cambridge University Press</publisher>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Job Retention Schemes During the COVID-19 Lockdown and Beyond</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Miroudot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ragoussis</surname></persName>
+		</author>
+		<idno type="DOI">10.30875/9103c394-en</idno>
+		<ptr target="https://read.oecd-ilibrary.org/view/?ref=126_126496-evgsi2gmqj&amp;title=Evaluating_the_initial_impact_of_COVID-19_containment_measures_on_economic_activity"/>
+	</analytic>
+	<monogr>
+		<title level="m">Evaluating the initial impact of COVID-19 containment measures on economic activity</title>
+		<imprint>
+			<publisher>OECD</publisher>
+			<date type="published" when="2009-08-12">2009. 12 Aug 2020. 2020. August</date>
+			<biblScope unit="page" from="1" to="23"/>
+		</imprint>
+	</monogr>
+	<note>Trade in Intermediate Goods and Services</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">The notion of vertical integration in economic analysis</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">L</forename><surname>Pasinetti</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Metroeconomica</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="29"/>
+			<date type="published" when="1973">1973</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<monogr>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">L</forename><surname>Pasinetti</surname></persName>
+		</author>
+		<title level="m">Lectures on the Theory of Production</title>
+		<meeting><address><addrLine>Columbia</addrLine></address></meeting>
+		<imprint>
+			<publisher>Columbia University Press</publisher>
+			<date type="published" when="1977">1977</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">What is to be produced? The case for industrial policy</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pianta</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Intereconomics</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="139" to="145"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">The policy space for a novel industrial policy in Europe</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pianta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lucchese</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Nascia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">N</forename><surname>Superiore</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/icc/dtz075</idno>
+		<ptr target="https://doi.org/10.1093/icc/dtz07"/>
+	</analytic>
+	<monogr>
+		<title level="j">Industrial and Corporate Change</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="779" to="795"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Trade Imbalances and Fiscal Policy in the Eurozone: An Analysis of Economic Interrelations with a Global Supermultiplier Input-Output Model</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Portella-Carbó</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ó</forename><surname>Dejuán</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/cje/bey011</idno>
+		<ptr target="https://doi.org/10.1093/cje/bey011"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Industrial and Business Economics</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="137" to="157"/>
+			<date type="published" when="2019">2019. 2021</date>
+		</imprint>
+	</monogr>
+	<note>Cambridge Journal of Economics</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Lost in transition: Systemic innovations and the new role of the state in industrial policy</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Rullani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Cozza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zanfei</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s40812-016-0045-6</idno>
+		<ptr target="https://doi.org/10.1007/s40812-016-0045-6"/>
+	</analytic>
+	<monogr>
+		<title level="j">Economia e Politica Industriale</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="345" to="353"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><surname>Seric</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Winkler</surname></persName>
+		</author>
+		<ptr target="https://voxeu.org/article/covid-19-could-spur-automation-and-reverse-globalisation-some-extent"/>
+		<title level="m">COVID-19 could spur automation and reverse globalisation-to some extent</title>
+		<imprint>
+			<date type="published" when="2020-05-14">2020. 14 May 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Economic relations between Germany and southern Europe</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Simonazzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ginzburg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Nocella</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/cje/bet010</idno>
+		<ptr target="https://doi.org/10.1093/cje/bet01"/>
+	</analytic>
+	<monogr>
+		<title level="j">Cambridge Journal of Economics</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="653" to="675"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<monogr>
+		<author>
+			<persName><forename type="first">P</forename><surname>Sraffa</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/cje/bet010</idno>
+		<title level="m">Production of Commodities by Means of Commodities</title>
+		<meeting><address><addrLine>Cambridge</addrLine></address></meeting>
+		<imprint>
+			<publisher>Cambridge University Press</publisher>
+			<date type="published" when="1960">1960</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Structural change and global value chains in the EU</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Stöllinger</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10663-016-9349-z</idno>
+		<ptr target="https://doi.org/10.1007/s10663-016-9349-z"/>
+	</analytic>
+	<monogr>
+		<title level="j">Empirica</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="801" to="829"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<monogr>
+		<title level="m" type="main">A 'Manufacturing Imperative' in the EU-Europe's Position in Global Manufacturing and the Role of Industrial Policy</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Stöllinger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Foster-Mcgregor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Holzner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Landesmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Pöschl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Stehrer</surname></persName>
+		</author>
+		<idno>N. 391</idno>
+		<imprint>
+			<date type="published" when="2013-10">2013. October</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Wiiw Research Report</note>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">The 2020 Covid-19 pandemic and global value chains</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Strange</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Industrial and Business Economics</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page" from="455" to="465"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Value chains, networks and clusters: Reframing the global automotive industry</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sturgeon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Van Biesebroeck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Gereffi</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/jeg/lbn007</idno>
+		<ptr target="https://doi.org/10.1093/jeg/lbn007"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Economic Geography</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="297" to="321"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Fragmentation, incomes and jobs: An analysis of European competitiveness</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Timmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Los</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Stehrer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">J</forename><surname>De Vries</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Pijoan-Mas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Economic Policy</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">76</biblScope>
+			<biblScope unit="page" from="615" to="661"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">An illustrated user guide to the world input-output database: The case of global automotive production</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Timmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Dietzenbacher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Los</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Stehrer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">J</forename><surname>De Vries</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/roie.12178</idno>
+		<ptr target="https://doi.org/10.1111/roie.12178"/>
+	</analytic>
+	<monogr>
+		<title level="j">Review of International Economics</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="575" to="605"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<monogr>
+		<title level="m" type="main">An Anatomy of the Global Trade Slowdown based on the WIOD 2016 Release</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Timmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Los</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Stehrer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">J</forename><surname>Vries</surname></persName>
+		</author>
+		<author>
+			<persName><surname>De</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<publisher>Groningen Growth and Development Centre</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<monogr>
+		<title level="m" type="main">Internal devaluation in the European periphery : The story of a failure</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Uxó</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Paúl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Febrero</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="volume">2</biblScope>
+		</imprint>
+	</monogr>
+	<note type="report_type">UCLM Working Papers</note>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Return of industrial policy?</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">H</forename><surname>Wade</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">International Review of Applied Economics</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="223" to="239"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<monogr>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bolwijn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Casella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">U</forename><surname>Santos-Paulino</surname></persName>
+		</author>
+		<ptr target="https://voxeu.org/article/global-value-chain-transformation-decade-ahead"/>
+		<title level="m">Global value chain transformation to 2030: Overall direction and policy implications</title>
+		<imprint>
+			<date type="published" when="2020-09-02">2020. 2 Sep 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

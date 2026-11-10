@@ -1,0 +1,1283 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A graph neural network-based stock forecasting method utilizing multi-source heterogeneous data fusion</title>
+				<funder ref="#_Bmgv3PJ">
+					<orgName type="full">Fundamental Research Funds for the Central Universities</orgName>
+				</funder>
+				<funder ref="#_3t6agk2">
+					<orgName type="full">Research Program of Science and Technology at Universities of Inner Mongolia Autonomous Region</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Financial Innovation Center of the Southwestern University of Finance and Economics</orgName>
+				</funder>
+				<funder ref="#_4AGyq33 #_XMx3sFB">
+					<orgName type="full">National Natural Science Foundation of China</orgName>
+					<orgName type="abbreviated">NSFC</orgName>
+				</funder>
+				<funder ref="#_TQncjSR">
+					<orgName type="full">Financial Intelligence and Financial Engineering Key Lab of Sichuan Province, Jiaozi Institute of Financial Technology Innovation, Southwest University of Finance and Economics</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2022-05-27">27 May 2022 /</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xiaohan</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Economic Information Engineering</orgName>
+								<orgName type="institution">Southwestern University of Finance and Economics</orgName>
+								<address>
+									<postCode>610000</postCode>
+									<settlement>Cheng Du</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="department">School of Economic Information Engineering</orgName>
+								<orgName type="institution">Southwestern University of Finance and Economics</orgName>
+								<address>
+									<postCode>610000</postCode>
+									<settlement>Cheng Du</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jun</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Economic Information Engineering</orgName>
+								<orgName type="institution">Southwestern University of Finance and Economics</orgName>
+								<address>
+									<postCode>610000</postCode>
+									<settlement>Cheng Du</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jinghua</forename><surname>Tan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Economic Information Engineering</orgName>
+								<orgName type="institution">Southwestern University of Finance and Economics</orgName>
+								<address>
+									<postCode>610000</postCode>
+									<settlement>Cheng Du</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shiyu</forename><surname>Ji</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Economic Information Engineering</orgName>
+								<orgName type="institution">Southwestern University of Finance and Economics</orgName>
+								<address>
+									<postCode>610000</postCode>
+									<settlement>Cheng Du</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Huading</forename><surname>Jia</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Economic Information Engineering</orgName>
+								<orgName type="institution">Southwestern University of Finance and Economics</orgName>
+								<address>
+									<postCode>610000</postCode>
+									<settlement>Cheng Du</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">A graph neural network-based stock forecasting method utilizing multi-source heterogeneous data fusion</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2022-05-27">27 May 2022 /</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">E0350E883285C5DBB439489A4CE3337F</idno>
+					<idno type="DOI">10.1007/s11042-022-13231-1</idno>
+					<note type="submission">Received: 10 August 2021 / Revised: 12 January 2022 / Accepted: 11 May 2022</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-02T20:32+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Stock prediction</term>
+					<term>Graph data</term>
+					<term>Graph neural network</term>
+					<term>Multi-source data</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The study of the prediction of stock market volatility is of great significance to rationally control financial market risks and increase excessive investment returns and has received extensive attention from academic and commercial circles. However, as a dynamic and complex system, the stock market is affected by multiple factors and has a comprehensive capability to include complex financial data. Given that the explanatory variables of influencing factors are diverse, heterogeneous and complex, the existing intelligent algorithms have great limitations for the analysis and processing of multi-source heterogeneous data in the stock market. Therefore, this study adopts the edge weight and information transmission mechanism suitable for subgraph data to complete node screening, the gate recurrent unit (GRU) and long short-term memory (LSTM) to aggregate subgraph nodes. The compiled data contain the metapaths of three types of index data, and the introduction of the association relationship attention dimension effectively mines the implicit meanings of multi-source heterogeneous data. The metapath attention mechanism is combined with a graph neural network to complete the classification of multisource heterogeneous graph data, by which the prediction of stock market volatility is realized. The results show that the above method is feasible for the fusion of heterogeneous stock market data and the mining of implicit semantic information of association relations. The accuracy of the proposed method for the prediction of stock market volatility in this study is 16.64% higher than that of the dimensional reduction index and 14.48% higher than that of other methods for the fusion and prediction of heterogeneous data using the same model.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">Introduction</head><p>Stock price trends are nonlinear, unstable time series. In the past 30 years, to make profits in the stock market, investors have continuously studied and forecasted stock prices <ref type="bibr" target="#b14">[15,</ref><ref type="bibr">25,</ref><ref type="bibr" target="#b42">44]</ref>. Scholars have adopted various transaction data and have derived technical indicators to predict stock market trends <ref type="bibr">[36,</ref><ref type="bibr">48]</ref>. Statistical, economic and other methods have been applied to construct time series predictions <ref type="bibr" target="#b39">[41,</ref><ref type="bibr" target="#b46">49]</ref>, and factor pricing models <ref type="bibr" target="#b15">[16,</ref><ref type="bibr" target="#b16">17]</ref> have been used to study stock market fluctuations. For example, Jegadeesh and Titman <ref type="bibr" target="#b22">[23]</ref> proposed that a stock price has a trend toward continuing in the original movement direction, and the volume and turnover rate are both momentum factors derived for stock price trend prediction. By using derivative indexes such as the total market value and book-to-market ratio, Fama and French constructed a factor pricing model <ref type="bibr" target="#b17">[18]</ref> to interpret the expected rate of return on equity changes in a cross section. However, with the deepening of financial behavior studies, researchers have found that people's financial behaviors in the market are irrational, as investors are affected by cultural, psychological and other factors. Since natural languages such as news events <ref type="bibr" target="#b1">[2,</ref><ref type="bibr" target="#b7">8,</ref><ref type="bibr" target="#b44">46,</ref><ref type="bibr" target="#b48">51]</ref>, social media <ref type="bibr" target="#b37">[39,</ref><ref type="bibr" target="#b43">45]</ref>, and stock bars <ref type="bibr" target="#b23">[24]</ref> have arisen, they have become the main indicators in this field of research. In addition, researchers are constantly forming innovative text embedding methods and introducing machine learning algorithms such as convolutional neural networks (CNNs) and recurrent neural networks (RNNs) for stock market research <ref type="bibr" target="#b11">[12,</ref><ref type="bibr" target="#b12">13]</ref>.</p><p>With the development of information technology, to obtain more intuitive stock price change trends, graphical indicators have become important quantitative evaluation indicators of the stock market, and graphical indicators such as time-sharing diagrams, average lines, and K-lines have been introduced to evaluate stock price trends. Moving averages, which were proposed by Joseph E. Granville <ref type="bibr" target="#b19">[20]</ref>, help traders identify existing trends and future trends and detect excessive delays in trends that are about to reverse. K-charts intuitively present the trends of stock prices through patterns, colors, shapes and other elements. Therefore, as an important tool for helping investors in their decision making, K-line charts <ref type="bibr" target="#b5">[6]</ref> have been the most widely used approaches. A large number of researchers have adopted K-charts in their studies, and they have mainly applied the time series similarities among K-lines <ref type="bibr" target="#b27">[28]</ref> and identified patterns <ref type="bibr" target="#b47">[50]</ref> to predict the trends of stock prices. As an important dimension, graphical indicators have been receiving increasing attention. How to integrate graphical indicators with traditional data indicators is also the focus of research.</p><p>In recent years, researchers have focused on the processing, integration and analysis of heterogeneous data information in the stock market. For example, Tab et al. <ref type="bibr" target="#b45">[47]</ref> proposed using a tensor to replace a series vector for realizing the integration of data information to model market information and applied an event-driven mechanism to balance the heterogeneity of different data types for data prediction. Chai <ref type="bibr" target="#b6">[7]</ref> extracted the corresponding features from preprocessed multi-source data and modeled the quantified features by using an extended hidden Markov model to capture the underlying time dependence in the data, which was used for financial time series prediction. Mainstream methods have been used in many studies on the fusion and processing of heterogeneous data in the stock market <ref type="bibr" target="#b25">[26,</ref><ref type="bibr" target="#b30">31,</ref><ref type="bibr" target="#b49">52,</ref><ref type="bibr" target="#b50">53]</ref>; however, there are still some limitations.</p><p>First, the stock market is a complex dynamic system, and multi-dimensional data sets are the basis for studying stock volatility. The multi-source data in past studies included only trading data and news text data and are not the most widely used graphical indicator data at present. Second, multi-source heterogeneous data embedding quantification methods need to be explored. The multi-source heterogeneous indexes of the stock market ignore the financial characteristics of the indexes. The multiscale problems of transaction data, the financial characteristics of graphical indexes and the traditional quantitative methods of news data mining all have limitations. There is a lack of semantic information in fusion data. In addition, traditional statistical models have limitations for nonlinear and complex data analysis and fail to fully explain the comprehensive impact of multi-source heterogeneous data on the stock market.</p><p>To overcome the research limitations mentioned before, this paper proposes a graph fusion neural network method utilizing multi-source heterogeneous data for stock market prediction. This method combines the characteristics of stock evaluation index data, introduces a relationship dimension for data indexes, proposes an embedding method based on graph data, and constructs the subgraph data of the corresponding index data. A convolution operation and graph fusion are carried out on the subgraph to mine semantic information through the weights of the edges and the direction of edge information transmission in the subgraph data, and finally, stock market trend prediction is completed by using fused graph classification. According to the experimental results in terms of the time complexity, accuracy, F1 value and back-test strategy, the proposed MSub-GNN (MultiSubgraph-GNN) method can better predict the trends of stocks through the integration of a graphic index, trading data and stock market news than other approaches. This method is much more advanced than the singlesource data index and the traditional heterogeneous data fusion method. The main innovations and contributions of this paper are as follows:</p><p>1. This paper builds a more comprehensive data set, including transaction data, news texts and graphical indicators, innovatively introduces relational dimensions for indicator embedding and quantification, fully presents the financial characteristics of indicators, and provides new ideas for the effective information mining of indicators for the stock market. 2. Based on the embedded quantification of a single indicator in the stock market, the study constructs multi-source heterogeneous graph data to achieve data fusion. Different types of indicators for the stock market are represented by heterogeneous nodes, and edges are constructed between heterogeneous nodes to represent the correlation between different types of indicators. It provides a data basis for exploring the interaction between the complex influencing factors of the stock market. 3. The paper effectively realizes the data fusion analysis of the stock market index subgraphs. It creatively proposes that based on multi-source heterogeneous graph data, the graph convolution aggregation operation is applied to realize the vertex aggregation of multi-dimensional subgraph data nodes, and the semantic information of relationships among indicators is fully mined through the metapath, which is combined with the graph neural network. Finally, the paper realizes the classification of complex financial graph data to predict the fluctuation of stock market prices.</p><p>This paper is organized as follows. Section 2 reviews the theories involved in this paper and the current research status. Section 3 describes the MSub-GNN stock market prediction model based on multi-source heterogeneous data fusion. Section 4 introduces the experimental process and presents the model training process and experimental results. Finally, Section 5 proposes the next research direction.</p><p>2 Relevant work</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1">Heterogeneous data fusion</head><p>Studies on the stock market have already proven that stock price trend prediction is closely related to the characteristics of financial time series <ref type="bibr">[36]</ref>. In fact, noisy, nonlinear and random financial time characteristics exist between financial data, and the influencing factors are numerous and complex <ref type="bibr" target="#b31">[32]</ref>. However, Edwards R D et al. <ref type="bibr">[14]</ref> proved that the trends of financial time series would be repeated, and some special time series trends would appear in the trends of future time series in a very similar way <ref type="bibr" target="#b3">[4]</ref>. Historical trading data, such as opening prices, closing prices, maximum prices, minimum prices and trading volumes, directly reflect the changes in the financial market and generate other technical indicators to assist in judging the trends of stocks. The autoregressive (AR), autoregressive moving average (ARMA), and autoregressive integrated moving average (ARIMA) models and optimization models use trading time series data for linear analysis <ref type="bibr" target="#b3">[4,</ref><ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b36">38]</ref>, and some models, such as RNNs, CNNs and long short-term memory (LSTM), process historical trading data and derivative indexes into tensors for nonlinear analysis and the prediction of stock market fluctuations <ref type="bibr" target="#b18">[19]</ref>. Roondiwala et al. <ref type="bibr" target="#b40">[42]</ref> used an RNN and LSTM to predict Nifty50 stocks.</p><p>With the gradually increasing depth of research, text information is being introduced into stock market quantification methods as an evaluation figure, and qualitative text information is being processed from the perspective of news event-driven and sentiment analysis. Atkins et al. <ref type="bibr" target="#b1">[2]</ref> built an implicit Dirichlet distribution model and used a naive Bayes method to predict stock market fluctuation directions through financial and economic news. Wei <ref type="bibr" target="#b48">[51]</ref> et al. constructed an aggregated news sentiment index of related companies, proving that the level of emotion in news reports can effectively serve as a proxy, which provides valuable support for investment portfolio decisions. Graphical indicators, as important stock market volatility indexes, have also attracted much attention from researchers. Tsai <ref type="bibr" target="#b47">[50]</ref> applied image retrieval to extract seven different texture features based on wavelets from candlestick charts, used texture features to retrieve similar historical candlestick charts, and used graphs to retrieve future stock trends for stock prediction. Kusuma <ref type="bibr" target="#b27">[28]</ref> et al. input a candlestick graph into a CNN model for training, and the CNN model analyzed and identified the patterns in the candlestick graph and then predicted the future trends of the stock market. The prediction was based on the data of the Taiwan and Indonesia stock markets, and the accuracies were 92.2% and 92.1%, respectively, In recent years, researchers have studied and explored the integration of multi-source heterogeneous data in the stock market. Zhang <ref type="bibr" target="#b49">[52]</ref> proposed a new extended, coupled, and hidden Markov model. This model can effectively integrate news text and historical trading data and predict stock prices. According to their subsequent publication <ref type="bibr" target="#b50">[53]</ref>, they extracted events and user emotions from network news and social media and realized data integration through a coupling matrix and low-rank matrix decomposed by a tensor framework. Kim <ref type="bibr" target="#b25">[26]</ref> et al. proposed a hierarchical graph attention network method that selectively collects information from different relationships, extracts the relationship features of initialized node features, and realizes information fusion for stock market prediction. Li <ref type="bibr" target="#b30">[31]</ref> obtained social emotions and professional opinions, created a whole market information space with enterprise characteristics in tensor mode, and applied the tensor learning algorithm to learn the interaction effects of information space on stock trends.</p><p>At present, the multi-source heterogeneous data integration method based on stock market indexes transforms data into vectors or tensors, but there is no in-depth exploration of the relationships between index data, and when a machine learning method is used to process the fusion data, it fails to realize the sharing of the trained weight parameters, making the fused heterogeneous data remain in their base form. Hence, this paper builds subgraph data according to the different forms of stock index data and uses different embedding methods to mark the characteristics of index nodes as well as the edges and edge weights between nodes for stock market trading data, graphical indexes and stock market news to realize the efficient fusion of multi-source heterogeneous stock index subgraph data.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2">Graph neural networks</head><p>To solve the deep learning problem related to graph data, a graph neural network was developed. In merely a few years, Chinese graph neural network technology has developed rapidly and been widely used <ref type="bibr" target="#b20">[21,</ref><ref type="bibr" target="#b38">40]</ref>. In 2013, Bruna et al. <ref type="bibr" target="#b4">[5]</ref> first proposed the graph convolutional network (GCN) and defined graph convolution by using the spectral space method. To reduce the space-time complexity, from the perspective of space, Chebnet <ref type="bibr" target="#b10">[11]</ref> and the authors of <ref type="bibr" target="#b25">[26]</ref> defined a node weight matrix and performed parameterized optimization for the kernel function. With the explosion of the available amount of information and data, data mining has become more complex, and heterogeneity has become more obvious. Graph neural network-related methods have been widely used in biomedical applications, information mining, image processing and other applications and have achieved very brilliant results. In recent years, some researchers in the financial field have also tried to apply relational data to financial research and proposed adopting such methods to predict the stock market. Kim et al. <ref type="bibr" target="#b25">[26]</ref> proposed a hierarchical attention network that can be applied to stock market prediction by using relational data. This method can be used to predict individual stock prices and market indexes by selectively aggregating information on different types of relationships and adding this information to the representation of each company. Liu et al. <ref type="bibr" target="#b33">[34,</ref><ref type="bibr" target="#b34">35]</ref> proposed another stock price fluctuation prediction method based on the use of a closed-type regression unit (a gated recurrent unit, GRU) model built from a knowledge graph containing various relationships among the listed companies to predict stock price fluctuations by combining the news sentiments of related stocks and the news sentiments and quantitative characteristics of the stocks of interest. Matsunaga <ref type="bibr" target="#b35">[37]</ref> investigated the effectiveness of the cross work between market forecasting and graph neural networks and introduced corporate knowledge graphs into a forecasting model to simulate the decision-making behaviors of investors. The authors also used scrolling windows to backtrack and test the effectiveness of different markets with longer time spreads. Chan et al. <ref type="bibr" target="#b7">[8]</ref> included the data of the companies associated with the target company in their analysis by constructing a relationship diagram of the relevant companies and adopted the GCN method for information integration analysis. Although researchers have already investigated and explored stock market prediction using the graph neural network method, this research is still in the initial stage. No other studies have explored the application of the relational dimension of graph data.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3">Model construction of MSub-GNN</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1">Model introduction</head><p>In this paper, researchers build subgraph data with respect to stock market trading data, stock market news, and graphical indicators; consider the characteristics of the subgraph data based on the weights of edges and information transfer directions to adopt the corresponding subgraph convolution process; use the LSTM method to perform node aggregation; and train shared weight parameters during the process of aggregation. A chart is classified to predict the trends of the stock market. As shown in Fig. <ref type="figure" target="#fig_0">1</ref>, part ① shows three different types of stock index data for the input model. In part ②, the three types of heterogeneous data are constructed by subgraphs, and node aggregation is carried out by combining the characteristics of various indicators. Specifically, three kinds of edges are set up between the subgraphs to connect the subgraph aggregation nodes and create an edge weight matrix. Model training is used to renew the weight parameter and realize weight sharing for subgraph data fusion, which is employed to characterize the correlations between cross indicators. An embedded vector is generated for the target vertex; this process will be explained in detail in the next section. In addition, part ③ of the figure uses a cross-entropy loss function to train the graph neural network for stock market trend prediction and classification. Figure <ref type="figure" target="#fig_0">1</ref> shows the general framework of the proposed model.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2">Construction of graph data</head><p>Research on the construction of subgraph data is the key content of this paper. The researchers select trading data, stock market news and graphical indicators to construct subgraph data, and these three types of subgraph data compose graph data. As shown in the trading indicator subgraph of Fig. <ref type="figure" target="#fig_1">2</ref>(a), five trading days are selected as nodes to construct this subgraph. The node features include six indicators: the opening index, highest index, lowest index, closing index, trading volume, and trading value. According to the continuity of nearby trading days, edges are set between the nodes of nearby trading days. The initial weight of the edge is a random value in [0,1] <ref type="bibr" target="#b26">[27]</ref>. The transaction data subgraph node feature is a 5*6 matrix (5 trading day nodes, where each node has 6 features <ref type="bibr" target="#b0">[1]</ref>), and the transaction data subgraph edge weight matrix is 5*2 (the number of edges is established between trading days c 2  5 ). The six node characteristics are the opening index, maximum index, minimum index, closing index, trading volume, and trading quantity of each of the six indicators. In Fig. <ref type="figure" target="#fig_1">2</ref>(b) (the stock market news subgraph), the stock market news of each trading day is taken as an indicator subgraph, each news item is taken as a node of the corresponding subgraph, and the associated news text word vector is taken as the node feature. Edges are set between news text, and the news text similarity is taken as the weight of the edge to construct the connection between the news texts. The top 20 groups with the highest edge average weight <ref type="bibr" target="#b21">[22]</ref> are chosen as the extracted news subgraph features. The feature is a 100*200 matrix. One hundred is taken as the number of news items in the stock market, the number of news groups and the number of news items in each group, which are set based on the average number of news items in each stock market, and 200 is taken as the 200-dimensional text sentence vector of news headlines. In Fig. <ref type="figure" target="#fig_1">2(c</ref>), the node of the graphical index subgraph includes the K-line, a 5-day ecological monetary assessment (EMA) and a 10-day EMA. This paper regresses the graphical indicators to the origin and performs embedding by using the appropriate color and location to effectively prevent dimensional overlap between the transaction data and the graphical indicator data. The graphical indicators are sliced by following the bit generation rate (BGR) channel, redundant information in the graphical indicators is filtered to remove a larger amount of blank space in the graphical indicators, and then, the indicators are stitched into vectors. The graphical index subgraph is constructed as follows. In reference <ref type="bibr" target="#b2">[3]</ref>, the MIP solver is called once every 200 nodes. Considering the number of news subgraph nodes, to ensure the balance of heterogeneous index nodes and improve the calculation efficiency, the subgraph is composed of 200 nodes, and each node has 300 dimensional characteristics. The node features in the first half are the feature values of the picture, and the second half of the node features are the positions of the feature values in the vector. An edge is established between each node with a feature value and the node with the corresponding feature value position. The initial weight of the edge is a random value between [0,1]. Due to page limitations, the method for constructing subgraphs and a subgraph data sample are described in this paper in detail in the Appendix 1. The abovementioned three different types of heterogeneous nodes construct corresponding types of edges. The first edge type refers to the construction of trading indicator nodes and stock market news nodes; the second edge type refers to the construction of trading indicator nodes and graphical indicator node edges; and the third edge type refers to the construction of stock market news nodes and graphical indicator nodes. Multisource heterogeneous graph data are constructed for the stock market to realize the integration of heterogeneous subgraphs.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3">Subgraph convolution aggregation</head><p>To combine each index characteristic and the embedding method, an appropriate node filleting and aggregation method is adopted to preprocess the nodes, as this can effectively improve the efficiency of the subsequent subgraph data fusion and analysis processes. First, the vertex field nodes of each type of subgraph are sampled. To ensure computational efficiency, the number of vertex neighborhood nodes of each type of subgraph is the same. As described in Section 3.2, the vertex neighborhood node of the news text subgraph is the 5 nodes with the largest edge weight. The top 20 groups with the highest average weight of edges <ref type="bibr" target="#b21">[22]</ref> are selected as the extracted news subgraph features. The neighboring nodes of the vertices of the graphical indicator subgraph are image feature nodes and corresponding position nodes. The neighbor nodes of the vertices of the trading indicator subgraph are 5 working day nodes. Second, for the sampled neighborhood, the LSTM and GRU methods are mainly used to complete the aggregation process. There are differences in the structures of the two. The simpler structure of the GRU more easily converges, so the smaller data set uses the GRU structure. In contrast, the LSTM unit is used for corresponding data processing. Combined with the node characteristics of the constructed transaction subgraph, the data volume set is not a large-scale volume. In view of the complexity of sentence vector data, the news subgraph adopts the LSTM method for neighborhood node aggregation, while the graphical index subgraph and transaction data index subgraph adopt the GRU method to realize neighborhood node aggregation. Finally, for the aggregated vertices, the attention mechanism graph neural network based on nodes and edges completes the classification and prediction of multi-source heterogeneous graph data. This paper uses edge weights to carry out vertex screening for stock market news index subgraphs and realizes an attention mechanism based on the edge weights. Standard stochastic gradient descent and back propagation techniques are adopted to update the model parameters. The initial weight of each edge is established according to the similarity of the compared news texts. During the model iteration process, the weight of the stock market news graph data edge is updated, as shown in Eq. ( <ref type="formula">1</ref>), and the updated edge weight e l ij is obtained. According to Eq. ( <ref type="formula" target="#formula_0">2</ref>), the edge weights are scored to optimize edge weights so that the model can obtain more accurate neighborhood nodes for vertex embedding. Equation (1) regularizes the edge weight matrix e l ij to obtain the regularized edge weight matrix l ij so that the edge weight matrix can be easily calculated and compared. In Formula (2), the parameterized vector a ! T explains the edge-based attention mechanism.W is the weight matrix of node training, and node features are aggregated.</p><formula xml:id="formula_0">l ij ¼ softmax i ðe l ij Þ ð 1Þ e l ij ¼ LeakyReLU a ! T Wh i k Wh j Â Ã<label>ð2Þ</label></formula><p>The neighborhood nodes selected by edge weights are embedded vertices, and N i ð Þ denotes the largest edge weight among the five connected nodes. The embedding process for the vertex features of the neighborhood nodes is shown in the following equations:</p><formula xml:id="formula_1">h tþ1 xN i ð Þ ¼ LSTMðfh t xj ; 8 j 2 N i ð ÞgÞ<label>ð3Þ</label></formula><formula xml:id="formula_2">h tþ1 xi ¼ σðw Á concatðh t xj ; h tþ1 xN i ð Þ ÞÞ<label>ð4Þ</label></formula><formula xml:id="formula_3">h tþ1 xi ¼ norm h tþ1 xi À Á<label>ð5Þ</label></formula><p>As shown in Eq. ( <ref type="formula" target="#formula_1">3</ref>), the LSTM method is used to embed the neighborhood nodes of graph data to generate h tþ1 xN i ð Þ . For node feature h tþ1 xN i ð Þ after aggregation, Eq. ( <ref type="formula" target="#formula_2">4</ref>) concatenates the generated embedded layer and vertex feature h tþ1 xN i ð Þ with node feature h t xi of the original layer. Equation (4) splices the generated embedded layers and vertex features with the original layer and then implements the embedding operation. Finally, the whole process of convolution embedding is completed by the normalization of Eq. ( <ref type="formula" target="#formula_3">5</ref>).</p><p>For the graphical index and the transaction data index, a message passing mode is used to update and embed the nodes of the corresponding index subgraph. A eij in Eqs. ( <ref type="formula" target="#formula_4">6</ref>) and ( <ref type="formula" target="#formula_6">8</ref>) denotes the edge weight matrix, which can be updated continuously according to the training process. During the process of updating nodes, a GRU-based gate control unit is adopted to perform node embedding and updating. The updated information of graphical indicator m t ki is obtained by using the hidden graphical indicator state h t ki in Eq. ( <ref type="formula" target="#formula_4">6</ref>). The updated information and hidden state FF of the graphical indicators in Eq. ( <ref type="formula" target="#formula_5">7</ref>) are used to obtain the FF by updating the hidden states of the nodes.</p><formula xml:id="formula_4">m t ki ¼ M t ðh t ki ; h kj ; e ij Þ ¼ A eij h t ki<label>ð6Þ</label></formula><formula xml:id="formula_5">h tþ1 ki ¼ U t ðh t ki ; m t ki Þ ¼ GRUðh t ki ; m t ki Þ ð<label>7Þ</label></formula><p>Through the transaction metric subgraph node obtained during the process of acquiring the hidden state h t di in Eq. ( <ref type="formula" target="#formula_6">8</ref>), the historical trading data indicators yield the updated information m t di . As shown in Eq. ( <ref type="formula" target="#formula_7">9</ref>), the hidden state of the gate control unit input node h t di and the updated information m t di are used to obtain the updated node hidden state h tþ1 di .</p><formula xml:id="formula_6">m t di ¼ M t ðh t di ; h t dj ; e ij Þ ¼ A eij h t dj<label>ð8Þ</label></formula><formula xml:id="formula_7">h tþ1 di ¼ U t ðh t di ; m t di Þ ¼ GRU ðh t di ; m t di Þ ð<label>9Þ</label></formula><p>By setting three types of edge connection subgraphs, building up a three-dimensional tensor of edge weights A aij to represent the degrees of correlation among different indexes, and training the three-dimensional tensor weight value, the updated information m t mi is finally obtained via the node hidden states h tþ1 xi , h tþ1 ki , and h tþ1 di after the subgraph convolutions are aggregated, and the three-dimensional tensor A aij is used to carry out message transmission m t mi . The information is updated with the hidden state of the aggregation graph node by Eq. ( <ref type="formula" target="#formula_9">11</ref>), and the GRU updates the hidden state of the aggregation graph node to realize the data fusion of the subgraph. Finally, Eq. ( <ref type="formula" target="#formula_10">12</ref>) inputs the updated node hidden state into the fully connected layer to complete the classification and prediction steps for the whole model.</p><p>Three types of edge-connected subgraphs are setup, the hidden states h tþ1 xi , h tþ1 ki , and h tþ1 di of the nodes after the subgraph convolution operation are aggregated, tanh nonlinear transformation is performed on node h t mi after grouping and aggregation according to the metapath, and the inner product is calculated with metapath weight vector a T , as shown in formula <ref type="bibr" target="#b9">(10)</ref>. The importance m i of each metapath is calculated, A aij is the aggregate node feature weight matrix, h is the offset, and 1 V j j represents the normalization of the importance of the metapath. Multisource heterogeneous graph data consist of three types of index node sets and connection sets. The metapath is a sequence of complex network graph data constructed in this paper traversing a set of heterogeneous nodes, and the nodes of each metapath are defined as neighboring nodes.</p><formula xml:id="formula_8">m i ¼ 1 V j j X i2V a T Á tanh A aij Á h ϕt mi þ h<label>ð10Þ</label></formula><p>Formula ( <ref type="formula" target="#formula_9">11</ref>) is based on obtaining the importance of metapath m ϕi and softmax normalization processing to obtain the weight coefficient of each metapath. The weight coefficient represents the importance of the metapath for the classification and prediction of the complex network of the stock market.</p><formula xml:id="formula_9">ϕi ¼ exp m ϕi À Á P P i¼1 exp m ϕi À Á<label>ð11Þ</label></formula><p>Different metapath weight coefficients ϕ i and node-level attention mechanisms N ϕi are combined to obtain the final aggregation node N ϕi , which is aggregated according to metapath ϕ i , and the final aggregation node N uses two types of attention mechanisms based on the classical features of nodes. The important information contained in the node layer and the semantic layer is constructed.</p><formula xml:id="formula_10">N ¼ X P i¼1 ϕ i N ϕ i<label>ð12Þ</label></formula><p>The updated information and the hidden state N of the aggregated graph nodes are updated by the gate control unit of Eq. ( <ref type="formula">13</ref>) to update the hidden state h tþ1 mi of the node to complete subgraph data fusion. Finally, Eq. ( <ref type="formula" target="#formula_11">14</ref>) inputs the updated node hidden state h tþ1 mi in the fully connected layer to complete the classification prediction of the entire model.</p><formula xml:id="formula_11">h tþ1 mi ¼ GRU ðh t mi ; m t mi Þ ð 13Þ y ¼ X i;t soft maxðW t h tþ1 mi Þ<label>ð14Þ</label></formula><p>4 Experimental simulation and results analysis The subplan for the trading data indicators selects five working days as nodes and takes six indexes, the opening index, maximum index, minimum index, closing index, trading volume and number of transactions during each trading day, as node features. An edge is set between adjacent trading days, and the initial weight of each subgraph edge is a random value in [0,1]. The graphical index subplot includes a K plot, a 5-day moving average and a 20-day moving average. The graphical index image is spliced into the BGR channel by using the cv2 library and stitched into a vector. Redundant values of 190, 191 and 51 in the vector are deleted, and 30,000 values are randomly selected as the training data. Two hundred node plots are constructed, and each node has a 300-dimensional feature. Node features 0-99 are the eigenvalues of the graphical index eigenvectors, and node features 99-199 are the position values of the graphical index eigenvectors. An edge is set for the corresponding node. The initial weight of each edge is a random value in [0,1]. Figure <ref type="figure" target="#fig_2">3</ref> shows the news subgraph data.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2">Model comparison</head><p>This paper mainly performs comparative experiments from two aspects. First, the advantages of multi-source data are demonstrated from the viewpoint of data indicators. On this basis, multisource data fusion and processing methods are compared.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2.1">Validation of the index dimensionality</head><p>Combined with the inputs of different indexes, the stock market news text is obtained using Grat-Conv, and the historical trading data and graphical indexes are obtained using Gated-Graph-Conv <ref type="bibr" target="#b28">[29]</ref>. Convolution and fully connected layer networks are also adopted. The basic network parameters are shown in Table <ref type="table" target="#tab_1">1</ref>.</p><p>Reference <ref type="bibr" target="#b29">[30]</ref> proved the effectiveness of multidimensional data in the pioneering multiple kernel k-means (MKKM) <ref type="bibr" target="#b32">[33]</ref> and TeSIA <ref type="bibr" target="#b29">[30]</ref> data fusion methods through experiments, showing the explanatory ability of data fusions for stock market fluctuations and that the multidimensional data index was better than the dimensionality reduction index. To further verify the effectiveness of the multidimensional indicators utilized by the method of this paper, the experiment employs the data of the Shanghai Composite Index from 2019-01-01 to 2019-09-30 (trading days only) for training and the data from 2019-10-01 to 2019-09-30 (trading days only) for testing. We combine the T + 1 closing price with the T closing price to mark the fluctuation of the stock market. First, the model is verified according to different index inputs, and the prediction effects of different index subgraphs are presented as input values. Combined with the method in this paper and in accordance with the network settings in Table <ref type="table" target="#tab_1">1</ref>, after the convolution operation with the subgraphs of different indicators, the fully connected layer is connected to complete the prediction. In the seventh group of experiments in Table <ref type="table" target="#tab_2">2</ref>, the final prediction is completed by docking the fully connected layer after the state update of the convolutional aggregation graph for each subgraph. The experimental results are presented in Table <ref type="table" target="#tab_2">2</ref>. The introduction of multi-source index data effectively improves the prediction accuracy of the model proposed in this paper.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2.2">Comparison of integration and analysis methods</head><p>To further verify the superiority of the constructed model, this paper introduces multi-source index methods such as a support vector machine (SVM) <ref type="bibr" target="#b8">[9]</ref>, a random forest (RF) <ref type="bibr" target="#b41">[43]</ref>, MKKM <ref type="bibr" target="#b32">[33]</ref>, LSTM <ref type="bibr" target="#b29">[30]</ref>, and TeSIA <ref type="bibr" target="#b29">[30]</ref> for model comparison. The embedding methods include the vector method and tensor method. The vector method combines the three types of features into vectors. The vector method is embedded into the corresponding prediction method. The authors of a study on tensor methods <ref type="bibr" target="#b45">[47]</ref> used second-order tensors to simulate complex market information, and convolution LSTM (ConvLSTM) was used to process the tensor and generate the tensor data for analysis purposes. The model parameter settings   <ref type="table">3</ref>. The model proposed in this paper is set according to the relevant parameters in Table <ref type="table" target="#tab_1">1</ref>.</p><p>SVM <ref type="bibr" target="#b8">[9]</ref> Support vector machines (SVMs) are widely used machine learning classification algorithms. Through the constructed kernel function, the points that need to be classified are mapped from low latitudes to high latitudes to achieve the classification task. According to the processing of vectors and tensors, the features are input. C is the penalty coefficient, the linear kernel function is adopted, and the maximum number of iterations is set to 5000.</p><p>Random Forest <ref type="bibr" target="#b41">[43]</ref> The RF exhibits excellent performance in the multi-source feature classification task. The RF method is used to make predictions by combining the vector and tensor methods. The minimum number of samples required for segmentation is set to 6, and the maximum number of decision trees is set to 3.</p><p>MKKM <ref type="bibr" target="#b32">[33]</ref> The goal of MKKM clustering is to find the optimal combination from a set of predetermined kernels; thus, the feature vectors can be accurately divided into several classes, and the input tensor mode data are directly classified according to their dimensionality. In this study, we connect multiple information source features and explore the best clustering results in the kernel space for the judgment of stock market trends. The k-means kernel number is set to 3, the kernel function adopts the Gaussian function, gamma in the Gaussian kernel function is set to 1/3, and the cluster category K is set to 2.</p><p>LSTM <ref type="bibr" target="#b29">[30]</ref> As a special cyclic neural network, LSTM introduces a gate structure to efficiently overcome the long dependence problem of traditional cyclic neural networks. Its good characteristics make LSTM widely used in quantitative stock research. In this paper, vector TeSIA <ref type="bibr" target="#b29">[30]</ref> After combining the characteristics of the three indexes extracted in Section 3 to construct a third-order tensor, the redundancy is removed by tensor decomposition, and a TensorFlow model is established according to the direction of price movement. TeSIA integrates multi-source information to establish a baseline for prediction, and it has achieved good results in some multi-source data prediction projects. Because this method is based on the tensor data processing method, there is no vector method-based data verification step. Thirdorder tensors were adopted with dimensions i = 5, j = 1, and k = 10, and the maximum number of iterations was set to 5000.</p><p>MHDA <ref type="bibr" target="#b29">[30]</ref> By integrating multi-source information such as transaction data, news event data, and investor comments and using domain-specific emotional dictionaries and relationship diagrams, features are extracted from transaction data, user discussion forum comments, and news events. A multivariate Gaussian mixture model is used to represent features, and the features are integrated into a hidden Markov model to capture time-dependent information to predict stock market price fluctuations.</p><p>The algorithm in Table <ref type="table" target="#tab_3">4</ref> is run in Python 3.7.3 software, and the hardware contains an Intel i7 processor and 8 GB of DDR4 RAM. The parameter configuration of the algorithm is shown in Table <ref type="table">3</ref>. We list the time complexity, accuracy, F1 and Matthews correlation coefficient (MCC) values yielded by each method in Table <ref type="table" target="#tab_3">4</ref>.</p><p>From Table <ref type="table" target="#tab_3">4</ref>, the accuracy of the SVM using multi-source index data in terms of stock market prediction only reaches 48.69%. Although the prediction accuracy of the RF is slightly higher than that of the SVM algorithm, it is basically maintained around the level of random probability. By considering the relationships between the three indexes, MKKM and TESIA exhibit improved prediction performance, and the obtained accuracy, F1 and MCC values are better than those of the RF and SVM methods. The MSub-GNN method proposed in this research paper embeds the relationships between the three types of indexes and the relationships between the trading days into graph data edges and subgraphs and then uses a multiindex subgraph convolution operation to forecast the stock market. The accuracy, F1 value and Matthews correlation coefficient of the prediction method in this paper reach 70.76%, 0.8241, and 0.421, respectively, which are all higher than those of the other baseline models. From the perspective of model prediction performance, the method proposed in this paper is the best.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3">Back testing strategy</head><p>As shown in Tables <ref type="table" target="#tab_2">2</ref> and<ref type="table" target="#tab_3">4</ref>, the method adopted in this paper uses multi-source and heterogeneous stock market indicators to predict the stock market, as previously mentioned. Such a method is much better than not only single-source index prediction but also other multisource index prediction methods. In this paper, we choose the data of the Shanghai Composite Index, CSI 300 and Shenzhen Composite Index for the trading days from 2013-01-11 to 2019-11-24 for training and the data for 100 trading days from 2019-11-25 to 2020-04-22 for back testing. When the model predicts an increase, it generates a buy signal; when it predicts a fall, it generates a sell signal, but a trade is not triggered by the same continuous signals. The initial   <ref type="table" target="#tab_1">1</ref> are used to conduct trade back testing. In Figs. <ref type="figure" target="#fig_7">7</ref> and<ref type="figure" target="#fig_8">8</ref>, the TeSIA and MHDA methods, which have a better effect in terms of multi-source index prediction, are adopted for comparison purposes. Figure <ref type="figure">9</ref> shows the MSub-GNN method proposed in this paper.   Stock Exchange Index rose by 4.73%, the Shenzhen Stock Exchange Index rose by 3.17% and the Growth Enterprise Index decreased by 1.18% over the same period. The investment yield of the method proposed in this paper is 17.32%, which is the highest yield. The yields of the TeSIA and MHDA trading strategies are 5.28% and 7.32%, respectively, which are higher than the index in the same period, while other strategies produce yields that are lower than that of the index. In this article, since the short-term return in the stock market forecast is not considered part of the strategy, the back-test return strategy in this paper is closely correlated to the trend of the predicted index. In the situation with only two sharp drops, the strategy in this paper achieves good returns. From the red  Moreover, the graphic and transaction record indexes can better predict the overall trend of the stock market. Table <ref type="table" target="#tab_4">5</ref> provides an overall description and evaluation of the trading strategy through the Sharpe ratio, Sortino ratio, information ratio, and max drawdown. The promise ratio and the information ratio are 0.978, 1.325, and 1.413. Compared with the baseline model, the proposed method has higher risks and returns, and the excess return brought by active investment is the highest, with a maximum drawdown of 21.53%, which is in a larger downtrend. It also has a better stop loss performance than the baseline model. The Sharpe ,ratio Sotino ratio, and information ratio of the method proposed in this article are 0.978, 1.325, and 1.413, respectively. Compared with the baseline model, the method proposed in this article has a higher risk return, and the excess return brought by active investment is the highest, with a maximum drawdown of 21.53%. In a larger downtrend, it has better stop loss performance. The multi-source heterogeneous data index effectively realizes the complementarity of the prediction function, and the convolution method applicable to the subgraph used in this paper effectively processes and analyzes the subgraph index.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5">Conclusion and outlook</head><p>This paper proposed a graph neural network for the fusion of multi-source heterogeneous subgraphs for application in stock market trend prediction. This new network redefined the three kinds of embedded representation methods for stock market indexes and built a trading data index subgraph, a stock market news index subgraph, and graphical indicators. This network adopted different convolution methods for node pair data aggregation in graphs. The hidden states of the aggregated  nodes were updated by using the weights of the heterogeneous edges obtained after the convolution operation to complete subgraph fusion. Finally, a fully connected classification layer classification was used to make predictions. The method in this paper realized the semantic mining and expression of the correlation relationships among the prediction indexes, which effectively improved the accuracy of stock market trend prediction and yielded good results in the back-test experiment. However, the model proposed in this article is not sufficient for mining the implicit semantics of different types of indicator nodes and the interrelationship between indicator nodes. Combined with the characteristics of the multi-source heterogeneous graph data of the stock market constructed in this article, especially the relationship between indicator subgraphs, the relationship between the subgraph nodes still needs to be explored in depth, and the construction of a multiple attention mechanism to fully mine the rich semantic information of the fusion of multi-source heterogeneous indicators will be the direction of future research. The model can be applied to high-frequency quantitative investment and generalized to predict the trends of other financial products.</p><p>the second 'for' loop of the function is used to establish edges between the characteristic value nodes and the characteristic value position nodes.</p><p>The shared link details the procedures in this article<ref type="foot" target="#foot_1">foot_1</ref> .</p><p>The shared link details the procedures in this article 1  </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1</head><label>1</label><figDesc>Fig. 1 Model structure diagram (Part ① Input data of three types of stock market indicators. Part ② Three types of subgraph data of the stock market were constructed, and node aggregation was performed by combining the characteristics of various indicators. Parts ③ and ④ A graph neural network was used to predict stock market fluctuation via graph data classification)</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2</head><label>2</label><figDesc>Fig. 2 Graphical data embedding method ((a) trading subgraph embedding, (b) news subgraph embedding, (c) graphical indicator subgraph embedding, and (d) heterogeneous graph embedding)</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 3</head><label>3</label><figDesc>Fig.3Indicator subgraph data (50 nodes are randomly selected for display). The edge thickness is related to the text similarity, and the node diameter and color depth depend on the number of connected nodes</figDesc><graphic coords="12,46.77,53.12,346.48,81.92" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head/><label/><figDesc>10,000, and the income settlement standard is the closing price on the given trading day. Due to page limitations, this paper presents and analyzes the experimental results of the Shanghai Composite Index in detail. In Figs.4, 5 and 6, Methods 1, 2 and 3 in Table</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head/><label/><figDesc>Figures 4,<ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b5">6,</ref><ref type="bibr" target="#b6">7,</ref> 8 and 9  show an investment simulation of buying and selling signals and returns, respectively. The figures do not more intuitively show the benefits of several strategies.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 10</head><label>10</label><figDesc>is the comparison chart regarding the benefits of the different strategies. As shown in</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Fig. 4 Fig. 5</head><label>45</label><figDesc>Fig. 4 Trading data indicator strategy</figDesc><graphic coords="16,46.77,53.12,346.48,121.38" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Fig. 7</head><label>7</label><figDesc>Fig. 7 TeSIA trading strategy</figDesc><graphic coords="17,46.77,53.12,346.48,121.38" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Fig. 8</head><label>8</label><figDesc>Fig. 8 MHDA trading strategy</figDesc><graphic coords="17,46.77,328.08,346.48,121.38" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Fig. 10</head><label>10</label><figDesc>Fig. 10 Comparison of strategy benefits</figDesc><graphic coords="18,46.77,53.12,346.48,130.96" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head/><label/><figDesc/><graphic coords="19,46.77,347.84,345.85,223.36" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head/><label/><figDesc/><graphic coords="20,46.77,192.47,346.09,290.65" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head/><label/><figDesc>This paper adopts the China Stock Market &amp; Accounting Research (CSMAR) database to conduct experiments. The data table ranging from 2013-01-11 to 2019-11-25 in this database is used to construct the stock market chart data for the Shanghai Composite Index, China Securities Index (CSI) 300 and Shenzhen Composite Index. Dgl is used to construct graph data and carry out the corresponding convolution operation. The news index subgraph uses each news item as a graph node, the word vector of the news text as the corresponding node feature, and the similarity of news text as the edge weight to construct the connections between news texts. Each trading day is a subgraph. The genism library is used to convert the news texts into 200-dimensional word vectors as node features. The similarities between news texts are calculated by a similarity model as the weights of the news subgraph edges.</figDesc><table><row><cell>4.1 Data set introduction</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 1</head><label>1</label><figDesc>Network parameter settings</figDesc><table><row><cell>Index Subgraph</cell><cell>Methods</cell><cell cols="2">Parameter Settings</cell><cell/><cell/></row><row><cell/><cell/><cell>Input Size</cell><cell>Output Size</cell><cell>Drop Rate</cell><cell>Aggregator Type</cell></row><row><cell>Stock news</cell><cell>GratConv1</cell><cell>200</cell><cell>128</cell><cell>0.1</cell><cell>LSTM</cell></row><row><cell/><cell>GratConv2</cell><cell>128</cell><cell>64</cell><cell>0</cell><cell>LSTM</cell></row><row><cell>Trading data</cell><cell>GatedGraphConv</cell><cell>6</cell><cell>6</cell><cell>0</cell><cell>GRU, steps=5</cell></row><row><cell>Graphical indicator</cell><cell>GatedGraphConv1</cell><cell>300</cell><cell>256</cell><cell>0.1</cell><cell>GRU, steps=3</cell></row><row><cell/><cell>GatedGraphConv2</cell><cell>256</cell><cell>128</cell><cell>0</cell><cell>GRU, steps=3</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 2</head><label>2</label><figDesc>Comparison of the prediction performances of multi-source indicators are applied as feature inputs for the LSTM model to observe the experimental results. Dropout is set to 0.2 to prevent overfitting, and the hidden state of the output contains the result of all time steps.</figDesc><table><row><cell/><cell>Trade</cell><cell>News</cell><cell>Graphics</cell><cell>Acc</cell><cell>F1-score</cell></row><row><cell>1</cell><cell>√</cell><cell/><cell/><cell>49.29%</cell><cell>0.5631</cell></row><row><cell>2</cell><cell/><cell>√</cell><cell/><cell>55.38%</cell><cell>0.6221</cell></row><row><cell>3</cell><cell/><cell/><cell>√</cell><cell>52.37%</cell><cell>0.5826</cell></row><row><cell>4</cell><cell>√</cell><cell>√</cell><cell/><cell>56.92%</cell><cell>0.6232</cell></row><row><cell>5</cell><cell>√</cell><cell/><cell>√</cell><cell>56.93%</cell><cell>0.6381</cell></row><row><cell>6</cell><cell/><cell>√</cell><cell>√</cell><cell>53.84%</cell><cell>0.5914</cell></row><row><cell>7</cell><cell>√</cell><cell>√</cell><cell>√</cell><cell>70.76%</cell><cell>0.8241</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 4</head><label>4</label><figDesc/><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 5</head><label>5</label><figDesc>Trading strategy back test benefits overview</figDesc><table><row><cell/><cell>Methods</cell><cell>Sharpe Ratio</cell><cell>Sortino Ratio</cell><cell>Information Ratio</cell><cell>Max Drawdown</cell></row><row><cell>1</cell><cell>Trade</cell><cell>0.437</cell><cell>0.562</cell><cell>0372</cell><cell>38.29%</cell></row><row><cell>2</cell><cell>News</cell><cell>0.416</cell><cell>0.534</cell><cell>0.346</cell><cell>33.58%</cell></row><row><cell>3</cell><cell>Graphics</cell><cell>0.451</cell><cell>0.685</cell><cell>0.426</cell><cell>36.28%</cell></row><row><cell>4</cell><cell>TeSIA</cell><cell>0.847</cell><cell>1.126</cell><cell>1.132</cell><cell>28.71%</cell></row><row><cell>5</cell><cell>MHDA</cell><cell>0.876</cell><cell>1.116</cell><cell>1.332</cell><cell>30.12%</cell></row><row><cell>7</cell><cell>Msub-GNN</cell><cell>0.978</cell><cell>1.325</cell><cell>1.413</cell><cell>21.53%</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>Multimedia Tools and Applications (2022) 81:43753-43775</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="1" xml:id="foot_1"><p>https://pan.baidu.com/s/1Wlj7FewoUDcwMWBET58VNg.</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><p>Acknowledgements The research work is supported by the <rs type="funder">National Natural Science Foundation of China (NSFC)</rs> (<rs type="grantNumber">71873108</rs> and <rs type="grantNumber">62072379</rs>), <rs type="funder">Fundamental Research Funds for the Central Universities</rs> <rs type="grantNumber">kjcx20210103</rs>), <rs type="funder">Financial Intelligence and Financial Engineering Key Lab of Sichuan Province, Jiaozi Institute of Financial Technology Innovation, Southwest University of Finance and Economics</rs> (<rs type="grantNumber">cgzh20210204</rs>), <rs type="funder">Research Program of Science and Technology at Universities of Inner Mongolia Autonomous Region</rs> (<rs type="grantNumber">2021GG0164</rs>) and <rs type="funder">Financial Innovation Center of the Southwestern University of Finance and Economics</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_4AGyq33">
+					<idno type="grant-number">71873108</idno>
+				</org>
+				<org type="funding" xml:id="_XMx3sFB">
+					<idno type="grant-number">62072379</idno>
+				</org>
+				<org type="funding" xml:id="_Bmgv3PJ">
+					<idno type="grant-number">kjcx20210103</idno>
+				</org>
+				<org type="funding" xml:id="_TQncjSR">
+					<idno type="grant-number">cgzh20210204</idno>
+				</org>
+				<org type="funding" xml:id="_3t6agk2">
+					<idno type="grant-number">2021GG0164</idno>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Appendix 1</head><p>Trading subgraph data construction</p><p>The trading subgraph data construction process is illustrated in the following table. First, the program defines the interval of the determined trading day and builds a subgraph DGLGraph(). Then, based on the trading day, subgraph nodes are set up with the add_nodes() function. Finally, the trading day data index is taken as the node feature via ndata().</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Subgraph data construction for stock market news</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Subgraph data construction for stock market news</head><p>To construct the stock market news subgraph, two core functions are used. The first function, EWEIGHT(), is mainly used to calculate the similarities between news events and the edge weight values for the construction of the subgraph data. Jieba () is used for word classification, and SparseMatrixSimilarity () is used to calculate the similarity between texts. The second function is CREATENEWSUB (). It acts as a subgraph builder function, where each piece of news text is used as a node, Add_edge () increases the edges between the nodes, and EWEIGHT() uses the edge weights to assign values. The news text vector contains node characteristics.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Construction of graphical index subgraph data</head><p>Construction of graphical index subgraph data Two core functions are applied to construct graphical index subgraph data. The first function, LOCATE(), is mainly used to obtain the position of a number in a vector. The second function, GRAPHICSUB(), is used as the construction function for the graphical index subgraph. A 'for' loop and cv2.split are used to extract the three primary color features of the graphical index, and the characteristic value is used as the corresponding node feature. Then, Publisher's note Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">Resource sharing in continuous sliding-window aggregates</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Arasu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Widom</surname></persName>
+		</author>
+		<ptr target="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/sharing.pdf"/>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note>EB/OL. -10-02</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Financial news predicts stock market volatility better than close price[J]</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Atkins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Niranjan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Gerding</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Financ Data Sci</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="120" to="137"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">A branch-and-cut-and-price algorithm for one-dimensional stock cutting and two-dimensional two-stage cutting[J]</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Belov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Scheithauer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Eur J Oper Res</title>
+		<imprint>
+			<biblScope unit="volume">171</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="85" to="106"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<title level="m" type="main">Time series analysis: forecasting and control</title>
+		<author>
+			<persName><forename type="first">Gep</forename><surname>Box</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Jenkins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">C</forename><surname>Reinsel</surname></persName>
+		</author>
+		<editor>M</editor>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<publisher>Wiley</publisher>
+			<pubPlace>Hoboken</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bruna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zaremba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Szlam</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1312.6203</idno>
+		<title level="m">Spectral networks and locally connected networks on graphs</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<monogr>
+		<title level="m" type="main">Encyclopedia of Canlestick charts</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">N</forename><surname>Bulkowski</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<publisher>Wiley</publisher>
+			<pubPlace>Hoboken</pubPlace>
+		</imprint>
+	</monogr>
+	<note>&amp;nbsp</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">A multi-source heterogeneous data analytic method for future price fluctuation prediction</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Chai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Luo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J]. Neurocomputing</title>
+		<imprint>
+			<biblScope unit="volume">418</biblScope>
+			<biblScope unit="page" from="11" to="20"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Stock price reaction to news and no-news: drift and reversal after headlines[J]</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">S</forename><surname>Chan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Financial Econ</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="223" to="260"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">A feature weighted support vector machine and k-nearest neighbor algorithm for stock market indices prediction</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Hao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J]. Expert Syst Appl</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page" from="340" to="355"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">25 years of time series forecasting</title>
+		<author>
+			<persName><forename type="first">De</forename><surname>Gooijer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Hyndman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J]. Int J Forecast</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="443" to="473"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Convolutional neural networks on graphs with fast localized spectral filtering</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Defferrard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Bresson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Vandergheynst</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of Advances in Neural Information Processing Systems</title>
+		<meeting>Advances in Neural Information Processing Systems</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="3844" to="3852"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Using structured events to predict stock price movement: An empirical investigation</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)</title>
+		<meeting>the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="1415" to="1425"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Deep learning for event-driven stock prediction</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Twenty-fourth International Joint Conference on Artificial Intelligence 14</title>
+		<meeting>the Twenty-fourth International Joint Conference on Artificial Intelligence 14</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<title level="m" type="main">Technical analysis of stock trends</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Edwards</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Magee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Whc</forename><surname>Bassetti</surname></persName>
+		</author>
+		<editor>M</editor>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<publisher>CRC Press</publisher>
+			<pubPlace>&amp;nbsp; Boca Raton</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Efficient capital markets: A review of theory and empirical work</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">F</forename><surname>Fama</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J]. J Finance</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="383" to="417"/>
+			<date type="published" when="1970">1970</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">The cross-section of expected stock returns[J]</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">F</forename><surname>Fama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">R</forename><surname>French</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Financ</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="427" to="465"/>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Common risk factors in the returns on stocks and bonds[J]</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">F</forename><surname>Fama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">R</forename><surname>French</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Financ Econ</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="3" to="56"/>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Multifactor explanations of asset pricing anomalies</title>
+		<author>
+			<persName><forename type="first">Fkr</forename><surname>French</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J]. J Financ</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="55" to="84"/>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<author>
+			<persName><forename type="first">I</forename><surname>Goodfellow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Courville</surname></persName>
+		</author>
+		<title level="m">Deep learning</title>
+		<meeting><address><addrLine>Cambridge</addrLine></address></meeting>
+		<imprint>
+			<publisher>MIT Press</publisher>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<monogr>
+		<title level="m" type="main">A strategy of daily stock market timing for maximum profit</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Granville</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1960">1960</date>
+			<publisher>Prentice-Hall</publisher>
+			<pubPlace>&amp;nbsp; Hoboken</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Graph neural network based anomaly detection in dynamic networks</title>
+		<author>
+			<persName><forename type="first">J-Y</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R-H</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J]. J Softw</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="issue">03</biblScope>
+			<biblScope unit="page" from="156" to="170"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">The puzzling media effect in the Chinese stock market[J]</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">L</forename><surname>Huang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Pac-Basin Financ J</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="page" from="129" to="146"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Returns to buying winners and selling losers: Implications for stock market efficiency</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Jegadeesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Titman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J]. J Financ</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="65" to="91"/>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Research on user participation behavior of online stock community</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Jiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J]. J Inf Syst</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">25</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Maps of bounded rationality: Psychology for behavioral economics[J]</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kahneman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am Econ Rev</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="1449" to="1475"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<monogr>
+		<title level="m" type="main">Hats: A hierarchical graph attention network for stock movement prediction</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>So</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jeong</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1908.07999</idno>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<title level="m" type="main">Semi-supervised classification with graph convolutional networks</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">N</forename><surname>Kipf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Welling</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1609.02907</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Kusuma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Ho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">T</forename><surname>Kao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">C</forename></persName>
+		</author>
+		<idno type="arXiv">arXiv:1903.12258</idno>
+		<title level="m">Using deep learning neural networks and candlestick chart representation to predict stock market</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<monogr>
+		<title level="m" type="main">Gated graph sequence neural networks</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Tarlow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Brockschmidt</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1511.05493</idno>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Tensor-based learning for predicting stock movements</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">L</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Twenty-ninth AAAI Conference on Artificial Intelligence</title>
+		<meeting>the Twenty-ninth AAAI Conference on Artificial Intelligence</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">The role of social sentiment in stock markets: a view from joint effects of multiple information sources</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J]. Multimed Tools Appl</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="12315" to="12345"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Financial time series forecasting based on SVR[J]</title>
+		<author>
+			<persName><forename type="first">Li</forename><surname>Lihui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Xiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Haidong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comput Eng Appl</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="issue">30</biblScope>
+			<biblScope unit="page" from="221" to="224"/>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Multiple kernel k-means clustering with matrix-induced regularization</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Dou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Thirtieth AAAI Conference on Artificial Intelligence</title>
+		<meeting>the Thirtieth AAAI Conference on Artificial Intelligence<address><addrLine>&amp;nbsp</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="1888" to="1894"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Stock price movement prediction from financial news with deep learning and knowledge graph embedding</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Zeng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Pacific Rim Knowledge Acquisition Workshop</title>
+		<meeting>the Pacific Rim Knowledge Acquisition Workshop<address><addrLine>Cham</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="102" to="113"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Stock market prices do not follow random walks: Evidence from a simple specification test[J]</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Du</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 52nd Hawaii International Conference on System Sciences</title>
+		<meeting>the 52nd Hawaii International Conference on System Sciences<address><addrLine>MacKinlay AC</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="1988">2019. 1988</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="41" to="66"/>
+		</imprint>
+	</monogr>
+	<note>Combining enterprise knowledge graph and news sentiment analysis for stock price prediction</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<monogr>
+		<title level="m" type="main">Exploring graph neural networks for stock market predictions with rolling window analysis</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Matsunaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Suzumura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Takahashi</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1909.10660</idno>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Bulk price forecasting using spark over nse data set[C]</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">K</forename><surname>Menon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">C</forename><surname>Vasireddy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Jami</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of International Conference on Data Mining and Big Data</title>
+		<meeting>International Conference on Data Mining and Big Data<address><addrLine>Cham</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="137" to="146"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Stock prediction using twitter sentiment analysis</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mittal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Goel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+		<respStmt>
+			<orgName>Standford University</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Spammer detection technology of social network based on graph convolution network[J]</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Qu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Huang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Netw Inform Secur</title>
+		<imprint>
+			<biblScope unit="volume">004</biblScope>
+			<biblScope unit="issue">005</biblScope>
+			<biblScope unit="page" from="39" to="46"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Soft-computing techniques and ARMA model for time series prediction</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Rojas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Valenzuela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Rojas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J]. Neurocomputing</title>
+		<imprint>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="issue">4-6</biblScope>
+			<biblScope unit="page" from="519" to="537"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Predicting stock prices using LSTM[J]</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Roondiwala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Patel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Varma</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int J Sci Res (IJSR)</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1754" to="1756"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Prediction of stock price analyzing the online financial news using Naive Bayes classifier and local economic trends</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Shihavuddin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Ambia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Arefin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 3rd International Conference on Advanced Computer Theory and Engineering</title>
+		<meeting>the 3rd International Conference on Advanced Computer Theory and Engineering<address><addrLine>Piscataway</addrLine></address></meeting>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2010">2010</date>
+			<biblScope unit="page" from="22" to="26"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<monogr>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Shiller</surname></persName>
+		</author>
+		<title level="m">Irrational exuberance: Revised and expanded third edition</title>
+		<meeting><address><addrLine>&amp;nbsp; Princeton</addrLine></address></meeting>
+		<imprint>
+			<publisher>Princeton University Press</publisher>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Exploiting topic based twitter sentiment for stock prediction</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Si</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mukherjee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics</title>
+		<title level="s">Short Papers</title>
+		<meeting>the 51st Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="24" to="29"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Designing organizations for an information-rich world[J]</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Simon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int Libr Crit Writ Econ</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="page" from="187" to="202"/>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Adaptive use of technical indicators for the prediction of intra-day stock prices</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rinprasertmeechai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 52nd Hawaii International Conference on System Sciences</title>
+		<meeting>the 52nd Hawaii International Conference on System Sciences</meeting>
+		<imprint>
+			<date type="published" when="2007">2019. 2007</date>
+			<biblScope unit="volume">383</biblScope>
+			<biblScope unit="page" from="125" to="133"/>
+		</imprint>
+	</monogr>
+	<note>A Tensor-based eLSTM model to predict stock price using financial news</note>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Finite mixture of ARMA-GARCH model for stock price prediction</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">C</forename><surname>Chiu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Xu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Third International Workshop on Computational Intelligence in Economics and Finance (CIEF'2003)</title>
+		<meeting>the Third International Workshop on Computational Intelligence in Economics and Finance (CIEF'2003)<address><addrLine>North Carolina, USA</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2003">2003</date>
+			<biblScope unit="page" from="1112" to="1119"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Stock prediction by searching for similarities in Canlestick charts</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">F</forename><surname>Tsai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">Y</forename><surname>Quan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J]. ACM Trans Manage Inform Syst (TMIS)</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">9</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Informativeness of the market news sentiment in the Taiwan stock market[J]</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">C</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">C</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">North Am J Econ Financ</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="158" to="181"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Enhancing stock market prediction with extended coupled hidden markov model over multi-sourced data</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Knowl Inf Syst</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>J</note>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Improving stock market prediction via heterogeneous information fusion</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J]. Knowl Based Syst</title>
+		<imprint>
+			<biblScope unit="volume">143</biblScope>
+			<biblScope unit="page" from="236" to="247"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

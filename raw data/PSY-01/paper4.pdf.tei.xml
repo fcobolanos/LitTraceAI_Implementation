@@ -1,0 +1,2464 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Exploring User Adoption of ChatGPT: A Technology Acceptance Model Perspective</title>
+				<funder ref="#_MxqZ7K4">
+					<orgName type="full">National Social Science Foundation of China</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jiaojiao</forename><surname>Ma</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Pengcheng</forename><surname>Wang</surname></persName>
+							<idno type="ORCID">0000-0001-8683-7861</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Benqian</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>Xiang</roleName><forename type="first">Tian</forename><surname>Wang</surname></persName>
+							<idno type="ORCID">0009-0003-0676-4650</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Shan</forename><surname>Pang</surname></persName>
+							<idno type="ORCID">0009-0005-6777-2149</idno>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Dake</forename><surname>Wang</surname></persName>
+							<email>dakewang@sjtu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Dake</forename><surname>Contact</surname></persName>
+						</author>
+						<author>
+							<persName><surname>Wang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Shan</forename><surname>Xiang</surname></persName>
+						</author>
+						<author>
+							<persName><surname>Pang</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">School of Media and Communication</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">School of Media and Communication</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+								<address>
+									<addrLine>No. 800 Dongchuan Road Minhang District</addrLine>
+									<postCode>200240</postCode>
+									<settlement>Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Exploring User Adoption of ChatGPT: A Technology Acceptance Model Perspective</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">41C0F4DC1EF76E348DF91B8277736C5E</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-08-27T15:08+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>AI technology characteristics</term>
+					<term>including anthropomorphism</term>
+					<term>intelligence</term>
+					<term>and reactivity</term>
+					<term>significantly influence adoption (</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>In the rapidly evolving landscape of technology, the emergence of Chat Generative Pre-trained Transformer (ChatGPT) marks a pivotal milestone in the realm of Artificial Intelligence (AI). However, little research has reported the predictors of people's intentions to use ChatGPT. This pioneering study empirically examines user adoption through the lens of the Technology Acceptance Model (TAM) using a convenience sampling method. The study surveyed 784 ChatGPT users in China, of whom 58.93% were males. The results have revealed several key findings: (1) perceived usefulness, perceived ease of use, behavioral intention, and use behavior were positively correlated with each other; (2) behavioral intention acted as a mediating factor in the relationship between perceived usefulness and use behavior, as well as the relationship between perceived ease of use and use behavior; (3) perceived usefulness and behavioral intention played a chainmediated role between perceived ease of use and use behavior; (4) the relationship between behavioral intention and use behavior exhibited greater strength among females compared to males; (5) the association between behavioral intention and use behavior was found to be stronger among urban users in comparison to their rural counterparts; (6) the connections between perceived ease of use and perceived usefulness, perceived ease of use and behavioral intention, and behavioral intention and use behavior were observed to be stronger among individuals with higher educational backgrounds relative to those with lower educational backgrounds. These findings provide crucial nuanced insights to advance the practical application of ChatGPT, emphasizing the need for enhanced usability and ease of use. However, this study exclusively captured usage behaviors within the Chinese user base. Future investigations could encompass diverse demographics across multiple countries, enabling cross-cultural comparisons.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>users' perceptions of the technology, encompassing perceived usefulness, ease of use, trust, and risk, shape their attitudes <ref type="bibr" target="#b12">(Davis, 1989;</ref><ref type="bibr" target="#b78">Vimalkumar et al., 2021)</ref>. Thirdly, external factors such as marketplace dynamics, privacy concerns, and ethical considerations can either facilitate or hinder AI adoption <ref type="bibr" target="#b30">(Klaus &amp; Zaichkowsky, 2022;</ref><ref type="bibr" target="#b51">Montes &amp; Goertzel, 2019;</ref><ref type="bibr" target="#b67">Sharma et al., 2022)</ref>. Finally, individual characteristics like demographics, personality traits, innovativeness, and prior experience predict AI adoption <ref type="bibr" target="#b39">(Liu &amp; Tao, 2022;</ref><ref type="bibr" target="#b77">Venkatesh et al., 2003)</ref>.</p><p>The Technology Acceptance Model (TAM) proposed by <ref type="bibr" target="#b13">Davis et al. (1989)</ref> is a widely recognized and extensively used theory for studying user information behavior. It has proven to be effective in explaining user acceptance of new technologies and devices. Previous studies employing TAM have successfully predicted user acceptance of AI products such as service robots <ref type="bibr" target="#b16">(Etemad-Sajadi &amp; Sturman, 2022)</ref>, medical robots <ref type="bibr">(Liu et al., 2022)</ref>, and social robots <ref type="bibr" target="#b14">(De Graaf &amp; Allouch, 2013)</ref>. However, there is a lack of research applying TAM specifically to ChatGPT. Considering that ChatGPT and related technologies have been identified as disruptive innovations <ref type="bibr" target="#b23">(Haque et al., 2022)</ref>, this study adopts TAM as the theoretical foundation for our model. The reason for choosing the Technology Acceptance Model over other possible models is that it has been reliably scientifically validated in understanding user behavior towards emerging technologies and is a very classical theoretical model, making it a suitable theoretical perspective for understanding user behavior in acceptance. By doing so, we aim to expand the application of TAM theory and gain a better understanding of the factors influencing people's adoption and use of ChatGPT.</p><p>To the best of our knowledge, this study serves as the first empirical investigation that employs the TAM model to explore users' intentions and behaviors towards ChatGPT usage. Additionally, we extend the existing TAM framework by considering the moderating effects of demographic variables, namely, gender, geographical area, and educational background. This enables us to examine whether users' intentions to adopt ChatGPT and their usage behavior are influenced by these demographic variables. Ultimately, our aim is to develop theoretical models that have explanatory power for users' intentions to use ChatGPT and their usage behavior and to make theoretical and practical contributions to AI technology adoption research by tailoring the findings to specific user groups. Understanding user adoption of ChatGPT serves as a pivotal cornerstone not only for comprehending its immediate impact but also for informing broader AI integration strategies across various sectors. Insights garnered from this study could offer valuable guidance for businesses, healthcare systems, customer service industries, and beyond, enhancing their approaches to AI implementation. By deciphering the factors influencing ChatGPT adoption, this research contributes to the wider discourse on effective AI utilization, potentially shaping more informed decision-making in diverse fields reliant on AI technologies.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Theoretical model and hypothesis development</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.">Technology adoption model</head><p>The TAM, initially proposed by <ref type="bibr" target="#b12">Davis (1989)</ref>, integrates fundamental constructs from the Theory of Planned Behavior <ref type="bibr" target="#b1">(Ajzen, 1991)</ref>, including attitude, subjective norms, and perceived behavioral control. TAM has gained significant prominence in the field of information systems as a theoretical framework for understanding individuals' acceptance and adoption of new technologies. Its applicability and predictive power have been extensively validated through numerous empirical studies, supporting its robustness in explaining technology adoption <ref type="bibr" target="#b45">(Mailizar et al., 2021;</ref><ref type="bibr" target="#b47">Marangunic &amp; Granic, 2015;</ref><ref type="bibr" target="#b63">Scherer et al., 2019)</ref>.</p><p>TAM is considered an influential and widely used model in the field of information systems. It has shown good applicability in various domains, including information and computer technologies such as email <ref type="bibr" target="#b64">(Serenko, 2008)</ref>, mobile banking <ref type="bibr" target="#b66">(Shaikh &amp; Karjaluoto, 2015)</ref>, and robotics <ref type="bibr" target="#b57">(Pillai et al., 2023)</ref>. For example, a study investigated students' adoption intentions and actual usage of artificial intelligence-based teacher robots using the TAM <ref type="bibr" target="#b57">(Pillai et al., 2023)</ref>. They found that perceived ease of use and perceived usefulness played crucial roles among the factors influencing the intention to adopt teacher bots. Moreover, the TAM model has been validated across different countries and cultures, including its applicability in developing countries like China <ref type="bibr" target="#b40">(Liu et al., 2019)</ref>. The influence of cultural factors on ChatGPT's use environment is crucial. Cultural nuances significantly impact users' perceptions, behaviors, and attitudes towards AI technologies like ChatGPT. For instance, preferences in communication styles, language variations, and social norms can profoundly affect user interactions with ChatGPT <ref type="bibr" target="#b33">(Kuang et al., 2023;</ref><ref type="bibr" target="#b69">Stahl &amp; Eke, 2024)</ref>. This study specifically examines the adoption and usage patterns of Chinese users, applying the TAM model to understand ChatGPT chatbot usage within the Chinese context. The TAM posits that a person's behavioral intention to use information technology is primarily determined by two key factors: perceived usefulness and perceived ease of use <ref type="bibr" target="#b12">(Davis, 1989)</ref>. In this study, we identify and retain four core variables of TAM: perceived usefulness, perceived ease of use, behavioral intention, and use behavior.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.1.">Perceived usefulness</head><p>In the TAM, perceived usefulness refers to the belief that using a specific system will enhance one's job performance and have a positive impact on the user's behavioral intention to adopt the new technology <ref type="bibr" target="#b12">(Davis, 1989;</ref><ref type="bibr" target="#b76">Venkatesh &amp; Davis, 2000)</ref>.</p><p>In the field of AI research, several studies have consistently demonstrated the significant role of perceived usefulness in shaping users' intentions to adopt new technologies. For instance, a study examined the intention to use AI chatbots and found that perceived usefulness positively impacted users' willingness to adopt the technology <ref type="bibr" target="#b56">(Pillai &amp; Sivathanu, 2020)</ref>. Similarly, another study focused on the determinants of public acceptance of AI for smart healthcare services and identified perceived usefulness as a key factor driving users' utilization of AI in healthcare contexts <ref type="bibr" target="#b39">(Liu &amp; Tao, 2022)</ref>. Furthermore, a study investigated users' intentions to use AI voice assistants and found a significant influence of perceived usefulness on users' intentions to use them <ref type="bibr" target="#b8">(Cai et al., 2022)</ref>. In the realm of customer service, ChatGPT has been integrated into conversational interfaces, providing efficient and personalized support to users, consequently enhancing customer satisfaction and service efficiency <ref type="bibr" target="#b32">(Koc et al., 2023;</ref><ref type="bibr" target="#b55">Oviedo-Trespalacios et al., 2023)</ref>. In healthcare, ChatGPT's application spans from aiding in medical consultations to streamlining administrative tasks, showcasing its potential in improving patient care and operational workflows <ref type="bibr" target="#b61">(Rahimzadeh et al., 2023)</ref>.</p><p>These studies collectively underscore the importance of perceived usefulness in shaping users' intentions to embrace and engage with AI. Building upon the above findings, the following hypothesis was proposed:</p><p>H1. Perceived usefulness would positively influence people's behavioral intention to use ChatGPT.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.2.">Perceived ease of use</head><p>Perceived ease of use, as conceptualized within the TAM, refers to an individual's perception of the level of effortlessness associated with using a particular system or technology <ref type="bibr" target="#b12">(Davis, 1989)</ref>. This variable has been consistently linked to users' behavioral intentions to adopt and utilize new technologies. In the domain of AI research, a plethora of studies have underscored the significant role of perceived ease of use in shaping users' intentions to embrace and employ novel AI. For instance, a study demonstrated a positive impact of perceived ease of use on employees' behavioral intention to adopt an AI customer service system within organizations <ref type="bibr" target="#b10">(Chatterjee et al., 2021)</ref>. Similarly, another recent study explored the factors influencing students' usage of AI robots in educational settings and found that perceived ease of use exerted a significant and positive impact on behavioral intention <ref type="bibr" target="#b57">(Pillai et al.,2023)</ref>.</p><p>A3B2 tlb=.4pt?&gt;Similarly, other studies focusing on various AI technologies have supported this perspective <ref type="bibr" target="#b39">(Liu &amp; Tao, 2022;</ref><ref type="bibr" target="#b56">Pillai &amp; Sivathanu, 2020)</ref>. In the use of ChatGPT, the visual interface is remarkably intuitive. Furthermore, studies have shown a significant increase in user interaction time and a notable surge in adoption rates post-integration of ChatGPT <ref type="bibr" target="#b38">(Liu &amp; Ma, 2023;</ref><ref type="bibr" target="#b49">Menon &amp; Shilpa, 2023)</ref>. These observations highlight its ease of use, indicating its effectiveness in enhancing user engagement and facilitating higher adoption rates in practical applications.</p><p>Given the positive association between perceived ease of use and behavioral intention established in previous research, we postulate that users will be more inclined to use ChatGPT if they perceive it as easy to use. Therefore, we made the following hypothesis:</p><p>H2. Perceived ease of use would positively influence people's behavioral intention to use ChatGPT.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.3.">Perceived ease of use and perceived usefulness</head><p>According to the TAM, perceived ease of use directly influences perceived usefulness <ref type="bibr" target="#b12">(Davis, 1989)</ref>. This relationship stems from the notion that the easier a system is to use, the greater the improvement in job performance <ref type="bibr" target="#b76">(Venkatesh &amp; Davis, 2000)</ref>. Empirical evidence supports this relationship in the context of various AI applications. For instance, in a study of customers' attitudes and behavioral intentions toward robotic restaurant service, researchers found that when customers perceived interactions with service robots as effortless, they also perceived the robots to provide useful and satisfying service, thereby increasing perceived usefulness <ref type="bibr" target="#b11">(Choe et al., 2022)</ref>. Similarly, this relationship has proven to exist in the field of AI-integrated customer relationship management systems <ref type="bibr" target="#b10">(Chatterjee et al., 2021)</ref>. Recent studies in the field of artificial intelligence have provided valuable insights into the dynamics of technology adoption. Notably, contemporary research has reiterated the significance of perceived ease of use as a catalyst for enhancing perceived usefulness in AI technologies <ref type="bibr" target="#b79">(Wang et al., 2023)</ref>. Building upon the discussions regarding the association between perceived ease of use and perceived usefulness, we proposed the following hypothesis:</p><p>H3. Perceived ease of use would positively influence the perceived usefulness to use ChatGPT.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.4.">Behavioral intention and use behavior</head><p>In the TAM, behavioral intention represents an individual's intention to use a specific technology, while use behavior reflects the actual engagement and utilization of that technology <ref type="bibr" target="#b12">(Davis, 1989)</ref>. In the context of this study, behavioral intention refers to users' intention to utilize ChatGPT, whereas use behavior pertains to their actual engagement with ChatGPT over a period of time. According to the TAM, behavioral intention has a positive influence on use behavior <ref type="bibr" target="#b12">(Davis, 1989)</ref>. Consistently, numerous studies in the field of AI research have affirmed the relationship between behavioral intention and use behavior. For instance, a study on the adoption of chatbots in consumer travel planning found a positive correlation between behavioral intention and use behavior <ref type="bibr" target="#b56">(Pillai &amp; Sivathanu, 2020)</ref>. Similarly, a study investigated the acceptance of AI-based digital assistants and demonstrated that consumers' behavioral intentions positively influenced their use of voiceenabled digital assistants <ref type="bibr" target="#b78">(Vimalkumar et al., 2021)</ref>. Recent investigations have shed light on the crucial link between behavioral intention and actual usage behavior. Their findings emphasize the pivotal role behavioral intent plays in shaping users' real-world engagement with AI technologies <ref type="bibr">(Jo, 2023a</ref><ref type="bibr" target="#b28">(Jo, , 2023b))</ref>. Given that behavioral intention is commonly regarded as the closest precursor to actual use behavior in the AI domain, the following hypotheses were proposed:</p><p>H4. Behavioral intention would positively influence people's use behavior of ChatGPT.</p><p>Meanwhile, extensive research has demonstrated the positive impact of perceived ease of use and perceived usefulness on behavioral intention, which subsequently influences their actual use behavior <ref type="bibr" target="#b12">(Davis, 1989;</ref><ref type="bibr" target="#b75">Venkatesh &amp; Bala, 2008;</ref><ref type="bibr" target="#b76">Venkatesh &amp; Davis, 2000)</ref>. Meanwhile, combining the above assumptions, perceived ease of use will increase users' perceived usefulness, and with the increase in users' perception of usefulness in ChatGPT usage, users will have a stronger intention to use and thus generate use behavior. Based on these considerations, the following hypotheses were formulated:</p><p>H5. Behavioral intention towards ChatGPT would play a mediating role between perceived usefulness and use behavior.</p><p>H6. Behavioral intention towards ChatGPT would play a mediating role between perceived ease of use and use behavior.</p><p>H7. Perceived usefulness and behavioral intention would play a chain-mediated role between perceived ease of use and use behavior.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.">The moderating effects of demographic variables: Gender, geographical area, and educational background</head><p>Two core justifications advocate for the incorporation of these demographic characteristics: Firstly, previous research has demonstrated the impact of individual traits on technology adoption <ref type="bibr" target="#b77">(Venkatesh et al., 2003)</ref>. Secondly, a study highlighted the incorporation of the TAM model within a more comprehensive framework, integrating moderating variables related to individual traits <ref type="bibr" target="#b35">(Legris et al., 2003)</ref>. Hence, this study seeks to investigate disparities in individual characteristics, specifically emphasizing the moderating effects of gender, geographical area, and educational background.</p><p>Firstly, the influence of gender on technology adoption has been extensively investigated in academic research. Notably, one study provided empirical evidence demonstrating that the positive relationship between perceived usefulness and behavioral intention was much stronger among men compared to women <ref type="bibr" target="#b54">(Ong &amp; Lai, 2006)</ref>. This finding suggests that men are more inclined to consider the utility and productivity-related aspects of new technologies, emphasizing the importance of useful content in attracting male users to use AI. Furthermore, another study investigating the public acceptance of AI for smart healthcare revealed a stronger relationship between perceived ease of use and perceived usefulness among men as compared to women <ref type="bibr" target="#b39">(Liu &amp; Tao, 2022)</ref>. This finding implies that men may place greater emphasis on the perceived ease of use of technology as a crucial factor in evaluating the usefulness of AI technologies. Recent research findings indicate that male users demonstrate a higher frequency of ChatGPT usage compared to female users, potentially attributed to the inclination of males to incorporate technological tools into their daily tasks <ref type="bibr" target="#b29">(Jo &amp; Park, 2023)</ref>. However, contrary to this trend, other studies have revealed a positive correlation between gender and ChatGPT practice. Research conducted by Nikita <ref type="bibr" target="#b6">Bodani et al. (2023)</ref> suggests that female users tend to exhibit higher ChatGPT practice values in comparison to their male counterparts. Given the notable impact of gender on technology adoption, it becomes imperative to explore whether gender acts as a moderating factor in the utilization of ChatGPT. By considering the interplay between gender and the factors that influence technology adoption, researchers can acquire valuable insights into how ChatGPT can effectively cater to the diverse needs and preferences of different gender groups.</p><p>Secondly, the geographical area, particularly the distinction between urban and rural environments, can exert a significant influence on the behavioral intention to adopt technology <ref type="bibr" target="#b58">(Porto et al., 2019;</ref><ref type="bibr" target="#b70">Tandon et al., 2019)</ref>. For instance, previous research has demonstrated the moderating role of geographic area in the relationship between perceived usefulness, perceived ease of use, and users' behavioral intention to embrace novel technologies <ref type="bibr" target="#b70">(Tandon et al., 2019)</ref>. Considering the prevailing developmental disparities between urban and rural areas in contemporary China, as evidenced by prior studies, where urban areas tend to be more developed compared to their rural counterparts, it is highly likely to result in disparities in the willingness and behavioral patterns of urban and rural users when it comes to adopting ChatGPT <ref type="bibr" target="#b81">(Yang, 2023)</ref>. Therefore, it is crucial for researchers to meticulously consider these regional disparities and the relevant contextual factors when examining the adoption process of ChatGPT. These research endeavors can facilitate the customization of technology adoption strategies tailored to the distinct needs of urban and rural user groups, thereby promoting a more inclusive and equitable technology adoption process.</p><p>Moreover, a substantial body of prior research has consistently demonstrated the influential role of users' educational backgrounds in shaping the adoption of new technologies <ref type="bibr" target="#b53">(Nguyen et al., 2014;</ref><ref type="bibr" target="#b84">Yu &amp; Liu, 2022)</ref>. Specifically, empirical studies have indicated that individuals with higher educational attainment are more inclined to try new technologies, integrate them into their daily lives, and demonstrate higher levels of behavioral intention to adopt them compared to those with lower educational backgrounds <ref type="bibr" target="#b62">(Riddell &amp; Song, 2017)</ref>. Building upon these findings and considering the relationship between behavioral intention and use behavior, it is reasonable to infer that the positive association between behavioral intention and use behavior is more pronounced among individuals with higher levels of education, as they are more likely to possess the necessary skills, knowledge, and confidence to effectively engage with and utilize technology. In contrast, individuals with lower educational backgrounds may face certain barriers or challenges in understanding and effectively using new technologies, resulting in a weaker link between their behavioral intention and actual use behavior.</p><p>However, it is crucial to acknowledge that the investigation of how educational background moderates the relationship between perceptual factors and use behavior has not been extensively addressed in the existing literature specifically focused on AI. Therefore, there is an urgent need for further investigation. Such research efforts can provide valuable insights into the intricate dynamics between educational background and technology adoption, paving the way for tailored strategies and interventions to promote more effective and inclusive technology utilization across different educational contexts. Emerging research has shed light on the significant moderating impact of educational background on the relationship between ChatGPT and customer experience. Studies, such as that by <ref type="bibr" target="#b0">Abdelkader (2023)</ref>, indicate a notable correlation where participants with higher education background demonstrate a considerably higher average customer experience score with ChatGPT compared to those with lower educational background. This suggests that individuals with higher educational attainment derive greater benefits in terms of customer experience from ChatGPT's functionalities.</p><p>In light of these considerations, an exploratory research question arises regarding the moderating role of demographic factors were proposed: RQ1. Would gender, geographical area, and educational background moderate the aforementioned relationships? Specifically, the inquiry aimed to investigate whether these demographic variables exerted a significant moderating role in the aforementioned relationships, thereby contributing to a more comprehensive understanding of the dynamics of ChatGPT adoption and usage. The proposed research model is depicted in Figure <ref type="figure" target="#fig_0">1</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.">Sample and data collection</head><p>In this study, a questionnaire was employed as the primary data collection instrument. We employed an online survey link shared across platforms like WeChat, Xiaohongshu, Douban, Baidu Tieba, Zhihu, and Weibo to reach our predominantly young and middle-aged ChatGPT user base. This ensured visibility within relevant ChatGPT user groups and AI tech forums, encouraging voluntary participation. Convenience sampling, chosen for its practicality and ease of access, was the selected sampling method. This method was adopted considering the limitations in access to a more comprehensive sampling framework due to time and resource constraints. Data collection lasted one week.</p><p>At the outset of the questionnaire, participants were explicitly informed about the anonymous nature of the survey and that their responses would be solely used for academic purposes. Prior to proceeding, all respondents provided their informed consent. To incentivize participation, a compensation of 5 RMB was offered for each completed questionnaire meeting the specified criteria. The initial question of the questionnaire served as a screening mechanism, as it inquired whether the respondent had used ChatGPT. Out of 1,242 distributed questionnaires, 949 respondents replied positively, with 784 deemed valid, resulting in an 82.61% validity rate. During validation, responses completing the survey within 120 seconds were excluded, often indicating rushed or inattentive completion, a standard criterion supported by numerous prior studies. Additionally, two general knowledge questions, like identifying the direction of the sunrise, were included to filter out respondents failing attention checks and ensure data reliability.</p><p>The 784 participants' demographics are outlined in Table <ref type="table" target="#tab_0">1</ref>, affirming the sample's representativeness. Participants comprised approximately 58.93% males and 41.07% females. The majority, 69.26%, fell within the 19-25 age range, while 68.88% held bachelor's degrees. Geographically, 71.81% were urban residents, with 28.19% residing in rural areas.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.">Measurement</head><p>The questionnaire measured two TAM core variables, perceived usefulness and perceived ease of use, as well as two outcome variables, behavioral intention and use behavior. The measurement items were adapted from existing scales, all of which were on a 5-point Likert scale, except that the use behavior was multiple choices. The purpose of the adaptation was to understand users' perceptions and usage behaviors of ChatGPT, which prompted us to adapt an existing scale originally designed for web-based systems by modifying the topic research object in the original questionnaire to a question-asking question about ChatGPT usage. As presented in Table <ref type="table" target="#tab_1">2</ref>, items for each variable showed good reliability, with every Cronbach's a greater than 0.75.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.">Data analyses</head><p>To examine the research hypotheses and questions, the current study employed structural equation modeling (SEM). One of the advantages of SEM for analysis is that it allows latent variables, which can help effectively control measurement errors, as well as precisely estimate mediating and moderating effect. SEM makes the validation of TAM model more flexible and accurate.</p><p>Data analysis was conducted using Mplus software (version 8.3). In line with the recommendations of <ref type="bibr" target="#b31">Kline (2011)</ref>, several criteria were considered during the SEM analysis, which jointly showed the degree of fitting and testing power of the existing model. These criteria included comparative fit index (CFI) and Tucker-Lewis index (TLI) values above 0.90, a confirmatory fit index to degrees of freedom ratio (CMID/DF) less than 5, and a root mean square error of approximation (RMSEA) below 0.08. Meeting the above requirements of indicators is the basis for the series of subsequent analyses. Following the assessment of convergent validity and discriminant validity, the significance of direct and indirect effect paths between the key variables was analyzed using the partial least squares (PLS) method. Subsequently, the moderating roles of gender, geographical area, and educational background were examined through multigroup path analyses. Initially, all model paths were estimated separately for the two participant groups. Each path was then constrained to be equal between the groups to test for potential differences in model coefficients across the moderators.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1.">Convergent validity</head><p>As depicted in Table <ref type="table" target="#tab_2">3</ref>, the factor loadings for all items surpassed 0.60, with the majority exceeding 0.70. Additionally, all composite reliability (CR) values exceeded the threshold of 0.70, with the lowest value being 0.76. Though a few average variance extracted (AVE) values fell slightly below the recommended threshold of 0.50, their associated CR values exceeded 0.6 by a considerable margin. Referring to previous research, AVE can be accepted if it is higher than 0.4 when CR is higher than 0.6, so the convergent validity of the construct is still adequate <ref type="bibr" target="#b19">(Fornell &amp; Larcker, 1981;</ref><ref type="bibr" target="#b34">Lam, 2012)</ref>. To sum up, in accordance with the guidelines outlined by <ref type="bibr" target="#b19">Fornell and Larcker (1981)</ref> and <ref type="bibr" target="#b22">Hair et al. (2016)</ref>, these three criteria collectively provide sufficient evidence supporting the convergent validity of the constructs under investigation; that is, the measurements are relatively good to get the concepts that we are studying.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2.">Discriminant validity</head><p>According to <ref type="bibr" target="#b19">Fornell and Larcker (1981)</ref>, the square roots of AVE and correlations could be adopted to test discriminant validity, referring to the extent to which a specific variable was not related to others that measure different constructs. As shown in Table <ref type="table" target="#tab_3">4</ref>, the square root of the AVE of each variable displayed in the diagonal was higher than the correlations in the row and column that correspond to that construct, establishing great discriminant validity among variables, that is, there are significant differences between the different concepts studied.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3.">Structural equation model</head><p>Based on the research hypotheses, a structural equation model (SEM) was constructed, as illustrated in Figure <ref type="figure" target="#fig_1">2</ref>. The goodness-of-fit indicators for this model are presented in Table <ref type="table" target="#tab_4">5</ref>, indicating a favorable fit.</p><p>The direct path analysis results in the model are shown in Table <ref type="table" target="#tab_5">6</ref>. The effects of all paths were significant, including "perceived usefulness ! behavioral intention" (b ¼ 0.227, p &lt; 0.01), "perceived ease of use ! behavioral intention" (b ¼ 0.304, p &lt; 0.001), "perceived ease of use ! perceived usefulness" (b ¼ 0.767, p &lt; 0.001), and "behavioral intention ! use behavior" (b ¼ 0.639, p &lt; 0.001), confirming Hypotheses 1-4.</p><p>As presented in Table <ref type="table" target="#tab_6">7</ref>, further indirect path analysis results showed that behavioral intention mediated the relation between perceived usefulness and use behavior (b ¼ 0.145, p ¼ 0.015), and behavioral intention mediated the relation between perceived ease of use and use behavior (b ¼ 0.195, p ¼ 0.001), while the sequential pathway "perceived ease of use ! perceived usefulness ! behavioral intention ! use behavior" was significant (b ¼ 0.111, p ¼ 0.015), meaning that perceived usefulness and behavioral intention could mediate the relationship between perceived ease of use and use behavior. Hypotheses 5-7, which indicated the mediation roles of variables, are confirmed.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.4.">Moderating effect</head><p>The results of the moderation analysis, presented in Table <ref type="table" target="#tab_7">8</ref>, provide insights into the influence of gender, geographic area, and educational background as grouping variables and it is an exploration of Research Question 1 about moderating effects. To provide clarity, the demographic breakdown employed in the study encompasses the following classifications: male/female for gender, city/countryside for geographic area, and undergraduate or below/postgraduate or above for educational background. Notably, the effect of behavioral intention on use behavior was found to be significantly moderated by gender (coefficient difference ¼ 0.109, p &lt; 0.001), geographic area (coefficient difference ¼ 0.066, p ¼ 0.045), and educational background (coefficient difference ¼ 0.036, p &lt; 0.001). These findings suggest that the relationship between behavioral intention and use behavior varies based on gender, geographic area, and educational background. Furthermore, educational background exhibited a moderating effect on the relationship between perceived ease of use and perceived usefulness (coefficient difference ¼ 0.126, p ¼ 0.001), as well as between perceived ease of use and behavioral intention (coefficient difference ¼ 0.030, p ¼ 0.038). This implies that the impact of perceived ease of use on both perceived usefulness and behavioral intention differs depending on the participants' educational backgrounds. However, the remaining moderating effects on specific paths did not yield statistically significant results, indicating that gender, geographic area, and educational background did not significantly moderate those particular relationships in the model.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">Discussion</head><p>Presently, ChatGPT has undergone remarkable advancements and gained widespread popularity as an AI model. Nevertheless, there is a dearth of empirical studies delving into the factors and influencing mechanisms that drive users' willingness to adopt it. This study employs the TAM as the theoretical framework to analyze users' intentions and behaviors in the context of ChatGPT adoption. Furthermore, the study looked at the moderating impact of demographic characteristics such as gender, geographic area, and educational background. The acquired data supported all of the specified study hypotheses (H1-H7). It was revealed that both perceived usefulness and perceived ease of use had a positive influence on behavioral intention (H1, H2). Furthermore, it was discovered that perceived ease of use positively influenced perceived usefulness (H3).</p><p>Behavioral intention positively influenced usage behavior (H4). Behavioral intention acted as a mediating factor in the relationship between perceived usefulness and use behavior, as well as the relationship between perceived ease of use and use behavior (H5, H6). Perceived usefulness and behavioral intention played a chain-mediated role between perceived ease of use and use behavior (H7).</p><p>Gender was found to act as a moderating variable, indicating that the relationship between behavioral intention and use behavior exhibited greater strength among females compared to males. Similarly, geographic area served as a moderating factor, highlighting that the association between behavioral intention and use behavior was found to be stronger among urban users in comparison to their rural counterparts. Moreover, educational background played a crucial role as a moderating variable. This study revealed that the connections between perceived ease of use and perceived usefulness, perceived ease of use and behavioral intention, and behavioral intention and use behavior were observed to be stronger among individuals with higher educational backgrounds relative to those with lower educational backgrounds.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.1.">Correlations among user perceptions and behaviors</head><p>Within the context of the widespread utilization of AI, it is imperative to conduct studies that empirically measure the impact of perceived usefulness and perceived ease of use on behavioral intention and use behavior towards new technological advancements. Firstly, the findings of this study demonstrate that perceived usefulness exerts a statistically significant and positive influence on users' behavioral  intentions regarding the adoption of ChatGPT. This outcome aligns with previous studies <ref type="bibr" target="#b9">(Cascella et al., 2023;</ref><ref type="bibr" target="#b12">Davis, 1989;</ref><ref type="bibr" target="#b76">Venkatesh &amp; Davis, 2000)</ref>, thus further substantiating the notion that perceived usefulness represents a pivotal factor that influences behavioral intention. This result can be comprehended in terms of the functional aspects of AI. As an emerging AI technology, ChatGPT interacts with users through textual dialogue, yet its functionality extends far beyond initial expectations. In practical applications, ChatGPT is capable of generating diverse forms of content, encompassing news reports, advertising copy, and even novels. Accordingly, the more users perceive ChatGPT to be useful, the more likely they would use it.</p><p>Secondly, the findings of this study reveal a significant positive correlation between users' perceived ease of use and their behavioral intentions towards ChatGPT. This outcome aligns with the fundamental theoretical framework of the TAM originally proposed by <ref type="bibr" target="#b12">Davis (1989)</ref> and is consistent with prior empirical research in related domains <ref type="bibr" target="#b3">(Ashfaq et al., 2020;</ref><ref type="bibr" target="#b76">Venkatesh &amp; Davis, 2000)</ref>. One plausible explanation stems from the intuitive and user-friendly interface design of ChatGPT. The interface is deliberately crafted to be straightforward, allowing users to swiftly engage with the system by simply entering their desired content into a dialog box to promptly obtain the information they seek. This seamless and effortless interaction enables users to easily grasp the functional capabilities of ChatGPT and initiate conversations to accomplish their tasks effectively. Consequently, users' behavioral intentions to adopt ChatGPT are significantly bolstered when they perceive that their desired goals can be readily achieved through the utilization of ChatGPT.</p><p>Thirdly, the findings from the path analysis demonstrate a significant positive relationship between perceived ease of use and perceived usefulness in the context of Chinese users' adoption of ChatGPT. This observation aligns with prior research <ref type="bibr" target="#b11">(Choe et al., 2022;</ref><ref type="bibr" target="#b12">Davis, 1989;</ref><ref type="bibr" target="#b76">Venkatesh &amp; Davis, 2000)</ref> that suggests users' perceptions of the system's ease of use directly influence their evaluations of its overall usefulness. Specifically, when users perceive ChatGPT as being easy to use, it enhances their perception of the system's practical value and effectiveness in facilitating their specific tasks and objectives. Consequently, this finding underscores the critical importance of designing systems that are perceived as user-friendly and easy to navigate, as these design characteristics play a pivotal role in shaping users' perceptions of usefulness.</p><p>Fourthly, within the context of ChatGPT utilization, behavioral intention demonstrates a positive influence on actual usage behavior. This discovery aligns with the foundational principles of the Technology Acceptance Model (TAM) and is substantiated by prior empirical investigations <ref type="bibr" target="#b2">(Alzahrani et al., 2019;</ref><ref type="bibr" target="#b13">Davis et al., 1989;</ref><ref type="bibr" target="#b52">Moon &amp; Kim, 2001;</ref><ref type="bibr" target="#b56">Pillai &amp; Sivathanu, 2020)</ref>, validating behavioral intention as a direct precursor to usage behavior. A study by <ref type="bibr" target="#b56">Pillai and Sivathanu (2020)</ref> provided evidence that users' intention to engage with AI-powered intelligent chat systems positively impacts their actual usage behavior. This finding implies that bolstering users' intention to adopt ChatGPT represents the most straightforward and effective approach to fostering real usage behavior.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2.">Intermediary effects</head><p>Another noteworthy contribution of our study is the thorough investigation into the mediating role of behavioral intention in the intricate relationship between perceived factors, namely perceived usefulness and perceived ease of use, and use behavior. Firstly, our findings provide compelling evidence that behavioral intention towards ChatGPT functions as a mediator between perceived usefulness and use behavior. This implies that users' assessment of the system's usefulness not only directly influences their behavioral intention but also indirectly impacts their use behavior through the mediation of behavioral intention <ref type="bibr" target="#b76">(Venkatesh &amp; Davis, 2000)</ref>. This discovery accentuates the influential power of users' perceptions regarding the system's usefulness in shaping their behavioral decisions <ref type="bibr" target="#b8">(Cai et al., 2022;</ref><ref type="bibr" target="#b12">Davis, 1989;</ref><ref type="bibr" target="#b56">Pillai &amp; Sivathanu, 2020)</ref>, thereby offering invaluable guidance to system designers in their efforts to enhance system effectiveness and foster user engagement. Secondly, our investigation has uncovered that users' behavioral intention towards ChatGPT plays a mediating role between perceived ease of use and use behavior. In simpler terms, users' perception of ChatGPT's ease of use augments their behavioral intention, ultimately increasing the likelihood of engaging in use behavior. This finding underscores the paramount importance of designing interfaces and interactions that are user-friendly, promoting enhanced perceived ease of use <ref type="bibr" target="#b39">(Liu &amp; Tao, 2022;</ref><ref type="bibr" target="#b57">Pillai et al.,2023)</ref>. By optimizing the system's ease of use, designers can effectively heighten users' behavioral intentions, thereby fostering a more active adoption of the ChatGPT system <ref type="bibr" target="#b15">(Degen &amp; Ntoa, 2022)</ref>.</p><p>Furthermore, our study has revealed that users' perceived usefulness of ChatGPT assumes a mediating role between perceived ease of use and behavioral intention. This implies that users' perception of the system's ease of use not only directly influences their perceived usefulness but also indirectly affects their behavioral intentions through their perception of usefulness <ref type="bibr" target="#b12">(Davis, 1989;</ref><ref type="bibr" target="#b76">Venkatesh &amp; Davis, 2000;</ref><ref type="bibr" target="#b78">Vimalkumar et al., 2021)</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3.">The moderating effects of demographic variables</head><p>In addition to empirically testing our hypothesized model, this study raises an important exploratory research question regarding the potential moderating role of demographic variables in the relationships under investigation.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3.1.">The moderating role of gender</head><p>First, we found that gender moderated the positive relationship between behavioral intention and use behavior. Notably, the relationship between behavioral intention and use behavior exhibited greater strength among females compared to males. To explain this finding, we draw upon the Theory of Planned Behavior <ref type="bibr" target="#b1">(Ajzen, 1991)</ref>, which suggests that behaviors that are not fully controlled by individual will are not only influenced by behavioral intentions but also by the actual control conditions such as the individual's ability, opportunity, and resources to perform the behavior. Prior research has suggested gender disparities in computer skills and information technology proficiency <ref type="bibr" target="#b36">(Litt, 2013;</ref><ref type="bibr" target="#b71">Taylor &amp; Dalal, 2017)</ref>, indicating that women may face greater challenges when engaging with AI technologies. This proficiency gap might incentivize women to actively seek out and engage with AI tools like ChatGPT to bridge this technological divide. Therefore, it is plausible that women, driven by the motivation to enhance their proficiency, exhibit more proactive behavior in utilizing ChatGPT, thereby impacting the relationships observed in this study.</p><p>Second, we did not observe a significant gender difference in the relationship between perceived usefulness and behavioral intention. Despite previous studies reporting a stronger association between perceived usefulness and behavioral intention among men compared to women <ref type="bibr" target="#b54">(Ong &amp; Lai, 2006;</ref><ref type="bibr" target="#b72">Terzis &amp; Economides, 2011)</ref>, our findings did not support such a discrepancy. We speculate that this divergence might be attributed to the focus of previous studies on investigating the use behavior of e-learning tools such as the Internet and computers, while our study specifically targeted ChatGPT as a novel AI. Another potential explanation lies in the extraordinary capabilities of ChatGPT, which can comprehend users' intentions, emotions, and knowledge to provide answers and responses accordingly. Consequently, irrespective of gender, once users perceive ChatGPT as useful, their willingness to utilize it becomes relatively robust. Remarkably, a study on AI reported that the gender moderating effect was not significant <ref type="bibr" target="#b5">(Belanche et al., 2019)</ref>, suggesting the need for further validation with more data in future studies.</p><p>Third, our study revealed no significant gender differences in the impact of perceived ease of use on behavioral intention, which diverges from prior research. Previous studies have indicated that the relationship between perceived ease of use and behavioral intention tends to be stronger in women compared to men <ref type="bibr" target="#b54">(Ong &amp; Lai, 2006;</ref><ref type="bibr" target="#b72">Terzis &amp; Economides, 2011)</ref>. Nevertheless, our investigation with ChatGPT users showed that gender did not significantly moderate the effect of perceived ease of use on behavioral intention. This unexpected finding may be attributed to the simplicity of ChatGPT's design and functional features <ref type="bibr" target="#b46">(Malik et al., 2023;</ref><ref type="bibr" target="#b68">Shoufan, 2023)</ref>. As an AI model, ChatGPT's interaction heavily relies on language and comprehension skills, which may not be strongly associated with gender. Consequently, ChatGPT might exhibit minimal gender-based differences in users' ease of use requirements, resulting in the absence of a significant gender effect on the relationship between perceived ease of use and behavioral intention. It is imperative to acknowledge that this finding does not provide a comprehensive conclusion on the influence of gender on AI product acceptance and usage. Future research could adopt a more comprehensive theoretical framework and utilize multidimensional data analysis to thoroughly explore the potential role of gender in AI product acceptance and adoption.</p><p>Fourth, we did not observe a significant gender difference in the relationship between perceived ease of use and perceived usefulness, which aligns with previous research findings <ref type="bibr" target="#b18">(Forgas-Coll et al., 2022;</ref><ref type="bibr" target="#b54">Ong &amp; Lai, 2006)</ref>. We propose that this congruence may be attributed to ChatGPT's adherence to the psychological contract in its design, wherein interactions with users are thoughtfully crafted to align with their expectations and habits. For instance, ChatGPT strives to provide concise and easily comprehensible responses to minimize users' cognitive load. This design approach aligns with the psychological contract, ultimately heightening users' perception of ChatGPT's usefulness. Thus, when encountering the novel technology of ChatGPT, regardless of gender, users perceive its ease of use, consequently attributing usefulness to the technology.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3.2.">The moderating role of geographical area</head><p>From a geographical area perspective, the study found that geographical area moderated the relationship between behavioral intention and use behavior. The findings suggest that the association between behavioral intention and use behavior is stronger for urban users compared to rural users. Three possible explanations can account for this phenomenon. Firstly, notable differences exist between urban and rural users concerning their education level, exposure to technology, and digital literacy <ref type="bibr" target="#b20">(Freeman et al., 2020;</ref><ref type="bibr" target="#b82">Yang &amp; Zhang, 2020)</ref>. Urban areas typically possess abundant educational resources and access to technological information <ref type="bibr" target="#b4">(Behrend et al., 2011)</ref>, potentially facilitating urban users' comprehension and utilization of AI technologies like ChatGPT. Secondly, urban users frequently encounter more intricate and diverse life needs and information interaction scenarios <ref type="bibr" target="#b26">(Jamei et al., 2017)</ref>. As ChatGPT operates as a language-driven AI model with heightened requirements and comprehension of user inputs, and considering that urban users are regularly exposed to a plethora of complex information exchange and problem-solving scenarios in their daily lives <ref type="bibr" target="#b59">(Quan, 2022)</ref>, this heightened exposure may intensify their demand for utilizing ChatGPT. Consequently, this reinforcement can strengthen the linkage between behavioral intention and use behavior. Additionally, urban and rural users differ in their acceptance of digital technology and sociocultural factors <ref type="bibr" target="#b42">(Lythreatis et al., 2022;</ref><ref type="bibr" target="#b48">Marshall et al., 2022)</ref>. Urban users may exhibit more openness and receptivity towards emerging technologies, whereas rural users may lean towards a conservative stance regarding new technologies <ref type="bibr" target="#b21">(Haggstrom et al., 2019)</ref>. Such disparity in attitude could potentially lead to greater engagement and active use of ChatGPT among urban users, consequently enhancing the connection between their behavioral intention and use behavior.</p><p>Interestingly, this study did not find a moderating effect of the urban-rural divide in the relationships between perceived ease of use and perceived usefulness, between perceived ease of use and behavioral intention, or between perceived usefulness and behavioral intention. One possible explanation for this finding is that, in the context of ChatGPT usage, the importance of urban and rural distinctions does not significantly influence these relationships, or at the very least, the observed differences are not substantial. However, it is important to note that these hypotheses warrant further investigation to attain a comprehensive understanding of the nuanced dynamics at play.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3.3.">The moderating role of educational background</head><p>It was found that educational background played a crucial role as a moderating variable. Firstly, the positive relationship between perceived ease of use and perceived usefulness is more pronounced for highly educated users relative to those with lower educational backgrounds. This finding is in line with previous research demonstrating that individuals with a higher background in education are more inclined to utilize information technology for work-related purposes <ref type="bibr" target="#b62">(Riddell &amp; Song, 2017;</ref><ref type="bibr" target="#b84">Yu &amp; Liu, 2022)</ref> and engage in activities that enhance their intellectual capital, such as seeking professional information services <ref type="bibr" target="#b24">(Hargittai &amp; Hinnant, 2008)</ref>. As ChatGPT is closely tied to these online activities <ref type="bibr" target="#b9">(Cascella et al., 2023;</ref><ref type="bibr" target="#b46">Malik et al., 2023)</ref> and exhibits competence and efficiency in accomplishing related tasks, it proves especially beneficial for the highly educated population. Consequently, users with a higher educational background are more likely to perceive ChatGPT as a valuable tool when it is perceived to be easy to use.</p><p>Secondly, the connections between perceived ease of use and behavioral intention were observed to be stronger among individuals with higher educational backgrounds relative to those with lower educational backgrounds. This novel finding can be explained by considering the functional role of AI technology for users. Previous studies have shown that individuals with a higher educational background are more inclined to view IT as a tool for utilitarian purposes than for entertainment <ref type="bibr" target="#b7">(Bonfadelli, 2002;</ref><ref type="bibr" target="#b65">Shah &amp; Kwak, 2001)</ref>. Therefore, compared to individuals with a lower educational background, those with a higher educational background are more likely to use ChatGPT extensively in their daily work. Consequently, these users prioritize the ease of use of ChatGPT as a practical tool for their daily tasks. Hence, when users with a high educational background perceive ChatGPT to be easier to use, they are more likely to adopt it for their work-related needs. Furthermore, this study found no moderating effect of educational background on the relationship between perceived usefulness and behavioral intention. This may be attributed to the remarkable features offered by ChatGPT, which lead to users' willingness to utilize it regardless of their educational background as long as they perceive its usefulness.</p><p>Thirdly, the observed amplified relationship between behavioral intention and use behavior among individuals with higher educational backgrounds may be linked to their predisposition towards technology. Existing literature has consistently highlighted the influence of educational background on attitudes toward technology adoption <ref type="bibr" target="#b7">(Bonfadelli, 2002;</ref><ref type="bibr" target="#b36">Litt, 2013)</ref>. Individuals with advanced education often exhibit a stronger inclination towards perceiving new technology as crucial and integral, leading to a more immediate and enthusiastic embrace of innovative tools like ChatGPT if they have a higher level of use intention. Hence, those with higher educational backgrounds tend to demonstrate a more proactive intention toward promptly adopting and integrating ChatGPT into their workflows. This discovery offers a novel perspective in the realm of AI adoption, underscoring the necessity for further comprehensive investigations in subsequent studies.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.4.">Implications</head><p>As an emerging technology, ChatGPT has experienced rapid growth in its user base. However, there remain certain users who approach ChatGPT with caution and hesitation <ref type="bibr" target="#b68">(Shoufan, 2023)</ref>. Consequently, the objective of this study is to advance users' understanding of new technology acceptance behaviors and make a theoretical and practical contribution to the adoption and acceptance of ChatGPT technology by extending the TAM study to developing countries.</p><p>Firstly, it is imperative to conduct studies that examine TAM models within diverse technological, user group, and organizational contexts <ref type="bibr" target="#b25">(Hu et al., 1999)</ref>. While numerous recent studies have applied TAM to AI adoption in developed countries <ref type="bibr" target="#b8">(Cai et al., 2022;</ref><ref type="bibr" target="#b50">Mohr &amp; K€ uhl, 2021)</ref>, a noteworthy contribution of this study lies in being the first investigation to apply TAM to measuring user adoption of ChatGPT within developing countries. Consequently, the findings offer insights from users in developing countries that advance the development of ChatGPT.</p><p>Secondly, through an investigation of the determinants of ChatGPT users' willingness to adopt and their usage behavior, this study reveals that perceived usefulness and perceived ease of use exert a significant and positive influence on users' adoption intentions and behaviors towards ChatGPT. These insights provide valuable contributions to user research and marketing studies pertaining to AI. Consequently, future dissemination and promotion efforts for ChatGPT should prioritize users' evaluations of the technology's usefulness and ease of use, with the aim of increasing the overall adoption rate of AI. Lastly, while previous TAM studies have examined demographic differences, particularly in terms of gender <ref type="bibr" target="#b39">(Liu &amp; Tao, 2022;</ref><ref type="bibr" target="#b85">Zhang et al., 2023)</ref>, fewer studies have emphasized differences in users' geographic areas and educational backgrounds. Another noteworthy theoretical contribution of this study lies in predicting the influential factors contributing to differences in ChatGPT usage based on demographic variables such as gender, geographic area, and educational background. From a practical standpoint, gender differences are clearly elucidated through this study. It underscores the focus of female users on the actual use behavior of new technology, especially the heightened propensity for active usage among women when there is a stronger behavioral intention to use ChatGPT. Consequently, future efforts in promoting and implementing AI should aim to address women's concerns regarding their willingness to use AI, thereby increasing the actual adoption of the technology. In addition to unveiling geographic disparities, this study illuminates that urban users exhibit a more pronounced positive influence of behavioral intention on use behavior. Moreover, it identifies distinctions in the impact of educational backgrounds, indicating that highly educated users are more inclined to engage in actual use behaviors driven by favorable attitudes towards technology. These revelations offer valuable insights for marketers seeking to craft tailored AI adoption strategies that resonate with individuals of varying educational backgrounds. This study underscores the significance of delving into individual differences in future TAM research, emphasizing the need for researchers to incorporate and address these nuanced aspects when developing and validating TAM in subsequent studies.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.5.">Limitations and future recommendations</head><p>There are certain areas in the current study that would benefit from improvement. Firstly, the sample's potential lack of representation of ChatGPT users may impact the findings' generalizability. Specifically, the distribution of the questionnaire through specific social networking platforms in China could have limited sample diversity, particularly concerning geographic and cultural representation. There is a need for more diverse sampling strategies and expanded distribution channels in future research to capture a varied user base, enhancing the study's overall applicability and representativeness. Secondly, the current study focused on adopters of ChatGPT during its nascent technological stage. Given the dynamic nature of technology acceptance, behavioral intention and use behavior towards ChatGPT may evolve as the technology undergoes iterative updates and users gain more experience with it. To explore the temporal changes in acceptance and behavior, future longitudinal studies can be conducted to validate and extend the current findings. Thirdly, this study exclusively examined users from developing countries. It is recommended that future research investigate respondents from different countries and conduct cross-cultural comparisons to ascertain potential differences in TAM regarding ChatGPT usage behaviors across various cultures. Such cross-cultural analyses would contribute to the validation and enhancement of TAM, enabling the prediction of future adoption behaviors for emerging ICTs in diverse cultural contexts. Furthermore, while recognizing the robustness of TAM, it is important to acknowledge its limitations, especially in a rapidly evolving field of AI like ChatGPT. While this study did not consider variables such as initial trust, perceived risk, and anthropomorphic traits within the TAM framework <ref type="bibr" target="#b1">(Al-Adwan et al., 2023;</ref><ref type="bibr" target="#b60">Quan et al., 2023)</ref>, it is critical to acknowledge the importance of these factors in prior research. Future research should extend the TAM by integrating these variables to provide a more comprehensive understanding of user adoption behavior in AI environments, including ChatGPT.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.">Conclusion</head><p>This study aimed to explore the factors influencing users' adoption of ChatGPT, with a specific focus on investigating the potential moderating effects of gender, geographical area, and educational background. The findings provide valuable insights into the determinants of use behavior. The results indicated that perceived usefulness, perceived ease of use, behavioral intention, and use behavior were positively correlated with each other. Furthermore, behavioral intention acted as a mediator in the relationship between perceived usefulness and use behavior, as well as between perceived ease of use and use behavior. Perceived usefulness and behavioral intention played a chain-mediated role between perceived ease of use and usage behavior. Of particular significance, the study identified gender, geographical area, and educational background as moderators in certain relationships. Specifically, the relationship between behavioral intention and use behavior exhibited greater strength among females compared to males. Similarly, the association between behavioral intention and use behavior was found to be stronger among urban users in comparison to their rural counterparts. Moreover, this study revealed that the connections between perceived ease of use and perceived usefulness, perceived ease of use and behavioral intention, and behavioral intention and use behavior were observed to be stronger among individuals with higher educational backgrounds relative to those with lower educational backgrounds. These insights not only enrich the current understanding of AI adoption but also underscore the essential need for customized strategies targeting diverse user demographics. These strategies are pivotal in the design, implementation, and marketing of ChatGPT and similar AI technologies. Limitations include a narrow sample from specific platforms and a focus on early adopters. Future studies should diversify samples, explore cross-cultural differences, and integrate other factors (e.g., risk factors) for a fuller understanding of AI adoption in ChatGPT contexts.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Disclosure statement</head><p>No potential conflict of interest was reported by the authors.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. The proposed research model. Note. PU ¼ Perceived usefulness; PEU ¼ Perceived ease of use; BI ¼ Behavioral intention; USE ¼ Use behavior. Factor loading are standardized.</figDesc><graphic coords="7,125.86,522.14,360.00,210.56" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. The demonstration of the structural model.</figDesc><graphic coords="10,59.87,52.72,491.98,227.11" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 .</head><label>1</label><figDesc>Demographic indicators of participants.</figDesc><table><row><cell/><cell>N (%)</cell><cell/></row><row><cell>Characteristics</cell><cell>N</cell><cell>%</cell></row><row><cell>Gender</cell><cell/><cell/></row><row><cell>Male</cell><cell>462</cell><cell>58.93</cell></row><row><cell>Female</cell><cell>322</cell><cell>41.07</cell></row><row><cell>Geographical area</cell><cell/><cell/></row><row><cell>Urban</cell><cell>563</cell><cell>71.81</cell></row><row><cell>Rural</cell><cell>221</cell><cell>28.19</cell></row><row><cell>Educational background</cell><cell/><cell/></row><row><cell>Senior high school and below</cell><cell>12</cell><cell>1.53</cell></row><row><cell>Junior college</cell><cell>35</cell><cell>4.46</cell></row><row><cell>Bachelor degree</cell><cell>540</cell><cell>68.88</cell></row><row><cell>Master degree</cell><cell>147</cell><cell>18.75</cell></row><row><cell>PhD degree</cell><cell>50</cell><cell>6.38</cell></row><row><cell>Age</cell><cell/><cell/></row><row><cell>&lt;18</cell><cell>20</cell><cell>2.55</cell></row><row><cell>19-25</cell><cell>543</cell><cell>69.26</cell></row><row><cell>25-30</cell><cell>185</cell><cell>23.60</cell></row><row><cell>30-40</cell><cell>35</cell><cell>4.46</cell></row><row><cell>&gt;40</cell><cell>1</cell><cell>0.13</cell></row><row><cell>Social role</cell><cell/><cell/></row><row><cell>Student</cell><cell>556</cell><cell>70.92</cell></row><row><cell>Working person</cell><cell>228</cell><cell>29.08</cell></row><row><cell>Note. N ¼ 784.</cell><cell/><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2 .</head><label>2</label><figDesc>Measures and reliabilities of main variables.</figDesc><table><row><cell>Variable</cell><cell>Number of items</cell><cell>Type of items</cell><cell>Sample item</cell><cell>Cronbach's a</cell><cell>Reference</cell></row><row><cell>PU</cell><cell>4</cell><cell>5-point Likert scale</cell><cell>Using ChatGPT help improve my</cell><cell>0.852871</cell><cell>Venkatesh and Bala (2008)</cell></row><row><cell/><cell/><cell/><cell>academic or work performance.</cell><cell/><cell/></row><row><cell>PEU</cell><cell>4</cell><cell>5-point Likert scale</cell><cell>I found ChatGPT very easy to use.</cell><cell>0.786351</cell><cell>Venkatesh and Bala (2008)</cell></row><row><cell>BI</cell><cell>4</cell><cell>5-point Likert scale</cell><cell>I will be using ChatGPT a lot in the</cell><cell>0.778985</cell><cell>Venkatesh and Bala (2008);</cell></row><row><cell/><cell/><cell/><cell>future.</cell><cell/><cell>Moon and Kim (2001)</cell></row><row><cell>USE</cell><cell>3</cell><cell>Multiple choice</cell><cell/><cell/><cell/></row></table><note><p><p><p>On average, how many hours per week do you use ChatGPT? (1 h and less /1-2 h /3-6 h/6-8 h/more than 8 h) 0.756607</p><ref type="bibr" target="#b52">Moon and Kim (2001)</ref> </p>Note. PU ¼ Perceived usefulness; PEU ¼ Perceived ease of use; BI ¼ Behavioral intention; USE ¼ Use behavior.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 3 .</head><label>3</label><figDesc>Construct indicators of convergent validity. Perceived usefulness; PEU ¼ Perceived ease of use; BI ¼ Behavioral intention; USE ¼ Use behavior. N ¼ 784.</figDesc><table><row><cell/><cell/><cell cols="2">Significance estimate</cell><cell/><cell cols="2">Item reliability</cell><cell>Composite reliability</cell><cell>Convergent validity</cell></row><row><cell>Variables</cell><cell>Items</cell><cell>Unstandardized estimate</cell><cell>S.E.</cell><cell>p value</cell><cell>Item loading</cell><cell>SMC</cell><cell>Standardized Estimate (CR)</cell><cell>AVE</cell></row><row><cell>PU</cell><cell>PU1</cell><cell>1</cell><cell/><cell/><cell>0.771</cell><cell>0.594</cell><cell>0.853</cell><cell>0.593</cell></row><row><cell/><cell>PU2</cell><cell>1.016</cell><cell>0.047</cell><cell>&lt;0.001</cell><cell>0.781</cell><cell>0.610</cell><cell/><cell/></row><row><cell/><cell>PU3</cell><cell>1.03</cell><cell>0.047</cell><cell>&lt;0.001</cell><cell>0.784</cell><cell>0.615</cell><cell/><cell/></row><row><cell/><cell>PU4</cell><cell>1.013</cell><cell>0.049</cell><cell>&lt;0.001</cell><cell>0.743</cell><cell>0.552</cell><cell/><cell/></row><row><cell>PEU</cell><cell>PEU1</cell><cell>1</cell><cell/><cell/><cell>0.743</cell><cell>0.552</cell><cell>0.787</cell><cell>0.481</cell></row><row><cell/><cell>PEU2</cell><cell>0.928</cell><cell>0.058</cell><cell>&lt;0.001</cell><cell>0.63</cell><cell>0.397</cell><cell/><cell/></row><row><cell/><cell>PEU3</cell><cell>1.035</cell><cell>0.058</cell><cell>&lt;0.001</cell><cell>0.707</cell><cell>0.500</cell><cell/><cell/></row><row><cell/><cell>PEU4</cell><cell>1.04</cell><cell>0.06</cell><cell>&lt;0.001</cell><cell>0.689</cell><cell>0.475</cell><cell/><cell/></row><row><cell>BI</cell><cell>BI1</cell><cell>1</cell><cell/><cell/><cell>0.651</cell><cell>0.424</cell><cell>0.784</cell><cell>0.478</cell></row><row><cell/><cell>BI2</cell><cell>1.311</cell><cell>0.087</cell><cell>&lt;0.001</cell><cell>0.668</cell><cell>0.446</cell><cell/><cell/></row><row><cell/><cell>BI3</cell><cell>1.404</cell><cell>0.084</cell><cell>&lt;0.001</cell><cell>0.792</cell><cell>0.627</cell><cell/><cell/></row><row><cell/><cell>BI4</cell><cell>1.139</cell><cell>0.078</cell><cell>&lt;0.001</cell><cell>0.644</cell><cell>0.415</cell><cell/><cell/></row><row><cell>USE</cell><cell>USE1</cell><cell>1</cell><cell/><cell/><cell>0.706</cell><cell>0.498</cell><cell>0.759</cell><cell>0.513</cell></row><row><cell/><cell>USE2</cell><cell>0.977</cell><cell>0.063</cell><cell>&lt;0.001</cell><cell>0.685</cell><cell>0.469</cell><cell/><cell/></row><row><cell/><cell>USE3</cell><cell>1.118</cell><cell>0.069</cell><cell>&lt;0.001</cell><cell>0.756</cell><cell>0.572</cell><cell/><cell/></row><row><cell>Note. PU ¼</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 4 .</head><label>4</label><figDesc>Construct indicators of discriminant validity.</figDesc><table><row><cell/><cell>Convergent validity</cell><cell/><cell cols="2">Discriminant validity</cell><cell/></row><row><cell/><cell>AVE</cell><cell>PU</cell><cell>PEU</cell><cell>BI</cell><cell>USE</cell></row><row><cell>PU</cell><cell>0.593</cell><cell>0.770</cell><cell/><cell/><cell/></row><row><cell>PEU</cell><cell>0.481</cell><cell>0.768</cell><cell>0.693</cell><cell/><cell/></row><row><cell>BI</cell><cell>0.478</cell><cell>0.453</cell><cell>0.457</cell><cell>0.691</cell><cell/></row><row><cell>USE</cell><cell>0.513</cell><cell>0.322</cell><cell>0.414</cell><cell>0.624</cell><cell>0.716</cell></row></table><note><p>Note. PU ¼ Perceived usefulness; PEU ¼ Perceived ease of use; BI ¼ Behavioral intention; USE ¼ Use behavior. N ¼ 784.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 5 .</head><label>5</label><figDesc>The goodness-of-fit indicators of SEM.</figDesc><table><row><cell>Indicator</cell><cell>Value</cell></row><row><cell>CMID</cell><cell>201.363</cell></row><row><cell>DF</cell><cell>86</cell></row><row><cell>CMID/DF</cell><cell>2.341</cell></row><row><cell>GFI</cell><cell>0.966</cell></row><row><cell>AGFI</cell><cell>0.952</cell></row><row><cell>CFI</cell><cell>0.974</cell></row><row><cell>TLI (NNFI)</cell><cell>0.968</cell></row><row><cell>RMSEA</cell><cell>0.041</cell></row><row><cell>SRMR</cell><cell>0.0358</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5"><head>Table 6 .</head><label>6</label><figDesc>PLS-SEM path coefficients.</figDesc><table><row><cell/><cell/><cell/><cell/><cell/><cell/><cell>CR</cell><cell/></row><row><cell>Path</cell><cell/><cell/><cell>Unstandardized estimate</cell><cell>S.E.</cell><cell>p value</cell><cell>(factor loading)</cell><cell>R 2</cell></row><row><cell>PU</cell><cell>!</cell><cell>BI</cell><cell>0.244</cell><cell>0.081</cell><cell>0.003</cell><cell>0.227</cell><cell>0.250</cell></row><row><cell>PEU</cell><cell>!</cell><cell>BI</cell><cell>0.346</cell><cell>0.089</cell><cell>&lt;0.001</cell><cell>0.304</cell><cell/></row><row><cell>PEU</cell><cell>!</cell><cell>PU</cell><cell>0.814</cell><cell>0.053</cell><cell>&lt;0.001</cell><cell>0.767</cell><cell>0.589</cell></row><row><cell>BI</cell><cell>!</cell><cell>USE</cell><cell>0.782</cell><cell>0.062</cell><cell>&lt;0.001</cell><cell>0.639</cell><cell>0.409</cell></row></table><note><p>Note. PU ¼ Perceived usefulness; PEU ¼ Perceived ease of use; BI ¼ Behavioral intention; USE ¼ Use behavior. N ¼ 784.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_6"><head>Table 7 .</head><label>7</label><figDesc>PLS-SEM indirect effects path coefficients.</figDesc><table><row><cell/><cell>Std. estimate</cell><cell>S.E.</cell><cell>EST./S.E.</cell><cell>p value</cell></row><row><cell>Effects from PU to USE</cell><cell/><cell/><cell/><cell/></row><row><cell>Total indirect</cell><cell>0.145</cell><cell>0.06</cell><cell>2.427</cell><cell>0.015</cell></row><row><cell>Specific indirect path</cell><cell/><cell/><cell/><cell/></row><row><cell>PU!BI!USE</cell><cell>0.145</cell><cell>0.06</cell><cell>2.427</cell><cell>0.015</cell></row><row><cell>Effects from PEU to USE</cell><cell/><cell/><cell/><cell/></row><row><cell>Total indirect</cell><cell>0.306</cell><cell>0.036</cell><cell>8.407</cell><cell>&lt;0.001</cell></row><row><cell>Specific indirect path 1</cell><cell/><cell/><cell/><cell/></row><row><cell>PEU!BI!USE</cell><cell>0.195</cell><cell>0.057</cell><cell>3.44</cell><cell>0.001</cell></row><row><cell>Specific indirect path 2</cell><cell/><cell/><cell/><cell/></row><row><cell>PEU!PU!BI!USE</cell><cell>0.111</cell><cell>0.046</cell><cell>0.422</cell><cell>0.015</cell></row></table><note><p>Note. PU ¼ Perceived usefulness; PEU ¼ Perceived ease of use; BI ¼ Behavioral intention; USE ¼ Use behavior. N ¼ 784.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_7"><head>Table 8 .</head><label>8</label><figDesc>Multigroup analyses with gender, geographical area and educational background as moderators.Note. PU ¼ Perceived usefulness; PEU ¼ Perceived ease of use; BI ¼ Behavioral intention; USE ¼ Use behavior. N ¼ 784.</figDesc><table><row><cell/><cell/><cell/><cell/><cell cols="2">Path coefficient</cell><cell>Group 2 -Group 1</cell><cell/></row><row><cell>Paths</cell><cell/><cell/><cell>Moderator</cell><cell>Group 1</cell><cell>Group 2</cell><cell>Coefficient difference</cell><cell>p value</cell></row><row><cell/><cell/><cell/><cell/><cell>Male</cell><cell>Female</cell><cell/><cell/></row><row><cell>PEU PU PEU BI</cell><cell>! ! ! !</cell><cell>PU BI BI USE</cell><cell>Gender</cell><cell>0.101 ��� 0.032 � 0.038 �� 0.147 ���</cell><cell>0.132 ��� 0.06 �� 0.06 �� 0.256 ���</cell><cell>0.031 0.028 0.022 0.109</cell><cell>0.464 0.179 0.092 &lt;0.001</cell></row><row><cell/><cell/><cell/><cell/><cell>Rural</cell><cell>Urban</cell><cell/><cell/></row><row><cell>PEU PU PEU BI</cell><cell>! ! ! !</cell><cell>PU BI BI USE</cell><cell>Geographic area</cell><cell>0.116 ��� 0.062 �� 0.068 �� 0.151 ���</cell><cell>0.121 ��� 0.048 ��� 0.030 � 0.218 ���</cell><cell>0.005 -0.014 -0.039 0.066</cell><cell>0.898 0.504 0.092 0.045</cell></row><row><cell/><cell/><cell/><cell/><cell>Undergraduate or below</cell><cell>Postgraduate or above</cell><cell/><cell/></row><row><cell>PEU PU PEU BI</cell><cell>! ! ! !</cell><cell>PU BI BI USE</cell><cell>Educational background</cell><cell>0.084 ��� 0.041 � 0.032 � 0.172 ���</cell><cell>0.211 ��� 0.070 � 0.062 �� 0.268 ���</cell><cell>0.126 0.028 0.030 0.036</cell><cell>0.001 0.201 0.038 &lt;0.001</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>J. MA ET AL.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>View publication stats</p></note>
+		</body>
+		<back>
+
+			<div type="funding">
+<div><head>Funding</head><p>This work was supported by the <rs type="funder">National Social Science Foundation of China</rs> (grant number <rs type="grantNumber">21&amp;ZD325</rs>).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_MxqZ7K4">
+					<idno type="grant-number">21&amp;ZD325</idno>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>About the authors</head></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">ChatGPT's influence on customer experience in digital marketing: Investigating the moderating roles</title>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">A</forename><surname>Abdelkader</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.heliyon.2023.e18770</idno>
+		<ptr target="https://doi.org/10.1016/j.heliyon.2023.e18770"/>
+	</analytic>
+	<monogr>
+		<title level="j">Heliyon</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="18770" to="e18770"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Extending the technology acceptance model (TAM) to predict university students' intentions to use metaversebased learning platforms</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Ajzen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Al-Adwan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Abbasi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Albelbisi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">A</forename><surname>Habibi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename></persName>
+		</author>
+		<idno type="DOI">10.1007/s10639-023-11816-3</idno>
+		<ptr target="https://doi.org/10.1007/s10639-023-11816-3"/>
+	</analytic>
+	<monogr>
+		<title level="j">Organizational Behavior and Human Decision Processes</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="1" to="33"/>
+			<date type="published" when="1991">1991. 2023</date>
+		</imprint>
+	</monogr>
+	<note>Education and Information Technologies</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Modelling digital library success using the DeLone and McLean information system success model</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Alzahrani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Mahmud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ramayah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Alfarraj</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Alalwan</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/0961000617726123</idno>
+		<ptr target="https://doi.org/10.1177/0961000617726123"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Librarianship and Information Science</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="291" to="306"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Chatbot: Modeling the determinants of users' satisfaction and continuance intention of AI-powered service agents</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ashfaq</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M C</forename><surname>Loureiro</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.tele.2020.101473</idno>
+		<ptr target="https://doi.org/10.1016/j.tele.2020.101473"/>
+	</analytic>
+	<monogr>
+		<title level="j">Telematics and Informatics</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page">101473</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note>I</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Cloud computing adoption and usage in community colleges</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">S</forename><surname>Behrend</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">N</forename><surname>Wiebe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>London</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">C</forename><surname>Johnson</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/0144929X.2010.489118</idno>
+		<ptr target="https://doi.org/10.1080/0144929X.2010.489118"/>
+	</analytic>
+	<monogr>
+		<title level="j">Behaviour &amp; Information Technology</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="231" to="240"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Artificial intelligence in FinTech: Understanding robo-advisors adoption among customers</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Belanche</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">V</forename><surname>Casal�</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Flavi� An</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/IMDS-08-2018-0368</idno>
+		<ptr target="https://doi.org/10.1108/IMDS-08-2018-0368"/>
+	</analytic>
+	<monogr>
+		<title level="j">Industrial Management &amp; Data Systems</title>
+		<imprint>
+			<biblScope unit="volume">119</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="1411" to="1430"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Knowledge, attitude, and practices of general population toward utilizing ChatGPT: A cross-sectional study</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Bodani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Lal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Maqsood</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Altamash</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Ahmed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Heboyan</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/21582440231211079</idno>
+		<ptr target="https://doi.org/10.1177/21582440231211079"/>
+	</analytic>
+	<monogr>
+		<title level="j">SAGE Open</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page">21582440231211079</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">The internet and knowledge gaps: A theoretical and empirical investigation</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Bonfadelli</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/0267323102017001607</idno>
+		<ptr target="https://doi.org/10.1177/0267323102017001607"/>
+	</analytic>
+	<monogr>
+		<title level="j">European Journal of Communication</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="65" to="84"/>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Customers' perceptions of hotel AI-enabled voice assistants: Does brand matter</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">N</forename><surname>Cain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jeon</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/IJCHM-10-2021-1313</idno>
+		<ptr target="https://doi.org/10.1108/IJCHM-10-2021-1313"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Contemporary Hospitality Management</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="2807" to="2831"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Evaluating the feasibility of ChatGPT in healthcare: An analysis of multiple clinical and research scenarios</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cascella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Montomoli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Bellini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Bignami</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10916-023-01925-4</idno>
+		<ptr target="https://doi.org/10.1007/s10916-023-01925-4"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Medical Systems</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="33" to="33"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Adoption of artificial intelligence-integrated CRM systems in agile organizations in India</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Chatterjee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Chaudhuri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Vrontis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Thrassou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Ghosh</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.techfore.2021.120783</idno>
+		<ptr target="https://doi.org/10.1016/j.techfore.2021.120783"/>
+	</analytic>
+	<monogr>
+		<title level="j">Technological Forecasting and Social Change</title>
+		<imprint>
+			<biblScope unit="volume">168</biblScope>
+			<biblScope unit="page">120783</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Innovative robotic restUSErants in Korea: Merging a technology acceptance model and theory of planned behaviour</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Y</forename><surname>Choe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hwang</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/19761597.2021.2005466</idno>
+		<ptr target="https://doi.org/10.1080/19761597.2021.2005466"/>
+	</analytic>
+	<monogr>
+		<title level="j">Asian Journal of Technology Innovation</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="466" to="489"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Perceived usefulness, perceived ease of use, and user acceptance of information technology</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">D</forename><surname>Davis</surname></persName>
+		</author>
+		<idno type="DOI">10.2307/249008</idno>
+		<ptr target="https://doi.org/10.2307/249008"/>
+	</analytic>
+	<monogr>
+		<title level="j">MIS Quarterly</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="319" to="340"/>
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">User acceptance of computer technology: A comparison of two theoretical models</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">D</forename><surname>Davis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">P</forename><surname>Bagozzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">R</forename><surname>Warshaw</surname></persName>
+		</author>
+		<idno type="DOI">10.1287/mnsc.35.8.982</idno>
+		<ptr target="https://doi.org/10.1287/mnsc.35.8.982"/>
+	</analytic>
+	<monogr>
+		<title level="j">Management Science</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="982" to="1003"/>
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Exploring influencing variables for the acceptance of social robots</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>De Graaf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Allouch</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.robot.2013.07.007</idno>
+		<ptr target="https://doi.org/10.1016/j.robot.2013.07.007"/>
+	</analytic>
+	<monogr>
+		<title level="j">Robotics and Autonomous Systems</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="1476" to="1486"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Exploring the design context of AI-powered services: A qualitative investigation of designers' experiences with machine learning</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Degen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ntoa</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-031-05643-7_1</idno>
+		<ptr target="https://doi.org/10.1007/978-3-031-05643-7_1"/>
+	</analytic>
+	<monogr>
+		<title level="m">Artificial Intelligence in HCI</title>
+		<imprint>
+			<publisher>Springer International Publishing AG</publisher>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="volume">13336</biblScope>
+			<biblScope unit="page" from="3" to="21"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">How to increase the customer experience by the usage of remote control robot concierge solutions</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Etemad-Sajadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Sturman</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s12369-021-00800-x</idno>
+		<ptr target="https://doi.org/10.1007/s12369-021-00800-x"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Social Robotics</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="429" to="440"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Understanding consumers' acceptance of automated technologies in service encounters: Drivers of digital voice assistants adoption</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Fernandes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Oliveira</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jbusres.2020.08.058</idno>
+		<ptr target="https://doi.org/10.1016/j.jbusres.2020.08.058"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Business Research</title>
+		<imprint>
+			<biblScope unit="volume">122</biblScope>
+			<biblScope unit="page" from="180" to="191"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">How do consumers' gender and rational thinking affect the acceptance of entertainment social robots</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Forgas-Coll</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Huertas-Garcia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Andriella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename></persName>
+		</author>
+		<idno type="DOI">10.1007/s12369-021-00845-y</idno>
+		<ptr target="https://doi.org/10.1007/s12369-021-00845-y"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Social Robotics</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="973" to="994"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Evaluating structural equation models with unobservable variables and measurement error</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Fornell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">F</forename><surname>Larcker</surname></persName>
+		</author>
+		<idno type="DOI">10.2307/3151312</idno>
+		<ptr target="https://doi.org/10.2307/3151312"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Marketing Research</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="39" to="50"/>
+			<date type="published" when="1981">1981</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Technological literacy and interrupted internet access</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Freeman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Middleton</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/1369118X.2019.1623901</idno>
+		<ptr target="https://doi.org/10.1080/1369118X.2019.1623901"/>
+	</analytic>
+	<monogr>
+		<title level="j">Information, Communication &amp; Society</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">13</biblScope>
+			<biblScope unit="page" from="1947" to="1964"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Rural and urban differences in the adoption of new health information and medical technologies</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Haggstrom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Dickinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kianersi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Roberts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Teal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">B</forename><surname>Baker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Rawl</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/jrh.12358</idno>
+		<ptr target="https://doi.org/10.1111/jrh.12358"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Rural Health: Official Journal of the American Rural Health Association and the National Rural Health Care Association</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="144" to="154"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Identifying and treating unobserved heterogeneity with FIMIX-PLS: part I-method</title>
+		<author>
+			<persName><forename type="first">Jr</forename><surname>Hair</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Sarstedt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Matthews</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Ringle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">European Business Review</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="63" to="76"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">I think this is the most disruptive technology</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">U</forename><surname>Haque</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Dharmadasa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">T</forename><surname>Sworna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">N</forename><surname>Rajapakse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ahmad</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2212.05856</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Exploring Sentiments of ChatGPT Early Adopters using Twitter Data</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Digital inequality: Differences in young adults' use of the internet</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Hargittai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hinnant</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/0093650208321782</idno>
+		<ptr target="https://doi.org/10.1177/0093650208321782"/>
+	</analytic>
+	<monogr>
+		<title level="j">Communication Research</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="602" to="621"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Examining the technology acceptance model using physician acceptance of telemedicine technology</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">Y K</forename><surname>Chau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">R L</forename><surname>Sheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">Y</forename><surname>Tam</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/07421222.1999.11518247</idno>
+		<ptr target="https://doi.org/10.1080/07421222.1999.11518247"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Management Information Systems</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="91" to="112"/>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Investigating the role of virtual reality in planning for sustainable smart cities</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Jamei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mortimer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Seyedmahmoudian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Horan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Stojcevski</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/su9112006</idno>
+		<ptr target="https://doi.org/10.3390/su9112006"/>
+	</analytic>
+	<monogr>
+		<title level="j">Sustainability</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<date type="published" when="2006">2017. 2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Understanding AI tool engagement: A study of ChatGPT usage and word-of-mouth among university students and office workers</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jo</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.tele.2023.102067</idno>
+		<ptr target="https://doi.org/10.1016/j.tele.2023.102067"/>
+	</analytic>
+	<monogr>
+		<title level="j">Telematics and Informatics</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="page">102067</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Decoding the ChatGPT mystery: A comprehensive exploration of factors driving AI language model adoption</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jo</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/02666669231202764</idno>
+		<ptr target="https://doi.org/10.1177/02666669231202764"/>
+	</analytic>
+	<monogr>
+		<title level="j">Information Development</title>
+		<imprint>
+			<biblScope unit="page">02666669231202764</biblScope>
+			<date type="published" when="2023">2023b</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">AI in the workplace: Examining the effects of ChatGPT on information support and knowledge acquisition</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D.-H</forename><surname>Park</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/10447318.2023.2278283</idno>
+		<ptr target="https://doi.org/10.1080/10447318.2023.2278283"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Human-Computer Interaction</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="16"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">The convenience of shopping via voice AI: Introducing AIDM</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Klaus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Zaichkowsky</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jretconser.2021.102490</idno>
+		<ptr target="https://doi.org/10.1016/j.jretconser.2021.102490"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Retailing and Consumer Services</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page">102490</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<monogr>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Kline</surname></persName>
+		</author>
+		<title level="m">Principles and practice of structural equation modeling</title>
+		<imprint>
+			<publisher>Guilford Press</publisher>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Houston, we have a problem!: The use of ChatGPT in responding to customer complaints</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Koc</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hatipoglu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Kivrak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Celik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Koc</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.techsoc.2023.102333</idno>
+		<ptr target="https://doi.org/10.1016/j.techsoc.2023.102333"/>
+	</analytic>
+	<monogr>
+		<title level="j">Technology in Society</title>
+		<imprint>
+			<biblScope unit="volume">74</biblScope>
+			<biblScope unit="page">102333</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">ChatGPT encounters multiple opportunities and challenges in neurosurgery</title>
+		<author>
+			<persName><forename type="first">Y.-R</forename><surname>Kuang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-X</forename><surname>Zou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-Q</forename><surname>Niu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B.-Y</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T.-L</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B.-W</forename><surname>Zheng</surname></persName>
+		</author>
+		<idno type="DOI">10.1097/JS9.0000000000000571</idno>
+		<ptr target="https://doi.org/10.1097/JS9.0000000000000571"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Surgery</title>
+		<imprint>
+			<biblScope unit="volume">109</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="2886" to="2891"/>
+			<date type="published" when="2023">2023</date>
+			<pubPlace>London, England</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Impact of competitiveness on salespeople's commitment and performance</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">W</forename><surname>Lam</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jbusres.2011.10.026</idno>
+		<ptr target="https://doi.org/10.1016/j.jbusres.2011.10.026"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Business Research</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="1328" to="1334"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Why do people use information technology? A critical review of the technology acceptance model</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Legris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ingham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Collerette</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0378-7206(01)00143-4</idno>
+		<ptr target="https://doi.org/10.1016/S0378-7206(01)00143-4"/>
+	</analytic>
+	<monogr>
+		<title level="j">Information &amp; Management</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="191" to="204"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Measuring users' internet skills: A review of past assessments and a look toward the future</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Litt</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/1461444813475424</idno>
+		<ptr target="https://doi.org/10.1177/1461444813475424"/>
+	</analytic>
+	<monogr>
+		<title level="j">New Media &amp; Society</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="612" to="630"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">What influences patients' continuance intention to use AI-powered service robots at hospitals? The role of individual characteristics</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Shen</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.techsoc.2022.101996</idno>
+		<ptr target="https://doi.org/10.1016/j.techsoc.2022.101996"/>
+	</analytic>
+	<monogr>
+		<title level="j">Technology in Society</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="page">101996</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Measuring EFL learners' use of ChatGPT in informal digital learning of English based on the technology acceptance model</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ma</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/17501229.2023.2240316</idno>
+		<ptr target="https://doi.org/10.1080/17501229.2023.2240316"/>
+	</analytic>
+	<monogr>
+		<title level="j">Innovation in Language Learning and Teaching</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="14"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">The roles of trust, personalization, loss of privacy, and anthropomorphism in public acceptance of smart healthcare services</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Tao</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.chb.2021.107026</idno>
+		<ptr target="https://doi.org/10.1016/j.chb.2021.107026"/>
+	</analytic>
+	<monogr>
+		<title level="j">Computers in Human Behavior</title>
+		<imprint>
+			<biblScope unit="volume">127</biblScope>
+			<biblScope unit="page">107026</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Exploring the intentionbehavior gap in the technology acceptance model: A mixed-methods study in the context of foreign-language teaching in China</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Koehler</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/bjet.12824</idno>
+		<ptr target="https://doi.org/10.1111/bjet.12824"/>
+	</analytic>
+	<monogr>
+		<title level="j">British Journal of Educational Technology</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="2536" to="2556"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Developing and validating a service robot integration willingness scale</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Gursoy</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijhm.2019.01.005</idno>
+		<ptr target="https://doi.org/10.1016/j.ijhm.2019.01.005"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Hospitality Management</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page" from="36" to="51"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">The digital divide: A review and future research agenda</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lythreatis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A.-N</forename><surname>El-Kassar</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.techfore.2021.121359</idno>
+		<ptr target="https://doi.org/10.1016/j.techfore.2021.121359"/>
+	</analytic>
+	<monogr>
+		<title level="j">Technological Forecasting and Social Change</title>
+		<imprint>
+			<biblScope unit="volume">175</biblScope>
+			<biblScope unit="page">121359</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">ChatGPT and the future of academic integrity in the artificial intelligence era: A new frontier</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mijwil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hiran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">K</forename><surname>Doshi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Dadhich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Al-Mistarehi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A.-H</forename><surname>Bala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename></persName>
+		</author>
+		<idno type="DOI">10.55145/ajest.2023.02.02.015</idno>
+		<ptr target="https://doi.org/10.55145/ajest.2023.02.02.015"/>
+	</analytic>
+	<monogr>
+		<title level="j">Al-Salam Journal for Engineering and Technology</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="116" to="127"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Towards artificial intelligence-based cybersecurity: The practices and ChatGPT generated ways to combat cybercrime</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Maad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Aljanabi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chatgpt</forename></persName>
+		</author>
+		<idno type="DOI">10.52866/ijcsm.2023.01.01.0019</idno>
+		<ptr target="https://doi.org/10.52866/ijcsm.2023.01.01.0019"/>
+	</analytic>
+	<monogr>
+		<title level="j">Iraqi Journal for Computer Science and Mathematics</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="65" to="70"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Examining university students' behavioural intention to use e-learning during the COVID-19 pandemic: An extended TAM model</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mailizar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Burg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Maulina</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10639-021-10557-5</idno>
+		<ptr target="https://doi.org/10.1007/s10639-021-10557-5"/>
+	</analytic>
+	<monogr>
+		<title level="j">Education and Information Technologies</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="7057" to="7077"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">So what if ChatGPT wrote it?" Multidisciplinary perspectives on opportunities, challenges and implications of generative conversational AI for research, practice and policy</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Malik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">K</forename><surname>Dwivedi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Kshetri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Hughes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">L</forename><surname>Slade</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jeyaraj</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Kar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Baabdullah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Koohang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Raghavan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ahuja</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Albanna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Albashrawi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Al-Busaidi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Balakrishnan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Barlette</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Basu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Bose</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Brooks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Buhalis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Wright</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijinfomgt.2023.102642</idno>
+		<ptr target="https://doi.org/10.1016/j.ijinfomgt.2023.102642"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Information Management</title>
+		<imprint>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="page">102642</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Technology acceptance model: A literature review from 1986 to 2013</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Marangunic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Granic</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-014-0348-1</idno>
+		<ptr target="https://doi.org/10.1007/s10209-014-0348-1"/>
+	</analytic>
+	<monogr>
+		<title level="j">Universal Access in the Information Society</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="81" to="95"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Critical factors of digital AgTech adoption on Australian farms: From digital to data divide</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Marshall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Turner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Richards</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Foth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Dezuanni</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/1369118X.2022.2056712</idno>
+		<ptr target="https://doi.org/10.1080/1369118X.2022.2056712"/>
+	</analytic>
+	<monogr>
+		<title level="j">Information, Communication &amp; Society</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="868" to="886"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Chatting with ChatGPT": Analyzing the factors influencing users' intention to use the Open AI's ChatGPT using the UTAUT model</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Menon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shilpa</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.heliyon.2023.e20962</idno>
+		<ptr target="https://doi.org/10.1016/j.heliyon.2023.e20962"/>
+	</analytic>
+	<monogr>
+		<title level="j">Heliyon</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="20962" to="e20962"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Acceptance of artificial intelligence in German agriculture: An application of the technology acceptance model and the theory of planned behavior</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Mohr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename></persName>
+		</author>
+		<idno type="DOI">10.1007/s11119-021-09814-x</idno>
+		<ptr target="https://doi.org/10.1007/s11119-021-09814-x"/>
+	</analytic>
+	<monogr>
+		<title level="j">Precision Agriculture</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="1816" to="1844"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Distributed, decentralized, and democratized artificial intelligence</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Montes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Goertzel</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.techfore.2018.11.010</idno>
+		<ptr target="https://doi.org/10.1016/j.techfore.2018.11.010"/>
+	</analytic>
+	<monogr>
+		<title level="j">Technological Forecasting and Social Change</title>
+		<imprint>
+			<biblScope unit="volume">141</biblScope>
+			<biblScope unit="page" from="354" to="358"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Extending the TAM for a World-Wide-Web context</title>
+		<author>
+			<persName><forename type="first">J.-W</forename><surname>Moon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y.-G</forename><surname>Kim</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0378-7206(00)00061-6</idno>
+		<ptr target="https://doi.org/10.1016/S0378-7206(00)00061-6"/>
+	</analytic>
+	<monogr>
+		<title level="j">Information &amp; Management</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="217" to="230"/>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Acceptance and use of information system: E-learning based on cloud computing in Vietnam</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">T</forename><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">H</forename><surname>Cao</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-642-55032-4_14</idno>
+		<ptr target="https://doi.org/10.1007/978-3-642-55032-4_14"/>
+	</analytic>
+	<monogr>
+		<title level="m">Information and Communication Technology: Second IFIP TC5/8 International Conference, ICT-EurAsia 2014</title>
+		<meeting><address><addrLine>Bali, Indonesia; Berlin Heidelberg</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2014-04-14">2014. April 14-17, 2014</date>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="139" to="149"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Gender differences in perceptions and relationships among dominants of e-learning acceptance</title>
+		<author>
+			<persName><forename type="first">C.-S</forename><surname>Ong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-Y</forename><surname>Lai</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.chb.2004.03.006</idno>
+		<ptr target="https://doi.org/10.1016/j.chb.2004.03.006"/>
+	</analytic>
+	<monogr>
+		<title level="j">Computers in Human Behavior</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="816" to="829"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">The risks of using ChatGPT to obtain common safety-related information and advice</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Oviedo-Trespalacios</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Peden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Cole-Hunter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Costantini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Haghani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Rod</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kelly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Torkamaan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tariq</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>David Albert Newton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Gallagher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Steinert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Filtness</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Reniers</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ssci.2023.106244</idno>
+		<ptr target="https://doi.org/10.1016/j.ssci.2023.106244"/>
+	</analytic>
+	<monogr>
+		<title level="j">Safety Science</title>
+		<imprint>
+			<biblScope unit="volume">167</biblScope>
+			<biblScope unit="page">106244</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Adoption of AI-based chatbots for hospitality and tourism</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Pillai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Sivathanu</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/IJCHM-04-2020-0259</idno>
+		<ptr target="https://doi.org/10.1108/IJCHM-04-2020-0259"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Contemporary Hospitality Management</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="3199" to="3226"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Students' adoption of AI-based teacher-bots (T-bots) for learning in higher education</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Pillai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Sivathanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Metri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Kaushik</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/ITP-02-2021-0152</idno>
+		<ptr target="https://doi.org/10.1108/ITP-02-2021-0152"/>
+	</analytic>
+	<monogr>
+		<title level="j">Information Technology &amp; People</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="328" to="355"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Credit card adoption and usage in china: Urban-rural comparisons</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Porto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Xiao</surname></persName>
+		</author>
+		<idno type="DOI">10.1142/S021759081743010X</idno>
+		<ptr target="https://doi.org/10.1142/S021759081743010X"/>
+	</analytic>
+	<monogr>
+		<title level="j">Singapore Economic Review</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="issue">01</biblScope>
+			<biblScope unit="page" from="41" to="56"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Urban-GAN: An artificial intelligence-aided computation system for plural urban design</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Quan</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/23998083221100550</idno>
+		<ptr target="https://doi.org/10.1177/23998083221100550"/>
+	</analytic>
+	<monogr>
+		<title level="j">Environment and Planning B: Urban Analytics and City Science</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="2500" to="2515"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Mobile, traditional, and cryptocurrency payments influence consumer trust, attitude, and destination choice: Chinese versus Koreans</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Quan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Moon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Han</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijhm.2022.103363</idno>
+		<ptr target="https://doi.org/10.1016/j.ijhm.2022.103363"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Hospitality Management</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="page">103363</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Ethics education for healthcare professionals in the era of ChatGPT and other large language models: Do we still need it?</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Rahimzadeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kostick-Quenet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Blumenthal Barby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Mcguire</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/15265161.2023.2233358</idno>
+		<ptr target="https://doi.org/10.1080/15265161.2023.2233358"/>
+	</analytic>
+	<monogr>
+		<title level="j">American Journal of Bioethics: AJOB</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="17" to="27"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">The role of education in technology use and adoption: Evidence from the Canadian workplace and employee survey</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">C</forename><surname>Riddell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Song</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/0019793916687719</idno>
+		<ptr target="https://doi.org/10.1177/0019793916687719"/>
+	</analytic>
+	<monogr>
+		<title level="j">ILR Review</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="1219" to="1253"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">The technology acceptance model (TAM): A meta-analytic structural equation modeling approach to explaining teachers' adoption of digital technology in education</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Scherer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Siddiq</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tondeur</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.compedu.2018.09.009</idno>
+		<ptr target="https://doi.org/10.1016/j.compedu.2018.09.009"/>
+	</analytic>
+	<monogr>
+		<title level="j">Computers &amp; Education</title>
+		<imprint>
+			<biblScope unit="volume">128</biblScope>
+			<biblScope unit="page" from="13" to="35"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">A model of user adoption of interface agents for email notification</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Serenko</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.intcom.2008.04.004</idno>
+		<ptr target="https://doi.org/10.1016/j.intcom.2008.04.004"/>
+	</analytic>
+	<monogr>
+		<title level="j">Interacting with Computers</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">4-5</biblScope>
+			<biblScope unit="page" from="461" to="472"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">Connecting" and "disconnecting" with civic life: Patterns of internet use and the production of social capital</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Shah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Kwak</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/105846001750322952</idno>
+		<ptr target="https://doi.org/10.1080/105846001750322952"/>
+	</analytic>
+	<monogr>
+		<title level="j">Political Communication</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="141" to="162"/>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">Mobile banking adoption: A literature review</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Shaikh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Karjaluoto</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.tele.2014.05.003</idno>
+		<ptr target="https://doi.org/10.1016/j.tele.2014.05.003"/>
+	</analytic>
+	<monogr>
+		<title level="j">Telematics and Informatics</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="129" to="142"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">Exploring customer adoption of autonomous shopping systems</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sharma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Gaur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Afaq</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.tele.2022.101861</idno>
+		<ptr target="https://doi.org/10.1016/j.tele.2022.101861"/>
+	</analytic>
+	<monogr>
+		<title level="j">Telematics and Informatics</title>
+		<imprint>
+			<biblScope unit="volume">73</biblScope>
+			<biblScope unit="page">101861</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">Exploring students' perceptions of ChatGPT: Thematic analysis and follow-up survey</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Shoufan</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/ACCESS</idno>
+		<ptr target="https://doi.org/10.1109/ACCESS"/>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="38805" to="38818"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title level="a" type="main">The ethics of ChatGPT -Exploring the ethical issues of an emerging technology</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">C</forename><surname>Stahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Eke</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijinfomgt.2023.102700</idno>
+		<ptr target="https://doi.org/10.1016/j.ijin-fomgt.2023.102700"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Information Management</title>
+		<imprint>
+			<biblScope unit="volume">74</biblScope>
+			<biblScope unit="page">102700</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title level="a" type="main">Studying the moderating effect of a respondent's locality in M-commerce adoption intention</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tandon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sharma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Aggarwal</surname></persName>
+		</author>
+		<idno type="DOI">10.16925/2357-6014.2019.03.07</idno>
+		<ptr target="https://doi.org/10.16925/2357-6014.2019.03.07"/>
+	</analytic>
+	<monogr>
+		<title level="j">Ingenier� ıa Solidaria</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">29</biblScope>
+			<biblScope unit="page" from="1" to="23"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<title level="a" type="main">Gender and information literacy: Evaluation of gender differences in a student survey of information sources</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Taylor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Dalal</surname></persName>
+		</author>
+		<idno type="DOI">10.5860/crl.78.1.90</idno>
+		<ptr target="https://doi.org/10.5860/crl.78.1.90"/>
+	</analytic>
+	<monogr>
+		<title level="j">College &amp; Research Libraries</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="90" to="113"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<analytic>
+		<title level="a" type="main">Computer based assessment: Gender differences in perceptions and acceptance</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Terzis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Economides</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.chb.2011.06.005</idno>
+		<ptr target="https://doi.org/10.1016/j.chb.2011.06.005"/>
+	</analytic>
+	<monogr>
+		<title level="j">Computers in Human Behavior</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="2108" to="2122"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<monogr>
+		<title level="m" type="main">The use of AI-supported Chatbot in Psychology</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Uludag</surname></persName>
+		</author>
+		<idno>SSRN 4331367</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<analytic>
+		<title level="a" type="main">ChatGPT: Five priorities for research</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A M</forename><surname>Van Dis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bollen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zuidema</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Van Rooij</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">L</forename><surname>Bockting</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/d41586-023-00288-7</idno>
+		<ptr target="https://doi.org/10.1038/d41586-023-00288-7"/>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">614</biblScope>
+			<biblScope unit="page" from="224" to="226"/>
+			<date type="published" when="2023">2023. 7947</date>
+			<pubPlace>London</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b75">
+	<analytic>
+		<title level="a" type="main">Technology acceptance model 3 and a research agenda on interventions</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Venkatesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Bala</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/j.1540-5915.2008.00192.x</idno>
+		<ptr target="https://doi.org/10.1111/j.1540-5915.2008.00192.x"/>
+	</analytic>
+	<monogr>
+		<title level="j">Decision Sciences</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="273" to="315"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b76">
+	<analytic>
+		<title level="a" type="main">A theoretical extension of the technology acceptance model: Four longitudinal field studies</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Venkatesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">D</forename><surname>Davis</surname></persName>
+		</author>
+		<idno type="DOI">10.1287/mnsc.46.2.186.11926</idno>
+		<ptr target="https://doi.org/10.1287/mnsc.46.2.186.11926"/>
+	</analytic>
+	<monogr>
+		<title level="j">Management Science</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="186" to="204"/>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b77">
+	<analytic>
+		<title level="a" type="main">User acceptance of information technology: Toward a unified view</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Venkatesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Morris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">B</forename><surname>Davis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">D</forename><surname>Davis</surname></persName>
+		</author>
+		<idno type="DOI">10.2307/30036540</idno>
+		<ptr target="https://doi.org/10.2307/30036540"/>
+	</analytic>
+	<monogr>
+		<title level="j">MIS Quarterly</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="425" to="478"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b78">
+	<analytic>
+		<title level="a" type="main">Okay Google, what about my privacy?": User's privacy perceptions and acceptance of voice based digital assistants</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vimalkumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Sharma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">K</forename><surname>Dwivedi</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.chb.2021.106763</idno>
+		<ptr target="https://doi.org/10.1016/j.chb.2021.106763"/>
+	</analytic>
+	<monogr>
+		<title level="j">Computers in Human Behavior</title>
+		<imprint>
+			<biblScope unit="volume">120</biblScope>
+			<biblScope unit="page">106763</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b79">
+	<analytic>
+		<title level="a" type="main">An empirical evaluation of technology acceptance model for artificial intelligence in E-commerce</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">F</forename><surname>Ahmad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Y A</forename><surname>Bani Ahmad Ayassrah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Awwad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Irshad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">A</forename><surname>Ali</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Al-Razgan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Khan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Han</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.heliyon.2023.e18349</idno>
+		<ptr target="https://doi.org/10.1016/j.heliyon.2023.e18349"/>
+	</analytic>
+	<monogr>
+		<title level="j">Heliyon</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="18349" to="e18349"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b80">
+	<analytic>
+		<title level="a" type="main">Can autonomy level and anthropomorphic characteristics affect public acceptance and trust towards shared autonomous vehicles?</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">F</forename><surname>Yuen</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.techfore.2023.122384</idno>
+		<ptr target="https://doi.org/10.1016/j.techfore.2023.122384"/>
+	</analytic>
+	<monogr>
+		<title level="j">Technological Forecasting and Social Change</title>
+		<imprint>
+			<biblScope unit="volume">189</biblScope>
+			<biblScope unit="page">122384</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b81">
+	<analytic>
+		<title level="a" type="main">Income growth, income uncertainty, and urban-rural household savings rate in China</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Yang</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.regsciurbeco.2022.103855</idno>
+		<ptr target="https://doi.org/10.1016/j.regsciurbeco.2022.103855"/>
+	</analytic>
+	<monogr>
+		<title level="j">Regional Science and Urban Economics</title>
+		<imprint>
+			<biblScope unit="volume">99</biblScope>
+			<biblScope unit="page">103855</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b82">
+	<analytic>
+		<title level="a" type="main">Focal fields in literature on the information divide: The USA, China, UK and India</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/JD-02-2019-0032</idno>
+		<ptr target="https://doi.org/10.1108/JD-02-2019-0032"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Documentation</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="373" to="388"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b83">
+	<monogr>
+		<title level="m" type="main">Last week with ChatGPT: A Weibo study on social perspective regarding ChatGPT for education and beyond</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Yao Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lik-Hang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Reza</forename><surname>Hadi Mogavi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Liao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename></persName>
+		</author>
+		<idno type="DOI">10.48550/arxiv.2306.04325</idno>
+		<ptr target="https://doi.org/10.48550/arxiv.2306.04325"/>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b84">
+	<analytic>
+		<title level="a" type="main">Disparities in online use behaviours and Chinese digital inclusion: A 10-year comparison</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Liu</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/ijerph191911937</idno>
+		<ptr target="https://doi.org/10.3390/ijerph191911937"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Environmental Research and Public Health</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">19</biblScope>
+			<biblScope unit="page">11937</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b85">
+	<analytic>
+		<title level="a" type="main">I am here to assist your tourism": Predicting continuance intention to use AI-based chatbots for tourism. Does gender really matter?</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Zeng</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/10447318.2022.2124345</idno>
+		<ptr target="https://doi.org/10.1080/10447318.2022.2124345"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Human-Computer Interaction</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="1887" to="1903"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

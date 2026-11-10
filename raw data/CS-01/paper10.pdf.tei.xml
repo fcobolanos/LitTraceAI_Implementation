@@ -1,0 +1,1136 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Multimodal Sentiment Detection Based on Multi-channel Graph Neural Networks</title>
+				<funder ref="#_MFaXQJk #_gteVduP #_3GrJee4">
+					<orgName type="full">National Natural Science Foundation of China</orgName>
+				</funder>
+				<funder ref="#_CmxZR4C">
+					<orgName type="full">National Key R&amp;D Program of China</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xiaocui</forename><surname>Yang</surname></persName>
+							<email>yangxiaocui@stumail.neu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Northeastern University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shi</forename><surname>Feng</surname></persName>
+							<email>fengshi@cse.neu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Northeastern University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yifei</forename><surname>Zhang</surname></persName>
+							<email>zhangyifei@cse.neu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Northeastern University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Daling</forename><surname>Wang</surname></persName>
+							<email>wangdaling@cse.neu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Northeastern University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Multimodal Sentiment Detection Based on Multi-channel Graph Neural Networks</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">753E5A216DA4E14AEB9BA6570D860DBC</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-02T20:35+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>With the popularity of smartphones, we have witnessed the rapid proliferation of multimodal posts on various social media platforms. We observe that the multimodal sentiment expression has specific global characteristics, such as the interdependencies of objects or scenes within the image. However, most previous studies only considered the representation of a single image-text post and failed to capture the global co-occurrence characteristics of the dataset. In this paper, we propose Multi-channel Graph Neural Networks with Sentiment-awareness (MGNNS) for imagetext sentiment detection. Specifically, we first encode different modalities to capture hidden representations. Then, we introduce multichannel graph neural networks to learn multimodal representations based on the global characteristics of the dataset. Finally, we implement multimodal in-depth fusion with the multi-head attention mechanism to predict the sentiment of image-text pairs. Extensive experiments conducted on three publicly available datasets demonstrate the effectiveness of our approach for multimodal sentiment detection.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">Introduction</head><p>The tasks of extracting and analyzing sentiments embedded in data have attracted substantial attention from both academic and industrial communities <ref type="bibr" target="#b35">(Zhang et al., 2018;</ref><ref type="bibr" target="#b33">Yue et al., 2018)</ref>. With the increased use of smartphones and the bloom of social media such as Twitter, Tumblr and Weibo, users can post multimodal tweets (e.g., text, image, and video) about diverse events and topics to convey their feelings and emotions. Therefore, multimodal sentiment analysis has become a popular research topic in recent years <ref type="bibr" target="#b13">(Kaur and Kautish, 2019;</ref><ref type="bibr" target="#b23">Soleymani et al., 2017)</ref>. As shown in Fig. <ref type="figure">1</ref>, sentiment is no longer expressed by a pure modality in the multimodal scenario but rather by the com- Two posts express the user's positive sentiment from multimodal data that has global characteristics, including the "have a fun/nice day" phrase, the ocean scene, and the beach scene. bined expressions of multiple modalities <ref type="bibr">(e.g., text, image, etc.)</ref>. In contrast to unimodal data, multimodal data consist of more information and make the user's expression more vivid and interesting.</p><p>We focus on multimodal sentiment detection for image-text pairs in social media posts. The problem of image-text mismatch and flaws in social media data, such as informality, typos, and a lack of punctuation, pose a fundamental challenge for the effective representation of multimodal data for the sentiment detection task. To tackle this challenge, <ref type="bibr" target="#b27">Xu et al. (2017;</ref><ref type="bibr" target="#b27">2017)</ref> constructed different networks for multimodal sentiment analysis, such as a Hierarchical Semantic Attentional Network (HSAN) and a Multimodal Deep Semantic Network (MDSN). <ref type="bibr" target="#b29">Xu et al. (2018)</ref> and <ref type="bibr" target="#b30">Yang et al. (2020)</ref> proposed a Co-Memory network (Co-Mem) and a Multi-view Attentional Network (MVAN) models, respectively, introducing memory networks to realize the interaction between modalities.</p><p>The above methods treat each image-text post in the dataset as a single instance, and feature dependencies across instances are neglected or modeled implicitly. In fact, social media posts have specific global co-occurring characteristics, i.e., co-occurring words, objects, or scenes, which tend to share similar sentiment orientations and emotions. For example, the co-occurrences of the words "have a fun/nice day" and of the bright scenes "ocean/beach" in the two images in Fig. <ref type="figure">1</ref> imply a strong relationship between these features and positive sentiment. How to more effectively make use of the feature co-occurrences across instances and capture the global characteristics of the data remain a great challenge.</p><p>We propose a Multi-channel Graph Neural Networks model with Sentiment-awareness (MGNNS) for multimodal sentiment analysis that consists of three stages.</p><p>(i) Feature extraction. For text modality, we encode the text and obtain a text memory bank; for image modality, we first extract objects and scenes and then capture the image' semantic features from a multiview perspective.</p><p>(ii) Feature representation. We employ a Graph Neural Network (GNN) for text modality based on the global shared matrices, i.e., one text graph based on word co-occurrence is built based on the whole dataset. Specifically, we first connect word nodes within an appropriate small window in the text. After that, we update the node representation by itself as well as neighbor nodes. For image modality, it is believed that different views of an image, such as the beach (Scene view) and person (Object view) in Fig. <ref type="figure">1</ref>(a), can reflect a user's emotions <ref type="bibr" target="#b28">(Xu and Mao, 2017)</ref>. The existing literature usually models the relationship between the scenes and objects within an image, failing to capture the rich co-occurrence information from the perspective of the whole dataset. In contrast, we explicitly build two graphs for scenes and objects according to the co-occurrences in the datasets and propose Graph Convolutional Network (GCN) models over the two graphs to represent the images. In general, to tackle the isolated feature problem, we build multiple graphs for different modalities, with each GNN acting as a channel, and propose a Multi-channel Graph Neural Networks (Multi-GNN) module to capture the in-depth global characteristics of the data. This multi-channel based method can provide complementary representation from different sources <ref type="bibr" target="#b3">(George and Marcel, 2021;</ref><ref type="bibr" target="#b4">George et al., 2019;</ref><ref type="bibr" target="#b11">Islam et al., 2019)</ref>.</p><p>(iii) Feature fusion. Previous studies usually directly connect multimodal representations, without considering multimodal interactions <ref type="bibr">(Wang et al., 2020a;</ref><ref type="bibr" target="#b27">Xu, 2017;</ref><ref type="bibr" target="#b28">Xu and Mao, 2017)</ref>. In this stage, we realize the pairwise interaction of text and image modalities from different channels through the use of the Multimodal Multi-head Attention Interaction (MMAI) module and obtain the fusion representation.</p><p>Our main contributions are summarized as follows:</p><p>• We propose a novel MGNNS framework that models the global characteristics of the dataset to handle the multimodal sentiment detection task. To the best of our knowledge, we are the first to apply GNN to the image-text multimodal sentiment detection task.</p><p>• We construct the MMAI module from different channels to realize in-depth multimodal interaction.</p><p>• We conduct extensive experiments on three publicly available datasets, and the results show that our model outperforms the stateof-the-art methods.</p><p>2 Related Work</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1">Multimodal Sentiment Analysis</head><p>For convenience, multimodal polarity analysis and emotion analysis are unified to form multimodal sentiment analysis. Traditional machine learning methods are adopted to address the multimodal sentiment analysis task <ref type="bibr" target="#b22">(Pérez-Rosas et al., 2013;</ref><ref type="bibr" target="#b32">You et al., 2016)</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2">Graph Neural Network</head><p>The Graph Neural Network has achieved promising results for text classification, multi-label recognition, and multimodal tasks. For text classification, a novel neural network called Graph Neural Network (GNN), and its variants have been rapidly developed, and their performance is better than that of traditional methods, such as Text GCN <ref type="bibr" target="#b31">(Yao et al., 2019)</ref>, TensorGCN <ref type="bibr" target="#b18">(Liu et al., 2020)</ref>, and TextLevelGNN <ref type="bibr" target="#b9">(Huang et al., 2019)</ref>. The GCN is also introduced in the multi-label image recognition task to model the label dependencies <ref type="bibr" target="#b0">(Chen et al., 2019)</ref>.</p><p>Recently, Graph Convolutional Network has been applied in different multimodal tasks, such as Visual Dialog <ref type="bibr" target="#b6">(Guo et al., 2020;</ref><ref type="bibr" target="#b14">Khademi, 2020)</ref>, multimodal fake news detection <ref type="bibr">(Wang et al., 2020a)</ref>, and Visual Question Answering (VQA) <ref type="bibr" target="#b10">(Hudson and Manning, 2019;</ref><ref type="bibr" target="#b14">Khademi, 2020)</ref>. <ref type="bibr" target="#b12">Jiang et al. (2020)</ref> applied a novel Knowledge-Bridge Graph Network (KBGN) in modeling the relations among the visual dialogue cross-modal information in fine granularity. <ref type="bibr">Wang et al. (2020a)</ref> proposed a novel Knowledge-driven Multimodal Graph Convolutional Network (KMGCN) to model semantic representations for fake news detection. However, the KMGCN extracted visual words as visual information and did not make full use of the global information of the image. <ref type="bibr" target="#b14">Khademi (2020)</ref> introduced a new neural network architecture, a Multimodal Neural Graph Memory Network (MN-GMN), for VQA, which model constructed a visual graph network based on the bounding-boxes, which produced overlapping parts that might provide redundant information.</p><p>For the image-text dataset, we found that certain words often appear in a text post simultaneously, and different objects or scenes within an image have specific co-occurrences that indicate certain sentiments. We explicitly model these global characteristics of the dataset through the use of a multichannel GNN.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3">Proposed Model</head><p>Fig. <ref type="figure" target="#fig_1">2</ref> illustrates the overall architecture of our proposed MGNNS model for multimodal sentiment detection that consists of three modules: the encoding module, the Multi-GNN module, and the multimodal interaction module. We first encode text and image input into hidden representations. Then, we introduce GNN from different channels to learn multiple modal representations. In this paper, the channels are the Text-GNN (TG) module, the Image-GCN-Scene (IGS) module, and the Image-GCN-Object (IGO) module. Finally, we realize the in-depth interactions between different modalities by multimodal multi-head attention.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1">Problem Formalization</head><p>The goal of our model is to identify which sentiment is expressed by an image-text post. Given a set of multimodal posts from social media, P = {(T 1 , V 1 ), ..., (T N , V N )}, where T i is the text modality and V i is the corresponding visual information, N represents the number of posts. We need to learn the model</p><formula xml:id="formula_0">f : P → L to classify each post (T i , V i ) into the predefined categories L i . For polarity classifica- tion, L i ∈ {P ositive, N eutral, N egative}; for emotion classification, L i ∈ {Angry, Bored, Calm, F ear, Happy, Love, Sad }.</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2">Encoding</head><p>For text modality, we first encode words by GloVe <ref type="bibr" target="#b21">(Pennington et al., 2014)</ref> to obtain the embedding vector and then obtain the text memory bank, M t , by BiGRU <ref type="bibr" target="#b1">(Cho et al., 2014)</ref>:</p><formula xml:id="formula_1">M t = f BiGRU (Embedding(T )), M t ∈ R L t ×2d t ,</formula><p>(1) where T is a text sequence, L t is the maximum length of a padded text sequence, and d t is the dimension of hidden units in the BiGRU.</p><p>For image modality, we extract image features from both the object and scene views to capture sufficient information. We believe that there are interdependencies between different objects or scenes in an image. To explicitly model this co-occurrence, we first extract objects O = {o 1 , ..., o l o } by YOLOv3 <ref type="bibr" target="#b2">(Farhadi and Redmon, 2018)</ref>, and extract scenes S = {s 1 , ..., s l s } by VGG-Place <ref type="bibr" target="#b36">(Zhou et al., 2017)</ref>. Finally, we obtain the object and scene memory banks with the pretrained ResNet <ref type="bibr" target="#b8">(He et al., 2016)</ref>. Thus, if an input image V has a 448×448 resolution and is split into 14×14 = 196 visual blocks of the same size, then each block is represented by a 2,048-dimensional vector.</p><formula xml:id="formula_2">M x = f x ResN et (V ), M x ∈ R L x ×d x ,<label>(2)</label></formula><p>where x ∈ {Object, Scene}, L x = 196, and d x = 2, 048. Note that we delete the stopwords during data preprocessing so that the words "a" and "the" do not have connections.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3">Multi-channel Graph Neural Networks</head><p>In this subsection, we present our proposed Multi-GNN module. As Fig. <ref type="figure" target="#fig_1">2</ref> shows, this module consists of the TG channel (middle), the IGO channel (right), and the IGS channel (left).</p><p>Text GNN: As shown in the middle of Fig. <ref type="figure" target="#fig_1">2</ref>, motivated by <ref type="bibr" target="#b9">(Huang et al., 2019)</ref>, we learn text representation through the Text Level GNN. For text with l t words T = {w 1 , ..., w k , ..., w l t }, where the k th word, w k , is initialized by glove embedding r t k ∈ R d , d = 300. We build the graph of the textbased vocabulary of the training dataset, which is defined as follows:</p><formula xml:id="formula_3">N t = {w k |k ∈ [1, l t ]}.<label>(3)</label></formula><p>We build edges between w k and w j when the number of co-occurrences of two words is not less than 2.</p><formula xml:id="formula_4">E t = {e t k,j |w k ∈ [w 1 , w l t ]; w j ∈ [w k-ws , w k+ws ]},<label>(4</label></formula><p>) where N t and E t are the set of nodes and edges of the text graph, respectively. The word representations in N t and the edge weights in E t are taken from global shared matrices built based on vocabulary and the edge set of the dataset, respectively. That is, the representations of the same nodes and weights of the edges are shared globally. e t k,j is initialized by point-wise mutual information (PMI) <ref type="bibr">(Wang et al., 2020a)</ref> and is learned in the training process. ws is the hyperparameter sliding window size, which indicates how many adjacent nodes are connected to each word in the text graph. Then, we update the node representation based on its original representations and neighboring nodes by the message passing mechanism (MPM) <ref type="bibr" target="#b5">(Gilmer et al., 2017)</ref>, which is defined as follows:</p><formula xml:id="formula_5">A t k = max j∈N ws k e t kj r t k ,<label>(5)</label></formula><formula xml:id="formula_6">r t k = αr t k + (1 -α)A t k ,<label>(6)</label></formula><p>where A t k ∈ R d is the aggregated information from neighboring nodes from node k-ws to k+ws, and max is the reduction function. α is the trainable variable that indicates how much original information of the node should be kept, and r t k ∈ R d is the updated representation of node k.</p><p>Finally, we can calculate the new representation of text T as follows:</p><formula xml:id="formula_7">T = l t k=1 r t k (7)</formula><p>Image GCN: In this module, we explicitly model interdependence within l x scenes or objects by IGX, as shown on the left and right sides of Fig. <ref type="figure" target="#fig_1">2</ref>, respectively. The graph of the image is defined as follows:</p><formula xml:id="formula_8">N x = {x p |p ∈ [1, l x ]},<label>(8)</label></formula><p>where N x ∈ R C x is the set of nodes of IGX;</p><p>x or X ∈ {Object, Scene}, C x = 80 when x = Object, and C x = 365 when x = Scene.</p><p>To build the edges of IGX, we first build the global shared co-occurrence matrix-based dataset:</p><formula xml:id="formula_9">E x = {e x p,q |p ∈ [1, l x ] , q ∈ [1, l x ]},<label>(9)</label></formula><p>where</p><formula xml:id="formula_10">E x ∈ R C x ×C</formula><p>x is the co-occurrence matrix; edge weight e x p,q indicates the co-occurrence times of x p and x q in the dataset.</p><p>Then, we calculate the conditional probability for node p as follows:</p><formula xml:id="formula_11">P x</formula><p>p,q = e x p,q /N x p , when q = p (10)</p><p>where N x p denotes the occurrence times of x p in the dataset. Note that P x p,q = P x q,p . As mentioned by <ref type="bibr" target="#b0">(Chen et al., 2019)</ref>, the simple correlation above may suffer several drawbacks. We further build the binary co-occurrence matrix:</p><formula xml:id="formula_12">B x p,q = 1, if P x p,q ≥ β 0, if P x p,q ≤ β , (<label>11</label></formula><formula xml:id="formula_13">)</formula><p>where β is the hyperparameter used to filter noisy edges.</p><p>It is obvious that the role of the central node is different from that of neighboring nodes, so we need to further calculate the weight of the edge:</p><formula xml:id="formula_14">R x p,q = 1 -γ, if p = q γ/ C x q=1 B x p,q , if p = q , (<label>12</label></formula><formula xml:id="formula_15">)</formula><p>where R x ∈ R C x ×C x is the weighted cooccurrence matrix, and hyperparameter γ indicates the importance of neighboring nodes. Finally, we input node N x and edge R x of the image into the graph convolutional network. Like in <ref type="bibr" target="#b16">(Kipf and Welling, 2016)</ref>, every layer can be calculated as follows:</p><formula xml:id="formula_16">H x L+1 = h( R x H x L W x L ),<label>(13)</label></formula><p>where</p><formula xml:id="formula_17">H x L ∈ R C x ×d x , H x L+1 ∈ R C x ×d x , W x L ∈ R d x ×d x , and R x ∈ R C x ×C x is the normalized representation of R x ; h(•) is a non-linear operation. When L = 1, H x</formula><p>1 is the word-embedding vector of N x . The MMAI module illustrates the process of multimodal interaction from four channels, X ∈ {Object, Scene}. We take the interaction process between text and image scene channels as an example to demonstrate this for convenience. The dotted arrows are the outputs of the other two channels after the interactions.</p><p>By stacking multiple GCN layers, we can explicitly learn and model the complex interdependence of the nodes. Then, we obtain the image representation with objects or scenes dependencies:</p><formula xml:id="formula_18">I x = M axP ooling(M x )(H x L+1 ) T , I x ∈ R C x .<label>(14)</label></formula><p>But, we cannot capture the relationship between nodes and sentiments. Therefore, we learn the sentiment-awareness image representation through multi-head attention <ref type="bibr" target="#b24">(Vaswani et al., 2017)</ref>.</p><formula xml:id="formula_19">Att = sof tmax( QK T √ d k )V,<label>(15)</label></formula><formula xml:id="formula_20">EI x = M H(Q, K, V ) = Concat(head 1 , ..., head H )W O where head h = Att(QW Q h , KW K h , V W V h ), (<label>16</label></formula><formula xml:id="formula_21">) where M H(•) is multi-head attention; W Q h ∈ R d×d k , W K h ∈ R d model ×d k , W V h ∈ R d model ×dv , and W O ∈ R Hdv×d ; and H = 5, d model = 300, d k = d v = 60. Q ∈ R l s ×d</formula><p>is a sentiment embedding matrix built based on the label set l s = 3 for polarity classification and l s = 7 for emotion classification;</p><formula xml:id="formula_22">K = V = I x W I , W I ∈ R C x ×d model , K, V ∈ R d model .</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4">Multimodal Interaction</head><p>Motivated by the Transformer <ref type="bibr" target="#b24">(Vaswani et al., 2017)</ref> prototype, we design a Multimodal Multihead Attention Interaction (MMAI) module that can effectively learn the interaction between text modality and image modality by multiple channels, as shown in Fig. <ref type="figure">3</ref>.</p><p>We employ the MMAI to obtain the Text guided Image-X representations and Image-X guided Text representations, X ∈ {Object, Scene}. For the Text-guided Image-X attention,</p><formula xml:id="formula_23">O T gX N +1 = LN (M H(Q = H T gX N , K = V = M x ) + H T gX N ),<label>(17)</label></formula><formula xml:id="formula_24">H T gX N +1 = LN (F F N (O T gX N +1 ) + O T gX N +1 ),<label>(18)</label></formula><p>where LN (•) is layer normalization, and F F N (•) is the feed-forward network. When N = 1, H T gX 1 = T , as in Eq. 7. For the Image-X-guided Text attention,</p><formula xml:id="formula_25">O XgT N +1 = LN (M H(Q = H XgT N , K = V = M t ) + H XgT N ),<label>(19)</label></formula><formula xml:id="formula_26">H XgT N +1 = LN (F F N (O XgT N +1 ) + O XgT N +1 ), (<label>20</label></formula><formula xml:id="formula_27">) when N = 1, H XgT 1 = EI x , as in Eq. 16. For M H, H = 4, d model = 512, d k = d v = 128.</formula><p>The fused multimodal representation is as follows:</p><formula xml:id="formula_28">R m = [H T gO N ⊕ H T gS N ⊕ H OgT N ⊕ H SgT N ],</formula><p>where ⊕ is a concatenation operation.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.5">Sentiment Detection</head><p>Finally, we feed the above fused representation, R m , into the top fully connected layer and employ the softmax function for sentiment detection.</p><formula xml:id="formula_29">L m = sof tmax(w s R m + b s ), L m ∈ R l s , (21)</formula><p>where w s and b s are the parameters of the fully connected layer.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4">Experiments</head><p>We conduct experiments on three multimodal sentiment datasets from social media platforms, MVSA-Single, MVSA-Multiple <ref type="bibr" target="#b20">(Niu et al., 2016)</ref>, and TumEmo <ref type="bibr" target="#b30">(Yang et al., 2020)</ref>, and compare our MGNNS model with a number of unimodal and multimodal approaches.  amount of image-text data crawled from Tumblr<ref type="foot" target="#foot_0">foot_0</ref> . The statistics of these datasets are given in Appendix A; and for a fair comparison, we adopt the same data preprocessing method as that of Yang <ref type="bibr" target="#b30">(Yang et al., 2020)</ref>. The corresponding details are shown in Appendix B.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2">Experimental Setup</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Parameter</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>MVSA- * TumEmo</head><p>Learning rate 4e -5 5e -5</p><formula xml:id="formula_30">ws 4 5 Object-β 0.4 0.4 Scene-β 0.3 0.5 γ 0.2 0.2 L x 2 2 N T gX 1 1 N XgT 1 1</formula><p>Table <ref type="table">2</ref>: Parameter settings of the different datasets.</p><p>We adopt the cross-entropy loss function and Adam optimizer. In the process of extracting objects and scenes, we reserve the objects with the probability greater than 0.5 and the top-5 scenes, respectively. The other parameters are listed in Table 2, * ∈ {Single, M ultiple}. We use Accuracy (Acc) and F1-score (F1) as evaluation metrics. All models are implemented with PyTorch.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3">Baselines</head><p>We compare our model with multimodal sentiment models with the same modalities and the unimodal baseline models.</p><p>Unimodal Baselines: For text modality, CNN <ref type="bibr" target="#b15">(Kim, 2014)</ref> and Bi-LSTM <ref type="bibr" target="#b37">(Zhou et al., 2016)</ref> are well-known models for text classification tasks, and BiACNN <ref type="bibr" target="#b17">(Lai et al., 2015)</ref> incorporates the CNN and BiLSTM models with an attention mechanism for text sentiment analysis. TGNN <ref type="bibr" target="#b9">(Huang et al., 2019)</ref> is a text-level graph neural network for text classification. For image modality, OSDA (Yang   <ref type="bibr" target="#b28">(Xu and Mao, 2017</ref>) is a deep semantic network with attention for multimodal sentiment analysis. Co-Mem <ref type="bibr" target="#b29">(Xu et al., 2018</ref>) is a co-memory network for iteratively modeling the interactions between multiple modalities. MVAN <ref type="bibr" target="#b30">(Yang et al., 2020)</ref> is a multi-view attentional network that utilizes a memory network for multimodal emotion analysis. This model achieves state-of-the-art performance on image-text multimodal sentiment classification tasks.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.4">Experimental Results and Analysis</head><p>The experimental results of the baseline methods and our model are shown in Table <ref type="table" target="#tab_3">3</ref>, where MGNNS denotes that our model is based on multichannel graph neural networks 3 .</p><p>We can make the following observations. First, 3 The source codes are available for use at <ref type="url" target="https://github.com/YangXiaocui1215/MGNNS">https:// github.com/YangXiaocui1215/MGNNS</ref>. our model (MGNNS) is competitive with the other strong baseline models on the three datasets. Note that the data distribution of MVSA- * is extremely unbalanced. Thus, we reproduce the MVAN model with ACC and Weighted-F1 metrics instead of the Micro-F1 metric used in the original paper, which is more realistic. Second, the multimodal sentiment analysis models perform better than most of the unimodal sentiment analysis models on all three datasets. Moreover, the segmental indictors are difficult to capture for images owing to the low information density, and the sentiment analysis on the image modality achieves the worst results. Finally, the TGNN unimodal model outperforms the HSAN multimodal model, indicating that the GNN has excellent performance in sentiment analysis.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.5">Ablation Experiments</head><p>We conduct ablation experiments on the MGNNS model to demonstrate the effectiveness of different modules. Table <ref type="table" target="#tab_4">4</ref> shows that the whole MGNNS model achieves the best performance among all models. To show the performance of the Multi-GNN module, we replace the Text-GNN with the CNN, as well as the Image-GCN with the pretrained ResNet. The removal of the MMAI module (w/o MMAI) and Multi-GNN module (w/o MGNN) adversely affect the model results, which indicates that these modules are useful for multimodal sentiment analysis. By replacing the MMAI module with the CoAtt <ref type="bibr" target="#b19">(Lu et al., 2016)</ref>  (+CoAtt), the model performance is found to be slightly worse than that of the MGNNS module. This further illustrates the importance of multimodal interactions and the superiority of the MMAI module. When one of the object views (w/o Object) or scene views (w/o Scene) is removed, the performance of the model declines, which indicates that both views of the image are effective for multimodal sentiment analysis.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.6">Transferability Experiment</head><p>In the Multi-GNN module, we build multiple graphs for different modalities based on the dataset. For different datasets, the graphs built by the unimodal model are different. However, can graph capture from one dataset (e.g., MVSA-Single) have positive effects on other datasets (e.g., TumEmo)?</p><p>In this subsection, we will verify the transferability of the model through experiments.</p><p>As Table <ref type="table" target="#tab_6">5</ref> shows, the following conclusions can be drawn: (i) Regardless of the modality, such as text or image, compared to introducing the graph constructed based on own dataset, the experimental results calculated based on graphs transferred from other datasets are worse. This is mainly because each dataset has unique global characteristics, the experimental results based on transferred graphs are slightly worse. (ii) However, due to the commonality of datasets when expressing the same emotions, the results of the transferred models are not completely worse. For example, the same scenes and objects can appear in different images in different datasets simultaneously for image modalities. Therefore, graphs from different datasets have transferability and can be used for other datasets. (iii) For different datasets, the experimental results of "X2Y-Text" are worse than those of "X2Y-Image". That is, the text graph has worse transferability. The reason for this may be that text graphs with various nodes are created based on the vocabulary of different datasets. Two situations in the transferred text graph will seriously affect the results: fewer nodes will lose information, and more nodes will provide redundant information. (iv) When the dataset gap is relatively wide, the transferability of text graphs is worse. For example, from the larger datasets transfer to the smallest dataset, including T2S-Text and M2S-Text, experimental results show a drop of 2.45% and 2.69%, respectively; from the smaller datasets transfer to the most largest dataset, including S2T-Text and M2T-Text, experimental results show a significant drop of 4.81% and 4.09%, respectively.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.7">Hyperparameter Settings</head><p>Hyperparameter ws: To obtain adequate information from neighboring nodes in the TGNN, we conduct experiments under different settings for hyperparameter ws in Eq. 4, the related results of which are shown in Fig. <ref type="figure" target="#fig_5">4</ref>. The best ws selection varies among different datasets since the average text length of TumEmo is longer compared to other data. The TGNN cannot obtain sufficient information from neighboring nodes with ws values that are too small, while larger values may degrade the performance due to the redundant information provided by neighboring nodes.    For "Z" modality, "X2Y-Z" represents that the graph that is built based on the "X" dataset is transfered to the "Y" dataset, where Z ∈ {Text, Image}, X ∈ {MVSA-Single, MVSA-Multiple, TumEmo}, and Y ∈ {MVSA-Single, MVSA-Multiple, TumEmo}. For example, "M2S-Text" represents that the text graph that is built based on the MVSA-Multiple dataset is transferred to the MVSA-Single dataset.</p><p>Hyperparameter β: We vary the values of hyperparameter β in Eq. 11 for the binary cooccurrence matrix from different views, the results of which are shown in Fig. <ref type="figure" target="#fig_8">5</ref>. We find that the best β value is different for different views in different datasets. For MVSA- * , the smaller β value can reserve more edges to capture more information since the scene co-occurrence matrix is sparser than that in the object view. For TumEmo with a large amount of data, preserving the top-5 scenes produces many noise edges, so the value of scene-β is greater than that of MVSA- * .   Hyperparameter γ: As Fig. <ref type="figure" target="#fig_10">6</ref> shows, the model receives the best performance for the three datasets when γ is 0.2. When γ is smaller, the neighboring nodes do not receive enough attention; in contrast, their own information is not fully uti-lized.  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5">Conclusions</head><p>This paper proposes a novel model, MGNNS, that is built based on the global characteristics of the dataset for multimodal sentiment detection tasks. As far as we know, this is the first application of graph neural networks in image-text multimodal sentiment analysis. The experimental results on publicly available datasets demonstrated that our proposed model is competitive with strong baseline models.</p><p>In future work, we plan to construct a model that adopts the advantages of the GNN and pretrained models such as BERT, VisualBERT, and etc. We want to design a reasonable algorithm to characterize the quality of the objects and scenes selected from the image and further improve the representation ability of the model.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head/><label/><figDesc>Figure 1: Multimodal posts with global characteristics. Two posts express the user's positive sentiment from multimodal data that has global characteristics, including the "have a fun/nice day" phrase, the ocean scene, and the beach scene.</figDesc><graphic coords="1,328.64,227.52,85.04,62.36" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 :</head><label>2</label><figDesc>Figure 2: The framework of the proposed Multi-channel Graph Neural Networks with Sentiment-awareness (MGNNS) for multimodal sentiment detection. The channels are Text-GNN (TG) for text modality, Image-GCN-Scene (IGS) for image scene modality, and Image-GCN-Object (IGO) for image object modality.Note that we delete the stopwords during data preprocessing so that the words "a" and "the" do not have connections.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head/><label/><figDesc>Figure3: The MMAI module illustrates the process of multimodal interaction from four channels, X ∈ {Object, Scene}. We take the interaction process between text and image scene channels as an example to demonstrate this for convenience. The dotted arrows are the outputs of the other two channels after the interactions.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head/><label/><figDesc>and MVSA-Multiple are two different scale image-text sentiment datasets crawled from Twitter 1 .</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 4 :</head><label>4</label><figDesc>Figure 4: Acc comparisons with different values of ws. MS is MVSA-Single, MM is MVSA-Multiple, and T is TumEmo.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 5 :</head><label>5</label><figDesc>Figure 5: Acc comparisons with different β values.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>Figure 6 :</head><label>6</label><figDesc>Figure 6: Acc comparisons with different γ values.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 1 :</head><label>1</label><figDesc>Statistics of the different datasets.</figDesc><table><row><cell>TumEmo is a multimodal weak-</cell></row><row><cell>supervision emotion dataset containing a large</cell></row><row><cell>1 https://twitter.com</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 3 :</head><label>3</label><figDesc>Experiment results of Acc and F1 on three datasets. ‡ represents the reproductive operation. et al., 2020) is an image sentiment analysis model based on multiple views. Note that the SGN, OGN, and DuIG are variants of our model and rely only on image modality. SGN and OGN are the image graph convolutional neural networks based on scenes and objects for image sentiment analysis, respectively. DuIG is the image graph convolutional neural network with dual views, e.g., Object and Scene.</figDesc><table><row><cell>Muiltimodal Baselines: HSAN (Xu, 2017) is a</cell></row><row><cell>hierarchical semantic attentional network based on</cell></row><row><cell>image captions for multimodal sentiment analysis.</cell></row><row><cell>MDSN</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 4 :</head><label>4</label><figDesc>module Ablation experiment results.</figDesc><table><row><cell>Datasets</cell><cell>Model</cell><cell>Acc</cell><cell>F1</cell></row><row><cell/><cell>w/o MGNN</cell><cell cols="2">0.7010 0.6847</cell></row><row><cell/><cell>w/o MMAI</cell><cell cols="2">0.7108 0.6879</cell></row><row><cell>MVSA-Single</cell><cell>+CoAtt w/o Scene</cell><cell cols="2">0.7255 0.6986 0.7304 0.6988</cell></row><row><cell/><cell>w/o Object</cell><cell cols="2">0.7034 0.6900</cell></row><row><cell/><cell>MGNNS</cell><cell cols="2">0.7377 0.7270</cell></row><row><cell/><cell>w/o MGNN</cell><cell cols="2">0.7019 0.6752</cell></row><row><cell/><cell>w/o MMAI</cell><cell cols="2">0.7128 0.6792</cell></row><row><cell>MVSA-Multiple</cell><cell>+CoAtt w/o Scene</cell><cell cols="2">0.7210 0.6849 0.7170 0.6797</cell></row><row><cell/><cell>w/o Object</cell><cell cols="2">0.7110 0.6848</cell></row><row><cell/><cell>MGNNS</cell><cell cols="2">0.7249 0.6934</cell></row><row><cell/><cell>w/o MGNN</cell><cell cols="2">0.6553 0.6547</cell></row><row><cell/><cell>w/o MMAI</cell><cell cols="2">0.6370 0.6347</cell></row><row><cell>TumEmo</cell><cell>+CoAtt w/o Scene</cell><cell cols="2">0.6624 0.6606 0.6618 0.6593</cell></row><row><cell/><cell>w/o Object</cell><cell cols="2">0.6592 0.6584</cell></row><row><cell/><cell>MGNNS</cell><cell cols="2">0.6672 0.6669</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_6"><head>Table 5 :</head><label>5</label><figDesc>Transferability experiment results of Acc and F1 on different datasets. S, M and T denote MVSA-Single, MVSA-Multiple, and TumEmo, respectively.</figDesc><table/></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2" xml:id="foot_0"><p>http://tumblr.com</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>The project is supported by the <rs type="funder">National Key R&amp;D Program of China</rs> (<rs type="grantNumber">2018YFB1004700</rs>) and by the <rs type="funder">National Natural Science Foundation of China</rs> (<rs type="grantNumber">61772122</rs>, <rs type="grantNumber">61872074</rs>, <rs type="grantNumber">U1811261</rs>).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_CmxZR4C">
+					<idno type="grant-number">2018YFB1004700</idno>
+				</org>
+				<org type="funding" xml:id="_MFaXQJk">
+					<idno type="grant-number">61772122</idno>
+				</org>
+				<org type="funding" xml:id="_gteVduP">
+					<idno type="grant-number">61872074</idno>
+				</org>
+				<org type="funding" xml:id="_3GrJee4">
+					<idno type="grant-number">U1811261</idno>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A Dataset</head><p>A.1 MVSA-Single and MVSA-Multiple</p><p>The statistics for the MVSA-Simple and MVSA-Multiple datasets are listed in Table <ref type="table">1</ref>, showing that the various categories are highly unbalanced.   </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A.2 TumEmo</head><p>The statistics for the TumEmo dataset are listed in Table <ref type="table">2</ref>, containing a large number of image-text posts labeled by emotion.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B Preprocessing Data</head><p>The text data contain many useless characters for sentiment analysis, such as URLs, stopwords, and punctuation. We need to preprocess text data to enhance the effectiveness of multimodal emotion detection. We perform data preprocessing as follows:</p><p>• remove the "URL", as in"http://...";</p><p>• remove the stopwords, such as "a, an, the, and etc. ";</p><p>• remove the useless punctuation, including periods, commas, semicolons, etc;</p><p>• remove the hashtag and its content (#content); In particular, the TumEmo dataset uses #emotion as a weakly supervised label.</p><p>• remove the posts for which the text length is less than 3.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Multi-label image recognition with graph convolutional networks</title>
+		<author>
+			<persName><forename type="first">Xiu-Shen</forename><surname>Zhao-Min Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peng</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yanwen</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Guo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition</title>
+		<meeting>the IEEE Conference on Computer Vision and Pattern Recognition</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="5177" to="5186"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Learning phrase representations using rnn encoder-decoder for statistical machine translation</title>
+		<author>
+			<persName><forename type="first">Kyunghyun</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bart</forename><surname>Van Merrienboer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Caglar</forename><surname>Gulcehre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dzmitry</forename><surname>Bahdanau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fethi</forename><surname>Bougares</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Holger</forename><surname>Schwenk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)</title>
+		<meeting>the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="1724" to="1734"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Yolov3: An incremental improvement</title>
+		<author>
+			<persName><forename type="first">Ali</forename><surname>Farhadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joseph</forename><surname>Redmon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Computer Vision and Pattern Recognition</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>cite as</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Learning one class representations for face presentation attack detection using multi-channel convolutional neural networks</title>
+		<author>
+			<persName><forename type="first">Anjith</forename><surname>George</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sebastien</forename><surname>Marcel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Information Forensics and Security</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="361" to="375"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Biometric face presentation attack detection with multi-channel convolutional neural network</title>
+		<author>
+			<persName><forename type="first">Anjith</forename><surname>George</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zohreh</forename><surname>Mostaani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Geissenbuhler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Olegs</forename><surname>Nikisins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">André</forename><surname>Anjos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sébastien</forename><surname>Marcel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Information Forensics and Security</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="42" to="55"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Neural message passing for quantum chemistry</title>
+		<author>
+			<persName><forename type="first">Justin</forename><surname>Gilmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Samuel</forename><forename type="middle">S</forename><surname>Schoenholz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Patrick</forename><forename type="middle">F</forename><surname>Riley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Oriol</forename><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">George</forename><forename type="middle">E</forename><surname>Dahl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 34th International Conference on Machine Learning</title>
+		<meeting>the 34th International Conference on Machine Learning</meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="page" from="1263" to="1272"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Iterative contextaware graph inference for visual dialog</title>
+		<author>
+			<persName><forename type="first">Dan</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hui</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hanwang</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zheng-Jun</forename><surname>Zha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Meng</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="10055" to="10064"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Misa: Modality-invariant and -specific representations for multimodal sentiment analysis</title>
+		<author>
+			<persName><forename type="first">Devamanyu</forename><surname>Hazarika</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Roger</forename><surname>Zimmermann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Soujanya</forename><surname>Poria</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3394171.3413678</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 28th ACM International Conference on Multimedia</title>
+		<meeting>the 28th ACM International Conference on Multimedia</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="1122" to="1131"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Deep residual learning for image recognition</title>
+		<author>
+			<persName><forename type="first">Kaiming</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiangyu</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shaoqing</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jian</forename><surname>Sun</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the IEEE conference on computer vision and pattern recognition</title>
+		<meeting>the IEEE conference on computer vision and pattern recognition</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="770" to="778"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Text level graph neural network for text classification</title>
+		<author>
+			<persName><forename type="first">Lianzhe</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dehong</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sujian</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaodong</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Houfeng</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)</title>
+		<meeting>the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="3442" to="3448"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Gqa: A new dataset for real-world visual reasoning and compositional question answering</title>
+		<author>
+			<persName><forename type="first">Drew</forename><forename type="middle">A</forename><surname>Hudson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</title>
+		<imprint>
+			<date type="published" when="2019">2019. 2019</date>
+			<biblScope unit="page" from="6700" to="6709"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Multi-channel convolutional neural network for twitter emotion and sentiment recognition</title>
+		<author>
+			<persName><forename type="first">Jumayel</forename><surname>Islam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Robert</forename><forename type="middle">E</forename><surname>Mercer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lu</forename><surname>Xiao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</title>
+		<meeting>the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="1355" to="1365"/>
+		</imprint>
+	</monogr>
+	<note>Long and Short Papers</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Kbgn: Knowledge-bridge graph network for adaptive vision-text reasoning in visual dialogue</title>
+		<author>
+			<persName><forename type="first">Xiaoze</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Siyi</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zengchang</forename><surname>Qin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yajing</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jing</forename><surname>Yu</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3394171.3413826</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 28th ACM International Conference on Multimedia</title>
+		<meeting>the 28th ACM International Conference on Multimedia</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="1265" to="1273"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Multimodal sentiment analysis: A survey and comparison</title>
+		<author>
+			<persName><forename type="first">Ramandeep</forename><surname>Kaur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sandeep</forename><surname>Kautish</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Service Science, Management, Engineering, and Technology (IJSSMET)</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="38" to="58"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Multimodal neural graph memory networks for visual question answering</title>
+		<author>
+			<persName><forename type="first">Mahmoud</forename><surname>Khademi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 58th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="7177" to="7188"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Convolutional neural networks for sentence classification</title>
+		<author>
+			<persName><forename type="first">Yoon</forename><surname>Kim</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)</title>
+		<meeting>the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="1746" to="1751"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Semisupervised classification with graph convolutional networks</title>
+		<author>
+			<persName><forename type="first">Thomas</forename><forename type="middle">N</forename><surname>Kipf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Max</forename><surname>Welling</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ICLR</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>Poster</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Recurrent convolutional neural networks for text classification</title>
+		<author>
+			<persName><forename type="first">Siwei</forename><surname>Lai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Liheng</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kang</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jun</forename><surname>Zhao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Twenty-ninth AAAI conference on artificial intelligence</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Tensor graph convolutional networks for text classification</title>
+		<author>
+			<persName><forename type="first">Xien</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xinxin</forename><surname>You</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiao</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ji</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ping</forename><surname>Lv</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the AAAI Conference on Artificial Intelligence</title>
+		<meeting>the AAAI Conference on Artificial Intelligence</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="8409" to="8416"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Hierarchical question-image co-attention for visual question answering</title>
+		<author>
+			<persName><forename type="first">Jiasen</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jianwei</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dhruv</forename><surname>Batra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Devi</forename><surname>Parikh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="289" to="297"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Sentiment analysis on multi-view social data</title>
+		<author>
+			<persName><forename type="first">Teng</forename><surname>Niu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shiai</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lei</forename><surname>Pang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Abdulmotaleb</forename><forename type="middle">El</forename><surname>Saddik</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-319-27674-8_2</idno>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Multimedia Modeling</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="15" to="27"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Glove: Global vectors for word representation</title>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Pennington</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2014 conference on empirical methods in natural language processing (EMNLP)</title>
+		<meeting>the 2014 conference on empirical methods in natural language processing (EMNLP)</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="1532" to="1543"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Utterance-level multimodal sentiment analysis</title>
+		<author>
+			<persName><forename type="first">Verónica</forename><surname>Pérez-Rosas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rada</forename><surname>Mihalcea</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Louis-Philippe</forename><surname>Morency</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 51st Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="973" to="982"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">A survey of multimodal sentiment analysis</title>
+		<author>
+			<persName><forename type="first">Mohammad</forename><surname>Soleymani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Garcia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Brendan</forename><surname>Jou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Björn</forename><surname>Schuller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shih-Fu</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maja</forename><surname>Pantic</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Image and Vision Computing</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page" from="3" to="14"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Attention is all you need</title>
+		<author>
+			<persName><forename type="first">Ashish</forename><surname>Vaswani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Noam</forename><surname>Shazeer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Niki</forename><surname>Parmar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jakob</forename><surname>Uszkoreit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Llion</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aidan</forename><forename type="middle">N</forename><surname>Gomez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lukasz</forename><surname>Kaiser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Illia</forename><surname>Polosukhin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 31st International Conference on Neural Information Processing Systems</title>
+		<meeting>the 31st International Conference on Neural Information Processing Systems</meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="5998" to="6008"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Fake news detection via knowledge-driven multimodal graph convolutional networks</title>
+		<author>
+			<persName><forename type="first">Youze</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shengsheng</forename><surname>Qian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jun</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Quan</forename><surname>Fang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Changsheng</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">;</forename></persName>
+		</author>
+		<idno type="DOI">10.1145/3372278.3390713Transmodality:Anend2endfusionmethodwithtransformerformultimodalsentimentanalysis</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2020 International Conference on Multimedia Retrieval</title>
+		<meeting>the 2020 International Conference on Multimedia Retrieval</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="540" to="547"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Transmodality: An end2end fusion method with transformer for multimodal sentiment analysis</title>
+		<author>
+			<persName><forename type="first">Zilong</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhaohong</forename><surname>Wan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaojun</forename><surname>Wan</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3366423.3380000</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of The Web Conference</title>
+		<meeting>The Web Conference</meeting>
+		<imprint>
+			<date type="published" when="2020">2020. 2020</date>
+			<biblScope unit="page" from="2514" to="2520"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Analyzing multimodal public sentiment based on hierarchical semantic attentional network</title>
+		<author>
+			<persName><forename type="first">Nan</forename><surname>Xu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">IEEE International Conference on Intelligence and Security Informatics (ISI)</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2017">2017. 2017</date>
+			<biblScope unit="page" from="152" to="154"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Multisentinet: A deep semantic network for multimodal sentiment analysis</title>
+		<author>
+			<persName><forename type="first">Nan</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wenji</forename><surname>Mao</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3132847.3133142</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2017 ACM on Conference on Information and Knowledge Management</title>
+		<meeting>the 2017 ACM on Conference on Information and Knowledge Management</meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="2399" to="2402"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">A comemory network for multimodal sentiment analysis</title>
+		<author>
+			<persName><forename type="first">Nan</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wenji</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guandan</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3209978.3210093</idno>
+	</analytic>
+	<monogr>
+		<title level="m">The 41st international ACM SIGIR conference on research &amp; development in information retrieval</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="929" to="932"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Image-text multimodal emotion classification via multi-view attentional network</title>
+		<author>
+			<persName><forename type="first">Xiaocui</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shi</forename><surname>Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daling</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yifei</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Multimedia</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Graph convolutional networks for text classification</title>
+		<author>
+			<persName><forename type="first">Liang</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chengsheng</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuan</forename><surname>Luo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the AAAI Conference on Artificial Intelligence</title>
+		<meeting>the AAAI Conference on Artificial Intelligence</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="7370" to="7377"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Cross-modality consistent regression for joint visual-textual sentiment analysis of social multimedia</title>
+		<author>
+			<persName><forename type="first">Quanzeng</forename><surname>You</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiebo</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jin</forename><surname>Hailin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jianchao</forename><surname>Yang</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/2835776.2835779</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Ninth ACM international conference on Web search and data mining</title>
+		<meeting>the Ninth ACM international conference on Web search and data mining</meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="13" to="22"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">A survey of sentiment analysis in social media</title>
+		<author>
+			<persName><forename type="first">Lin</forename><surname>Yue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Weitong</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xue</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wanli</forename><surname>Zuo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Minghao</forename><surname>Yin</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10115-018-1236-4</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Knowledge and Information Systems</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="47"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Multi-modal sentiment classification with independent and interactive knowledge via semi-supervised learning</title>
+		<author>
+			<persName><forename type="first">Dong</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shoushan</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Qiaoming</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guodong</forename><surname>Zhou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="22945" to="22954"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Deep learning for sentiment analysis: A survey</title>
+		<author>
+			<persName><forename type="first">Lei</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shuai</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Liu</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/widm.1253</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page">e1253</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Places: A 10 million image database for scene recognition</title>
+		<author>
+			<persName><forename type="first">Bolei</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Agata</forename><surname>Lapedriza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aditya</forename><surname>Khosla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aude</forename><surname>Oliva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Antonio</forename><surname>Torralba</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE transactions on pattern analysis and machine intelligence</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="1452" to="1464"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Attention-based bidirectional long short-term memory networks for relation classification</title>
+		<author>
+			<persName><forename type="first">Peng</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jun</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhenyu</forename><surname>Qi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bingchen</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hongwei</forename><surname>Hao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bo</forename><surname>Xu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 54th annual meeting of the association for computational linguistics</title>
+		<meeting>the 54th annual meeting of the association for computational linguistics</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="207" to="212"/>
+		</imprint>
+	</monogr>
+	<note>Short papers</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

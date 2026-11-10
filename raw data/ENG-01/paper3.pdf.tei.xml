@@ -1,0 +1,1946 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A Novel Bayesian Optimization-Based Machine Learning Framework for COVID-19 Detection From Inpatient Facility Data</title>
+				<funder>
+					<orgName type="full">Taif University</orgName>
+				</funder>
+				<funder ref="#_pzAGjqG">
+					<orgName type="full">Taif University Researchers Supporting</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Institute of Electrical and Electronics Engineers (IEEE)</publisher>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2021">2021</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Md.</forename><forename type="middle">Abdul</forename><surname>Awal</surname></persName>
+							<idno type="ORCID">0000-0003-3028-4932</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Mehedi</forename><surname>Masud</surname></persName>
+							<idno type="ORCID">0000-0001-6019-7245</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Md.</forename><forename type="middle">Shahadat</forename><surname>Hossain</surname></persName>
+							<idno type="ORCID">0000-0002-1368-7230</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Abdullah Al-Mamun</forename><surname>Bulbul</surname></persName>
+							<idno type="ORCID">0000-0002-5652-2065</idno>
+						</author>
+						<author>
+							<persName><forename type="first">S</forename><forename type="middle">M Hasan</forename><surname>Mahmud</surname></persName>
+							<idno type="ORCID">0000-0002-6828-3559</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Anupam</forename><forename type="middle">Kumar</forename><surname>Bairagi</surname></persName>
+							<idno type="ORCID">0000-0003-1639-1301</idno>
+						</author>
+						<title level="a" type="main">A Novel Bayesian Optimization-Based Machine Learning Framework for COVID-19 Detection From Inpatient Facility Data</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">IEEE Access</title>
+						<title level="j" type="abbrev">IEEE Access</title>
+						<idno type="eISSN">2169-3536</idno>
+						<imprint>
+							<publisher>Institute of Electrical and Electronics Engineers (IEEE)</publisher>
+							<biblScope unit="volume">9</biblScope>
+							<biblScope unit="page" from="10263" to="10281"/>
+							<date type="published" when="2021"/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">2F18FD1B077DBA4F37583432BAEF4855</idno>
+					<idno type="DOI">10.1109/access.2021.3050852</idno>
+					<note type="submission">Received December 17, 2020, accepted January 5, 2021, date of publication January 11, 2021, date of current version January 20, 2021.</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-09T12:36+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>COVID-19</term>
+					<term>ADASYN</term>
+					<term>Bayesian optimization</term>
+					<term>classification</term>
+					<term>inpatient's facility data</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The whole world faces a pandemic situation due to the deadly virus, namely COVID-19. It takes considerable time to get the virus well-matured to be traced, and during this time, it may be transmitted among other people. To get rid of this unexpected situation, quick identification of COVID-19 patients is required. We have designed and optimized a machine learning-based framework using inpatient's facility data that will give a user-friendly, cost-effective, and time-efficient solution to this pandemic. The proposed framework uses Bayesian optimization to optimize the hyperparameters of the classifier and ADAptive SYNthetic (ADASYN) algorithm to balance the COVID and non-COVID classes of the dataset. Although the proposed technique has been applied to nine state-of-the-art classifiers to show the efficacy, it can be used to many classifiers and classification problems. It is evident from this study that eXtreme Gradient Boosting (XGB) provides the highest Kappa index of 97.00%. Compared to without ADASYN, our proposed approach yields an improvement in the kappa index of 96.94%. Besides, Bayesian optimization has been compared to grid search, random search to show efficiency. Furthermore, the most dominating features have been identified using SHapely Adaptive exPlanations (SHAP) analysis. A comparison has also been made among other related works. The proposed method is capable enough of tracing COVID patients spending less time than that of the conventional techniques. Finally, two potential applications, namely, clinically operable decision tree and decision support system, have been demonstrated to support clinical staff and build a recommender system.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p> This virus lives multiple hours to multiple days on a suitable surface at room temperature <ref type="bibr" target="#b4">[5]</ref>, <ref type="bibr" target="#b5">[6]</ref>. As suggested by WHO, the COVID-patient should get himself isolated from others as early as possible to resist its transmission. The COVID-19 should be detected as early as possible, reducing life, livelihood, and the economy. But a critical issue is the broad maturation period of the COVID-19 that varies from 3 to 14 days. The usual symptoms of this disease include fever, cough, dyspnea, loss of smell, loss of taste, diarrhoea, etc. <ref type="bibr" target="#b6">[7]</ref>, <ref type="bibr" target="#b7">[8]</ref>. People affected by COVID-19 should go through a fruitful, real-time, fast, and accurate screening scheme to ensure timely treatment, isolation, and safety for the patient.</p><p>Many pieces of research are going on to find out efficient and speedy COVID-19 detection schemes in different dimensions. The Reverse Transcription Polymerase Chain Reaction (RT-PCR) is a COVID-19 detection scheme that has shown its efficiency and has been practised worldwide. Using samples like the nasal or oral pharyngeal swab, this method can competently detect coronavirus and has attained the gold-standard banner. However, these testing kits fail to meet the mounting demand due to its limited supply, especially in developing countries <ref type="bibr" target="#b8">[9]</ref>. Another drawback of this method is that it requires an extended period, ranging from one to two days. Moreover, the situation is even worse in rural areas, because people from remote areas get the results after two or more days, even after a week <ref type="bibr" target="#b9">[10]</ref>. This extended period increases the vulnerability of the spreading of COVID-19 as the patient does not usually keep himself isolated from others before getting his result.</p><p>To optimize these limitations, the potentiality of Artificial Intelligence (AI) and Machine Learning (ML) algorithms in the analysis, characterization, and classification of different diseases have motivated the researchers to introduce AI and ML in COVID-19 detection. Numerous researches have already been carried out to design a COVID-19 detection model based on AI and ML <ref type="bibr" target="#b6">[7]</ref>- <ref type="bibr" target="#b19">[20]</ref>. Furthermore, Rajaraman and Antani <ref type="bibr" target="#b9">[10]</ref> proposed a COVID-19 detection model based on deep learning (DL) algorithms. Using convolutional neural networks (CNNs), chest X-ray (CXR) data from patients are analyzed in this model to evaluate the presence of the SARS-CoV-2 virus. The model showed about 93% accuracy employing the VGG16 classifier. Another DL and CNNs based automatic COVID-19 detection model was proposed by Makris et al. <ref type="bibr" target="#b7">[8]</ref>. Diagnosing the CXR data, the model exhibited about 95.9% and 95.00% accuracy engaging VGG16 and the VGG19 classifiers, respectively. A transfer learning-based model was presented by Abbas et al. <ref type="bibr" target="#b11">[12]</ref> to trace COVID-19. This CNN based model diagnosed the CXR images of patients to check the COVID-19 presence, and the model attained about 97.5% accuracy. He et al. <ref type="bibr" target="#b6">[7]</ref> presented a DL model for the automatic detection of COVID-19. This model employed the chest computed tomography (CT) images from patients to detect COVID-19. The anticipated 3D CNN model, MNas3DNet41, revealed about 87% accuracy. Jim et al. <ref type="bibr" target="#b10">[11]</ref> presented an automatic COVID-19 detection model based on sequential CNN. This model took the CT images in its input to detect COVID-19. The model attained almost 92.5% accuracy along with 94.2% sensitivity and 95.6% specificity. A lot of more automatic COVID-19 detection models have been proposed so far based on the computer-based diagnosis of the CT and CXR images.</p><p>Hence, all the anticipated models require CT or CXR data of patients as the key input parameter, only available from diagnostic centres. So, each patient or suspected patient has to visit the diagnostic centre in person to check the presence of COVID-19 in his body. Most of the families in developing countries do not have private transport. Besides, patients from rural areas have to travel a long distance to reach a diagnostic centre. Therefore, they have to use public transport to visit the diagnostic centre to check COVID-19. This will create high vulnerability to COVID-19 spreading, among others. From another point of view, a low percentage of people tested for COVID-19 gets COVID-positive results in most of the countries; as an example, as of July 30, 2020, the positive rate is about 1.30% in France, 22.20% in Bangladesh, 9.90% in Iran, 0.90% in Italy, 7.90% in the USA, 11.10% in India, 2.10% in Russia, and 0.40% in the UK <ref type="bibr" target="#b20">[21]</ref>. Visiting the diagnostic or test centre, a large percentage of COVID-19 negative people may meet with COVID-19 positive patients, which will enhance the risk of getting contaminated by COVID-19 disease. So, an inpatient data-based COVID detection will be the best option to avoid these types of risks. Besides, this type of detection will be very user friendly, cost-effective, and time-efficient.</p><p>Considering all the above issues, we have proposed a fast and user-friendly model to detect the COVID-19 based on machine learning. A large volume of data on COVID-19 is available in different laboratories and test centres. The dataset comprises other features like age, temperature, pulse rate, systolic and diastolic pressure, fever, cough, loss of smell, runny nose, diabetics, loss of taste, asthma, etc., which are analyzed to design the automatic COVID-19 detection model. The most promising advantage of this model is that it is capable of detecting the COVID-19 within a few minutes as well as help the doctors take adequate precautionary measures while treating the COVID patients. Different classification algorithms such as Linear Discriminant Analysis (LDA), Quadratic-DA (QDA), Naive Bayes (NB), k-Nearest Neighbors (KNN), Decision Tree (DT), Random Forest (RF), eXtreme Gradient Boosting (XGB), Gradient Boosting (GB), Support Vector Machine (SVM), etc. are used to characterize the model. These classifiers have some hyper-parameters, and proper tuning of these hyper-parameter improves the performance of the classification using state-of-the-art global optimizers such as Bayesian optimization <ref type="bibr" target="#b21">[22]</ref>, Gradient-Based Optimizer (GBO) <ref type="bibr" target="#b22">[23]</ref>, Slime mould algorithm (SMA) <ref type="bibr" target="#b23">[24]</ref>, and Harris hawks optimization (HHO) <ref type="bibr" target="#b24">[25]</ref> etc. The evaluation of different performance metrics such as accuracy, specificity, sensitivity, etc. for the anticipated model demonstrates higher efficiency in detecting COVID-19.</p><p>The contribution and key topics covered by this study are as follows:</p><p>• The proposed model can be easily tested on inpatients or inhouse facilities discussed in Section II. Therefore, the patient needs not to visit the clinic to test the COVID-19.</p><p>• We have designed a machine learning framework using Bayesian optimization adapted by the ADASYN algorithm to detect COVID-19 which is presented in Section II.D and II.E.</p><p>• The state-of-the-art machine learning technique is optimized using our method and compared with other commonly used Grid-search and random search techniques; see Section III.H.</p><p>• The proposed method uses the ADASYN algorithm to balance the model, and the effect of ADASYN has also been demonstrated in III.A.</p><p>• Using SHapely Adaptive exPlanations (SHAP) analysis, important features are calculated, and the SHAP values are explained to interpret the model in Section III.F.</p><p>• A clinically operable decision tree is built that will be helpful for the clinical staff stated in Section IV.A. A decision support system has also been developed to assist the recommender system illustrated in Section IV.B. The remainder of the paper is organized as follows.</p><p>In Section II, we discuss the materials and methods used in this work. We present the experimental results in Section III. In Section IV, we present a systematic discussion and comparison of the work with other approaches. Finally, we draw some conclusions in Section V.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. MATERIALS AND METHODS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. DATA SOURCE</head><p>The clinically-driven information on individuals who have undergone through RT-PCR test was collected from the <ref type="bibr" target="#b25">[26]</ref>. The dataset, containing 11169 person's data with 2.82% of patients' COVID positive and 97.18% COVID negative tests from the United States, was prepared by Carbon Health (CH) and Braid Health (BH). The CH started RT-PCR testing of a coronavirus in early April 2020. The dataset is compliant with the Health Insurance Portability and Accountability Act (HIPAA) privacy rule's de-identification standard. Five clinical teams worked under the CH. The dataset prepared by the CH covered multiple physiognomies on patients, including Epidemiological (Epi) Factors, comorbidity, vital signs, lab technician-assessed symptoms, patient-stated symptoms. Whereas, two clinical teams gathered the dataset under the BH, which assembled the radiological information containing verdicts, CXR impressions, CXR labels, and CXR link. We haven't used radiological information as most of the patient doesn't have radiological details. The integration of radiological information is beyond the scope of this study, hence excluded from the analysis. The dataset consisted of both positive and negative test results for patients having both one or more symptoms and zero symptoms. In addition to COVID-19 test results, the complete dataset, available on the GitHub website, contains multiple features of patients such as pulse rate, temperature, age, higher danger introducer occupation, higher danger contacts, diabetics, cancer, asthma, smoker, systole, diastole, diarrhoea, fatigue, fever, losing smell, losing taste, runny nose, headache, muscle pain, pain in the throat, cough, shortness of breath, etc. The vignette of the entire data set has been illustrated through a tabular sketch shown in Figure <ref type="figure" target="#fig_0">1</ref>.</p><p>From the pictorial depiction (Figure <ref type="figure" target="#fig_0">1</ref>), it is much clearer that there are two types of data (numeric and boolean), where the boolean variables are more than three times that of the numeric data. Moreover, the highest age of the patients in this data set is 90 years old, and the extreme values of both systolic and diastolic pressures were dramatically higher than the natural ones. It can be further added that days_since_symptom_onset has about 68% missing data, while the percentage of missing data in the entire data set is around 17. Besides the tabular display, as shown in Figure <ref type="figure" target="#fig_0">1</ref>, the graphical example the green bars in Figure <ref type="figure" target="#fig_1">2</ref> efficiently reveals that the variables cough, diabetes, chd, htn, cancer, asthma, COPD, autoimmune_dis, and smoker have no missing data. In contrast, the variable days_since_symptom_onset has the highest missing values compared to others.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. DATA PRE-PROCESSING</head><p>The overall workflow of our study is presented in Figure <ref type="figure">3</ref>. For data pre-processing, the dataset has been imputed using Multivariate Imputation by Chained Equations (MICE) algorithm <ref type="bibr" target="#b26">[27]</ref>. After completing scaling, we used the ADASYN algorithm to balance out COVID and non-COVID datasets. ADAptive SYNthetic (ADASYN) algorithm <ref type="bibr" target="#b27">[28]</ref> is an oversampling method where COVID positive is a rare instance. It helped us generate synthetic data, solving the over-fitting problem. In contrast, the under-sampling process is not the right choice in COVID classification. The majority class (i.e. COVID-no class) is downsampled to the amount minority class (i.e., COVID-yes). This process will reduce the amount of data that drastically cause data inefficiency, and it loses the vital information of COVID-no class. Our COVID data set is not a big dataset, and downsampling could mislead the diagnosis and detection. Compared to other correlated over-sampling methods such as AdaBoost in conjunction with Over/Under-Sampling and Jittering of the data (JOUS-Boost), Synthetic Minority Over-sampling TEchnique (SMOTE), SMOTE-Boost and, DataBoost-IM (DataBoost IMbalanced) algorithm, ADASYN can balance the imbalanced dataset, for example, COVID-19 dataset by reducing the bias introduced by the imbalanced data distribution <ref type="bibr" target="#b27">[28]</ref>. Besides, ADASYN shifts the decision boundary to harder to learn examples which ultimately improves the classification accuracy. These two objectives, i.e. (i) bias reduction and (ii) introducing harder to learn neighbourhoods examples, are accomplished through the dynamic weight adjustment and adaptive learning procedure <ref type="bibr" target="#b27">[28]</ref>. The Mathematical explanation behind the ADASYN algorithm is given below:</p><p>For illustration, if m l and m s represent the majority and minority classes, respectively, then the Degree of imbalance of the two classes can be figured as follows:</p><formula xml:id="formula_0">d = m s m l .<label>(1)</label></formula><p>If d &lt; d x (where d x is the preset threshold for the maximum tolerated imbalance) then the total number of the synthetic minority can be estimated as follows:</p><formula xml:id="formula_1">G = (m l -m s )d. (<label>2</label></formula><formula xml:id="formula_2">)</formula><p>Here d = 1 means there is a total balance between two classes. If</p><formula xml:id="formula_3">r i = m l k ,</formula><p>where k is the number of neighbours of each minority, and r = r i r i such that r = 1, then the amount of synthetic data to generate for each neighbourhood can be calculated as:</p><formula xml:id="formula_4">G i = Gr. (<label>3</label></formula><formula xml:id="formula_5">)</formula><p>If x i and x u are two minority examples within the same neighbourhood, where x u is randomly selected, then the new synthetic example, s i can be enumerated using the followings: where x u -x i is the difference vector in n-dimensional spaces, and λ is a random number over [0, 1].</p><formula xml:id="formula_6">s i = x i + (x u -x i )λ,<label>(4)</label></formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. CLASSIFICATION MODELS</head><p>These nine classifiers such as Linear Discriminant Analysis (LDA), Quadratic Linear Discriminant Analysis (QLDA), Naive Bayes (NB), KNN, DT, RF, XGB, GB, and SVM, have been utilized in the proposed machine learning framework. Among nine classifiers LDA, QLDA, NB, KNN, DT and, SVM are common classifiers and also used in COVID-19 classification. RF, XGB and GBC are recent state-of-the-art classifiers. For example, XGB is recently applied to interpret the mortality prediction in COVID-19 patient and proposed a clinically operable simple tree-based tool which can be suitable to take the right decision from an expert point of view <ref type="bibr" target="#b55">[56]</ref>. Considering the above rationale, we have used both commonly used classifiers as well as recently updated classifiers in this study. This will allow us to compare the classification performance in different classifiers. Moreover, RF, XGB and GBC classifiers can be explained through SHAP analysis which is very useful to clinical engineers. Finally, it can be seen from the results that the XGB performed better in most of the classification metrics, and we used SHAP to explain the XGB to interpret the COVID-19 detection.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>1) LINEAR DISCRIMINANT ANALYSIS (LDA)</head><p>The LDA, introduced by Ronald Aylmer Fisher in 1936 <ref type="bibr" target="#b28">[29]</ref>, is a productive classification technique. It sorts-out n-dimensional spaces into 2-dimensional spaces that split-up by hyper-plane. The core objective of LDA is to trace the mean function for each class, and the function is projected on the directions that optimize between-groups variance and reduces within-group variance. The LDA is generated from the conditional distribution of the data P(X |Y = k) for each class k, and it optimizes by taking the class k when the measurements are made on standalone variables for each observation are continuous quantities <ref type="bibr" target="#b29">[30]</ref>, <ref type="bibr" target="#b30">[31]</ref>.</p><p>2) QUADRATIC LINEAR DISCRIMINANT ANALYSIS (QLDA)</p><p>QLDA, an extension of LDA is exploited in machine learning and statistical analysis to classify two or more groups by quadratic discernible using distance-based classification techniques. There is no hypothesis like LDA that the covariance matrix for every class is identical. When the regularity hypothesis is true, the best prospective test for the hypothesis that an assumed measurement is from a given class is the likelihood ratio test. QLDA can be found from the conditional distribution like LDA of the data P(X |Y = k) like LDA, and it maximizes by selecting the class k <ref type="bibr" target="#b29">[30]</ref>, <ref type="bibr" target="#b30">[31]</ref>. More precisely, for LDA and QLDA, P(X |Y = k) is resulting as a multivariate Gaussian distribution with the following equation:</p><formula xml:id="formula_7">(Y = k) = (2π) d/2 k 1/2 -1 exp -0.5(X -µ k ) t -1 k (X -µ k ) , (<label>5</label></formula><formula xml:id="formula_8">)</formula><p>where d is the number of features <ref type="bibr" target="#b31">[32]</ref>. It needs to estimate the class priors P(y = k) for using LDA and QDA model as classifiers, e.g. the proportion of instances of class k from the training data, the means µ k and the covariance matrix.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>3) NAIVE BAYES (NB)</head><p>NB classifier is authoritative and mainly useful in the large dataset. It is used in both machine learning and medical science, especially the diagnosis of different diseases like COVID-19. It is a Bayes' theorem, based on probabilistic classifier objects with the strong independent supposition between the features. It generates conditional probability models that allocate class labels to a given problem <ref type="bibr" target="#b32">[33]</ref>. Say,</p><formula xml:id="formula_9">P(Patient|Covid Positive) = P(Covid Positive|Patient) × P(Patient) P(Covid Positive) ,</formula><p>where, P(Patient|Covid Positive), a conditional probability is the likelihood of the patient occurring that s/he is affected</p><formula xml:id="formula_10">FIGURE 3.</formula><p>The overall workflow of the classification of COVID-19. The first phase is collecting raw data followed by pre-processing, where the raw data is imputed, scaled, and most importantly, the imbalanced data is balanced using ADASYN algorithm. Secondly, the pre-processed data are split into the train and test set used by different classifiers to measure the classification performance. In the next step, Bayesian optimization has been implemented to tune the hyperparameters of the classifiers. This optimized classification model is then tested, and different performance metrics (accuracy, precision, Confusion matrix, ROC, 10-fold cross-validation, ANOVA, and multi-comparison test) have been used for evaluation. Finally, the important features have been efficiently traced using SHAP analysis.</p><p>with Covid; P(Covid Positive|Patient) is also a conditional probability: the likelihood of the positive COVID occurring that is truly a patient; P(Patient) is the prior probability of a patient; P(Covid Positive) is the overall probability of observing COVID positive.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>4) K-NEAREST NEIGHBOURS (KNN)</head><p>KNN is straightforward simplest algorithms in supervised machine learning technique <ref type="bibr" target="#b33">[34]</ref> uses data and classify new data points based on similarity measures with the distance function, be able to apply to solve both classification and regression difficulty. It uses an integer number as 1, -1, or 0 for symbolizing the productivity (labels) of a classification algorithm outputs. KNN is a memory-based classifier; for example, it remembers all the training data-points to predict test data by computing the similarity between an input sample and each training instance. For a given new data point x 0 , it finds the k training points x r ,r = 1, . . . , k closest in distance to x 0 and then classify using majority vote among the k neighbors <ref type="bibr" target="#b31">[32]</ref>. For selecting k, it conducts the KNN algorithm respective times with various values of k and opts for the k that reduces the number of errors accurately.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>5) DECISION TREE (DT)</head><p>DT is a hierarchical flow chart like structure that generate some decision rules. The DT creates a model that predicts the target variable by learning the decision rule from the data feature <ref type="bibr" target="#b34">[35]</ref>. The main hyper-parameters of DT are criterion, max_depth, max_features. In DT, ''Gini'' or ''entropy'' is used as a criterion. In contrast, the max_depth is utilized to limit the number of nodes in the tree, and the max_features represents the number of features to consider while searching for the optimal split. By properly tuning the hyper-parameters of DT (i.e., criterion, max_depth, max_features) applied on the COVID training dataset, the classification performance will be efficiently magnified.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>6) RANDOM FOREST (RF)</head><p>RF is an ensemble learning technique for classification that uses several DTs on different sub-samples of the dataset to improve the classification performance and to control over-fitting <ref type="bibr" target="#b35">[36]</ref>. The main hyper-parameters of RF are criterion, max_depth, max_features, n_estimators.</p><p>The criterion, max_depth, and max_features have already been discussed in DT. Besides, n_estimators represent the number of DTs in the forest. The performance of RF can be increased by properly tuning the hyper-parameters of RF through optimization.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>7) GRADIENT BOOSTING CLASSIFIER (GBC)</head><p>GBC is also an ensemble classifier that combines different weak learners (typically DT) into a single strong learner in a forward stage-wise fashion by optimizing the differentiable loss function <ref type="bibr" target="#b36">[37]</ref>. Generally, 'deviance' or 'exponential' is used as a loss function where 'deviance' refers to deviance (logistic regression) for classification with probabilistic outputs. For thrashing, 'exponential' gradient boosting recaptures the AdaBoost algorithm. Other controlling parameters of GBC contained different parameters such as n estimators, learning rate, and max depth where n estimators indicate individual boosting stages to accomplish; learning rate reduces the performance of each tree <ref type="bibr" target="#b31">[32]</ref>. </p><formula xml:id="formula_11">obj(θ) = L(θ ) + (θ),<label>(6)</label></formula><p>where θ denotes the parameters, symbolizes the regularization term, and L is the training loss. The main hyper-parameters of XGB are N _estimators, learning_ rate, n_jobs, max_depth, Gamma, min_child_weight, colsample_by_tree. The hyper-parameters such as N _estimators, learning_rate, max_depth have already been discussed. Besides, n_jobs are relevant to the number of parallel threads used to run XGB; Gamma represents the loss required to make a further partition on a leaf of the tree. The min_child_weight denotes the minimum sum of feature example, i.e., instance weight needed in a child, and colsample_by_tree is used for the subsampling of columns.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>9) SUPPORT VECTOR MACHINE CLASSIFIER (SVC)</head><p>SVC is one of the most powerful supervised classifiers and used mostly for data classification in medical diagnosis <ref type="bibr" target="#b38">[39]</ref>, <ref type="bibr" target="#b39">[40]</ref>. It aims to build a decision boundary in such a way that it is as far as possible from the closest data points from each of the classes, which are known as support vectors. For non-linear problems like COVID detection, a Radial Basis function (RBF) kernel is used. For RBF-SVC, the controlling hyper-parameters are Cost(C) and Gamma(γ ). The Cost(C) represents the regularization parameter that controls the misclassification of the training instances. Gamma(γ ) controls the ''spread'' of RBF kernel and, therefore, the decision region. The lower value of Gamma(γ ) will broaden the decision region and vice versa. The proper value of C and γ will increase the classification performance, which can be achieved by optimization.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>D. REQUIREMENT OF OPTIMIZATION</head><p>Most of the classifiers used in our entire study have some hyperparameters. The classifier itself is the function of hyperparameters, and these parameters control the hyper-plane. As an exemplification, XGB requires 7 Hyperparameters, while KNN and DT have one parameter each [Table <ref type="table" target="#tab_0">1</ref>]. Classifier performance indices, e.g., classification accuracy, error, specificity, sensitivity, etc. depend on the proper choice of these parameters. This is an optimization problem, whose general framework can be written as:</p><formula xml:id="formula_12">lim z∈Z J (Clf (z); Z ),<label>(7)</label></formula><p>where z ∈ Z denotes the hyper-parameters z 1 , z 2 , z 3 , . . . ..,z n belongs to Z . Clf denotes the classifiers, e.g. RF, SVM, DT, NB, etc. and J (.) represents the objective function. This objective function is the user-defined function where users can use different classifier metrics such as classification error or accuracy or other metrics described in the following section of statistical evaluation of classification measures. The general framework of the optimization problem can be interpreted as minimizing the classification objective J (.) as a function of classifier's hyperparameters z ∈ Z . In this study; mean of the the 10-fold cross-validation error is used as an objective function. We chose one of the state-of-the-art optimization algorithms named Bayesian optimization. This algorithm used a stochastic process, namely, as a Bayesian process, and it tried to find the optimal parameters in a smaller number of iterations saving both memory and time <ref type="bibr" target="#b40">[41]</ref>.</p><p>Although various meta-heuristic algorithms such as GWO, GBO, SMA, and HHO etc. successfully integrated into many applications <ref type="bibr" target="#b41">[42]</ref>- <ref type="bibr" target="#b43">[44]</ref>, hyper-parameter optimization in expensive-to-evaluate objective function e.g., 10-fold cross-validation loss, used in this study, makes it more complicated <ref type="bibr" target="#b44">[45]</ref>. Besides, meta-heuristic algorithms require a set of input parameters that need to be found out to obtain an improved performance as the performance of the meta-heuristic algorithms are very sensitive to the input parameters. Furthermore, comparison among various meta-heuristic algorithms is only valid if the proper input parameters have been set, which requires domain knowledge <ref type="bibr" target="#b45">[46]</ref>. Bayesian optimization is used to set the parameters of the meta-heuristic algorithm <ref type="bibr" target="#b44">[45]</ref>, <ref type="bibr" target="#b45">[46]</ref>.</p><p>The Bayesian optimization algorithm is a global optimization method that is specially designed to deal with such expensive-to-evaluate objective function, which is the population and genetic operator (mutation, cross-over, and selection) free algorithm. Bayesian optimization utilizes a Gaussian process to compute an acquisition function that evaluates the objective function. Besides, Bayesian optimization memorizes its previous evolution and utilize these statistics towards good solutions. It has been recently used in COVID-19 detection using x-ray images <ref type="bibr" target="#b21">[22]</ref>. Considering the above rationale, Bayesian optimization has been applied in this study.</p><p>To justify further, the proposed Bayesian optimization is compared with the recently proposed Harris Hawk Optimisation algorithm <ref type="bibr" target="#b24">[25]</ref>. This popular swarm-based and gradient-free optimization algorithm is based on the cooperative behaviour and chasing styles of Harris' hawks in nature called ''surprise pounce'' <ref type="bibr" target="#b24">[25]</ref>. We have chosen this algorithm for comparison as it is very recent and outperformed by many popular meta-heuristic algorithms such as GWO, Multi-Verse Optimizer, Moth-Flame Optimization, Whale Optimization Algorithm, Bat Algorithm, Cuckoo Search, Firefly Algorithm.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>E. BAYESIAN OPTIMIZATION</head><p>Bayesian optimization (BO) is superior to grid search, random search, and manual tuning and therefore used in this study <ref type="bibr" target="#b46">[47]</ref>. This algorithm keeps track of the past evaluation results and uses them to form a probabilistic Gaussian model of BO of the objective function and use it to find out the most optimal hyper-parameters; as an exemplar, in the case of RBF-SVM, the hyper-parameters are C and γ . The BO algorithm selects C and γ for which objective function J (RBFSVM ; (C, γ )) provides the minimum value. Note that, the classification error is used as an objective function. The BO algorithm is given below:</p><p>Step 1: Build a Gaussian probability model of the objective function. In this study, classification error is the objective function.</p><p>Step 2: Find the controlling parameters or hyperparameters that perform best on the Gaussian process.</p><p>Step 3: Apply these hyper-parameters to the true objective function.</p><p>Step 4: Update the Gaussian model incorporating the new results.</p><p>Step 5: Repeat Step 2-4 until maximum iteration is reached.</p><p>The Mathematics behind the Bayesian Optimization for X = (x 1 , x 2 , x 3 , . . . , x n ) independent features and y target variable Since all the variables except the target variable are independent, P(x 1 )P(x 2 ) . . . P(x n ) = Constant, Then Eq. (8d) can be simplified as:</p><formula xml:id="formula_13">P(y|x 1 x 2 . . . x n ) ∝ P(y) n i=1 P(x i |y),<label>(9)</label></formula><p>Now, from Eq. ( <ref type="formula" target="#formula_13">9</ref>), we find the probability of a given set of inputs for all possible values of the target variable y and pick up the output with maximum probability:</p><formula xml:id="formula_14">y = argmax y P(y) n i=1 P(x i |y),<label>(10)</label></formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>F. STATISTICAL EVALUATION OF CLASSIFICATION METRICS</head><p>We have used several performance evaluation metrics to evaluate the performance of the proposed framework. The accuracy (ACC), error, false-positive rate (FPR), sensitivity (SE), specificity (SP), positive predictive value (PPV), Matthew's correlation coefficient (MCC), F1_score, and Kappa index can be calculated from confusion matrix <ref type="bibr" target="#b47">[48]</ref>, <ref type="bibr" target="#b48">[49]</ref>. A lower value of error and FPR, and a higher value of ACC, SE, SP, PPV, MCC, F1_score, and Kappa index indicate a better model. Besides, 10-fold cross-validation has been used <ref type="bibr" target="#b51">[52]</ref> on the overall dataset. The most significant point should be mentioned here that the box-plot and Analysis of Variance (ANOVA) test are typically executed, relying on the 10-fold cross-validation result. The statistical significance is determined by the p-value derived from the ANOVA test <ref type="bibr" target="#b49">[50]</ref>, <ref type="bibr" target="#b50">[51]</ref>. Furthermore, the receiver operating characteristic (ROC) curve and the area under the ROC curve (AUC) has also been used to evaluate the performance of the classifier. The recall rate vs the decision boundary curve has been used to examine the performance. In this study, we have used the value of 0.5 as the decision boundary threshold to provide the same importance to COVID-yes and COVID-no classes.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>G. FEATURE IMPORTANCE USING SHAP VALUES</head><p>The SHapely Adaptive exPlanations (shortly known as SHAP), proposed in recent papers by Lundberg and Lee <ref type="bibr" target="#b52">[53]</ref>, are calculated for any tree-based model. The SHAP values from Game Theory to attribute φ i value to each feature can be mathematically ascertained using the following formula <ref type="bibr" target="#b53">[54]</ref>:</p><formula xml:id="formula_15">φ i = S∈N \i |S|!(M -|S| -1)! M ! [f x (S ∪ {i}) -f x (S)], (<label>11</label></formula><formula xml:id="formula_16">)</formula><p>where M is the total input features, N is the set of all input features, and S is a subset of the input features.</p><p>• In this plot, all the variables are ranked in descending order.</p><p>• The horizontal line (x-axis) quantifies how much the value is associated with a higher or lower prediction. All the left-sided points represent the observations shifting the predicted value in a negative direction. In contrast, the points on the right contribute to shifting the prediction in a positive direction. All the features are on the left y-axis.</p><p>• The color shows whether that variable is high (in red) or low (in blue) for that observation.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. EXPERIMENTAL RESULTS</head><p>In this paper, the Bayesian optimization has been used along with and without the ADASYN algorithm. In the case of ADASYN, sufficient adaptive synthetic data has been created to eliminate the imbalanced nature among the majority and the minority classes. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. BAYESIAN OPTIMIZATION WITH AND WITHOUT ADASYN</head><p>The newly obtained balanced dataset has been utilized; 67% of the total dataset is used for training and validation, and 33% is used for testing. After that, multiple classifiers are used, and various statistical measurements are presented. The effect of ADASYN has been experimented and validated in this subsection.</p><p>To begin, in the upper portion of Table <ref type="table" target="#tab_1">2</ref>, the performance analysis for the COVID Dataset with the utilization of the ADASYN algorithm has been demonstrated. It can be seen that; RF provides the highest classification performance. However, the performance of XGB and GBC is very close to RF. LDA and QLD show the worst classification performance among various classifiers presented in Table <ref type="table" target="#tab_1">2</ref>. The same AUC value of 99.70% is observed among these three classifiers, as shown in Figure <ref type="figure" target="#fig_4">4</ref>. To demonstrate the effect of the ADASYN algorithm, the original unbalanced dataset is used. The dataset is also divided in the same manner, i.e., 67% of the total dataset is used for training and validation, and 33% is used for testing. We rerun the optimized code on this dataset, and the results on the test dataset without ADASYN is presented in the lower portion of Table <ref type="table" target="#tab_1">2</ref>. It can be observed that the highest accuracy of 97.17% is obtained by RF, which is close to the classification accuracy using RF with ADASYN. This could happen in the imbalance dataset. Therefore, accuracy is not a good performance indicator. The Kappa index, MCC, and AUC are more robust and reliable indicators in this case.</p><p>It can be seen that the highest Kappa, MCC, and AUC values of 8.96%, 9.36% using NB, and 75.80% using XGB (Figure <ref type="figure" target="#fig_5">5</ref>), respectively, are obtained. Compared to the upper portion of Table <ref type="table" target="#tab_1">2</ref>, i.e., results with ADASYN, the Kappa,  MCC, and AUC values are 88.23%, 87.84%, and 23.90% times lower ADASYN algorithm is not applied, respectively. This can be happened due to an imbalanced model. This significant improvement using ADASYN concludes that classification performance can significantly be improved through directly applying the ADASYN algorithm.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. RESULTS USING ORIGINAL TEST DATA ONLY</head><p>So far, we have seen the effect of ADASYN on classification performance. The ADASYN is an oversampling method, and the synthetic data is mixed with original test data during data balancing. Therefore, it could be argued that what are the results of the balanced model on the original test data only where synthetic data is not mixed?</p><p>To answer this question, balanced and Bayesian-optimized models have been applied to the original test data. Different performance measures, such as accuracy, sensitivity, specificity, and ROC, are presented in Table <ref type="table" target="#tab_2">3</ref> and Figure <ref type="figure" target="#fig_7">6</ref>. It can be seen that XGB provides the highest accuracy, error, F1_score, FPR, Kappa, MCC and sensitivity of 98.63%, 1.37%, 99.29%,24.21%,75.08%,75.08%, and 99.29%, respectively. In contrast, SVC provides the highest PPV, specificity, and AUC of 99.94%, 97.89% and, 98.90%, respectively. It can also be seen that XGB performs the best in most of the classification metrics presented in Table <ref type="table" target="#tab_2">3</ref>.  Furthermore, these results are mostly inclined with ADASYN results (upper portion of Table <ref type="table" target="#tab_1">2</ref>), and results are significantly better than without ADASYN in all classification measures. The ROC curve shown in Figure <ref type="figure" target="#fig_7">6</ref> is also visually very close to Figure <ref type="figure" target="#fig_4">4</ref>. Note that the same test dataset has been used without ADASYN (i.e., in the lower portion of Table <ref type="table" target="#tab_1">2</ref>) and in Table <ref type="table" target="#tab_2">3</ref> for a fair comparison. Finally, it can be concluded that a balanced model can significantly improve the performance of the COVID dataset and XGB shows the best classifiers. The confusion matrix of the best performing balanced model with ADASYN and with original test data have been presented in Figure <ref type="figure" target="#fig_8">7</ref> to show how much COVID and Non-COVID patients are correctly classified.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. K-FOLD CROSS-VALIDATION</head><p>In the standard train-test-split method, generally, a small portion of the data is taken as the test set, and the total dataset is not tested. To overcome this issue, the k-fold cross-validation (CV) is one of the helpful techniques exploited to test the effectiveness of machine learning models. It is also a re-sampling procedure to evaluate, and k = 10 is used in this study. The first fold is used for testing, and the remaining folds are used for training and repeated ten times to test the total dataset fold-by-fold basis. The 10-fold cross-validation result is presented in Table <ref type="table">4</ref>, where the classification result of each fold is shown. The final row provides the average classification accuracy of the 10-fold results. From the Table <ref type="table">4</ref>, it is observed that the least score has been obtained using QLDA, whereas the XGB touched the mountain point, grabbing a score of 96.70% and RF has attained an average accuracy of 96.46%. On the other side, the classification performance using Decision Tree, SVC, and GBC was less than XGB and RF but above 90%. Note that, the data processed by ADASYN is used only to train the classifier, but the original test is used during testing and performance comparison.</p><p>Figure <ref type="figure" target="#fig_11">8</ref>(a) showed the accuracy of different classifiers using the COVID original dataset using a box-plot. Here one-way ANOVA provided a p-value of 3.32 × 10 -107 for the original COVID test dataset, which is statistically significant (p &lt; 0.005). It also provided an interactive plot of multiple comparisons of means in Figure <ref type="figure" target="#fig_11">8</ref>(b) that showed the highest mean accuracy from XGB that is statistically significant from seven classifiers (GBC, DT, SVC, NB, KNN, QLDA, and LDA). In contrast, it is statistically not significant from RF, because the mean of RF is almost identical. Note that, Figure <ref type="figure" target="#fig_11">8(b</ref>) is an interactive plot where the significance of different classifiers can be visualized by clicking on the specific classifier level. For instance, RF is blurred (shown in grey) defining its insignificance as XGB is selected. Similarly, GBC and DT will also exhibit statistical insignificance if one of them is selected.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>D. RECALL RATE VS. DECISION BOUNDARY CURVE</head><p>The recall rate, in general, depends on the decision boundary using a certain threshold. To exemplify, the recall rate vs. decision boundary curve displayed in Figure <ref type="figure" target="#fig_12">9(a)</ref>, where   <ref type="figure" target="#fig_8">7(a)</ref> depicts the percentage of the correct classification in with the first two diagonal cells generated by the trained network. The numbers of patients who are correctly classified as a COVID and non-COVID were 3150 and 3233, corresponding to 48.7% and 49.9% in each group's patients, respectively. Likewise, the numbers of patients who are incorrectly classified as a COVID and non-COVID were 24 and 67, with 0.4% and 1.0% correspondingly among all patients in each group. Similarly, the overall 99.2% were correctly, and 0.8% were incorrectly classified COVID, and non-COVID were overall, 98.0% and 2.0% correctly and incorrectly classified accordingly. In the case of prediction, the correct overall predictions for COVID and non-COVID were 97.9% and 99.3%, respectively. On the other hand, the incorrect results for COVID and non-COVID were 2.1% and 0.7%. Similarly, we can also interpret Figure <ref type="figure" target="#fig_8">7</ref>  ''COVID-19-yes''. The XGB and RF provided a moderate performance of around 0.75 at default threshold T = 0.5 defining the ''COVID-19-yes'' class. The SVC shows the third highest performance of around 0.90. In contrast, the recall rate of NB at this threshold is 0.25, meaning that only 25% times NB can truly classify the ''COVID-19-yes'' class. A similar scenario is observed for the LDA classifier.</p><p>On the other hand, looking at Figure <ref type="figure" target="#fig_12">9</ref>(b), the recall rate of QLDA is drastically falling to a value of 0.1 at T = 0.5, revealing that only 10% times QLDA can classify the ''COVID19-no'' class. The recall rate of XGB, GBC, and RF is about 0.99 at this threshold whereas the recall rate of SVC is 0.90. Finally, considering both ''COVID19-yes'' and ''COVID-19-no'' classification using recall rate vs. decision threshold measure, it can be concluded that SVC, XGB, and, RF provide the satisfactory recall rate among different classifiers predicting both classes. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>E. BOOTSTRAP ROC WITH ADASYN</head><p>To determine whether the optimized model is highly sensitive to training data or not, bootstrapping is performed on the XGB model as it is the best performing model. This gives N boot XGB having slightly different discriminative abilities. To show the error, three ROC curves are plotted in Figure <ref type="figure" target="#fig_13">10</ref>; the middle one represents the average ROC where upper and lower curves represent the 95% confidence interval (CI). To obtain this bootstrap ROC, N boot = 100 XGB models are trained and mean AUC of 0.98 with an upper and lower confidence interval of 0.97 and 0.99, respectively, are obtained. This indicates that training is not highly sensitive to the training dataset.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>F. FEATURE IMPORTANCE USING SHAP</head><p>In a variable importance plot, the most significant variables are sorted in descending order. The top variables contribute more to the model than the bottom ones and thus have high predictive power. By way of example, ''fever'', ''cough'', ''high_risk_exposure_occupation'', ''high_risk_interactions'', ''wheezes'' are the most important features, where ''fever'' touched the mountain point in this case [shown in <ref type="bibr">Figure 11]</ref>. Simultaneously, ''pulse'' and ''sore_throat'' received the least importance in classifying the COVID-19 contaminated patients.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>G. SHAP VALUE ANALYSIS</head><p>From the pictorial example of SHAP analysis [Figure <ref type="figure" target="#fig_15">12</ref>] for training data, it can be summarized that the three features, ''fever'', ''cough'', ''high_risk_exposure_occupation'' and ''loss_of _smell'' have a massive positive impact is on the target variable. The ''high'' comes from the red colour, and the ''positive'' impact is shown on the X-axis. Whereas, we conclude by mentioning that the features ''ctab'' and ''wheeze'' are highly negatively correlated with the target variable. In this way, all the variables can be efficiently explained. It should be mentioned that the behaviour of the XGB model is defined by the SHAP and are not necessarily causal in the real world. In other word, SHAP values do not provide the causality; it only describes the model behaviour and the behaviour of the data used to build the model <ref type="bibr" target="#b54">[55]</ref>. As the model does not predict all the COVID patients accurately, it is plausible to get some false positives and false negatives. However, the SHAP value can able to explain such results, and the summary plot will be helpful to explain those results.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>H. PERFORMANCE ON THE GRID SEARCH, RANDOM SEARCH, BAYESIAN OPTIMIZATION AND HARRIS HAWKS OPTIMIZATION</head><p>We propose to use Bayesian optimization techniques in our framework, and therefore, it is logical to compare    the Bayesian optimization algorithm with commonly used parameter search algorithms. Two popular and widely used algorithms, namely, grid search and search, compare with our proposed techniques. Table <ref type="table" target="#tab_4">5</ref> presents the comparison of different search algorithms in terms of several parameters evaluated; the overall time is taken (in sec.) to complete the program, cross-validation accuracy score, test score. All the simulations were run on Intel core i9 computer having 64GB RAM and used the XGB model. It can be seen that it takes 10473.740 Sec. to complete the simulation using grid search, whereas random search and proposed Bayesian optimization take only 162.794 Sec. and 675.389 Sec, respectively. Furthermore, the random search and Bayesian algorithm take 30 parameters each, while the grid search requires more parameters, which is 218 times than that of others. The test score using Bayesian optimization is 98.20%, which is better than grid search, random search.</p><p>The pictorial depiction of the comparative search methods has also been given in Figure <ref type="figure" target="#fig_16">13</ref>, from where it can be added that at the initial stage, the accuracy of Random Search was nearly 97.50%, which was almost stable up to 12 iterations. Then, with a single iteration, it takes a sharp change in its accuracy, touching closely the score of 98%, which was followed by an unchanged condition until 30 iterations. In contrast, the score of our proposed Bayesian Optimization technique commenced before 97%, which was almost steep up to 2 iterations, touching the accuracy above 98%. The most exciting information should be mentioned here that the score of our proposed method remains unchanged, except for a slight change after 15 iterations. Before finishing 30 iterations, its accuracy touched the mountain point.</p><p>The proposed Bayesian Optimisation Framework has also been applied to the most recent Harris Hawks optimization algorithm calculated over 200 evolutions with 20 populations on the same train-test settings. It provides 98.39% cross-validation accuracy, whereas the testing accuracy is 98%. The result is very similar to the Bayesian Optimisation framework. However, it takes 6204.80 Sec. which is 9.4 times slower than our proposed framework as it requires more evaluations and optimization calculations; see Table <ref type="table" target="#tab_4">5</ref>.</p><p>To further justify, a statistical significance test between Bayesian optimization and Harris Hawks optimization algorithm is performed on 10-fold cross-validation using t-test. After that, the p-value is calculated, and the box-plot is plotted. A p-value of 0.47 is found, which suggests that there is no statistically significant difference between these two optimizations. The box-plot illustrated in Figure <ref type="figure" target="#fig_17">14</ref> also justifies the same statements. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. DISCUSSION AND COMPARISON</head><p>In this research, a Bayesian optimization-based machine learning framework with a class balancing strategy using the ADASYN algorithm is proposed to identify COVID patients from their inpatient facility data. Nine state-of-theart classifiers such as LDA, QLDA, NB, KNN, DT, RF, XGB, GB, and SVC are utilized in this proposed framework to identify COVID patients. Different classification measures such as accuracy, sensitivity, specificity, Kappa index, Matthews correlation coefficient are used to show the efficacy of different classifiers. This study also performed 10-fold cross-validation accuracy to achieve statistical significance using ANOVA, recall rate vs. decision boundary threshold analysis, ROC, and bootstrap ROC. Finally, SHAP analysis is performed to interpret the feature importance and interpret the model. These different classification indicators describe model performance from another point of view. The primary intention to use these indicators is to describe the classification performance from a different perspective. It can be seen from Table <ref type="table" target="#tab_1">2</ref> that RF yielded the highest classification performance in terms of accuracy, kappa index, and MCC, etc. However, the classification performance of XGB and GBC is very close to RF. The ANOVA and multi-comparison tests show that the average accuracy of RF, XGB, and GBC are very close and are not statistically significant. However, the 10-fold cross-validation accuracy of XGB provides the highest value (see Table <ref type="table">4</ref>). Moreover, the balanced XGB model offers the highest classification performance when applied to the original test data (see Table <ref type="table" target="#tab_2">3</ref>). Also, the recall rate vs. decision threshold boundary indicates the superior performance of XGB and SVC (see Figure <ref type="figure" target="#fig_12">9</ref>). This concludes that the balanced and optimized XGB model would be the best choice for detecting COVID patients using their inpatient facility data. Therefore, further analyses such as bootstrap ROC and SHAP analysis and features importance analysis are done on a balanced and optimized XGB model.</p><p>Regarding the ADASYN algorithm, it should be mentioned that ADASYN adaptively generates synthetic data samples for the COVID-yes class since it is a minority class to reduce bias introduced by imbalanced data distribution. ADASYN moves the classifier's decision boundary towards harder-tolearn examples, improving the learning performance <ref type="bibr" target="#b27">[28]</ref>. Therefore, applying the ADASYN algorithm enhances the learning process and eventually improves our COVID classification performance; see Table <ref type="table" target="#tab_1">2</ref> to understand the effect of ADASYN in detail. Regarding Bayesian optimization (BO), unlike grid search and random search, it can be mentioned that BO takes the previous objective function evaluation into account, and the function goes to the optimal solution. Therefore, the hyperparameter using BO provides fine-tuning parameters, which ultimately builds an optimized model and consequently increases the classification performance. SHAP is used to determine feature importance and model interpretation; it can be mentioned that SHAP uses a game-theoretic approach, which has an excellent mathematical background and current state-of-the-art approach.</p><p>Due to the salient features mentioned above, it can be noted that the proposed framework can not only be applied to COVID-19 detection but also applied to other classification problems such as diabetic prediction, asthma prediction, etc. While describing the significance and strength of this study, it is also logical to explain the weaknesses of this study. The database used in this study is a moderately large dataset. It will be useful to apply the proposed framework on a larger dataset and validate the proposed approach on a completely independent dataset before clinical use. Clinical blood sample data and integration to X-ray and CT-scan will enhance the detection rate and validity. This is beyond the scope of this study. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. DEVELOPMENT OF A CLINICALLY OPERABLE DECISION TREE</head><p>A clinically operable decision tree would benefit clinical staff as it is straightforward to understand the underlying process. As DT are simple classifiers consisting of sequences of binary decisions organized hierarchically <ref type="bibr" target="#b55">[56]</ref>, we have built a simple tree by using four important features, x1 = cough; x2 = loss of smell; x3 = high-risk exposure occupation; x4 = sats; Note that, the continuous value of oxygen saturation feature, i.e., x4 feature is discretized into three different levels of 1, 2 and 3 to denote severe, moderate and normal level, respectively. x4 feature value lies between 75 and 90 mm-Hg is treated as severe, 91 and 95 mm-Hg as moderate, and 96 and 100 mm-Hg as a normal level. Figure <ref type="figure" target="#fig_5">15</ref> represents the corresponding DT, and the description of the tree algorithm is given in Table <ref type="table" target="#tab_5">6</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. DEVELOPMENT OF A DECISION SUPPORT SYSTEM (DSS)</head><p>A DSS could be beneficial to support clinical staff for screening COVID-19 patients from their inpatient facility data. A DSS is usually a graphical representation of decision, FIGURE 16. Probabilistic output for the DSS. In the upper figure, the 0 has represented a subject with COVID negative, whereas 1 represented a subject with COVID positive. The lower figure represents a probabilistic outcome of the subject affected by COVID, where the red dotted line defines the threshold level. When the patient data level exceeds this threshold level, then the subject will be considered as COVID positive. Whereas the subject with the probability of less than 0.5, i.e., the threshold value, will be regarded as COVID negative. In either way, we can say that this the chance that a person is affected by COVID.</p><p>COVID-19, in this case, to visualize the probable state of the patient. A possible outcome of COVID suspected patient's inhouse facility data is presented in Figure <ref type="figure" target="#fig_7">16</ref>, in terms of the posterior probability. A probabilistic result is more intuitive to the clinical staff and, therefore, used in this DSS. Note that 100 patients are used from the test database for illustration purposes. The patient is sorted in ascending order so that patients with ''COVID-no'' labelled appears first, and patients with ''COVID-yes'' appear.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. COMPARISONS WITH OTHER METHODS/STUDIES</head><p>To delineate the superiority of our proposed research, an illustrative comparison of our work has been accomplished to other COVID studies. From the tabular illustration [Table <ref type="table" target="#tab_6">7</ref>], it can be mentioned that both Jim et al. <ref type="bibr" target="#b10">[11]</ref> and Ozturk et al. <ref type="bibr" target="#b56">[57]</ref> used CNN to obtain the accuracy respectively 92.50% and 98.08%. Furthermore, multiples research works have been carried out by <ref type="bibr" target="#b6">[7]</ref>, <ref type="bibr" target="#b62">[63]</ref>, <ref type="bibr" target="#b63">[64]</ref> with the direct implementation of XGB using mostly clinical data, where the average of the accuracy obtained from <ref type="bibr" target="#b6">[7]</ref>, <ref type="bibr" target="#b62">[63]</ref> was less than 90%. On top of that, Wu et al. <ref type="bibr" target="#b57">[58]</ref> used RF to get a classification accuracy of approximately 96%, which outperformed Brinati et al. <ref type="bibr" target="#b58">[59]</ref>, who utilized both DT and RF. In addition, the lowest performance was obtained by Sun et al. <ref type="bibr" target="#b59">[60]</ref>, who used the SVM classifier for clinical and Demographic data. Most importantly, although the accuracy of Wu et al. <ref type="bibr" target="#b57">[58]</ref> is slightly higher than that of our proposed method, the AUC and Specificity of our work far outweigh the other methodologies mentioned here.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>V. CONCLUSION</head><p>This paper presents the optimal use of different machine learning techniques, including state-of-the-art classifiers, to predict COVID. The proposed approach is aimed to handle the real-time in-home dataset in detecting the COVID effectively. Thus, the proposed technique provides a user-friendly and low-cost tool for COVID detection. In designing the method, the COVID dataset, collected from CH-BH, has been used to assess the performance using different classification metrics such as accuracy, sensitivity, specificity, kappa index, etc. The hyper-parameters of different classifiers have been optimized using Bayesian optimization, and the ADASYN has been used to balance the dataset. Compared to the studies presented in this study, it is evidenced that both the classification accuracy and AUC for our proposed framework has attained the highest values of 98.50% and 99.40% using XGB, respectively. As the proposed approach has been applied to a moderately large dataset, it should be used on a big dataset before clinical trials. However, our primary intention is to test the feasibility of such settings. A similar approach can be applied to design other classification problems. Finally, two potential applications of our proposed technique, namely clinically operable decision tree and decision support system, would be beneficial for clinical staff and building an efficient recommender system. It could easily be integrated into mobile devices which would be very useful for the end-users.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>FIGURE 1 .</head><label>1</label><figDesc>FIGURE 1. Characteristics of the Sample.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>FIGURE 2 .</head><label>2</label><figDesc>FIGURE 2. Fill rate for all Variables.</figDesc><graphic coords="5,38.27,66.06,237.00,363.23" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head/><label/><figDesc>1 |y)P(x 2 |y) . . . P(x n |y)P(y) P(x 1 )P(x 2 ) . . . P(x n ) (8b) = P(y) n i=1 P(x i |y) P(x 1 )P(x 2 ) . . . P(x n ) (8c) = 1 P(x 1 )P(x 2 ) . . . P(x n ) × P(y) n i=1 P(x i |y), (8d)</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head/><label/><figDesc>Firstly, the effect of ADASYN has been evaluated along with ROC, shown in section III.A. The balanced model has also been tested on the original test data in section III.B. Box-plot and ANOVA are presented in section III.C using cross-validation accuracy to evaluate the statistical significance. The Recall rate vs. decision boundary curve and Bootstrap ROC with ADASYN are discussed in sections III.D and III.E, respectively. Then, the evaluation of feature importance using SHAP and the analysis of SHAP values have been presented in sections III.F and III.G, respectively. Finally, the performance of Bayesian optimization has been compared with the Grid search and random search in section III.H.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>FIGURE 4 .</head><label>4</label><figDesc>FIGURE 4. ROC Curve with ADASYN.</figDesc><graphic coords="9,309.28,66.06,216.80,210.56" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>FIGURE 5 .</head><label>5</label><figDesc>FIGURE 5. ROC curve without ADASYN. Note that the optimized model has not been created by using a balanced dataset.</figDesc><graphic coords="9,309.28,496.46,216.80,210.64" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>TABLE 4 .</head><label>4</label><figDesc>The accuracy score (in %) of the different optimized classifiers using 10-fold cross-validation.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>FIGURE 6 .</head><label>6</label><figDesc>FIGURE 6. ROC Curve for COVID on original test data only using each model. The optimized model has been created by using a balanced dataset and then applied to the original test dataset.</figDesc><graphic coords="11,48.33,265.94,216.88,210.56" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>FIGURE 7 .</head><label>7</label><figDesc>FIGURE 7. Confusion matrix of the balanced model applied in (a) COVID test Dataset with ADASYN, (b) original COVID test Dataset only.Figure7(a) depicts the percentage of the correct classification in with the first two diagonal cells generated by the trained network. The numbers of patients who are correctly classified as a COVID and non-COVID were 3150 and 3233, corresponding to 48.7% and 49.9% in each group's patients, respectively. Likewise, the numbers of patients who are incorrectly classified as a COVID and non-COVID were 24 and 67, with 0.4% and 1.0% correspondingly among all patients in each group. Similarly, the overall 99.2% were correctly, and 0.8% were incorrectly classified COVID, and non-COVID were overall, 98.0% and 2.0% correctly and incorrectly classified accordingly. In the case of prediction, the correct overall predictions for COVID and non-COVID were 97.9% and 99.3%, respectively. On the other hand, the incorrect results for COVID and non-COVID were 2.1% and 0.7%. Similarly, we can also interpret Figure7(b).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Figure</head><label/><figDesc>FIGURE 7. Confusion matrix of the balanced model applied in (a) COVID test Dataset with ADASYN, (b) original COVID test Dataset only.Figure7(a) depicts the percentage of the correct classification in with the first two diagonal cells generated by the trained network. The numbers of patients who are correctly classified as a COVID and non-COVID were 3150 and 3233, corresponding to 48.7% and 49.9% in each group's patients, respectively. Likewise, the numbers of patients who are incorrectly classified as a COVID and non-COVID were 24 and 67, with 0.4% and 1.0% correspondingly among all patients in each group. Similarly, the overall 99.2% were correctly, and 0.8% were incorrectly classified COVID, and non-COVID were overall, 98.0% and 2.0% correctly and incorrectly classified accordingly. In the case of prediction, the correct overall predictions for COVID and non-COVID were 97.9% and 99.3%, respectively. On the other hand, the incorrect results for COVID and non-COVID were 2.1% and 0.7%. Similarly, we can also interpret Figure7(b).</figDesc><graphic coords="12,48.37,66.06,216.80,471.28" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head/><label/><figDesc>FIGURE 7. Confusion matrix of the balanced model applied in (a) COVID test Dataset with ADASYN, (b) original COVID test Dataset only.Figure7(a) depicts the percentage of the correct classification in with the first two diagonal cells generated by the trained network. The numbers of patients who are correctly classified as a COVID and non-COVID were 3150 and 3233, corresponding to 48.7% and 49.9% in each group's patients, respectively. Likewise, the numbers of patients who are incorrectly classified as a COVID and non-COVID were 24 and 67, with 0.4% and 1.0% correspondingly among all patients in each group. Similarly, the overall 99.2% were correctly, and 0.8% were incorrectly classified COVID, and non-COVID were overall, 98.0% and 2.0% correctly and incorrectly classified accordingly. In the case of prediction, the correct overall predictions for COVID and non-COVID were 97.9% and 99.3%, respectively. On the other hand, the incorrect results for COVID and non-COVID were 2.1% and 0.7%. Similarly, we can also interpret Figure7(b).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head>FIGURE 8 .</head><label>8</label><figDesc>FIGURE 8. Box-plot for (a) COVID Dataset and (b) multi-comparison test. Note that (b) is a graphical user interface tool by which one can test the statistical significance of any classifiers. Here we only show the effect of XGB. The effect of other classifiers can also be interpreted in the same way.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><head>FIGURE 9 .</head><label>9</label><figDesc>FIGURE 9. Recall rate vs. decision boundary curve for (a) COVID positive and (b) COVID negative.</figDesc><graphic coords="13,88.03,66.06,398.40,186.48" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_13"><head>FIGURE 10 .</head><label>10</label><figDesc>FIGURE 10. Bootstrap ROC curve of the COVID dataset using XGB with 95% CI.</figDesc><graphic coords="13,299.18,288.30,240.21,238.89" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_14"><head>FIGURE 11 .</head><label>11</label><figDesc>FIGURE 11. Feature importance plot using SHAP XGB.</figDesc><graphic coords="14,38.27,208.66,237.00,205.49" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_15"><head>FIGURE 12 .</head><label>12</label><figDesc>FIGURE 12. The SHAP variable importance plot of training data using XGB.</figDesc><graphic coords="14,38.27,448.47,237.00,208.52" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_16"><head>FIGURE 13 .</head><label>13</label><figDesc>FIGURE 13. Comparative optimization techniques applied to the XGB model.</figDesc><graphic coords="14,299.56,524.93,236.24,183.92" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_17"><head>FIGURE 14 .</head><label>14</label><figDesc>FIGURE 14. Box-plot of Bayesian optimization and Harris Hawks optimization.</figDesc><graphic coords="15,47.21,343.52,219.12,172.00" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>TABLE 1 .</head><label>1</label><figDesc>Classifiers and their controlling parameters or hyperparameters.</figDesc><table><row><cell>8) eXtreme GRADIENT BOOSTING (XGB)</cell></row><row><cell>XGB is designed based on the principles gradient boosting</cell></row><row><cell>framework. It can be used for supervised learning tasks such</cell></row><row><cell>as regression, classification, and ranking; similarly, it gen-</cell></row></table><note><p><p><p>erates a prediction model in the form of an ensemble of weak prediction models. The model in a stage-wise approach is compassed with it as other boosting methods do, and it generalizes them by approving optimization of a random differentiable loss function. The gradient descent is used by 'Gradient Boosting' to generate new trees based on all previous trees. It supervises the objective function toward the minimum direction</p><ref type="bibr" target="#b37">[38]</ref></p>. An objective function has a form, and it divides into training loss and regularization. The mathematical equation has been added as follows:</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>TABLE 2 .</head><label>2</label><figDesc>Classification performance (in %) on the COVID dataset with and without ADASYN.</figDesc><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>TABLE 3 .</head><label>3</label><figDesc>Classification performance (in %) on the original test data of COVID.</figDesc><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>TABLE 5 .</head><label>5</label><figDesc>Comparative search techniques.</figDesc><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5"><head>TABLE 6 .</head><label>6</label><figDesc>Description of the clinically operable decision tree algorithm.</figDesc><table><row><cell>FIGURE 15. A decision rule using four key features and their thresholds</cell></row><row><cell>in absolute value.</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_6"><head>TABLE 7 .</head><label>7</label><figDesc>Comparison of performance with other methods.</figDesc><table/></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="10264" xml:id="foot_0"><p>  VOLUME 9, 2021   </p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>VOLUME 9, 2021   </p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="10266" xml:id="foot_2"><p>  VOLUME 9, 2021   </p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="10268" xml:id="foot_3"><p>  VOLUME 9, 2021   </p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="10270" xml:id="foot_4"><p>  VOLUME 9, 2021   </p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="10272" xml:id="foot_5"><p>  VOLUME 9, 2021   </p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="10274" xml:id="foot_6"><p>  VOLUME 9, 2021   </p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="10278" xml:id="foot_7"><p>  VOLUME 9, 2021   </p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="10280" xml:id="foot_8"><p>  VOLUME 9, 2021   </p></note>
+		</body>
+		<back>
+
+			<div type="funding">
+<div><p>This work was supported by <rs type="funder">Taif University Researchers Supporting</rs> Project number (<rs type="grantNumber">TURSP-2020/10</rs>), <rs type="funder">Taif University</rs>,</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_pzAGjqG">
+					<idno type="grant-number">TURSP-2020/10</idno>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>DATA AVAILABILITY</head><p>The raw dataset can be accessed through Github: <ref type="url" target="https://github.com/mdcollab/covidclinicaldata">https://github.com/mdcollab/covidclinicaldata</ref>. The processed data can be obtained from the first author (Md Abdul Awal; m.awal@ece.ku.ac.bd) of this paper.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"/>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">Mental Health and Psychosocial Considerations During the COVID-19 Outbreak</title>
+		<imprint>
+			<date type="published" when="2020-03-18">2020. Mar. 18, 2020</date>
+			<publisher>World Health Org</publisher>
+			<pubPlace>Geneva, Switzerland</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m">COVID-19): Situation Report 88</title>
+		<meeting><address><addrLine>Geneva, Switzerland</addrLine></address></meeting>
+		<imprint>
+			<publisher>World Health Org</publisher>
+			<date type="published" when="2019">2019. 2020</date>
+		</imprint>
+	</monogr>
+	<note>Coronavirus Disease</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">World Health Organization declared a pandemic public health menace: A systematic review of the coronavirus disease 2019 'COVID-19</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">M T</forename><surname>Jebril</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Psychosocial Rehabil</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="2784" to="2795"/>
+			<date type="published" when="2020-05">May 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<title level="m" type="main">Coronavirus Disease (COVID-19) Dashboard</title>
+		<author>
+			<persName><surname>Who</surname></persName>
+		</author>
+		<ptr target="https://covid19.who.int/"/>
+		<imprint>
+			<date type="published" when="2020-04">Aug. 4, 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Aerosol and surface stability of SARS-CoV-2 as compared with SARS-CoV-1</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Van Doremalen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Bushmaker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Morris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Holbrook</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gamble</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">N</forename><surname>Williamson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tamin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Harcourt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Thornburg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">I</forename><surname>Gerber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">O</forename><surname>Lloyd-Smith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">New England J. Med</title>
+		<imprint>
+			<biblScope unit="volume">382</biblScope>
+			<biblScope unit="issue">16</biblScope>
+			<biblScope unit="page" from="1564" to="1567"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">A novel adaptive deep learning model of Covid-19 with focus on mortality reduction strategies</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Farooq</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Bazaz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chaos, Solitons Fractals</title>
+		<imprint>
+			<biblScope unit="volume">138</biblScope>
+			<biblScope unit="page">110148</biblScope>
+			<date type="published" when="2020-09">Sep. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Benchmarking deep learning models and automated model design for COVID-19 detection with chest CT scans</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Chu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ding</surname></persName>
+		</author>
+		<ptr target="https://www.medrxiv.org/content/medrxiv/early/2020/06/09/2020.06.08.20125963.full.pdf"/>
+	</analytic>
+	<monogr>
+		<title level="j">medRxiv</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="13"/>
+			<date type="published" when="2020-01">Jan. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">COVID-19 detection from chest X-ray images using deep learning and convolutional neural networks</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Makris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Kontopoulos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Tserpes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 11th Hellenic Conf. Artif. Intell</title>
+		<meeting>11th Hellenic Conf. Artif. Intell</meeting>
+		<imprint>
+			<date type="published" when="2020-09">Sep. 2020</date>
+			<biblScope unit="page" from="60" to="66"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Performance of radiologists in differentiating COVID-19 from Non-COVID-19 viral pneumonia at chest CT</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">X</forename><surname>Bai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Hsieh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Xiong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Halsey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M L</forename><surname>Tran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L.-B</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D.-C</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X.-L</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q.-H</forename><surname>Zeng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">K</forename><surname>Egglin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P.-F</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Agarwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F.-F</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Healey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">K</forename><surname>Atalay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W.-H</forename><surname>Liao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Radiology</title>
+		<imprint>
+			<biblScope unit="volume">296</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="46" to="E54"/>
+			<date type="published" when="2020-08">Aug. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Training deep learning algorithms with weakly labeled pneumonia chest X-ray data for COVID-19 detection</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rajaraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Antani</surname></persName>
+		</author>
+		<ptr target="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7239073/"/>
+	</analytic>
+	<monogr>
+		<title level="j">medRxiv</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="13"/>
+			<date type="published" when="2020-05">May 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">An automatic computer-based method for fast and accurate Covid-19 diagnosis</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A J</forename><surname>Jim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Rafi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Chowdhury</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Sikder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Mahmud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rubaie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Masud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Bairagi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Bhakta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A.-A</forename><surname>Nahid</surname></persName>
+		</author>
+		<ptr target="https://www.medrxiv.org/content/medrxiv/early/2020/07/05/2020.07.02.20136721.full.pdf"/>
+	</analytic>
+	<monogr>
+		<title level="j">medRxiv</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="11"/>
+			<date type="published" when="2020-01">Jan. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<title level="m" type="main">'4S-DT: Self supervised super sample decomposition for transfer learning with application to COVID-19 detection</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Abbas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Abdelsamea</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gaber</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2007.11450</idno>
+		<ptr target="http://arxiv.org/abs/2007.11450"/>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">On the detection of covid-19 from chest X-ray images using CNN-based transfer learning</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shorfuzzaman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Masud</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comput., Mater. Continua</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1359" to="1381"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Smart pooling: AI-powered COVID-19 testing</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Escobar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Jeanneret</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bravo-Sánchez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Castillo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gómez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Valderrama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">F</forename><surname>Roa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Martínez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Madrid-Wolff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cepeda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Guevara-Suarez</surname></persName>
+		</author>
+		<ptr target="https://www.medrxiv.org/content/medrxiv/early/2020/08/05/2020.07.13.20152983.full.pdf"/>
+	</analytic>
+	<monogr>
+		<title level="j">medRxiv</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="21"/>
+			<date type="published" when="2020-01">Jan. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">COVIDPEN: A novel COVID-19 detection model using chest X-rays and CT scans</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Jaiswal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Tiwari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">K</forename><surname>Rathi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Qian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">M</forename><surname>Pandey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">H C</forename><surname>Albuquerque</surname></persName>
+		</author>
+		<ptr target="https://www.medrxiv.org/content/medrxiv/early/2020/07/10/2020.07.08.20149161.full.pdf"/>
+	</analytic>
+	<monogr>
+		<title level="j">medRxiv</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="8"/>
+			<date type="published" when="2020-01">Jan. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Problems of deploying CNN transfer learning to detect COVID-19 from chest X-rays</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Majeed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rashid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ali</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Asaad</surname></persName>
+		</author>
+		<ptr target="https://www.medrxiv.org/content/medrxiv/early/2020/06/07/2020.05.12.20098954.full.pdf"/>
+	</analytic>
+	<monogr>
+		<title level="j">medRxiv</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="11"/>
+			<date type="published" when="2020-01">Jan. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Controlling the outbreak of COVID-19: A noncooperative game perspective</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Bairagi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Masud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Munir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A.-A</forename><surname>Nahid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">F</forename><surname>Abedin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Alam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Biswas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Alshamrani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Hong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="215570" to="215581"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">A prediction model based on machine learning for diagnosing the early COVID-19 patients</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">N</forename><surname>Nan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">L</forename><surname>Ling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">H</forename><surname>Nv</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">H</forename><surname>Ying</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bin</surname></persName>
+		</author>
+		<ptr target="https://www.medrxiv.org/content/medrxiv/early/2020/06/04/2020.06.03.20120881.full.pdf"/>
+	</analytic>
+	<monogr>
+		<title level="j">medRxiv</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="12"/>
+			<date type="published" when="2020-01">Jan. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Machine learning-based IoT-enabled perspective model for prediction of COVID-19 test in early stage</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">N</forename><surname>Phursule</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">N</forename><surname>Mahalle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">K</forename><surname>Ukhalkar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mach. Learn</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">12s</biblScope>
+			<biblScope unit="page" from="2599" to="2604"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Interpreting deep ensemble learning through radiologist annotations for COVID-19 detection in chest radiographs</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rajaraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sornapudi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">O</forename><surname>Alderson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">R</forename><surname>Folio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Antani</surname></persName>
+		</author>
+		<ptr target="https://www.medrxiv.org/content/medrxiv/early/2020/07/16/2020.07.15.20154385.full.pdf"/>
+	</analytic>
+	<monogr>
+		<title level="j">medRxiv</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="12"/>
+			<date type="published" when="2020-01">Jan. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<author>
+			<persName><forename type="first">M</forename><surname>Roser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ritchie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Ortiz-Ospina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hasell</surname></persName>
+		</author>
+		<ptr target="https://github.com/owid/covid-19-data/tree/master/public/data/"/>
+	</analytic>
+	<monogr>
+		<title level="m">Coronavirus Pandemic (COVID-19</title>
+		<title level="s">Our World in Data</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">A novel medical diagnosis model for COVID-19 infection detection based on deep features and Bayesian optimization</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Cömert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Polat</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Soft Comput</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page">106580</biblScope>
+			<date type="published" when="2020-12">Dec. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Gradient-based optimizer: A new Metaheuristic optimization algorithm</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Ahmadianfar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Bozorg-Haddad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Chu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Inf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">540</biblScope>
+			<biblScope unit="page" from="131" to="159"/>
+			<date type="published" when="2020-11">Nov. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Slime mould algorithm: A new method for stochastic optimization</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Heidari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mirjalili</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Future Gener. Comput. Syst</title>
+		<imprint>
+			<biblScope unit="volume">111</biblScope>
+			<biblScope unit="page" from="300" to="323"/>
+			<date type="published" when="2020-10">Oct. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Harris hawks optimization: Algorithm and applications</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Heidari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mirjalili</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Faris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Aljarah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mafarja</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Future Gener. Comput. Syst</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page" from="849" to="872"/>
+			<date type="published" when="2019-08">Aug. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<monogr>
+		<title level="m" type="main">Coronavirus Disease 2019 (COVID-19) Clinical Data Repository</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Health</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Health</surname></persName>
+		</author>
+		<ptr target="https://covidclinicaldataorg/"/>
+		<imprint>
+			<date type="published" when="2020-08-10">Aug. 10, 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Mice: Multivariate imputation by chained equations inR</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">V</forename><surname>Buuren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Groothuis-Oudshoorn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Stat. Softw</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1" to="68"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">ADASYN: Adaptive synthetic sampling approach for imbalanced learning</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Garcia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. IEEE Int. Joint Conf. Neural Netw., IEEE World Congr. Comput. Intell</title>
+		<meeting>IEEE Int. Joint Conf. Neural Netw., IEEE World Congr. Comput. Intell</meeting>
+		<imprint>
+			<date type="published" when="2008-06">Jun. 2008</date>
+			<biblScope unit="page" from="1322" to="1328"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">The use of multiple measurements in taxonomic problems</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Fisher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann. Eugenics</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="179" to="188"/>
+			<date type="published" when="1936-09">Sep. 1936</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Discriminant analysis and statistical pattern recognition</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sapatinas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Roy. Stat. Soc. A, Statist. Soc</title>
+		<imprint>
+			<biblScope unit="volume">168</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="635" to="636"/>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Accurate diabetes risk stratification using machine learning: Role of missing value and outliers</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Maniruzzaman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Rahman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Al-Mehedihasan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Suri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Abedin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>El-Baz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Suri</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Med. Syst</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page">92</biblScope>
+			<date type="published" when="2018-05">May 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<monogr>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hastie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Tibshirani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Friedman</surname></persName>
+		</author>
+		<title level="m">The Elements of Statistical Learning: Data Mining, Inference, and Prediction</title>
+		<meeting><address><addrLine>Stanford, CA, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Geometrical and statistical properties of systems of linear inequalities with applications in pattern recognition</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Cover</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Electron. Comput</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="34" to="326"/>
+			<date type="published" when="1965-06">Jun. 1965</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<monogr>
+		<title level="m" type="main">Discriminatory analysis, nonparametric discrimination</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Fix</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hodges</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1951">1951</date>
+			<publisher>United States Air Force School Aerosp. Med</publisher>
+			<pubPlace>Universal City, TX, USA, Tech. Rep</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Automated diagnosis of epileptic EEG using entropies</title>
+		<author>
+			<persName><forename type="first">U</forename><forename type="middle">R</forename><surname>Acharya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Molinari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">V</forename><surname>Sree</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Chattopadhyay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K.-H</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Suri</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biomed. Signal Process. Control</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="401" to="408"/>
+			<date type="published" when="2012-07">Jul. 2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Random forests</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Breiman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mach. Learn</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="5" to="32"/>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Accelerated gradient boosting</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Biau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Cadre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Rouvière</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mach. Learn</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="971" to="992"/>
+			<date type="published" when="2019-06">Jun. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Machine learning in rock facies classification: An application of XGBoost</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Int. Geophys. Conf</title>
+		<meeting>Int. Geophys. Conf<address><addrLine>Qingdao, China</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2017-05">May 2017</date>
+			<biblScope unit="page" from="17" to="20"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Support-vector networks</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Cortes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vapnik</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mach. Learn</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="273" to="297"/>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Intelligible support vector machines for diagnosis of diabetes mellitus</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Barakat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Bradley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N H</forename><surname>Barakat</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Inf. Technol. Biomed</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="114" to="120"/>
+			<date type="published" when="2010-07">Jul. 2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">A Bayesian optimization framework for the prediction of diabetes mellitus</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Rahman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Shoaib</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Amin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">N</forename><surname>Toma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Moni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 5th Int. Conf. Adv. Electr. Eng. (ICAEE)</title>
+		<meeting>5th Int. Conf. Adv. Electr. Eng. (ICAEE)</meeting>
+		<imprint>
+			<date type="published" when="2019-09">Sep. 2019</date>
+			<biblScope unit="page" from="357" to="362"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Intelligent optimization algorithms for the problem of mining numerical association rules</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">V</forename><surname>Altay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Alatas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. A, Stat. Mech. Appl</title>
+		<imprint>
+			<biblScope unit="volume">540</biblScope>
+			<biblScope unit="page">123142</biblScope>
+			<date type="published" when="2020-02">Feb. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">A novel clinical decision support system for liver fibrosis using evolutionary multi-objective method based numerical association analysis</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">V</forename><surname>Altay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Alatas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Med. Hypotheses</title>
+		<imprint>
+			<biblScope unit="volume">144</biblScope>
+			<biblScope unit="page">110028</biblScope>
+			<date type="published" when="2020-11">Nov. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Association analysis of parkinson disease with vocal change characteristics using multi-objective metaheuristic optimization</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">V</forename><surname>Altay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Alatas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Med. Hypotheses</title>
+		<imprint>
+			<biblScope unit="volume">141</biblScope>
+			<biblScope unit="page">109722</biblScope>
+			<date type="published" when="2020-08">Aug. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Dealing with categorical and integer-valued variables in Bayesian optimization with Gaussian processes</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">C</forename><surname>Garrido-Merchán</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hernández-Lobato</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurocomputing</title>
+		<imprint>
+			<biblScope unit="volume">380</biblScope>
+			<biblScope unit="page" from="20" to="35"/>
+			<date type="published" when="2020-03">Mar. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Bayesian optimization for parameter tuning in evolutionary algorithms</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Roman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ceberio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mendiburu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Lozano</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. IEEE Congr. Evol. Comput. (CEC)</title>
+		<meeting>IEEE Congr. Evol. Comput. (CEC)</meeting>
+		<imprint>
+			<date type="published" when="2016-07">Jul. 2016</date>
+			<biblScope unit="page" from="4839" to="4845"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">BOA: The Bayesian optimization algorithm</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pelikan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Goldberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Cantú-Paz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Genetic Evol. Comput. Conf. (GECCO)</title>
+		<meeting>Genetic Evol. Comput. Conf. (GECCO)</meeting>
+		<imprint>
+			<date type="published" when="1999">1999</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="525" to="532"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">The derivation of global estimates from a confusion matrix</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Hay</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="1395" to="1398"/>
+			<date type="published" when="1988-08">Aug. 1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Application of support vector machine modeling for prediction of common diseases: The case of diabetes and pre-diabetes</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Valdez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gwinn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Khoury</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BMC Med. Informat. Decis. Making</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">16</biblScope>
+			<date type="published" when="2010-12">Dec. 2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Some implementations of the boxplot</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Frigge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Hoaglin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Iglewicz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Amer. Statistician</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="50" to="54"/>
+			<date type="published" when="1989-02">Feb. 1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Redefine statistical significance</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Benjamin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">O</forename><surname>Berger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Johannesson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Nosek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Wagenmakers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">R</forename><surname>Berk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Bollen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Brembs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Camerer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Cesarini</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Hum. Behav</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="6" to="10"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Approximate statistical tests for comparing supervised classification learning algorithms</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">G</forename><surname>Dietterich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="1895" to="1923"/>
+			<date type="published" when="1998-10">Oct. 1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<monogr>
+		<title level="m" type="main">Consistent feature attribution for tree ensembles</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Lundberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-I</forename><surname>Lee</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1706.06060</idno>
+		<ptr target="http://arxiv.org/abs/1706.06060"/>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<monogr>
+		<title level="m" type="main">Consistent individualized feature attribution for tree ensembles</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Lundberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">G</forename><surname>Erion</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-I</forename><surname>Lee</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1802.03888</idno>
+		<ptr target="http://arxiv.org/abs/1802.03888"/>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<monogr>
+		<title level="m" type="main">Explain Your Model with the SHAP Values</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Datamanv</surname></persName>
+		</author>
+		<ptr target="https://towardsdatascience.com/explain-your-model-with-the-shap-values-bc36aac4de3d"/>
+		<imprint>
+			<date type="published" when="2019-09-14">Sep. 14, 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">An interpretable mortality prediction model for COVID-19 patients</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">T</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Goncalves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Jing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Huang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Mach. Intell</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="283" to="288"/>
+			<date type="published" when="2020-05">May 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Automated detection of COVID-19 cases using deep neural networks with X-ray images</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ozturk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Talo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Yildirim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><forename type="middle">B</forename><surname>Baloglu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Yildirim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><forename type="middle">R</forename><surname>Acharya</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Biol. Med</title>
+		<imprint>
+			<biblScope unit="volume">121</biblScope>
+			<biblScope unit="page">103792</biblScope>
+			<date type="published" when="2020-06">Jun. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Rapid and accurate identification of COVID-19 infection through machine learning based on clinical available blood test results</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Meng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Tong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zhao</surname></persName>
+		</author>
+		<ptr target="https://www.medrxiv.org/content/medrxiv/early/2020/04/06/2020.04.02.20051136.full.pdf"/>
+	</analytic>
+	<monogr>
+		<title level="j">medRxiv</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="12"/>
+			<date type="published" when="2020-01">Jan. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Detection of COVID-19 infection from routine blood exams with machine learning: A feasibility study</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Brinati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Campagner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ferrari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Locatelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Banfi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Cabitza</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Med. Syst</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page">135</biblScope>
+			<date type="published" when="2020-08">Aug. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Combination of four clinical indicators predicts the severe/critical symptom of patients infected COVID-19</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Shi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Clin. Virol</title>
+		<imprint>
+			<biblScope unit="volume">128</biblScope>
+			<biblScope unit="page">104431</biblScope>
+			<date type="published" when="2020-07">Jul. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Time series forecasting of COVID-19 transmission in Canada using LSTM networks</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">K R</forename><surname>Chimmula</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chaos, Solitons Fractals</title>
+		<imprint>
+			<biblScope unit="volume">135</biblScope>
+			<biblScope unit="page">109864</biblScope>
+			<date type="published" when="2020-06">Jun. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Machine learning based approaches for detecting COVID-19 using clinical text data</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M U D</forename><surname>Khanday</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">T</forename><surname>Rabani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><forename type="middle">R</forename><surname>Khan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Rouf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M U</forename><surname>Din</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Inf. Technol</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1" to="9"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">A machine learning model to identify early stage symptoms of SARS-Cov-2 infected patients</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Ahamad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Aktar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rashed-Al-Mahfuz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Uddin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Liò</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Summers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M W</forename><surname>Quinn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Moni</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Expert Syst. Appl</title>
+		<imprint>
+			<biblScope unit="volume">160</biblScope>
+			<biblScope unit="page">113661</biblScope>
+			<date type="published" when="2020-12">Dec. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">Using machine learning of clinical data to diagnose COVID-19: systematic review and meta-analysis</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">T</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Shende</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Castaneda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chakladar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Tsai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Apostol</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">O</forename><surname>Honda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Wong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="DOI">10.1186/s12911-020-01266-z</idno>
+	</analytic>
+	<monogr>
+		<title level="j">BMC Med. Informat. Decis. Making</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">247</biblScope>
+			<date type="published" when="2020-12">Dec. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

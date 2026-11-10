@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Motivating Students to Ask More Questions</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yuan</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Arizona State University</orgName>
+								<address>
+									<postCode>85287</postCode>
+									<settlement>Tempe</settlement>
+									<region>AZ</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Turner</forename><surname>Bohlen</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Beagle Learning</orgName>
+								<address>
+									<postCode>02210</postCode>
+									<settlement>Boston</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Linda</forename><surname>Elkins-Tanton</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Arizona State University</orgName>
+								<address>
+									<postCode>85287</postCode>
+									<settlement>Tempe</settlement>
+									<region>AZ</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Beagle Learning</orgName>
+								<address>
+									<postCode>02210</postCode>
+									<settlement>Boston</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">James</forename><surname>Tanton</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Beagle Learning</orgName>
+								<address>
+									<postCode>02210</postCode>
+									<settlement>Boston</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Motivating Students to Ask More Questions</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">651EA3AB8C3664D43E2A8E845DBEE5C9</idno>
+					<idno type="DOI">10.1007/978-3-030-23207-8_75</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-09-10T22:00+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Question productivity</term>
+					<term>Critical thinking</term>
+					<term>Learning analytics</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Students don't ask enough questions in classrooms, in person or online. Asking questions has been found to be a critical skill toward developing critical thinking abilities, improve learning performance, as well as career development. However, 'how to ask productive questions' as a key skill, is not well studied. Therefore, the present paper introduces the question productivity index (QPI) and explores ways toward quantitatively and reliably measure student-generated questions.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>1 Background</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.1">Introduction</head><p>It all starts with a good question! The popular saying is often heard in contexts of job interviews, formulating research questions, workplace discussions <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b1">2]</ref>, as well as classroom learning <ref type="bibr" target="#b2">[3,</ref><ref type="bibr" target="#b3">4]</ref>. Questioning, as a skill, has been found to have two major functions, one is learning, the other on liking. Recent research has shown that simply asking more questions can be an effective way to increase innovation, promote information exchanges, as well as building rapport and increase liking <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b1">2]</ref>. This pattern was found in both in-person and online settings such as online chat rooms <ref type="bibr" target="#b10">[11]</ref>.</p><p>Despite various benefits of asking questions, research reveals that people do not ask enough questions or do not expect asking questions to be beneficial <ref type="bibr" target="#b1">[2]</ref>. Not asking enough questions has been found to be a prevalent phenomenon in classrooms <ref type="bibr" target="#b2">[3,</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref>. Although question asking is generally encouraged and considered a sign of motivation, research showed that high-quality student-generated questions are scare and many students rarely ask any questions <ref type="bibr" target="#b3">[4]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.2">Benefits of Asking Questions Needs to Be Explained</head><p>Challenges of asking questions overshadow its benefits <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref>. Students may have different reasons and concerns not to ask questions, such as to avoid being seen incompetent <ref type="bibr" target="#b1">[2,</ref><ref type="bibr" target="#b11">12]</ref>, cultural origins <ref type="bibr" target="#b4">[5]</ref>, language proficiencies <ref type="bibr" target="#b5">[6]</ref>. By contrast, benefits of asking questions are rarely stressed in classrooms <ref type="bibr" target="#b5">[6]</ref>. Teachers may welcome students to ask questions, yet skills and techniques of asking questions are rarely the center point of most classes. A vague understanding of why asking questions is beneficial, in itself, can prevent students from asking questions.</p><p>With the goal of helping students to ask more effective questions and increase learning performance, research is needed toward understanding (1) why asking more questions is good <ref type="bibr" target="#b1">(2)</ref> what makes questions good.</p><p>Toward the above-mentioned goals, we proposed to develop a question productivity index and have expert teachers to rate students questions according to this index, with an aim to optimize neural nets that can automatically score student-generated questions.</p><p>2 Question Productivity Index (QPI)</p><p>As a pilot, expert college instructors were recruited to rate a set of student-generated questions from a diverse range of domains including planetary sciences, business, mathematics, etc. Each rater was asked to rate each question on its overall productivity and on the three individual dimensions of the QPI. Thereby, each rater scored each of 109 questions in four ways. Each question was rated by four raters, resulting in 16 scores per question. A QPI rubric were made available to raters to download as a PDF to help with their rating processes. The estimated rating time to complete the rating for 109 questions was around 2 h (Table <ref type="table" target="#tab_0">1</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3">Early Findings and Discussions</head><p>A multiple regression model was conducted to investigate if the three dimensions of question productivity while controlling word count and course types. The results (see Table <ref type="table" target="#tab_1">2</ref>) indicated that three dimensions of QPI, together with word count and whether the question was raised in a STEM course, explained 82% of the variance.</p><p>It was found that all three dimensions, each significantly predicted overall productivity scores, Scale (b = .15, p &lt; .001), Articulation (b = .27, p &lt; .001), Relevance (b = .62, p &lt; .001). Relevance was found to be the strongest predictor among the three. The question takes the class one reasonable step from their current knowledge Articulation</p><p>The question is well-posed and uses good grammar Overall An overall score on the productivity of the question Word count (b = .01, p = .82) and whether the question was raised in a STEM course (b = -.01, p = .87) did not show statistically significant relationship with the overall productivity score. This result is somewhat surprising since the content of question in a STEM subject can be different from those from a non-STEM subject, which may suggests that skills of asking questions may share more commonalities than differences. Further research is required to explain this null result (Fig. <ref type="figure" target="#fig_0">1</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4">Creating Feasible Classroom Intervention and Future Directions</head><p>Following up, we plan to collect more student-generated questions across a diverse range of subject areas and increase the number of expert raters. Student demographic information such as gender, age, and language background will also be incorporated in  In the process of optimizing the QPI index, one of the instructors in the research team has used the QPI rubric as a classroom questioning guide to encourage students to ask questions while being mindful of the various dimensions of the questions. Research has been planned to also measure students' goal orientations <ref type="bibr" target="#b11">[12]</ref> and grit <ref type="bibr" target="#b12">[13]</ref>, as well as student grades to explore their relationships with question productivity.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. Boxplot comparing average overall scores of questions between Non-STEM courses and STEM courses</figDesc><graphic coords="3,156.19,338.74,141.17,127.16" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 .</head><label>1</label><figDesc>Descriptions of the QPI dimension</figDesc><table><row><cell>Name</cell><cell>Descriptions</cell></row><row><cell>Relevance</cell><cell>How relevant is the question to the larger learning goal?</cell></row><row><cell>Scale</cell><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2 .</head><label>2</label><figDesc>Multiple regression to predict average overall score</figDesc><table><row><cell>Predictor</cell><cell>b</cell><cell>b</cell><cell>b</cell><cell>beta</cell><cell>sr 2 sr 2</cell><cell>r</cell></row><row><cell/><cell/><cell>95% CI</cell><cell/><cell>95% CI</cell><cell>95% CI</cell><cell/></row><row><cell>(Intercept)</cell><cell cols="2">-0.41 [-1.13, 0.32]</cell><cell/><cell/><cell/><cell/></row><row><cell>Scale</cell><cell cols="2">0.14 [0.06, 0.22]</cell><cell/><cell cols="3">0.15 [0.06, 0.24] .02 [-.00, .04] .45**</cell></row><row><cell>Articulation</cell><cell cols="2">0.25 [0.13, 0.38]</cell><cell/><cell cols="3">0.27 [0.13, 0.40] .03 [-.00, .06] .79**</cell></row><row><cell>Relevance</cell><cell cols="2">0.54 [0.43, 0.65]</cell><cell/><cell cols="2">0.62 [0.49, 0.75] .16 [.09, .24]</cell><cell>.87**</cell></row><row><cell cols="2">Word Count 0.</cell><cell/><cell/><cell/><cell/><cell/></row></table></figure>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Smart people ask for (my) advice: seeking advice boosts perceptions of competence</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">W</forename><surname>Brooks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Gino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Schweitzer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Manage. Sci</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="1421" to="1435"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m" type="main">The surprising power of questions: it goes far beyond exchanging information</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">W</forename><surname>Brooks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">K</forename><surname>John</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2018-06">May/June 2018</date>
+		</imprint>
+		<respStmt>
+			<orgName>Harvard Business Review</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Student-generated questions: a meaningful aspect of learning in science</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Chin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Brown</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Sci. Educ</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="521" to="549"/>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">The remedial status of student questioning</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Dillon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Curriculum Stud</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="197" to="210"/>
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Constructing competence: an analysis of student participation in the activity systems of mathematics classrooms</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gresalfi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Hand</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Greeno</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Educ. Stud. Math</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="49" to="70"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Student passivity: a study of question asking in K-12 classrooms</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">L</forename><surname>Good</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Slavings</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">H</forename><surname>Harel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Emerson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sociol. Educ</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page" from="181" to="199"/>
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title level="m" type="main">The generative learning model and its implications for science education</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wittrock</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Student questioning in the presence of the teacher during problem solving in science</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">L</forename><surname>Pizzini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Shepardson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">School Sci. Math</title>
+		<imprint>
+			<biblScope unit="volume">91</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="348" to="352"/>
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Why do some students avoid asking for help? An examination of the interplay among students' academic efficacy, teachers' social-emotional role, and the classroom goal structure</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Ryan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Gheen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Midgley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Educ. Psychol</title>
+		<imprint>
+			<biblScope unit="volume">90</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">528</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Prompting teachers' constructive reflection: pupils' questions as critical incidents</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Watts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Alsop</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Gould</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Walsh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Sci. Educ</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="1025" to="1037"/>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">It doesn't hurt to ask: question-asking increases liking</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yeomans</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">W</forename><surname>Brooks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Minson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Gino</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Pers. Soc. Psychol</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">430</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">The role of goal orientation in self-regulated learning</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">R</forename><surname>Pintrich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Handbook of Selfregulation</title>
+		<imprint>
+			<date type="published" when="2000">2000</date>
+			<biblScope unit="page" from="451" to="502"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Development and validation of the short grit scale (GRIT-S)</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Duckworth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">D</forename><surname>Quinn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Pers. Assess</title>
+		<imprint>
+			<biblScope unit="volume">91</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="166" to="174"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

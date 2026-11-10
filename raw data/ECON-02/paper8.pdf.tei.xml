@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Agglomeration and informality: Evidence from Peruvian establishments</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Maria</forename><surname>Bernedo</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Del</forename><surname>Carpio</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Economics</orgName>
+								<orgName type="institution">University of Maryland</orgName>
+								<address>
+									<settlement>Baltimore</settlement>
+									<region>Maryland</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">|</forename><forename type="middle">Carlianne</forename><surname>Patrick</surname></persName>
+							<email>cpatrick@gsu.edu</email>
+							<idno type="ORCID">0000-0001-5793-1955</idno>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Department of Economics</orgName>
+								<orgName type="department" key="dep2">Andrew Young School of Policy Studies</orgName>
+								<orgName type="institution">Georgia State University</orgName>
+								<address>
+									<settlement>Atlanta</settlement>
+									<region>Georgia</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Carlianne</forename><surname>Patrick</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department" key="dep1">Department of Economics</orgName>
+								<orgName type="department" key="dep2">Andrew Young School of Policy Studies</orgName>
+								<orgName type="institution">Georgia State University</orgName>
+								<address>
+									<addrLine>14 Marietta St</addrLine>
+									<postCode>30303</postCode>
+									<settlement>Atlanta</settlement>
+									<region>GA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Agglomeration and informality: Evidence from Peruvian establishments</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">DA5E1098587EC71AA8ACF66ED01E3638</idno>
+					<idno type="DOI">10.1111/jors.12515</idno>
+					<note type="submission">Received: 18 April 2019 | Revised: 28 August 2020 | Accepted: 13 October 2020</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-09-02T20:23+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>agglomeration, development, informality, input-output linkages, labor pooling, productivity IV, instrumental variables</term>
+					<term>OLS, ordinary least squares</term>
+					<term>TFP, total factor productivity</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>This paper contributes to the emerging literature investigating agglomeration externalities in developing countries and focuses on the less studied differences between the formal and the informal sector. Using establishment-level data and instrumental variable estimations, we find that both formal and informal establishments benefit from agglomeration externalities. We provide evidence that informal establishment total factor productivity (TFP) increases more with city size than formal establishment TFP. We also provide causal evidence on the source of agglomeration externalities by formality status by examining industry coagglomeration pairs and instrumenting with data on Columbian input-output and labor industry-pair relationships. We find little evidence of benefits from stronger input-output relationships at the city level, but substantial benefits associated with shared labor.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1">Introduction</head><p>with informal entrepreneurs <ref type="bibr" target="#b1">(Busso et al., 2012;</ref><ref type="bibr" target="#b5">Dabla-Norris &amp; Feltenstein, 2005;</ref><ref type="bibr" target="#b18">Loayza, 1996;</ref><ref type="bibr" target="#b26">Sarte, 2000)</ref>.</p><p>Almost nothing is known about the difference in the size of the agglomeration economies for formal and informal firms. This study contributes to the emergent literature on agglomeration externalities and informality by exploiting a unique dataset on the universe of formal and informal establishments in Peru. We use these data to estimate the change in establishment productivity as a function of city size and explore heterogeneous effects by formality status. We further investigate the sources of these externalities by examining whether the co-location of industry pairs in a certain city is explained by the labor-market interactions and input-output relationships of those industries in that location.</p><p>We estimate production functions in which total factor productivity (TFP) is a function of the agglomeration externalities captured by the population size. To measure informality, we use two proxies: the absence of tax-id and a measure of informal labor. We account for potential sources of endogeneity by instrumenting for the population with both geological variables and historical population. We also employ these instruments in a variant of the two-stage estimation method introduced by <ref type="bibr" target="#b3">Combes et al. (2008)</ref>. We demonstrate heterogeneous effects for formal and informal establishments, with informal establishments benefiting more from increases in population size.</p><p>Agglomeration externalities can be thought of as generating localized increasing returns to scale-decreasing average costs as output increases in the location. The "sources" of agglomeration were first discussed by <ref type="bibr" target="#b19">Marshall (1920)</ref> and the literature generally refers to three Marshallian "sources": labor-market interactions, linkages between intermediate and final good suppliers, and knowledge spillovers. As noted by <ref type="bibr" target="#b9">Duranton and Puga (2004)</ref>, the Marshallian "sources" may be the result of underlying mechanisms that produce observationally equivalent outcomes. These mechanisms either directly affect productivity (technological externalities) or reduce the average costs of production (pecuniary externalities). More recently, <ref type="bibr" target="#b4">Combes and Gobillon (2015)</ref> demonstrate the empirical challenge of distinguishing between the mechanisms (and further whether they are acting through changes to the technology or input costs). Our data are not well-suited to uncovering underlying mechanisms. Thus, we follow much of the empirical literature and focus on overall size and classic Marshallian "sources" of agglomeration economies. Our primary analysis concentrates on the change in productivity associated with city population. Our exploration of Marshallian sources focuses on labor market interactions and input-output relationships. <ref type="bibr" target="#b14">Glaeser and Henderson (2017)</ref> note that the presence of a large informal sector is one of many reasons to suspect that the advantages and disadvantages of agglomeration will be different in the developing world. <ref type="bibr" target="#b4">Combes and Gobillon (2015)</ref> review the nascent literature on agglomeration in developing world contexts recently. Most studies examine the relationship between some measure of productivity, most commonly wages, and some measure of the market size (city size, market potential, etc.) as the local determinant of agglomeration economies. The focus on wages as the productivity measure has advantages in the developing world context, but a number of confounding factors, such as housing prices, amenities, local monopsony power, and so forth, can affect wages.</p><p>Examining measures of productivity such as TFP avoids some of these issues (at the expense of creating new ones that we discuss later). <ref type="bibr" target="#b4">Combes and Gobillon (2015)</ref> note only two studies of developing country TFP and a local determinant of agglomeration other than market size, both of which examine Chilean establishments and do not address the endogeneity of agglomeration measures. A more recent working paper by <ref type="bibr" target="#b15">Guevara-Rosero et al. (2019)</ref> examines the effects of industry concentration, diversity, competition, and density on Ecuadorian establishments using production function estimates and generalized method of moment. The research herein helps fill the remaining gap with an empirical strategy that addresses multiple potential sources of endogeneity as well as using colocation patterns to investigate sources (rather than direct TFP estimates).</p><p>Only a handful of studies consider the informal sector when researching agglomeration economies in developing countries. Yet, the informal sector comprises a large portion of economic activity and the labor force in developing countries. <ref type="bibr" target="#b23">Overman and Venables (2005)</ref> suggest theoretically ambiguous agglomeration effects associated with informality. They also indicate that we should not assume no agglomeration economies for the informal sector. <ref type="bibr" target="#b8">Duranton (2016)</ref> highlights this issue when he notably includes wages paid by informal firms in his analysis of agglomeration in Colombia. His findings suggest higher returns to agglomeration in the informal sector. <ref type="bibr" target="#b13">García (2019)</ref> similarly finds stronger elasticity of wages with respect to density for informal workers than formal workers in Colombia. In a recent working paper, Figueroa <ref type="bibr" target="#b12">Gil (2018)</ref> uses Peruvian household-level data to analyze the effect of the population size on average wages per city and the type of workers. This author finds statistically significant positive agglomeration effects for informal workers but a small effect for formal ones. A similar result is shown by <ref type="bibr" target="#b30">Tanaka and Hashiguchi (2020)</ref> who find that the density of local employment has a statistically significant positive effect on productivity in the informal sector, but a small effect in the formal sector. <ref type="bibr" target="#b22">Mukim (2015)</ref> examines the co-agglomeration of formal and informal (unorganized) establishments in India, finding that establishment entry increases with interindustry linkages for both types but that own-industry externalities are only positively associated with informal births. This is consistent with the idea that informal firms are small and small firms benefit more from agglomeration externalities <ref type="bibr" target="#b24">(Rosenthal &amp; Strange, 2003</ref><ref type="bibr">, 2004)</ref>. These studies suggest that formal and informal establishments differentially benefit from agglomeration externalities.</p><p>Section 3 discusses our empirical implementation in more detail.</p><p>In this section, we outline a conceptual framework for estimating the agglomeration effects within a production function framework. We begin with a traditional way to introduce agglomeration economies. Then, we differentiate between agglomeration economies for formal and informal establishments. Finally, we consider different sources of agglomeration externalities by studying the co-agglomeration of industries in our data. We highlight threats to the identification and describe how we address those with our empirical strategy.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1">| Production function estimates</head><p>We consider a model of plant production technology in the presence of agglomeration spillovers where plants use the following Cobb-Douglas production technology:</p><formula xml:id="formula_0">ρ ρ Y AN (L ) (K ) = ( ) , ijc c ijc ijc 1 2</formula><p>(1)</p><p>where i j c , , stand for establishment, industry, and city, respectively; Y ijc is establishment i's total value-added, A N ( ) c is the TFP that is a function of the city population, L ijc is labor used in production measured as the number of paid and unpaid workers 2 , and K ijc is the value of land, buildings, equipment, furniture, vehicles, and other fixed assets. K ijc is the average of the book value at the beginning and at the end of the year 2007 minus the depreciation in 2007. 3   Taking logs of Equation ( <ref type="formula">1</ref>) and allowing for location-specific advantages, industry-specific effects, and idiosyncratic productivity shocks, the log of output Y in establishment i, in industry j, in city c can be written as</p><formula xml:id="formula_1">ρ ρ β γ α ε Y L K N ln( ) = ln( ) + ln( ) + ln ( ) + LocationalAdvantages + + , ijc ijc c c j ijc 1 ijc 2 (2)</formula><p>where α j is a vector of industry indicators and ε ijc is an idiosyncratic productivity shock. As discussed above, we are interested in the differential effects of agglomeration externalities on formal and informal establishments. Thus, we estimate Equation (2) for all the establishments and also separately for the set of formal and informal establishments. 4</p><p>The literature suggests three important potential types of endogeneity that should be considered when estimating Equation ( <ref type="formula">2</ref>): (i) unobserved determinants of productivity that are correlated with or causing city population; (ii) unobserved determinants of productivity that are correlated with input choices; and (iii) differential sorting of establishments across locations on the basis of unobserved productivity. We address (i) by using two instruments for population: (1) the measures of soil quality, altitude, and slope in the city, 5 and (2) the 1980s population. Both sets of instruments are commonly used in the literature but are not without potential issues. The geological variables are plausibly exogenous as any human activity would have negligible effects on them; however, 2 Our results are qualitatively and quantitatively similar when we measure labor using only paid workers; however, limiting the analysis to only paid workers prevents us from using the presence of unpaid workers as a robustness check for our definition of informality.</p><p>3</p><p>While agglomeration externalities are modeled as operating through the TFP parameter, we do not observe the output and input quantities that would allow us to isolate agglomeration externalities that only change TFP in a location. Instead, we observe value-added and labor inputs. The estimated changes in TFP, therefore, capture agglomeration externalities that operate through technology, output price, and average skills. See <ref type="bibr" target="#b4">Combes and Gobillon (2015)</ref> for more discussion of this point.</p><p>4</p><p>Alternatively, we could pool all establishments and interact our agglomeration metric with an indicator for formality status. However, this strategy assumes the same production parameters for formal and informal establishments. Our estimates suggest this is an inappropriate assumption for our data.</p><p>Appendix Table <ref type="table">A5</ref> presents the results from a fully-interacted model and all the interactions are statistically significant, further suggesting different underlying production parameters for formal and informal establishments.</p><p>they are sometimes only weakly predictive of population. On the other hand, the 1980s population strongly predicts the current population, but it is possible that there remain factors that influenced the 1980 population and productivity today. Relatively consistent results across our ordinary least squares (OLS) and both instrumental variable (IV) specifications alleviate some of these concerns. The Section 3.2 describes our strategy for addressing (ii).</p><p>We are not able to address (iii) because of our data limitations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2">| Two-step procedure</head><p>It is possible that estimates of agglomeration effects from (2) reflect unobserved productivity determinants that are correlated with input choices. We address this concern by implementing a variant of the two-step procedure developed by <ref type="bibr" target="#b3">Combes et al. (2008)</ref> and instrumenting for population. <ref type="foot" target="#foot_3">6</ref> In the first stage, we estimate production functions with city and industry fixed effects, instead of the agglomeration measure. Specifically, we estimate:</p><formula xml:id="formula_2">ρ ρ θ α ε Y L K ln( ) = ln( ) + ln( ) + + + , ijc ijc ijc c j ijc 1 2</formula><p>where θ c are city fixed effects that provide a measure of average city-level TFP. In the second stage, we regress the estimated city fixed effects on our measure of agglomeration and locational advantage as follows:</p><formula xml:id="formula_3">θ β γ ζ N ˆ= ln( ) + LocationalAdvantages + . c c c c</formula><p>(3)</p><p>Our parameter of interest β is the elasticity of average city TFP with respect to city size. As before, we estimate Equation (3) for the pooled sample as well as separately for formal and informal establishments. We also instrument for city population using either geological variables or historical population in our estimation of Equation (3). However, sorting can still bias our estimates in other ways not accounted for by the controls. To the extent that establishments that are more productive sort into larger cities, our estimates will overstate the elasticity of productivity with respect to city size. To the extent that less productive establishments sort into larger cities, our estimates will understate the elasticity.</p><p>To ascertain the robustness and sensitivity of our results, we also report results for five variants of this analysis.</p><p>First, we repeat the above exercise using establishments' average real wage of permanent workers as an alternative measure of productivity. We calculate average real wage using wages for permanent workers at each establishment divided by mean rents in the establishment's location. Second, we use an alternative definition of establishment informality based upon the presence of unpaid labor to define our samples of formal and informal establishments. Third, we exclude establishments from the Lima Metropolitan Area from the analysis to ensure that our results are not primarily driven by businesses in the prime city. Fourth, we use the <ref type="bibr" target="#b29">Sivadasan (2009)</ref> method for implementing the <ref type="bibr" target="#b17">Levinsohn and Petrin (2003)</ref> estimator to address potential concerns about endogenous input choices affecting our TFP estimates. Finally, we investigate the extent to which differential results by formality status are attributable to differences in the size of formal and informal establishments by repeating our estimates by formality and size.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3">| Coagglomeration</head><p>The geographic concentration of establishments within an industry is often taken as evidence of the existence of agglomeration externalities. Yet, establishments within industries share similarities along many dimensions and this makes it difficult to uncover the source of the agglomeration externalities causing such concentration. On the other hand, establishments in different industries tend to be more similar in some dimensions than others.</p><p>Establishments in industry-pairs can be expected to collocate based upon the potential for certain Marshallian externalities. By using the variation in the strength of labor-market interactions and input-output relationships across industry-pairs, we can, therefore, uncover the relative importance of the two sources of agglomeration externalities in the Peruvian context.</p><p>Following <ref type="bibr" target="#b11">Ellison et al. (2010)</ref> and <ref type="bibr" target="#b6">Diodato et al. (2018)</ref>, we investigate how two sources of agglomeration-the input-output and labor-market interactions-affect the coagglomeration of industries using Equation (4). Since natural advantages can also affect establishment colocation, we follow these authors and add a measure of predicted coagglomeration from natural advantages to our model</p><formula xml:id="formula_4">α β β β ϵ L EG = + IO + + NA + , ij ij L ij ij ij IO NA (4)</formula><p>where EG ij is the coagglomeration index, IO ij and L ij represent the input-output and the labor-market interactions, respectively, and NA ij is the natural advantages variable.</p><p>The coagglomeration index is calculated as</p><formula xml:id="formula_5">- - - s x s x x EG = ∑ ( ) ( ) 1 ∑ , ij r R ir r jr r r R r =1 =1 2<label>(5)</label></formula><p>where</p><formula xml:id="formula_6">′ ′ s = ir E E ∑ ir r R ir =1</formula><p>is the proportion of industry i's employment in region (city) r and x r is the mean of these shares across all industries. The higher the value the higher the coagglomeration between the industry-pair.</p><p>The value of the input-output variable for each industry pair ij is defined as</p><formula xml:id="formula_7">⎜ ⎟ ⎛ ⎝ ⎞ ⎠ V V V V V V V V IO = max ∑ , ∑ , ∑ , ∑ , ij ij k kj ji k kj ij k ik ji k ik</formula><p>where V ij is the value of goods and services that industry i provides to industry j taken from the input-output matrix. The variable can be interpreted as the maximum relative importance of industry i as a customer or as a supplier of industry j and vice versa.</p><p>To construct the variable that represents the labor-market interactions, we create a vector per industry that contains the employment per occupation in that industry and calculate the correlations between vectors of each industry pair:</p><formula xml:id="formula_8">L E E = Correl( , ). ij io jo</formula><p>To address the potential colocation of industries due to natural advantages, rather than agglomeration externalities, we construct a predicted coagglomeration index in the spirit of <ref type="bibr" target="#b10">Ellison and Glaeser (1999)</ref> as a measure for similarity in industries' use of natural resources. Specifically, we calculate</p><formula xml:id="formula_9">- - - s x s x x NA = EG ^= ∑ (ˆ)(ˆ) 1 ∑ . ij ij r R ir r jr r r R r =1 =1 2 (6)</formula><p>Equation ( <ref type="formula" target="#formula_13">6</ref>) is the same as Equation ( <ref type="formula" target="#formula_5">5</ref>) with actual industry shares in the region replaced by the predicted shares. For reasons outlined by <ref type="bibr" target="#b6">Diodato et al. (2018)</ref>, we do not construct the predicted shares using the intensity of resource use and resource prices as in <ref type="bibr" target="#b10">Ellison and Glaeser (1999)</ref> and <ref type="bibr" target="#b11">Ellison et al. (2010)</ref>. Instead, we predict for each industry, the share of employment in a given region given the industry's use of primary resources and unskilled labor along with the availability of primary resources and unskilled labor in a region. Predicted shares are based on the nonlinear estimation of</p><formula xml:id="formula_10">β β α α α α ∈ ∈ ( ) (</formula><p>)</p><formula xml:id="formula_11">s E E e z E E e z = exp ∑ ∑ exp ∑ , ir r r m k K k kr ki r r r m k K k kr ki 0 1 0 1</formula><p>where E r is the employment in region r, E rm is manufacturing employment in region r, e kr is either employment share from extractive industry k in region r or employment share of unskilled occupation k in region r, and z ki is either industry i's input share sourced from extractive industry k or the industry i's employment share in occupation k. 7</p><p>Finally, we construct instruments to address the potential endogeneity of our input-output and laborsimilarity measures driven by unobserved productivity determinants or reverse causality issues in the spirit of <ref type="bibr" target="#b11">Ellison et al. (2010)</ref>. We instrument for input-output and labor relationships using the same variables for a similar neighbor country, Colombia. The idea behind this instrument is that the Colombian industrial relationships should reflect actual technological relationships, but not any productivity determinants unique to Peru. data and the Harmonized World Soils database to create the measures for the slope, altitude, and soil quality that are used as instruments for city size. We obtain the city road length from the Global Roads Open Access Data Set.</p><p>The road length represents the locational advantages in the city. A list of all the databases used in the study and their sources appear in Table <ref type="table">A1</ref>.</p><p>The CENEC data includes all industry sectors except for the sectors "agriculture and public administration and defense." It contains information on establishments' production, location, the four digit-International Standard Industrial Classification (ISIC) (fourth revision) industry, value-added, employment, expenses, tax payments, inventories, and so forth. In CENEC, the establishments are located in districts. In Peru, there are 1846 districts grouped in 195 provinces that correspond to 25 regions. However, our geographical unit is the city. Cities contain one or more neighbor districts. We use the list of cities with 20,000 habitants or more provided by INEI and apply the INEI's city-district correspondence to determine the location of the establishments.</p><p>To differentiate the effects between the formal and informal sectors, we require a working definition of informality. In our case, informality is defined as firms that produce legal goods or services but are not registered as a firm. Business registration is an objective criterion for classifying businesses as formal or informal that is commonly used in the literature (La <ref type="bibr" target="#b16">Porta &amp; Shleifer, 2014;</ref><ref type="bibr" target="#b22">Mukim, 2015;</ref><ref type="bibr" target="#b27">Schneider, 2005;</ref><ref type="bibr" target="#b30">Tanaka &amp; Hashiguchi, 2020)</ref>.</p><p>7</p><p>The extractive industries in k are metal ore mining, nonmetallic mineral ore mining and quarrying, and oil and gas extraction. Unskilled occupations k are defined as food preparation and serving-related occupations; building and grounds cleaning and maintenance occupations; construction and extraction occupations; installation, maintenance, and repair occupations; production occupations; and transportation and material moving occupations.</p><p>As noted in the informality literature, it is very difficult to have an unbiased indicator of informality because informal firms are often reluctant to report their legal situation to survey administrators. Studies on informality usually work with approximate measures of informality or focus only on labor informality. In our study, we take advantage of the fact that in the Peruvian census of firms, the establishments are asked their tax identification number, called Registro Único del Contribuyente (RUC). Registration in the National Superintendency of Tax Administration is a mandatory step to constitute a firm in Peru. Thus, we define informal firms as those firms that produce legal goods but do not provide their RUC when asked for it. 8 The RUC number is not a confidential number and it is provided to firms' customers in every sale receipt. One possible problem with this definition of informal firms is that firms could have provided a false RUC but this is a possible bias in all survey questions. If that is the case, the study underestimates the number of informal firms. The fact that it is well known that INEI does not provide establishment-level information to enforcement agencies reduces the potential severity of this issue in our data. Figueroa Gil (2018) uses the definition of labor formality but his results are in the spirit of ours, suggesting that our variable is capturing the effects of informality associated with quasi-legality or operating outside the regulatory and taxing system. Our definition is similar to the definition of formal and informal sectors used in studies of agglomeration economies in India, which define informal (manufacturing) firms as those that are not registered with the government (e.g., <ref type="bibr" target="#b22">Mukim, 2015)</ref>. The difference between our definition based on RUC and the Indian registration definition is that in India small firms are exempt from registration,<ref type="foot" target="#foot_4">foot_4</ref> and, therefore, 93% of the informal firms in <ref type="bibr" target="#b22">Mukim (2015)</ref> are small firms with less than five workers. However, the definitions share the basic distinction of legal status. For the sensitivity analysis, we also use a different definition of informality based on the number of unpaid employees in each firm.</p><p>The CENEC and the 2007 ENAHO identify industries using the four digit-ISIC (fourth revision) but the input-output matrix uses the Peruvian economic activity code. We applied a correspondence table between the </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2">| Summary statistics</head><p>The census took place in 2008 and the production questions correspond to the economic year 2007. The original census data is composed of 864,030 establishments. We discard establishments that did not provide 2007 production information. In 78% of these cases, the establishment started operations in 2008, and, therefore, did not have 2007 production. Observations reporting negative value-added and/or provided a negative capital value are dropped when we take logarithms. Finally, we restrict our sample to only those cities with 20,000 or more inhabitants according to INEI. Our resulting sample includes 380,864 establishments.</p><p>Table <ref type="table">1</ref> shows the distribution of establishments in the final sample by major industry and formality status.</p><p>Approximately 62% of all sample establishments belong to the sector "trade, maintenance, and repair service of vehicles." The next biggest sectors are "lodging and restaurants," "other services," and "manufacturing."</p><p>8 This is also the variable used by <ref type="bibr" target="#b21">Moron et al. (2009)</ref> to categorize informal and formal firms. The authors make the caveat that it does not include other forms of informality such as keeping accounting books or benefits payment.</p><p>Table <ref type="table">1</ref> reveals that nearly 33.3% of sample establishments are informal, but the relative proportion of formal and informal firms varies substantially across major industries. Nearly all establishments in the "fishing and aquaculture" sector are informal establishments. The "trade, maintenance, and repair service of vehicles" sector has the second-highest share of establishments that did not report a tax-id at just over 36%. The sectors with the highest proportion of formal firms are "oil, mineral, and natural gas extraction," "financial services, insurance and pensions," and "construction."</p><p>Table <ref type="table">2</ref> reports the estimation variables by formality status. Value-added and capital are in logs of Nuevos Soles. 10 In our estimation sample, formal establishments report an average (log) value-added of 9.13 compared to 8.32 for informal establishments. The average (log) value of capital across all sectors is 7.89 and 6.63 for formal and informal establishments, respectively. Establishments are small in terms of employees with an average of two employees per establishment for both types, but wages are higher in formal establishments. <ref type="foot" target="#foot_6">11</ref> Road length (measured in km of road) is similar in cities where formal and informal establishments locate.</p><p>Table <ref type="table">3</ref> summarizes our coagglomeration measure index as well as our measures for input-output, labor similarity, and natural advantages. The mean coagglomeration measure is approximately zero by construction. The probability that industry pairs collocate is quite dispersed, however with lower minimum and higher maximum index values than the ones reported for U.S. industries. The mean values for the Peruvian coagglomeration srces are similar to the ones for Colombia. Table <ref type="table">A2</ref> provides a description of how all the variables were constructed.</p><p>Table <ref type="table">A3</ref> provides correlation matrices for the variables in the TFP analysis and the co-agglomeration analysis.</p><p>As expected, labor and capital are highly correlated with value-added, as well as current city population, historical city population, and roads. With respect to the coagglomeration variables, the labor market and input-output </p><formula xml:id="formula_12">T A B L E</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5">| CHANGES IN PRODUCTIVITY WITH CITY SIZE</head><p>In Section 5.1, we establish that agglomeration effects exist in our developing world context and that these are large compared to those estimated for the developed world and some (but not all) emerging and developing economies. We also establish that there are heterogeneous benefits to agglomeration for formal and informal establishments. We repeat our TFP exercise using wages in Section 5.2. Section 5.3 presents some robustness and sensitivity analyses.   labor's share in the production function (0.75), which yields a wage elasticity of 0.049. 12 Thus, our estimate is well within the range of estimates reported for the developed world of 3%-8% <ref type="bibr" target="#b25">(Rosenthal &amp; Strange, 2004)</ref> and is also in line with estimates for Brazil, India, Mexico, and Colombia <ref type="bibr" target="#b0">(Ahrend et al., 2017;</ref><ref type="bibr" target="#b2">Chauvin et al., 2017;</ref><ref type="bibr" target="#b4">Combes &amp; Gobillon, 2015;</ref><ref type="bibr" target="#b8">Duranton, 2016;</ref><ref type="bibr" target="#b20">Melo et al., 2009)</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.1">| Effect of agglomeration on establishment TFP</head><p>Our elasticity estimate increases slightly when we instrument for the population in Columns 2 and 3. The twostage procedure using the geological instruments (Column 4) yields a similar elasticity; although imprecisely estimated given the small sample and somewhat weak instruments. The estimate in Column 5 uses the two-stage procedure and the historical population instrument. The historical population is a much stronger instrument than the geological variables for the second-stage estimates. Column 5 indicates a stronger elasticity of approximately 0.074. Scaling this estimate by one over labor's share of production yields an elasticity of 0.11, which is generally larger than estimates for the developed world as well as some emerging economies estimates. However, Chauvin et al. ( <ref type="formula">2017</ref>) and <ref type="bibr" target="#b4">Combes and Gobillon (2015)</ref> report 10%-20% elasticities of wages with respect to city size for China and India. Thus, our estimates are not implausibly large. Rather, they suggest that establishments in less developed places may benefit substantially more from agglomeration economies.</p><p>The results from Table <ref type="table" target="#tab_1">4</ref> also seem to indicate that agglomeration effects differ by city size. While the OLS and IV estimations in Columns 1-3 of Table <ref type="table" target="#tab_1">4</ref> are at the establishments level, and, therefore, larger cities receive a higher weight in the estimation, the two-step procedure in Columns 4 and 5 is at the city level and small and large cities receive the same weight in the estimation. The higher results from the city level estimation provide evidence that smaller cities show higher agglomeration effects than larger cities. We will come back to this argument in Section 5.3.2 when we exclude the larger city Lima from the estimation.</p><p>Panels B and C of Table <ref type="table" target="#tab_1">4</ref> report separate estimates for the samples of formal and informal establishments, respectively. Comparing the panels suggests that informal establishments benefit substantially more from agglomeration economies than formal establishments. Estimates between Panels B and C in each column are statistically different from each other. To assess the magnitude of the difference between estimates, we estimated a pooled data equivalent of separate regressions by formality status that includes an indicator for formality status and interacts every term with it (including the instruments). As seen in Table <ref type="table">A5</ref>, this process consistently yielded a significant 0.02-0.04 greater TFP elasticity for informal establishments in Columns 1-3, whereas in the city-level estimations, the difference is significant but not statistically significant. We prefer the results from the separate regressions reported in Table <ref type="table" target="#tab_1">4</ref>, however, because we do not have a valid instrument for formality status, and, as indicated by the production parameter estimates in Table <ref type="table">A5</ref>, formal and informal establishments clearly operate with different production parameters.</p><p>In Table <ref type="table" target="#tab_1">4</ref>, formal establishment estimates generally range from 0.02 to 0.06, while informal estimates range from 0.05 to 0.08. The larger agglomeration benefits for informal establishments are consistent with the evidence provided by Duranton (2016) using Colombian wages. Focusing on the estimates in Column 5, we estimate an elasticity of TFP with respect to city size of 0.06 for formal establishments and 0.08 for informal establishments. Multiplying by one over the estimate labor shares yields elasticities of 0.08 and 0.11 for formal and informal establishments, respectively.<ref type="foot" target="#foot_7">foot_7</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2">| Agglomeration effects on wages</head><p>As previously noted, much of the literature estimates the elasticity of productivity with respect to city size using wage data rather than TFP. In this section, we repeat the exercise above using average establishment wages for 12 <ref type="bibr" target="#b4">Combes and Gobillon (2015)</ref> demonstrate the theoretical differences between wage and TFP elasticities and suggest scaling the TFP elasticity by one over labor's share in the production function to equate the two. On the other hand, <ref type="bibr" target="#b20">Melo et al. (2009)</ref> indicate that TFP estimates may be as much as 50% larger than wage estimates (rather than smaller as <ref type="bibr">Combes et al. demonstrate)</ref>. We recalculate the TFP using only firms that do not have unpaid workers so that the labor share reflects the share in productivity.</p><p>permanent workers. Our sample reduces considerably because most establishments do not provide wage information, especially informal establishments. We do not have data on human capital for workers within each establishment. These estimates, therefore, do not reflect quality-adjusted wages as is more common in the literature. Nonetheless, they lend additional credence to our primary TFP estimates.</p><p>The results of this exercise are presented in Table <ref type="table">5</ref>. Using the information of all the establishments, we find similar results to the ones of the TFP estimation in the case of the OLS and IV estimations. As discussed above, we typically expect larger wage elasticities than TFP elasticities, but our estimates are generally quite  <ref type="formula">3</ref>) reports estimates from Equation (2) instrumenting for the population with soil quality, altitude, and slope in (2) and with the historical population in (3). Columns (4) and ( <ref type="formula" target="#formula_5">5</ref>) report the second-stage estimates from the two-step procedure in which we estimate a production function with separate city and industry fixed effects in the first stage and regress the city fixed effects on both log population and locational advantages in the second stage. In Column (4), we instrument for the population in the second stage using geological variables, and in Column ( <ref type="formula" target="#formula_5">5</ref> close in magnitude. This is likely because we are using average establishment wages for permanent workers rather than quality-adjusted wages for all workers. The pooled sample mostly contain formal establishments.</p><p>Estimates for the informal establishments are calculated with a very reduced sample and are not statistically significant.</p><p>T A B L E 5 Elasticity of establishment wages by city size  <ref type="formula">3</ref>) reports estimates instrumenting for the population with soil quality, altitude, and slope in (2) and with the historical population in (3). Columns ( <ref type="formula">4</ref>) and ( <ref type="formula" target="#formula_5">5</ref>) report the secondstage estimates from the two-step procedure in which we estimate a production function with separate city and industry fixed effects in the first stage and regress the city fixed effects on both log population and locational advantages in the second stage. In Column (4), we instrument for the population in the second stage using geological variables, and in Column ( <ref type="formula" target="#formula_5">5</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3.1">| Definition of informality</head><p>Our definition of informality captures the legal status of the establishments. However, it is possible that some informal establishments falsely report a Tax ID number. While this definition is commonly used in the literature, labor studies sometimes apply a worker-based definition of informality. These studies use the lack of a formal labor contract to define a worker as informal. Our data does not include information on labor contracts; however, it does include information on unpaid labor at the establishment. Table <ref type="table">A6</ref> presents estimates using an alternative definition of informality based upon the presence of unpaid labor. Specifically, we reclassify any establishments that report employing unpaid labor as informal. The results are virtually unchanged.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3.2">| Excluding Lima</head><p>Table <ref type="table">A7</ref> reports the results of estimating our TFP specifications excluding the Lima Metropolitan Area. The City of Lima is the political and economic capital of Peru, hosting a large share of the country's overall economic activity.</p><p>The estimates for all establishments in Panel A of Table <ref type="table">A7</ref> are higher than those reported in Table <ref type="table" target="#tab_1">4</ref>, with the estimates in Column 5 indicating an elasticity of 0.11 (compared to 0.08 in Table <ref type="table" target="#tab_1">4</ref>). Panels B and C report the results separately for formal and informal establishments and confirm the heterogeneity by formality status documented thus far.</p><p>The higher agglomeration effects by excluding Lima indicate that Lima is "too large" and that its agglomeration effects might be negative or lower than the mean of the effects in the other cities of the country. This could be explained by a concave productivity-agglomeration relationship where Lima has reached the point where congestion effects, a characteristic of "primate cities" <ref type="bibr" target="#b3">Combes et al. (2008)</ref>, are too strong. This result is also in line with the higher agglomeration effects found once small and large cities are equally weighted using the city-level estimation of the two-step procedure (Columns 4 and 5 of Table <ref type="table" target="#tab_1">4</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3.3">| Levisohn-Petrin instruments</head><p>As discussed above, it is possible that our estimated TFP is biased due to the correlation between input choices and unobserved productivity. While the two-step procedure should alleviate some of this concern, we further investigate the issue by following the Levinsohn-Petrin methodology modified in <ref type="bibr" target="#b29">Sivadasan (2009)</ref>. The author adopts the methodology to the case of a repeated cross-sectional database and constructs instruments from location-industry-specific electricity expenditures in the previous year. In our case, we only have a crosssectional sample of establishments. Therefore, we need to take the instruments from another database, the  <ref type="table">A8</ref>. Our estimated elasticity of TFP with respect to city size is similar to our findings using OLS and IV estimations in Columns 1-3 of Table <ref type="table" target="#tab_1">4</ref> for formal firms.</p><p>Although we cannot repeat this exercise for all our estimates, the fact that the Sivadasan-Levinsohn-Petrin estimate is in the range of our main results for formal firms (0.02-0.06, Table <ref type="table" target="#tab_1">4</ref>) provides some reassurance that the potential correlation between input choices and unobserved productivity is not driving our results in a meaningful way.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3.4">| Establishment size</head><p>Finally, <ref type="bibr" target="#b24">Rosenthal and Strange (2003)</ref> find that small establishments are more dependent upon agglomeration externalities than large establishments. It is, therefore, possible that our findings of the differences in the effects of agglomeration externalities on formal and informal establishments are attributable to differences in their size-rather than by differences in legal status captured by our informality measure. Table <ref type="table">A9</ref> reports the results for pooled, formal, and informal establishments that are large (defined as 10 or more employees) in Panels A-C, respectively, and small (defined as less than 10 employees) in Panels D-F, respectively.</p><p>The first thing to note is that our estimates for large establishments contrast Rosenthal and Strange's findings-agglomeration externalities do appear to have an effect on the largest establishments in our sample.</p><p>Panel A indicates large establishment elasticities ranging from 0.06 to 0.13, which are stronger than those for small establishments in Panel D. These elasticities are mainly driven by the formal establishments (Panel B). Informal large establishments (Panel C) are less than 5% of the sample of large establishments and the agglomeration effects are not statistically significant. It should be noted that our definition of small and large differ from those employed by <ref type="bibr" target="#b24">Rosenthal and Strange (2003)</ref> and other studies using developed country data. Our 10-employee threshold is much lower because of the substantially different distribution of employment in Peruvian establishments than in the U.S.</p><p>establishments. For example, the 99th percentile employment in our data is 13. Thus, most of our sample of "large" establishments would be defined as "small" using the U.S. cutoff values (e.g., Rosenthal and Strange classify establishments with fewer than 25 employees as small). Our findings of stronger agglomeration benefits for our "large" formal establishment may, therefore, suggest a nonlinear relationship between establishment size and agglomeration externalities, whereby benefits increase with employment until some point and begin to diminish thereafter. They also show evidence that informal firms benefit less from agglomeration externalities when they grow.</p><p>The estimates for small establishments are similar to those reported in Table <ref type="table" target="#tab_1">4</ref>, although generally less precisely estimated. The estimates in Panels E and F indicate elasticities ranging from 0.02 to 0.06 for small formal establishments and 0.05-0.08 for small informal establishments, respectively. These results suggest that the stronger estimated effects of city size for informal establishments are not an artifact of informal establishments being relatively small, and, therefore, benefitting more from agglomeration externalities. Instead, the relative strength is attributable to either differential benefits associated with formality status or to differential sorting of small establishments into formality status on the basis of productivity.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6">| SOURCES OF AGGLOMERATION EXTERNALITIES</head><p>Having established the existence of agglomeration externalities for Peruvian establishments as well as the heterogeneity in agglomeration benefits by formality status, we now investigate the sources of agglomeration. We follow best practices in the literature and do this by examining the extent to which establishments in industry-pairs collocate based upon similarities in labor and the strength of input-output relationships.</p><p>Table <ref type="table">6</ref> presents the OLS and instrumented change in industry-pair coagglomeration as the occupations shared by the industries increases (Columns 1 and 4) and as the industries have closer customer-supplier relationships (Columns 2 and 5). Columns 3 and 6 consider both sources simultaneously while controlling for predicted coagglomeration from natural advantages. Panel A contains the results for coagglomeration of all establishments, while Panels B and C consider coagglomeration of formal and informal establishments, respectively.</p><p>We find that most of the documented agglomeration benefits are attributable to labor market interactions, with the estimated effect of the labor-market interaction variable much higher than that of the input-output variable. In the instrumented multivariate regression for all establishments (Panel A, Column 6), the effect of the labor-market interaction is 0.168 and statistically significant, while the effect of the input-output variable is small and not statistically distinguishable from zero. Comparing estimates in Panels B and C, we find that the effect of</p><formula xml:id="formula_13">T A B L E 6 Sources of agglomeration externalities (1) (2) (3) (4) (5)<label>(6)</label></formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>OLS-LM OLS-IO OLS-All IV-LM IV-IO IV-All</head><p>Panel Note: Panels A-C report the results for the coagglomeration index calculated for all establishments, formal establishments, and informal establishments, respectively. Columns (1) and ( <ref type="formula">2</ref>) show results from OLS estimations of the coagglomeration index on the labor-market (LM) interaction variable and on the input-output (IO), interaction variable, respectively. Column (3) reports results from the OLS estimation of the coagglomeration index on the LM, the IO, and the natural advantage index. Columns (4) and ( <ref type="formula" target="#formula_5">5</ref>) show results from IV estimations of the coagglomeration index on the LM interaction variable and on the IO interaction variable, respectively. Column (6) reports results from the IV estimation of the coagglomeration index on the LM, the IO, and the natural advantage index. The corresponding variables constructed with Colombian data are used as instruments. Standard errors are shown in parentheses. labor-market interactions is stronger for informal establishments than formal establishments. This is consistent with our previous findings of stronger agglomeration externalities for informal establishments.</p><p>Our univariate estimate for labor is larger than the univariate estimate of labor market interactions reported by <ref type="bibr" target="#b11">Ellison et al. (2010)</ref> and similar to those reported by <ref type="bibr" target="#b6">Diodato et al. (2018)</ref> for similar specifications.</p><p>Our null results for input-output interactions, however, stand in stark contrast to the findings in both these papers that the major source of agglomeration externalities in the U.S. comes from the input-output interactions. One possible explanation is that Note: Panels A-C report the results for the district-level coagglomeration index calculated for all establishments, formal establishments, and informal establishments, respectively. Columns (1) and (2) show results from OLS estimations of the coagglomeration index on the labor-market (LM) interaction variable and on the input-output (IO) interaction variable, respectively. Column (3) reports results from the OLS estimation of the coagglomeration index on the LM, the IO, and the natural advantage index. Columns (4) and ( <ref type="formula" target="#formula_5">5</ref>) show results from IV estimations of the coagglomeration index on the LM interaction variable and on the IO interaction variable, respectively. Column ( <ref type="formula" target="#formula_13">6</ref> whereas our analysis includes industry-pairs from all the sectors in our data, with service industries comprising the majority of establishments in our data. <ref type="bibr" target="#b6">Diodato et al. (2018)</ref> separately investigate manufacturing and traded services, but exclude the nontraded services included in our analysis. They report that labor-market interactions are much stronger for services but still find that input-output interactions are important.</p><p>To investigate whether our lack of input-output results is driven by differences in the sectoral composition of industry-pairs, we re-estimate Table <ref type="table">6</ref> using only manufacturing industry-pairs. This exercise also yields an insignificant relationship between coagglomeration and input-output interactions for the pooled and formal samples. However, input-output interactions are a significant predictor of colocation of informal manufacturing industry-pairs. <ref type="bibr" target="#b6">Diodato et al. (2018)</ref> demonstrate that input-output linkages have declined in importance over time in the U.S., but it seems unlikely that transportation and communication linkages in Peru are developed to the extent necessary to erase benefits from proximity to suppliers and customers. Peru's transportation infrastructure is in fact underdeveloped, and, therefore, the colocation of suppliers and final producers might be more visible at a smaller spatial scale. To investigate this issue further, we recalculate the coagglomeration index at the district-level (approximately equivalent to U.S. counties) and repeat the analysis from Table <ref type="table">6</ref>. Table <ref type="table">7</ref> reports the results of this exercise.</p><p>Input-output linkages significantly predict district colocation of both formal and informal establishments, but estimates are small and generally around 0.01. Labor-market interactions are also a significant source of agglomeration benefits for district colocation; however, the estimated effect is smaller than our estimates for city coagglomeration. <ref type="bibr" target="#b6">Diodato et al. (2018)</ref> also report labor-market interaction estimates that reduce with area size (state, city, and county), indicating that our findings are in line with the literature.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="7">| CONCLUSION</head><p>This paper contributes to our limited understanding of agglomeration externalities in the developing world in a number of important ways. First, we document the existence and strength of agglomeration externalities in a Latin American country during a period of relative stability and prosperity. Although data limitations prevent using the state-of-the-art techniques for addressing sorting issues that may affect our estimates, our empirical strategy allows us to address the other potential sources of endogeneity and provides reasonable estimates of the agglomeration externalities.</p><p>Second, we exploit the unique nature of our data on the universe of formal and informal establishments in Peru to explore heterogeneous agglomeration benefits by formality status. We find that agglomeration economies are stronger for informal establishments, which is similar to <ref type="bibr" target="#b30">Tanaka and Hashiguchi (2020)</ref> and <ref type="bibr" target="#b8">Duranton (2016)</ref>.</p><p>These results are robust to the definition of formality and are not attributable to differences in establishment size between formal and informal businesses. These results suggest the need for additional research into productivity effects in markets characterized by large informal sectors with low entry costs and low operating costs that do not result from higher productivity.</p><p>Finally, we provide causal estimates of the potential source of agglomeration externalities in Peru by estimating the effect of labor-market interactions, input-output relationships, and natural advantages on the coagglomeration of industry pairs using instruments constructed from Colombian data and predicted colocation due to natural advantages. We find that the primary source of agglomeration benefits in the city is labor market interactions. Given that most value-added production in our study is labor-intensive, it may not be surprising that most of the externalities occur through labor-market interactions. This suggests that there may be substantial productivity benefits from policies aimed at improving overall skill levels in the labor market. </p><formula xml:id="formula_14">EG = ij s x s x x ∑ ( ) ( ) 1 ∑ r R ir r jr r r R r =1 =1 2</formula><p>, where</p><formula xml:id="formula_15">′ ′ s = ir E E ∑ ir r R ir =1</formula><p>is the proportion of industry i's employment in city r and x r is the mean of these proportions across all industries.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Censo Nacional</head><p>Económico 2007</p><p>EG formal establishment coagglomeration index</p><formula xml:id="formula_16">- - - EG = ij s x s x x ∑ ( ) ( ) 1 ∑ r R ir r jr r r R r =1 =1 2</formula><p>, where</p><formula xml:id="formula_17">′ ′ s = ir E E ∑ ir r R ir =1</formula><p>is the proportion of industry i's formal employment in city r and x r is the mean of these proportions across all industries Censo Nacional Económico 2007</p><formula xml:id="formula_18">EG informal establishment coagglomeration index - - - EG = ij s x s x x ∑ ( ) ( ) 1 ∑ r R ir r jr r r R r =1 =1 2</formula><p>, where</p><formula xml:id="formula_19">′ ′ s = ir E E ∑ ir r R ir =1</formula><p>is the proportion of industry i's informal employment in city r and x r is the mean of these proportions across all industries </p><formula xml:id="formula_20">⎝ ⎞ ⎠ IO = max , , , ij V V V V V V V V ∑ ∑ ∑ ∑ ij k kj ji k kj ij k ik ji k ik</formula><p>, where V ij is the value of goods and services that industry i provides to industry j. The table presents results of separate estimations of the effect of log population density on establishment TFP using the pooled sample of establishments. The specification includes a dummy variable for the formality status of the establishment and interacts all other variables with the informality dummy-allowing for differential effects of city population, labor, capital, locational advantage, and industry by formality status. Column (1) reports results from OLS estimation of Equation (2) including controls for industry and locational advantages. Columns (2) and (3) report estimates from Equation (2) instrumenting for the population with soil quality, altitude, and slope in (2) and with the historical population in (3). Columns (4) and ( <ref type="formula" target="#formula_5">5</ref>) report the second-stage estimates from the two-step procedure in which we estimate a production function with separate city and industry fixed effects in the first stage and regress the city fixed effects on both log population, locational advantage, and their interactions with formality status in the second stage. We do not report the first-stage production function estimates. In Column (4), we instrument for the population in the second stage using geological variables, and in Column ( <ref type="formula" target="#formula_5">5</ref>   <ref type="formula">3</ref>) report estimates from Equation (2) instrumenting for a population with soil quality, altitude, and slope in (2) and with a historical population in (3). Columns (4) and ( <ref type="formula" target="#formula_5">5</ref>) report the second stage estimates from the two-step procedure in which we estimate a production function with separate city and industry fixed effects in the first stage and regress the city fixed effects on both log population and locational advantages in the second stage. In Column (4), we instrument for the population in the second stage using geological variables, and in Column ( <ref type="formula" target="#formula_5">5</ref>  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Input</head></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head/><label/><figDesc>DataThe research uses confidential microdata from the 2007 National Economic Census (CENEC) as its primary data source. The CENEC provides a unique data source for investigating differences in agglomeration externalities for formal and informal establishments. We also use the 2006 Annual Economic Survey, the 1981 National Census of Population and Households, the 2007 National Household Survey (2007 Encuesta Nacional de Hogares [ENAHO]), and the 2007 Peruvian input-output matrix, to calculate the Levinsohn-Petrin estimator, the historical population instrument and the labor-market interaction variable and the input-output variable for the coagglomeration analysis, respectively. All these databases were provided by the Peruvian National Statistical Institute (Instituto Nacional de Estadística e Informática, INEI). We also use the Shuttle Radar Topography Mission digital elevation</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head/><label/><figDesc>ISIC and the Peruvian economic activity code provided by the Peruvian Ministry of Finance, resulting in 92 industry groups. To build the IVs, we use the Colombian 2005 input-output matrix and the 2007 Integrated Household Survey (Gran Encuesta Integrada de Hogares 2007) provided by the Colombian National Statistic Department (Departamento Administrativo Nacional de Estadística). To relate industries in Peru and Colombia, we regroup industries to form a mapping of 47 industries. Since CENEC excludes sectors "agriculture and public administration and defense," we ended up working with 43 industries.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head/><label/><figDesc>formal, and informal samples of establishments in Panels A, B, and C, respectively. Column 1 reports result from OLS estimation of Equation (2) including controls for industry and locational advantages. Columns 2 and 3 report estimates from Equation (2) instrumenting for the population with geology and historical population, respectively. Columns 4 and 5 report the second stage estimates from the two-step procedure in which we estimate a production function with separate industry and city fixed effects in the first stage and regress the city fixed effects on log population and locational advantages in the second stage. Column 4 instruments for the population in the second stage using geological variables and Column 5 instruments for the population using historical population. Standard errors are clustered at the city level for the production function estimates in Columns 1-3. We present the Kleibergen-Paap rk Wald F weak identification test statistic and p-values for the underidentification and overidentification statistics for IV estimates. Our instruments perform reasonably well across specifications, although they are somewhat weak for the two-stage estimates using the geological variables. The results in</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head/><label/><figDesc>Abbreviations: IV, instrumental variables; OLS, ordinary least squares; TFP, total factor productivity. *p &lt; .1. **p &lt; .05. ***p &lt; .01.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head/><label/><figDesc>Abbreviations: IV, instrumental variables; OLS, ordinary least squares. *p &lt; .1. ***p &lt; .01.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>2006</head><label/><figDesc>Annual Economic Survey (European Economic Area [EEA] 2006) which is a database of formal Peruvian establishments. We only use the large manufacturing firm database of the EEA because it is the only one with data on electricity expenditure. Results are shown in Table</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head/><label/><figDesc>Abbreviations: K-P, Kleibergen-Paap; IV, instrumental variables; OLS, ordinary least squares. *p &lt; .1. ***p &lt; .01.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head/><label/><figDesc>Abbreviations: K-P, Kleibergen-Paap; IV, instrumental variables; OLS, ordinary least squares. *p &lt; .1. **p &lt; .05. ***p &lt; .01.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head/><label/><figDesc>Abbreviations: IV, instrumental variables; OLS, ordinary least squares; TFP, total factor productivity. *p &lt; .1. **p &lt; .05. ***p &lt; .01.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head/><label/><figDesc>Abbreviations: IV, instrumental variables; OLS, ordinary least squares; TFP, total factor productivity. *p &lt; .1. **p &lt; .05. ***p &lt; .01.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>1</head><label/><figDesc>Distribution of establishments by major industry classification and formality</figDesc><table><row><cell>Major industry</cell><cell>Count</cell><cell cols="2">Total Mean</cell><cell cols="2">% Total SD</cell><cell>Formal</cell><cell>Informal Minimum</cell><cell>% Informal Maximum</cell></row><row><cell>Fishing and aquaculture Formal</cell><cell/><cell cols="2">3513</cell><cell>0.92</cell><cell/><cell>53</cell><cell>3460</cell><cell>98.49</cell></row><row><cell>Oil, minerals, and natural gas extraction Log value-added</cell><cell>255125</cell><cell>57</cell><cell>9.13</cell><cell>0.01</cell><cell>1.53</cell><cell>55</cell><cell>2 0.00</cell><cell>3.51 17.64</cell></row><row><cell>Log capital</cell><cell>255125</cell><cell/><cell>7.89</cell><cell/><cell>1.78</cell><cell/><cell>-0.69</cell><cell>19.29</cell></row><row><cell>Manufacturing Log labor</cell><cell>255125</cell><cell cols="2">32,401 0.57</cell><cell>8.51</cell><cell>0.66</cell><cell>24,370</cell><cell>8031 0.00</cell><cell>24.79 7.03</cell></row><row><cell>Electricity, gas, and water Log population by city</cell><cell>255125</cell><cell cols="2">274 14.11</cell><cell>0.07</cell><cell>2.04</cell><cell>205</cell><cell>69 9.87</cell><cell>25.18 16.15</cell></row><row><cell>Construction Log population by the city in 1981</cell><cell>236193</cell><cell cols="2">1073 13.32</cell><cell>0.28</cell><cell>2.07</cell><cell>982</cell><cell>91 6.02</cell><cell>8.48 15.24</cell></row><row><cell>Trade, maintenance, and repair services Locational advantages (road length)</cell><cell>255125</cell><cell cols="2">234,211 1470.47</cell><cell cols="3">61.49 638.54 147,921</cell><cell>86,290 0.00</cell><cell>36.84 6570.70</cell></row><row><cell>p5 soil quality</cell><cell>255125</cell><cell/><cell>1.70</cell><cell/><cell>0.42</cell><cell/><cell>1.00</cell><cell>3.00</cell></row><row><cell>Transportation, storage, and mail p95 soil quality</cell><cell>255125</cell><cell cols="2">2818 2.43</cell><cell>0.74</cell><cell>0.54</cell><cell>2430</cell><cell>388 1.00</cell><cell>13.77 4.78</cell></row><row><cell>Lodging and entertainment Median altitude</cell><cell>255125</cell><cell cols="2">35,924 949.15</cell><cell>9.43</cell><cell cols="2">25,363 1340.34</cell><cell>10,561 8.21</cell><cell>29.40 4528.42</cell></row><row><cell cols="2">Telecommunications and other information services Median slope 255125</cell><cell cols="2">15,826 6.37</cell><cell>4.16</cell><cell>4.79</cell><cell>11,440</cell><cell>4386 0.48</cell><cell>27.71 26.00</cell></row><row><cell>Median soil quality</cell><cell>255125</cell><cell/><cell>2.08</cell><cell/><cell>0.38</cell><cell/><cell>1.00</cell><cell>3.00</cell></row><row><cell>Financial services, insurance, and pensions Interquartile range (IQR) altitude</cell><cell>255125</cell><cell cols="2">637 293.95</cell><cell>0.17</cell><cell cols="2">592 218.03</cell><cell>45 0.00</cell><cell>7.06 850.19</cell></row><row><cell>Business services IQR slope</cell><cell>255125</cell><cell cols="2">17,560 6.66</cell><cell>4.61</cell><cell>4.17</cell><cell>15,210</cell><cell>2350 0.00</cell><cell>13.38 11.16</cell></row><row><cell>Other services IQR soil quality</cell><cell>255125</cell><cell cols="2">36,570 0.24</cell><cell>9.6</cell><cell>0.29</cell><cell>26,504</cell><cell>10,066 0.00</cell><cell>27.5 1.30</cell></row><row><cell>Total Informal</cell><cell/><cell cols="2">380,864</cell><cell>100</cell><cell/><cell>255,125</cell><cell>125,739</cell><cell>33.01</cell></row><row><cell>Log value-added</cell><cell>125739</cell><cell/><cell>8.32</cell><cell/><cell>1.31</cell><cell/><cell>0.00</cell><cell>14.77</cell></row><row><cell>Log capital</cell><cell>125739</cell><cell/><cell>6.63</cell><cell/><cell>1.44</cell><cell/><cell>-0.69</cell><cell>17.22</cell></row><row><cell>Log labor</cell><cell>125739</cell><cell/><cell>0.31</cell><cell/><cell>0.45</cell><cell/><cell>0.00</cell><cell>4.86</cell></row><row><cell>Log population by city</cell><cell>125739</cell><cell/><cell>13.47</cell><cell/><cell>2.08</cell><cell/><cell>9.87</cell><cell>16.15</cell></row><row><cell>Log population by the city in 1981</cell><cell>109247</cell><cell/><cell>12.70</cell><cell/><cell>2.20</cell><cell/><cell>6.02</cell><cell>15.24</cell></row><row><cell>Locational advantages (road length)</cell><cell>125739</cell><cell/><cell>1483.74</cell><cell/><cell cols="2">740.28</cell><cell>0.00</cell><cell>6570.70</cell></row><row><cell>p5 soil quality</cell><cell>125739</cell><cell/><cell>1.68</cell><cell/><cell>0.48</cell><cell/><cell>1.00</cell><cell>3.00</cell></row><row><cell>p95 soil quality</cell><cell>125739</cell><cell/><cell>2.29</cell><cell/><cell>0.61</cell><cell/><cell>1.00</cell><cell>4.78</cell></row><row><cell>Median altitude</cell><cell>125739</cell><cell/><cell>1183.59</cell><cell/><cell cols="2">1479.32</cell><cell>8.21</cell><cell>4528.42</cell></row><row><cell>Median slope</cell><cell>125739</cell><cell/><cell>6.83</cell><cell/><cell>5.03</cell><cell/><cell>0.48</cell><cell>26.00</cell></row><row><cell>Median soil quality</cell><cell>125739</cell><cell/><cell>2.00</cell><cell/><cell>0.46</cell><cell/><cell>1.00</cell><cell>3.00</cell></row><row><cell>IQR altitude</cell><cell>125739</cell><cell/><cell>260.54</cell><cell/><cell cols="2">239.62</cell><cell>0.00</cell><cell>850.19</cell></row><row><cell>IQR slope</cell><cell>125739</cell><cell/><cell>5.53</cell><cell/><cell>4.45</cell><cell/><cell>0.00</cell><cell>11.16</cell></row><row><cell>IQR soil quality</cell><cell>125739</cell><cell/><cell>0.21</cell><cell/><cell>0.29</cell><cell/><cell>0.00</cell><cell>1.30</cell></row><row><cell>Total</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>Log value-added</cell><cell>380864</cell><cell/><cell>8.86</cell><cell/><cell>1.51</cell><cell/><cell>0.00</cell><cell>17.64</cell></row><row><cell>Log capital</cell><cell>380864</cell><cell/><cell>7.48</cell><cell/><cell>1.78</cell><cell/><cell>-0.69</cell><cell>19.29</cell></row><row><cell>Log labor</cell><cell>380864</cell><cell/><cell>0.49</cell><cell/><cell>0.61</cell><cell/><cell>0.00</cell><cell>7.03</cell></row><row><cell>Log population by city</cell><cell>380864</cell><cell/><cell>13.90</cell><cell/><cell>2.07</cell><cell/><cell>9.87</cell><cell>16.15</cell></row><row><cell>Log population by the city in 1981</cell><cell>345440</cell><cell/><cell>13.12</cell><cell/><cell>2.13</cell><cell/><cell>6.02</cell><cell>15.24</cell></row><row><cell>Locational advantages (road length)</cell><cell>380864</cell><cell/><cell>1474.85</cell><cell/><cell cols="2">673.86</cell><cell>0.00</cell><cell>6570.70</cell></row><row><cell>p5 soil quality</cell><cell>380864</cell><cell/><cell>1.69</cell><cell/><cell>0.44</cell><cell/><cell>1.00</cell><cell>3.00</cell></row><row><cell>p95 soil quality</cell><cell>380864</cell><cell/><cell>2.38</cell><cell/><cell>0.57</cell><cell/><cell>1.00</cell><cell>4.78</cell></row><row><cell>Median altitude</cell><cell>380864</cell><cell/><cell>1026.55</cell><cell/><cell cols="2">1392.13</cell><cell>8.21</cell><cell>4528.42</cell></row><row><cell>Median slope</cell><cell>380864</cell><cell/><cell>6.52</cell><cell/><cell>4.87</cell><cell/><cell>0.48</cell><cell>26.00</cell></row><row><cell>Median soil quality</cell><cell>380864</cell><cell/><cell>2.06</cell><cell/><cell>0.41</cell><cell/><cell>1.00</cell><cell>3.00</cell></row><row><cell>IQR altitude</cell><cell>380864</cell><cell/><cell>282.92</cell><cell/><cell cols="2">225.93</cell><cell>0.00</cell><cell>850.19</cell></row><row><cell>IQR slope</cell><cell>380864</cell><cell/><cell>6.29</cell><cell/><cell>4.30</cell><cell/><cell>0.00</cell><cell>11.16</cell></row><row><cell>IQR soil quality</cell><cell>380864</cell><cell/><cell>0.23</cell><cell/><cell>0.29</cell><cell/><cell>0.00</cell><cell>1.30</cell></row></table><note><p><p><p>10</p>In 2007, the exchange rate was 2.98 Nuevos Soles per US dollar.</p>T A B L E 2 Summary statistics by formality status variables show positive but low correlations with the coagglomeration index. The Colombian variables are highly correlated with the Peruvian ones.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 4</head><label>4</label><figDesc/><table/><note><p>presents our estimates of the elasticity of establishment TFP with respect to (log) population for the pooled,</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_6"><head/><label/><figDesc><ref type="bibr" target="#b11">Ellison et al. (2010)</ref> examine only manufacturing industry-pairs, T A B L E 7 District-level coagglomeration sources of externalities</figDesc><table><row><cell/><cell>(1)</cell><cell>(2)</cell><cell>(3)</cell><cell>(4)</cell><cell>(5)</cell><cell>(6)</cell></row><row><cell/><cell>OLS-LM</cell><cell>OLS-IO</cell><cell>OLS-All</cell><cell>IV-LM</cell><cell>IV-IO</cell><cell>IV-All</cell></row><row><cell>Panel A: Pooled</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>Labor-market</cell><cell>0.029***</cell><cell/><cell>0.025***</cell><cell>0.059***</cell><cell/><cell>0.053***</cell></row><row><cell>Interactions</cell><cell>(0.005)</cell><cell/><cell>(0.005)</cell><cell>(0.011)</cell><cell/><cell>(0.012)</cell></row><row><cell>Input-output</cell><cell/><cell>0.011***</cell><cell>0.010***</cell><cell/><cell>0.008***</cell><cell>0.005**</cell></row><row><cell>Interactions</cell><cell/><cell>(0.002)</cell><cell>(0.002)</cell><cell/><cell>(0.002)</cell><cell>(0.003)</cell></row><row><cell>Observations</cell><cell>903</cell><cell>903</cell><cell>903</cell><cell>903</cell><cell>903</cell><cell>903</cell></row><row><cell>UnderID p</cell><cell/><cell/><cell/><cell>0</cell><cell>0</cell><cell>0</cell></row><row><cell>K-P F-stat</cell><cell/><cell/><cell/><cell>158.8</cell><cell>759.6</cell><cell>73.63</cell></row><row><cell>Panel B: Formal</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>Labor-market</cell><cell>0.027***</cell><cell/><cell>0.023***</cell><cell>0.061***</cell><cell/><cell>0.055***</cell></row><row><cell>Interactions</cell><cell>(0.005)</cell><cell/><cell>(0.005)</cell><cell>(0.013)</cell><cell/><cell>(0.013)</cell></row><row><cell>Input-Output</cell><cell/><cell>0.011***</cell><cell>0.010***</cell><cell/><cell>0.008***</cell><cell>0.005*</cell></row><row><cell>Interactions</cell><cell/><cell>(0.002)</cell><cell>(0.002)</cell><cell/><cell>(0.003)</cell><cell>(0.003)</cell></row><row><cell>Observations</cell><cell>903</cell><cell>903</cell><cell>903</cell><cell>903</cell><cell>903</cell><cell>903</cell></row><row><cell>UnderID p</cell><cell/><cell/><cell/><cell>0</cell><cell>0</cell><cell>0</cell></row><row><cell>K-P F-stat</cell><cell/><cell/><cell/><cell>158.8</cell><cell>759.6</cell><cell>73.63</cell></row><row><cell>Panel C: Informal</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>Labor-market</cell><cell>0.029***</cell><cell/><cell>0.025***</cell><cell>0.067***</cell><cell/><cell>0.059***</cell></row><row><cell>Interactions</cell><cell>(0.006)</cell><cell/><cell>(0.006)</cell><cell>(0.015)</cell><cell/><cell>(0.016)</cell></row><row><cell>Input-output</cell><cell/><cell>0.013***</cell><cell>0.012***</cell><cell/><cell>0.010***</cell><cell>0.007**</cell></row><row><cell>Interactions</cell><cell/><cell>(0.002)</cell><cell>(0.002)</cell><cell/><cell>(0.003)</cell><cell>(0.003)</cell></row><row><cell>Observations</cell><cell>903</cell><cell>903</cell><cell>903</cell><cell>903</cell><cell>903</cell><cell>903</cell></row><row><cell>UnderID p</cell><cell/><cell/><cell/><cell>0</cell><cell>0</cell><cell>0</cell></row><row><cell>K-P F-stat</cell><cell/><cell/><cell/><cell>158.8</cell><cell>759.6</cell><cell>73.63</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_7"><head/><label/><figDesc>How to cite this article: Del Carpio MB, Patrick C. Agglomeration and informality: Evidence from Peruvian establishments. J Regional Sci. 2021;61:442-471. https://doi.org/10.1111/jors.12515</figDesc><table><row><cell>Variable</cell><cell>Description</cell><cell/><cell>Main database</cell></row><row><cell>IQR soil quality</cell><cell cols="3">Interquartile soil quality in all districts in a city</cell><cell>HWS</cell></row><row><cell>EG coagglomeration index</cell><cell>-</cell><cell>-</cell></row><row><cell/><cell>-</cell><cell/></row><row><cell>APPENDIX A</cell><cell/><cell/></row><row><cell cols="2">T A B L E A1 Databases used in the study</cell><cell/></row><row><cell>Database</cell><cell/><cell/><cell>Source</cell></row><row><cell>Censo Nacional Económico 2007</cell><cell/><cell/><cell>Provided confidentially by Instituto Nacional de</cell></row><row><cell/><cell/><cell/><cell>Estadística e Informática (INEI)</cell></row><row><cell>Input-output matrix 2007</cell><cell/><cell/><cell>Provided upon request by INEI</cell></row><row><cell>Censo de Población y Vivienda 2007</cell><cell/><cell/><cell>Provided upon request by INEI</cell></row><row><cell>Encuesta Nacional de Hogares 2007</cell><cell/><cell/><cell>INEI website</cell></row><row><cell cols="3">Correspondence table for International Standard Industrial</cell><cell>Provided upon request by INEI</cell></row><row><cell cols="3">Classification (ISIC) Revision 4-national account code</cell></row><row><cell cols="2">Districts per city of more than 20,000 habitants</cell><cell/><cell>Provided upon request by INEI</cell></row><row><cell cols="3">Correspondence table for occupations code 1995-national</cell><cell>INEI website</cell></row><row><cell>occupations code 2015</cell><cell/><cell/></row><row><cell cols="3">Censo de Población y Vivienda 1981 (district level information)</cell><cell>INEI website</cell></row><row><cell cols="2">Gran Encuesta Integrada Hogares 2007 (Colombia)</cell><cell/><cell>Departamento Administrativo Nacional de</cell></row><row><cell/><cell/><cell/><cell>Estadística (DANE) website</cell></row><row><cell>Colombian 2005 input-output matrix</cell><cell/><cell/><cell>DANE website</cell></row><row><cell cols="3">Correspondence table ISIC Revision 3-national accounts code</cell><cell>Provided upon request by DANE</cell></row><row><cell>2005 (Colombia)</cell><cell/><cell/></row><row><cell>Altitude and slope</cell><cell/><cell/><cell>Shuttle Radar Topography Mission</cell></row><row><cell>Length of roads</cell><cell/><cell/><cell>Global Roads Open Access Data Set</cell></row><row><cell>District polygons</cell><cell/><cell/><cell>Instituto Geográfico Nacional del Ministerio de</cell></row><row><cell/><cell/><cell/><cell>Defensa del Perú</cell></row><row><cell>Soil quality</cell><cell/><cell/><cell>Harmonized World Soils</cell></row></table><note><p>T A B L E A 2 (Continued)</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_10"><head/><label/><figDesc>T A B L E A7 Elasticity of TFP with respect to city size excluding Lima Metropolitan Area The table presents results of separate estimations of the effect of log population density on establishment TFP using the pooled sample of establishments in Panel A, the formal establishment sample in Panel B, and the informal establishment sample in Panel C. The samples exclude establishments within the Lima Metropolitan Area Column (1) reports results from OLS estimation of Equation (2) including controls for industry and locational advantages. Columns (2) and (</figDesc><table><row><cell/><cell>(1)</cell><cell>(2)</cell><cell>(3)</cell><cell>(4)</cell><cell>(5)</cell></row><row><cell/><cell>OLS</cell><cell>Geological IV</cell><cell>Population IV</cell><cell>2S geological IV</cell><cell>2S population IV</cell></row><row><cell>Panel A: Pooled</cell><cell/><cell/><cell/><cell/><cell/></row><row><cell>ln(City population)</cell><cell>0.043*</cell><cell>0.042</cell><cell>0.072***</cell><cell>0.037</cell><cell>0.103**</cell></row><row><cell/><cell>(0.023)</cell><cell>(0.027)</cell><cell>(0.022)</cell><cell>(0.061)</cell><cell>(0.051)</cell></row><row><cell>Observations</cell><cell>225,411</cell><cell>225,411</cell><cell>189,987</cell><cell>66</cell><cell>66</cell></row><row><cell>UnderID p</cell><cell>0.299</cell><cell>0.00851</cell><cell>4.25e-05</cell><cell>0.00365</cell><cell>6.55e-09</cell></row><row><cell>K-P F-stat</cell><cell>-</cell><cell>27.33</cell><cell>93.26</cell><cell>3.691</cell><cell>65.59</cell></row><row><cell>OverID p</cell><cell>-</cell><cell>-</cell><cell>-</cell><cell>0.952</cell><cell>-</cell></row><row><cell>Panel B: Formal</cell><cell>-</cell><cell>-</cell><cell>-</cell><cell/><cell>-</cell></row><row><cell>ln(City population)</cell><cell>0.016</cell><cell>0.004</cell><cell>0.044*</cell><cell>-0.010</cell><cell>0.089*</cell></row><row><cell/><cell>(0.021)</cell><cell>(0.027)</cell><cell>(0.024)</cell><cell>(0.062)</cell><cell>(0.052)</cell></row><row><cell>Observations</cell><cell>139,390</cell><cell>139,390</cell><cell>120,458</cell><cell>66</cell><cell>66</cell></row><row><cell>UnderID p</cell><cell>-</cell><cell>0.00781</cell><cell>2.75e-05</cell><cell>0.00365</cell><cell>6.55e-09</cell></row><row><cell>K-P F-stat</cell><cell>-</cell><cell>25.19</cell><cell>120.3</cell><cell>3.691</cell><cell>65.59</cell></row><row><cell>OverID p</cell><cell>-</cell><cell>-</cell><cell>-</cell><cell>0.988</cell><cell>-</cell></row><row><cell>Panel C: Informal</cell><cell/><cell/><cell/><cell/><cell/></row><row><cell>ln(City population)</cell><cell>0.065**</cell><cell>0.074**</cell><cell>0.096***</cell><cell>0.087</cell><cell>0.110**</cell></row><row><cell/><cell>(0.028)</cell><cell>(0.034)</cell><cell>(0.027)</cell><cell>(0.065)</cell><cell>(0.054)</cell></row><row><cell>Observations</cell><cell>86,021</cell><cell>86,021</cell><cell>69,529</cell><cell>66</cell><cell>66</cell></row><row><cell>UnderID p</cell><cell>-</cell><cell>0.0084</cell><cell>0.00012</cell><cell>0.0037</cell><cell>6.55e-09</cell></row><row><cell>K-P F-stat</cell><cell>-</cell><cell>29.47</cell><cell>63.04</cell><cell>3.691</cell><cell>65.59</cell></row><row><cell>OverID p</cell><cell>-</cell><cell>-</cell><cell>-</cell><cell>0.991</cell><cell/></row><row><cell>Note:</cell><cell/><cell/><cell/><cell/><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_11"><head/><label/><figDesc>T A B L E A8 Levinsohn-Petrin (LP) instrumental variable estimator manufacturing, formal establishments The table presents the results for separate regressions for the second-stage of the LP estimator using formal establishments in the manufacturing sector. Standard errors clustered at the city level are shown in parentheses. ***p &lt; .01. T A B L E A9 Establishment elasticity of TFP with respect to city population by size class</figDesc><table><row><cell/><cell/><cell/><cell/><cell/><cell>(1)</cell></row><row><cell>Variables</cell><cell/><cell/><cell/><cell/><cell>Formal firms</cell></row><row><cell>(log) Capital</cell><cell/><cell/><cell/><cell/><cell>0.294***</cell></row><row><cell/><cell/><cell/><cell/><cell/><cell>(0.00339)</cell></row><row><cell>(log) City population</cell><cell/><cell/><cell/><cell/><cell>0.029***</cell></row><row><cell/><cell/><cell/><cell/><cell/><cell>(0.00939)</cell></row><row><cell>Observations</cell><cell/><cell/><cell/><cell/><cell>15,313</cell></row><row><cell>R 2</cell><cell/><cell/><cell/><cell/><cell>.156</cell></row><row><cell cols="2">Note: (1)</cell><cell>(2)</cell><cell>(3)</cell><cell>(4)</cell><cell>(5)</cell></row><row><cell/><cell>OLS</cell><cell>Geological IV</cell><cell>Population IV</cell><cell cols="2">2S geological IV 2S population IV</cell></row><row><cell>Panel A: Pooled large</cell><cell/><cell/><cell/><cell/><cell/></row><row><cell>ln(City population)</cell><cell>0.072***</cell><cell>0.063***</cell><cell>0.075***</cell><cell>0.071</cell><cell>0.120*</cell></row><row><cell/><cell>(0.012)</cell><cell>(0.018)</cell><cell>(0.014)</cell><cell>(0.075)</cell><cell>(0.062)</cell></row><row><cell>Observations</cell><cell>6617</cell><cell>6617</cell><cell>6166</cell><cell>68</cell><cell>68</cell></row><row><cell>UnderID p</cell><cell>-</cell><cell>0.0131</cell><cell>0.0023</cell><cell>0.0001</cell><cell>0.0000</cell></row><row><cell>K-P F-stat</cell><cell>-</cell><cell>20.09</cell><cell>1449</cell><cell>6.100</cell><cell>124.1</cell></row><row><cell>OverID p</cell><cell>-</cell><cell>-</cell><cell>-</cell><cell>0.714</cell><cell>-</cell></row><row><cell>Panel B: Formal Large</cell><cell/><cell/><cell/><cell/><cell/></row><row><cell>ln(City population)</cell><cell>0.061***</cell><cell>0.056***</cell><cell>0.064***</cell><cell>0.081</cell><cell>0.128**</cell></row><row><cell/><cell>(0.011)</cell><cell>(0.016)</cell><cell>(0.013)</cell><cell>(0.076)</cell><cell>(0.063)</cell></row><row><cell>Observations</cell><cell>6369</cell><cell>6369</cell><cell>5969</cell><cell>68</cell><cell>68</cell></row><row><cell>UnderID p</cell><cell>-</cell><cell>0.0093</cell><cell>0.0018</cell><cell>0.0001</cell><cell>0.0000</cell></row><row><cell>K-P F-stat</cell><cell>-</cell><cell>21.46</cell><cell>1379</cell><cell>6.100</cell><cell>124.1</cell></row><row><cell>OverID p</cell><cell>-</cell><cell>-</cell><cell>-</cell><cell>0.869</cell><cell>-</cell></row><row><cell>Panel C: Informal large</cell><cell/><cell/><cell/><cell/><cell/></row><row><cell>ln(City population)</cell><cell>-0.026</cell><cell>-0.043</cell><cell>-0.025</cell><cell>0.003</cell><cell>-0.003</cell></row><row><cell/><cell>(0.036)</cell><cell>(0.043)</cell><cell>(0.064)</cell><cell>(0.267)</cell><cell>(0.204)</cell></row><row><cell>Observations</cell><cell>248</cell><cell>248</cell><cell>197</cell><cell>39</cell><cell>39</cell></row><row><cell>UnderID p</cell><cell>-</cell><cell>0.0010</cell><cell>0.0156</cell><cell>0.0125</cell><cell>0.0000</cell></row><row><cell>K-P F-stat</cell><cell>-</cell><cell>15.93</cell><cell>1472</cell><cell>3.618</cell><cell>207.6</cell></row><row><cell>OverID p</cell><cell>-</cell><cell>-</cell><cell>-</cell><cell>0.0578</cell><cell>-</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="1" xml:id="foot_0"><p>In a study with 162 countries,<ref type="bibr" target="#b28">Schneider et al. (2010)</ref> estimate that between 1999 and</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>2007, the shadow economy comprised an average value of 34.5% of the official GDP.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_2"><p>14679787, 2021, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jors.12515 by Universidad CatCa Del Norte, Wiley Online Library on [26/03/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="6" xml:id="foot_3"><p><ref type="bibr" target="#b3">Combes et al. (2008)</ref> implement the two-step procedure using individual-level data and separate industry and area fixed effects. We modify their methodology for establishment-level data with separate industry and city fixed effects.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="9" xml:id="foot_4"><p>According to the Factories Act of 1948, only manufacturing firms that have more than</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="10" xml:id="foot_5"><p>employees and use energy or the ones with more than 20 employees need to register.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="11" xml:id="foot_6"><p>We report estimates using the quantity of paid and unpaid labor for each establishment; however, we also estimated our results using only paid labor and the results were similar.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="13" xml:id="foot_7"><p>As before, to obtain the wage elasticities, we use the restricted sample of establishments that do not employ unpaid labor. Estimated formal and informal labor shares are 0.77 and 0.75, respectively.</p></note>
+		</body>
+		<back>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ACKNOWLEDGMENT</head><p>The authors would like to thank the reviewers who provided excellent suggestions.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>CONFLICT OF INTERESTS</head><p>The authors declare that there are no conflict of interests.  <ref type="formula">2</ref>) including controls for industry and locational advantages. Columns ( <ref type="formula">2</ref>) and (3) report estimates from Equation (2) instrumenting for the population with soil quality, altitude, and slope in (2) and with a historical population in (3). Columns ( <ref type="formula">4</ref>) and ( <ref type="formula">5</ref>) report the second-stage estimates from the two-step procedure in which we estimate a production function with separate city and industry fixed effects in the first stage and regress the city fixed effects on both log population and locational advantages in the second stage. In Column (4), we instrument for the population in the second stage using geological variables, and in Column ( <ref type="formula">5</ref>  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>T A B L E A2 Description of variable construction</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Note:</head><p>The table presents results of separate estimations of the effect of log population density on establishment using the sample of large (10 or more employees) establishments in Panel A and small (fewer than 10 employees) establishments in Panel D. Panels B and E restrict the sample to formal large and small establishments, respectively. Panel C and F correspond to estimations using informal large and small establishments. Column (1) reports results from OLS estimation of Equation (2) including controls for industry and locational advantages. Columns (2) and (3) reports estimates from Equation (2) instrumenting for the population with soil quality, altitude, and slope in (2) and with a historical population in (3). Columns (4) and ( <ref type="formula">5</ref>) report the second-stage estimates from the two-step procedure in which we estimate a production function with separate city and industry fixed effects in the first stage and regress the city fixed effects on both log population and locational advantages in the second stage. In Column (4), we instrument for the population in the second stage using geological variables, and in Column (5), we use the historical population. Standard errors, clustered at the city level for Columns (1)-( <ref type="formula">3</ref>), are shown in parentheses.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">The role of urban agglomerations for economic and productivity</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ahrend</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Lembcke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Schumann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Growth. International Productivity Monitor</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="161" to="179"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m" type="main">) productive: The productivity costs of excessive informality in Mexico</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Busso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">V</forename><surname>Fazio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Algazi</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<publisher>Research Department Publications</publisher>
+			<biblScope unit="volume">4789</biblScope>
+		</imprint>
+		<respStmt>
+			<orgName>Inter-American Development Bank, Research Department</orgName>
+		</respStmt>
+	</monogr>
+	<note>In) formal and (un</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">What is different about urbanization in rich and poor countries? Cities in Brazil, China, India and the United States</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Chauvin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Glaeser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Tobio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Urban Economics</title>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="page" from="17" to="49"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Spatial wage disparities: Sorting matters!</title>
+		<author>
+			<persName><forename type="first">P.-P</forename><surname>Combes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Duranton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Gobillon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Urban Economics</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="723" to="742"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<title level="m" type="main">The empirics of agglomeration economies, Handbook of regional and urban economics</title>
+		<author>
+			<persName><forename type="first">P.-P</forename><surname>Combes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Gobillon</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<publisher>Elsevier</publisher>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="247" to="348"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">The underground economy and its macroeconomic consequences</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Dabla-Norris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Feltenstein</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Policy Reform</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="153" to="174"/>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Why do industries coagglomerate? How Marshallian externalities differ by industry and have evolved over time</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Diodato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Neffke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>O'clery</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Urban Economics</title>
+		<imprint>
+			<biblScope unit="volume">106</biblScope>
+			<biblScope unit="page" from="1" to="26"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<title level="m" type="main">Agglomeration and jobs in developing countries</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Duranton</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<publisher>The World Bank</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Agglomeration effects in Colombia</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Duranton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Regional Science</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="210" to="238"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Chapter 48-Micro-foundations of urban agglomeration economies</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Duranton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Puga</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Handbook of regional and urban economics</title>
+		<imprint>
+			<publisher>Elsevier</publisher>
+			<date type="published" when="2004">2004</date>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="2063" to="2117"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">The geographic concentration of industry: Does natural advantage explain agglomeration?</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ellison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">L</forename><surname>Glaeser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">American Economic Review</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="311" to="327"/>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">What causes industry agglomeration? Evidence from coagglomeration patterns</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ellison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">L</forename><surname>Glaeser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Kerr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">American Economic Review</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1195" to="1213"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<title level="m" type="main">Estimación de economías de aglomeración en el Perú: Sector formal y sector informal</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Figueroa Gil</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Agglomeration economies in the presence of an informal sector: The Colombian case</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>García</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Revue d'Économie Régionale &amp; Urbaine</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page">355</biblScope>
+			<date type="published" when="2019">2019. Février</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Urban economics for the developing world: An introduction</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Glaeser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">V</forename><surname>Henderson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Urban Economics</title>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="page" from="1" to="5"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Agglomeration externalities in Ecuador: Do urbanization and tertiarization matter?</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">C</forename><surname>Guevara-Rosero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Riou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Autant-Bernard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Regional Studies</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="706" to="719"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Informality and development</title>
+		<author>
+			<persName><forename type="first">La</forename><surname>Porta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Shleifer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Economic Perspectives</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="109" to="126"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Estimating production functions using inputs to control for unobservables</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Levinsohn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Petrin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Review of Economic Studies</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="317" to="341"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">The economics of the informal sector: a simple model and some empirical evidence from Latin America</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">V</forename><surname>Loayza</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Carnegie-Rochester Conference Series on Public Policy</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="page" from="129" to="162"/>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><surname>Marshall</surname></persName>
+		</author>
+		<title level="m">Principles of economics</title>
+		<imprint>
+			<publisher>MacMillan</publisher>
+			<date type="published" when="1920">1920</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">A meta-analysis of estimates of urban agglomeration economies</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Melo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Graham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Noland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Regional Science and Urban Economics</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="332" to="342"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<title level="m" type="main">Productividad, Aglomeración y Asignación de Recursos en el Perú: ¿Qué dice el Censo Económico Nacional 2008?</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Moron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Salgado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Seminario</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Coagglomeration of formal and informal industry: Evidence from India</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mukim</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Economic Geography</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="329" to="351"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<monogr>
+		<title level="m" type="main">Cities in the developing world</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Overman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Venables</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>CEP discussion papers</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Geography, industrial organization, and agglomeration</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Rosenthal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">C</forename><surname>Strange</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Review of Economics and Statistics</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="377" to="393"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Evidence on the nature and sources of agglomeration economies</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Rosenthal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">C</forename><surname>Strange</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Handbook of Regional and Urban Economics</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="2119" to="2171"/>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Informality and rent-seeking bureaucracies in a model of long-run growth</title>
+		<author>
+			<persName><forename type="first">P.-D</forename><forename type="middle">G</forename><surname>Sarte</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Monetary Economics</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="173" to="197"/>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Shadow economies around the world: What do we really know?</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Schneider</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">European Journal of Political Economy</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="598" to="642"/>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<monogr>
+		<title level="m" type="main">Shadow economies all over the world: New estimates for 162 countries from 1999 to 2007</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Buehn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Montenegro</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+			<publisher>World Bank</publisher>
+		</imprint>
+	</monogr>
+	<note type="report_type">Policy Research Working Paper 5356</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Barriers to competition and productivity: Evidence from India. The B.E</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sivadasan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Economic Analysis &amp; Policy</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">42</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Agglomeration economies in the formal and informal sectors: A Bayesian spatial approach</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Tanaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Hashiguchi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Economic Geography</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="37" to="66"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<monogr>
+		<ptr target="https://www.worldbank.org/en/country/peru/overview"/>
+		<title level="m">The World Bank in Peru</title>
+		<meeting><address><addrLine>Washington, DC</addrLine></address></meeting>
+		<imprint>
+			<publisher>The World Bank Group</publisher>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -1,0 +1,968 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Relational Graph Attention Network for Aspect-based Sentiment Analysis</title>
+				<funder ref="#_jtKugkD">
+					<orgName type="full">Program for Guangdong Introducing Innovative and Entrepreneurial Teams</orgName>
+				</funder>
+				<funder ref="#_AR7mg9Y">
+					<orgName type="full">Fundamental Research Funds for the Central Universities</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Kai</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Data and Computer Science</orgName>
+								<orgName type="institution">Sun Yat-sen University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Weizhou</forename><surname>Shen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Data and Computer Science</orgName>
+								<orgName type="institution">Sun Yat-sen University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Yunyi</forename><surname>Yang</surname></persName>
+							<email>yangyy37@mail2.sysu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Data and Computer Science</orgName>
+								<orgName type="institution">Sun Yat-sen University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaojun</forename><surname>Quan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Data and Computer Science</orgName>
+								<orgName type="institution">Sun Yat-sen University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rui</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Alibaba Group</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Relational Graph Attention Network for Aspect-based Sentiment Analysis</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">1665084AA559BBB4AF21004E5783B023</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-02T20:34+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Aspect-based sentiment analysis aims to determine the sentiment polarity towards a specific aspect in online reviews. Most recent efforts adopt attention-based neural network models to implicitly connect aspects with opinion words. However, due to the complexity of language and the existence of multiple aspects in a single sentence, these models often confuse the connections. In this paper, we address this problem by means of effective encoding of syntax information. Firstly, we define a unified aspect-oriented dependency tree structure rooted at a target aspect by reshaping and pruning an ordinary dependency parse tree. Then, we propose a relational graph attention network (R-GAT) to encode the new tree structure for sentiment prediction. Extensive experiments are conducted on the SemEval 2014 and Twitter datasets, and the experimental results confirm that the connections between aspects and opinion words can be better established with our approach, and the performance of the graph attention network (GAT) is significantly improved as a consequence.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">Introduction</head><p>Aspect-based sentiment analysis (ABSA) aims at fine-grained sentiment analysis of online affective texts such as product reviews. Specifically, its objective is to determine the sentiment polarities towards one or more aspects appearing in a single sentence. An example of this task is, given a review great food but the service was dreadful, to determine the polarities towards the aspects food and service. Since the two aspects express quite opposite sentiments, just assigning a sentence-level sentiment polarity is inappropriate. In this regard, ABSA can provide better insights into user reviews compared with sentence-level sentiment analysis.</p><p>Intuitively, connecting aspects with their respective opinion words lies at the heart of this task. Most recent efforts <ref type="bibr">(Wang et al., 2016b;</ref><ref type="bibr" target="#b12">Li et al., 2017;</ref><ref type="bibr" target="#b15">Ma et al., 2017;</ref><ref type="bibr" target="#b5">Fan et al., 2018)</ref> resort to assorted attention mechanisms to achieve this goal and have reported appealing results. However, due to the complexity of language morphology and syntax, these mechanisms fail occasionally. We illustrate this problem with a real review So delicious was the noodles but terrible vegetables, in which the opinion word terrible is closer to the aspect noodles than delicious, and there could be terrible noodles appearing in some other reviews which makes these two words closely associated. Therefore, the attention mechanisms could attend to terrible with a high weight when evaluating the aspect noodles.</p><p>Some other efforts explicitly leverage the syntactic structure of a sentence to establish the connections. Among them, early attempts rely on handcrafted syntactic rules <ref type="bibr" target="#b20">(Qiu et al., 2011;</ref><ref type="bibr" target="#b14">Liu et al., 2013)</ref>, though they are subject to the quantity and quality of the rules. Dependency-based parse trees are then used to provide more comprehensive syntactic information. For this purpose, a whole dependency tree can be encoded from leaves to root by a recursive neural network (RNN) <ref type="bibr" target="#b11">(Lakkaraju et al., 2014;</ref><ref type="bibr" target="#b3">Dong et al., 2014;</ref><ref type="bibr" target="#b18">Nguyen and Shirai, 2015;</ref><ref type="bibr">Wang et al., 2016a)</ref>, or the internal node distance can be computed and used for attention weight decay <ref type="bibr">(He et al., 2018a)</ref>. Recently, graph neural networks (GNNs) are explored to learn representations from the dependency trees <ref type="bibr" target="#b30">(Zhang et al., 2019;</ref><ref type="bibr">Sun et al., 2019b;</ref><ref type="bibr" target="#b9">Huang and Carley, 2019)</ref>. The shortcomings of these approaches should not be overlooked. First, the dependency relations, which may indicate the connections between aspects and opinion words, are ignored. Second, empirically, only a small part of the parse tree is related to this task and it is unnecessary to encode the whole tree <ref type="bibr" target="#b31">(Zhang et al., 2018;</ref><ref type="bibr">He et al., 2018b)</ref>. Finally, the encoding process is tree-dependent, making the batch operation inconvenient during optimization.</p><p>In this paper, we re-examine the syntax information and claim that revealing task-related syntactic structures is the key to address the above issues. We propose a novel aspect-oriented dependency tree structure constructed in three steps. Firstly, we obtain the dependency tree of a sentence using an ordinary parser. Secondly, we reshape the dependency tree to root it at a target aspect in question. Lastly, pruning of the tree is performed to retain only edges with direct dependency relations with the aspect. Such a unified tree structure not only enables us to focus on the connections between aspects and potential opinion words but also facilitates both batch and parallel operations. Then we propose a relational graph attention network (R-GAT) model to encode the new dependency trees. R-GAT generalizes graph attention network (GAT) to encode graphs with labeled edges. Extensive evaluations are conducted on the SemEval 2014 and Twitter datasets, and experimental results show that R-GAT significantly improves the performance of GAT. It also achieves superior performance to the baseline methods.</p><p>The contributions of this work include:</p><p>• We propose an aspect-oriented tree structure by reshaping and pruning ordinary dependency trees to focus on the target aspects.</p><p>• We propose a new GAT model to encode the dependency relations and to establish the connections between aspects and opinion words.</p><p>• The source code of this work is released for future research. 1</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2">Related Work</head><p>Most recent research work on aspect-based sentiment analysis (ABSA) utilizes attention-based neural models to examine words surrounding a target aspect. They can be considered an implicit approach to exploiting sentence structure, since opinion words usually appear not far from aspects. Such approaches have led to promising progress. Among them, <ref type="bibr">Wang et al. (2016b)</ref> proposed to use an attention-based LSTM to identify important sentiment information relating to a target aspect. Some other efforts try to directly include the syntactic information in ABSA. Since aspects are generally assumed to lie at the heart of this task, establishing the syntactic connections between each target aspect and the other words are crucial. <ref type="bibr" target="#b20">Qiu et al. (2011)</ref> manually defined some syntactic rules to identify the relations between aspects and potential opinion words. <ref type="bibr" target="#b14">Liu et al. (2013)</ref> obtained partial alignment links with these syntactic rules and proposed a partially supervised word alignment model to extract opinion targets. Afterward, neural network models were explored for this task. <ref type="bibr" target="#b11">Lakkaraju et al. (2014)</ref> used a recursive neural network (RNN) to hierarchically encode word representations and to jointly extract aspects and sentiments. In another work, <ref type="bibr">Wang et al. (2016a)</ref> combined the recursive neural network with conditional random fields (CRF). Moreover, <ref type="bibr" target="#b3">Dong et al. (2014)</ref> proposed an adaptive recursive neural network (AdaRNN) to adaptively propagate the sentiments of words to the target aspect via semantic composition over a dependency tree. <ref type="bibr" target="#b18">Nguyen et al. (2015)</ref> further combined the dependency and constituent trees of a sentence with a phrase recursive neural network (PhraseRNN). In a simpler approach, He et al. (2018a) used the relative distance in a dependency tree for attention weight decay. They also showed that selectively focusing on a small subset of context words can lead to satisfactory results.</p><p>Recently, graph neural networks combined with dependency trees have shown appealing effectiveness in ABSA. <ref type="bibr" target="#b30">Zhang et al. (2019)</ref> and <ref type="bibr">Sun et al. (2019b)</ref> proposed to use graph convolutional networks (GCN) to learn node representations from a dependency tree and used them together with The [falafel] neg was over cooked and dried but the [chicken] pos was fine. 0.00 0.00 0.00 0.01 0.00 0.00 0.27 0.71 0.01 0.00 0.00 0.00 other features for sentiment classification. For a similar purpose, Huang and Carley (2019) used graph attention networks (GAT) to explicitly establish the dependency relationships between words. However, these approaches generally ignore the dependency relations which might identify the connections between aspects and opinion words.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3">Aspect-Oriented Dependency Tree</head><p>In this section, we elaborate on the details of constructing an aspect-oriented dependency tree.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1">Aspect, Attention and Syntax</head><p>The syntactic structure of a sentence can be uncovered by dependency parsing, a task to generate a dependency tree to represent the grammatical structure. The relationships between words can be denoted with directed edges and labels. We use three examples to illustrate the relationships among aspect, attention and syntax in ABSA, as shown in Figure 1. In the first example, the word like is used as a verb and it expresses a positive sentiment towards the aspect recipe, which is successfully attended by the attention-based LSTM model. However, when it is used as a preposition in the second example, the model still attends to it with a high weight, resulting in a wrong prediction. The third example shows a case where there are two aspects in a single sentence with different sentiment polarities. For the aspect chicken, the LSTM model mistakenly assigns high attention weights to the words but and dried, which leads to another prediction mistake. These examples demonstrate the limitations of the attention-based model in this task. Such mistakes are likely to be avoided by introducing explicit syntactic relations between aspects and other words. For example, it might be different if the model noticed the direct dependency relationship between chicken and fine in the third example, rather than with but.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2">Aspect-Oriented Dependency Tree</head><p>The above analysis suggests that dependency relations with direct connections to an aspect may assist a model to focus more on related opinion words, and therefore should be more important than other relations. Also, as shown in Figure <ref type="figure" target="#fig_1">1</ref>, a dependency tree contains abundant grammar information, and is usually not rooted at a target aspect. Nevertheless, the focus of ABSA is a target aspect rather than the root of the tree. Motivated by the above observations, we propose a novel aspectoriented dependency tree structure by reshaping an original dependency tree to root it at a target aspect, followed by pruning of the tree so as to discard unnecessary relations. Algorithm 1 describes the above process. For an input sentence, we first apply a dependency parser to obtain its dependency tree, where r ij is the dependency relation from node i to j. Then, we build an aspect-oriented dependency tree in three steps. Firstly, we place the target aspect at the root, where multiple-word aspects are treated as entities. Secondly, we set the nodes with direct connections to the aspect as the children, for which the original Algorithm 1 Aspect-Oriented Dependency Tree Input: aspect a = {w a i , w a i+1 , ...w a k }, sentence s = {w s 1 , w s 2 , ...w s n }, dependency tree T , and dependency relations r. Output: aspect-oriented dependency tree T .</p><p>1: Construct the root R for T ; 2: for i to k do 3: end for 13: end for 14: return T dependency relations are retained. Thirdly, other dependency relations are discarded, and instead, we put a virtual relation n:con (n connected) from the aspect to each corresponding node, where n represents the distance between two nodes. 2 If the sentence contains more than one aspect, we construct a unique tree for each aspect. Figure <ref type="figure" target="#fig_2">2</ref> shows an aspect-oriented dependency tree constructed from the ordinary dependency tree. There are at least two advantages with such an aspect-oriented structure. First, each aspect has its own dependency tree and can be less influenced by unrelated nodes and relations. Second, if an aspect contains more than 2 We set n = ∞ if the distance is longer than 4.</p><formula xml:id="formula_0">for j = 1 to n do 4: if w s j r ji --→ w a i then 5: w s j r ji --→ R 6: else if w s j r ij ← --w a i then 7: w s j r ij ← --R 8:</formula><p>one word, the dependency relations will be aggregated at the aspect, unlike in <ref type="bibr" target="#b30">(Zhang et al., 2019;</ref><ref type="bibr">Sun et al., 2019b)</ref> which require extra pooling or attention operations. The idea described above is partially inspired by previous findings <ref type="bibr">(He et al., 2018a;</ref><ref type="bibr" target="#b31">Zhang et al., 2018;</ref><ref type="bibr">He et al., 2018b</ref>) that it could be sufficient to focus on a small subset of context words syntactically close to the target aspect. Our approach provides a direct way to model the context information. Such a unified tree structure not only enables our model to focus on the connections between aspects and opinion words but also facilitates both batch and parallel operations during training. The motivation we put a new relation n:con is that existing parsers may not always parse sentences correctly and may miss important connections to the target aspect. In this situation, the relation n:con enables the new tree to be more robust. We evaluate this new relation in the experiment and the results confirm this assumption.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4">Relational Graph Attention Network</head><p>To encode the new dependency trees for sentiment analysis, we propose a relational graph attention network (R-GAT) by extending the graph attention network (GAT) <ref type="bibr" target="#b24">(Veličković et al., 2017)</ref> to encode graphs with labeled edges.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1">Graph Attention Network</head><p>Dependency tree can be represented by a graph G with n nodes, where each represents a word in the sentence. The edges of G denote the dependency between words. The neighborhood nodes of node i can be represented by N i . GAT iteratively updates each node representation (e.g., word embeddings) by aggregating neighborhood node representations using multi-head attention:</p><formula xml:id="formula_1">h l+1 att i = || K k=1 j∈N i α lk ij W l k h l j</formula><p>(1)</p><formula xml:id="formula_2">α lk ij = attention(i, j) (2)</formula><p>where h l+1 att i is the attention head of node i at layer l + 1, || K k=1 x i denotes the concatenation of vectors from x 1 to x k , α lk ij is a normalized attention coefficient computed by the k-th attention at layer l, W l k is an input transformation matrix. In this paper, we adopt dot-product attention for attention(i, j).<ref type="foot" target="#foot_0">foot_0</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2">Relational Graph Attention Network</head><p>GAT aggregates the representations of neighborhood nodes along the dependency paths. However, this process fails to take dependency relations into consideration, which may lose some important dependency information. Intuitively, neighborhood nodes with different dependency relations should have different influences. We propose to extend the original GAT with additional relational heads. We use these relational heads as relation-wise gates to control information flow from neighborhood nodes. The overall architecture of this approach is shown in Figure <ref type="figure">3</ref>. Specifically, we first map the dependency relations into vector representations, and then compute a relational head as:</p><formula xml:id="formula_3">h l+1 rel i = || M m=1 j∈N i β lm ij W l m h l j</formula><p>(3)</p><formula xml:id="formula_4">g lm ij = σ(relu(r ij W m1 + b m1 )W m2 + b m2 ) (4) β lm ij = exp(g lm ij ) N i j=1 exp(g lm ij )<label>(5)</label></formula><p>where r ij represents the relation embedding between nodes i and j. R-GAT contains K attentional heads and M relational heads. The final representation of each node is computed by:</p><formula xml:id="formula_5">x l+1 i = h l+1 att i || h l+1 rel i (6) h l+1 i = relu(W l+1 x l+1 i + b l+1 )<label>(7)</label></formula><p>Figure <ref type="figure">3</ref>: Structure of the proposed relational graph attention network (R-GAT), which includes two genres of multi-head attention mechanism, i.e., attentional head and relational head.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3">Model Training</head><p>We use BiLSTM to encode the word embeddings of tree nodes, and obtain its output hidden state h i for the initial representation h 0 i of leaf node i. Then, another BiLSTM is applied to encode the aspect words, and its average hidden state is used as the initial representation h 0 a of this root. After applying R-GAT on an aspect-oriented tree, its root representation h l a is passed through a fully connected softmax layer and mapped to probabilities over the different sentiment polarities.</p><formula xml:id="formula_6">p(a) = sof tmax(W p h l a + b p )<label>(8)</label></formula><p>Finally, the standard cross-entropy loss is used as our objective function:</p><formula xml:id="formula_7">L(θ) = - (S,A)∈D a∈A log p(a) (9)</formula><p>where D contains all the sentence-aspects pairs, A represents the aspects appearing in sentence S, and θ contains all the trainable parameters.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5">Experiments</head><p>In this section, we first introduce the datasets used for evaluation and the baseline methods employed for comparison. Then, we report the experimental results conducted from different perspectives. Finally, error analysis and discussion are conducted with a few representative examples. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.1">Datasets</head><p>Three public sentiment analysis datasets are used in our experiments, two of them are the Laptop and Restaurant review datasets from the Se-mEval 2014 Task (Maria Pontiki and Manandhar, 2014), 4 and the third is the Twitter dataset used by <ref type="bibr" target="#b3">(Dong et al., 2014)</ref>. Statistics of the three datasets can be found in Table <ref type="table" target="#tab_1">1</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.1.1">Implementation Details</head><p>The Biaffine Parser <ref type="bibr" target="#b4">(Dozat and Manning, 2016)</ref> is used for dependency parsing. The dimension of the dependency relation embeddings is set to 300. For R-GAT, we use the 300-dimensional word embeddings of GLoVe <ref type="bibr" target="#b19">(Pennington et al., 2014)</ref>.</p><p>For R-GAT+BERT, we use the last hidden states of the pre-trained BERT for word representations and fine-tune them on our task. The PyTorch implementation of BERT 5 is used in the experiments. R-GAT is shown to prefer a high dropout rate in between [0.6, 0.8]. As for R-GAT+BERT, it works better with a low dropout rate of around 0.2. Our model is trained using the Adam optimizer (Kingma and Ba, 2014) with the default configuration.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2">Baseline Methods</head><p>A few mainstream models for aspect-based sentiment analysis are used for comparison, including:</p><p>• Syntax-aware models: LSTM+SynATT <ref type="bibr">(He et al., 2018a)</ref>, AdaRNN <ref type="bibr" target="#b3">(Dong et al., 2014)</ref>, <ref type="bibr">PhraseRNN (Nguyen and Shirai, 2015)</ref>, AS-GCN <ref type="bibr" target="#b30">(Zhang et al., 2019)</ref>, CDT <ref type="bibr">(Sun et al., 2019b)</ref>, GAT <ref type="bibr" target="#b24">(Veličković et al., 2017)</ref> and TD-GAT <ref type="bibr" target="#b9">(Huang and Carley, 2019)</ref>.</p><p>• Attention-based models: ATAE-LSTM <ref type="bibr">(Wang et al., 2016b)</ref> , IAN <ref type="bibr" target="#b15">(Ma et al., 2017)</ref>, RAM <ref type="bibr" target="#b1">(Chen et al., 2017)</ref>, MGAN <ref type="bibr" target="#b5">(Fan et al., 2018)</ref>, attention-equipped LSTM, and fine-tuned BERT <ref type="bibr" target="#b2">(Devlin et al., 2018)</ref>.</p><p>• Other recent methods: GCAE <ref type="bibr" target="#b29">(Xue and Li, 2018)</ref>, JCI <ref type="bibr" target="#b25">(Wang et al., 2018)</ref> and TNET (Li   4 <ref type="url" target="http://alt.qcri.org/semeval2014/task4/">http://alt.qcri.org/semeval2014/task4/</ref>. 5 <ref type="url" target="https://github.com/huggingface/transformers">https://github.com/huggingface/transformers</ref> et al., 2018).</p><p>• Our methods: R-GAT is our relational graph attention network. R-GAT+BERT is our R-GAT with the BiLSTM replaced by BERT, and the attentional heads of R-GAT will also be replaced by that of BERT.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3">Results and Analysis</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3.1">Overall Performance</head><p>The overall performance of all the models are shown in Table <ref type="table">2</ref>, from which several observations can be noted. First, the R-GAT model outperforms most of the baseline models. Second, the performance of GAT can be significantly improved when incorporated with relational heads in our aspectoriented dependency tree structure. It also outperforms the baseline models of ASGCN, and CDT, which also involve syntactic information in different ways. This proves that our R-GAT is better at encoding the syntactic information. Third, the basic BERT can already outperform all the existing ABSA models by significant margins, demonstrating the power of this large pre-trained model in this task. Nevertheless, after incorporating our R-GAT (R-GAT+BERT), this strong model sees further improvement and has achieved a new state of the art. These results have demonstrated the effectiveness of our R-GAT in capturing important syntactic structures for sentiment analysis.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3.2">Effect of Multiple Aspects</head><p>The appearance of multiple aspects in one single sentence is very typical for ABSA. To study the influence of multiple aspects, we pick out the reviews with more than one aspect in a sentence. Each aspect is represented with its averaged (GloVe) word embeddings, and the distance between any two aspects of a sentence is calculated using the Euclidean distance. If there are more than two aspects, the nearest Euclidean distance is used for each aspect. Then, we select three models (GAT, R-GAT, R-GAT+BERT) for sentiment prediction, and plot the aspect accuracy by different distance ranges in Figure <ref type="figure">4</ref>. We can observe that the aspects with nearer distances tend to lead to lower accuracy scores, indicating that the aspects with high semantic similarity in a sentence may confuse the models. However, with our R-GAT, both GAT and BERT can be improved across different ranges, showing that our method can alleviate this problem to a certain extent. Table <ref type="table">2</ref>: Overall performance of different methods on the three datasets.</p><p>Figure <ref type="figure">4</ref>: Results of multiple aspects analysis, which shows that the aspects with nearer distances tend to lead to lower accuracy scores.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3.3">Effect of Different Parsers</head><p>Dependency parsing plays a critical role in our method. To evaluate the impact of different parsers, we conduct a study based on the R-GAT model using two well-known dependency parsers: Stanford Parser <ref type="bibr" target="#b0">(Chen and Manning, 2014)</ref> and Biaffine Parser <ref type="bibr" target="#b4">(Dozat and Manning, 2016)</ref>. <ref type="foot" target="#foot_1">6</ref> Table <ref type="table" target="#tab_4">3</ref> shows the performance of the two parsers in UAS and LAS metrics, followed by their performance for aspect-based sentiment analysis. From the  Table <ref type="table">4</ref>: Results of ablation study, where "Ordinary" means using ordinary dependency trees, "Reshaped" denotes using the aspect-oriented trees, and "*-n:con" denote the aspect-oriented tree without using n:con.</p><p>we can find that the better Biaffine parser results in higher sentiment classification accuracies. Moreover, it further implies that while existing parsers can capture most of the syntactic structures correctly, our method has the potential to be further improved with the advances of parsing techniques.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3.4">Ablation Study</head><p>We further conduct an ablation study to evaluate the influence of the aspect-oriented dependency tree  structure and the relational heads. We present the results on ordinary dependency trees for comparison. From table 4, we can observe that R-GAT is improved by using the new tree structure on all three datasets, while GAT is only improved on the Restaurant and Twitter datasets. Furthermore, after removing the virtual relation n:con, the performance of R-GAT drops considerably. We manually examined the misclassified samples and found that most of them can be attributed to poor parsing results where aspects and their opinion words are incorrectly connected. This study validates that adding the n:con relation can effectively alleviate the parsing problem and allows our model to be robust. In this paper, the maximal number of n is set to 4 according to empirical tests. Other values of n are also explored but the results are not any better. This may suggest that words with too long dependency distances from the target aspect are unlikely to be useful for this task.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3.5">Error Analysis</head><p>To analyze the limitations of current ABSA models including ours, we randomly select 100 misclassified examples by two models (R-GAT and R-GAT+BERT) from the Restaurant dataset. After looking into these bad cases, we find the reasons behind can be classified into four categories. As shown in Table <ref type="table" target="#tab_6">5</ref>, the primary reason is due to the misleading neutral reviews, most of which include an opinion modifier (words) towards the target aspect with a direct dependency connection. The second category is due to the difficulty in comprehension, which may demand deep language understanding techniques such as natural language inference. The third category is caused by the advice which only recommend or disrecommend people to try, with no obvious clues in the sentences indicating the sentiments. The fourth category is caused by double negation expression, which is also difficult for current models. Through the error analysis, we can note that although current models have achieved appealing progress, there are still some complicated sentences beyond their capabilities. There ought to be more advanced natural language processing techniques and learning algorithms developed to further address them.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6">Conclusion</head><p>In this paper, we have proposed an effective approach to encoding comprehensive syntax information for aspect-based sentiment analysis. We first defined a novel aspect-oriented dependency tree structure by reshaping and pruning an ordinary dependency parse tree to root it at a target aspect.</p><p>We then demonstrated how to encode the new dependency trees with our relational graph attention network (R-GAT) for sentiment classification. Experimental results on three public datasets showed that the connections between aspects and opinion words can be better established with R-GAT, and the performance of GAT and BERT are significantly improved as a result. We also conducted an ablation study to validate the role of the new tree structure and the relational heads. Finally, an error analysis was performed on incorrectly-predicted examples, leading to some insights into this task.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 1 :</head><label>1</label><figDesc>Figure1: Three examples from restaurant reviews to illustrate the relationships among aspect, attention, and syntax in ABSA. Labeled edges indicate dependency relations, and scores under each word represent attention weights assigned by the attention-equipped LSTM. Words with high attention weights are highlighted in red boxes, and words in brackets are the target aspects followed by their sentiment labels.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 2 :</head><label>2</label><figDesc>Figure 2: Construction of an aspect-oriented dependency tree (bottom) from an ordinary dependency tree (top).</figDesc><graphic coords="4,101.75,148.75,390.27,85.15" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 1 :</head><label>1</label><figDesc>Statistics of the three datasets.</figDesc><table><row><cell>Dataset</cell><cell>Positive</cell><cell>Neutral</cell><cell>Negative</cell></row><row><cell/><cell cols="3">Train Test Train Test Train Test</cell></row><row><cell>Laptop</cell><cell cols="3">994 341 870 128 464 169</cell></row><row><cell cols="4">Restaurant 2164 728 807 196 637 196</cell></row><row><cell>Twitter</cell><cell cols="3">1561 173 3127 346 1560 173</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>table ,</head><label>,</label><figDesc/><table><row><cell>Parser</cell><cell>Performance</cell><cell/><cell>Dataset</cell></row><row><cell/><cell cols="3">UAS LAS Restaurant Laptop Twitter</cell></row><row><cell cols="2">Stanford 94.10 91.49</cell><cell>0.8133</cell><cell>0.7539 0.7283</cell></row><row><cell cols="2">Biaffine 95.74 94.08</cell><cell>0.8330</cell><cell>0.7742 0.7557</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 3 :</head><label>3</label><figDesc>Results of R-GAT based on two different parsers, where UAS and LAS are metrics to evaluate the parsers and higher scores mean better performance.</figDesc><table><row><cell>Tree</cell><cell>Method</cell><cell cols="3">Restaurant Laptop Twitter</cell></row><row><cell>Ordinary</cell><cell>GAT R-GAT</cell><cell>78.21 79.91</cell><cell>73.04 72.72</cell><cell>71.67 71.76</cell></row><row><cell/><cell>GAT</cell><cell>78.57</cell><cell>72.10</cell><cell>71.82</cell></row><row><cell>Reshaped</cell><cell>R-GAT</cell><cell>83.30</cell><cell>77.42</cell><cell>75.57</cell></row><row><cell/><cell>R-GAT-n:con</cell><cell>81.16</cell><cell>73.66</cell><cell>70.95</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_6"><head>Table 5 :</head><label>5</label><figDesc>Results of error analysis of R-GAT and R-GAT+BERT on 100 misclassified examples from the Restaurant dataset. The reasons are classified into four categories, for which a sample is given. The upper table corresponds to the results of R-GAT and the lower one corresponds to R-GAT+BERT.</figDesc><table/></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="3" xml:id="foot_0"><p>Dot product has fewer parameters but similar performance with feedforward neural network used in<ref type="bibr" target="#b24">(Veličković et al., 2017)</ref>.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="6" xml:id="foot_1"><p>The parsers are implemented by Stanford CoreNLP<ref type="bibr" target="#b16">(Manning et al., 2014)</ref> and AllenNLP<ref type="bibr" target="#b6">(Gardner et al., 2018)</ref>.</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>The work was supported by the <rs type="funder">Fundamental Research Funds for the Central Universities</rs> (No.<rs type="grantNumber">19lgpy220</rs>) and the <rs type="funder">Program for Guangdong Introducing Innovative and Entrepreneurial Teams</rs> (No.<rs type="grantNumber">2017ZT07X355</rs>). Part of this work was done when the first author was an intern at <rs type="institution">Alibaba</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_AR7mg9Y">
+					<idno type="grant-number">19lgpy220</idno>
+				</org>
+				<org type="funding" xml:id="_jtKugkD">
+					<idno type="grant-number">2017ZT07X355</idno>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">A fast and accurate dependency parser using neural networks</title>
+		<author>
+			<persName><forename type="first">Danqi</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2014 conference on empirical methods in natural language processing (EMNLP)</title>
+		<meeting>the 2014 conference on empirical methods in natural language processing (EMNLP)</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="740" to="750"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Recurrent attention network on memory for aspect sentiment analysis</title>
+		<author>
+			<persName><forename type="first">Peng</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhongqian</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lidong</forename><surname>Bing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Yang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2017 conference on empirical methods in natural language processing</title>
+		<meeting>the 2017 conference on empirical methods in natural language processing</meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="452" to="461"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title level="m" type="main">Bert: Pre-training of deep bidirectional transformers for language understanding</title>
+		<author>
+			<persName><forename type="first">Jacob</forename><surname>Devlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ming-Wei</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kenton</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kristina</forename><surname>Toutanova</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1810.04805</idno>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Adaptive recursive neural network for target-dependent twitter sentiment classification</title>
+		<author>
+			<persName><forename type="first">Li</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Furu</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chuanqi</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Duyu</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ming</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ke</forename><surname>Xu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 52nd annual meeting of the association for computational linguistics</title>
+		<meeting>the 52nd annual meeting of the association for computational linguistics</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="49" to="54"/>
+		</imprint>
+	</monogr>
+	<note>Short papers</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<author>
+			<persName><forename type="first">Timothy</forename><surname>Dozat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1611.01734</idno>
+		<title level="m">Deep biaffine attention for neural dependency parsing</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Multi-grained attention network for aspect-level sentiment classification</title>
+		<author>
+			<persName><forename type="first">Feifan</forename><surname>Fan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yansong</forename><surname>Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dongyan</forename><surname>Zhao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2018 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="3433" to="3442"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title level="m" type="main">Allennlp: A deep semantic natural language processing platform</title>
+		<author>
+			<persName><forename type="first">Matt</forename><surname>Gardner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joel</forename><surname>Grus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mark</forename><surname>Neumann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Oyvind</forename><surname>Tafjord</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pradeep</forename><surname>Dasigi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nelson</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthew</forename><surname>Peters</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Schmitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Luke</forename><surname>Zettlemoyer</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1803.07640</idno>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Effective attention modeling for aspect-level sentiment classification</title>
+		<author>
+			<persName><forename type="first">Ruidan</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sun</forename><surname>Wee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hwee Tou</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daniel</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Dahlmeier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 27th International Conference on Computational Linguistics</title>
+		<meeting>the 27th International Conference on Computational Linguistics</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="1121" to="1131"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Syntax for semantic role labeling, to be, or not to be</title>
+		<author>
+			<persName><forename type="first">Shexia</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zuchao</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hai</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hongxiao</forename><surname>Bai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics, ACL 2018</title>
+		<meeting>the 56th Annual Meeting of the Association for Computational Linguistics, ACL 2018<address><addrLine>Melbourne, Australia</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2018-07-15">2018. July 15-20, 2018</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="2061" to="2071"/>
+		</imprint>
+	</monogr>
+	<note>Long Papers</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Syntaxaware aspect level sentiment classification with graph attention networks</title>
+		<author>
+			<persName><forename type="first">Binxuan</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kathleen</forename><surname>Carley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)</title>
+		<meeting>the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)<address><addrLine>Hong Kong, China</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="5472" to="5480"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title level="m" type="main">Adam: A method for stochastic optimization</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Diederik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jimmy</forename><surname>Kingma</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ba</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1412.6980</idno>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Aspect specific sentiment analysis using hierarchical deep learning</title>
+		<author>
+			<persName><forename type="first">Himabindu</forename><surname>Lakkaraju</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">NIPS Workshop on deep learning and representation learning</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Deep memory networks for attitude identification</title>
+		<author>
+			<persName><forename type="first">Cheng</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaoxiao</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Qiaozhu</forename><surname>Mei</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Tenth ACM International Conference on Web Search and Data Mining</title>
+		<meeting>the Tenth ACM International Conference on Web Search and Data Mining</meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="671" to="680"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Transformation networks for target-oriented sentiment classification</title>
+		<author>
+			<persName><forename type="first">Xin</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lidong</forename><surname>Bing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wai</forename><surname>Lam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bei</forename><surname>Shi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 56th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="946" to="956"/>
+		</imprint>
+	</monogr>
+	<note>Long Papers</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Opinion target extraction using partially-supervised word alignment model</title>
+		<author>
+			<persName><forename type="first">Kang</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Li</forename><surname>Heng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yang</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jun</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Zhao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Twenty-Third International Joint Conference on Artificial Intelligence</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<author>
+			<persName><forename type="first">Dehong</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sujian</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaodong</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Houfeng</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1709.00893</idno>
+		<title level="m">Interactive attention networks for aspect-level sentiment classification</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">The stanford corenlp natural language processing toolkit</title>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Manning</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mihai</forename><surname>Surdeanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John</forename><surname>Bauer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jenny</forename><surname>Finkel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Steven</forename><surname>Bethard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Mcclosky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of 52nd annual meeting of the association for computational linguistics: system demonstrations</title>
+		<meeting>52nd annual meeting of the association for computational linguistics: system demonstrations</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="55" to="60"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Semeval-2014 task 4: Aspect based sentiment analysis</title>
+		<author>
+			<persName><forename type="first">John</forename><surname>Pavlopoulos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Harris</forename><surname>Papageorgiou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ion</forename><surname>Androutsopoulos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maria</forename><surname>Pontiki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dimitris</forename><surname>Galanis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Suresh</forename><surname>Manandhar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 8th International Workshop on Semantic Evaluation (Se-mEval 2014)</title>
+		<meeting>the 8th International Workshop on Semantic Evaluation (Se-mEval 2014)</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="27" to="35"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Phrasernn: Phrase recursive neural network for aspect-based sentiment analysis</title>
+		<author>
+			<persName><forename type="first">Hai</forename><surname>Thien</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kiyoaki</forename><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Shirai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2015 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="2509" to="2514"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Glove: Global vectors for word representation</title>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Pennington</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2014 conference on empirical methods in natural language processing (EMNLP)</title>
+		<meeting>the 2014 conference on empirical methods in natural language processing (EMNLP)</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="1532" to="1543"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Opinion word expansion and target extraction through double propagation</title>
+		<author>
+			<persName><forename type="first">Guang</forename><surname>Qiu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiajun</forename><surname>Bu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chun</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Computational linguistics</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="9" to="27"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">a. Utilizing bert for aspect-based sentiment analysis via constructing auxiliary sentence</title>
+		<author>
+			<persName><forename type="first">Chi</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Luyao</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xipeng</forename><surname>Qiu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</title>
+		<meeting>the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="380" to="385"/>
+		</imprint>
+	</monogr>
+	<note>Long and Short Papers</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Aspect-level sentiment analysis via convolution over dependency tree</title>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richong</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Samuel</forename><surname>Mensah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yongyi</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xudong</forename><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)</title>
+		<meeting>the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)<address><addrLine>Hong Kong, China</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="5683" to="5692"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<monogr>
+		<author>
+			<persName><forename type="first">Duyu</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Qin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ting</forename><surname>Liu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1605.08900</idno>
+		<title level="m">Aspect level sentiment classification with deep memory network</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<title level="m" type="main">Graph attention networks</title>
+		<author>
+			<persName><forename type="first">Petar</forename><surname>Veličković</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guillem</forename><surname>Cucurull</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arantxa</forename><surname>Casanova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adriana</forename><surname>Romero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pietro</forename><surname>Lio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1710.10903</idno>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Target-sensitive memory networks for aspect sentiment classification</title>
+		<author>
+			<persName><forename type="first">Shuai</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sahisnu</forename><surname>Mazumder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mianwei</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yi</forename><surname>Chang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 56th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="957" to="967"/>
+		</imprint>
+	</monogr>
+	<note>Long Papers</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<author>
+			<persName><forename type="first">Wenya</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sinno</forename><surname>Jialin Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daniel</forename><surname>Dahlmeier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaokui</forename><surname>Xiao</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1603.06679</idno>
+		<title level="m">Recursive neural conditional random fields for aspect-based sentiment analysis</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Attention-based lstm for aspect-level sentiment classification</title>
+		<author>
+			<persName><forename type="first">Yequan</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Minlie</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Li</forename><surname>Zhao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2016 conference on empirical methods in natural language processing</title>
+		<meeting>the 2016 conference on empirical methods in natural language processing</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="606" to="615"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Bert post-training for review reading comprehension and aspect-based sentiment analysis</title>
+		<author>
+			<persName><forename type="first">Hu</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lei</forename><surname>Shu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Philip</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</title>
+		<meeting>the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="2324" to="2335"/>
+		</imprint>
+	</monogr>
+	<note>Long and Short Papers</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Aspect based sentiment analysis with gated convolutional networks</title>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Xue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tao</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 56th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="2514" to="2523"/>
+		</imprint>
+	</monogr>
+	<note>Long Papers</note>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Aspect-based sentiment classification with aspectspecific graph convolutional networks</title>
+		<author>
+			<persName><forename type="first">Chen</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Qiuchi</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dawei</forename><surname>Song</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)</title>
+		<meeting>the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)<address><addrLine>Hong Kong, China</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="4560" to="4570"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Graph convolution over pruned dependency trees improves relation extraction</title>
+		<author>
+			<persName><forename type="first">Yuhao</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peng</forename><surname>Qi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2018 Conference on Empirical Methods in Natural Language Processing<address><addrLine>Brussels, Belgium</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2018-10-31">2018. October 31 -November 4, 2018</date>
+			<biblScope unit="page" from="2205" to="2215"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

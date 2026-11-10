@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">EVALUATION OF THE WEB ACCESSIBILITY OF HIGHER-EDUCATION WEBSITES</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Patricia</forename><surname>Acosta-Vargas</surname></persName>
+							<email>patricia.acosta@udla.edu.ec</email>
+							<affiliation key="aff0">
+								<orgName type="department">Facultad de Formación General</orgName>
+								<orgName type="institution">Universidad de Las Américas -UDLA Quito</orgName>
+								<address>
+									<country key="EC">Ecuador</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sergio</forename><surname>Luján-Mora</surname></persName>
+							<email>sergio.lujan@ua.es</email>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Software and Computing Systems</orgName>
+								<orgName type="institution">University of Alicante</orgName>
+								<address>
+									<settlement>Alicante</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Luis</forename><surname>Salvador-Ullauri</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Facultad de Ingeniería de Sistemas</orgName>
+								<orgName type="institution">Escuela Politécnica Nacional -EPN Quito</orgName>
+								<address>
+									<country key="EC">Ecuador</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">EVALUATION OF THE WEB ACCESSIBILITY OF HIGHER-EDUCATION WEBSITES</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">9DCB02ED1CA47A9CD913265513A05D16</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-11T13:37+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Disability</term>
+					<term>ranking of universities</term>
+					<term>usability</term>
+					<term>WCAG 2.0</term>
+					<term>W3C</term>
+					<term>Web content accessibility</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>This article describes a study to assess the accessibility of the contents concerning the websites of 20 universities from all around the world. The accessibility assessment was carried out to verify compliance with the Web Content Accessibility Guidelines 2.0 (WCAG 2.0) published by the World Wide Web Consortium (W3C). The main goal of this study is to determine if even people with disabilities can access and use websites of the universities with higher academic prestige. Besides, in our approach we also make use of the Website Accessibility Conformance Evaluation Methodology (WCAG-EM) is an approach for determining how well a website conforms to WCAG 2.0. The WCAG-EM provides a guidance on using the methodology and considerations for specific situations.</p><p>From the results, we can conclude that the majority of the tested websites do not achieve an acceptable level of compliance. Universities with high academic prestige do not show a greater level of web accessibility. By performing the evaluation of university websites, we have identified that there are major barriers to a large number of users.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>The web accessibility indicates the ease of admission to websites to all public, especially to those with disabilities, to access a product or service. Web accessibility allows entering to the websites so that all users can perceive, understand, navigate and interact with the web <ref type="bibr" target="#b0">[1]</ref>. The Web in its origin was purely a text-based medium; however, when the Web started to be used also as a commercial platform, design and visual appearance became more important <ref type="bibr" target="#b1">[2]</ref>. During that process, most web developers did not apply suitable designs for universal access; therefore, the Web became less and less usable for people with disabilities. In the last years, people got aware of this problem, and the keyword "Web accessibility" has become rather popular <ref type="bibr" target="#b2">[3]</ref>. 1 <ref type="url" target="http://www.webometrics.info/es">http://www.webometrics.info/es</ref> This paper presents an analysis of web accessibility content established by the recommendation of the Web Content Accessibility Guidelines 2.0 (WCAG 2.0) <ref type="bibr" target="#b3">[4]</ref>. The analysis was applied to the main page of 20 worldwide universities ranked by Webometrics 1 . The accessibility assessment was carried out to verify compliance with accessibility guidelines of the selected universities. If the main page is not accessible, users may have trouble accessing to other pages of the site. This preliminary study will allow universities to comply with accessibility guidelines.</p><p>It should be noted that there are some studies related to websites accessibility. In the case of Spanish universities <ref type="bibr" target="#b4">[5]</ref> the results of websites accessibility of ten Andalusian Universities presented in the study, indicated that there are many ways to achieve full accessibility.</p><p>In the case of usability and accessibility to the content of websites of major US Universities <ref type="bibr" target="#b5">[6]</ref>, the results showed that there is 30% compliance with relation to web accessibility guidelines. Regarding the study of web accessibility policies in Americans with Disabilities Act (ADA) <ref type="bibr" target="#b6">[7]</ref>, studies have indicated that a large number of the websites of schools and university libraries are not accessible. These findings have caused concern and have reflected that there is so much to do in terms of the accessibility of websites.</p><p>Regarding to the article related with the accessibility of websites from Turkish universities <ref type="bibr" target="#b7">[8]</ref>, the results from assessing the level of accessibility to the examined web sites, show that a large number of websites have accessibility problems. The study suggests that it would be a good practice to adopt the principle of simple web design, using open source and management systems of free content. However, it recommends that universities hire an outside firm that specializes in the problems of web accessibility, in order to realize audits of the case.</p><p>In universities of South America, there is a web accessibility study from Universidad de las Fuerzas Armadas-ESPE <ref type="bibr" target="#b8">[9]</ref>. This study confirms that there are studies of web accessibility available for evaluation of the web accessibility in higher education. There are also studies of government sites of South America <ref type="bibr" target="#b9">[10]</ref>. In both cases, the results indicates that the websites do not provide adequate levels of accessibility.</p><p>Studies on government website the mobile websites of different countries and the experience of browsing of users, suggests that the websites should be designed for all types of mobile devices and operative systems. <ref type="bibr" target="#b10">[11]</ref>. These sites must be accessible to all, regardless of their abilities, which is suggested to apply the guidelines WCAG 2.0.</p><p>There are also studies about the performance of webbased on metrics for evaluating reliability and maintainability of hypermedia applications, which recommend applying web page replacement algorithms for increasing the website usability, maintainability, reliability, and ranking <ref type="bibr" target="#b11">[12]</ref>.</p><p>The rest of this paper is structured as follows: section II explains some basic concepts about web accessibility; section III presents the method applied in the analysis; section IV shows an analysis of the results; and lastly, in section V the conclusions obtained in the analysis were established.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. ACCESSIBILITY</head><p>WCAG 2.0 are divided into four general principles, organized into 12 guidelines <ref type="bibr" target="#b12">[13]</ref>. The principles of WCAG 2.0 are the following:</p><p>1. Perceivable: the criteria allow the product to be perceivable by people, regardless of their disabilities. 2. Operable: the user interface components and navigation must be operable. 3. Understandable: the information and the operation of user interface must be understandable. 4. Robust: the content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies.</p><p>The guidelines are composed of compliance criteria; each criterion has an adequacy level of conformity that can indicate the impact of accessibility. A number of requirements must be observe in order to comply a website with the WCAG 2.0 guidelines. Three levels are identified: 1. Level A: this is the minimum level. 2. Level AA: this is the middle level; the website must meet all the criteria under levels A and AA.  <ref type="bibr" target="#b13">[14]</ref>. This method proposed the evaluation of all types of static and dynamic websites, mobile versions, etc.</p><p>As such, this study presents a method to guide to evaluators in order to promote good practices, improve and replace the requirements outlined in WCAG 2.0.</p><p>In this method it is essential the knowledge provided by the expert on the WCAG 2.0. The evaluator must understand web technologies, accessibility barriers, techniques, tools and evaluation methods to identify such limitations.</p><p>The method is flexible and it can be applied in different situations and contexts, such as self-evaluation, evaluation by third parties, evaluation during development, periodic evaluations, etc. The diagram presented in Fig. <ref type="figure" target="#fig_0">1</ref> shows the five phases applied in the evaluation of websites in this work. The study measured aspects of the site as the type of web pages, the size, complexity, the technologies used, and the knowledge of experts to design and develop the websites.</p><p>Phase 1: Define the evaluation scope In the first phase, it is necessary to define the scope of the site, the pages to which will be applied the evaluation.</p><p>Aspects and developed services, versions of it, parts of the portal should be documented Furthermore, the adequacy level (A, AA, AAA) <ref type="bibr" target="#b13">[14]</ref> to be evaluated is defined. This study applied the level of conformity AA. A list of used web browsers and products of support with accessibility features should be defined too.</p><p>Phase 2: Explore the target website The purpose of phase two is to determine the features that are essential for a website. Within the site, there may be many pages and page states with different styles, designs, structures and functions.</p><p>Probably, these pages have been generated using different templates or written by different people. In this phase, the expert reviews the website, in order to check for broken links, detects the most important pages of the website. Besides, the expert also examines and analyzes the web pages for key information.</p><p>Phase 3: Select a sample In phase three, the main page of each university is identified. Previously the states of the websites that were not part of the sample were reviewed, but which acted as indicators of verification of results. Phase 4: Audit sample In phase four, each sample site is verified in order to meet with compliance requirements and the adequacy level AA concerning WCAG 2.0. In assessing was verified the functionality of the processes, the introduction of data, notifications and interactions.</p><p>Phase 5: Record results At last, in phase five the results are documented. This documentation is generated in each process to justify and ensure transparency and reproducibility of the analysis.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. ANALYSIS OF RESULTS</head><p>At present, there are several tools available for assessment and verification of web accessibility, to automate the process of evaluating the accessibility of the web pages and value the level of compliance. The majority automated assessment tools are based on accessibility guidelines WCAG 2.0.</p><p>The use of web accessibility evaluation tools is a widespread practice. Evaluation tools are heavily employed as they help in reducing the burden of identifying accessibility barriers. However, an overreliance on automated tests often leads to setting aside further testing that entails expert evaluation and user tests <ref type="bibr" target="#b14">[15]</ref>.</p><p>The tools used in this evaluation are TAW and Examinator.</p><p>A. TAW The web accessibility evaluation was performed with Test of Accessibility Web (TAW), an online tool developed by the Unit Web Accessibility of Foundation CTIC (Centre for Information and Communication Technology). This tool allows analyze automatically the accessibility of websites. TAW comprehensively revises all the items and pages that compose the website. In the report these are detailed three parts:</p><p>Part 1: header shows the logo, the version of the standard Web Accessibility Initiative (WAI) Part 2: Analyzed Web, displays icons alert on accessibility issues found Part 3: Summary, are published, problems accessibility found, organized by priority, indicates the code of the verification point, description of the problem, line number of the page analyzed, HTML tag that generates the problem of accessibility. TAW automatically validates the accessibility of the site and it indicates the checkpoints to be checked manually.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>TABLE II contains the extracted numerical data</head><p>analysis problems of the principles: Perceivable (P), Operable (O), Understandable (U) and Robust (R).</p><p>The universities that have more problems are: It is noted that the University of Pretoria, presents more problems, followed by Peking University and the University of São Paulo USP.</p><p>The universities that have fewer problems are Eidgenössische Technische Hochschule ETH Zürich, followed by National Taiwan University and Universidad Nacional Autónoma de México. The Fig. <ref type="figure" target="#fig_1">2</ref> shows the main problems of web accessibility in the websites of universities. The University of Pretoria with 222 problems, followed by Peking University with 153 and thirdly the University of São Paulo USP with 106.   The Fig. <ref type="figure" target="#fig_2">3</ref> shows universities with the highest number of warnings. The first in the list is Stellenbosch University with 1005 warnings, followed by University of Queensland with 817 and University of Oxford with 607 warnings.    </p><formula xml:id="formula_0">B C D E F G H I J L M N O P Q R S T U</formula><p>than seven point nine, which corresponds 70%. Besides, there are three universities with less than five, which corresponds to the 15%. Finally, one university was not possible to analyze with the tool.</p><p>The result obtained in the analysis with the Examinator tool emits an overall score of the website. The parameters of excellent, good, fair, bad and very bad, were analyzed, which serve as a reference in order to manually to correct the errors identified. Greater than 5 and less than 7.9 14 70</p><p>Less than 5 3 15</p><p>Without to apply the tool 1 5</p><p>V. CONCLUSIONS This paper concludes that the majority of tested websites do not conform an acceptable level of compliance. Universities with high academic prestige have not been concerned to provide accessible information about the university through its website, so that, everyone can access it, regardless if the user has any disability.</p><p>None of the analyzed websites of prestigious universities worldwide accomplished accessibility guidelines; therefore, their pages are hardly accessible <ref type="bibr" target="#b15">[16]</ref>. By performing the evaluation of universities websites, we have identified that there are major barriers to a large number of users.</p><p>The identified barriers may hinder or prevent access to contents to people who may have a physical or sensorial limitation. Web pages should offer several alternatives, different presentations, to suit the needs of most users and they should be replicable under different circumstances. This study has limitations and has taken risks in the planning stage, but can serve as lessons learned for future work.</p><p>Future research may highlight the best methods for implementing the guidelines of WCAG 2.0 into existing websites specially to redevelop a website more inclusive for users.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. Diagram of website evaluation</figDesc><graphic coords="3,98.10,152.52,136.80,250.20" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 2. Universities with main problems of web accessibility</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 3 .</head><label>3</label><figDesc>Fig. 3. Universities with the highest number of warnings</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>TABLE II :</head><label>II</label><figDesc>ANALYSIS OF PROBLEMS WITH TAW</figDesc><table><row><cell/><cell/><cell/><cell/><cell cols="2">Problems</cell><cell/></row><row><cell>Code</cell><cell>Universities</cell><cell/><cell/><cell/><cell/><cell/></row><row><cell/><cell/><cell>P</cell><cell>O</cell><cell>U</cell><cell>R</cell><cell>Total</cell></row><row><cell>A</cell><cell>Harvard University</cell><cell>8</cell><cell>6</cell><cell>9</cell><cell>2</cell><cell>25</cell></row><row><cell>B</cell><cell>Massachusetts Institute of Technology</cell><cell>11</cell><cell>0</cell><cell>2</cell><cell>2</cell><cell>15</cell></row><row><cell>C</cell><cell>Stanford University</cell><cell>16</cell><cell>0</cell><cell>0</cell><cell>1</cell><cell>17</cell></row><row><cell>D</cell><cell>Universidade de São Paulo USP</cell><cell>54</cell><cell>43</cell><cell>4</cell><cell>5</cell><cell>106</cell></row><row><cell>E</cell><cell>Universidad Nacional Autónoma de México</cell><cell>2</cell><cell>0</cell><cell>0</cell><cell>5</cell><cell>7</cell></row><row><cell>F</cell><cell>Universidade Estadual de Campinas</cell><cell>4</cell><cell>7</cell><cell>5</cell><cell>0</cell><cell>16</cell></row><row><cell>G</cell><cell>Universidad de Chile</cell><cell>21</cell><cell>22</cell><cell>2</cell><cell>5</cell><cell>50</cell></row><row><cell>H</cell><cell>University of Oxford</cell><cell>4</cell><cell>0</cell><cell>0</cell><cell>10</cell><cell>14</cell></row><row><cell>I</cell><cell>University of Cambridge</cell><cell>9</cell><cell>12</cell><cell>1</cell><cell>11</cell><cell>33</cell></row><row><cell>J</cell><cell>Eidgenössische Technische Hochschule ETH Zürich</cell><cell>3</cell><cell>0</cell><cell>0</cell><cell>0</cell><cell>3</cell></row><row><cell>L</cell><cell>University College London</cell><cell>2</cell><cell>2</cell><cell>1</cell><cell>6</cell><cell>11</cell></row><row><cell>M</cell><cell>University of Tokyo</cell><cell>8</cell><cell>0</cell><cell>2</cell><cell>2</cell><cell>12</cell></row><row><cell>N</cell><cell>Peking University</cell><cell>86</cell><cell>48</cell><cell>5</cell><cell>14</cell><cell>153</cell></row><row><cell>O</cell><cell>National Taiwan University</cell><cell>4</cell><cell>0</cell><cell>1</cell><cell>2</cell><cell>7</cell></row><row><cell>P</cell><cell>University of Cape Town</cell><cell>35</cell><cell>3</cell><cell>2</cell><cell>17</cell><cell>57</cell></row><row><cell>Q</cell><cell>Stellenbosch University</cell><cell>3</cell><cell>4</cell><cell>0</cell><cell>4</cell><cell>11</cell></row><row><cell>R</cell><cell>University of Pretoria</cell><cell>64</cell><cell>3</cell><cell>2</cell><cell>153</cell><cell>222</cell></row><row><cell>S</cell><cell>University of Queensland</cell><cell>16</cell><cell>6</cell><cell>0</cell><cell>1</cell><cell>23</cell></row><row><cell>T</cell><cell>University of Melbourne</cell><cell>14</cell><cell>6</cell><cell>1</cell><cell>2</cell><cell>23</cell></row><row><cell>U</cell><cell>University of New South Wales</cell><cell>3</cell><cell>3</cell><cell>0</cell><cell>6</cell><cell>12</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>TABLE III ,</head><label>III</label><figDesc>the warnings require a manually revision by an expert of web accessibility are shown. Universities with the highest number of warnings are Stellenbosch University, followed by University of Queensland and University of Oxford.</figDesc><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>TABLE III :</head><label>III</label><figDesc>ANALYSIS OF WARNINGS WITH TAW</figDesc><table><row><cell/><cell/><cell/><cell/><cell cols="2">Warnings</cell><cell/></row><row><cell>Code</cell><cell>Universities</cell><cell/><cell/><cell/><cell/><cell/></row><row><cell/><cell/><cell>P</cell><cell>O</cell><cell>U</cell><cell>R</cell><cell>Total</cell></row><row><cell>A</cell><cell>Harvard University</cell><cell>24</cell><cell>40</cell><cell>12</cell><cell>143</cell><cell>219</cell></row><row><cell>B</cell><cell>Massachusetts Institute of Technology</cell><cell>24</cell><cell>30</cell><cell>6</cell><cell>30</cell><cell>90</cell></row><row><cell>C</cell><cell>Stanford University</cell><cell>19</cell><cell>36</cell><cell>6</cell><cell>162</cell><cell>223</cell></row><row><cell>D</cell><cell>Universidade de São Paulo USP</cell><cell>37</cell><cell>39</cell><cell>12</cell><cell>218</cell><cell>306</cell></row><row><cell>E</cell><cell>Universidad Nacional Autónoma de México</cell><cell>26</cell><cell>11</cell><cell>0</cell><cell>228</cell><cell>265</cell></row><row><cell>F</cell><cell>Universidade Estadual de Campinas</cell><cell>71</cell><cell>23</cell><cell>6</cell><cell>30</cell><cell>130</cell></row><row><cell>G</cell><cell>Universidad de Chile</cell><cell>98</cell><cell>63</cell><cell>0</cell><cell>18</cell><cell>179</cell></row><row><cell>H</cell><cell>University of Oxford</cell><cell>25</cell><cell>46</cell><cell>6</cell><cell>530</cell><cell>607</cell></row><row><cell>I</cell><cell>University of Cambridge</cell><cell>21</cell><cell>70</cell><cell>12</cell><cell>122</cell><cell>225</cell></row><row><cell>J</cell><cell>Zürich Eidgenössische Technische Hochschule ETH</cell><cell>52</cell><cell>32</cell><cell>6</cell><cell>46</cell><cell>136</cell></row><row><cell>L</cell><cell>University College London</cell><cell>26</cell><cell>53</cell><cell>6</cell><cell>24</cell><cell>109</cell></row><row><cell>M</cell><cell>University of Tokyo</cell><cell>0</cell><cell>1</cell><cell>0</cell><cell>0</cell><cell>1</cell></row><row><cell>N</cell><cell>Peking University</cell><cell>71</cell><cell>61</cell><cell>12</cell><cell>121</cell><cell>265</cell></row><row><cell>O</cell><cell>National Taiwan University</cell><cell>46</cell><cell>22</cell><cell>6</cell><cell>165</cell><cell>239</cell></row><row><cell>P</cell><cell>University of Cape Town</cell><cell>179</cell><cell>215</cell><cell>6</cell><cell>23</cell><cell>423</cell></row><row><cell>Q</cell><cell>Stellenbosch University</cell><cell>4</cell><cell>3</cell><cell>6</cell><cell>992</cell><cell>1005</cell></row><row><cell>R</cell><cell>University of Pretoria</cell><cell>13</cell><cell>66</cell><cell>0</cell><cell>78</cell><cell>157</cell></row><row><cell>S</cell><cell>University of Queensland</cell><cell>10</cell><cell>18</cell><cell>6</cell><cell>783</cell><cell>817</cell></row><row><cell>T</cell><cell>University of Melbourne</cell><cell>16</cell><cell>44</cell><cell>18</cell><cell>402</cell><cell>480</cell></row><row><cell>U</cell><cell>University of New South Wales</cell><cell>20</cell><cell>13</cell><cell>6</cell><cell>26</cell><cell>65</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>TABLE IV</head><label>IV</label><figDesc/><table><row><cell>shows the unverified that could be</cell></row><row><cell>manually review by an expert of web accessibility.</cell></row><row><cell>Universities with the highest number of unverified are</cell></row><row><cell>University of Queensland, followed by Eidgenössische</cell></row><row><cell>Technische Hochschule ETH Zürich, Stellenbosch</cell></row><row><cell>University and University of Melbourne.</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5"><head>15 17 15 17 16 14 16 17 18 17 16 15 17 14 18 15 19 18 17</head><label/><figDesc>TABLE VI shows that there are two universities with greater and equal to eight in the scale of 10 according Examinator that corresponds to the 10% of the sample. There are 14 universities with greater than five and less</figDesc><table><row><cell>20</cell></row><row><cell>18</cell></row><row><cell>16</cell></row><row><cell>14</cell></row><row><cell>12</cell></row><row><cell>10</cell></row><row><cell>8</cell></row><row><cell>6</cell></row><row><cell>4</cell></row><row><cell>2</cell></row><row><cell>0</cell></row><row><cell>A</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_6"><head>TABLE VI :</head><label>VI</label><figDesc>ANALYSIS OF SCORE OF EXAMINATOR</figDesc><table><row><cell>Score</cell><cell>Number of</cell><cell>Percent</cell></row><row><cell/><cell>universities</cell><cell>(%)</cell></row><row><cell>Greater and equal to 8</cell><cell>2</cell><cell>10</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2" xml:id="foot_0"><p>http://www.tawdis.net/ III. METHOD For the analysis of this preliminary work, in TABLE I were recorded 20 samples from universities ranked by Webometrics, among them there are universities in North America, Latin America, Europe, Asia, Africa and</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="3" xml:id="foot_1"><p>http://examinator.ws/ Authorized licensed use limited to: The Open University. Downloaded on October 09,2025 at 21:12:50 UTC from IEEE Xplore. Restrictions apply.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_2"><p>Authorized licensed use limited to: The Open University. Downloaded on October 09,2025 at 21:12:50 UTC from IEEE Xplore. Restrictions apply.</p></note>
+		</body>
+		<back>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The Fig. <ref type="figure">4</ref> shows the universities with the highest number of unverified problems. The University of Queensland has 19 unverified problems, followed by Eidgenössische Technische Hochschule ETH Zürich, Stellenbosch University and University of Melbourne with 18 unverified problems. This tool allows automatically analyze and manual accessibility on websites, besides it is possible to select the level of analysis: Level A, Level AA and Level AA, according the WCAG 2.0</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Examinator</head><p>It is an online service that automatically evaluates the accessibility of a web page, using as a reference some 4 Without to apply the tool recommended of WCAG 2.0. Examinator adjudges a score between 1 and 10 as indicator of the accessibility of the pages and provides a detailed report of the tests performed. The highest score upon in the range of ten indicates that the website is more accessible.</p><p>TABLE <ref type="table">V</ref> shows the universities has a score of 8, which corresponds to an acceptable average level and those are the universities of Stanford and Queensland. The largest group between 5 and less than 7.9 corresponds to an average acceptable level. This is awarded to Harvard University, Massachusetts Institute of Technology, Universidad Nacional Autónoma de México, Universidade Estadual de Campinas, Universidad de Chile, University of Oxford, University of Cambridge, University College London, University of Tokyo, National Taiwan University, Stellenbosch University, University of Pretoria, University of Melbourne and the University of New South Wales. The universities that has a lower score, less than five. In those universities are Universidade de São Paulo USP, Peking University and University of Cape Town.</p><p>The automatic review cannot cover all compliance criteria of WCAG 2.0. For evaluation and manual analysis is necessary to have the assistance of an expert <ref type="bibr" target="#b14">[15]</ref>. </p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Web Accessibility Among the Countries of the European Union: a Comparative Study</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Luján-Mora</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Actual Problems of Computer Science</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="18" to="27"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Enabling Technologies: Infrastructure for Collaborative Enterprises, WET ICE</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Boldyreff</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings. Eleventh IEEE International Workshops</title>
+		<meeting>Eleventh IEEE International Workshops</meeting>
+		<imprint>
+			<date type="published" when="2002">2002. 2002</date>
+			<biblScope unit="page" from="35" to="40"/>
+		</imprint>
+	</monogr>
+	<note>Determination and evaluation of Web accessibility</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Improving Web accessibility by providing higher education facilities for Web designers and Web developers following the design for all approach</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ortner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">U A</forename><surname>Inst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Integriert Studieren</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Miesenberger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">16th International Workshop on Database and Expert Systems Applications (DEXA'05)</title>
+		<imprint>
+			<date type="published" when="2005">2005</date>
+			<biblScope unit="page" from="866" to="870"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>W3c</surname></persName>
+		</author>
+		<ptr target="https://www.w3.org/TR/WCAG20/"/>
+		<imprint>
+			<date type="published" when="0202">02 02 2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Evolución de la accesibilidad web en las Universidades Andaluzas», Píxel-Bit</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">T</forename><surname>Morales</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>García Sánchez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Castillo Gutiérrez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Revista de Medios y Educación</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="page" from="65" to="83"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Developing Accountability Metrics for Students with Disabilities in Higher Education: Determining Critical Questions</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Burke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Hedrick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ouelette</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Thompson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Postsecondary Education and Disability</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">42</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Web accessibility policies at land-grant universities</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Bradbard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Peters</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Caneva</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Internet and Higher Education</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="258" to="266"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">The accessibility of university websites: the case of Turkish universities</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Serhat</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Universal Access in the Information Society</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="101" to="110"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Evaluación de la accesibilidad de las páginas web de las universidades ecuatorianas</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Acosta-Vargas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Luján-Mora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">XI Congreso de Ciencia y Tecnología</title>
+		<idno type="ISSN">1390-4663</idno>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="181" to="187"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>Salvador-Ullauri</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">eGovernment and Web Accessibility in South America</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Luján-Mora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Navarrete</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Peñafiel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">First International Conference on eDemocracy &amp; eGovernment (ICEDEG 2014)</title>
+		<meeting><address><addrLine>Quito</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="77" to="82"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Mobile government websites analysis</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">V D</forename><surname>Giulianelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Pons</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gonzalez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Computing Congress (CCC)</title>
+		<meeting><address><addrLine>, Colombia</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2012">2012. 2012</date>
+			<biblScope unit="page" from="11" to="12"/>
+		</imprint>
+	</monogr>
+	<note>7th Colombian</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Analyzing Performance of Web-Based Metrics for Evaluating Reliability and Maintainability of Hypermedia Applications</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dhawan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kumar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Broadband Communications, Information Technology &amp; Biomedical Applications</title>
+		<imprint>
+			<date type="published" when="2008">2008. 2008</date>
+			<biblScope unit="page" from="376" to="383"/>
+		</imprint>
+	</monogr>
+	<note>Third International Conference on</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<ptr target="http://accesibilidadweb.dlsi.ua.es/?menu=niveles-2.0"/>
+	</analytic>
+	<monogr>
+		<title level="j">Accesibilidad Web</title>
+		<imprint>
+			<date type="published" when="0501">05 01 2016</date>
+		</imprint>
+		<respStmt>
+			<orgName>Universidad de Alicante</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<ptr target="https://www.w3.org/WAI/eval/conformance"/>
+		<title level="m">Web Accessibility Initiative</title>
+		<imprint>
+			<date type="published" when="0201">02 01 2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Benchmarking web accessibility evaluation tools: measuring the harm of sole reliance on automated tests</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vigo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Conway</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">W4A '13 Proceedings of the 10th International Cross-Disciplinary Conference on Web Accessibility</title>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Enhancement of Educational Institutions Dynamic Websites by Adding Security and Accessibility</title>
+		<author>
+			<persName><forename type="first">E.-B</forename><surname>Fgee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Abakar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Elhounie</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Fourth International Conference on Next Generation Mobile Applications, Services and Technologies</title>
+		<imprint>
+			<publisher>IEEE Conference Publications</publisher>
+			<date type="published" when="2010">2010. 2010</date>
+			<biblScope unit="page" from="96" to="101"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

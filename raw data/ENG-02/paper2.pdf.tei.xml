@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A Search Space Reduction Strategy within the MILP Branch Flow Model for Concurrent AC Multistage Transmission Expansion and Reactive Power Planning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Miguel</forename><forename type="middle">A</forename><surname>Torres</surname></persName>
+							<email>mitorres@dsee.fee.unicamp.br</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Systems and Energy</orgName>
+								<orgName type="institution">UNICAMP</orgName>
+								<address>
+									<addrLine>Av. Albert Einstein 400</addrLine>
+									<postCode>13083-852</postCode>
+									<settlement>Campinas</settlement>
+									<country key="BR">Brasil</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Escuela Superior Politécnica del Litoral</orgName>
+								<address>
+									<settlement>ESPOL</settlement>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="institution">Univesidad Laica Vicente Rocafuerte de Guayaquil</orgName>
+								<address>
+									<addrLine>Av. de Las Américas Apartado Postal 11</addrLine>
+									<postCode>-33</postCode>
+									<settlement>Guayaquil</settlement>
+									<country key="EC">Ecuador</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Carlos</forename><forename type="middle">A</forename><surname>Castro</surname></persName>
+							<email>ccastro@ieee.org</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Systems and Energy</orgName>
+								<orgName type="institution">UNICAMP</orgName>
+								<address>
+									<addrLine>Av. Albert Einstein 400</addrLine>
+									<postCode>13083-852</postCode>
+									<settlement>Campinas</settlement>
+									<country key="BR">Brasil</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Marcos</forename><forename type="middle">J</forename><surname>Rider</surname></persName>
+							<email>mjrider@dsee.fee.unicamp.br</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Systems and Energy</orgName>
+								<orgName type="institution">UNICAMP</orgName>
+								<address>
+									<addrLine>Av. Albert Einstein 400</addrLine>
+									<postCode>13083-852</postCode>
+									<settlement>Campinas</settlement>
+									<country key="BR">Brasil</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Facultad de Ingeniería en Electricidad y Computación</orgName>
+								<address>
+									<addrLine>Campus Gustavo Galindo km. 30.5 Vía Perimetral</addrLine>
+									<postBox>P.O. Box 09-01</postBox>
+									<postCode>-5863</postCode>
+									<settlement>Guayaquil</settlement>
+									<country key="EC">Ecuador</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">A Search Space Reduction Strategy within the MILP Branch Flow Model for Concurrent AC Multistage Transmission Expansion and Reactive Power Planning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8A880E83653179390AEEC45C5E0131DA</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-01T12:00+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>AC flow formulation</term>
+					<term>concurrent AC multistage transmission network expansion and reactive power planning</term>
+					<term>mixed-integer linear programming</term>
+					<term>search space reduction strategy</term>
+					<term>security constraints.</term>
+					<term>Active power generation maximum and minimum limits</term>
+					<term>at bus</term>
+					<term>stage</term>
+					<term>Reactive power demand at bus</term>
+					<term>stage</term>
+					<term>Reactive power generation maximum and minimum limits</term>
+					<term>at bus</term>
+					<term>stage</term>
+					<term>Active power generation at bus</term>
+					<term>stage and scenario</term>
+					<term>Reactive power flow in equivalent line</term>
+					<term>corridor</term>
+					<term>stage and scenario</term>
+					<term>corridor</term>
+					<term>stage and scenario</term>
+					<term>Reactive power generation at bus</term>
+					<term>stage and scenario</term>
+					<term>Voltage phase angle at bus</term>
+					<term>stage and scenario</term>
+					<term>Voltage magnitude at bus</term>
+					<term>stage and scenario</term>
+					<term>Square of voltage magnitude</term>
+					<term>Binary Variables</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>This research proposes a significant reduction in the processing time to solve the concurrent AC multistage transmission network expansion and reactive power planning problem with security constraints, by an innovative search space reduction strategy. Initially, the concurrent planning problem is modeled as a mixed-integer linear programming (MILP) problem, using an AC branch flow formulation to represent the steady-state operation of the transmission network. The innovative strategy consists of obtaining a stage-by-stage solution pool of the MILP model as a static problem, to identify the significant candidate lines. Therefore, those lines considered insignificant would not be considered as candidates in the multistage problem. Then, with the updated database, it is possible to solve the multistage MILP problem with a reduced search space. The evaluation of the proposed methodology is done using the IEEE 24-and 118-bus test systems, showing the performance of the proposed methodology.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>INTRODUCTION</head><p>One of the main targets involved in the power system transmission expansion planning (TEP) and policy making is to assure adequate generation and transmission facilities within the normal desired stability and security levels, still minimizing the total investment and operational costs <ref type="bibr" target="#b0">[1]</ref>.</p><p>Within the classic TEP problem, the allocation, the quantity and the installation time of the new network elements, such as lines or reactive power sources, must be defined within a predefined horizon <ref type="bibr" target="#b1">[2]</ref>.</p><p>Direct current (DC) load flow formulation model has been used in the early proposed TEP schemes, due to its simplicity and linearity <ref type="bibr" target="#b0">[1]</ref>. This model commonly uses only nodal active powers and voltage phase angles, and several models have been proposed such as Transportation Garver model <ref type="bibr" target="#b2">[3]</ref>, linear hybrid model <ref type="bibr" target="#b3">[4]</ref> and linear disjunctive model <ref type="bibr" target="#b4">[5]</ref>. One of the main weaknesses of the models based on DC load flow formulation is related to neglecting the power losses <ref type="bibr" target="#b0">[1]</ref>.</p><p>In the few past years, the alternating current (AC) model was considered as an ideal mathematical model due to its inherent features, leading to a mixed-integer non-linear programming problem without a guaranteed global optimal solution <ref type="bibr" target="#b1">[2]</ref>. Despite this, there were proposals in the literature considering mathematical, heuristic and meta-heuristic methods <ref type="bibr" target="#b5">[6]</ref>. Besides the computational processing problems, there are other considerations to add up to the selected model. They should consider security issues and multistage planning <ref type="bibr" target="#b6">[7]</ref>. Recently, a model was proposed which considers a novel MILP for solving TEP problem simultaneously with reactive power planning (RPP) considering a linearized AC model. In addition, it incorporates multistage and security constraints <ref type="bibr" target="#b7">[8]</ref>. One of the advantages of using MILP is that it could be solved by commercial solvers, such as CPLEX <ref type="bibr" target="#b8">[9]</ref>, and implemented with the mathematical programming language AMPL <ref type="bibr" target="#b9">[10]</ref>, so it is possible to obtain the optimal solution. Moreover, when the size of the system increases, even using a MILP model <ref type="bibr" target="#b4">[5]</ref>, the time required for solving the problem increases exponentially and this is the reason why a search space reduction is proposed <ref type="bibr" target="#b10">[11]</ref>.</p><p>This research presents an innovative search space reduction strategy, as a further development of <ref type="bibr" target="#b10">[11]</ref>, applied to the multistage AC TEP problem simultaneously with RPP <ref type="bibr" target="#b7">[8]</ref>. The main contribution of this paper is the processing time savings to solve the multistage AC transmission expansion planning, which includes security constraints and opens the possibility of including others features to the TEP model, and even allows the possibility of dealing with large scale transmission networks.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. THE PROPOSED APROACH</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. MILP model for multistage AC TEP problem with RPP considering N-1 security constraints [8]</head><p>The proposed model considers a planning horizon split into stages, the incorporation of new lines and fixed reactive power sources, and the N-1 contingency for both existing and new lines. In this model matrix Γ is introduced, sized |Ω | × | |, and it is filled by 0 and 1 elements. If Γ , = 1, a contingency occurs at line in scenario , else Γ , = 0 <ref type="bibr" target="#b7">[8]</ref>. Due to the contingency nature, all the operational variables, as well as the network constraints, depend on the selected contingency scenario . Therefore, the number of operational variables increases.</p><p>On the other hand, the investment formulation does not depend on the contingency nature, so the line and fixed reactive source choice binary variables remain the same as in the multistage planning model. </p><formula xml:id="formula_0">∀ ∈ Ω , ∀ Ω , ∀ , ∀ , ∀ | = = (18) , ,<label>, , , , , , , , , , ∀ ∈</label></formula><formula xml:id="formula_1">Ω , ∀ Ω , ∀ , ∀ , ∀ | = = (19) , , ∈ = 1 ∀ Ω , ∀<label>(20)</label></formula><formula xml:id="formula_2">• , , ∈ ∀ Ω , ∀ (21) • , , ∈ • , , ∈ ∀ Ω , ∀ (22) - 1 -ℎ , , , , , -, , - 1 -ℎ , , ∀ Ω , ∀ , ∀ , ∀<label>(23) ℎ , , , , , ℎ ,</label></formula><p>∀ Ω , ∀ , ∀</p><p>, , = 0</p><formula xml:id="formula_5">∀ Ω | = , ∀ , ∀<label>(34)</label></formula><p>, , ∈ 0,1 ∀ Ω , ∀ , ∀</p><formula xml:id="formula_6">, , ∈ 0,1 ∀ Ω , ∀ , ∀<label>(35) ℎ</label></formula><p>The idea of this model is to make an optimal decision about investing or not in new lines (by determining binary variables , , ) and new fixed reactive power sources (by binary variables ℎ , , ). When the base scenario is analyzed, the maximum current and apparent power through line are ̅ , , and ̅ , , respectively. However, when contingencies occur, both limits mentioned above are assumed to be increased by 10-20%. These values are showed in the longterm transmission expansion planning <ref type="bibr" target="#b10">[11]</ref>  <ref type="bibr" target="#b11">[12]</ref>.</p><p>The objective function (1) represents the total investment cost in each stage , expressed in present value, considering an annual discount rate with the limit analyzed period time . The objective function considers the nature of the new lines and new fixed power reactive sources. Constraints ( <ref type="formula">2</ref>) and ( <ref type="formula">3</ref>) are related to the behavior of the expansion cost, respectively for the first and further stages. Constraints ( <ref type="formula">4</ref>) and ( <ref type="formula">5</ref>) represent the active and reactive power balance equations at all buses, for each stage and for each scenario. Constraints ( <ref type="formula">6</ref>) and ( <ref type="formula">7</ref>) represent the terminal voltage magnitude and angle difference for each line at each stage for each scenario.</p><p>Constraints ( <ref type="formula">8</ref>) and ( <ref type="formula">9</ref>) show the behavior of auxiliary variables , , and , , , which are used to obtain the voltage magnitude and angle difference in each line for each stage and each scenario. When both variables are equal to zero, it means there is at least one line in corridor .</p><p>Constraint <ref type="bibr" target="#b9">(10)</ref> is a linearized representation of the nonlinear relationship between active power, reactive power, voltage magnitude and current flow magnitude, of the equivalent circuit of the lines in corridor for each stage and each scenario. Constraints ( <ref type="formula">11</ref>)-( <ref type="formula">17</ref>) are related to the internal auxiliary variables within the linear representation of the nonlinear current flow magnitude calculation. Constraint <ref type="bibr" target="#b14">(15)</ref>, as in <ref type="bibr" target="#b4">[5]</ref> establishes that ∆ , , = , , ⁄ and , , , = (2 -1)∆ , , , where is the total number of linearization steps.</p><p>The effect of including new lines in the existing topology is shown in ( <ref type="formula">18</ref>) and ( <ref type="formula">19</ref>), which describe the shunt elements of such new lines. Constraint (20) establishes that only one configuration of lines must be selected in each stage , while (21) shows the maximum number of lines that could be added to corridor . Eq. ( <ref type="formula">22</ref>) establishes that each stage must have at least the same number of lines of the previous stage -1.</p><p>Similarly, the effect of including new fixed reactive power sources in the existing topology is shown in ( <ref type="formula" target="#formula_2">23</ref>) and (24). Constraint (25) establishes the maximum number of reactive power sources that could be added at bus , while (26) establishes a specific precedence order to include the sources. Eq. ( <ref type="formula">27</ref>) establishes that, in case one source was set up in stage , it cannot be removed in stage + 1. Constraints ( <ref type="formula">28</ref>)-(30) establish the current flow magnitude in corridor , the minimum and maximum voltage magnitude in each bus and apparent power flow in corridor . Constraints (31) and (32) show the generator active and reactive power limits at each stage and each scenario. Constraint (33) establishes the maximum voltage angle difference variation in each bus for each stage and each scenario. Constraint (34) requires that the phase angle of the reference bus must be zero in every stage at all scenarios. Finally, the binary behavior of , , and ℎ , , is expressed in (35) and (36).</p><p>Model ( <ref type="formula">1</ref>)-(36) involves the use of binary variables and there is are many transmission expansion options. This is reflected in the size of the search space. For systems with hundreds or thousands of buses, this MILP problem could be considered as difficult to be solved because of its complex structure and behavior <ref type="bibr" target="#b12">[13]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Search Space Reduction Strategy</head><p>In <ref type="bibr" target="#b10">[11]</ref>, a search space reduction strategy was proposed to decrease the computational effort to solve the TEP problem using a linear disjunctive model with some modifications to include contingencies. As mentioned at the end of the previous section, the model ( <ref type="formula">1</ref>)-(36) requires a search space reduction strategy to reduce its complexity, which will be reflected in the computational time and effort.</p><p>The simple innovative search space reduction strategy proposed in this paper is based on finding the total number of possible solutions that could have positive effects over the network, thus eliminating the less important ones. The main goal is to implement this novel strategy to the mathematical model (1-36) and solve it, especially for large sized transmission networks with multistage and security constraints.</p><p>The proposed strategy follows the next steps: 1. Look for all relevant solutions that could cause a significant effect to solve each simple stage expansion planning problem.</p><p>2. Find out all the possible candidates that result insignificant for every stage of the expansion planning problem, so they could be removed from the total TEP problem database. The static TEP problem is solved for each stage separately, using (1)-(36). A set of solutions ("pool") is created for each stage, and the candidates that never appear in the pool are labeled as the insignificant ones. 3. Redefine the maximum value of transmission lines for each corridor, not only to remove the possible lines that are not significant, but to decrease the maximum number of parallel lines of each corridor in the database.</p><p>This simple idea would end up in a high quality total solution for the main multistage TEP problem considering security constraints, which allows the possibility of incorporating more actual details that could improve the accuracy of the mathematical model. The idea of obtaining a pool of solutions by initially solving for each stage separately aims to reduce the search space, and consequently to result in a computationally feasible multistage model solution. Therefore, the solution provided by the multistage model is located within the reduced space. Even though it is theoretically possible that the overall optimal solution lies outside the reduced search space, in practice this possibility is very slim, once the search space reduction procedure is based on eliminating only those investment alternatives from each stage which are clearly inadequate.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. TEST AND RESULTS</head><p>First, the IEEE 24-bus system was used to evaluate the innovative proposal. At the end of the test it is possible to compare the computational effort. Then, a modified IEEE 118-bus system was used to evaluate the search space reduction method. The results were obtained by using a computer with 4Gb RAM memory and Intel ® Core (TM) i5 processors. Moreover, in order to generate, manage and store the pool solution per stage as a static problem, some CPLEX solver directives were used.</p><p>Directive "poolstub" was used to generate and save the solutions in the pool. The "populatelim" was used to establish a limit for the number of solutions in the pool, and it has been defined, for the reduction strategy, as "poolstub=m". In order to manage the stopping criteria for the pool, directive "poolgap" helps to establish the solution with a predefined gap with respect to the optimal solution.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. IEEE 24-bus system</head><p>This test system contains 3 planning stages (each stage is composed by 5 years), 41 corridors, 11 generators and 17 load buses. All the data were obtained from MATPOWER <ref type="bibr" target="#b13">[14]</ref> database. In order to create a scenario for the TEP problem, three lines were removed from the original system, namely <ref type="bibr">(15-24, 11-13, 14-16)</ref>. In addition, for the first stage the load shown in this database was used, then for the second stage a 5% load increment was considered, and a 4% load increment was considered for the third stage. The contingency list contains 8 lines (1-2, 1-5, 7-8, 12-13, 3-24, 14-16, 15-21, 11-13), which represent approximately 20% of total transmission lines of the test network. Fig. <ref type="figure">1</ref> shows the IEEE 24-bus system.</p><p>Table <ref type="table" target="#tab_1">I</ref> shows the results from the multistage TEP problem considering N-1 security constraints for this test system. The total computational time for the multistage TEP problem considering N-1 security constraints was approximately 13 days. Based on this processing time, it was necessary to consider a search space reduction strategy. After the three proposed steps, the TEP problem with N-1 security constraints reduces to (7-8, 15-16, 3-24, 3-9, 15-24, 16-19, 14-16, 6-10, 20-23, 17-18). The solution obtained by the same model with the reduced search space technique proposed in this paper was the same, with the same investment schedule. The most important difference was the processing time, since it was reduced to only 10 minutes. This result clearly justifies the discussion of Sec. III.B, once the global optimal solution was located within the reduced search space.</p><p>The computational time basically depends on the size of the search space, defined by the number of binary variables in the model. The complexity of the problem is related to 2 Variables , so, considering variable , , only, the reduction from 2 (38) to 2 (10) leads to very significant time savings.</p><p>Another test was carried out for the IEEE 24-bus system to take advantage of the applied reduction strategy. Now, N-1 contingencies were allowed in all the possible corridors, so there were 35 possible operational scenarios. Table <ref type="table" target="#tab_2">II</ref> shows the solution for this new TEP problem.  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Modified IEEE 118-bus system</head><p>This test system contains 3 planning stages (each stage is composed by 5 years), 186 corridors and 54 generators in the original system <ref type="bibr" target="#b14">[15]</ref>. For the modified case, in order to create possible congestions, some lines were removed and the maximum line limits were reduced as well <ref type="bibr" target="#b15">[16]</ref>. All the data for this study were obtained from LaPSEE <ref type="bibr" target="#b16">[17]</ref> database. The contingency list is composed of the following lines (1-3, 25-27, 38-65, 77-78, 80-99, 86-87). Fig. <ref type="figure">2</ref> shows the original system.</p><p>Without the proposed search space reduction strategy, there is a possible investment in 25 of 179 transmission corridors. Also, a maximum of two reactive power sources could be added at each load bus. Due to the large sized network it was necessary to implement the search space reduction strategy, and it causes a reduction of the total database from 25 to 13 candidate lines.</p><p>In addition, when the model considered all the 25 candidate lines, at most two lines could be added in those Figure <ref type="figure">2</ref>. The IEEE 118-bus system. <ref type="bibr" target="#b14">[15]</ref> candidate corridors. Another advantage of the proposed reduction strategy is that in some corridors the maximum is only one line per candidate. After applying the search space reduction strategy, the line candidates were reduced to (1-3, 8-9, 8-5, 9-10, 25-27, 26-30, 38-37, 69-77, 77-78, 86-87, 93-94, 99-100, 12-117). The original candidates were in 25 possible corridors, so the new reduced search space represents 52% from the original search space. Table <ref type="table" target="#tab_4">III</ref> shows the results from the multistage TEP problem considering N-1 security constraints and the reduction strategy to this test system. The computational time of this simulation was approximately 36 minutes. The total investment is MUS$ 26.67. From Table <ref type="table" target="#tab_4">III</ref>, it is clear that the solution proposes three new lines and one reactive power source in the first stage; then two new lines and two reactive power sources in the second stage and finally two new lines and one new reactive power source in the last stage.</p><p>Following the same scheme applied to IEEE 24-bus system, another test was carried out increasing the number of contingencies. The new requirement is to duplicate the number of contingencies, representing almost 10% of the corridors. In Table <ref type="table" target="#tab_5">IV</ref>, the solution for this new TEP problem is shown. The computational time involved in this solution model was approximately 90 minutes. The total investment is MUS$ 39.71.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>V. CONCLUSION</head><p>The processing time of solving the concurrent AC multistage transmission network expansion and reactive power planning problem with security constraints was significantly reduced by using the innovative reduction search space strategy proposed in this paper.</p><p>Since a solution pool technique was used, it is assumed that a high quality solution was obtained for each system, since the negligible candidate lines were removed from the solution pool.</p><p>The application of the reduction strategy resulted in excellent performance for both 24-and 118-bus systems with very good processing times.</p><p>As expected, the addition of N-1 security candidates resulted in an increase in the total investment plan of the multistage TEP problem.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head/><label/><figDesc>Now, the model finds the solution with three new lines and five new reactive power sources in the first stage, then one new line and three more reactive power sources in the second one, and finally, one more new line in the last stage. All this equipment means a new investment of MUS$101.97. The processing time to obtain the solution was 130 minutes.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>TABLE I .</head><label>I</label><figDesc/><table/><note><p>RESULTS IEEE 24-BUS SYSTEM -MULTISTAGE TEP WITH N-1 SECURITY CONSTRAINTS</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>TABLE II .</head><label>II</label><figDesc>RESULTS IEEE 24-BUS SYSTEM -MULTISTAGE TEP WITH N-1 SECURITY CONSTRAINT IN ALL CORRIDORS</figDesc><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>TABLE III</head><label>III</label><figDesc/><table><row><cell>. N-1 SECURITY CONSTRAINT, CONSIDERING THE PROPOSED SEARCH SPACE RESULTS IEEE 118-BUS SYSTEM -MULTISTAGE TEP WITH</cell></row><row><cell>REDUCTION STRATEGY</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5"><head>TABLE IV .</head><label>IV</label><figDesc>RESULTS IEEE 118-BUS SYSTEM -MULTISTAGE TEP WITH N-1 SECURITY CONSTRAINT DUPLICATED, CONSIDERING THE PROPOSED SEARCH SPACE REDUCTION STRATEGY</figDesc><table/></figure>
+		</body>
+		<back>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Subject to</p><p>, , + , , , -, , , + , , , , , -, , = , ∀ Ω , ∀ , ∀</p><p>, , + , , , + , , , , + , , + , , , -, , , -, , , , + , , , , , = , ∀ Ω , ∀ , ∀</p><p>, , -, , -, , =</p><p>, , -, , -,</p><p>, , , = , , , ∆ , , , , + , , , ∆ , , , ,</p><p>, , , -, , , = , , , ∀ Ω , ∀ , ∀ , ∀</p><p>, , , + , , , = ∆ , , , , ∀ Ω , ∀ , ∀ , ∀</p><p>, , , -, , , = , , , ∀ Ω , ∀ , ∀ , ∀</p><p>, , , + , , , = ∆ , , , ,</p><p>, , , , , , , , , </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Stage</head></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Robust dynamic network expansion planning considering load uncertainty</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sarhadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Amraee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Electrical Power and Energy Systems</title>
+		<imprint>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="page" from="140" to="150"/>
+			<date type="published" when="2015-03">Mar. 2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Transmission network expansion planning considering repowering and reconfiguration</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Tejada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>López-Lezama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Rider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Vinasco</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Electrical Power and Energy Systems</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="page" from="213" to="221"/>
+			<date type="published" when="2015-02">Feb. 2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Transmission network estimation using linear programming</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">L</forename><surname>Garver</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Power Apparatus and Systems</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="1688" to="1697"/>
+			<date type="published" when="1970-09">Sep.1970</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Transmission network planning using linear programming</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Villasana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">L</forename><surname>Garver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Salon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Power Apparatus and Systems</title>
+		<imprint>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="349" to="356"/>
+			<date type="published" when="1985-02">Feb. 1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">A mixed integer disjunctive model for transmission network expansion</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bahiense</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">C</forename><surname>Oliveira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pereira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Granville</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Power Systems</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="560" to="565"/>
+			<date type="published" when="2001-08">Aug. 2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<monogr>
+		<title level="m" type="main">Classification of publications and models on transmission expansion planning with security constraints</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Latorre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Cruz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Areiza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Villegas</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+			<pubPlace>Bangkok</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>Dept. Elect. Eng., Chulalongkorn University</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">Ph.D. thesis</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Transmission of electric energy: a bibliographic review</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Molina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Rudnick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Latin America Transactions</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="245" to="258"/>
+			<date type="published" when="2010-06">Jun. 2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">MILP branch flow model for concurrent AC multistage transmission expansion and reactive power planning with security constraints</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">H</forename><surname>Macedo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">V</forename><surname>Montes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Franco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Rider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Romero</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IET Generation, Transmission &amp; Distribution</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="3023" to="3032"/>
+			<date type="published" when="2016-02">Feb. 2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<title level="m" type="main">IBM ILOG CPLEX</title>
+		<ptr target="http://www-01.ibm.com/software/integration/optimization/cplex-optimization-studio"/>
+		<imprint>
+			<date type="published" when="2015-11">Nov. 2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<monogr>
+		<title level="m" type="main">AMPL: A modeling language for mathematical programming</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Fourer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Gay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">W</forename><surname>Kernighan</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2003">2003</date>
+			<publisher>Brooks/Cole-Thomson Learning</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">A search space reduction strategy and a mathematical model for multistage transmission expansion planning with N -1 security constraints</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">F</forename><surname>Da Silva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rahmani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Rider</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Control, Automation &amp; Electrical Systems</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="57" to="67"/>
+			<date type="published" when="2015-02">Feb. 2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<author>
+			<persName><surname>Ceids</surname></persName>
+		</author>
+		<ptr target="http://www.intelligrid.info/IntelliGrid_Architecture/Use_Cases/TO_Contingency_Analysis_Baseline.htm"/>
+		<title level="m">Transmission operations-contingency analysis baseline function</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Conejo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Baringo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Morales</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Kazempour</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Siddiqui</surname></persName>
+		</author>
+		<title level="m">Investment in Electricity Generation and Transmission</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="volume">XIV</biblScope>
+			<biblScope unit="page">24</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">MATPOWER: Steady-State operations, planning and analysis tools for power systems research and education</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Zimmerman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Murillo-Sanchez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Thomas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Power Systems</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="12" to="19"/>
+			<date type="published" when="2011-02">Feb. 2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">V</forename><surname>Khokhlov</surname></persName>
+		</author>
+		<title level="m">Test circuit (translated from Russian language: Тестовые схемы)</title>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">An improved model for transmission expansion planning considering reactive power and network losses</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">T</forename><surname>Heydt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vittal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Quintero</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Power Systems</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="3471" to="3479"/>
+			<date type="published" when="2013-08">Aug. 2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<ptr target="http://www.feis.unesp.br/#!/lapsee"/>
+		<title level="m">LaPSEE Power System Test Cases Repository</title>
+		<imprint>
+			<date type="published" when="2018-04">Apr. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

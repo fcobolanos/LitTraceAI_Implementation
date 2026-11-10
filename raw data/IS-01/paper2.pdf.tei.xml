@@ -1,0 +1,1055 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Addressing Unreliability Propagation in Scientific Digital Libraries</title>
+				<funder>
+					<orgName type="full">Coalition to Diversify Computing</orgName>
+				</funder>
+				<funder ref="#_AX9w2Jg">
+					<orgName type="full">National Science Foundation</orgName>
+					<orgName type="abbreviated">NSF</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Inadvertent Spread of Retracted Science II: Research and Development towards the Communication of Retractions, Removals</orgName>
+				</funder>
+				<funder ref="#_9MFPZ37">
+					<orgName type="full">Alfred P. Sloan Foundation</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Expressions of Concern</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Distributed Research Experiences for Undergraduates</orgName>
+					<orgName type="abbreviated">DREU</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">CRA Committee on the Status of Women in Computing Research</orgName>
+					<orgName type="abbreviated">W</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>ACM</publisher>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2024-12-16">2024-12-16</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Heng</forename><surname>Zheng</surname></persName>
+							<email>zhenghz@illinois.edu</email>
+							<idno type="ORCID">0000-0001-5866-7746</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Yuanxi</forename><surname>Fu</surname></persName>
+							<idno type="ORCID">0000-0003-2726-0999</idno>
+						</author>
+						<author>
+							<persName><forename type="first">M</forename><forename type="middle">Janina</forename><surname>Sarol</surname></persName>
+							<email>mjsarol@illinois.edu</email>
+							<idno type="ORCID">0000-0002-0991-4429</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Ishita</forename><surname>Sarraf</surname></persName>
+							<idno type="ORCID">0009-0005-9653-6233</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Jodi</forename><surname>Schneider</surname></persName>
+							<idno type="ORCID">0000-0002-5098-5667</idno>
+							<affiliation key="aff5">
+								<orgName type="department">Jodi Schneider is</orgName>
+								<orgName type="institution" key="instit1">University of Illinois Urbana-Champaign</orgName>
+								<orgName type="institution" key="instit2">affiliated with Harvard University</orgName>
+								<address>
+									<settlement>Massachusetts</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois Urbana-Champaign</orgName>
+								<address>
+									<settlement>Champaign</settlement>
+									<region>Illinois</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Illinois Urbana-Champaign</orgName>
+								<address>
+									<settlement>Champaign</settlement>
+									<region>Illinois</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Illinois Urbana-Champaign</orgName>
+								<address>
+									<settlement>Champaign</settlement>
+									<region>Illinois</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Grinnell College Grinnell</orgName>
+								<address>
+									<region>Iowa</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">University of Illinois Urbana-Champaign</orgName>
+								<address>
+									<settlement>Champaign</settlement>
+									<region>Illinois</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Addressing Unreliability Propagation in Scientific Digital Libraries</title>
+					</analytic>
+					<monogr>
+						<title level="m">Proceedings of the 24th ACM/IEEE Joint Conference on Digital Libraries</title>
+						<meeting>the 24th ACM/IEEE Joint Conference on Digital Libraries						</meeting>
+						<imprint>
+							<publisher>ACM</publisher>
+							<biblScope unit="page" from="1" to="11"/>
+							<date type="published" when="2024-12-16"/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">88667BBEFC913F08C694A1CAF7B2B765</idno>
+					<idno type="DOI">10.1145/3677389.3702526</idno>
+					<note type="submission">Received 10 August 2024; accepted 25 September 2024; revised 7 November 2024</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-25T13:47+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>CCS Concepts</term>
+					<term>Information systems → Digital libraries and archives;</term>
+					<term>Applied computing → Document metadata unreliable cited sources, knowledge maintenance, citations, scientific digital libraries, scholarly publications, reproducibility</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Today's scientists rely on scientific artifacts developed by others for their work. Individual scientists often have limited capacity to assess the validity of these resources. When errors are not caught, scientists produce second-generation errors. We say that a publication propagates unreliability when the main contribution of the publication becomes unreliable by using an unreliable source. An approach for checking whether publications propagate unreliability should satisfy three requirements, in priority order: (1) not miss any publications that propagate unreliability; (2) provide rationales; and (3) identify all publications that do not propagate unreliability. We consider three approaches: a base approach using metadata of the citing publications and the section headings of the citation contexts; and supplementing the base approach with either keyword-based or machine-learning-based modules. The base approach is the most generalizable. Approach-KW (base+keyword) provides concrete rationales, which could be important for convincing authors and editors to take action to update publications that propagate unreliability. Approach-ML (base+machine learning) has the best performance. Future work should develop a more general framework using multiple case studies. We will build a human-inthe-loop alerting system that digital library maintainers, editors, and authors could use to triage publications that may propagate unreliability, and maintain the quality of scientific digital libraries.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">Introduction</head><p>Today's scientific research is a collaborative enterprise. Scientists rely on scientific artifacts developed by others for their work, from knowledge claims to datasets and computer programs. Individual scientists often have limited capacity to assess the validity of these resources: a biologist may not know that the cell lines they use have been contaminated <ref type="bibr" target="#b2">[3]</ref>; an organic chemist following a well-known computational chemistry protocol may not know that one of its scripts may malfunction on their Mac computer <ref type="bibr" target="#b1">[2]</ref>; a computer scientist may not know that their deep-learning algorithm's outstanding performance in reconstructing medical images is the result of hidden data processing pipelines applied to their dataset <ref type="bibr" target="#b15">[16]</ref>. In unlucky circumstances, when errors are not caught in time even after comprehensive validations, scientists produce second-generation errors that unsuspecting future users may continue to rely on for their work, sometimes for years before the underlying first-generation errors are noticed. We coin the term "unreliability propagation" to refer to error propagation of this sort: First-generation errors such as the misidentified cell line and the malfunctioning script turn into secondgeneration errors such as false claims about diseases and incorrect chemical structures when new work incorporates these unreliable artifacts and cites them as (unreliable) sources. We say that a publication propagates unreliability when the main contribution of the publication becomes unreliable by using an unreliable source.</p><p>Such unreliability propagation threatens the quality of scientific digital libraries. Digital libraries must flag publications using an unreliable source and record whether their reliability was reviewed, the review date, review method (automatic or manual by authors or editors), and whether the publication needs correction.</p><p>Current approaches to handling publications that may propagate unreliability are either precise but time-consuming (through 100% manual checking in editorial offices or deep conceptual modeling <ref type="bibr" target="#b5">[6]</ref>) or so automated (e.g., <ref type="bibr" target="#b18">[19]</ref>) that experts are unlikely to fully rely on them. Tracing whether a given publication relies on any unreliable source is particularly important because the problems with a source could be detected at any time, even after decades <ref type="bibr" target="#b20">[21]</ref>.</p><p>Our goal in this paper is to design an approach that balances scalability and trustworthiness when checking whether a publication propagates unreliability. We experiment on designing a triage approach for the citing publications of one unreliable source <ref type="bibr" target="#b23">[24]</ref>. Our experimentation and design process aims to answer the following questions:</p><p>RQ1: How can we triage citing publications based on their risk of propagating unreliability at scale? RQ2: How well does each triage approach work and how explainable are the triage results? RQ3: Can we use scientific digital library infrastructure to collect relevant data for triage?</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2">Background 2.1 Existing approaches to unreliability propagation</head><p>To identify publications that propagate unreliability, researchers have developed approaches for auditing literature that cites unreliable work, relying on the fact that not all citations are equally influential in citing publications <ref type="bibr" target="#b4">[5]</ref>. Fu and Schneider <ref type="bibr" target="#b5">[6]</ref> developed the keystone framework and proposed its use for identifying publications whose content may be significantly affected by the unreliable sources they cited. Usman and Balke <ref type="bibr" target="#b18">[19]</ref> developed citation intent analysis to determine whether a citing publication is dependent on retracted publications. However, identifying publications that propagate unreliability is not well-addressed in current real-world digital libraries. Some digital library services identify publications that have been formally or informally flagged as unreliable. Very rarely, unreliable sources in bibliographies are flagged (e.g., PubMed Central labels retracted publications in red). Typically, to determine that a source publication is reliable, readers must click the CrossMark button to check whether a publication is up-to-date <ref type="bibr" target="#b11">[12]</ref>, install a plugin (e.g., PubPeer<ref type="foot" target="#foot_0">foot_0</ref> , RedacTek<ref type="foot" target="#foot_1">foot_1</ref>  <ref type="bibr" target="#b3">[4]</ref>), or look the publication up on a website.</p><p>Among unreliable publications, retracted publications have received the most attention. One study found that biology publications citing retracted sources were more often retracted <ref type="bibr" target="#b28">[29]</ref>, perhaps in part due to the propagation of unreliable information. Yet retraction does not curtail the citation of retracted publications <ref type="bibr" target="#b13">[14,</ref><ref type="bibr" target="#b19">20]</ref>. To address this, the RetractoBot randomized controlled trial is testing whether alerting authors that publications they previously cited are retracted reduces future citations to retracted publications <ref type="bibr" target="#b21">[22]</ref>. Meanwhile several citation management tools flag retracted publications whose DOIs are found in Retrac-tionWatch <ref type="bibr" target="#b12">[13]</ref>. For instance, RedacTek <ref type="bibr" target="#b3">[4]</ref> flags publications citing retracted sources through three generations of citations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2">Editorial processes</head><p>Editorial processes for quality control of manuscripts and scientific publications rely on domain experts. For peer review, responsible use of automated screening must supplement, not supplant, human editors and peer reviewers <ref type="bibr" target="#b14">[15]</ref>. In checking for research integrity issues, automated tools can aid but not replace domain experts. For instance, Acuña et al.'s automatic detection of image reuse is designed to be checked by academic research integrity offices <ref type="bibr" target="#b0">[1]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3">Task formulation</head><p>Digital libraries should flag publications using an unreliable source, and then determine which publications are the most likely to propagate unreliability. These high-risk publications need review by authors or editors. Specific, persuasive rationales could increase authors' and editors' willingness to check and update high-risk publications that may propagate unreliability.</p><p>Not all citations propagate unreliability. However, for a given unreliable source, each citing publication needs to be checked to assess whether it propagates unreliability, as shown in Figure <ref type="figure" target="#fig_0">1</ref>. Unreliability can propagate at least to a second generation <ref type="bibr" target="#b13">[14]</ref>, also indicated in the figure. Ideally, the entire citation network of the unreliable source would be checked for unreliability <ref type="bibr" target="#b19">[20]</ref>. This requires a scalable triage approach.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1">Requirements analysis</head><p>We identify requirements for a scalable triage approach:</p><p>Input. The input is a single unreliable source.</p><p>Output. The output is a risk level and a rationale.</p><p>Performance measures. In priority order:</p><p>(1) Do not miss any publications that propagate unreliability: Minimize false negatives, compared to experts. (2) Provide rationales: Explain the risk level.</p><p>(3) Remove all publications that do not propagate unreliability: Minimize false positives, compared to experts.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2">An example unreliable source</head><p>To develop a scalable triage approach, we start with a detailed examination of a single unreliable source, design and compare approaches, and envision what will generalize to other unreliable sources. The unreliable source we experiment with is a computational chemistry protocol published in 2014 <ref type="bibr" target="#b23">[24]</ref>. The protocol is used to predict Nuclear Magnetic Resonance (NMR) spectra, which in turn, assists organic chemists in characterizing the structure of newly isolated organic compounds. But an organic chemist may not know that one of its Python scripts malfunctions on their computer. Applying the protocol in different operating systems returns different values, as shown in Figure <ref type="figure" target="#fig_1">2</ref>, resulting in malfunctions on some UNIX-based systems, as reported by Neupane et al. <ref type="bibr" target="#b1">[2]</ref>. The original protocol's authors subsequently published an addendum announcing updates to the Python script that avoid the code glitch <ref type="bibr" target="#b24">[25]</ref>. Figure <ref type="figure" target="#fig_2">3</ref> shows the timeline for reporting and correcting the code glitch. We chose to use this example for our work because it is a concrete example of unreliability propagation. The protocol is "one of the most read and highly cited works in the field" <ref type="bibr" target="#b10">[11]</ref> and was previously examined in a small-scale case study <ref type="bibr" target="#b5">[6]</ref>. The code glitch in the protocol is relatively easy to understand. It is limited to one script and is solely computational, based on file-sorting mechanism differences between two families of commonly used platforms, UNIX-based systems (Linux and Mac OS) and Windows.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4">Experimentation 4.1 Data collection</head><p>On July 6, 2023, we identified publications citing Willoughby et al., 2014 and retrieved the metadata of 277 citing publications from Web of Science (WoS) and 285 citing publications from Scopus.</p><p>After merging the dataset and removing duplicate items, 286 citing publications remained. We removed 2 publications that are not in English, leaving 284 citing publications in our dataset <ref type="bibr" target="#b27">[28]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2">Initial manual extraction of citation contexts</head><p>One author (HZ) manually extracted citation contexts of Willoughby et al., 2014, resulting in 401 citation contexts extracted from 284 English-language full texts.</p><p>A citation context is a text (typically a clause, one or more sentences, or a paragraph) <ref type="bibr" target="#b16">[17]</ref> in a scientific publication that contains a reference to the citation; Figure <ref type="figure" target="#fig_3">4</ref> shows an example. Author names, publication year, or bibliography entry number may be used as the citation marker for a publication. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3">Manual annotation by chemistry experts</head><p>First, one chemistry domain expert (YF) spent 40+ hours annotating the corpus of 284 citing publications, using publication metadata and full text. To create a silver standard <ref type="bibr" target="#b27">[28]</ref>, we made a protocol <ref type="bibr" target="#b26">[27]</ref>, selected a representative sample of publications, then a second chemistry expert (contributor EV) annotated them, and we discussed and reconciled differences.</p><p>To select a representative sample, we (MJS) turned our full dataset of citation contexts into word embeddings, clustered them using similarity measures via BERTopic <ref type="bibr" target="#b6">[7]</ref> with HDBSCAN algorithm, and selected representative citation contexts based on the centroids of the clusters. <ref type="foot" target="#foot_2">3</ref> Then the second chemistry expert (contributor EV) annotated the 77 publications associated with the citation contexts, which took 9.5 hours. Before chemistry experts YF and EV discussed differences in annotation together with JS, interannotator agreement on the double-annotated sample was .34 (fair agreement <ref type="bibr" target="#b8">[9]</ref>), and after resolution of resolvable differences, interannotator agreement was .70 (substantial agreement <ref type="bibr" target="#b8">[9]</ref>).</p><p>For the remaining 9 publications on which annotators still disagreed, JS made a reconciliation policy in consultation with YF, and YF updated the annotations, resulting in the silver standard we use for evaluating our triage approaches. The silver standard categorized 86 (30.3%) publications as at risk of propagating unreliability and 198 (69.7%) publications as not at risk of propagating unreliability, with a rationale justifying each category.  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5">Results for RQ1: Triage approaches</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.1">Base approach (Stages 1 and 2)</head><p>First, we use the information easiest to retrieve from scientific digital libraries: metadata of the citing publications, including their bibliographies and publication types. Then, we extract information from the full text of citing publications: the section headings of the citation contexts and the citation contexts themselves.</p><p>Author HZ identified three questions that can be used to determine publications at negligible risk of propagating unreliability, when it is a review; when related corrective publications appear in the bibliography; or when the relevant citations appear only in the introduction section. Since these questions use limited domain knowledge, they are likely to be adaptable to other empirical research.</p><p>Q1: Is it a review according to Scopus or WoS? (retrieval date: November 25, 2023) Since a review discusses published research, its main contribution is not expected to depend on the protocol's unreliable Python script. Hence we presume that review publications do not propagate unreliability due to the code glitch. A citation context in the introduction section is often used for introducing the research field or key background. Therefore, if all the Willoughby citation contexts are in the introduction section, then we presume that the publication does not apply the protocol to support its main contribution.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2">Approach-KW uses a keyword-based decision tree module for Stage 3</head><p>To handle citation contexts, chemistry domain knowledge could be used. From the citation contexts and full texts, author YF identified keywords that elevate (Table <ref type="table" target="#tab_1">1</ref>) or reduce ( The decision tree shown in Figure <ref type="figure" target="#fig_7">6</ref> uses binary questions from the citing publications' metadata, bibliography, and citation contexts from the full texts. The order of the nodes in the decision tree was determined by the feasibility of answering the questions.</p><p>The answers to questions determine the path through the decision tree to exactly one leaf node (labeled as "high risk", "medium risk", or "negligible risk" to propagate unreliability) and a corresponding rationale justifying the level of risk.</p><p>Using the decision tree in Figure <ref type="figure" target="#fig_7">6</ref>, we triaged the citing publications of the protocol into 3 categories from most to least risk:</p><p>(1) The citing publication is at high risk of propagating unreliability (2) The citing publication is at medium risk of propagating unreliability (3) The citing publication is at negligible risk of propagating unreliability</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3">Approach-ML uses a machine learning-based module for Stage 3</head><p>Approach-ML (Figure <ref type="figure" target="#fig_8">7</ref>) swaps a machine-learning-based model into Stage 3 instead of the keyword-based citation context triage. We   4 for citation intention analysis <ref type="bibr" target="#b18">[19]</ref>. We retrain with an 80%-20% train-test split on all 296 citation contexts from the 203 publications that were not handled in Stages 1 and 2, which the first chemistry expert had previously labeled as Y (at risk) or N (not at risk) purely based on the 4 <ref type="url" target="https://github.com/Conferences2023/TPDL">https://github.com/Conferences2023/TPDL</ref>  To get the publication-level risk, we apply the model to all 296 citation contexts from the 203 publications to get their classifications, then interpret: If any one citation context in a publication is classified as Y then the publication is labeled as high risk, otherwise, negligible risk.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.4">Actions for different risk levels</head><p>Publications deemed at "high risk" are the most likely to propagate unreliability. They are likely to have used the erroneous Script D and reported incorrect chemical structures. Editors and authors must be alerted, and they need to work together to determine whether a publication's main conclusions still hold.</p><p>For publications deemed at "medium risk", the algorithms cannot rule out the propagation of unreliability, although these publications lack specific signatures of risk. Domain experts need to review these publications to determine whether they are "at risk" or "not at risk, " as our chemistry experts did. Since this step requires extra expert labor, the number of publications deemed "medium risk" should be minimized if possible.</p><p>Publications deemed at "negligible risk" are unlikely to propagate unreliability. For instance, they may only cite the WJH protocol as background information, which has no direct impact on the validity of the conclusions. Authors do not need to take further action on publications deemed "negligible risk".</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6">Results for RQ2: Triage performance and explainability</head><p>Next we address RQ2: How well does each triage approach work and how explainable are the triage results? We assess the performance of each approach using the requirements (Section 3.1). We treat the domain experts' manual annotation of the citing publications as a silver standard. Table <ref type="table" target="#tab_3">3</ref> summarizes the triage performance of the three approaches introduced in Section 5.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.1">Base approach (Stages 1 and 2)</head><p>The base approach (Stages 1 and 2) only triages out publications, determining that they are at "negligible risk". <ref type="foot" target="#foot_4">6</ref> Based on Section 5.4, these 203 publications are deemed of "medium risk." In reality, the 203 remaining publications would require expert review to determine their risk levels. For the purpose of evaluation, we regard the remaining 203 publications as predicted positive (e.g., at risk of propagating unreliability) for comparing the base approach against the expert annotations.</p><p>Do not miss any publications that propagate unreliability: Minimize false negatives, compared to experts. The base approach triaged out 81 publications and agreed with expert annotations on 96.6% (78/81 publications). The false negative rate is 3.5% (3/86).</p><p>Provide rationales: Explain the risk level. The base approach provided rationales for 81/284 (28.5%) publications triaged out in Stages 1 and 2. Rationales for publications at negligible risk are aimed at readers and would be displayed alongside indications that the publication was machine-checked:</p><p>(1) Human review is not needed because the publication cited at least one publication that either reported or corrected the code glitch.</p><p>(2) Human review is not needed because the publication is a review. (3) Human review is not needed because there is no citation context of Willoughby et al., 2014 outside the introduction section.</p><p>Remove all publications that do not propagate unreliability: Minimize false positives, compared to experts. The base approach correctly detected 39.4% (78/198) publications the experts considered not at risk of propagating unreliability but yielded 60.6% (120/198) false positives.</p><p>Error analysis. Metadata and section headings are insufficient: to reduce false positives citation contexts are needed. Among false negatives: For one publication, Scopus classified it as a review but our experts think it is not a review. For two publications that cited the WJH protocol just once and only in the introduction section, we cannot rule out the possibility that Script D was used: in both cases the introduction section includes the goals of the publication (to make computational chemistry predictions of NMR) just before citing the WJH protocol.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.2">Approach-KW</head><p>We combine categories "at high risk" and "at medium risk" from our approach to compare to the experts' "at risk" annotations.</p><p>Do not miss any publications that propagate unreliability: Minimize false negatives, compared to experts. Considering all stages, Approach-KW correctly detected 81.4% (70/86) publications that the experts considered at risk of propagating unreliability, and yielded <ref type="bibr" target="#b17">18</ref> Error analysis. Besides errors inherited from Stages 1 and 2, which were analyzed in Section 6.1, the experts' manual annotation and our decision tree approach, Approach-KW, disagreed on 99/284 (34.9%) publications for 2 more reasons:</p><p>(1) Some keywords (e.g., "NMR calculation") are retained in the risk-elevating dictionary even though they generate false positives. This is the cause of the high false positive rate in Approach-KW. (2) Domain knowledge is required to determine the risk level.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.3">Approach-ML</head><p>Do not miss any publications that propagate unreliability: Minimize false negatives, compared to experts. Considering all stages, Approach-ML correctly detected 71/86 (82.6%) and missed 15/86 (17.4%) publications that the experts annotated as at risk of propagating unreliability, resulting in 17.4% (15/86) false negatives. Only considering Stage 3, Approach-ML correctly detected 85.5% (71/83) publications that the experts considered at risk of propagating unreliability, and yielded 14.5% (12/83) false negatives.</p><p>Provide rationales: Explain the risk level. Approach-ML can provide concrete rationales for 81/284 (28.5%) publications processed by Stages 1 and 2 (the base approach) but only provides a minimal rationale for Stage 3 publications: "a machine learning model determined the risk level".</p><p>Remove all publications that do not propagate unreliability: Minimize false positives, compared to experts. Considering all stages, Approach-ML identified 89.4% (177/198) publications that the experts annotated as not at risk of propagating unreliability, resulting in 10.6% <ref type="bibr">(21/198</ref>) false positives. Only considering Stage 3, Approach-ML identified 82.5% (99/120) publications that the experts annotated as not at risk of propagating unreliability, resulting in 17.5% (21/120) false positives.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="7">Results for RQ3: scientific digital library infrastructure</head><p>Yes, scientific digital library infrastructure is relevant to collecting some data relevant to the 3-stage strategy for determining the risk level (Figure <ref type="figure" target="#fig_4">5</ref>):</p><p>Data 1 Retrieve and process publication type metadata to identify reviews for Stage 1 Data 2 Retrieve and process the bibliography for Stage 1 Data 3 Retrieve full text and extract citation contexts and their section headings for Stages 2 and 3</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="7.1">Retrieve and process the bibliography and publication type metadata</head><p>We next describe how we collected Data 1 and Data 2 to answer the Q1 and Q2 in Stage 1. First, we retrieved the metadata of the citing publications from WoS and Scopus to answer Q1: Is it a review according to Scopus or WoS?</p><p>We retrieved the bibliography of the citing publications from WoS and Scopus to answer Q2: Do at least one of Neupane et al., 2019 or Willoughby et al., 2020 appear in the bibliography?</p><p>Data 3 requires a more detailed explanation given below.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="7.2">Retrieve full text and extract citation contexts used in Stages 2 and 3</head><p>Next, we discuss collecting Data 3, which is used in Stages 2 and 3. We retrieved full texts in XML format using the Crossref Text and Data Mining (TDM) API. We developed a Python script that automatically extracts the citation contexts of Willoughby et al., 2014 from XML files.</p><p>Step 1. Find the bibliography entry of Willoughby et al., 2014. We first find all publications in the bibliography containing authors with the surname Willoughby (e.g., Listing 1).</p><p>Listing 1: A sample bibliographic reference XML element &lt;ce:bib-reference id="b0090"&gt; &lt;ce:label&gt; <ref type="bibr" target="#b17">[18]</ref>&lt;/ce:label&gt; &lt;sb:reference id="h0085"&gt; &lt;sb:contribution langtype="en"&gt; &lt;sb:authors&gt; &lt;sb:author&gt; &lt;ce:given-name&gt;P.H.&lt;/ce:given-name&gt; &lt;ce:surname&gt;Willoughby&lt;/ce:surname&gt; &lt;/sb:author&gt; &lt;sb:author&gt; &lt;ce:given-name&gt;M.J.&lt;/ce:given-name&gt; &lt;ce:surname&gt;Jansma&lt;/ce:surname&gt; &lt;/sb:author&gt; &lt;sb:author&gt; &lt;ce:given-name&gt;T.R.&lt;/ce:given-name&gt; &lt;ce:surname&gt;Hoye&lt;/ce:surname&gt; &lt;/sb:author&gt; &lt;/sb:authors&gt; &lt;/sb:contribution&gt; If we only find a single bibliography entry authored by Willoughby, we assume that it pertains to Willoughby et al., 2014. If we find multiple bibliography entries authored by a person with the surname Willoughby, we check the title of each bibliography entry. If the title contains the text 'guide to small-molecule structure assignment', then we select this bibliography entry. Once we find the Willoughby et al., 2014 reference XML element, we store its reference ids, i.e., the id attribute of both the ce:bib-reference and sb:reference XML elements.</p><p>Step 2. Locate all in-text citations (i.e., citation markers) of Willoughby et al., 2014. We traverse the XML document for intext citations using the reference ids acquired in the previous step.</p><p>In  Results of the digital library automation. We developed a Python script <ref type="foot" target="#foot_5">7</ref> to automatically retrieve the full text of the citing publications using Crossref's TDM API service. <ref type="foot" target="#foot_6">8</ref>Detailed results are shown in Figure <ref type="figure" target="#fig_11">9</ref>. We retrieved 74/284 (26%) full texts in at least one of the following formats: plain text (63), PDF <ref type="bibr" target="#b10">(11)</ref>, and/or XML (63). For an additional 66/284 (23%) DOIs, the files retrieved were not usable full texts but returned only an error message with HTML saying "Just a moment" or a PDF displaying binary data. Those publications were not accessible via Crossref's TDM API. For 144/284 (51%) DOIs, our pipeline returned null results, that is, nothing was downloaded. We automatically retrieved 63 publications with XML files, from which we were able to retrieve citation contexts for 61. For the 2 publications where the described process failed, one contained a bibliographic error (the author's given name and surname were H.W. and Patrick, respectively, instead of P.H. and Willoughby) and the other did not contain structured XML of the article text (i.e., the article text was enclosed in &lt;rawtext&gt; tags). A lack of full texts left 223/284 (79%) not processed. To make our triage approaches feasible to deploy in practice, the percentage of "not processed" publications should be significantly reduced.</p><p>The manual and automated extraction on these 61 publications differed little: 90 citation contexts <ref type="foot" target="#foot_7">9</ref> were manually extracted, compared to 89 automatically extracted. There were only four differences: Besides the one citation context missed, the automated method returned longer paragraphs for 3 citation contexts.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="8">Discussion</head><p>We experimented with different approaches to identify the publications that propagate unreliability. Much of our analysis is specific to a single case: the citing publications of a computational chemistry protocol with a code glitch. Yet based on our experimentation we can analyze the advantages and limitations of the three approaches, as shown in Table <ref type="table" target="#tab_4">4</ref>.</p><p>Our design process demonstrates the importance of expert involvement. First, our system is impossible to build without experts. HZ, who is not an expert in chemistry, proposed Q1, Q2, and Q3 that triaged out 81/284 (28.5%) in Stages 1 and 2, leaving more than two-thirds of publications for manual review. The first expert (YF) generated Q4 and Q5 and associated keyword dictionaries to triage the remaining publications. The machine learning model also relies on experts' annotation of the citation contexts. Second, expert involvement aims to maximize authors' and editors' trust. Using the keyword approach, our expert can produce more specific rationales to persuade authors and editors to check and update publications.</p><p>Yet we expect the time commitment and roles for expert involvement and the choice between machine learning versus keyword approach to be situation dependent. Sometimes educated professionals without domain expertise can write rules to triage out most publications. In such a case, experts could verify the rules written by the non-expert and manually check the remaining publications, avoiding the need to analyze citation contexts (our Stage 3). When non-experts cannot triage most of the publications, experts are needed to design computational routines analogous to our Stage 3, which might use either a keyword approach or a machine learning approach. Machine learning requires a large amount of labeled data, which will require expert labor. Its lack of explainability is also a severe deficiency. Thus, the machine learning approach is likely to be suitable for high impact cases with hundreds or even thousands of citing publications to be triaged where experts do not have the confidence to craft keyword dictionaries even after reviewing a fraction of the citing publications. Future work should use multiple case studies to develop pragmatic advice for how to approach triage in different situations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="8.1">Limitations</head><p>We only studied one case of unreliability propagation in this paper. Our silver standard was not fully double-annotated: only 77/284 (27%) publications were annotated by both chemistry experts, while the remaining 207/284 (73%) publications were single-annotated then adjusted based on analysis of the disagreements with an adjudication policy crafted by JS with input from YF.</p><p>In order to systematically triage all publications citing the unreliable protocol, two challenges remain:</p><p>(1) A lack of full texts to automatically determine the questions in the decision tree; (2) The decision tree cannot completely reflect human experts' decision-making process.</p><p>The Crossref TDM API from which we retrieved full texts does not retrieve Elsevier or Wiley publications because both publishers have their own licensed text and data mining APIs <ref type="foot" target="#foot_8">10</ref> . Metadata from the Crossref TDM API returns information in a JSON format that includes a tag containing the full text URL (when available) but it is up to the user to download the full text using the URL either manually or automatically. Metadata returned from the Crossref TDM API sometimes has PDF files tagged as "unspecified" instead of "pdf" (see Figure <ref type="figure" target="#fig_12">10</ref>). The Python script we developed for full-text retrieval is programmed to download files tagged as "pdf", "xml", or "txt", not for "unspecified" files. Currently, our digital library implementation requires XML format, yet 11 of 74 (15%) items were retrieved only in PDF format. For PDFs, other citation context extraction methods are needed. Our citation context extraction process has been tested on different publishers' XML files retrieved via Crossref. More variance could be expected in future collections of tagged fulltext due to different XML Document Type Definitions or different uses of the Journal Article Tag Suite (JATS) <ref type="bibr" target="#b7">[8]</ref>.</p><p>We could not readily identify which citing publications used the glitched versions of the Python script to support their main contribution, because these citations did not follow software citation standards <ref type="bibr" target="#b17">[18]</ref>. We used the citation of the protocol as a proxy for the citation of the Python script with the code glitch. Further we extracted sentence-level citation contexts, although in practice a citation context can extend beyond the sentence containing the citation marker. Because authors could discuss the protocol without citing Willoughby et al., 2014 at all, citation context analysis cannot truly suffice to analyze the propagation of the unreliability due to the code glitch.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="8.2">Future work</head><p>We will double annotate the remaining 207 publications to create a gold standard dataset. We will re-evaluate our approaches on the new dataset. We will also test whether our triage approaches work on publications beyond our corpus: the citing publications of Willoughby et al., 2014 that were published after July 6, 2023 when we collected our dataset. We will study more cases of unreliability propagation to improve these approaches.</p><p>We need more full text in computable formats (XML and EPUB), and better methods for automatically extracting citation contexts from citing publications, including identifying the corresponding section heading. When only PDF full text is available, we will test methods for converting PDF to XML using software such as GRO-BID <ref type="bibr" target="#b9">[10]</ref> In the future, we will develop a framework that could work for any input citation. We envision a future human-in-the-loop alert system that could send alerts to the authors and editors of citing publications deemed to be at high risk (see Figure <ref type="figure" target="#fig_0">11</ref>), while publications at medium risk can be flagged for review by other domain experts for examination before alerting authors. Accurate alerts approach, has the best performance. While all three approaches are promising, none is in perfect agreement with the experts. The base approach missed 60.6% (120/198) of publications that two experts considered not at risk of propagating unreliability and incorrectly flagged 3.5% (3/86) of publications as not at risk of propagating unreliability. Approach-KW missed 41.9% (83/198) of publications that two experts considered not at risk of propagating unreliability, and incorrectly flagged 18.6% (16/86) of publications as not at risk of propagating unreliability. Approach-ML missed 10.6% (21/198) of publications two experts considered not at risk of propagating unreliability, and incorrectly flagged 17.4% (15/86) of publications as not at risk of propagating unreliability.</p><p>To improve the triage of citing publications, we would like to more fully capture the experts' decision processes, such as by identifying additional questions to use in our decision tree. We also need to explore how to better leverage scientific digital library infrastructure, to retrieve more full text, and to better extract citation contexts from full text. In the future, we will generalize our triage strategy by investigating other unreliable cited sources. We will incorporate this work into human-in-the-loop alerting that digital library maintainers, editors, and authors could use to triage publications that may propagate unreliability and maintain the reliability of scientific digital libraries.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data and Code Availability</head><p>Our silver standard annotation with chemistry experts' annotations and human-extracted citation contexts is available at <ref type="bibr" target="#b27">[28]</ref>. Our protocol for double-annotation is available at <ref type="bibr" target="#b26">[27]</ref>. Our code for citation context extraction and citation clustering using similarity measures is at <ref type="url" target="https://doi.org/10.5281/zenodo.13921537">https://doi.org/10.5281/zenodo.13921537</ref>. Our code for triage approaches is at <ref type="url" target="https://doi.org/10.5281/zenodo.14166498">https://doi.org/10.5281/zenodo.14166498</ref>. Our code to automatically retrieve full text publications from the Crossref Text and Data Mining API is at <ref type="url" target="https://doi.org/10.5281/zenodo.14015039">https://doi.org/10.5281/ zenodo.14015039</ref>.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 :</head><label>1</label><figDesc>Figure 1: Not all citations propagate unreliability.</figDesc><graphic coords="1,317.96,577.93,240.26,106.50" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 :</head><label>2</label><figDesc>Figure 2: The calculation using some UNIX-based systems returned incorrect values. Reprinted with permission from [2]. Copyright 2019 American Chemical Society.</figDesc><graphic coords="3,73.80,240.98,200.25,117.25" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 :</head><label>3</label><figDesc>Figure 3: Timeline of reporting and correcting the code glitch related to Willoughby et al., 2014.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 :</head><label>4</label><figDesc>Figure 4: The publication "Fu &amp; Schneider, 2020" uses the citation marker "25" to refer to Guillen et al., 2019 in the bibliography. The text in blue is the citation context of Guillen et al., 2019. "[8, 25]" is the full citation marker.</figDesc><graphic coords="3,317.96,256.39,240.24,110.88" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 5</head><label>5</label><figDesc>Figure5shows our overall triage strategy, which gives rise to three approaches: the base approach, Approach-KW, and Approach-ML. The base approach uses metadata and bibliographies of the citing publications (Stage 1) and the section headings of the citation contexts in which Willoughby et al., 2014 was cited (Stage 2). The other two approaches augment the base approach by analyzing the text of citation contexts (Stage 3) in two different ways, using either a keyword-based decision tree for Approach-KW or a machine learning-based model for Approach-ML.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 5 :</head><label>5</label><figDesc>Figure 5: Our 3-stage strategy for determining the risk level.</figDesc><graphic coords="4,63.22,260.18,221.40,248.94" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head/><label/><figDesc>Q2: Do at least one of Neupane et al., 2019 or Willoughby et al., 2020 appear in the bibliography? We presume that the main contribution does not propagate unreliability when authors show awareness of the code glitch by citing Neupane et al., 2019 (which reported the code glitch) or Willoughby et al., 2020 (which corrected the code glitch). Q3: Does the introduction section contain all the citations to Willoughby et al., 2014?</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 6 :</head><label>6</label><figDesc>Figure 6: Risk assessment using Approach-KW</figDesc><graphic coords="5,53.80,335.80,240.23,259.70" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 7 :</head><label>7</label><figDesc>Figure 7: Risk assessment using Approach-ML</figDesc><graphic coords="5,317.96,335.80,240.24,250.27" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head/><label/><figDesc>-text citations denoted by the XML elements ce:cross-ref (for single citations, e.g., '[3]') or ce:cross-refs (for multiple citations, e.g., '[1-3]'or '[1,2,3]'), as shown in Figure 8. If the ref-id attribute of the ce:cross-ref or ce:cross-refs element matches any of the reference ids, it means that the text refers to Willoughby et al., 2014.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>Figure 8 :</head><label>8</label><figDesc>Figure 8: Sample paragraph and in-text citation XML elements</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head>Figure 9 :</head><label>9</label><figDesc>Figure 9: Results of extracting the full text of the 284 DOIs from publishers using our Python pipeline.</figDesc><graphic coords="8,326.78,130.31,222.60,64.80" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><head>Figure 10 :</head><label>10</label><figDesc>Figure 10: A citing publication with its PDF file tagged as "unspecified" in the metadata.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 2</head><label>2</label><figDesc/><table/><note><p>) the risk that a citing publication propagates unreliability. This resulted in two questions about the text of the citation contexts, used in Approach-KW: Q4: Does any citation context of Willoughby et al., 2014 contain one of the risk-elevating keywords in Table 1? Q5: Do all citation contexts of Willoughby et al., 2014 contain one of the risk-reducing keywords in Table 2?</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 1 :</head><label>1</label><figDesc>Risk-elevating keywords identified by YF's manual annotation</figDesc><table><row><cell>Keyword cluster</cell><cell>Keywords</cell></row><row><cell>Boltzmann weighting</cell><cell>Boltzmann</cell></row><row><cell>General citation</cell><cell>Quantum chemistry calculation; quantum chemical calculation; NMR</cell></row><row><cell/><cell>chemical shift calculation; NMR chemical shift; NMR calculation; NMR</cell></row><row><cell/><cell>shift prediction</cell></row><row><cell>Python script</cell><cell>Python script, script D; script</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 2 :</head><label>2</label><figDesc>Risk-reducing keywords identified by YF's manual annotation</figDesc><table><row><cell>Keyword cluster</cell><cell>Keywords</cell></row><row><cell>Geometry optimization</cell><cell>Density functional theory; DFT; geometry optimization; structural</cell></row><row><cell/><cell>optimization; free energy calculation; structural optimization</cell></row><row><cell>Goodness-of-fit</cell><cell>MAE; CMAE; R 2 ; statistical error parameter</cell></row><row><cell>Conformational search</cell><cell>Conformational search; conformational space generation; conforma-</cell></row><row><cell/><cell>tional analysis; conformational sampling</cell></row><row><cell>Solvation model</cell><cell>PCM; solvation model</cell></row><row><cell>Scaling and referencing factors</cell><cell>Scaling; slope; intercept</cell></row><row><cell>Basis set</cell><cell>Basis set</cell></row><row><cell cols="2">GIAO method (an approximation) GIAO</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 3 :</head><label>3</label><figDesc>Triage performance of different approach</figDesc><table><row><cell>.6% (16/86) false negatives. Only considering Stage 3,</cell></row><row><cell>Approach-KW correctly detected 84.3% (70/83) publications that</cell></row><row><cell>the experts considered at risk of propagating unreliability, and</cell></row><row><cell>yielded 15.7% (13/83) false negatives.</cell></row><row><cell>Provide rationales: Explain the risk level. Approach-KW provided</cell></row><row><cell>concrete rationales for all 284 (100%) publications, including 203 (71.4%)</cell></row><row><cell>publications going into Stage 3. Rationales for high-risk publica-</cell></row><row><cell>tions would be sent to authors as a request to update the publication</cell></row><row><cell>or certify that no update is needed:</cell></row><row><cell>Please recheck the main contributions of [PUBLICATION</cell></row><row><cell>TITLE AND LINK]. The unreliable Script D (Neupane et</cell></row><row><cell>al., 2019; Willoughby et al., 2020) performs Boltzmann</cell></row><row><cell>weighting. We found these words: [SPECIFIC KEYWORDS</cell></row><row><cell>WE FOUND] in your citations to Willoughby et al., (2014),</cell></row><row><cell>which increases the likelihood that you have used Script</cell></row><row><cell>D, and the main contribution of your publication might be</cell></row><row><cell>unreliable. For more information on our approach, please</cell></row><row><cell>refer to the attached fact sheet.</cell></row><row><cell>Rationales for medium-risk publications would be sent to editors,</cell></row><row><cell>to consider whether updates might be needed:</cell></row><row><cell>The main contribution of [PUBLICATION TITLE AND</cell></row><row><cell>LINK] might be unreliable due to unreliable Script D (Neu-</cell></row></table><note><p>pane et al., 2019; Willoughby et al., 2020) which performs Boltzmann weighting. We cannot rule out the possibility of unreliability because our validation approach could not decide based on the publication's keywords, bibliography,</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 4 :</head><label>4</label><figDesc>Advantages and limitations of different approaches to propagating unreliability. Case: 284 citing publications of a computational chemistry protocol with a code glitch</figDesc><table><row><cell>Approach</cell><cell>Involvement</cell><cell>Advantages</cell><cell>Limitations</cell></row><row><cell>Base approach (Stages 1 &amp; 2)</cell><cell>Only non-experts</cell><cell>-No expert is needed</cell><cell>-High false positive rate -No rationales for 203/284 (71.5%) publications</cell></row><row><cell cols="2">Approach-KW (Stages 1, 2, &amp; 3) Experts + non-experts</cell><cell>-Concrete rationales for 284/284 (100%) publications</cell><cell>-High false positive rate -Experts cannot identify all possible keywords</cell></row><row><cell cols="2">Approach-ML (Stages 1, 2, &amp; 3) Experts + non-experts</cell><cell>-Low false positive rate -Low false negative rate</cell><cell>-Minimal rationales for 203/284 (71.5%) publications -Data labeling still requires expert labor</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="1" xml:id="foot_0"><p>https://pubpeer.com/</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2" xml:id="foot_1"><p>https://redactek.com/</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="3" xml:id="foot_2"><p>https://doi.org/10.5281/zenodo.13921537</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="5" xml:id="foot_3"><p>The number of false negatives and false positives are the same, resulting in identical precision, recall, and F1.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="6" xml:id="foot_4"><p>https://doi.org/10.5281/zenodo.14166498</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="7" xml:id="foot_5"><p>https://doi.org/10.5281/zenodo.14015039</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="8" xml:id="foot_6"><p>https://www.crossref.org/documentation/retrieve-metadata/rest-api/text-and-datamining/</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="9" xml:id="foot_7"><p>Among the 61 publications, 14 cited the Willoughby publication two or more times.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="10" xml:id="foot_8"><p>see https://www.elsevier.com/about/policies-and-standards/text-and-data-mining https://onlinelibrary.wiley.com/library-info/resources/text-and-datamining https://community.crossref.org/t/tdm-click-through-service/1533</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="11" xml:id="foot_9"><p>https://www.retracted.net</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>Thanks to <rs type="person">Muhammad Usman</rs> and <rs type="person">Wolf-Tilo Balke</rs> for their publicly available citation intention code which we adapted in this work. Thanks to <rs type="person">Malik Salami</rs> for merging citation records from Web of Science and Scopus; <rs type="person">Tzu-Kun Hsiao</rs> for advice on citation context analysis; <rs type="person">Janaynne Carvalho do Amaral</rs> for advice on scholarly communication industry peer review and editorial processing standards. Thanks also to <rs type="person">Malik Salami</rs> and <rs type="person">Hannah Smith</rs> for recommending relevant literature and feedback on a draft and to <rs type="person">Stephen Downie</rs>, <rs type="person">Dave Dubin</rs>, <rs type="person">Daniel Evans</rs>, <rs type="person">Michael Robert Gryk</rs>, <rs type="person">Yuerong Hu</rs>, <rs type="person">Dan Katz</rs>, <rs type="person">Ted Ledford</rs>, <rs type="person">Lan Li</rs>, <rs type="person">Bertram Ludäscher</rs>, and <rs type="person">Corinne McCumber</rs> for feedback on a draft. Funding was provided by <rs type="funder">Alfred P. Sloan Foundation</rs> <rs type="grantNumber">G-2022-19409</rs> Reducing the <rs type="funder">Inadvertent Spread of Retracted Science II: Research and Development towards the Communication of Retractions, Removals</rs>, and <rs type="funder">Expressions of Concern</rs> and <rs type="funder">NSF</rs> <rs type="grantNumber">2046454</rs> CAREER: Using network analysis to assess confidence in research synthesis. <rs type="person">Ishita Sarraf</rs> was supported in part by the <rs type="funder">Distributed Research Experiences for Undergraduates (DREU) program</rs>, a joint project of the <rs type="funder">CRA Committee on the Status of Women in Computing Research (CRA -W)</rs> and the <rs type="funder">Coalition to Diversify Computing</rs></p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_9MFPZ37">
+					<idno type="grant-number">G-2022-19409</idno>
+				</org>
+				<org type="funding" xml:id="_AX9w2Jg">
+					<idno type="grant-number">2046454</idno>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>For more information on our approach, please refer to the attached fact sheet. " The RetractoBot trial <ref type="bibr" target="#b21">[22]</ref>, which is alerting citing authors about all past citations to retracted publications, provides an initial proof of concept that alerting authors is feasible. Even though Retrac-toBot emails do not request that authors check or update their publications, at least one paper has been corrected as a result of the project <ref type="bibr" target="#b25">[26]</ref>. By reducing the number of alerts, an alerting system using triaged data would reduce alert fatigue compared to a system such as RetractoBot 11 whose intervention sends alerts to 100% of citing authors.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="9">Conclusions</head><p>We investigated how to triage publications based on their risk level of propagating unreliability, starting with all publications citing a single computational chemistry protocol that had a code glitch.</p><p>We compared three triage approaches to a silver standard of manual annotations by two domain experts. The base approach, which relies on limited domain knowledge, is the most generalizable. Approach-KW, using a keyword-based decision tree on top of the base approach, provides concrete rationales, which could be important for convincing authors and editors to take action to update publications that propagate unreliability. Approach-ML, using machine learning based on citation intention on top of the base </p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">Biosciencescale automated detection of figure element reuse</title>
+		<author>
+			<persName><forename type="first">Daniel</forename><forename type="middle">E</forename><surname>Acuña</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Paul</forename><forename type="middle">S</forename><surname>Brookes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Konrad</forename><forename type="middle">P</forename><surname>Kording</surname></persName>
+		</author>
+		<idno type="DOI">10.1101/269415</idno>
+		<ptr target="https://doi.org/10.1101/269415"/>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Characterization of Leptazolines A-D, polar oxazolines from the cyanobacterium Leptolyngbya sp., reveals a glitch with the "Willoughby-Hoye" scripts for calculating NMR chemical shifts</title>
+		<author>
+			<persName><forename type="first">Jayanti</forename><surname>Bhandari Neupane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ram</forename><forename type="middle">P</forename><surname>Neupane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuheng</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wesley</forename><forename type="middle">Y</forename><surname>Yoshida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rui</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Philip</forename><forename type="middle">G</forename><surname>Williams</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.orglett.9b03216</idno>
+		<ptr target="https://doi.org/10.1021/acs.orglett.9b03216"/>
+	</analytic>
+	<monogr>
+		<title level="j">Organic Letters</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="8449" to="8453"/>
+			<date type="published" when="2019-10">2019. Oct. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Cell lines as biological models: practical steps for more reliable research</title>
+		<author>
+			<persName><forename type="first">Amanda</forename><surname>Capes-Davis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Amos</forename><surname>Bairoch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tanya</forename><surname>Barrett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edward</forename><forename type="middle">C</forename><surname>Burnett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wilhelm</forename><forename type="middle">G</forename><surname>Dirks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Erin</forename><forename type="middle">M</forename><surname>Hall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lyn</forename><surname>Healy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Douglas</forename><forename type="middle">A</forename><surname>Kniss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Korch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuqin</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><forename type="middle">M</forename><surname>Neve</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Raymond</forename><forename type="middle">W</forename><surname>Nims</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Barbara</forename><surname>Parodi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rebecca</forename><forename type="middle">E</forename><surname>Schweppe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Douglas</forename><forename type="middle">R</forename><surname>Storts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fang</forename><surname>Tian</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemrestox.9b00215</idno>
+		<ptr target="https://doi.org/10.1021/acs.chemrestox.9b00215"/>
+	</analytic>
+	<monogr>
+		<title level="j">Chemical Research in Toxicology</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="1733" to="1736"/>
+			<date type="published" when="2019-09">2019. Sept. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">New bot flags scientific studies that cite retracted papers</title>
+		<author>
+			<persName><forename type="first">Dalmeet</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chawla</forename></persName>
+		</author>
+		<ptr target="https://www.nature.com/nature-index/news/new-bot-flags-scientific-research-studies-that-cite-retracted-papers"/>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Index</title>
+		<imprint>
+			<date type="published" when="2021-02">2021. Feb. 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Content analysis of references: Adjunct or alternative to citation counting</title>
+		<author>
+			<persName><forename type="first">Daryl</forename><forename type="middle">E</forename><surname>Chubin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Soumyo</forename><forename type="middle">D</forename><surname>Moitra</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/030631277500500403</idno>
+		<ptr target="https://doi.org/10.1177/030631277500500403"/>
+	</analytic>
+	<monogr>
+		<title level="j">Social Studies of Science</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="423" to="441"/>
+			<date type="published" when="1975-11">1975. Nov. 1975</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Towards knowledge maintenance in scientific digital libraries with the keystone framework</title>
+		<author>
+			<persName><forename type="first">Yuanxi</forename><surname>Fu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jodi</forename><surname>Schneider</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3383583.3398514</idno>
+		<ptr target="https://doi.org/10.1145/3383583.3398514"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the ACM/IEEE Joint Conference on Digital Libraries in 2020 (JCDL '20)</title>
+		<meeting>the ACM/IEEE Joint Conference on Digital Libraries in 2020 (JCDL '20)<address><addrLine>Virtual Event China</addrLine></address></meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="217" to="226"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title level="m" type="main">BERTopic: Neural topic modeling with a class-based TF-IDF procedure</title>
+		<author>
+			<persName><forename type="first">Maarten</forename><surname>Grootendorst</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.2203.05794</idno>
+		<ptr target="https://doi.org/10.48550/arXiv.2203.05794"/>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">OpCitance: Citation contexts identified from the PubMed Central open access articles</title>
+		<author>
+			<persName><forename type="first">Tzu-Kun</forename><surname>Hsiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vetle</forename><forename type="middle">I</forename><surname>Torvik</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41597-023-02134-x</idno>
+		<ptr target="https://doi.org/10.1038/s41597-023-02134-x"/>
+	</analytic>
+	<monogr>
+		<title level="j">Scientific Data</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">243</biblScope>
+			<date type="published" when="2023-04">2023. April 2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">The measurement of observer agreement for categorical data</title>
+		<author>
+			<persName><forename type="first">J</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Landis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gary</forename><forename type="middle">G</forename><surname>Koch</surname></persName>
+		</author>
+		<idno type="DOI">10.2307/2529310</idno>
+		<ptr target="https://doi.org/10.2307/2529310"/>
+	</analytic>
+	<monogr>
+		<title level="j">Biometrics</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="159" to="174"/>
+			<date type="published" when="1977">1977. 1977</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Evaluation of header metadata extraction approaches and tools for scientific PDF documents</title>
+		<author>
+			<persName><forename type="first">Mario</forename><surname>Lipinski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kevin</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Corinna</forename><surname>Breitinger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joeran</forename><surname>Beel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bela</forename><surname>Gipp</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/2467696.2467753</idno>
+		<ptr target="https://doi.org/10.1145/2467696.2467753"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 13th ACM/IEEE-CS Joint Conference on Digital Libraries (JCDL '13)</title>
+		<meeting>the 13th ACM/IEEE-CS Joint Conference on Digital Libraries (JCDL '13)<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="385" to="386"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">The risks of automation: A study on DFT energy miscalculations and its consequences in NMR-based structural elucidation</title>
+		<author>
+			<persName><forename type="first">Maribel</forename><forename type="middle">O</forename><surname>Marcarino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>María</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ariel</forename><forename type="middle">M</forename><surname>Zanardi</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Sarotti</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.orglett.0c01001</idno>
+		<ptr target="https://doi.org/10.1021/acs.orglett.0c01001"/>
+	</analytic>
+	<monogr>
+		<title level="j">Organic Letters</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="3561" to="3565"/>
+			<date type="published" when="2020-05">2020. May 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Distinguishing published scholarly content with Cross-Mark</title>
+		<author>
+			<persName><forename type="first">Anne</forename><surname>Carol</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Meyer</surname></persName>
+		</author>
+		<idno type="DOI">10.1087/20110202</idno>
+		<ptr target="https://doi.org/10.1087/20110202"/>
+	</analytic>
+	<monogr>
+		<title level="j">Learned Publishing</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="87" to="93"/>
+			<date type="published" when="2011">2011. 2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<author>
+			<persName><forename type="first">Gary</forename><surname>Price</surname></persName>
+		</author>
+		<ptr target="https://www.infodocket.com/2021/11/10/endnote-adds-retractionwatch-integration-similar-service-also-available-from-zotero/"/>
+		<title level="m">EndNote adds Retraction Watch notification integration, similar service available for Zotero and Papers</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Continued post-retraction citation of a fraudulent clinical trial report, 11 years after it was retracted for falsifying data</title>
+		<author>
+			<persName><forename type="first">Jodi</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Di</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alison</forename><forename type="middle">M</forename><surname>Hill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ashley</forename><forename type="middle">S</forename><surname>Whitehorn</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11192-020-03631-1</idno>
+		<ptr target="https://doi.org/10.1007/s11192-020-03631-1"/>
+	</analytic>
+	<monogr>
+		<title level="j">Scientometrics</title>
+		<imprint>
+			<biblScope unit="volume">125</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="2877" to="2913"/>
+			<date type="published" when="2020-12">2020. Dec. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Is the future of peer review automated</title>
+		<author>
+			<persName><forename type="first">Robert</forename><surname>Schulz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adrian</forename><surname>Barnett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">René</forename><surname>Bernard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Nicholas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jennifer</forename><forename type="middle">A</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peter</forename><surname>Byrne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Małgorzata</forename><forename type="middle">A</forename><surname>Eckmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Halil</forename><surname>Gazda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><forename type="middle">M</forename><surname>Kilicoglu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maia</forename><surname>Prager</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gerben</forename><surname>Salholz-Hillel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Timothy</forename><surname>Ter Riet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Colby</forename><forename type="middle">J</forename><surname>Vines</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Han</forename><surname>Vorland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anita</forename><surname>Zhuang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tracey</forename><forename type="middle">L</forename><surname>Bandrowski</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Weissgerber</surname></persName>
+		</author>
+		<idno type="DOI">10.1186/s13104-022-06080-6</idno>
+		<ptr target="https://doi.org/10.1186/s13104-022-06080-6"/>
+	</analytic>
+	<monogr>
+		<title level="j">BMC Research Notes</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page">203</biblScope>
+			<date type="published" when="2022-06">2022. June 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Implicit data crimes: Machine learning bias arising from misuse of public data</title>
+		<author>
+			<persName><forename type="first">Efrat</forename><surname>Shimron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><forename type="middle">I</forename><surname>Tamir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ke</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Lustig</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.2117203119</idno>
+		<ptr target="https://doi.org/10.1073/pnas.2117203119"/>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences</title>
+		<imprint>
+			<biblScope unit="volume">119</biblScope>
+			<biblScope unit="page">2117203119</biblScope>
+			<date type="published" when="2022">2022. 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Citation context analysis</title>
+		<author>
+			<persName><forename type="first">Henry</forename><surname>Small</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="s">Progress in Communication Sciences</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="287" to="310"/>
+			<date type="published" when="1982">1982</date>
+			<publisher>Ablex Publishing Corporation</publisher>
+			<pubPlace>Norwood, NJ</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Software citation principles</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Arfon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daniel</forename><forename type="middle">S</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kyle</forename><forename type="middle">E</forename><surname>Katz</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Niemeyer</surname></persName>
+		</author>
+		<idno type="DOI">10.7717/peerj-cs.86</idno>
+		<ptr target="https://doi.org/10.7717/peerj-cs.86"/>
+	</analytic>
+	<monogr>
+		<title level="j">PeerJ Computer Science</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page">86</biblScope>
+			<date type="published" when="2016-09">2016. Sept. 2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">On retraction cascade? Citation intention analysis as a quality control mechanism in digital libraries</title>
+		<author>
+			<persName><forename type="first">Muhammad</forename><surname>Usman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wolf-Tilo</forename><surname>Balke</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-031-43849-3_11</idno>
+		<ptr target="https://doi.org/10.1007/978-3-031-43849-3_11"/>
+	</analytic>
+	<monogr>
+		<title level="m">Linking Theory and Practice of Digital Libraries</title>
+		<title level="s">Lecture Notes in Computer Science</title>
+		<meeting><address><addrLine>Cham</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer Nature Switzerland</publisher>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="117" to="131"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Propagation of errors in citation networks: A study involving the entire citation network of a widely cited paper published in, and later retracted from</title>
+		<author>
+			<persName><forename type="first">Paul</forename><forename type="middle">E</forename><surname>Van Der</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Harm</forename><surname>Vet</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Nijveen</surname></persName>
+		</author>
+		<idno type="DOI">10.1186/s41073-016-0008-5</idno>
+		<ptr target="https://doi.org/10.1186/s41073-016-0008-5"/>
+	</analytic>
+	<monogr>
+		<title level="j">the journal Nature. Research Integrity and Peer Review</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">3</biblScope>
+			<date type="published" when="2016-12">2016. Dec. 2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Rising of retracted research works and challenges in information systems: Need new features for information retrieval and interactions</title>
+		<author>
+			<persName><forename type="first">Peiling</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3576840.3578281</idno>
+		<ptr target="https://doi.org/10.1145/3576840.3578281"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2023 Conference on Human Information Interaction and Retrieval</title>
+		<meeting>the 2023 Conference on Human Information Interaction and Retrieval<address><addrLine>Austin TX USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="69" to="82"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<title level="m" type="main">RetractoBot: a protocol for a randomised controlled trial to assess the impact of notifying authors that they have cited a retracted paper</title>
+		<author>
+			<persName><forename type="first">Karolina</forename><surname>Wartolowska</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Francis</forename><surname>Irving</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nicholas</forename><surname>Devito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Benjamin</forename><surname>Feakins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Helen</forename><surname>Curtis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Seb</forename><surname>Bacon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Liam</forename><surname>Smeeth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carl</forename><surname>Heneghan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ben</forename><surname>Goldacre</surname></persName>
+		</author>
+		<idno type="DOI">10.6084/m9.figshare.24468391.v1</idno>
+		<ptr target="https://doi.org/10.6084/m9.figshare.24468391.v1"/>
+		<imprint>
+			<date type="published" when="2023-10">2023. Oct 2023. October 2023</date>
+		</imprint>
+		<respStmt>
+			<orgName>BMC Medicine Registered Report</orgName>
+		</respStmt>
+	</monogr>
+	<note>Revised Stage 1 Registered Report Protocol</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Alarm and alert systems</title>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Wickens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Justin</forename><forename type="middle">G</forename><surname>Hollands</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Simon</forename><surname>Banbury</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Raja</forename><surname>Parasuraman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Engineering Psychology and Human Performance</title>
+		<meeting><address><addrLine>London</addrLine></address></meeting>
+		<imprint>
+			<publisher>Taylor &amp; Francis Group</publisher>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="page" from="23" to="27"/>
+		</imprint>
+	</monogr>
+	<note>Section 5.3</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">A guide to small-molecule structure assignment through computation of (1H and 13C) NMR chemical shifts</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Patrick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthew</forename><forename type="middle">J</forename><surname>Willoughby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><forename type="middle">R</forename><surname>Jansma</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Hoye</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nprot.2014.042</idno>
+		<ptr target="https://doi.org/10.1038/nprot.2014.042"/>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Protocols</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="643" to="660"/>
+			<date type="published" when="2014-03">2014. March 2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Addendum: A guide to small-molecule structure assignment through computation of (1H and 13C) NMR chemical shifts</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Patrick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthew</forename><forename type="middle">J</forename><surname>Willoughby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><forename type="middle">R</forename><surname>Jansma</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Hoye</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41596-020-0293-9</idno>
+		<ptr target="https://doi.org/10.1038/s41596-020-0293-9"/>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Protocols</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page">2277</biblScope>
+			<date type="published" when="2020-07">2020. July 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Erratum -Designing the Secondary Coordination Sphere in Small-Molecule Catalysis</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Inbal</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Zak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Santosh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anat</forename><surname>Gadekar</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Milo</surname></persName>
+		</author>
+		<idno type="DOI">10.1055/s-0043-1763761</idno>
+		<ptr target="https://doi.org/10.1055/s-0043-1763761"/>
+	</analytic>
+	<monogr>
+		<title level="j">Synlett</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="issue">07</biblScope>
+			<biblScope unit="page">832</biblScope>
+			<date type="published" when="2024-04">2024. April 2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<title level="m" type="main">PROTOCOL: Annotation by chemistry expert #2 for Addressing Unreliability Propagation in Scientific Digital Libraries</title>
+		<author>
+			<persName><forename type="first">Yuanxi</forename><surname>Heng Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Janina</forename><surname>Fu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jodi</forename><surname>Sarol</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Schneider</surname></persName>
+		</author>
+		<ptr target="https://hdl.handle.net/2142/123380"/>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note>Protocol</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<author>
+			<persName><forename type="first">Yuanxi</forename><surname>Heng Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ellie</forename><surname>Fu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jodi</forename><surname>Vandel</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Schneider</surname></persName>
+		</author>
+		<idno type="DOI">10.13012/B2IDB-4610831_V3</idno>
+		<ptr target="https://doi.org/10.13012/B2IDB-4610831_V3"/>
+		<title level="m">Dataset of 286 publications citing the 2014 Willoughby-Jansma-Hoye protocol</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Citations of microRNA biomarker articles that were retracted: A systematic review</title>
+		<author>
+			<persName><forename type="first">Hongmei</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yongliang</forename><surname>Jia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Siu-Wai</forename><surname>Leung</surname></persName>
+		</author>
+		<idno type="DOI">10.1001/jamanetworkopen.2024.3173</idno>
+		<ptr target="https://doi.org/10.1001/jamanetworkopen.2024.3173"/>
+	</analytic>
+	<monogr>
+		<title level="j">JAMA Network Open</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">243173</biblScope>
+			<date type="published" when="2024-03">2024. March 2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

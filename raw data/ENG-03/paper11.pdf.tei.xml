@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">PRELIMINARY RESULTS OF TEMPORAL DEFORMATION ANALYSIS IN ISTANBUL USING MULTI-TEMPORAL INSAR WITH SENTINEL-1 SAR DATA</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mumin</forename><surname>Imamoglu</surname></persName>
+							<email>mumin.imamoglu@tubitak.gov.tr</email>
+							<affiliation key="aff0">
+								<orgName type="institution">TUBITAK-BILGEM</orgName>
+								<address>
+									<settlement>Kocaeli</settlement>
+									<country key="TR">TURKEY</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Saygın</forename><surname>Abdikan</surname></persName>
+							<email>sabdikan@beun.edu.tr</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Bulent Ecevit University</orgName>
+								<address>
+									<settlement>Zonguldak</settlement>
+									<country key="TR">TURKEY</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fatih</forename><surname>Kahraman</surname></persName>
+							<email>fatih.kahraman@tubitak.gov.tr</email>
+							<affiliation key="aff0">
+								<orgName type="institution">TUBITAK-BILGEM</orgName>
+								<address>
+									<settlement>Kocaeli</settlement>
+									<country key="TR">TURKEY</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">PRELIMINARY RESULTS OF TEMPORAL DEFORMATION ANALYSIS IN ISTANBUL USING MULTI-TEMPORAL INSAR WITH SENTINEL-1 SAR DATA</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">BF5201B5000E7D9DE58E91F9325D41FA</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-09-01T12:24+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Urban deformation monitoring</term>
+					<term>Sentinel-1</term>
+					<term>Persistent Scatterer InSAR</term>
+					<term>Differential InSAR</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Multi-temporal differential synthetic aperture radar interferometry techniques are well-developed and beneficial tools for deformation analysis using remotely sensed images. The primary objective of the study is to investigate the capability and the performance of the new generation SAR system Sentinel-1 data to detect and monitor surface deformation. We combined open source tools of Sentinel Application Platform (SNAP) and Stanford Method for Persistent Scatterers (StaMPS) for data processing. The results highlight the recent surface displacement rates over the Istanbul city. The deformation rates reach up to approximately 8 mm/yr over a 4 year period.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">INTRODUCTION</head><p>Highly urbanized cities play an important role within the socio-economic structure of the countries. Meanwhile, they are very vulnerable due to rapid increase of the population. In addition to natural hazards, cities and infrastructure of it are under risk of anthropogenic-related damages. The detection and continuous monitoring of surface deformation is a key factor to prevent possible risks and sustainable development of the urban planning. In this context, satellite based Synthetic Aperture RADAR (SAR) data and Differential SAR Interferometry (DInSAR) technique provide a powerful tool for remote detection of surface displacement, mapping and long term monitoring of several phenomena <ref type="bibr" target="#b0">[1]</ref>. Particularly, advanced multi-temporal DInSAR approaches known as Persistent Scatterer Interferometry (PSI) <ref type="bibr" target="#b1">[2]</ref> <ref type="bibr" target="#b2">[3]</ref> and Small Baseline Subset (SBAS) <ref type="bibr">[3][4]</ref> are capable of determining spatial deformation pattern in both local and regional scales. Both approaches have been successfully applied for several geophysical phenomena such as landslides <ref type="bibr">[5][6]</ref>, subsidence <ref type="bibr" target="#b6">[7]</ref>[8] and seismic events <ref type="bibr" target="#b8">[9]</ref> <ref type="bibr" target="#b9">[10]</ref>.</p><p>Previous studies using different data, time span and InSAR techniques have showed the deformation rate and its evolution in time over Istanbul. A mean ground velocity map over Istanbul using ERS and Envisat dataset from 1992 to 2010 has been presented by <ref type="bibr" target="#b10">[11]</ref>. The result indicates subsidence pattern at urbanized areas especially at the west site of the region. The crustal deformation near Istanbul was analyzed using ERS and Envisat data <ref type="bibr" target="#b11">[12]</ref>. The SBAS results of multi-looked dataset present approximately 5 mm/yr at Line of Sight (LOS) direction. A detailed analysis was conducted using SBAS technique with TerraSAR-X data and it concluded that there were local deformation patterns over the city center of Istanbul <ref type="bibr" target="#b12">[13]</ref>. Within the one and half year time span (Nov 2010-Jun 2011) mean deformation velocity values have reached up to approximately 3-4 cm movements away from the satellite at LOS direction. Most of the deformation occurred at places where man-made filled recreation areas were located <ref type="bibr" target="#b12">[13]</ref>. Detection of deformation and continuous monitoring of the city is crucial for risk management and sustainable planning of the city. To this aim, current surface deformation over settlement, recreation areas and transportation network were under investigation from 2014 to 2017. New generation SAR missions of Sentinel-1A/B satellites images which are free-of-charge and cover large areas were utilized. PSI method was applied due to lack of limitation by baseline decorrelation and being a suitable method for long term analysis in urbanized regions <ref type="bibr" target="#b13">[14]</ref>. This paper addresses capability of Sentinel-1 data for deformation analysis on densely urbanized megacity Istanbul using StaMPS method <ref type="bibr" target="#b2">[3]</ref>. The remaining sections of this paper are organized as follows. Section 2 outlines details of materials and methodology used. Up to date deformation pattern and velocity maps are presented in Section 3. And finally, Section 4 summarizes the outcome of this paper and explains planned future works.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">MATERIALS AND METHODOLOGY</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.">Study Area: İstanbul</head><p>The study area Istanbul is located in the north-west of Turkey, Figure <ref type="figure">1</ref>. The Marmara Sea and the Black Sea lie on the south and north of Istanbul, respectively. Rapid urbanization has had a drastic impact on the urban sprawl of the city. Both natural and man-induced hazards have played a role in deformation formation. As a megacity, it has more than 15 million inhabitants which cause major land use changes affecting ecology. Additionally, the city is located on North Anatolian Fault which is the cause of major earthquakes. In this work, we focus on the Golden Horn and the Historical Peninsula to be able to compare produced results with previously reported analysis <ref type="bibr" target="#b12">[13]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.">Sentinel-1 Data</head><p>Sentinel-1 is one of Sentinels mission satellites which provide radar imaging all-weather, day-and-night for land and ocean services at C-band under Copernicus programme. We utilize 123 Sentinel-1 SAR data at ascending orbit acquired in TOPSAR Interferometric Wide (IW) Swath Mode in Single Look Complex (SLC) format for orbit number 58 and 114 Sentinel-1 descending IW SLC data for orbit number 36. For both ascending and descending datasets VV polarization bands are processed. The data covers the time period between October 2014 and October 2017. The dataset consists of both Sentinel-1A for the whole time period and Sentinel-1B missions starting from October 2016. The single master image is selected based on the geometrical and temporal baseline of the Sentinel-1 A/B images (Figure <ref type="figure">2</ref>). Master images, 30 th of July 2016 for ascending dataset and 29 th of July for descending datasets, are selected from summer time period in which atmospheric conditions are considered to be less disturbing to interferometric phase compared to other time periods of the year.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3.">Multi-Temporal InSAR Processing</head><p>There are two main processing blocks for time series analysis of InSAR data <ref type="bibr" target="#b13">[14]</ref>.The first part of the analysis which includes interferogram formation of all data and removing topographic phase steps are accomplished using Sentinel Application Platform (SNAP, version 6.0 Prev5) <ref type="bibr" target="#b14">[15]</ref>. SNAP is the common architecture of scientific exploitation of Sentinel 1/2/3 missions and one of the lead software that supports interferometric processing of Sentinel family of PSI methods which exploit specific single scatterer and allow very high-resolution monitoring <ref type="bibr" target="#b2">[3]</ref>. Details of processing steps of StaMPS algorithms are provided in the right part of Figure <ref type="figure">3</ref>. All formed interferograms are controlled and the ones that have high standard deviation or shows strong atmospheric effect are eliminated from PSI processing (red circles that had no connection to others in Figure <ref type="figure">2</ref>). In the first part, persistent scatterer (PS) candidates are selected. Then for each PS candidate spatially correlated phase is found and subtracted. At the end, 3D phase unwrapping is applied and error estimation is done. StaMPS processing parameters are tuned for reasonable mitigation of errors.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">RESULTS AND DISCUSSION</head><p>A deformation velocity map was produced with the application of PSI technique over the previously specified region of Istanbul. For both ascending and descending datasets mean velocities are shown in Figure <ref type="figure">4</ref> with a common interval of ±8 mm/year. Surface displacement is measured along the line of sight (LOS) of the satellite since SAR sensors can only measure the projection of the real movement along the LOS direction. Negative values (red colors) mean displacement occurred away from the satellite and positive values (blue colors) means displacement towards the satellite. White star shows the reference point for measurements considered to be stable over the period. Deformation velocity maps reveal that there are several areas affected by subsidence phenomenon mostly located along the coastal zones of the Golden Horn and human interventions areas that changed the landscape. We want to emphasize three specific sub-regions shown as white rectangles in Figure <ref type="figure">4</ref> to discuss our preliminary results for deformation phenomenon.</p><p>Region 1 which is located around the area called Miniaturk shows similar deformation pattern for both ascending and descending analysis meaning vertical  displacement. Similar deformation pattern for the same area is reported between 2010 and 2012 in <ref type="bibr" target="#b12">[13]</ref>. Deformation velocity maps obtained in this work show us that the subsidence phenomenon at the same area continued between 2014 and 2017. The Second region is around the Sirkeci Marmaray station and in <ref type="bibr" target="#b12">[13]</ref> it is reported that the area is affected by significant deformation rates. After inspecting the same area in Figure <ref type="figure">4</ref>, it would not be wrong to say that although deformation still continues, the strength of the deformation rate has slowed down. Ground conditions of the railway station and the neighborhood should be investigated in more details supporting with additional deformation measurements. The third region that is called Yenikapı Activity Area is constructed between 2012 and 2014 as the recreation area for festivals, activities and social rally.</p><p>Although both ascending and descending datasets indicate similar deformation pattern, descending deformation map shows more extensive LOS deformation at almost every point of the activity area of shores than ascending one. Difference deformation pattern between ascending and descending datasets is an indication of horizontal deformation.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">CONCLUSION AND FUTURE WORKS</head><p>In this paper, the temporal behavior of land deformations in sub-region of Istanbul is analyzed by applying PSI technique to the Sentinel-1 A/B datasets from 2014 to 2017. Produced deformation velocity maps for both ascending and descending datasets show that certain regions of the city are exposed to subsidence over the years. Preliminary results obtained in this work need to be validated through other surface deformation methods like GPS measurements. Moreover, in order to increase measurement accuracy atmospheric effect should also be removed from each slave images. Besides that, LOS deformation obtained from ascending and descending datasets should be combined to obtain real vertical and horizontal displacements. This study is the first step of a broader project: continuous deformation monitoring of Istanbul City using SAR and GPS data. Continuous monitoring of deformation is crucial for risk management and sustainable planning of the city. The outcomes of this work suggest that the PSI technique can have a high potential in the field of near-real time land deformation monitoring using Sentinel-1 data. To achieve this goal, we will implement fully parallelized version of PSI that is capable of working on multiple processor stations and computer clusters.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 2 Figure 1</head><label>21</label><figDesc>Figure 1 Study area İstanbul, Turkey shown in black box. Blue boxes illustrate the frames of Sentinel-1 images. Blue and red lines indicate Marmaray and metro transportation network, respectively.</figDesc><graphic coords="2,54.10,70.55,244.70,164.15" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 3 Figure 4</head><label>34</label><figDesc>Figure 3 Processing steps on SNAP and StaMPS</figDesc><graphic coords="3,55.55,70.55,500.90,108.85" type="bitmap"/></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>This research was supported by Republic of Turkey Prime Ministry Disaster and Emergency Management Presidency (AFAD) and TUBITAK BILGEM (Project No: B740-100289).</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>Authorized licensed use limited to: ESCUELA POLITECNICA DEL LITORAL (ESPOL). Downloaded on August 06,2025 at 22:47:28 UTC from IEEE Xplore. Restrictions apply.</p></note>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">An application of the SBAS-DInSAR technique for the assessment of structural damage in the city of Rome</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Arangio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Calo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">`</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Mauro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bonano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Marsella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Manunta</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Structure and Infrastructure Eng</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="1469" to="1483"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Permanent Scatteres in SAR Interferometry</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ferretti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Prati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Rocca</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans Geosci Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="8" to="20"/>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Recent advances in SAR interferometry time series analysis for measuring crustal deformation</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hooper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Bekaert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Spaans</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Arikan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Tectonophysics</title>
+		<imprint>
+			<biblScope unit="volume">514</biblScope>
+			<biblScope unit="page" from="1" to="13"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">A new Algorithm for Surface Deformation Monitoring based on Small Baseline Differential SAR Interferograms</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Berardino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Fornaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Sansosti</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. on Geoscience and Remote Sensing</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="2375" to="2383"/>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Enhanced landslide investigations through advanced DInSAR techniques: The Ivancich case study, Assisi, Italy</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Calò</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Ardizzone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Castaldo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">P</forename><surname>Lollino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Tizzani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Guzzetti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Angeli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Pontoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Manunt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sensing of Environment</title>
+		<imprint>
+			<biblScope unit="volume">142</biblScope>
+			<biblScope unit="page" from="69" to="82"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">A-DInSAR Monitoring of Landslide and Subsidence Activity: A Case of Urban Damage in Arcos de la Frontera, Spain</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Bru</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>González</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Mateos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">J</forename><surname>Roldán</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Herrera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Béjar-Pizarro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Fernández</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">787</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Monitoring of coal mining subsidence in peri-urban area of Zonguldak city (NW Turkey) with persistent scatterer interferometry using ALOS-PALSAR</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Abdikan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Arıkan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">B</forename><surname>Sanli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Cakir</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Environ Earth Sci</title>
+		<imprint>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="page" from="4081" to="4089"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Combined Use of C-and X-Band SAR Data for Subsidence Monitoring in an Urban Area</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Solari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ciampalini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Raspini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bianchini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Zinno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bonano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Manunta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Moretti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Casagli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Geosciences</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">21</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Extent and distribution of aseismic slip on the Ismetpasa segment of the North Anatolian Fault (Turkey) from Persistent Scatterer InSAR</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Cetin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Cakir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Meghraoui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ergintav</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Akoglu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Geochem. Geophys. Geosyst</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">The Aftershock Sequence of the 2008 Achaia, Greece, Earthquake: Joint Analysis of Seismicity Relocation and Persistent Scatterers Interfer</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Karakostas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Mirek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mesimeri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Papadimitriou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mirek</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Pure Appl. Geophys</title>
+		<imprint>
+			<biblScope unit="volume">174</biblScope>
+			<biblScope unit="page" from="151" to="176"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Fault locking near Istanbul: indication of earthquake potential from InSAR and GPS observations</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Diao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">R</forename><surname>Walter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Solaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bonano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Manzo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ergintav</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Xiong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Geophysical J. Int</title>
+		<imprint>
+			<biblScope unit="volume">205</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="490" to="498"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Satellite monitoring of hazards: A focus on Istanbul, Turkey</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">R</forename><surname>Walter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Manzo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Manconi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Solaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Motagh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Woith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Parolai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shirazei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zschau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Baris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Eos, Trans. Am. Geophys. Union</title>
+		<imprint>
+			<biblScope unit="volume">91</biblScope>
+			<biblScope unit="page" from="313" to="324"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">The Space-Borne SBAS-DInSAR Technique as a Supporting Tool for Sustainable Urban Policies: The Case of Istanbul Megacity, Turkey</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Calò</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Abdikan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Görüm</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pepe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kiliç</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">Balik</forename><surname>Şanli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="16519" to="16536"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Time series analysis of InSAR data: Methods and trends</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Osmanoglu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Sunar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wdowinski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">C</forename><surname>Cano</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ISPRS J. of Photogrammetry and Remote Sensing</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<biblScope unit="page" from="90" to="1022016"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<ptr target="http://step.esa.int/main/toolboxes/snap"/>
+		<title level="m">Sentinel Application Platform</title>
+		<imprint>
+			<date type="published" when="2018-01-04">4 Jan. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Sentinel-1 Instrument Processing Facility: Impact of the Elevation Antenna Pattern Phase Compensation on the Interferometric Phase Preservation</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Miranda</surname></persName>
+		</author>
+		<idno>EOPG-CSCOP-TN-0004</idno>
+	</analytic>
+	<monogr>
+		<title level="j">European Space Agency Technical Note ESA</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<date type="published" when="2015-07-22">22 July 2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

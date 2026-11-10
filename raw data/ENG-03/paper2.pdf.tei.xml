@@ -1,0 +1,1487 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main"/>
+				<funder ref="#_WjAgGM7">
+					<orgName type="full">European Union</orgName>
+				</funder>
+				<funder ref="#_pCzzC58">
+					<orgName type="full">Italian Ministero dell'Istruzione, dell'Università e della Ricerca</orgName>
+					<orgName type="abbreviated">MIUR</orgName>
+				</funder>
+				<funder ref="#_dQbnFeH">
+					<orgName type="full">China Scholarship Council</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Italian Space Agency (ASI)</orgName>
+				</funder>
+				<funder ref="#_V2k3MmH">
+					<orgName type="full">European Commission</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Italian Department of Civil Protection (DPC)</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Aerodynamics Reseacrh and Development Center</orgName>
+								<orgName type="institution">IREA-CNR</orgName>
+								<address>
+									<postCode>80124</postCode>
+									<settlement>Napoli Mianyang</settlement>
+									<country>Italy China</country>
+								</address>
+							</affiliation>
+						</author>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">2AFD9241AB2F6DD84CF5DF900211B9BF</idno>
+					<idno type="DOI">10.1109/TGRS.2015.2396875</idno>
+					<note type="submission">received July 7, 2014; revised January 12, 2015; accepted January 21, 2015.</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-09-01T12:20+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract/>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Improved EMCF-SBAS Processing Chain Based on</head><p>Advanced Techniques for the Noise-Filtering and Selection of Small Baseline Multi-Look DInSAR Interferograms Antonio Pepe, Member, IEEE, Yang Yang, Mariarosaria Manzo, and Riccardo Lanari, Fellow, IEEE Abstract-We present in this paper a solution to drastically improve the deformation time-series retrieval capability of the small baseline differential SAR interferometry (DInSAR) processing chain based on the cascade of the extended minimum cost flow (EMCF) phase unwrapping method and of the small baseline subset (SBAS) inversion technique. This improvement relies on the inclusion of two preprocessing steps implementing an effective noise-filtering operation and an efficient interferogram selection procedure, respectively. The former step filters out the noise affecting the phase components of a redundant set of conventional multi-look small baseline interferograms. This is achieved by solving, for each pixel, a nonlinear minimization problem based on computing the wrapped phase vector that minimizes the weighted circular variance of the phase difference between the original and noise-filtered interferograms. This technique is very easy to implement because it does not require any pixel selection step to be applied to the exploited full-resolution SAR images, and it has no need of any a priori information on the statistics of the complex-valued SAR images. The latter step, implementing the interferogram selection procedure, is carried out via a computationally efficient simulated annealing algorithm and allows identifying the optimum set of previously filtered small baseline interferograms to be used as input for the original EMCF-SBAS processing chain by maximizing the (average) coherence values. The presented results, achieved by processing three data sets collected by the ENVISAT ASAR sensor over the Abruzzi region (Central Italy), Mt. Etna volcano (South Italy), and Yellowstone Caldera (WY, USA), demonstrate the effectiveness of the proposed advanced EMCF-SBAS processing chain.</p><p>Index Terms-Deformation time-series, differential synthetic aperture radar interferometry (DInSAR), small baseline subset (SBAS).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>D IFFERENTIAL synthetic aperture radar interferometry (DInSAR) has evolved over the years to become, nowadays, a well-established remote sensing methodology for Earth surface deformation detection and monitoring <ref type="bibr" target="#b0">[1]</ref>, <ref type="bibr" target="#b1">[2]</ref>. The DInSAR technique exploits the phase difference (interferogram) between two SAR acquisitions collected at different epochs and provides a measurement of the ground displacement projection along the radar line of sight (LOS), with a centimeter-to-millimeter accuracy <ref type="bibr" target="#b2">[3]</ref>. While originally applied to investigate single deformation episodes <ref type="bibr" target="#b3">[4]</ref>- <ref type="bibr" target="#b7">[8]</ref>, the DInSAR methodology has progressively (and successfully) been extended to detect and investigate the temporal evolution of the retrieved surface displacements via the development of "advanced" DInSAR techniques <ref type="bibr" target="#b8">[9]</ref>- <ref type="bibr" target="#b14">[15]</ref>. These algorithms are based on the inversion of properly generated sequences of DInSAR interferograms and allow the computation of LOSprojected deformation time-series in areas that are not significantly affected by decorrelation noise <ref type="bibr" target="#b15">[16]</ref>, <ref type="bibr" target="#b16">[17]</ref>.</p><p>The advanced DInSAR techniques are usually grouped into two main categories: the persistent scatterer (PS) methods <ref type="bibr" target="#b8">[9]</ref>- <ref type="bibr" target="#b11">[12]</ref>, which are mostly focused on investigating point targets, and the small baseline (SB) techniques <ref type="bibr" target="#b12">[13]</ref>- <ref type="bibr" target="#b14">[15]</ref> that also analyze distributed targets (DS). In particular, the PS methods operate on the pixels of the full-resolution (single-look) images that are representative of resolution cells characterized by a dominant scatterer. These targets are not significantly affected by spatial and temporal decorrelation <ref type="bibr" target="#b15">[16]</ref>, thus permitting us to analyze interferometric SAR image pairs also with a very large spatial and temporal separation (baseline) between the acquisition orbits. Accordingly, the interferometric pairs can be chosen without imposing any constraint on their baselines, and all of the interferograms can be generated with respect to one single common SAR scene, usually referred to as "master image."</p><p>Conversely, the SB techniques also allow the exploitation of DSs that may be affected by spatial and temporal decorrelation phenomena. Accordingly, a proper selection of interferometric SAR data pairs with limited spatial and temporal baselines is carried out. As a consequence, the selection of a single master image for all of the interferograms of a data set is unfeasible, and a multiple master strategy has to be assumed <ref type="bibr" target="#b12">[13]</ref>- <ref type="bibr" target="#b14">[15]</ref>.</p><p>Among the SB techniques, a well-known approach is the one referred to as small baseline subset (SBAS) <ref type="bibr" target="#b12">[13]</ref> that allows producing LOS-projected mean deformation velocity maps and corresponding displacement time-series. The SBAS technique has originally been developed to analyze multi-look (complex average) interferograms <ref type="bibr" target="#b12">[13]</ref>, and it has subsequently been extended to work with full-resolution interferograms <ref type="bibr" target="#b17">[18]</ref>, with the aim to also detect localized deformation signals that may affect, for instance, single buildings or man-made structures. As previously said, the SBAS approach relies on the use of multiple master interferograms generated by imposing constraints on the maximum allowed spatial and temporal baselines. Accordingly, the baseline selection implies that the SAR data pairs used to produce the interferograms may be arranged in (few) subsets that are separated by large baselines. These subsets turn out to be independent from each other (since no suitable interferogram that connects SAR images belonging to different subsets exists), thus giving rise to an underdetermined problem for the time-series inversion, which can be solved by searching for a minimum norm least squares solution via the singular value decomposition (SVD) method <ref type="bibr" target="#b12">[13]</ref>.</p><p>We further remark that the SBAS technique is fully compatible with the phase unwrapping (PhU) procedure referred to as extended minimum cost flow (EMCF) <ref type="bibr" target="#b18">[19]</ref>. This technique represents the space-time extension of the original minimum cost flow (MCF) PhU approach <ref type="bibr" target="#b19">[20]</ref> and is based on the joint exploitation of the spatial and temporal relationships among the computed interferograms. The EMCF approach involves the computation of two Delaunay triangulations, usually referred to as "temporal" and "spatial" triangulations, respectively. The former takes into account the SAR data acquisition distribution in the temporal/perpendicular baseline plane <ref type="bibr" target="#b18">[19]</ref>, <ref type="bibr" target="#b20">[21]</ref>. From the original temporal Delaunay triangulation, all of the triangles containing at least one "large baseline" interferogram are discarded. This leads to a reduced-Delaunay triangulation, which identifies the time-redundant network of small baseline DIn-SAR interferograms to be subsequently exploited. The spatial triangulation, instead, involves a selection, in the azimuth/range plane, of the coherent pixels that are common to the selected small baseline interferograms. It is worth remarking that, owing to the existence of high-performance routines implementing the MCF problem solver <ref type="bibr" target="#b21">[22]</ref>, the EMCF approach is computationally efficient with respect to other recently proposed space/time PhU approaches <ref type="bibr" target="#b22">[23]</ref>- <ref type="bibr" target="#b24">[25]</ref> that, instead, require the solution of time-consuming linear programming problems.</p><p>The joint exploitation of the EMCF and SBAS procedures, synthetically referred hereinafter to as EMCF-SBAS processing chain, has demonstrated its effectiveness to detect and investigate the temporal evolution of surface deformation phenomena in different applications. For instance, it has widely been exploited to analyze SAR data acquired by the C-band (5.6-cm wavelength) sensors onboard the ERS-1/2 and the ENVISAT platforms <ref type="bibr" target="#b25">[26]</ref>- <ref type="bibr" target="#b29">[30]</ref> of the European Space Agency (ESA). Note also that, when these two radar systems (operating with slightly different carrier frequencies) are collecting data with the same electromagnetic characteristics and illumination geometries, the ERS and ENVISAT data sets may be also jointly exploited by assuming that they belong to independent subsets that can be easily "linked" with one another by applying the original SBAS strategy <ref type="bibr" target="#b30">[31]</ref>.</p><p>The EMCF-SBAS processing chain has also been used to generate displacement time-series from sequences of SAR im-ages of the C-band Canadian Space Agency RADARSAT-1 sensor <ref type="bibr" target="#b31">[32]</ref>. More recently, it has been applied to the X-band (3.1-cm wavelength) data acquired by the new generation SAR instruments onboard the COSMO-SkyMed <ref type="bibr" target="#b32">[33]</ref>- <ref type="bibr" target="#b34">[35]</ref> sensor constellation of the Italian Space Agency (ASI), which combine improved spatial resolutions and shorter revisit times with respect to those permitted by the previous generation C-band radar sensors.</p><p>We present in this paper an advanced version of the EMCF-SBAS processing chain, which drastically improves the deformation time-series retrieval capability of the original EMCF-SBAS procedure. This improvement is achieved by complementing the original processing chain with two additional preprocessing steps, with the former implementing an effective interferogram noise-filtering operation and the latter an efficient interferogram selection, which allows us to identify the optimal reduced temporal triangulation to be exploited by the EMCF-SBAS processing chain.</p><p>The effectiveness of the proposed advanced EMCF-SBAS processing chain is demonstrated through an extensive set of experiments carried out on three sequences of SAR images collected by the ASAR instrument onboard the ENVISAT satellite.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. RATIONALE OF THE ADVANCED EMCF-SBAS PROCESSING CHAIN</head><p>We summarize in this section the main processing elements characterizing the proposed advanced EMCF-SBAS processing chain. To this aim, we start by considering the original EMCF-SBAS processing chain, sketched in Fig. <ref type="figure">1</ref>, consisting of the previously mentioned two steps implementing the EMCF and the SBAS procedures, respectively. As said, the input of the original EMCF-SBAS processing chain is represented by a sequence of small baseline multi-look interferograms identified by a reduced-Delaunay triangulation computed in the temporal/perpendicular baseline plane. These interferograms are first unwrapped through the EMCF technique and then inverted via the SBAS algorithm<ref type="foot" target="#foot_0">foot_0</ref> to compute the mean deformation velocity maps and, above all, surface displacement timeseries in correspondence to the temporally coherent pixels <ref type="bibr" target="#b18">[19]</ref>. The advanced EMCF-SBAS processing chain, whose block diagram is shown in Fig. <ref type="figure">2</ref>, complements the original EMCF-SBAS processing chain with two additional preprocessing steps referred to as interferogram noise-filtering and interferogram selection techniques, respectively.</p><p>The former, briefly presented first in <ref type="bibr" target="#b35">[36]</ref> and extensively described in the following Section III, allows us to significantly mitigate the decorrelation noise effects in a sequence of timeredundant multi-look small baseline interferograms, identified by simply imposing constraints on the maximum allowed spatial and temporal baselines, by properly exploiting their temporal relationships. In particular, this result is achieved as follows: 1) by solving a nonlinear minimization problem involving only the phase information of the exploited interferograms and 2) without requiring the implementation of any pixel-by-pixel adaptive procedures for the DS identification, based on the distributed scattering hypothesis <ref type="bibr" target="#b37">[38]</ref>, <ref type="bibr" target="#b38">[39]</ref> and applied to the full-resolution SAR images. Note that these are distinct and easy-to-implement features of our approach with respect to the phase linking approach <ref type="bibr" target="#b38">[39]</ref>, the SqueeSAR algorithm <ref type="bibr" target="#b39">[40]</ref>, and other recently proposed multitemporal interferogram filtering techniques <ref type="bibr" target="#b40">[41]</ref>- <ref type="bibr" target="#b42">[43]</ref>. Moreover, another peculiar characteristic of our method is the exploitation of a limited set of small baseline interferograms, which are selected by simply imposing constraints on the maximum allowed interferometric spatial and temporal baselines.</p><p>For what concerns the interferogram selection technique, which is extensively discussed in Section IV, it is aimed at identifying, starting from the previously filtered multi-look small baseline interferograms, the most appropriate temporal reduced triangulation to be exploited by the EMCF technique. In particular, our procedure maximizes the (average) coherence values of the small baseline multi-look interferograms belonging to the selected reduced triangulation through a simulated annealing (SA) searching strategy <ref type="bibr" target="#b43">[44]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. INTERFEROGRAM NOISE-FILTERING TECHNIQUE</head><p>We present in this section the analytical description of the proposed interferogram noise-filtering algorithm. Moreover, in order to show the effectiveness of the developed technique, we also present some results achieved by considering a data set of ENVISAT SAR images acquired over the Abruzzi region (Central Italy), which represents a very critical test-site since the related interferograms are typically affected by severe decorrelation noise artifacts.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Algorithm</head><p>Let us assume the availability of a set of N + 1 SAR images acquired over the same area at ordered epochs t ≡ [t 0 , t 1 , . . . , t N ] T , properly coregistered <ref type="bibr" target="#b44">[45]</ref> with respect to the master scene collected at t m , which is used as reference for the temporal</p><formula xml:id="formula_0">T ≡ [t 0 -t m , t 1 -t m , . . . , t N -t m ] T and spatial b ⊥ ≡ [b ⊥0 , b ⊥1 , . . . , b ⊥N ] T baseline</formula><p>vectors, with the latter relevant to the perpendicular component with respect to the radar LOS (perpendicular baseline). From these N + 1 images, we first identify the M SAR data pairs characterized by small perpendicular and temporal baselines, and then, we generate the corresponding sequence of M small baseline multi-look interferograms, e.g., ΔΦ(x, r) = [ΔΦ 1 (x, r), ΔΦ 2 (x, r), . . . , ΔΦ M (x, r)] T , with (x, r) being the azimuth and range coordinates of a generic radar pixel, and ΔΦ k (x, r) = Φ IM k (x, r)-Φ IS k (x, r) -π,π ∀ k = 1, . . . , M, where Φ(x, r) = [Φ 0 (x, r), Φ 1 (x, r), . . . , Φ N (x, r)] T is the vector of the (unknown) wrapped phase values relevant to the N + 1 SAR scenes. Note also that IM k and IS k , ∀ k = 1, . . . M, are the two indexes corresponding to the (master) and (slave) time acquisitions of the kth SAR data pair, respectively, and the symbol • -π,π stands for the wrapping operator. Note that the dependence on (x, r) variables is hereinafter not explicitly mentioned since the proposed technique implies a pixel-bypixel temporal analysis.</p><p>The presented noise-filtering approach arises from the observation that multi-look interferograms are not fully timeconsistent because they are typically generated through the multi-look operation, followed by a noise-filtering step <ref type="bibr" target="#b45">[46]</ref>, <ref type="bibr" target="#b46">[47]</ref>, and these steps are both independently carried out on each single interferogram. Indeed, the sum of the three (generic) multi-look interferograms computed from the SAR images acquired at the epochs t A , t B , and t C , i.e., ΔΦ BA = Φ B -Φ A -π,π , ΔΦ CB = Φ C -Φ B -π,π , and ΔΦ AC = Φ A -Φ C -π,π , is different from zero <ref type="bibr" target="#b39">[40]</ref>, <ref type="bibr" target="#b47">[48]</ref> ΔΦ BA + ΔΦ CB + ΔΦ AC -π,π = 0.</p><p>(1)</p><p>Our noise-filtering method is based on analyzing the temporal inconsistencies of the computed time-redundant network of multi-look interferograms; it first allows estimating the (unknown) vector of the wrapped phases (related to the SAR acquisitions), which is subsequently used to reconstruct a new sequence of time-consistent noise-filtered interferograms. The exploitation of conventional small baseline multi-look interferograms is the distinctive characteristic of the proposed approach with respect to previous solutions, such as the SqueeSAR method <ref type="bibr" target="#b39">[40]</ref> and other recently proposed multitemporal filtering techniques based on constraining the analysis to distributed scatterers <ref type="bibr" target="#b40">[41]</ref>, <ref type="bibr" target="#b41">[42]</ref>, which are identified through a pixelby-pixel selection procedure performed at the full-resolution complex SAR image spatial grid. Such a selection permits us to rely on the distributed scattering hypothesis<ref type="foot" target="#foot_1">foot_1</ref> under which the probability density function (pdf) of the complex-valued SAR image may be regarded as being a zero-mean multivariate circular normal distribution, and an appropriate maximum likelihood (ML) estimation step of the filtered phase values associated to each SAR acquisition is implemented <ref type="bibr" target="#b39">[40]</ref>.</p><p>On the contrary, in our approach, we focus on conventional multi-look interferograms generated without any a priori pixel selection step. Accordingly, we cannot rely on the validity of the aforementioned distributed scattering hypothesis. This is not a limiting issue for our technique that, for each pixel of the multilook grid, is based on searching for the (unknown) phase vector of the wrapped phases (related to the SAR acquisitions), e.g., Φ, that minimizes the weighted circular variance <ref type="bibr" target="#b48">[49]</ref>- <ref type="bibr" target="#b52">[53]</ref>, e.g., ν, of the random phase vector, namely, r, representative of the phase difference between the original and reconstructed small baseline interferograms (residual phases). In particular, our solution leads to the formulation of the following nonlinear minimization problem:</p><formula xml:id="formula_1">Φ = arg min ν( Φ) = arg min 1 -Π( Φ)<label>(2a)</label></formula><formula xml:id="formula_2">Π( Φ) = M k=1 w k exp[j • r k ] M k=1 w k = ρ( Φ) exp jμ( Φ)<label>(2b)</label></formula><p>where</p><formula xml:id="formula_3">j = √ -1, r k = ΔΦ k -( ΦIM k -ΦIS k ) -π,π , ∀ k = 1, .</formula><p>. . , M, are the residual phases and w k , ∀ k = 1, . . . , M, are the weights representing our confidence on the phase quality of the exploited small baseline interferograms. Note also that ρ and μ represent the mean resultant length and the mean direction of the weighted resultant vector Π associated to the residual phases <ref type="bibr" target="#b48">[49]</ref>- <ref type="bibr" target="#b52">[53]</ref>, respectively. Moreover, ρ can be also seen as a weighted version of the temporal coherence factor <ref type="bibr" target="#b18">[19]</ref>, which is, instead, computed as the difference between the original interferograms and the ones reconstructed from the deformation time-series achieved following the SBAS inversion. In addition, the weights w k , ∀ k = 1, . . . , M, in (2b) are set by estimating the spatial coherences computed from the phase of the original multi-look interferograms ΔΦ as follows <ref type="bibr" target="#b35">[36]</ref>:</p><formula xml:id="formula_4">w k (x, r) = 1 (2N A + 1)(2N R + 1) × N A h=-N A N R p=-N R exp [j • ΔΦ k (x + h, r + p)] ∀ k = 1, . . . , M<label>(3)</label></formula><p>where 2N A + 1 and 2N R + 1 are the number of azimuth and range pixels within the used boxcar averaging window, which is centered around the generic pixel of coordinates (x, r).</p><p>It is straightforward to demonstrate (see Appendix I) that the solution Φ of the problem in (2a) and (2b) is the one that minimizes the weighted dispersion of the vector r with respect to the corresponding weighted mean direction (i.e., μ) <ref type="bibr" target="#b49">[50]</ref>- <ref type="bibr" target="#b52">[53]</ref>.</p><p>Once the solution of the problem stated in (2a) and (2b) is retrieved, the Φ phase values are then paired to reconstruct the corresponding sequence of noise-filtered interferograms Δ Φ = [Δ Φ1 , . . . , Δ ΦM ] T , where Δ Φk = ΦIM k -ΦIS k -π,π ∀ k = 1, . . . , M. The experimental results shown in the following Section III-B make clear the very remarkable improvement of the spatial coherence values of the generated multi-look interferograms with respect to the original ones.</p><p>Nevertheless, a group of the reconstructed interferograms, although limited, can exhibit spatial coherence values smaller than the ones relevant to the corresponding original interferograms (see again Section III-B), thus implying that a partial corruption of the spatial coherence occurs during the minimization procedure. In particular, it happens in correspondence to interferograms that were originally significantly coherent, and this is due to the fact that the problem in (2a) and (2b) tends to "inject" coherence from very coherent to incoherent interferograms by exploiting the time redundancy of the small baseline data pair network.</p><p>To also preserve the spatial coherence of the very coherent interferograms and further increase the phase quality of the whole set of M reconstructed interferograms, we carry out a simple nonlinear combination between the original ΔΦ and reconstructed Δ Φ interferograms. Accordingly, we combine the two sets of interferograms through the following (wrapped) weighted averaging operation:</p><formula xml:id="formula_5">Δ Φ k = arctan w k sin(ΔΦ k ) + ŵk sin(Δ Φk ) w k cos(ΔΦ k ) + ŵk cos(Δ Φk ) ∀k = 1, . . . , M<label>(4)</label></formula><p>where ŵk (•) is the spatial coherence computed from the phase of the kth reconstructed multi-look interferogram, simply estimated from (3) by replacing ΔΦ k with Δ Φk . Following the (weighted) averaging operation in (4), the set of the so-computed</p><formula xml:id="formula_6">M interferograms Δ Φ ≡ [Δ Φ 1 , Δ Φ 2 , . . . , Δ Φ M ]</formula><p>is characterized by increased levels of coherence (see Section III-B). At this stage, it is easy to recognize that this new sequence of multi-look interferograms Δ Φ is, in turn, not fully time-consistent as the original one ΔΦ was, although the interferogram temporal inconsistency has strongly been reduced. Accordingly, we may consider the possibility, at the expenses of the overall computation time of the algorithm, to carry out some successive iterations by applying the procedure in (2a) and (2b) to the sequences of time-inconsistent (average) noise-filtered differential interferograms computed following (4). The block diagram of the presented interferogram noisefiltering technique is shown in Fig. <ref type="figure" target="#fig_2">3</ref>.</p><p>A few additional considerations on the proposed interferogram noise-filtering procedure are now in order.</p><p>First, we underline that our interferogram noise-filtering technique is not just an adaptation of the phase linking approach and of the SqueeSAR algorithm <ref type="bibr" target="#b39">[40]</ref> to the SBAS context. Indeed, although these methods have the same starting point, consisting in the lack of triangularity<ref type="foot" target="#foot_3">foot_3</ref> among the phases due to the inconsistencies in the multi-look interferograms [see <ref type="bibr" target="#b0">(1)</ref>], they are fundamentally different for what concerns both the exploited statistical frameworks and the mathematical formu-lation of the minimization procedures applied to retrieve the filtered interferograms. These issues are discussed in detail in Appendix II.</p><p>Second, we remark that the minimization of the nonlinear functional in (2a) and (2b) can be independently performed for each pixel of the multi-look grid by using one of the several nonlinear optimization software packages currently available in literature <ref type="bibr" target="#b53">[54]</ref>- <ref type="bibr" target="#b55">[56]</ref>. In particular, in this paper, we use the quasi-Newton limited-memory Broyden-Fletcher-Goldfarb-Shanno method <ref type="bibr" target="#b54">[55]</ref> (freely available at <ref type="url" target="http://users.eecs">http://users.eecs</ref>. northwestern.edu/~nocedal/lbfgsb.html), which is particularly suitable to solve constrained/unconstrained large nonlinear optimization problems, by guaranteeing stable results and high computational efficiency.</p><p>Third, it is worth noting that, since only phase differences appear in (2a) and (2b), the obtained solution can be only estimated up to a constant (e.g., we impose the phase value of the first SAR image equal to zero). Furthermore, in the more general case that the imposed perpendicular and temporal baseline constraints lead to the separation of the available SAR data set in more than one independent subset of small baseline SAR data pairs, the nonlinear minimization procedure can be independently performed for each subset. Accordingly, if we assume to face with L independent small baseline subsets of SAR acquisitions, it is easy to recognize that the unknown phase terms in (2a) and (2b) can be now estimated just up to arbitrary L additive constants, since only the phase differences between SAR acquisitions that belong to the same subset appear in (2a) and (2b). However, this does not represent a drawback of the algorithm because, once the noisefiltered interferograms belonging to each independent subset are retrieved, the application of the SBAS inversion allows us to compute the (unknown) L -1 phase offsets among the different L subsets <ref type="bibr" target="#b12">[13]</ref>.</p><p>Fourth, we highlight that, within the minimization scheme, we use only small perpendicular and temporal baseline interferograms because the large baseline ones, which are characterized by small values of the spatial coherence w k <ref type="bibr" target="#b15">[16]</ref>, <ref type="bibr" target="#b16">[17]</ref>, are proved not contributing in (2a) and (2b) with relevant additional information. Indeed, we show in Appendix III the validity of this statement through a series of experimental tests carried out by applying the minimization procedure in (2a) and (2b) initially to the whole network of all of the possible M (max) = (N + 1) • N/2 interferograms and, subsequently, to limited groups of interferograms selected by progressively discarding the large baseline ones.</p><p>Finally, we stress that the proposed noise-filtering approach is intrinsically parallelizable by exploiting efficient concurrent and/or distributed processing approaches, thus allowing a significant reduction of the overall algorithm computational burden. This is due to the fact that the algorithm implements nonlinear minimization procedures that can be independently carried out for each pixel of the multi-look spatial scale.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Experimental Results</head><p>We investigated a data set consisting of 39 SAR images (Track 308, Frame 2754) collected by the ENVISAT sensor between December 2002 and August 2010 over the Abruzzi region. The test-site area includes the city of L'Aquila and its surroundings, which were struck on April 6, 2009, by a 6.3-Mw earthquake that caused more than three hundred fatalities, thousands evacuees, and severe industrial and residential building damage <ref type="bibr" target="#b32">[33]</ref>; the amplitude of a sample image of the investigated area is shown in Fig. <ref type="figure" target="#fig_3">4(a)</ref>.</p><p>The SAR images are represented in the T × B ⊥ temporal/ perpendicular baseline plane <ref type="foot" target="#foot_4">4</ref> as depicted in Fig. <ref type="figure" target="#fig_3">4</ref>(b), while the corresponding set of small baseline interferograms is shown in Fig. <ref type="figure" target="#fig_3">4(c</ref>). The latter has been obtained by imposing maximum perpendicular and temporal baseline values of 400 m and 2000 days, respectively. As a result, we retrieved a network of 338 differential SAR interferograms that were computed by performing a complex multi-look operation with 4 and 20 looks in the range and azimuth directions, respectively <ref type="bibr" target="#b37">[38]</ref>, <ref type="bibr" target="#b56">[57]</ref>, resulting in a pixel size of about 100 × 100 m. Moreover, within the interferogram <ref type="bibr" target="#b2">[3]</ref>, we used precise satellite orbit information and a three-arcsecond Shuttle Radar Topography Mission (SRTM) digital elevation model (DEM) of the region to remove the topographic phase contributions. Finally, the multi-look interferograms were also prefiltered by applying the approach described in <ref type="bibr" target="#b45">[46]</ref>.</p><p>To investigate the performance of the proposed approach, we first applied the nonlinear minimization procedure in (2a) and (2b) to the sequence of the generated 338 (original) multilook small baseline interferograms to retrieve the corresponding sequence of the noise-filtered ones. Then, we computed, by applying (3), the two sequences of spatial coherence maps relevant to the original and noise-filtered interferogram sequences <ref type="foot" target="#foot_5">5</ref> and exploited them to identify, for each interferogram, the coherent pixels by imposing a threshold on the minimum allowed spatial coherence value (we used in our experiments a coherence threshold equal to 0.7). In Fig. <ref type="figure" target="#fig_4">5</ref>(a) and (b), we portray the difference of the coherent pixel number between the noise-filtered and original interferograms plotted with respect to their perpendicular and temporal baselines, respectively. The inspection of Fig. <ref type="figure" target="#fig_4">5</ref>(a) and (b) reveals that the coherent pixel number greatly increases when we pass from the original to the reconstructed interferograms (see the diamonds above the red line), except for a very limited group (about 10%) of reconstructed interferograms that exhibit a decreased number of coherent pixels (see the diamonds below the red line). Indeed, this happens in correspondence to interferograms with very small baselines that were (originally) extremely coherent and that play the key role to "inject" coherence in the noisy ones. To recover the high-quality coherence values of these interferograms, we simply apply to the computed noise-filtered interferograms the average operation stated in (4). As a result, we retrieved a new set of (average) noise-filtered interferograms that are characterized by generally improved coherence values. This is clearly visible in Fig. <ref type="figure" target="#fig_4">5(c)</ref> and<ref type="figure">(d)</ref>, where we portray the difference of the coherent pixel number between the average noise-filtered and original interferograms plotted with respect to their perpendicular and temporal baselines, respectively. In this case, negative values for all of the computed differences  are not found, thus implying that improved coherence levels characterize all of the retrieved interferograms.</p><p>To stress the interferogram quality improvement obtained by applying the proposed noise-filtering procedure, we show in Fig. <ref type="figure" target="#fig_5">6</ref> the original (left side) and corresponding average noise-filtered (right side) multi-look interferograms relevant to three SAR data pairs. By comparing the homologous interferograms of Fig. <ref type="figure" target="#fig_5">6</ref>, we note that the decorrelation effects, clearly visible in Fig. <ref type="figure" target="#fig_5">6(a)-(c</ref>), are drastically mitigated following the noise-filtering operation [see Fig. <ref type="figure" target="#fig_5">6(d)-(f)]</ref>; this makes fully evident the effectiveness of the proposed algorithm. We also remark that the set of SB multi-look interferograms can be also prefiltered by using the filtering techniques proposed in <ref type="bibr" target="#b45">[46]</ref> and <ref type="bibr" target="#b46">[47]</ref>. The use of such prefiltering operations allows us to profitably increase the performance of the proposed noise-filtering approach. In particular, we show in Fig. <ref type="figure" target="#fig_7">7</ref> the effect of the proposed noise-filtering technique [Fig. <ref type="figure" target="#fig_5">6(c</ref>) and (d)] when applied to the "original" interferogram [Fig. <ref type="figure" target="#fig_7">7(a)</ref>] and to the corresponding prefiltered interferogram [Fig. <ref type="figure" target="#fig_7">7(b)</ref>] retrieved by using the method proposed in <ref type="bibr" target="#b45">[46]</ref>. The improvement that we obtain when we use as input of our noise-filtering technique a set of prefiltered interferograms rather than the corresponding set of "original" ones is evident.</p><p>With regard to the computational performance, we underline that the interferogram noise-filtering step was implemented through an algorithm running in parallel on several nodes.</p><p>In particular, the Abruzzi data set processing required about 360 min by exploiting five 64-b processing nodes equipped with a dual quad-core AMD Opteron 2356 processor.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. INTERFEROGRAM SELECTION TECHNIQUE</head><p>We describe in this section the interferogram selection algorithm that we developed to identify the optimal network of small baseline interferograms, belonging to the set of previously noise-filtered small baseline interferograms, <ref type="foot" target="#foot_6">6</ref> to be exploited by the EMCF-SBAS processing chain. In particular, the identified sequence of interferograms represents the input of the EMCF step, which is typically based on the generation of spatial and temporal Delaunay triangulations. Moreover, equivalently to Section III, we also present the results achieved by applying the proposed interferogram selection algorithm to the ENVISAT SAR data set relevant to the Abruzzi region.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Algorithm</head><p>Let us assume the availability of a set of N +1 SAR images represented through a set of points, namely, V ≡ [V 0 , V 1 , . . . , V N ], in the T × B ⊥ plane. The generic arc connecting two points in this plane and belonging to the temporal Delaunay triangulation, namely, tr D (V), allows us to identify the corresponding SAR data pair to be used for the interferogram generation. We observe that such a triangulation may involve arcs relevant to SAR data pairs characterized by large baseline values, thus potentially leading to operate with interferograms with significant decorrelation phenomena. Accordingly, to avoid these undesired effects without losing our trian-gulation representation, a straightforward solution is based on removing from tr D (V) all of the triangles involving arcs with too-large baselines, thus obtaining a corresponding reduced-Delaunay triangulation, namely, tr rD (V) ⊆ tr D (V). The identified reduced-Delaunay triangulation consists of M rD small baseline interferograms (with M rD &lt; M), e.g.,  to the set of noise-filtered small baseline interferograms (Δ Φ ≡ [Δ Φ 1 , Δ Φ 2 , . . . , Δ Φ M ]) retrieved by applying the procedure reported in Section III-A.</p><formula xml:id="formula_7">Δ Φ rD ≡ [Δ Φ 1 , Δ Φ 2 , . . . , Δ Φ M rD ], that, in our case, belong</formula><p>The Delaunay spatial triangulation is, on the other hand, built in the A Z × R G azimuth/range spatial plane and involves the set of coherent pixels common to the small baseline interferograms belonging to tr rD (V). Such coherent pixels are identified following the same strategy adopted in <ref type="bibr" target="#b20">[21]</ref> that is based on analyzing the interferometric phase information of the M rD noise-filtered interferograms Δ Φ rD . In particular, we first estimate the following (complex) factor:</p><formula xml:id="formula_8">ξ k (x, r) = 1 (2N A + 1)(2N R + 1) N A h=-N A × N R p=-N R exp j • Δ Φ rD k (x + h, r + p) = w rD k (x, r) exp jΔ Φ rD(LP ) k (x, r) ∀ k = 1, . . . , M rD<label>(5)</label></formula><p>with 2N A + 1 and 2N R + 1 being the number of azimuth and range pixels within the used boxcar averaging window, which is centered around the generic pixel P of radar coordinates (x, r). Moreover, the amplitude term w rD k (•) 7 and the phase factor Δ Φ rD(LP ) k provide an estimate of the spatial coherence (directly computed from the interferogram phase) and of the spatial low-pass phase component of the kth interferogram, respectively.</p><p>Then, we compute the values of the following factor <ref type="bibr" target="#b20">[21]</ref>:</p><formula xml:id="formula_9">Ω rD (P ) = M rD k=1 exp j Δ Φ rD k (P ) -Δ Φ rD(LP ) k (P ) M rD ∀ P ∈ A Z × R G (6)</formula><p>that may be considered as an "equivalent spatial coherence" and is used to identify the set of coherent pixels of the scene: C ≡ {P : Ω rD (P ) ω} to be further analyzed, where ω is a proper threshold that is set equal to 0.5 in the following experiments. The proposed interferogram selection procedure is aimed at identifying the optimal reduced triangulation tr r (V) in the T × B ⊥ plane to be effectively used by the EMCF algorithm, 7 The w rD k term in ( <ref type="formula" target="#formula_8">5</ref>) is the same as in <ref type="bibr" target="#b2">(3)</ref>, but now, it is computed on the set of M rD SB interferograms.  in place of the reduced-Delaunay triangulation tr rD (V) that may still involve some decorrelated small baseline interferograms. In particular, our algorithm implements a searching procedure based on the simulated annealing (SA) technique <ref type="bibr" target="#b43">[44]</ref> that is a probabilistic method consisting in a discrete-time inhomogeneous Markov chain, e.g., x(t), where t is the chain evolution time. Note that the SA approach allows finding the global minimum of a cost function that may possess several local minima by emulating the physical process whereby a solid is slowly cooled until its structure is eventually frozen <ref type="bibr" target="#b43">[44]</ref>.</p><p>The implemented SA-based approach identifies as the optimal reduced triangulation tr r (V) the one that maximizes the average values of the equivalent coherence [see <ref type="bibr" target="#b5">(6)</ref>], relevant to the set of small baseline multi-look interferograms. It is computed over the whole scene (or over a portion of it), e.g., S, consisting in N P pixels, and is represented as follows: We remark that the problem stated in (7a) and (7b) is equivalent to the following one:</p><formula xml:id="formula_10">tr r = arg max {η [tr r (V )]}<label>(</label></formula><formula xml:id="formula_11">tr = arg min {χ [tr r (V )]} (8a) χ [tr r (V )] = 1 -η [tr r (V )]<label>(8b)</label></formula><p>where χ represents the cost function to be minimized by the SA algorithm.</p><p>To solve the problem (8a) and (8b), we select as initial state for the SA procedure the full Delaunay triangulation relevant to the set of vertices V: x(t)| t=0 ≡ tr D (V) to which corresponds a cost function value χ[tr rD (V )], where, as already stated earlier, tr rD (V) represents the reduced-Delaunay triangulation corresponding to tr D (V). Starting from this state, at each step, the algorithm mutates its current state x(t) (corresponding to a generic triangulation tr(V)) with a certain probability pr(t) by performing a conventional topological operation on the network of interferograms that is usually referred to as edge flip <ref type="bibr" target="#b57">[58]</ref>. In particular, this operation consists in randomly selecting an inner edge of the current triangulation tr(V) and replacing it with the other diagonal of the quadrilateral that surrounds the edge (see Fig. <ref type="figure" target="#fig_9">8</ref>). This is done only if the quadrilateral is convex and the replaced edge corresponds to a small baseline SAR data pair. Conversely, the new triangulation is considered illegal, and the SA state does not change.</p><p>The probability pr(t) to accept at time t a new triangulation is computed as follows:</p><formula xml:id="formula_12">pr(t) = exp - 1 T (t) max[0, χ new -χ curr ]<label>(9)</label></formula><p>where χ new and χ curr are the cost function values [see (8a) and (8b)] relevant to the new and current states (triangulations), respectively, and T (t) is the so-called temperature at time t. <ref type="foot" target="#foot_7">8</ref>When the new triangulation is rejected, the new SA state is set equal to the previous one, and the triangulation does not change.</p><p>The algorithm goes on until the convergence condition is met, i.e., the SA state remains unchanged within a fixed number of iterations, namely, NI.</p><p>As a result of the SA-based procedure, we retrieve, among the whole set of possible reduced triangulations {tr r (V )}, the optimal one tr r (V ) that finally leads to the identification of the interferograms to be exploited by the cascade of the EMCF and SBAS steps.</p><p>We observe that the use of the proposed interferogram selection procedure may create disconnected reduced triangulations within the whole set of SB interferograms; this, however, does not represent a critical issue for the subsequent PhU step. Indeed, the identified interferograms, which may potentially belong to disconnected reduced triangulations, can be separately unwrapped by applying the EMCF procedure <ref type="bibr" target="#b18">[19]</ref>. Moreover, the corresponding sets of unwrapped interferograms result independent of each other, but they can be easily "linked" through the SBAS inversion strategy <ref type="bibr" target="#b12">[13]</ref>. Nonetheless, we remark that, for a relatively large amount of data, as for the case of the ENVISAT ones, the probability to obtain one single connected data set is very high. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Experimental Results</head><p>To illustrate the performance of the proposed interferogram selection procedure, we exploited the same ENVISAT SAR data set relevant to the Abruzzi region used for the experimental results described in Section III-B.  Starting from the available set of 39 SAR images, we first generated the corresponding (full) Delaunay triangulation in the T ×B ⊥ plane [see Fig. <ref type="figure" target="#fig_11">9(a)</ref>], from which we discarded all of the triangles involving at least one "large baseline" interferogram (by imposing the typical maximum perpendicular and temporal baseline values of 400 m and 2000 days, respectively), thus achieving the reduced triangulation shown in Fig. <ref type="figure" target="#fig_11">9(b)</ref>. Then, we applied the SA-based searching procedure described in the previous Section IV-A, by setting T (t)| t=0 = 100 and NI = 30. Fig. <ref type="figure" target="#fig_12">10</ref> shows the variation of the η values with respect to the number of iterations performed during the SA-based procedure, leading to the final solution, which corresponds to the optimal reduced triangulation depicted in Fig. <ref type="figure" target="#fig_11">9(c)</ref>.</p><p>To demonstrate the effectiveness of the proposed approach, we computed the equivalent spatial coherence maps, obtained following the lines of ( <ref type="formula">6</ref>), by considering the sequences of the multi-look small baseline original and noise-filtered interferograms relevant to the reduced-Delaunay triangulation of Fig. <ref type="figure" target="#fig_11">9</ref>(b) and the sequence of the multi-look noise-filtered interferograms corresponding to the reduced "optimal" triangulation depicted in Fig. <ref type="figure" target="#fig_11">9(c</ref>). The histograms of the three equivalent coherence maps, which are shown in Fig. <ref type="figure" target="#fig_13">11</ref>, reveal a general increase of the coherence values. In particular, we observe that the number of coherent pixels obtained by considering the reduced-Delaunay triangulation increases by about 50% as we move from the original (blue line) to the noise-filtered (red line) interferograms. The improvement is even more pronounced as we estimate the equivalent coherence of the noise-filtered interferograms over the optimal reduced triangulation (black line); in this case, we obtain an increase of about 60%. As a further remark, we also underline that the interferogram selection step only requires a minimal increase of the computational load. In fact, on a single 64-b processing node equipped with a dual quad-core AMD Opteron 2356 processor, the procedure required about 40 min to select the ENVISAT interferograms of the Abruzzi test-site.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>V. PERFORMANCE ANALYSIS OF THE ADVANCED EMCF-SBAS DINSAR PROCESSING CHAIN</head><p>We extensively investigate in this section the impact of the two new preprocessing steps, discussed in Sections III and IV, on the overall performance of the EMCF-SBAS processing chain. To this aim, we compare the DInSAR results achieved by applying the original (see Fig. <ref type="figure">1</ref>) and advanced (see Fig. <ref type="figure">2</ref>) EMCF-SBAS procedures. In particular, our analysis starts by considering the ENVISAT SAR data set acquired over the Abruzzi region, already exploited for the experiments shown in Sections III and IV. Subsequently, it is extended by taking into account two additional ENVISAT data sets relevant to Mt. Etna volcano (Southern Italy) and Yellowstone Caldera (WY, USA).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Advanced EMCF-SBAS Analysis: The Abruzzi Region Case Study</head><p>Let us start our analysis by focusing on the Abruzzi region SAR data set [see Fig. <ref type="figure" target="#fig_3">4(a)</ref>]. In particular, we first applied the original EMCF-SBAS processing chain to the set of original multi-look small baseline interferograms belonging to the reduced-Delaunay triangulation [see Fig. <ref type="figure" target="#fig_7">7(b)]</ref>; then, we applied the advanced EMCF-SBAS processing chain to the set of noise-filtered multi-look small baseline interferograms relevant to the optimal reduced triangulation depicted in Fig. <ref type="figure" target="#fig_7">7(c</ref>). As a first result, we show in Fig. <ref type="figure" target="#fig_14">12(a</ref>) and (b) the EMCF-SBAS temporal coherence maps <ref type="bibr" target="#b18">[19]</ref> achieved by applying the original and advanced processing chains, respectively. The coherence improvement is evident as we move from the original to the advanced EMCF-SBAS maps; this is even more evident by comparing the two temporal coherence histograms plotted in Fig. <ref type="figure" target="#fig_14">12(c</ref>). Indeed, we observe an increase of about 350% of the pixel number with a temporal coherence value greater than 0.7 (which is a typical value used in EMCF-SBAS applications <ref type="bibr" target="#b18">[19]</ref>). Fig. <ref type="figure" target="#fig_15">13(a</ref>) and (b) reports the mean deformation velocity maps (color) of the Abruzzi area as computed by using the original and advanced EMCF-SBAS processing chains, respectively. The retrieved velocity maps have been superimposed on an amplitude multi-look SAR image (gray scale) of the study area, wherein the zones exhibiting low values of the temporal coherence factors have properly been masked out. Note that this kind of representation is particularly effective because it provides direct information on the estimated mean deformation rate; note also that all of the measurements are evaluated with respect to an assumed stable pixel whose location is identified with a black square in Fig. <ref type="figure" target="#fig_15">13(a)</ref> and<ref type="figure">(b)</ref>. The comparison of the two velocity maps clearly demonstrates the impact that the advanced EMCF-SBAS processing chain has on the retrieved deformation products. Indeed, although both maps reveal a spatially extended deformation pattern associated to the earthquake that struck the L'Aquila city and its surroundings in 2009, the one reported in Fig. <ref type="figure" target="#fig_14">12(b</ref>) is significantly spatially denser, thus allowing a more detailed analysis of the observed phenomena. Moreover, we report in Fig. <ref type="figure" target="#fig_15">13(c</ref>) and (d) the displacement time-series relevant to the pixel labeled as P1 in Fig. <ref type="figure" target="#fig_15">13(a</ref>) and (b), which is located in the area of maxi-mum coseismic LOS-projected deformation; both plots clearly show the deformation signal associated to the occurred seismic event <ref type="bibr" target="#b32">[33]</ref>. In Fig. <ref type="figure" target="#fig_15">13(e</ref>) and (f), we report the deformation time-series for the two pixels labeled as P2 in Fig. <ref type="figure" target="#fig_15">13(a</ref>) and (b), located in an area that can be investigated by the advanced EMCF-SBAS processing chain only. From the plot inspection, it is clear that no significant differences are found in the deformation time-series for those pixels located in the areas where the coherent pixel density is high, also without applying the advanced processing chain [as for the pixel P1 in Fig. <ref type="figure" target="#fig_15">13</ref>  Fig. <ref type="figure" target="#fig_15">13(a)</ref> and<ref type="figure">(b)</ref>]. This finding clearly emphasizes the impact on the final result of the proposed advanced EMCF-SBAS processing chain, and above all, it shows that the presented advanced processing chain is extremely robust, also in the presence of strongly nonlinear deformation, as for the Abruzzi case study.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Advanced EMCF-SBAS Analysis: The Mt. Etna Volcano Case Study</head><p>The second case study is represented by Mt. Etna, one of the most active volcanoes in the world, for which an archive of 34 ENVISAT SAR images (Track 222, Frame 2853) collected between August 2003 and August 2010 was exploited; the amplitude of a sample image of the investigated area is shown in Fig. <ref type="figure" target="#fig_17">14(a)</ref>. The SAR data distribution in the T × B ⊥ plane is depicted in Fig. <ref type="figure" target="#fig_17">14(b</ref>), while the corresponding set of small baseline interferograms, obtained by imposing maximum perpendicular and temporal baseline values of 400 m and 2000 days, respectively, is shown in Fig. <ref type="figure" target="#fig_17">14(c</ref>). As a result, we retrieved a network of 288 small baseline interferograms that were computed, as for the Abruzzi region case study, by performing complex multi-look (with 4 and 20 looks in the range and azimuth directions, respectively <ref type="bibr" target="#b37">[38]</ref>, <ref type="bibr" target="#b56">[57]</ref>) and prefiltering (by using the approach described in <ref type="bibr" target="#b45">[46]</ref>) operations.</p><p>We applied the advanced EMCF-SBAS processing chain to this sequence of interferograms. Accordingly, we first retrieved through the noise-filtering procedure (described in Section III) the corresponding sequence of noise-filtered interferograms. Just to illustrate the effectiveness of the noise-filtering algorithm, we show in Fig. <ref type="figure" target="#fig_18">15</ref> a selection of original (left side) and noise-filtered (right side) interferograms; the comparison of the homologous interferograms reveals a very significant coherence improvement, which is particularly evident in correspondence to the summit and seaside slopes of the volcano. Subsequently, we applied the interferogram selection procedure (reported in Section IV) to the computed noise-filtered interferograms; this allowed us to identify the optimal reduced triangulation of small baseline multi-look interferograms depicted in Fig. <ref type="figure" target="#fig_17">14(d)</ref>, representing the input of the EMCF-SBAS processing chain.</p><p>As a final result, we retrieved the displacement time-series and the mean deformation velocity map of the study area in correspondence to the pixels characterized by temporal coherence values greater than 0.7. To investigate the deformation product quality improvement gained owing to the application of the advanced EMCF-SBAS processing chain, we compared the computed mean deformation velocity map depicted in Fig. <ref type="figure" target="#fig_19">16(b</ref>) to the one obtained by applying the original EMCF-SBAS processing chain and shown in Fig. <ref type="figure" target="#fig_19">16(a)</ref>. As for the Abruzzi region case study, the exploitation of the advanced EMCF-SBAS procedure has led to a considerable increase of the total number of coherent pixels, corresponding, in this case, to about 40%. The two velocity maps show a very complex deforming scenario characterizing Mt. Etna volcano. To provide evidences of the temporal evolution of the ongoing deformation phenomena, we present the retrieved displacement time-series computed in correspondence to the pixels labeled as P1, P2, P3, and P4 and identified via black stars in Fig. <ref type="figure" target="#fig_19">16(b</ref>) in the plots of Fig. <ref type="figure" target="#fig_19">16(c</ref>)-(f), respectively.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Advanced EMCF-SBAS Analysis: The Yellowstone Caldera Case Study</head><p>As a final experiment, we focus on the Yellowstone Caldera, representing one of the largest and most active volcanic systems in the world. We analyzed the temporal evolution of the surface deformation occurring in the area by applying the implemented advanced EMCF-SBAS processing chain to a  <ref type="figure" target="#fig_20">17(a)</ref>, whereas the corresponding set of 122 small baseline interferograms <ref type="foot" target="#foot_8">9</ref>is shown in Fig. <ref type="figure" target="#fig_20">17(b)</ref>; note that they have been selected, as for the two previous case studies, by imposing maximum perpendicular and temporal baseline values of 400 m and 2000 days, respectively.</p><p>As a first result, we present in Fig. <ref type="figure" target="#fig_21">18</ref> two noise-filtered interferograms (right side) that have been compared to the corresponding original ones (left side); the comparison of the homologous interferograms makes it evident the effectiveness of the noise-filtering procedure, which allows us to significantly improve the spatial coherence of the computed interferograms. Indeed, in Fig. <ref type="figure" target="#fig_21">18(c)</ref> and<ref type="figure">(d)</ref>, the fringes associated to the caldera activity are easily recognizable at variance with what are shown in Fig. <ref type="figure" target="#fig_21">18</ref>(a) and (b). For the sake of brevity, in the following, we only present the results that we achieved by exploiting the advanced EMCF-SBAS processing chain without comparing them to the ones obtained by using the original EMCF-SBAS processing chain. Accordingly, we portray in Fig. <ref type="figure" target="#fig_22">19</ref>(a) the retrieved advanced EMCF-SBAS mean deformation velocity map, which allows us to retrieve the very complex deformation scenario affecting the caldera region and its surroundings, where uplift effects and broad subsidence patterns characterize the detected deformation field. In addition, in Fig. <ref type="figure" target="#fig_22">19(b</ref>)-(e), we report the deformation time-series relevant to four pixels whose locations are identified by the black stars labeled as P1, P2, P3, and P4 in Fig. <ref type="figure" target="#fig_22">19(a)</ref>. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>VI. CONCLUSION</head><p>We have presented in this paper an advanced version of the EMCF-SBAS processing chain for the generation of ground deformation maps and corresponding time-series. The key elements of our approach are two additional preprocessing steps implementing an effective interferogram noise-filtering technique and an optimal interferogram selection operation, respectively.</p><p>The former step permits us to drastically mitigate the decorrelation noise artifacts affecting a sequence of time-redundant multi-look small baseline interferograms by properly exploiting their temporal relationships. This is straightforwardly carried out by solving a nonlinear minimization problem that exploits the phase information of conventional multi-look small baseline interferograms only, without requiring the implementation of any pixel selection procedure at the full spatial resolution scale and with no need of a priori information on the statistics of the involved complex-valued SAR images.</p><p>The latter step is aimed at identifying an optimal network of small baseline interferograms forming a reduced triangulation in the temporal/perpendicular baseline plane, to be efficiently used by the exploited EMCF technique. In particular, the interferogram selection is carried out via the maximization of the (average) equivalent coherence values of the small baseline multi-look interferograms belonging to the reduced triangulation and exploits a SA searching strategy.</p><p>The effectiveness of the implemented advanced EMCF-SBAS processing chain has fully been demonstrated by extensively investigating three sets of real SAR data acquired by the ENVISAT sensor over three regions where complex surface deformation scenarios are present.</p><p>It is worth remarking that the proposed advanced EMCF-SBAS processing chain can be profitably used to analyze SAR data acquired over regions that represent critical test-sites since the interferograms computed over them are affected by severe decorrelation noise artifacts. The proposed approach can be particularly relevant for the valorization of the large archives of SAR images acquired by the first generation C-band (ERS-1/2, ENVISAT, and RADARSAT-1) SAR sensors. Moreover, the impact of the presented procedure on the SAR data acquired by the new X-band (COSMO-SkyMed and TerraSAR-X) systems is worth for future analyses.</p><p>As a final remark, we stress that the proposed advanced EMCF-SBAS processing chain is rather straightforward to implement since it only requires complementing the original EMCF-SBAS chain with two additional preprocessing steps. Nevertheless, to allow an easy upgrade of the existing processing chains, based on the exploitation of small baseline multi-look interferograms, we developed two user-friendly Interactive Data Language routines implementing the proposed interferogram noise-filtering and selection routines; the relevant source codes are freely available at (<ref type="url" target="http://www.irea.cnr.it/en/">http://www.irea.cnr.it/en/</ref> index.php?option=com_k2&amp;view=item&amp;layout=item&amp;id= 505&amp;Itemid=171).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>APPENDIX I</head><p>Let (w 1 , w 2 , . . . , w n ) be a set of nonrandom (known) weights, and let (θ 1 , θ 2 , . . . , θ n ) be a random sample of observations of the circular random variable Θ having a weighted mean direction μ, which is defined, by extending what is presented in <ref type="bibr" target="#b49">[50]</ref> and <ref type="bibr" target="#b51">[52]</ref>, as the direction of the weighted mean resultant Π = n i=1 w i exp[jθ i ]/ n i=1 w i = ρ exp[jμ], whose amplitude ρ is the so-called weighted mean resultant length. Note that</p><formula xml:id="formula_13">cos μ = C R , sin μ = S R , ρ = R (A.I.1)</formula><p>where</p><formula xml:id="formula_14">C = n i=1 w i cos(θ i ) n i=1 w i , S = n i=1 w i sin(θ i ) n i=1 w i , R = C2 + S2 .</formula><p>(A.I.2) From (A.I.2), it is straightforward to show that <ref type="bibr" target="#b49">[50]</ref> </p><formula xml:id="formula_15">n i=1 w i sin[θ i -μ] n i=1 w i =0 n i=1 w i cos[θ i -μ] n i=1 w i = R = ρ.</formula><p>(A.I.3) Similarly to <ref type="bibr" target="#b49">[50]</ref> and <ref type="bibr" target="#b50">[51]</ref>, the weighted circular variance ν of the random angle Θ is defined as</p><formula xml:id="formula_16">ν = 1 -ρ = 1 - n i=1 w i e jθ i n i=1 w i = 1 - n i=1 w i cos[θ i -μ] n i=1 w i = 1 - n n i=1 w i E {w • cos[Θ -μ]} (A.I.4)</formula><p>where E{•} is the expectation value operator. Furthermore, by using 1cos[χξ] to measure the distance between the generic angles χ and ξ, it leads to the use of the following factor:</p><formula xml:id="formula_17">D w [α] = n i=1 w i [1 -cos(θ i -α)] n i=1 w i = 1 - n i=1 w i cos(θ i -α) n i=1 w i (A.I.5)</formula><p>as a measure of the dispersion of the weighted circular random signal {w • exp[jΘ]} about any direction α. It can be found after some mathematical manipulations, following the lines of <ref type="bibr" target="#b49">[50]</ref>, that</p><formula xml:id="formula_18">D w [α] = [1 -ρ] + ρ + n i=1 w i cos(θ i -α) n i=1 w i = ν + 2ρ sin μ -α 2 2 . (A.I.6)</formula><p>Hence, the phase dispersion of the weighted directional data {w • exp[jΘ]} is minimal in correspondence to its weighted mean direction, and the minimum value is equal to its weighted circular variance. Notice that 0 ≤ ν ≤ 1. In particular, ν = 0 if and only if the distribution is concentrated around μ; on the   (max) interferograms generated by applying the noise-filtering procedure to progressively reduced sets of interferograms depending on the applied baseline constraints. In particular, Ω (0) is related to the whole set of M (max) = 741 original interferograms (purple line), while Ω (i) with i = 1, 2, 3, 4 are related to the reduced sets of interferograms obtained by imposing: Ω (1)  (green line) no baseline constraints, M (1) = M (max) = 741; Ω (2)  contrary, if ν = 1, the distribution can be regarded so scattered that there is no concentration around any particular direction. Therefore, these results yield the conclusion that minimizing the (weighted) circular variance allows concentrating as much as possible the distribution of the random signal {w • exp[jΘ]} around its mean weighted direction μ.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>APPENDIX II</head><p>We discuss in this appendix the similarities and key differences among the noise-filtering technique presented in Section III and those proposed in the phase triangulation <ref type="bibr" target="#b38">[39]</ref> and SqueeSAR <ref type="bibr" target="#b39">[40]</ref> algorithms.</p><p>The main similarity of these methods is relevant to their starting point. Indeed, this is the same as that for <ref type="bibr" target="#b39">[40]</ref> and consists in the lack of triangularity among the interferometric phases due to the inconsistencies in the multi-look interferograms, which is expressed through <ref type="bibr" target="#b0">(1)</ref>. However, we also remark that the aforementioned lack of triangularity information was already addressed and exploited within the InSAR context, well before the publication of <ref type="bibr" target="#b39">[40]</ref>. In particular, the lack of triangularity among the multi-look phases was first investigated and exploited in [19, eqs. ( <ref type="formula" target="#formula_12">9</ref>) and ( <ref type="formula">10</ref>)] within the temporal PhU strategy adopted to unwrap a sequence of M multi-look interferograms.</p><p>Note also that the aforementioned phase inconsistency information was also fully investigated in the 2007 Pepe's Ph.D. Thesis (freely downloadable at the following Internet address <ref type="url" target="http://www.fedoa.unina.it/1572/1/Pepe_Ingegneria_">http://www.fedoa.unina.it/1572/1/Pepe_Ingegneria_</ref> Elettronica_e_delle_Telecomunicazioni.pdf) that has subsequently been published in 2009 <ref type="bibr" target="#b46">[47]</ref>.</p><p>Despite the previously discussed similarity, we remark that there are fundamental differences among our approach and those presented in <ref type="bibr" target="#b38">[39]</ref> and <ref type="bibr" target="#b39">[40]</ref>, for what concerns the exploited statistical frameworks and the mathematical formulation of the minimization procedures applied to retrieve the filtered interferograms.</p><p>To fully clarify these issues, let us start our discussion by considering [39, Sec. II]; it describes a SAR data model based on the hypothesis of distributed scattering, under which "the pdf of the data may be regarded as being a zero-mean multivariate circular normal distribution." Under the validity of this hypothesis, a pixel-by-pixel (at the full resolution scale) statistical analysis is then needed to identify on the SAR images the distributed scatterers (DS) with a statistically homogeneous behavior. In particular, a small neighborhood (denoted by Ω) of pixels centered at the same slant rangeazimuth location in each single-look SAR image is considered. Under the assumption that all of the pixels falling inside Ω are statistically homogeneous (i.e., "all of the unknown phases as well the coherences are constant inside Ω"), their complete statistical characterization only requires the calculation of the covariance matrix [39, eq. ( <ref type="formula" target="#formula_8">5</ref>)]. Using such a statistical model, an ML procedure is subsequently implemented. This leads to the calculation of the pdf of the data conditioned on the interferometric phases [39, eq. ( <ref type="formula">6</ref>)] and, finally, to the ML estimate of the interferometric phases achieved in <ref type="bibr">[39, eq. (12)</ref>]. This equation is essentially the same reported in [40, eq. ( <ref type="formula">13</ref>)].</p><p>Therefore, both the phase Linking <ref type="bibr" target="#b38">[39]</ref> and the phase triangulation of the SqueeSAR <ref type="bibr" target="#b39">[40]</ref> algorithms require a preliminary identification of the statistically homogeneous pixels (SHPs) on the full-resolution range-azimuth grid. In particular, in <ref type="bibr" target="#b39">[40]</ref>, the selection strategy of these pixels is based on the application of the Kolmogorov-Smirnov test to carefully select a homogeneous statistical population. Clearly, this requires working at the full resolution spatial scale and implies the analysis of the amplitude values of the complex SAR image pixels.</p><p>Let us now consider the statistical framework of our noisefiltering technique. In this case, as said, we exploit conventional multi-look interferograms that are generated by averaging all of the pixels, e.g., N , falling inside a region Ω. Accordingly, at variance with what is assumed in <ref type="bibr" target="#b38">[39]</ref> and implemented in <ref type="bibr" target="#b39">[40]</ref>, we do not carry out any a priori selection of the homogeneous pixels that share the same statistical characteristics. As a consequence, the computed multi-look interferograms are characterized by statistics that significantly deviate (see <ref type="bibr" target="#b58">[59]</ref> and <ref type="bibr" target="#b59">[60]</ref> for an extensive discussion) from those exploited by <ref type="bibr" target="#b38">[39]</ref> and <ref type="bibr" target="#b39">[40]</ref>, which are only valid if the SHPs are preliminarily identified.</p><p>Accordingly, our approach and the ones discussed in <ref type="bibr" target="#b38">[39]</ref> and <ref type="bibr" target="#b39">[40]</ref> are fundamentally different for what concerns the exploited statistical frameworks.</p><p>Let us now concentrate on the mathematical formulation of the minimization procedures applied to retrieve the filtered interferograms.</p><p>To do this, we highlight that the proposed noise-filtering approach is based on searching for the acquisition phases, namely, Φ, which allow minimizing the weighted circular variance, namely, ν, of the residual interferograms, which is the difference between the (multi-look) original ΔΦ and reconstructed Δ Φ interferograms [see (2a) and (2b) that are reported here for the sake of completeness</p><formula xml:id="formula_19">Φ = arg min ν( Φ) = arg min 1 -Π( Φ) = arg max Π( Φ) Π( Φ) = M k=1 c k exp[j • r k ] M k=1 c k (A.II.1) where j = √ -1, r k = ΔΦ k -( ΦIM k -ΦIS k ) -π,π</formula><p>, M is the number of small baseline interferograms, and {c k } M k=1 are the corresponding coherences.</p><p>Conversely, the phase triangulation of the SqueeSAR [40] (as well as the phase linking <ref type="bibr" target="#b38">[39]</ref>) algorithm searches for the solution of the following problem:</p><formula xml:id="formula_20">Φ = arg max e -jΦ (A • Γ)e jΦ = arg max Re Mtot k=1 a k c k exp(j • r k ) (A.II.2)</formula><p>where product, respectively, Ω is the set of SHP used for the estimation of the covariance matrix, and M tot is the number of all possible interferograms averaged over Ω. We remark that, although in both approaches the coherence values are exploited, our method uses them as weighting factors, whereas the SqueeSAR method employs the coherence matrix C of all of the interferograms and requires the calculation of its inverse in [40, eq. ( <ref type="formula">14</ref>)].</p><formula xml:id="formula_21">A = | Γ| -1 = |C| -</formula><p>Accordingly, the two optimization schemes are different, and our solution cannot be simply viewed as a merely particularization of [40, eq. ( <ref type="formula">14</ref>)] to the case when all of the coherences that are less than a given threshold (corresponding to large baseline interferograms) are set to zero. To clarify this issue, we underline that the phase triangulation algorithm [40, eq. ( <ref type="formula">14</ref>)] requires the calculation of matrix A; in this case, even if we put several zeros in matrix C in correspondence to the large baseline interferograms, we would not simply obtain, via the phase triangulation method, the solution that we find through our approach. In addition, the introduction of several zeros in the sample coherence matrix would make it deviate from the "true" coherence matrix, which is the one required to correctly formulate the ML problem [40, eq. ( <ref type="formula">13</ref>)] from a statistical point of view.</p><p>Note also that the inverse of matrix C, which may be rather critical to compute, is strictly required to implement the phase triangulation method <ref type="bibr" target="#b39">[40]</ref>, whereas in our approach, this operation is not needed. Indeed, as the SqueeSAR <ref type="bibr" target="#b39">[40]</ref> authors correctly said: "even if all of the interferograms and relevant coherences are used, the matrix of sample coherences C is not, in general, positive and definite," thus requiring the introduction of a damping factor to make it invertible. The latter operation is evidently more critical in case several zeros are put into the sample coherence matrix prior to its inversion.</p><p>To conclude, in spite of the similarity due to the exploited lack of interferogram triangularity [see <ref type="bibr" target="#b0">(1)</ref>], our method is not a mere particularization of <ref type="bibr" target="#b38">[39]</ref> and <ref type="bibr" target="#b39">[40]</ref> to the small baseline context. Indeed, it is fundamentally different from them for what concerns: 1) the exploited statistical frameworks and 2) the mathematical formulation of the minimization procedure applied to retrieve the filtered interferograms.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>APPENDIX III</head><p>We present in this appendix a number of experiments showing that the interferogram noise-filtering approach presented in Section III has better performance while applied to sequences of multi-look small baseline interferograms instead of using the whole set of interferograms computed without constraints on the perpendicular and temporal baselines. Starting from the available N + 1 = 39 SAR images of the Abruzzi region [see Fig. T . The interferograms ΔΦ (0) , computed by performing complex multi-look <ref type="bibr" target="#b37">[38]</ref> and preliminary noise-filtering <ref type="bibr" target="#b45">[46]</ref> operations, were used to retrieve, via the filtering approach discussed in Section III, the corresponding sequence of noise-filtered interferograms, e.g., Δ Φ M (max) ] T , consisting of M (1) = M (max) interferograms.</p><p>To investigate the quality improvement of the noise-filtered interferograms with respect to the original ones when the entire set of possible interferograms is considered, we selected as a quality index of the achieved results the (equivalent) coherence factor in (6) that is, in this case, computed over the M (max)  interferograms (instead of considering only the ones belonging to a reduced triangulation) are the sequences of the spatial low-pass phase components associated to the original and noise-filtered interferograms, respectively. The histograms of the so-computed Ω (0) (•) and Ω (1) (•) equivalent coherence maps are superimposed in Fig. <ref type="figure" target="#fig_23">20</ref>(a) (see the purple and green lines, respectively); the coherence improvement is extremely evident.</p><formula xml:id="formula_22">Ω (0) (P ) = M (max)</formula><p>At this stage, we repeatedly applied the noise-filtering procedure to progressively reduced sets of interferograms, simply selected by imposing constraints on their maximum allowed perpendicular Δb max ⊥ and temporal ΔT max baseline values. In particular, we performed three tests by considering the three distinctive cases characterized by the following interferometric baseline constraints: 1) Δb max ⊥ = 800 m; 2) Δb max ⊥ = 400 m; and 3) Δb max ⊥ = 400 m, ΔT max = 2000 days, leading to identify a number of interferograms equal to M (2) = 623, M (3) = 372, and M (4) = 338, respectively. <ref type="foot" target="#foot_9">10</ref> For each test, we regenerated the whole set of M (max) noise-filtered interferograms, namely, Δ Φ , and we computed the corresponding equivalent coherences, namely, Ω (2) (•), Ω (3) (•), and Ω (4) (•), whose histograms are also superimposed in Fig. <ref type="figure" target="#fig_23">20(a)</ref> (see the blue, red, and black lines, respectively). By observing Fig. <ref type="figure" target="#fig_23">20</ref>(a), it is clear how the progressively reduced number of SAR data pairs does not corrupt the quality of the noise-filtered interferograms used within the noise-filtering procedure, but it is even improved as we discard large baseline interferograms that, hence, do not contribute to the solution with valuable information.</p><p>To emphasize the coherence improvement associated to the set of M = M (4) = 338 small baseline interferograms, we identified within the original ΔΦ (0) and noise-filtered Δ Φ The histograms of Ω (0) (•), Ω</p><p>(•), Ω</p><p>(2) (•), Ω</p><p>(•), and Ω (4) (•) are superimposed in Fig. <ref type="figure" target="#fig_21">18(b)</ref>; also in this case, the obtained improvement is evident.</p><p>Accordingly, we may conclude that, to obtain reliable results, it is better to deal with M small baseline interferograms, as described in Section III, instead of using the whole set of interferograms. As a final remark, we observe that more extensive analyses are required to identify the optimal small baseline thresholds: this issue, potentially requiring the processing of several independent SAR data sets, is a matter for future studies.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .Fig. 2 .</head><label>12</label><figDesc>Fig. 1. Block diagram of the original EMCF-SBAS processing chain.</figDesc><graphic coords="3,89.39,69.89,420.14,103.82" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head/><label/><figDesc>Authorized licensed use limited to: ESCUELA POLITECNICA DEL LITORAL (ESPOL). Downloaded on August 19,2025 at 18:16:12 UTC from IEEE Xplore. Restrictions apply.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 3 .</head><label>3</label><figDesc>Fig. 3. Block diagram of the proposed interferogram noise-filtering technique.</figDesc><graphic coords="5,65.87,70.37,204.14,535.34" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 4 .</head><label>4</label><figDesc>Fig. 4. Abruzzi region SAR data set. (a) SAR amplitude image relevant to the April 27, 2008, acquisition. The black box identifies the area nearby L'Aquila city that is particularly affected by the deformation caused by the April 6, 2009, earthquake. (b) Representation of the SAR data in the temporal/perpendicular baseline plane. (c) Distribution of the small baseline SAR data pairs used for the implementation of the proposed noise-filtering procedure. Note that they have been identified by imposing maximum perpendicular and temporal baseline values of 400 m and 2000 days, respectively, in the temporal/perpendicular baseline plane.</figDesc><graphic coords="6,305.27,70.49,241.10,598.22" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 5 .</head><label>5</label><figDesc>Fig. 5. Performance of the implemented interferogram noise-filtering procedure. (a) and (b) Difference of the coherent pixel number between the noise-filtered and original interferograms plotted with respect to their perpendicular and temporal baselines, respectively. (c) and (d) Same as (a) and (b) but the difference of the coherent pixel number is computed between the average noise-filtered and original interferograms.</figDesc><graphic coords="7,47.39,70.13,504.14,343.58" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 6 .</head><label>6</label><figDesc>Fig. 6. Comparison between the original (left column) and noise-filtered (right column) multi-look interferograms relevant to the area of the Abruzzi region identified in Fig. 4(a) by the black box. (a)-(c) October 30, 2005, to November 8, 2009, August 21, 2005, to June 6, 2010, and August 1, 2004, to April 12, 2009, interferograms, characterized by perpendicular baseline values of 192, 145, and 395 m, respectively. (d)-(f) Noise-filtered multi-look interferograms corresponding to the ones in (a)-(c), respectively.</figDesc><graphic coords="8,114.29,69.64,360.00,540.00" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head/><label/><figDesc>Authorized licensed use limited to: ESCUELA POLITECNICA DEL LITORAL (ESPOL). Downloaded on August 19,2025 at 18:16:12 UTC from IEEE Xplore. Restrictions apply.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Fig. 7 .</head><label>7</label><figDesc>Fig. 7. Impact of the prefiltering operation on the proposed interferogram noise-filtering technique for the August 1, 2004, to April 12, 2009, interferometric SAR data pair. (a) Original (noisy) interferogram. (b) Prefiltered interferogram obtained by using the technique proposed in [46]. (c) Noise-filtered interferogram using the proposed noise-filtering method starting from (a). (d) Same as (c) but starting from (b).</figDesc><graphic coords="9,119.50,69.52,360.00,369.12" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head/><label/><figDesc>Authorized licensed use limited to: ESCUELA POLITECNICA DEL LITORAL (ESPOL). Downloaded on August 19,2025 at 18:16:12 UTC from IEEE Xplore. Restrictions apply.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Fig. 8 .</head><label>8</label><figDesc>Fig. 8. Example of the "edge flip" operation carried out on the PaP b PcP d use quadrilateral. The Pa-Pc diagonal in (a) is replaced by the P b -P d diagonal in (b).</figDesc><graphic coords="10,144.23,69.89,300.14,91.82" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>,</head><label/><figDesc>tr r (V) is the reduced triangulation identified by removing, in the generic (full) triangulation tr(V), the triangles involving at least one large baseline interferogram and Ω r (•) is the equivalent coherence computed as in (6) by considering the interferograms belonging to tr r (V), M r is the number of small baseline interferograms belonging to tr r (V), and Δ Φ ∀ k = 1, . . . , M r are the considered noise-filtered interferograms and their spatial low-pass phase components, respectively.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head>Fig. 9 .</head><label>9</label><figDesc>Fig. 9. SAR data representation in the temporal/perpendicular baseline plane for the Abruzzi region. (a) Delaunay triangulation. (b) Reduced-Delaunay triangulation after the removal of triangles with sides characterized by perpendicular and temporal baseline values exceeding the selected thresholds (corresponding, in our experiments, to 400 m and 2000 days, respectively). (c) Optimal reduced triangulation obtained by applying the implemented interferogram selection procedure.</figDesc><graphic coords="11,44.99,70.49,246.02,537.26" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><head>Fig. 10 .</head><label>10</label><figDesc>Fig. 10. Variation of the η values with respect to the number of iterations performed during the SA-based procedure.</figDesc><graphic coords="11,307.91,70.01,246.14,172.70" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_13"><head>Fig. 11 .</head><label>11</label><figDesc>Fig. 11. Histograms of the equivalent coherence maps relevant to the Abruzzi region computed by considering the original interferograms and the reduced-Delaunay triangulation (blue line), the noise-filtered interferograms and the reduced-Delaunay triangulation (red line), and the noise-filtered interferograms and the optimal reduced triangulation (black line).</figDesc><graphic coords="11,323.01,286.94,216.00,147.48" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_14"><head>Fig. 12 .</head><label>12</label><figDesc>Fig. 12. Comparison of the temporal coherence maps obtained by using the (a) original and (b) advanced EMCF-SBAS processing chains, respectively. (c) Histograms of the corresponding coherence maps: the dotted line refers to the original EMCF-SBAS results, and the continuous line refers to the advanced EMCF-SBAS ones.</figDesc><graphic coords="12,144.23,69.89,300.14,300.86" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_15"><head>Fig. 13 .</head><label>13</label><figDesc>Fig. 13. Mean deformation velocity maps (in color) of the Abruzzi region, computed in coherent pixels only and superimposed on the SAR amplitude image (gray-scale representation) of the zone, retrieved by applying the (a) original and (b) advanced EMCF-SBAS processing chains, respectively. The black square marks the location of the reference SAR pixel. (c) and (d) Deformation time-series relevant to a pixel located in the area of the maximum displacement labeled as P1 in (a) and (b), retrieved by applying the (c) original and (d) advanced (d) EMCF-SBAS processing chain. (e) and (f) Same as (c) and (d) but for the pixel labeled as P2 in (a) and (b).</figDesc><graphic coords="13,42.46,69.20,516.00,463.44" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_16"><head/><label/><figDesc>(a) and (b)]. Conversely, relevant differences are detected in those areas where the advanced EMCF-SBAS processing chain has increased the number of coherent pixels [as for the pixel P2 in</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_17"><head>Fig. 14 .</head><label>14</label><figDesc>Fig. 14. Mt. Etna volcano SAR data set. (a) SAR amplitude image relevant to the May 23, 2007, acquisition. The black box identifies the summit and flank volcano. (b) Representation of the SAR data in the temporal/perpendicular baseline plane. (c) Distribution of the small baseline SAR data pairs used for the implementation of the proposed noise-filtering procedure. Note that they have been identified by imposing maximum spatial and temporal baseline values of 400 m and 2000 days, respectively, in the temporal/perpendicular baseline plane. (d) Optimal reduced triangulation obtained after the application of the proposed interferogram selection procedure.</figDesc><graphic coords="14,55.67,69.65,476.54,343.10" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_18"><head>Fig. 15 .</head><label>15</label><figDesc>Fig. 15. Comparison between original (left column) and noise-filtered (right column) multi-look interferograms relevant to the area of the Mt. Etna volcano identified in Fig. 12(a) by the black box. (a)-(c) June 2, 2004, to July 1, 2009, November 9, 2005, to April 7, 2010, and November 24, 2004, to November 18, 2009, interferograms, characterized by perpendicular baseline values of 359, 326, and 185 m, respectively. (d)-(f) Noise-filtered multi-look interferograms corresponding to the ones in (a)-(c), respectively.</figDesc><graphic coords="15,119.50,69.76,360.00,503.88" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_19"><head>Fig. 16 .</head><label>16</label><figDesc>Fig. 16. Mean deformation velocity maps (in color) of Mt. Etna volcano, computed in coherent pixels only and superimposed on the SAR amplitude image (gray-scale representation) of the zone, retrieved by applying the (a) original and (b) advanced EMCF-SBAS processing chains, respectively. The black square marks the location of the reference SAR pixel. (c)-(f) Deformation time-series relevant to the four pixels identified via black stars in Fig. 14(b).</figDesc><graphic coords="16,37.26,69.32,516.00,445.32" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_20"><head>Fig. 17 .</head><label>17</label><figDesc>Fig. 17. Yellowstone Caldera SAR data set. (a) Representation of the SAR data in the temporal/perpendicular baseline plane. (b) Distribution of the small baseline SAR data pairs used for the implementation of the proposed noisefiltering procedure. Note that they have been identified by imposing maximum spatial and temporal baseline values of 400 m and 2000 days, respectively, in the temporal/perpendicular baseline plane.</figDesc><graphic coords="17,44.99,69.89,246.02,342.86" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_21"><head>Fig. 18 .</head><label>18</label><figDesc>Fig. 18. Comparison between original (left column) and noise-filtered (right column) multi-look interferograms relevant to Yellowstone Caldera. (a) and (b) August 18, 2005, to August 7, 2008, and August 18, 2005, to July 23, 2009, interferograms, characterized by perpendicular baseline values of 40 and 350 m, respectively. (c) and (d) Noise-filtered multi-look interferograms corresponding to the ones in (a) and (b), respectively.</figDesc><graphic coords="18,114.29,69.72,360.00,424.92" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_22"><head>Fig. 19 .</head><label>19</label><figDesc>Fig. 19. (a) Mean deformation velocity map (in color) of Yellowstone Caldera, computed in coherent pixels only and superimposed on the SAR amplitude image (gray-scale representation) of the zone, retrieved by applying the advanced EMCF-SBAS processing chain. The black square marks the location of the reference SAR pixel. (b)-(e) Deformation time-series relevant to the four pixels identified via black stars in Fig. 19(a).</figDesc><graphic coords="19,42.46,69.56,516.00,307.08" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_23"><head>Fig. 20 .</head><label>20</label><figDesc>Fig.<ref type="bibr" target="#b19">20</ref>. Impact on the "equivalent" coherence maps computed for the Abruzzi region test-site depending on the number of interferograms exploited by the noisefiltering procedure. (a) Histograms of the equivalent coherence maps computed by considering the whole set of M (max) interferograms generated by applying the noise-filtering procedure to progressively reduced sets of interferograms depending on the applied baseline constraints. In particular, Ω (0) is related to the whole set of M (max) = 741 original interferograms (purple line), while Ω (i) with i = 1, 2, 3, 4 are related to the reduced sets of interferograms obtained by imposing: Ω(1)  (green line) no baseline constraints, M(1) = M (max) = 741; Ω(2) (blue line) Δb max ⊥ 800 m, M(2) = 623; Ω(3) (red line) Δb max</figDesc><graphic coords="19,71.51,449.51,456.00,164.04" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_24"><head/><label/><figDesc>Fig.<ref type="bibr" target="#b19">20</ref>. Impact on the "equivalent" coherence maps computed for the Abruzzi region test-site depending on the number of interferograms exploited by the noisefiltering procedure. (a) Histograms of the equivalent coherence maps computed by considering the whole set of M (max) interferograms generated by applying the noise-filtering procedure to progressively reduced sets of interferograms depending on the applied baseline constraints. In particular, Ω (0) is related to the whole set of M (max) = 741 original interferograms (purple line), while Ω (i) with i = 1, 2, 3, 4 are related to the reduced sets of interferograms obtained by imposing: Ω(1)  (green line) no baseline constraints, M(1) = M (max) = 741; Ω(2) (blue line) Δb max ⊥ 800 m, M (2) = 623; Ω (3) (red line) Δb max ⊥ = 400 m, M (3) = 372; and Ω (4) (black line) Δb max ⊥ = 400 m, ΔT max = 2000 days, M (4) = 338. (b) Same as (a) but the equivalent coherence maps (Ω (i) i = 0, 1, 2, 3, 4) are now computed over the set of M = M (4) = 338 small baseline interferograms only.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_25"><head/><label/><figDesc>3(b)] investigated in Section III, we generated the whole sequence of M (max) = (N + 1) • N/2 = 741 multi-look (original) interferograms, namely, ΔΦ (0) = [ΔΦ (0) 1 , ΔΦ (0) 2 , . . . , ΔΦ (0) M (max) ]</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_27"><head>M</head><label/><figDesc>(max)   ∀ P ∈ A Z × R G (A.III.1b)</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_29"><head/><label/><figDesc>ing to the 338 small baseline SAR data pairs, and starting from them, we recomputed the corresponding equivalent coherencesΩ ∈ A Z × R G , i = 1, 2, 3, 4.(III.2.b)</figDesc></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="1" xml:id="foot_0"><p>The SBAS inversion also includes a decoupling of the required deformation signal component from the undesired phase patterns, referred to as topographic and atmospheric artifacts<ref type="bibr" target="#b12">[13]</ref>,<ref type="bibr" target="#b36">[37]</ref>.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2" xml:id="foot_1"><p>This condition is met when no dominant scatterers (such as artificial objects) are present in the resolution cell<ref type="bibr" target="#b37">[38]</ref>.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_2"><p>Authorized licensed use limited to: ESCUELA POLITECNICA DEL LITORAL (ESPOL). Downloaded on August 19,2025 at 18:16:12 UTC from IEEE Xplore. Restrictions apply.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="3" xml:id="foot_3"><p>We remark that the aforementioned lack of triangularity has already been exploited, within the InSAR context, in order to develop the EMCF PhU algorithm<ref type="bibr" target="#b18">[19]</ref>,<ref type="bibr" target="#b47">[48]</ref>.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="4" xml:id="foot_4"><p>To this aim, we must define the ratio between the axis units of the T × B ⊥ plane, which is set in our analysis, similarly to<ref type="bibr" target="#b18">[19]</ref>, equal to δT δb ⊥ , where δT and δb ⊥ represent the maximum allowed perpendicular and temporal baseline values.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="5" xml:id="foot_5"><p>Obviously, in the case of noise-filtered interferograms, we replaced ΔΦ with Δ Φ in (3).</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="6" xml:id="foot_6"><p>For the sake of convenience, hereinafter, we identify as noise-filtered interferograms the ones retrieved by applying the algorithm discussed in Section III-A, i.e., the interferograms reconstructed following both the nonlinear minimization procedure in (2a) and (2b) and the average operation in (4).</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="8" xml:id="foot_7"><p>The temperature T (t) usually decays with respect to time with a decay factor α that we set equal to 0.9 in the following experimental analysis.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="9" xml:id="foot_8"><p>Also, in this case, the interferograms were computed by performing complex multi-look (with 4 and 20 looks in the range and azimuth directions, respectively) and prefiltering operations.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="10" xml:id="foot_9"><p>For the last test, i.e., M<ref type="bibr" target="#b3">(4)</ref> = 338, we used the same baseline constraints and, therefore, the same set of interferograms exploited in the experiments presented in Section III-B.</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENT</head><p>The authors would like to thank the <rs type="institution">European Space Agency</rs> for providing the ENVISAT ASAR data and the <rs type="institution">University of Delft, Delft, The Netherlands</rs>, for the related precise orbits and <rs type="person">S. Guarino</rs>, <rs type="person">F. Parisi</rs>, and <rs type="person">M. C. Rasulo</rs> for their technical support. The DEM of the investigated zones were acquired through the SRTM archive.</p></div>
+			</div>
+			<div type="funding">
+<div><p>This work was carried out under the sponsorship from the programme of <rs type="funder">China Scholarship Council</rs> <rs type="grantNumber">CSC 2010611063</rs> and was supported in by the <rs type="funder">Italian Space Agency (ASI)</rs>, <rs type="funder">Italian Department of Civil Protection (DPC)</rs>, and <rs type="funder">Italian Ministero dell'Istruzione, dell'Università e della Ricerca (MIUR)</rs> under the project entitled "<rs type="projectName">Studio multidisciplinare della fase preparatoria di un terremoto</rs> as well as by <rs type="funder">European Commission</rs> under the <rs type="programName">MED-SUV project</rs> (<rs type="funder">European Union</rs>'s <rs type="programName">Seventh Programme for research, technological development and demotrastion</rs> under grant agreement No. <rs type="grantNumber">308665</rs>).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_dQbnFeH">
+					<idno type="grant-number">CSC 2010611063</idno>
+				</org>
+				<org type="funded-project" xml:id="_pCzzC58">
+					<orgName type="project" subtype="full">Studio multidisciplinare della fase preparatoria di un terremoto</orgName>
+				</org>
+				<org type="funding" xml:id="_V2k3MmH">
+					<orgName type="program" subtype="full">MED-SUV project</orgName>
+				</org>
+				<org type="funding" xml:id="_WjAgGM7">
+					<idno type="grant-number">308665</idno>
+					<orgName type="program" subtype="full">Seventh Programme for research, technological development and demotrastion</orgName>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"/>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Synthetic aperture radar interferometry to measure Earth's surface topography and its deformation</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bürgmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Rosen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Fielding</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Earth Planet. Sci</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="169" to="209"/>
+			<date type="published" when="2000-05">May 2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Radar interferometry and its application to changes in the Earth's surface</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Massonnet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Feigl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Rev. Geophys</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="441" to="500"/>
+			<date type="published" when="1998-11">Nov. 1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Mapping small elevation changes over large areas: Differential interferometry</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Gabriel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Goldstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Zebker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Geophys. Res</title>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="9183" to="9191"/>
+			<date type="published" when="1989-03">Mar. 1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">The displacement field of the Landers earthquake mapped by radar interferometry</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Massonnet</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">364</biblScope>
+			<biblScope unit="page" from="138" to="142"/>
+			<date type="published" when="1993-07">Jul. 1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Deflation of Mount Etna monitored by spaceborne radar interferometry</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Massonnet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Briole</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Arnaud</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">375</biblScope>
+			<biblScope unit="page" from="567" to="570"/>
+			<date type="published" when="1995-06">Jun. 1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Surface displacement of the 17 May 1993 Eureka Valley earthquake observed by SAR interferometry</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Peltzer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Rosen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">268</biblScope>
+			<biblScope unit="issue">5215</biblScope>
+			<biblScope unit="page" from="1333" to="1336"/>
+			<date type="published" when="1995-06">Jun. 1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">The complete (3-D) surface displacement field in the epicentral area of the 1999 Mw 7.1 Hector Mine earthquake, California, from space geodetic observations</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Fialko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Simons</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Agnew</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Geophys. Res. Lett</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">16</biblScope>
+			<biblScope unit="page" from="3063" to="3066"/>
+			<date type="published" when="2001-08">Aug. 2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Fast recession of a West Antarctic glacier</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Rignot</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">281</biblScope>
+			<biblScope unit="issue">5376</biblScope>
+			<biblScope unit="page" from="549" to="551"/>
+			<date type="published" when="1998-07">Jul. 1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Permanent scatterers in SAR interferometry</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ferretti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Prati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Rocca</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="8" to="20"/>
+			<date type="published" when="2001-01">Jan. 2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Interferometric point target analysis for deformation mapping</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Werner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Wegmüller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Strozzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Wiesmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. IGARSS</title>
+		<meeting>IGARSS<address><addrLine>Toulouse, France</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2003">Jul. 21-25, 2003</date>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="4362" to="4364"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">A new method for measuring deformation on volcanoes and other natural terrains using InSAR persistent scatterers</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hooper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zebker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Segall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">M</forename><surname>Kampes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Geophys. Res. Lett</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="issue">23</biblScope>
+			<biblScope unit="page" from="23611" to="23611"/>
+			<date type="published" when="2004-12">Dec. 2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">M</forename><surname>Kampes</surname></persName>
+		</author>
+		<title level="m">Radar Interferometry: Persistent Scatterer Technique</title>
+		<meeting><address><addrLine>Dordrecht, The Netherlands</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer-Verlag</publisher>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">A new algorithm for surface deformation monitoring based on small baseline differential SAR interferograms</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Berardino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Fornaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Sansosti</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="2375" to="2383"/>
+			<date type="published" when="2002-11">Nov. 2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Linear and nonlinear terrain deformation maps from a reduced set of interferometric SAR images</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Mora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Mallorquí</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Broquetas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="2243" to="2253"/>
+			<date type="published" when="2003-10">Oct. 2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Early detection and in-depth analysis of deformation phenomena by radar interferometry</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Crosetto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Crippa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Biescas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Eng. Geol</title>
+		<imprint>
+			<biblScope unit="volume">79</biblScope>
+			<biblScope unit="issue">1/2</biblScope>
+			<biblScope unit="page" from="81" to="91"/>
+			<date type="published" when="2005-06">Jun. 2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Decorrelation in interferometric radar echoes</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Zebker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Villasenor</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="950" to="959"/>
+			<date type="published" when="1992-09">Sep. 1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<title level="m" type="main">Synthetic Aperture Radar Processing</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Franceschetti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1999-03">Mar. 1999</date>
+			<publisher>CRC Press</publisher>
+			<pubPlace>Boca Raton, FL, USA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">A small baseline approach for investigating deformations on full resolution differential SAR interferograms</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="1377" to="1386"/>
+			<date type="published" when="2004-07">Jul. 2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">On the extension of the minimum cost flow algorithm for phase unwrapping of multitemporal differential SAR interferograms</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pepe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="2374" to="2383"/>
+			<date type="published" when="2006-09">Sep. 2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">A novel phase unwrapping method based on network programming</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Costantini</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="813" to="821"/>
+			<date type="published" when="1998-05">May 1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">New advances of the extended minimum cost flow phase unwrapping algorithm for SBAS-DInSAR analysis at full spatial resolution</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pepe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">D</forename><surname>Euillades</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Manunta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="4062" to="4079"/>
+			<date type="published" when="2011-10">Oct. 2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Relaxation methods for minimum cost ordinary and generalized network flow problems</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Bertsekas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Tseng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Oper. Res</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="93" to="114"/>
+			<date type="published" when="1988-02">Jan./Feb. 1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">A general formulation for redundant integration of finite differences and phase unwrapping on a sparse multidimensional domain</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Costantini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Malvarosa</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Minati</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="758" to="768"/>
+			<date type="published" when="2012-03">Mar. 2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Edgelist phase unwrapping algorithm for time series InSAR analysis</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Shanker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zebker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Opt. Soc. Amer. A, Opt. Image Sci</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="605" to="612"/>
+			<date type="published" when="2010-03">Mar. 2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">A null-space method for the phase unwrapping of multitemporal SAR interferometric stacks</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Fornaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pauciullo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Reale</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="2323" to="2334"/>
+			<date type="published" when="2011-06">Jun. 2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Satellite radar interferometry time-series analysis of surface deformation for Los Angeles, California</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Lundgren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Manzo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Casu</surname></persName>
+		</author>
+		<idno>ID. 23613</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Geophys. Res. Lett</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="issue">23</biblScope>
+			<date type="published" when="2004-12">Dec. 2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">An overview of the small baseline subset algorithm: A DInSAR technique for surface deformation analysis</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Pure Appl. Geophys</title>
+		<imprint>
+			<biblScope unit="volume">164</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="637" to="661"/>
+			<date type="published" when="2007-04">Apr. 2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">A quantitative assessment of DInSAR measurements of interseismic deformation: The southern San Andreas Fault case study</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Manzo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Fialko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Casu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pepe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Pure Appl. Geophys</title>
+		<imprint>
+			<biblScope unit="volume">169</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="1463" to="1482"/>
+			<date type="published" when="2012-08">Aug. 2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">The 2004-2006 uplift episode at Campi Flegrei caldera (Italy): Constraints from SBAS-DInSAR ENVISAT data and Bayesian source inference</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Trasatti</surname></persName>
+		</author>
+		<idno>L07308</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Geophys. Res. Lett</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<date type="published" when="2008-04">Apr. 2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Space-borne radar interferometry techniques for the generation of deformation time series: An advanced tool for Earth's surface displacement analysis</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Sansosti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Casu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Manzo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Geophys. Res. Lett</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="issue">20</biblScope>
+			<biblScope unit="page" from="20305" to="20306"/>
+			<date type="published" when="2010-11">Nov. 2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">On the generation of ERS/ENVISAT DInSAR time-series via the SBAS technique</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pepe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Sansosti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Berardino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Geosci. Remote Sens. Lett</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="265" to="269"/>
+			<date type="published" when="2005-07">Jul. 2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">SBAS-based satellite orbit correction for the generation of DInSAR time-series: Application to RADARSAT-1 data</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pepe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="5150" to="5165"/>
+			<date type="published" when="2011-12">Dec. 2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Surface displacements associated with the L'Aquila 2009 Mw 6.3 earthquake (Central Italy): New evidence from SBAS-DInSAR time series analysis</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Geophys. Res. Lett</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="issue">20</biblScope>
+			<date type="published" when="2010-10">Oct. 2010</date>
+		</imprint>
+	</monogr>
+	<note>Art. ID. L20309</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">From previous C-band to new X-band SAR systems: Assessment of the DInSAR mapping improvement for deformation time-series retrieval in urban areas</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bonano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Manunta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pepe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Paglia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1973" to="1984"/>
+			<date type="published" when="2013-04">Apr. 2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">How second generation SAR systems are impacting the analysis of ground deformation</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Sansosti</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int J. Appl. Earth Obs</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="11"/>
+			<date type="published" when="2014-05">May 2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">A simple solution to mitigate noise effects in time-redundant sequences of small baseline multi-look DInSAR interferograms</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens. Lett</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="609" to="618"/>
+			<date type="published" when="2013-03">Mar. 2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">The stripmap-ScanSAR SBAS approach to fill gaps in stripmap deformation time-series with ScanSAR data</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pepe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">B</forename><surname>Ortiz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">R</forename><surname>Lundgren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Rosen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="4788" to="4804"/>
+			<date type="published" when="2011-12">Dec. 2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Synthetic aperture radar interferometry</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bamler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hartl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Inverse Probl</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1" to="R54"/>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">On the exploitation of target statistics for SAR interferometry applications</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Monti Guarnieri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tebaldini</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="3436" to="3443"/>
+			<date type="published" when="2008-11">Nov. 2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">A new algorithm for processing interferometric datastacks: SqueeSAR</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ferretti</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="3460" to="3470"/>
+			<date type="published" when="2011-09">Sep. 2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Adaptive InSAR stack multi-looking exploiting amplitude statistics: A comparison between different techniques and practical results</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Parizzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Brcic</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Geosci. Remote Sens. Lett</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="441" to="445"/>
+			<date type="published" when="2011-05">May 2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Adaptive spatial multi-looking and temporal multilinking in SBAS interferometry</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Fornaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Reale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Verde</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. IGARSS</title>
+		<meeting>IGARSS<address><addrLine>Munich, Germany</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2012-07">Jul. 2012</date>
+			<biblScope unit="page" from="1892" to="1895"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Multi-link InSAR time series: Enhancement of a wrapped interferometric database</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Pinel-Puyssegur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Michel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Avouac</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sel. Topics Appl. Earth Observations Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="784" to="794"/>
+			<date type="published" when="2012-06">Jun. 2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Simulated annealing</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Bertsimas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tsitsiklis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Statist. Sci</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="10" to="15"/>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Geometrical SAR image registration</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Sansosti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Berardino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Manunta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Serafino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Fornaro</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="2861" to="2871"/>
+			<date type="published" when="2006-10">Oct. 2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Radar interferogram filtering for geophysical applications</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Goldstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">L</forename><surname>Werner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Geophys. Res. Lett</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">21</biblScope>
+			<biblScope unit="page" from="4035" to="4038"/>
+			<date type="published" when="1998-11">Nov. 1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">A modification to the Goldstein radar interferogram filter</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Baran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Stewart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">M</forename><surname>Kampes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Persky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Lilly</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="2114" to="2118"/>
+			<date type="published" when="2003-09">Sep. 2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pepe</surname></persName>
+		</author>
+		<title level="m">Advanced Differential Interferometric SAR Techniques, the Extended Minimum Cost Flow Phase Unwrapping (EMCF) Technique</title>
+		<meeting><address><addrLine>Saarbrucken, Germany</addrLine></address></meeting>
+		<imprint>
+			<publisher>VDM Verlang</publisher>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Local trend statistics for directional data-A moving window approach</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Brunsdon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Charlton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comput., Environ. Urban Syst</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="130" to="142"/>
+			<date type="published" when="2006-03">Mar. 2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<monogr>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">V</forename><surname>Mardia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Jupp</surname></persName>
+		</author>
+		<title level="m">Directional Statistics</title>
+		<meeting><address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Wiley</publisher>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<monogr>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jammalamadaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sengupta</surname></persName>
+		</author>
+		<title level="m">Topics in Circular Statistics</title>
+		<meeting><address><addrLine>Singapore</addrLine></address></meeting>
+		<imprint>
+			<publisher>World Sci</publisher>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Estimating the common mean direction of several circular or spherical distributions with differing dispersions</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">I</forename><surname>Fisher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lewis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biometrica</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="333" to="341"/>
+			<date type="published" when="1983-08">Aug. 1983</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Circular statistics applied to color image</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hanbury</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 8th Comput. Vis. Winter Workshop</title>
+		<meeting>8th Comput. Vis. Winter Workshop</meeting>
+		<imprint>
+			<date type="published" when="2003">2003</date>
+			<biblScope unit="page" from="55" to="60"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Optimization by simulated annealing</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kirkpatrick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Gelatt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Vecchi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">220</biblScope>
+			<biblScope unit="issue">4598</biblScope>
+			<biblScope unit="page" from="671" to="680"/>
+			<date type="published" when="1983-05">May 1983</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Algorithm 778: L-BFGS-B: Fortran subroutines for large-scale bound-constrained optimization</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">H</forename><surname>Byrd</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Nocedal</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACM Trans. Math. Softw</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="550" to="560"/>
+			<date type="published" when="1997-12">Dec. 1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">An interior algorithm for nonlinear optimization that combines line search and trust region steps</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Waltz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Morales</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Nocedal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Orban</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Math. Programm</title>
+		<imprint>
+			<biblScope unit="volume">107</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="391" to="408"/>
+			<date type="published" when="2006-07">Jul. 2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Synthetic aperture radar interferometry</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Rosen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. IEEE</title>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="333" to="381"/>
+			<date type="published" when="2000-03">Mar. 2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Pseudotriangulations from surfaces and a novel type of edge flip</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Aichholzer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Aurenhammer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Brass</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Krasser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">SIAM J. Comput</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="1621" to="1653"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Statistical analysis of multi-look SAR interferograms for CFAR detection of ground moving targets</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Gierull</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="691" to="701"/>
+			<date type="published" when="2004-04">Apr. 2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">On the extension of multidimensional speckle noise model from single-look to multi-look SAR image</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lopez-Martinez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Pottier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="305" to="320"/>
+			<date type="published" when="2007-02">Feb. 2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

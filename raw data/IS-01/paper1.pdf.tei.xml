@@ -1,0 +1,1607 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Towards Knowledge Maintenance in Scientific Digital Libraries with the Keystone Framework</title>
+				<funder ref="#_GnY7ybf #_bWWdTEc">
+					<orgName type="full">unknown</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>ACM</publisher>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2020-08">2020-08</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yuanxi</forename><surname>Fu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Information Sciences</orgName>
+								<orgName type="institution">University of Illinois at Urbana-Champaign</orgName>
+								<address>
+									<settlement>Champaign</settlement>
+									<region>IL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jodi</forename><surname>Schneider</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">School of Information Sciences</orgName>
+								<orgName type="institution">University of Illinois at Urbana-Champaign</orgName>
+								<address>
+									<settlement>Champaign</settlement>
+									<region>IL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Towards Knowledge Maintenance in Scientific Digital Libraries with the Keystone Framework</title>
+					</analytic>
+					<monogr>
+						<title level="m">Proceedings of the ACM/IEEE Joint Conference on Digital Libraries in 2020</title>
+						<meeting>the ACM/IEEE Joint Conference on Digital Libraries in 2020						</meeting>
+						<imprint>
+							<publisher>ACM</publisher>
+							<biblScope unit="page" from="217" to="226"/>
+							<date type="published" when="2020-08"/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">81B22B7C9E99B05BC3E6EC99C5CA828A</idno>
+					<idno type="DOI">10.1145/3383583.3398514</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-25T13:47+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Information systems~Digital libraries and archives</term>
+					<term>Computing methodologies~Discourse, dialogue and pragmatics</term>
+					<term>Applied computing~Document management Knowledge maintenance</term>
+					<term>argumentation theory</term>
+					<term>citation contexts</term>
+					<term>citation</term>
+					<term>knowledge claims</term>
+					<term>retraction of research</term>
+					<term>citation of retracted papers</term>
+					<term>argument retrieval</term>
+					<term>scientific literature</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Scientific digital libraries speed dissemination of scientific publications, but also the propagation of invalid or unreliable knowledge. Although many papers with known validity problems are highly cited, no auditing process is currently available to determine whether a citing paper's findings fundamentally depend on invalid or unreliable knowledge. To address this, we introduce a new framework, the keystone framework, designed to identify when and how citing unreliable findings impacts a paper, using argumentation theory and citation context analysis. Through two pilot case studies, we demonstrate how the keystone framework can be applied to knowledge maintenance tasks for digital libraries, including addressing citations of a non-reproducible paper and identifying statements most needing validation in a high-impact paper. We identify roles for librarians, database maintainers, knowledgebase curators, and research software engineers in applying the framework to scientific digital libraries.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">INTRODUCTION</head><p>Scientific digital libraries make the dissemination of scientific publications easier and faster. Yet this also facilitates the propagation of invalid or unreliable knowledge. Many papers with known validity problems are highly cited <ref type="bibr" target="#b2">[3]</ref>. Citations to invalidated papers pose a threat to scientific knowledge maintenance. However, currently, these citations are not flagged for review, and no auditing process is available to determine whether a new paper's findings fundamentally depend on invalid or unreliable knowledge.</p><p>Our goal in this paper is to set an agenda for knowledge maintenance in scientific digital libraries. This work is motivated by the questions: Does it matter when citing authors make use of a paper whose findings are no longer considered valid? Are papers citing it necessarily wrong? Our work introduces a framework for addressing these questions by combining argumentation theory and citation context analysis, pilot tests our new framework in two case studies, and suggests future directions for applying the framework.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.1">Scope and Importance of the Problem</head><p>We estimate that over 800,000 articles directly cite a retracted paper. The Retraction Watch Database 1 lists over 23,000 retracted publications as of May 2020. In biomedicine 94% of retracted papers have received at least one citation, with an average citation count of 35 <ref type="bibr" target="#b14">[15]</ref>. Nor are all citations to these articles negative; even Wakefield's fraudulent paper linking the MMR vaccine to autism received 94 positive citations <ref type="bibr" target="#b41">[42]</ref>.</p><p>Retraction "is a mechanism for correcting the literature and alerting readers to articles that contain such seriously flawed or erroneous content or data that their findings and conclusions cannot be relied upon" <ref type="bibr" target="#b45">[46]</ref>. Consequently, articles that substantively use the findings of retracted papers need reexamination. Fundamental errors can result from certain uses of retracted papers, including for synthesizing medical evidence <ref type="bibr" target="#b1">[2,</ref><ref type="bibr" target="#b21">22]</ref>. As of 2019, the industry Committee on Publication Ethics (COPE) warns: "Articles that relied on subsequently retracted articles in reaching their own conclusions, such as systematic reviews or meta-analyses, may themselves need to be corrected or retracted." <ref type="bibr" target="#b45">[46]</ref>. Such errors have made their way into heavily used documents: Avenell et al. show how citation to 12 retracted clinical trials has impacted clinical literature reviews and guidelines from the American Heart Association, the American College of Physicians, and the U.S. Agency for Healthcare Research and Quality <ref type="bibr" target="#b1">[2]</ref>.</p><p>Of course, merely citing a retracted paper does not necessarily invalidate the citing paper, because not all citations are used in the logical argument. For instance, it is customary to cite a paper when critiquing it <ref type="bibr" target="#b41">[42]</ref>, and sometimes a foundational paper is cited as an 'homage to pioneers' <ref type="bibr" target="#b19">[20]</ref> without the intention that it support the logical argument.</p><p>While retracted papers are the easiest to enumerate (and explicitly marked), their citation underestimates the scope of the problem since retraction is a recent and field-specific practice. Another common practice is to silently abandon works; such abandoned papers "contain conclusions that are refuted by later studies while still remaining in the record of scientific publications" <ref type="bibr" target="#b8">[9]</ref>.</p><p>The structure of the remainder of the paper is as follows: Section 2 summarizes related work. Section 3 introduces the keystone framework. Sections 4 presents our first case study, a keystone analysis of citations to a single unreliable paper. Section 5 presents our second case study, a keystone analysis of a single mouse model paper from Alzheimer's disease research, a field which has faced challenges in translating results of animal model research into insights for human treatment. Section 6 presents our research agenda for knowledge maintenance in digital libraries based on the framework. The paper concludes in Section 7.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2">RELATED WORK</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1">Argumentation-based Curation</head><p>Argumentation theory is an interdisciplinary field with multiple branches studying persuasion, rhetoric, dialectic, defeasible reasoning, and related topics <ref type="bibr" target="#b15">[16]</ref>. Argument schemes describe stereotypical reasoning patterns along with critical questions used in validating the reasoning <ref type="bibr" target="#b46">[47]</ref>. Argument maps can be used to diagram relationships between evidence and the statements they support or challenge <ref type="bibr" target="#b40">[41]</ref>. Of particular interest is whether support comes from a single source, multiple independent sources, or multiple linked sources that must be combined <ref type="bibr" target="#b18">[19]</ref>.</p><p>Digital library applications of argumentation theory include argument-based retrieval <ref type="bibr" target="#b20">[21,</ref><ref type="bibr" target="#b29">30]</ref> and curation of data and other resources associated with a paper <ref type="bibr" target="#b11">[12]</ref>. Three main approaches to argument-based curation are rhetoric-based, provenance-based, and argument scheme-based curation.</p><p>Rhetoric-based approaches seek to extract information based on rhetorical features. The use of general linguistic features limits the need for domain knowledge. The best known rhetoric-based approach, Argumentative Zoning <ref type="bibr" target="#b42">[43]</ref>, has been applied to digital libraries at scale using computational linguistics for about a decade [e.g., 44]. Similar approaches have also been used more recently for citation recommendation <ref type="bibr" target="#b9">[10]</ref>.</p><p>Provenance-based approaches seek to interlink scientific documents and their supporting data. They model documents based on the work process through which scientific discoveries are generated. One well-known example is the micropublication model <ref type="bibr" target="#b12">[13]</ref>, which indicates the support relationships between a paper's claims, methods, materials and data. Modeling research articles into the micropublication model is currently done by humans. For the Ph.D. level curators who maintain knowledge bases and databases, this takes 10-20 minutes per article <ref type="bibr" target="#b11">[12]</ref>.</p><p>Argument scheme-based approaches rely on deep domain analysis to generalize argument structures that capture the expert tradecraft used in a field. For example, in genetics, several argument schemes can be used to determine whether a gene variant affects human health <ref type="bibr" target="#b22">[23]</ref>. Such schemes document the underlying logic of how a discipline justifies its findings, which can make the reasoning more explicit and more visible to nonexperts. Once a document's argument has been curated into schemes, it also becomes possible to identify potential weakness through critical questions <ref type="bibr" target="#b46">[47]</ref> which could be useful for knowledge maintenance.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2">Citation Context Analysis</head><p>A citation context consists of some text (generally a sentence but also potentially a clause or multiple contiguous sentences) along with a reference to one or more cited items (i.e., the support for the text). Citation context analysis <ref type="bibr" target="#b38">[39]</ref> has been used for a variety of purposes, including to study citation motivation <ref type="bibr" target="#b17">[18]</ref> or to classify citation function <ref type="bibr" target="#b6">[7]</ref>. The best-known citation functions include substantiating claims, paying homage to pioneers, criticizing previous work, and providing leads to hard-to-find works <ref type="bibr" target="#b19">[20]</ref>. Moravcsik and Murugesan influentially distinguished 4 facets: conceptual or operational, organic or perfunctory, evolutionary or juxtapositional, and conformative or negational <ref type="bibr" target="#b30">[31]</ref>. More recent work has defined and automated 'meaningful citations' <ref type="bibr" target="#b44">[45]</ref> and 'influential citations' <ref type="bibr" target="#b51">[52]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3">THE KEYSTONE FRAMEWORK</head><p>We now introduce the keystone framework, for tracing the impact of citing a paper whose findings are invalidated. The term 'keystone' is inspired by masonry, where damage to the keystone can threaten the arch it supports. The keystone framework combines argumentation theory and citation context analysis. Argumentation theory forms the basis of understanding how retracted articles impact the argument of a citing paper while citation context analysis helps us distinguish citations that support the argument from those not used in the argument. We first show how argumentation theory explains an existing retraction guideline before detailing our framework.</p><p>NA-L-2: Scholarly Data JCDL '20, August 1-5, 2020, Virtual Event, China</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1">Argumentation Theory Explains COPE Retraction Guideline</head><p>Argumentation theory can be used to explain why COPE suggests that systematic reviews be corrected or retracted when a paper they relied on is retracted <ref type="bibr" target="#b45">[46]</ref>. The logic of a systematic review is to synthesize a number of studies<ref type="foot" target="#foot_0">foot_0</ref> , forming a linked argument <ref type="bibr" target="#b18">[19]</ref>, as shown in Figure <ref type="figure" target="#fig_0">1</ref>. In a linked argument, all evidence must be combined together to support a conclusion. Thus, if any one of the synthesized studies is retracted, the overall conclusions need to be reexamined. Avenell et al. describe, for instance, how retraction of 3 of 7 studies included in a review on Vitamin K for the prevention of fractures led to a correction of the review <ref type="bibr" target="#b1">[2]</ref>. Systematic reviews make direct use of studies they synthesize, following a linked argument structure. However, other types of publications (e.g., empirical studies) often employ more intricate argument structures <ref type="bibr" target="#b22">[23]</ref>, and the impact of a single cited paper on the argument may not be immediately apparent. Furthermore, a systematic review may also cite but not synthesize a paper, whose retraction does not threaten the synthesized conclusion. To make the distinction between citations that support the argument and those not used in the argument, we must resort to the citation context. To summarize, this COPE guideline is an intuitive response to the knowledge maintenance challenge posed by retractions. A fully defined framework is needed to make further progress in knowledge maintenance in scientific digital libraries.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2">Defining the Keystone Framework</head><p>Under our framework, a scientific research paper puts forward at least one main finding, along with a logical argument, giving reasons and evidence to support the main finding. The main finding is accepted (or not) on the basis of the logical argument. Evidence from earlier literature may be incorporated into the argument by citing a paper and presenting it as support, using a citation context.</p><p>We define a keystone statement as any statement whose unreliability threatens the argument for a main finding of a paper. We focus on keystone citation contexts, which we define as citation contexts supporting keystone statements. Our framework makes two further distinctions, to better understand the risks posed by citing a retracted, abandoned, or non-reproducible paper.</p><p>First, we distinguish how many items are cited, since removal of a unique item can be considered more risky to the argument than removal of one of several redundant items: Table <ref type="table" target="#tab_0">1</ref> summarizes the three types of keystone citation contexts observed in our case studies. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3">Comparison to other Approaches to Citation</head><p>Previous approaches to analyzing papers do not consider the argument structure along with citations or citation contexts. Keystone citations are only found in the logical argument supporting the main findings, which does not include the rationale for conducting a study. In contrast, citations that provided inspiration for the study may be considered 'influential citations' <ref type="bibr" target="#b51">[52]</ref> (e.g., for posing new ideas or research problems) and 'Argumentation-Active Support' <ref type="bibr" target="#b17">[18]</ref> (for "calling for further research"). Keystone citations must also be distinguished from 'meaningful citations' <ref type="bibr" target="#b44">[45]</ref>; these concepts overlap when using a paper in the main argument; however, extensions of a cited work are 'meaningful' but (unless there is a logical dependence) not keystone. Keystone citations do fit in broader categories of some citation function schemes, such as Garfield's 'substantiating claims' <ref type="bibr" target="#b19">[20]</ref>, Moravcsik and Murugesan's organic citation-"truly needed for the understanding of the referring paper" <ref type="bibr" target="#b30">[31]</ref>. None correspond precisely with keystone citations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4">Overview of the Case Studies</head><p>We next demonstrate keystone analysis through two case studies, to show how the keystone framework can help support knowledge maintenance. Our first case study investigates whether the non-reproducibility of a computational chemistry protocol <ref type="bibr" target="#b27">[28]</ref> affects 10 recent citing papers called out by a paper pointing out the programming error <ref type="bibr" target="#b4">[5]</ref>, and demonstrates that by using the keystone framework, we can narrow down to a fraction of citing papers for follow-up actions such as alerts for validation and verification. Our second case study analyzes a high-impact paper in Alzheimer's disease research <ref type="bibr" target="#b13">[14]</ref> in-depth and demonstrates the paper's findings depend on the validity of the findings from its keystone citations. Both case studies rely on the domain expertise of the first author, a PhD-level chemist.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4">CASE STUDY 1: CITING NON-REPRODUCIBLE CODE</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1">Overview</head><p>In late 2019, a paper published in the journal Organic Letters <ref type="bibr" target="#b4">[5]</ref> reported a glitch in a piece of widely used computational chemistry protocol for calculating Nuclear Magnetic Resonance (NMR) chemical shifts. The study found that the output of the Python scripts depends on the platform (Windows/Mac/Linux). Further investigation revealed that the glitch originated from differences in the platforms' default file sorting mechanisms; a flowchart showing the problem is given in Figure <ref type="figure" target="#fig_2">2</ref>. The discovery also caught the mass media's attention, prompting news articles with titles such as "A Code Glitch May Have Caused Errors in More Than 100 Published Studies" <ref type="bibr" target="#b3">[4]</ref>.</p><p>To assess the real impact of the code glitch, we applied the keystone framework to analyze the ten 'affected articles' mentioned in the paper identifying the glitch <ref type="bibr" target="#b4">[5]</ref>. We focused the origin of non-reproducibility, which is script D of the protocol, and assessed whether the non-reproducibility could impact the arguments for the main findings of the citing papers. To do this, first we developed an argument graph to illustrate the role that the Willoughby-Hoye protocol (WH protocol) could play in formulating an argument within a research article, shown in Figure <ref type="figure" target="#fig_3">3</ref>. The computational protocol first generates a few sets of NMR chemical shifts, often called "theoretical NMR chemical shifts," based on speculated structures of a compound. Then those theoretical NMR chemical shifts are compared with experimental NMR chemical shifts to find the best match. The molecular structure of the best match is identified as the structure of the compound. Mistakes in the theoretical NMR would result in wrong identifications and thus threaten the validity of the conclusions drawn.</p><p>We then devised a list of questions to help us determine the impact of the code glitch on the citing papers. The first author manually analyzed the ten articles and recorded the answer to each of the questions shown in Table <ref type="table" target="#tab_1">2</ref>.  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2">Results</head><p>We conclude that, contrary to the speculation in Organic Letters <ref type="bibr" target="#b4">[5]</ref>, six of the ten articles are not be affected by the code glitch.</p><p>The reasons, shown with examples in Table <ref type="table" target="#tab_2">3</ref>, are as follows.  <ref type="bibr" target="#b25">[26]</ref>." Support conformational analysis <ref type="bibr" target="#b8">[9,</ref><ref type="bibr" target="#b21">22]</ref> "Conformational analysis of 4 was performed with Schrödinger MacroModel 2016 by following the method of Willoughby et al <ref type="bibr" target="#b34">[35]</ref>." Successful example <ref type="bibr" target="#b52">[53]</ref> "The successful characterization of karlotoxin 2 (KmTx2) followed by KmTx8 and KmTx9 was supported by NMR chemical shift calculation tools including gauge-including atomic orbitals (GIAO) and DP4+ probability studies in conjunction with heteronuclear single quantum coherence (HSQC) spectroscopy studies <ref type="bibr" target="#b36">[37]</ref><ref type="bibr" target="#b37">[38]</ref><ref type="bibr" target="#b38">[39]</ref><ref type="bibr" target="#b39">[40]</ref>." Potentially affected by the code glitch Support NMR chemical shift calculations <ref type="bibr" target="#b16">[17,</ref><ref type="bibr" target="#b27">28,</ref><ref type="bibr" target="#b32">33,</ref><ref type="bibr" target="#b39">40]</ref> "Therefore, we turned to a protocol that relies on density functional theory-based computations of 1H and 13C NMR chemical shifts and the use of statistical tools to assign the experimental data to the correct isomer of a compound <ref type="bibr" target="#b27">[28]</ref>."</p><p>Three of the articles <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b49">50,</ref><ref type="bibr" target="#b50">51]</ref> cited the WH protocol in order to support a linear regression fitting between the theoretical and experimental NMR shifts. They are pass-through keystone citations, because the support is provided not directly by the WH protocol but rather by its bibliography (WH protocol's <ref type="bibr">Ref 19)</ref>. Note that this reference did not investigate different curve fitting approaches (which would provide the ideal evidence), but just showed that that for a known molecule, linear regression fitting was sufficient.</p><p>Two articles <ref type="bibr" target="#b7">[8,</ref><ref type="bibr" target="#b24">25]</ref> cited the WH protocol for adopting conformation analysis, which is up-stream in the protocol from the problematic Python script D, thus not impacted by the code glitch. One <ref type="bibr" target="#b52">[53]</ref> cited the WH protocol in the introduction as a previous successful example of characterizing molecules by using NMR chemical shift calculations.</p><p>The remaining four papers <ref type="bibr" target="#b16">[17,</ref><ref type="bibr" target="#b27">28,</ref><ref type="bibr" target="#b32">33,</ref><ref type="bibr" target="#b39">40]</ref> stated that they used the WH protocol to calculate the theoretical NMR chemical shift and thus could be significantly impacted, because the theoretical NMR chemical shifts supported findings that went into abstracts or the conclusion section. We say "could be" because the nonreproducibility comes from the protocol's implementation rather than the protocol itself. More precisely, only if an article used the incorrect implementation (i.e., used the supplied Python scripts D on Linux based operating systems), were its findings no longer valid. Yet since such implementation details were not provided in the articles, clarification is needed from authors. Specifically, authors of these four papers should double-check their results and either amend their findings or document how the findings are sustained despite the code glitch.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3">Lessons for Digital Libraries</head><p>Digital libraries should mark the papers whose conclusions rely on unreliable findings and should alert authors to check their conclusions. Subsequently, reliability flags should remain on the papers until their conclusions are checked and either verification or correction statements can be published. A sophisticated digital library could mark only keystone citations to unreliable findings. In this case, 4/10 of the papers examined were affected, i.e., keystone citations. This is a shockingly large proportion. Yet it shows the utility of keystone analysis: identifying that the problem from the cited paper did not transfer to the other 6/10 of the papers examined helps both authors and readers.</p><p>Digital libraries should provide authors and peer reviewers with support for identifying and evaluating statements. Pass-through support citations disadvantage authors whose works are cited indirectly and not 'credited'; they make it difficult for reviewers to assess relevance of the evidence; and from the perspective of knowledge maintenance, they demonstrate that when validity problems are found, a second or further generation of citations may need assessment.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5">CASE STUDY 2: CITATIONS SUPPORTING ONE PAPER'S ARGUMENT</head><p>The second case study seeks to determine which external knowledge was most essential for supporting the argument of a single influential paper.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.1">Overview</head><p>In this case study, we analyzed one neuroscience paper <ref type="bibr" target="#b13">[14]</ref> indepth using the keystone framework. Our analysis was guided by argument diagrams we previously developed <ref type="bibr" target="#b33">[34,</ref><ref type="bibr" target="#b34">35]</ref>, which delineated the reasoning of the four major findings made by the article. One author manually screened each citation in the body of the text (omitting "Experimental Procedures" which described methods in a smaller font at the end of the paper) and recorded the answers to each of the questions shown in Table <ref type="table" target="#tab_3">4</ref>. Ultimately, we discovered four main-finding keystone citations, one main-finding keystone citation cluster, and one pass-through keystone citation. All of them came from the results section (in case the methods were given in an appendix) and are shown in Figures <ref type="figure" target="#fig_4">4,</ref><ref type="figure" target="#fig_5">5</ref>, and 6.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2">Keystone Citations Support Experimental Materials</head><p>Three main-finding keystone citations support the mouse model itself, while a fourth supports a biomarker.</p><p>The authors' goal is to simulate the progression of Alzheimer's disease in a mouse. To obtain a mouse that has Alzheimer's-like traits, which is labeled "Children" in Figure <ref type="figure" target="#fig_4">4</ref>, the authors bred two different kinds of mice that each have one Alzheimer's-related trait. One parent mouse can make human tau protein (Mainfinding Keystone Citation 2/Parent 2), and the other is capable of producing proteins in a particular part of the brain (the EC region, where Alzheimer's starts from in human brains) (Main-finding Keystone Citation 1/Parent 1). These two keystone citations support the experimental materials, i.e., the mouse the authors bred and used for their experiments. Additionally, the authors performed experimental verification, using an antibody, 5A6. Main-finding Keystone Citation 3 supports the fact that the antibody 5A6 can recognize human tau protein and thus can verify that the human tau protein is only expressed in the EC region of the mouse model. All three of these keystone citations support the main finding that the authors have created a mouse model that can express human tau protein only in a particular part of the brain.</p><p>Pass-through Keystone Citation 1, shown in Figure <ref type="figure" target="#fig_5">5</ref>, justifies a statement that supports another choice of experimental material, "PSD-95 is a good synaptic biomarker." This is a pass-through keystone citation to Zhao et al. 2006, whose main findings do not directly support this statement, because Zhao's experiment did not involve PSD-95 at all. ) that had reported the reduction of PSD-95 early in neurodegeneration (including in Alzheimer's disease). However, unlike the pass-through keystone citations seen in the first case study, which are tangentially supported by main findings (though not of the cited paper itself), in this case, this support comes from an informal literature review, Zhao's introduction, which is cited for the statement "PSD-95 decreases early in neurodegeneration."</p><p>The authors took a risk by using this ad-hoc literature review to support a key experimental decision. Citing an ad-hoc literature review is a bad practice, because it takes the risk that knowledge may have slipped into the literature without rigorous review or explicit validation.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3">Keystone Citations Support Experimental Methods</head><p>A main-finding keystone citation cluster of three references, reading "(DeKosky and Scheff, 1990; Scheff and Price, 2006; Terry et al., 1991)" supports a keystone statement for the choice of experimental method (use of synaptic markers to measure the degree of neurodegeneration). Two citations in the cluster provide experimental evidence from independent labs: DeKosky and Scheff, 1990 and Terry et al., 1991, are experimental demonstrations of correlation between synapse density and neurodegeneration. The third citation is a review article: Sheff and Price, 2006 reviews the Alzheimer's disease-related alterations in synaptic density. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.4">Keystone Citations Support Interpretations</head><p>One main-finding keystone citation helps in the interpretation of data. In this case, Data 1 shows that tau protein aggregates were found in a couple of brain regions, and Data 2 rules out the possibility that the tau protein aggregates were caused by locally produced proteins. The main-finding keystone citation, Witter et al., 1988, supplies crucial information about the brain anatomy, those regions received direct neuron input from the EC region (i.e., were connected via synapses). The resulting interpretation, Interpretation 1, was then synthesized with Interpretation 2 (the interpretation of Data 3) in order to reach the main finding, "Human tau protein propagates synaptically in mice," as shown in Figure <ref type="figure" target="#fig_6">6</ref>. Noteworthy is that the second interpretation of data could also involve Witter et al., 1988. However, the citation appeared immediately after Interpretation 1 was introduced in the article, and therefore, in Figure <ref type="figure" target="#fig_6">6</ref> we add a question mark to indicate our uncertainty about whether the author intended Witter et al., 1988 to also help support Interpretation 2.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.5">Lessons for Digital Libraries</head><p>Previous problems in translating Alzheimer's research into viable treatments make application of the keystone framework valuable. Digital libraries can take a panoptic view of the literature and identify the keystone statements over an entire body of literature. Repeated keystone statements have fundamental importance. Significant benefit can result from prioritizing the validation of keystone statements underlying important work, particularly at key phases in research translation (such as when preclinical studies move into human trials). With this approach, digital libraries can support funding agencies in identifying research priorities, and researchers in finding impactful problems. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6">DISCUSSION</head><p>Our case studies demonstrate how identifying keystone citations can support knowledge maintenance, in addressing citations of non-reproducible papers and identifying dependencies of a highimpact paper. Now we consider more generally the research agenda for knowledge maintenance in scientific digital libraries.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.1">Need for Knowledge Maintenance in Scientific Digital Libraries</head><p>Scientific digital libraries need to take a knowledge maintenance perspective and create a sustainable knowledge infrastructure that will nourish the research community in the long run, because "Shared, reliable knowledge is among the human society's most precious resources" <ref type="bibr" target="#b5">[6]</ref>. In digital libraries, the current state of knowledge maintenance is, at best <ref type="bibr" target="#b35">[36]</ref>, to mark retracted papers. However, when a part or all of the findings of a paper are invalidated, updating the state of knowledge, including the citing papers, is crucial. A top journal asked "what do we still know" after twenty-one articles by the pain researcher Scott Reuben were retracted for data fabrication in 2009 <ref type="bibr" target="#b48">[49]</ref>. Current scientific digital libraries mainly focus on searching and sharing papers. The most advanced ones also support finding related work, navigating citation networks, comparing the number of positive and negative citations<ref type="foot" target="#foot_1">foot_1</ref> or identifying 'meaningful citations'<ref type="foot" target="#foot_2">foot_2</ref>  <ref type="bibr" target="#b44">[45]</ref>. However, scientific digital libraries so far still lack a framework to guide them in maintaining a collection of reliable literature for scientists to use, and this shortcoming has motivated us to develop the keystone framework.</p><p>Librarians, database maintainers, knowledgebase curators, and research software engineers, can all play a role in applying the keystone framework to scientific digital libraries. Librarians and database maintainers should develop and incorporate metadata and indexes, to support knowledge maintenance tasks, for instance to present a panoptic view of keystone statements over an entire body of literature, or to interlink papers via keystone citations. Knowledgebase curators in fields with a tradition of focused curation <ref type="bibr" target="#b28">[29]</ref> are well-placed to identify keystone statements. Research software engineers could develop text mining pipelines to reduce curators' workload in identifying keystone statements.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.2">Patching Papers using Keystone Citation Alerts</head><p>The keystone framework could support selective alerting of authors whose publications are most likely to be impacted by errors in a paper they cited. When significant errors or reliability issues are identified in a paper, its citing papers should be assessed. For instance, the infamous retracted paper linking MMR vaccine to autism received 94 positive citations <ref type="bibr" target="#b41">[42]</ref>; those papers should be assessed for reliability, to understand whether their argument depends in any way on the fraudulent paper. A greater sense of urgency in updating papers might result from this kind of selective alerting, because in general, only a fraction of citing publications are expected to be keystone. In our first case study, we narrowed down a list of 10 recent citations that experts posited <ref type="bibr" target="#b4">[5]</ref> might be affected by a programming error. Six of the ten papers we examined were not impacted by the bug to this part of the script. This means that a smaller number of authors would need to be contacted, enabling authors and editors to follow up more aggressively on the most significant problems.</p><p>In the wake of a retraction or an erratum, hundreds or thousands of citing papers may need to be screened. We envision this task being performed by a team comprising of one domain expert and several non-experts. The domain expert develops a generalized argument model showing the roles that a particular piece of unreliable knowledge can play (e.g., Figure <ref type="figure" target="#fig_3">3</ref>). A checklist of screening questions then can be developed based on the model (e.g., Table <ref type="table" target="#tab_1">2</ref>). With such a list, non-experts can quickly and consistently identify which articles are most likely to be impacted and to set up alerts for the authors.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.3">Limitations of the Keystone Framework</head><p>Our current framework has several limitations. First, it depends on explicit citation, and does not scrutinize statements that slip into literature without citation. Uncited statements are common and can be problematic: for instance, 7% (8/115) of review papers cited no supporting literature for the questionable statement that iron level increased in Alzheimer's Disease <ref type="bibr" target="#b36">[37]</ref>. Second, the keystone framework does not scrutinize the validity of domain-specific argumentation patterns themselves. Third, it depends on explicit labeling of invalid literature, which is only standard practice for retracted papers. Fourth, application of the keystone framework beyond retracted papers needs to proceed cautiously to avoid stifling innovation, since 'abandoned' or 'non-reproducible' findings may turn out be correct. For instance, early evidence on adult neurogenesis was dismissed for nearly 30 years <ref type="bibr" target="#b23">[24]</ref>, and lack of reproducibility can sometimes be attributed to hidden variables, the study of which may lead to new insights <ref type="bibr" target="#b47">[48]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.4">Research Agenda</head><p>Our two case studies used different procedures in applying the keystone framework, depending on the task at hand. The first case study started from the source of the unreliability, which is most appropriate for addressing citation of papers with validity issues. The second case study started from the argument structure of the paper, which is most appropriate for focused curation in high-stake subject areas in search of breakthroughs (e.g., Alzheimer disease research). The two case studies demonstrated the flexibility and generalizability of our framework. Future discussions with stakeholders, such as journal editors retracting papers and curators maintaining knowledge bases, will help us perfect the existing procedures and discover other opportunities for applying our framework.</p><p>We argue that next generation scientific digital libraries should attend to knowledge maintenance. Current digital libraries' focus on individual papers causes challenges for tasks that require comparison and synthesis of multiple papers. With typical heuristics such as sorting papers by citation counts and recency, it is challenging to determine the state of the art in a field, identify the level of evidence supporting a statement, or find an appropriate citation. Systems prioritizing knowledge maintenance can better support these tasks.</p><p>Large-scale identification of keystone statements would be particularly valuable for several applications. A funding agency or research field could identify common keystone statements that appear repeatedly and prioritize them for further validation or verification. An editor could continuously surveil possible validity challenges in published work in their portfolio. An author could search an index of keystone citations, rather than searching by keywords, to find an appropriate citation.</p><p>Our work also highlights open questions about citation behavior. Further work on pass-through citations is needed to address why and how often authors cite main findings compared to other parts of empirical research papers. The citation of ad-hoc literature reviews needs particular examination because it takes the risk that NA-L-2: Scholarly Data JCDL '20, August 1-5, 2020, Virtual Event, China knowledge may have slipped into the literature without rigorous review or explicit validation. Also, citation behavior related to interpretations should be studied.</p><p>In the future we will experiment with using different approaches to argument-based curation, in place of the micropublications model. Argumentative zoning provides a coarser argumentative structure but has automated well in prior work. Adapting its existing automation might support scaling the identification of keystone citations and keystone statements. Domain-specific argumentation schemes are finer grained and hold particular promise for identifying unstated assumptions (enthymemes), critical questions, and dependencies underlying field-specific norms for argumentation. Identifying new argumentation schemes associated with fine-grain methods could be useful in combination with machine learning tools for methods prediction <ref type="bibr" target="#b25">[26]</ref>. Analysis approaches used to identify argumentation schemes in genetics should be helpful <ref type="bibr" target="#b22">[23]</ref>.</p><p>Further exploration of the different categories of keystone citations, and their ramifications for knowledge maintenance is also a priority. In particular, certain subtypes of keystone citations may be possible to recover through existing automation, such as identification of 'method papers' <ref type="bibr" target="#b37">[38]</ref>. Currently, distinguishing support as main findings, pass-through, or non-support is particularly challenging, and this is likely to remain a manual process for the foreseeable future. However, the Sci-Summ Shared Task <ref type="foot" target="#foot_3">5</ref> , for instance, seeks to identify in cited text spans that most accurately reflect a given citation context <ref type="bibr" target="#b10">[11]</ref>.</p><p>Future work should develop a taxonomy of validity for indicating the confidence a reader can have in relying on or reusing the methods and the findings of a paper. This can be informed by insights from meta-research, such as that triangulation across multiple different methods increases confidence in research <ref type="bibr" target="#b31">[32]</ref> while novel studies are frequently contradicted in subsequent research <ref type="bibr" target="#b26">[27]</ref>, which shows the urgency of integrating knowledge amongst sets of papers.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="7">CONCLUSIONS</head><p>We have argued that scientific digital libraries need to take a knowledge maintenance perspective. Towards this end, we introduced the keystone framework, designed to identify when and how a citing paper is impacted by citing unreliable findings. We demonstrated how to use the framework in a digital library to trace the possible impact of error from a cited paper. Our first case study investigated whether the non-reproducibility of a computational chemistry protocol affected 10 citing papers, and demonstrated that by using the keystone framework, we can narrow down to a fraction of citing papers for follow-up actions such as alerts for validation and verification. Our second case study screened a high-impact paper in Alzheimer's disease research for keystone citations and elucidated how that paper's findings depend on the validity of the findings from its keystone citations. We presented a research agenda for knowledge</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 :</head><label>1</label><figDesc>Figure 1: An argument diagram for a systematic review.</figDesc><graphic coords="3,84.00,238.08,180.00,145.80" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head></head><label/><figDesc>A singleton citation context cites one item, e.g. '[2]'  A cluster citation context cites multiple items, e.g., '[2, 16]' or '(DeKosky and Scheff, 1990; Scheff and Price, 2006; Terry et al., 1991)'. Second, we delineate whether the cited item's main findings support the citation context. This gives an indication of the strength of support, and indicates the risk posed if the item's main findings are overturned.  Main-findings support, if the citation context closely relates to a main finding of the cited item.  Pass-through support, if support can be found within the cited item but only in an unsupported statement or a statement referencing one or more other work(s).  No clear support, if the citation context does not clearly relate to the cited item, either its main findings, or other statements it makes.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 2 :</head><label>2</label><figDesc>Figure 2: The NMR code glitch specifically relates to Willoughby-Hoye protocol script D, nmr-data_compilation.py.</figDesc><graphic coords="4,343.92,108.72,187.68,192.96" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 3 :</head><label>3</label><figDesc>Figure 3: An argument diagram illustrating the role that the Willoughby-Hoye protocol could play in formulating an argument within a research article.</figDesc><graphic coords="5,53.76,74.88,240.48,195.84" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 4 :</head><label>4</label><figDesc>Figure4: Three main-finding keystone citations that support experimental materials in<ref type="bibr" target="#b13">[14]</ref>.Only its introduction summarizes a number of papers (Zhao et al. 2006's Refs<ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref> that had reported the reduction of PSD-95 early in neurodegeneration (including in Alzheimer's disease). However, unlike the pass-through keystone citations seen in the first case study, which are tangentially supported by main findings (though not of the cited paper itself), in this case, this support comes from an informal literature review, Zhao's introduction, which is cited for the statement "PSD-95 decreases early in neurodegeneration."The authors took a risk by using this ad-hoc literature review to support a key experimental decision. Citing an ad-hoc literature review is a bad practice, because it takes the risk that knowledge may have slipped into the literature without rigorous review or explicit validation.</figDesc><graphic coords="6,317.76,74.64,240.48,264.96" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 5 :</head><label>5</label><figDesc>Figure 5: An ad-hoc literature review from Pass-through Keystone Citation 1 supports the choice of PSD-95 as a synaptic marker in [14].</figDesc><graphic coords="7,53.76,74.64,240.24,272.64" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 6 :</head><label>6</label><figDesc>Figure 6: Main-finding Keystone Citation 4 in [14] supports the interpretation of experimental data.</figDesc><graphic coords="7,317.76,119.76,240.48,295.68" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 :</head><label>1</label><figDesc>The three types of keystone citation contexts we observed</figDesc><table><row><cell>Properties</cell><cell>Removing</cell><cell>Only</cell><cell>The main</cell><cell>Correspondin</cell></row><row><cell>of the</cell><cell>the</cell><cell>one</cell><cell>findings</cell><cell>g cited article</cell></row><row><cell>keystone</cell><cell>citation</cell><cell>pape</cell><cell>of the</cell><cell/></row><row><cell>citation</cell><cell>context</cell><cell>r is</cell><cell>cited</cell><cell/></row><row><cell>context</cell><cell>would</cell><cell>cited.</cell><cell>paper(s)</cell><cell/></row><row><cell/><cell>weaken</cell><cell/><cell>provide</cell><cell/></row><row><cell/><cell>the</cell><cell/><cell>evidence</cell><cell/></row><row><cell/><cell>argument</cell><cell/><cell>to</cell><cell/></row><row><cell/><cell>supportin</cell><cell/><cell>support</cell><cell/></row><row><cell/><cell>g a main</cell><cell/><cell>the</cell><cell/></row><row><cell/><cell>finding</cell><cell/><cell>argument</cell><cell/></row><row><cell/><cell/><cell/><cell>.</cell><cell/></row><row><cell>Singleton,</cell><cell>+</cell><cell>+</cell><cell>+</cell><cell>Main-finding</cell></row><row><cell>main-</cell><cell/><cell/><cell/><cell>keystone</cell></row><row><cell>findings</cell><cell/><cell/><cell/><cell>citation</cell></row><row><cell>support</cell><cell/><cell/><cell/><cell/></row><row><cell>Cluster,</cell><cell>+</cell><cell>-</cell><cell>+</cell><cell>Main-finding</cell></row><row><cell>main-</cell><cell/><cell/><cell/><cell>keystone</cell></row><row><cell>findings</cell><cell/><cell/><cell/><cell>citation cluster</cell></row><row><cell>support</cell><cell/><cell/><cell/><cell/></row><row><cell>Singleton,</cell><cell>+</cell><cell>+</cell><cell>-</cell><cell>Pass-through</cell></row><row><cell>pass-</cell><cell/><cell/><cell/><cell>keystone</cell></row><row><cell>through</cell><cell/><cell/><cell/><cell>citation</cell></row><row><cell>support</cell><cell/><cell/><cell/><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2 .</head><label>2</label><figDesc>Questions used to analyze the impact of the code glitch on the citing paper in Case Study 1</figDesc><table><row><cell>No.</cell><cell>Question</cell></row><row><cell>1</cell><cell>Does the citing paper use the WH protocol to calculate NMR</cell></row><row><cell/><cell>chemical shifts?</cell></row><row><cell>2</cell><cell>What NMR chemical shifts were calculated using the protocol?</cell></row><row><cell>3</cell><cell>What does the theoretical NMR chemical shifts support?</cell></row><row><cell>4</cell><cell>Will a main finding be threatened if the numerical values of the</cell></row><row><cell/><cell>chemical shifts are unreliable? Why?</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 3 .</head><label>3</label><figDesc>Results of keystone analysis for Case Study 1</figDesc><table><row><cell>Group</cell><cell cols="2">Function</cell><cell>Sample citation context</cell></row><row><cell>Unaffected</cell><cell>Support</cell><cell>linear</cell><cell>"Scaling factors (slope = -1.0522,</cell></row><row><cell>by the code</cell><cell cols="2">regression [1, 50,</cell><cell>intercept ¼ 181.2412) are applied to the</cell></row><row><cell>glitch</cell><cell>51]</cell><cell/><cell>13C NMR shielding tensors (B3LYP/6-</cell></row><row><cell/><cell/><cell/><cell>311 þ G (2d,p)//M06-2X/6-31 þ G (d,p) to</cell></row><row><cell/><cell/><cell/><cell>calculate the 13C NMR chemical shifts</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 4 .</head><label>4</label><figDesc>Questions used for in-depth analysis in Case Study 2</figDesc><table><row><cell>No.</cell><cell>Question</cell></row><row><cell>1</cell><cell>What does the citation context support?</cell></row><row><cell>2</cell><cell>Does the citation context support one or more components of</cell></row><row><cell/><cell>the argument diagrams?</cell></row><row><cell>3</cell><cell>What is the function of the citation context?</cell></row><row><cell>4</cell><cell>What type of citation context is it (i.e., keystone or non-</cell></row><row><cell/><cell>keystone, if keystone, which type)? Why?</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2" xml:id="foot_0"><p>Each "study" comprises a group of related articles; such grouping is important in clinical systematic reviews to avoid double-counting of the same patients.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="3" xml:id="foot_1"><p>https://scite.ai</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="4" xml:id="foot_2"><p>https://www.semanticscholar.org</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="5" xml:id="foot_3"><p>https://github.com/WING-NUS/scisumm-corpus maintenance in digital libraries. Librarians, database maintainers, knowledgebase curators, and research software engineers can play a role in applying the keystone framework to scientific digital libraries, and in developing infrastructures to further support knowledge maintenance.</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENTS</head><p><rs type="person">Tim Clark</rs>, <rs type="person">J. Stephen Downie</rs>, <rs type="person">David Dubin</rs>, <rs type="person">Kiel Gilleade</rs>, <rs type="person">Michael Gryk</rs>, <rs type="person">Daniel S. Katz</rs>, <rs type="person">Halil Kilicoglu</rs>, <rs type="person">Allen Renear</rs>, <rs type="person">Karen Wickett</rs>. <rs type="person">Alfred P. Sloan</rs> Foundation <rs type="grantNumber">G-2020-12623</rs>. <rs type="grantNumber">NIH R01LM010817</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_GnY7ybf">
+					<idno type="grant-number">G-2020-12623</idno>
+				</org>
+				<org type="funding" xml:id="_bWWdTEc">
+					<idno type="grant-number">NIH R01LM010817</idno>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Quantum mechanical approach for structure elucidation of novel halogenated sesquiterpene lactones</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Alvarenga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">O</forename><surname>Santos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">C</forename><surname>Moraes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M T</forename><surname>Carneiro</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.molstruc.2018.11.085</idno>
+		<ptr target="https://doi.org/10.1016/j.molstruc.2018.11.085"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Molecular Structure</title>
+		<imprint>
+			<biblScope unit="volume">1180</biblScope>
+			<biblScope unit="page" from="41" to="47"/>
+			<date type="published" when="2019">2019. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">An investigation into the impact and implications of published papers from retracted research: systematic search of affected literature</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Avenell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Stewart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Grey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Gamble</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bolland</surname></persName>
+		</author>
+		<idno type="DOI">10.1136/bmjopen-2019-031909</idno>
+		<ptr target="https://doi.org/10.1136/bmjopen-2019-031909"/>
+	</analytic>
+	<monogr>
+		<title level="j">BMJ Open</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">31909</biblScope>
+			<date type="published" when="2019-10">2019. Oct. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Temporal characteristics of retracted articles</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bar-Ilan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Halevi</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11192-018-2802-y</idno>
+		<ptr target="https://doi.org/10.1007/s11192-018-2802-y"/>
+	</analytic>
+	<monogr>
+		<title level="j">Scientometrics</title>
+		<imprint>
+			<biblScope unit="volume">116</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1771" to="1783"/>
+			<date type="published" when="2018-06">2018. Jun. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bender</surname></persName>
+		</author>
+		<ptr target="https://www.vice.com/en_us/article/zmjwda/a-code-glitch-may-have-caused-errors-in-more-than-100-published-studies"/>
+		<title level="m">A code glitch may have caused errors in more than 100 published studies</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Characterization of Leptazolines A-D, polar oxazolines from the cyanobacterium Leptolyngbya sp., reveals a glitch with the "Willoughby-Hoye" scripts for calculating NMR chemical shifts</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bhandari Neupane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">P</forename><surname>Neupane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">Y</forename><surname>Yoshida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">G</forename><surname>Williams</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.orglett.9b03216</idno>
+		<ptr target="https://doi.org/10.1021/acs.orglett.9b03216"/>
+	</analytic>
+	<monogr>
+		<title level="j">Organic Letters</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="8449" to="8453"/>
+			<date type="published" when="2019-10">2019. Oct. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<monogr>
+		<title level="m" type="main">Knowledge Infrastructures: Intellectual Frameworks and Research Challenges</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">L</forename><surname>Borgman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">N</forename><surname>Edwards</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Jackson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">K</forename><surname>Chalmers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">C</forename><surname>Bowker</surname></persName>
+		</author>
+		<ptr target="https://escholarship.org/uc/item/2mt6j2mh"/>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">What do citation counts measure? A review of studies on citing behavior</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bornmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Daniel</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/00220410810844150</idno>
+		<ptr target="https://doi.org/10.1108/00220410810844150"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Documentation</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="45" to="80"/>
+			<date type="published" when="2008-01">2008. Jan. 2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Lamellarin sulfates from the Pacific tunicate Didemnum ternerratum</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bracegirdle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">P</forename><surname>Robertson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Hume</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Page</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Sharrock</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">F</forename><surname>Ackerley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Carroll</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Keyzers</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jnatprod.9b00493</idno>
+		<ptr target="https://doi.org/10.1021/acs.jnatprod.9b00493"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Natural Products</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="2000" to="2008"/>
+			<date type="published" when="2019-07">2019. Jul. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Teaching about ethics and the process of science using retracted publications</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Burnett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Singiser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Clower</surname></persName>
+		</author>
+		<idno type="DOI">10.2505/4/jcst14_043_03_24</idno>
+		<ptr target="https://doi.org/10.2505/4/jcst14_043_03_24"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of College Science Teaching</title>
+		<imprint>
+			<biblScope unit="volume">043</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="24" to="29"/>
+			<date type="published" when="2014">2014. 2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">SOLVENT: A Mixed Initiative System for Finding Analogies between Research Papers</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hope</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Shahaf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kittur</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3274300</idno>
+		<ptr target="https://doi.org/10.1145/3274300"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the ACM on Human-Computer Interaction</title>
+		<meeting>the ACM on Human-Computer Interaction</meeting>
+		<imprint>
+			<publisher>CSCW</publisher>
+			<date type="published" when="2018-11">2018. Nov. 2018</date>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="1" to="21"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Overview and results: CL-SciSumm Shared Task</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">K</forename><surname>Chandrasekaran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yasunaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Radev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Freitag</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-Y</forename><surname>Kan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 4th Joint Workshop on Bibliometric-enhanced Information Retrieval and Natural Language Processing for Digital Libraries (BIRNDL 2019) co-located with the 42nd International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2019)</title>
+		<meeting>the 4th Joint Workshop on Bibliometric-enhanced Information Retrieval and Natural Language Processing for Digital Libraries (BIRNDL 2019) co-located with the 42nd International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2019)</meeting>
+		<imprint>
+			<date type="published" when="2019">2019. 2019. 2019</date>
+			<biblScope unit="page" from="153" to="166"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Argument graphs: Literature-data integration for robust and reproducible science</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Clark</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">First International Workshop on Capturing Scientific Knowledge Collocated with the Eighth International Conference on Knowledge Capture (K-CAP)</title>
+		<meeting><address><addrLine>Palisades, NY</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2015-07">2015. Jul. 2015</date>
+			<biblScope unit="page" from="1" to="8"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Micropublications: a semantic model for claims, evidence, arguments and annotations in biomedical communications</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Clark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">N</forename><surname>Ciccarese</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Goble</surname></persName>
+		</author>
+		<idno type="DOI">10.1186/2041-1480-5-28</idno>
+		<ptr target="https://doi.org/10.1186/2041-1480-5-28"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Biomedical Semantics</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">28</biblScope>
+			<date type="published" when="2014">2014. 2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Propagation of tau pathology in a model of early Alzheimer's disease</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>De Calignon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Polydoro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Suárez-Calvet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>William</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Adamowicz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kopeikina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Pitstick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Sahara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">H</forename><surname>Ashe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Carlson</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuron.2011.11.033</idno>
+		<ptr target="https://doi.org/10.1016/j.neuron.2011.11.033"/>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">73</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="685" to="697"/>
+			<date type="published" when="2012">2012. 2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Systematic examination of pre-and post-retraction citations</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Dinh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sarol</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y.-Y</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T.-K</forename><surname>Hsiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Parulian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schneider</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/pra2.35</idno>
+		<ptr target="https://doi.org/10.1002/pra2.35"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Association for Information Science and Technology</title>
+		<meeting>the Association for Information Science and Technology</meeting>
+		<imprint>
+			<date type="published" when="2019">2019. 2019</date>
+			<biblScope unit="page" from="390" to="394"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<title level="m" type="main">Handbook of argumentation theory</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">H</forename><surname>Eemeren</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Van</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Garssen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">C W</forename><surname>Krabbe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Snoeck Henkemans</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Verheij</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H M</forename><surname>Wagemans</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<publisher>Springer Reference</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Computational and synthetic investigation of cationic rearrangement in the putative biosynthesis of justicane triterpenoids</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Elkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Scruse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Turlik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">R</forename><surname>Newhouse</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/anie.201810566</idno>
+		<ptr target="https://doi.org/10.1002/anie.201810566"/>
+	</analytic>
+	<monogr>
+		<title level="j">Angewandte Chemie International Edition</title>
+		<imprint>
+			<biblScope unit="volume">58</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1025" to="1029"/>
+			<date type="published" when="2019">2019. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">A taxonomy of motives to cite</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Erikson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Erlandson</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/0306312714522871</idno>
+		<ptr target="https://doi.org/10.1177/0306312714522871"/>
+	</analytic>
+	<monogr>
+		<title level="j">Social Studies of Science</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="625" to="637"/>
+			<date type="published" when="2014-08">2014. Aug. 2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<title level="m" type="main">Argument Structure: Representation and Theory</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Freeman</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+			<publisher>Springer</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Can citation indexing be automated</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Garfield</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Statistical Association Methods for Mechanized Documentation, Symposium Proceedings</title>
+		<imprint>
+			<date type="published" when="1965">1965. 1965</date>
+			<biblScope unit="page" from="189" to="192"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Introducing LUIMA: An experiment in legal conceptual retrieval of vaccine injury decisions using a UIMA type system and tools</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Grabmair</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Ashley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Sureshkumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Nyberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">R</forename><surname>Walker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 15th International Conference on Artificial Intelligence and Law</title>
+		<meeting>the 15th International Conference on Artificial Intelligence and Law<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2015">2015. 2015</date>
+			<biblScope unit="page" from="69" to="78"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Inclusion of nursing trials in systematic reviews after they have been retracted: Does it happen and what should we do</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Gray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Al-Ghareeb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Davis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Mckenna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hillel</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijnurstu.2017.12.006</idno>
+		<ptr target="https://doi.org/10.1016/j.ijnurstu.2017.12.006"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Nursing Studies</title>
+		<imprint>
+			<biblScope unit="volume">79</biblScope>
+			<biblScope unit="page">154</biblScope>
+			<date type="published" when="2018-03">2018. Mar. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Towards mining scientific discourse using argumentation schemes</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">L</forename><surname>Green</surname></persName>
+		</author>
+		<idno type="DOI">10.3233/AAC-180038</idno>
+		<ptr target="https://doi.org/10.3233/AAC-180038"/>
+	</analytic>
+	<monogr>
+		<title level="j">Argument &amp; Computation</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="121" to="135"/>
+			<date type="published" when="2018-07">2018. Jul. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Three before their time: neuroscientists whose ideas were ignored by their contemporaries</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Gross</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s00221-008-1481-y</idno>
+		<ptr target="https://doi.org/10.1007/s00221-008-1481-y"/>
+	</analytic>
+	<monogr>
+		<title level="j">Experimental Brain Research</title>
+		<imprint>
+			<biblScope unit="volume">192</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="321" to="334"/>
+			<date type="published" when="2009-01">2009. Jan. 2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Halogenated tyrosine derivatives from the Tropical Eastern Pacific zoantharians Antipathozoanthus hickmani and Parazoanthus darwini</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">O</forename><surname>Guillen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">B</forename><surname>Jaramillo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Jennings</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Genta-Jouve</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>De La Cruz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Cautain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Reyes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rodríguez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">P</forename><surname>Thomas</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jnatprod.9b00173</idno>
+		<ptr target="https://doi.org/10.1021/acs.jnatprod.9b00173"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Natural Products</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="1354" to="1360"/>
+			<date type="published" when="2019-05">2019. May 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">A proposal for determining the evidence types of biomedical documents using a drug-drug interaction ontology and machine learning</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Hoang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Boyce</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Brochhausen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Utecht</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schneider</surname></persName>
+		</author>
+		<ptr target="http://ceur-ws.org/Vol-2350/xposter3.pdf"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the AAAI 2019 Spring Symposium on Combining Machine Learning with Knowledge Engineering (AAAI-MAKE 2019)</title>
+		<meeting>the AAAI 2019 Spring Symposium on Combining Machine Learning with Knowledge Engineering (AAAI-MAKE 2019)</meeting>
+		<imprint>
+			<date type="published" when="2019">2019. 2019</date>
+			<biblScope unit="page" from="1" to="2"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Contradicted and initially stronger effects in highly cited clinical research</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P A</forename><surname>Ioannidis</surname></persName>
+		</author>
+		<idno type="DOI">10.1001/jama.294.2.218</idno>
+		<ptr target="https://doi.org/10.1001/jama.294.2.218"/>
+	</analytic>
+	<monogr>
+		<title level="j">JAMA</title>
+		<imprint>
+			<biblScope unit="volume">294</biblScope>
+			<biblScope unit="page" from="218" to="228"/>
+			<date type="published" when="2005-07">2005. Jul. 2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Fluorescent triazolyl spirooxazolidines: Synthesis and NMR stereochemical studies</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Kasza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Trybula</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Baradziej</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kepczynski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">W</forename><surname>Szafrański</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Cegła</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.molstruc.2019.01.052</idno>
+		<ptr target="https://doi.org/10.1016/j.molstruc.2019.01.052"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Molecular Structure</title>
+		<imprint>
+			<biblScope unit="volume">1183</biblScope>
+			<biblScope unit="page" from="157" to="167"/>
+			<date type="published" when="2019-05">2019. May 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Curation accuracy of model organism databases</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">M</forename><surname>Keseler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Skrzypek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Weerasinghe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Fulcher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G.-W</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">C</forename><surname>Lemmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Mladinich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">D</forename><surname>Chow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Sherlock</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/database/bau058</idno>
+		<ptr target="https://doi.org/10.1093/database/bau058"/>
+	</analytic>
+	<monogr>
+		<title level="j">Database</title>
+		<imprint>
+			<biblScope unit="page">58</biblScope>
+			<date type="published" when="2014">2014. 2014. 2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Rhetorical structure of scientific articles: the case for argumentational analysis in information retrieval</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Kircz</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/eb026884</idno>
+		<ptr target="https://doi.org/10.1108/eb026884"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Documentation</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="354" to="372"/>
+			<date type="published" when="1991-04">1991. Apr. 1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Some results on the function and quality of citations</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Moravcsik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Murugesan</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/030631277500500106</idno>
+		<ptr target="https://doi.org/10.1177/030631277500500106"/>
+	</analytic>
+	<monogr>
+		<title level="j">Social Studies of Science</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="86" to="92"/>
+			<date type="published" when="1975-02">1975. Feb. 1975</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Robust research needs many lines of evidence</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Munafò</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Davey</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename></persName>
+		</author>
+		<idno type="DOI">10.1038/d41586-018-01023-3</idno>
+		<ptr target="https://doi.org/10.1038/d41586-018-01023-3"/>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">553</biblScope>
+			<biblScope unit="page" from="399" to="401"/>
+			<date type="published" when="2018-01">2018. Jan. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Cytotoxic sesquiterpenoid quinones and quinols, and an 11-membered heterocycle, kauamide, from the Hawaiian marine sponge Dactylospongia elegans</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Neupane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Parrish</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bhandari Neupane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wesley</forename><forename type="middle">Y</forename><surname>Yoshida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L R</forename><surname>Yip</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Turkson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">K</forename><surname>Harper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Head</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">G</forename><surname>Williams</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/md17070423</idno>
+		<ptr target="https://doi.org/10.3390/md17070423"/>
+	</analytic>
+	<monogr>
+		<title level="j">Marine Drugs</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page">423</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<monogr>
+		<title level="m" type="main">Argument analysis of Alzheimer's Disease</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Sandhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schneider</surname></persName>
+		</author>
+		<ptr target="https://www.ideals.illinois.edu/handle/2142/106017"/>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+		<respStmt>
+			<orgName>University of Illinois Undergraduate Research Symposium</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Modeling Alzheimer's Disease research claims, evidence, and arguments from a biology research paper</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Sandhu</surname></persName>
+		</author>
+		<ptr target="https://www.ideals.illinois.edu/handle/2142/100340"/>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Argumentation, International Society for the Society of Argumentation</title>
+		<meeting><address><addrLine>Amsterdam, Netherlands</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2018-07">2018. Jul. 2018</date>
+		</imprint>
+	</monogr>
+	<note>Presentation at the 9th</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Continued postretraction citation of a fraudulent clinical trial report, eleven years after it was retracted for falsifying data</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Yi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Hill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Whitehorn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bibliometrics and Information Retrieval</title>
+		<imprint>
+			<date type="published" when="2020">2020. 2020</date>
+		</imprint>
+	</monogr>
+	<note>Under submission to Scientometrics Special Issue on</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Iron, zinc and copper in the Alzheimer's disease brain: A quantitative meta-analysis. Some insight on the influence of citation bias on scientific opinion</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schrag</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Mueller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Oyoyo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M</forename><surname>Kirsch</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.pneurobio.2011.05.001</idno>
+		<ptr target="https://doi.org/10.1016/j.pneurobio.2011.05.001"/>
+	</analytic>
+	<monogr>
+		<title level="j">Progress in Neurobiology</title>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="296" to="306"/>
+			<date type="published" when="2011-08">2011. Aug. 2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Characterizing highly cited method and non-method papers using citation contexts: The role of uncertainty</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Small</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.joi.2018.03.007</idno>
+		<ptr target="https://doi.org/10.1016/j.joi.2018.03.007"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Informetrics</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="461" to="480"/>
+			<date type="published" when="2018-05">2018. May 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Citation context analysis</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Small</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Progress in Communication Sciences</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="287" to="310"/>
+			<date type="published" when="1982">1982. 1982</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Chemoselective carbonyl allylations with alkoxyallylsiletanes</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Spaltenstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Cummins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K.-M</forename><surname>Yokuda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kowalczyk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">B</forename><surname>Clark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">W</forename><surname>O'neil</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.joc.8b03028</idno>
+		<ptr target="https://doi.org/10.1021/acs.joc.8b03028"/>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Organic Chemistry</title>
+		<imprint>
+			<biblScope unit="volume">84</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="4421" to="4428"/>
+			<date type="published" when="2019-04">2019. Apr. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Modeling Arguments</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Stede</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Stede</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Argumentation mining</title>
+		<imprint>
+			<publisher>Morgan &amp; Claypool</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="27" to="43"/>
+		</imprint>
+	</monogr>
+	<note>Chapter 3</note>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Assessment of citations of the retracted article by Wakefield et al with fraudulent claims of an association between vaccination and autism</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Suelzer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Deal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Hanus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ruggeri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Sieracki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Witkowski</surname></persName>
+		</author>
+		<idno type="DOI">10.1001/jamanetworkopen.2019.15552</idno>
+		<ptr target="https://doi.org/10.1001/jamanetworkopen.2019.15552"/>
+	</analytic>
+	<monogr>
+		<title level="j">JAMA Network Open</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page">1915552</biblScope>
+			<date type="published" when="2019-11">2019. Nov. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<monogr>
+		<title level="m" type="main">Argumentative Zoning: Information Extraction from Scientific Text</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Teufel</surname></persName>
+		</author>
+		<ptr target="https://www.cl.cam.ac.uk/~sht25/thesis/t.pdf"/>
+		<imprint>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+		<respStmt>
+			<orgName>University of Edinburgh</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Robust argumentative zoning for sensemaking in scholarly documents</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Teufel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-Y</forename><surname>Kan</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-642-23160-5_10</idno>
+		<ptr target="https://doi.org/10.1007/978-3-642-23160-5_10"/>
+	</analytic>
+	<monogr>
+		<title level="j">Advanced Language Technologies for Digital Libraries</title>
+		<imprint>
+			<biblScope unit="page" from="154" to="170"/>
+			<date type="published" when="2011">2011. 2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Identifying meaningful citations</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Valenzuela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Ha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Etzioni</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Scholarly Big Data: AI Perspectives, Challenges, and Ideas: Papers from the 2015 AAAI Workshop</title>
+		<imprint>
+			<date type="published" when="2015-04">2015. Apr. 2015</date>
+			<biblScope unit="page" from="21" to="26"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<monogr>
+		<title level="m" type="main">COPE Guidelines for retracting articles</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Wager</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Barbour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kleinert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yentis</surname></persName>
+		</author>
+		<ptr target="https://publicationethics.org/node/19896"/>
+		<imprint>
+			<date type="published" when="2019">2019. 2019</date>
+		</imprint>
+	</monogr>
+	<note>Committee on Publication Ethics</note>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<monogr>
+		<title level="m" type="main">Argumentation Schemes</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Walton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Reed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Macagno</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+			<publisher>Cambridge University Press</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<monogr>
+		<author>
+			<persName><forename type="first">D</forename><surname>Weitz</surname></persName>
+		</author>
+		<ptr target="http://www.mrsec.harvard.edu/2017NSFReliability/include/NSF_Workshop_Robustness.Reliability.Reproducibility.Report.pdf"/>
+		<title level="m">Report of the NSF workshop on Robustness, Reliability, and Reproducibility in Science Research</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Perioperative analgesia: What do we still know?</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">F</forename><surname>White</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kehlet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Liu</surname></persName>
+		</author>
+		<idno type="DOI">10.1213/ane.0b013e3181a16835</idno>
+		<ptr target="https://doi.org/10.1213/ane.0b013e3181a16835"/>
+	</analytic>
+	<monogr>
+		<title level="j">Anesthesia &amp; Analgesia</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="1364" to="1367"/>
+			<date type="published" when="2009-05">2009. May 2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Four 14(13 → 12)abeolanostane triterpenoids with 6/6/5/6-fused ring system from the roots of Kadsura coccinea</title>
+		<author>
+			<persName><forename type="first">H.-C</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-D</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P.-T</forename><surname>Puno</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s13659-019-0203-4</idno>
+		<ptr target="https://doi.org/10.1007/s13659-019-0203-4"/>
+	</analytic>
+	<monogr>
+		<title level="j">Natural Products and Bioprospecting</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="165" to="173"/>
+			<date type="published" when="2019-06">2019. Jun. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Accessing multiple classes of 2H-indazoles: Mechanistic implications for the Cadogan and Davis-Beirut reactions</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">Y</forename><surname>Tsui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Kraemer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-H</forename><surname>Son</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Haddadin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Tantillo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Kurth</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jacs.8b13481</idno>
+		<ptr target="https://doi.org/10.1021/jacs.8b13481"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the American Chemical Society</title>
+		<imprint>
+			<biblScope unit="volume">141</biblScope>
+			<biblScope unit="page" from="6247" to="6253"/>
+			<date type="published" when="2019-04">2019. Apr. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Measuring academic influence: Not all citations are equal</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Turney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lemire</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vellino</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/asi.23179</idno>
+		<ptr target="https://doi.org/10.1002/asi.23179"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Association for Information Science and Technology</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="408" to="427"/>
+			<date type="published" when="2015">2015. 2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Computationally assisted discovery and assignment of a highly strained and PANC-1 selective alkaloid from Alaska's deep ocean</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sims</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Pandey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">L</forename><surname>Welsh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">P</forename><surname>Stone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Avery</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Doerksen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ferreira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Anklin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">A</forename><surname>Valeriote</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kelly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Hamann</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jacs.8b11403</idno>
+		<ptr target="https://doi.org/10.1021/jacs.8b11403"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the American Chemical Society</title>
+		<imprint>
+			<biblScope unit="volume">141</biblScope>
+			<biblScope unit="page" from="4338" to="4344"/>
+			<date type="published" when="2019-03">2019. Mar. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

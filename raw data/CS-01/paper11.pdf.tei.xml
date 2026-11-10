@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Aspect-Category based Sentiment Analysis with Hierarchical Graph Convolutional Network</title>
+				<funder ref="#_bJvgshv #_2BwXXGv">
+					<orgName type="full">Natural Science Foundation of Jiangsu Province for Young Scholars</orgName>
+				</funder>
+				<funder ref="#_mRXSnzH #_uVtmshG #_9apCTAF">
+					<orgName type="full">Natural Science Foundation of China</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hongjie</forename><surname>Cai</surname></persName>
+							<email>hjcai@njust.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Nanjing University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yaofeng</forename><surname>Tu</surname></persName>
+							<email>tu.yaofeng@zte.com.cn</email>
+							<affiliation key="aff1">
+								<orgName type="institution">ZTE Corporation</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiangsheng</forename><surname>Zhou</surname></persName>
+							<email>zhou.xiangsheng@zte.com.cn</email>
+							<affiliation key="aff1">
+								<orgName type="institution">ZTE Corporation</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jianfei</forename><surname>Yu</surname></persName>
+							<email>jfyu@njust.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Nanjing University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rui</forename><surname>Xia</surname></persName>
+							<email>rxia@njust.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Nanjing University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Aspect-Category based Sentiment Analysis with Hierarchical Graph Convolutional Network</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">055F7249512B717519109D984E7754E6</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-02T20:36+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Most of the aspect based sentiment analysis research aims at identifying the sentiment polarities toward some explicit aspect terms while ignores implicit aspects in text. To capture both explicit and implicit aspects, we focus on aspect-category based sentiment analysis, which involves joint aspect category detection and category-oriented sentiment classification. However, currently only a few simple studies have focused on this problem. The shortcomings in the way they defined the task make their approaches difficult to effectively learn the inner-relations between categories and the inter-relations between categories and sentiments. In this work, we re-formalize the task as a category-sentiment hierarchy prediction problem, which contains a hierarchy output structure to first identify multiple aspect categories in a review sentence, and jointly predict the sentiment for each of the identified categories. Specifically, we propose a Hierarchical Graph Convolutional Network (Hier-GCN), where a lower-level GCN is to model the inner-relations among multiple categories, and the higher-level GCN is to capture the inter-relations between aspect categories and sentiments. Extensive evaluations demonstrate that our hierarchy output structure is superior over existing ones, and the Hier-GCN model consistently achieves the best results on four benchmarks.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">Introduction</head><p>As an important fine-grained subtask in the field of sentiment analysis, Aspect-Based Sentiment Classification (ABSC) aims to detect the sentiment polarities of aspect terms mentioned in a review sentence. For example, in Table <ref type="table" target="#tab_0">1</ref>, given the aspect term food, it is expected to identify its corresponding sentiment polarity as positive. The main limitation of ABSC lies in that aspect terms need to be annotated before aspect sentiment classification, which is not applicable to real applications. To address this problem, many studies have been proposed to explore Aspect Term-based Sentiment Analysis (ATSA), which performs aspect term extraction and aspect sentiment classification jointly <ref type="bibr" target="#b12">(Mitchell et al., 2013;</ref><ref type="bibr" target="#b24">Zhang et al., 2015;</ref><ref type="bibr" target="#b9">Li et al., 2019;</ref><ref type="bibr" target="#b10">Luo et al., 2019;</ref><ref type="bibr" target="#b7">Hu et al., 2019)</ref>.</p><p>However, ATSA still suffers from a major obstacle that it only considers explicit aspects but completely ignore implicit aspects in text. Take the review in Table <ref type="table" target="#tab_0">1</ref> as an example. Although the second clause does not mention any aspect term, it clearly expresses user's negative sentiment towards the service. More importantly, we observe that existing benchmark datasets contain a large amount of such reviews. For instance, Table <ref type="table" target="#tab_1">2</ref> shows the proportion of reviews with implicit aspects in the Restaurant dataset from SemEval 2015 and 2016, and it is clear that nearly 25% of the examples contain implicit aspects.</p><p>Since these examples also convey valuable information, we should no longer ignore them, as the previous ATSA methods do.</p><p>Motivated by this, we focus on Aspect-Category based Sentiment Analysis (ACSA) in this paper, aiming to perform joint aspect category detection and category-oriented sentiment classification. Compared with ATSA, ACSA has the following two advantages: On the one hand, for each aspect mentioned in a review: The food here is rather good, but only if you like to wait for it. aspect term:food category:Food sentiment:positive aspect term:NULL category:Service sentiment:negative  review sentence, even if it does not have the corresponding aspect term, there must be a corresponding aspect category so that we can identify user's sentiment over it. On the other hand, from the perspective of application in real scenarios, although ACSA does not extract the aspect terms explicitly, it already meets the demand of opinion summary from multiple aspect level granularity. However, research in this area is relatively rare, and only a few preliminary studies have been carried out. <ref type="bibr" target="#b17">Schmitt et al. (2018)</ref> proposed a joint model by extending sentiment labels with one more dimension to indicate the occurrence of each aspect category, which is shown to outperform traditional pipeline methods. Another feasible solution is to perform Cartesian product for aspect categories and sentiment labels, which essentially performs multi-label sentiment classification for each aspect category. Nevertheless, most of these methods fail to explicitly model the hierarchical relationship between aspect category detection and category-oriented sentiment classification. In particular, when there are many aspect categories, it is difficult for these methods to learn the inner-relations among multiple categories and the inter-relations between categories and sentiments.</p><p>In this paper, we re-formalize the task as a category-sentiment hierarchy prediction problem, which contains a two-layer hierarchy output structure. The lower layer is to detect aspect categories, which can be modelled as a multi-label classification problem (i.e., one review may contain more than one category). The higher layer is to perform category-oriented sentiment classification, which can be modelled as a multi-class classification problem for each detected category.</p><p>Under the hierarchy output structure, our model contains three modules: the bottom module leverages BERT to obtain hidden representations of the two sub-tasks respectively. In the middle module, we propose a Hierarchical Graph Convolutional Network (Hier-GCN), where the lower-level GCN is to model the inner-relations among multiple categories, and the higher-level GCN is to capture the interrelations between categories and category-oriented sentiments. Based on the interactive representations generated from Hier-GCN, the top module performs category-sentiment hierarchy prediction to generate the final output.</p><p>We conduct experiments on four benchmark product review datasets from SemEval 2015 and 2016. The results prove that the hierarchy output structure achieves better performance than other existing structures. On this basis, the proposed Hier-GCN architecture can bring additional performance gains, and consistently achieves the best results across the four datasets. Further analysis also proves the effectiveness of Hier-GCN in cases of both explicit aspect and implicit aspect.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2">Problem Formalization</head><p>Given a review sentence with n words r=[w 1 , . . . , w n ], Aspect Category-based Sentiment Analysis (ACSA) aims to detect all the mentioned aspect categories, and identify the sentiment for each detected category. Formally, let C = {c 1 , . . . , c m } be a set of m predefined aspect categories, and s = {positive, negative, neutral} be the label set of sentiment polarities. Accordingly, for each input r, the goal of ACSA is to generate a set of category-sentiment pairs, denoted as {. . . , (ŷ c i , ŷs i ), . . .}, where ŷc i is the i-th aspect category mentioned in r, ŷs i is its corresponding sentiment. As shown in Fig. <ref type="figure" target="#fig_0">1</ref>(a), one possible solution to this task is to consider all the combinations of categorysentiment pairs, denoted by Cartesian Product. Specifically, for each aspect category c i , we can model its sentiment prediction as a multi-label classification task to generate the output ŷs i ∈ {0, 1, 2}, which indicates negative, neutral, and positive sentiment polarity, respectively. Note that if ŷc i = 0, it indicates the absence of the category c i and its corresponding sentiment polarity. Since Cartesian Product suffers from the risk of generating multiple sentiments for each category, an alternative solution is to add one label to the sentiment label space to predict the presence or absence of each category <ref type="bibr" target="#b17">(Schmitt et al., 2018)</ref>. In this case, the occurrence and the sentiment prediction of each category is unified as a simple multi-class classification problem.</p><formula xml:id="formula_0">1 0 0 0 0 1 ☺   Food Service 0 0 0 Price (a) Cartesian product 1 0 0 0 ☺   Food N/A 0 0 1 0 ☺   N/A Service 0 0 0 1 ☺   N/A Price (b) Add one dimension 1 0 0 0 0 1 1 1 ☺   ☺   0 Food Service Price (c) Hierarchy</formula><p>However, both approaches simply unify aspect category detection and category-oriented sentiment classification as one task, while ignoring the internal relationship between the two sub-tasks. Intuitively, if an aspect category is not detected, it is unnecessary to perform sentiment classification for it, and if multiple categories are detected, the relations among their sentiment outputs should be fully utilized. Motivated by this, we re-formalize the ACSA task as a category-sentiment hierarchy prediction problem:</p><formula xml:id="formula_1">p(y c , y s |r) = p(y c |r)p(y s |y c , r),<label>(1)</label></formula><p>where the first component p(y c |r) is modeled as a multi-label classification problem for aspect category detection, and the second component p(y s |y c , r) is modeled as a multi-class classification problem to perform sentiment classification for each detected category.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3">The Proposed Approach</head><p>The overall architecture of the proposed framework is illustrated in Fig. <ref type="figure" target="#fig_3">2</ref>. We use BERT as the basic encoder of our model to encode the contextual information of a sentence and generate context-aware category representations and sentiment representations, respectively (Section 3.1); Next, we use two hierarchical graph convolution networks to capture the inner-relation between multiple categories and the inter-relation between categories and sentiment polarities, respectively (Section 3.2); Finally, a hierarchical output and integration module is designed to construct the final prediction from category prediction and sentiment prediction (Section 3.3).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1">Feature Extraction with BERT</head><p>We adopt Bidirectional Encoder Representations from Transformers (BERT) as our sentence encoder, which is a pre-trained on a huge amount of text with masked language model and has been shown to achieve state-of-the-art results on a broad set of NLP tasks. Let H ∈ R d×(n+2) denote the final hidden states generated from BERT, where we insert two special tokens (i.e., [CLS] and [SEP]) at the beginning and the end of each input r. For space limitation, we omit a detailed description of BERT and refer readers to <ref type="bibr" target="#b3">(Devlin et al., 2018)</ref>.</p><p>For category representations, we further use m separate self-attention sub-layers on top of H to get the representations of m categories, denoted by C ∈ R d×m . Besides, following the practice in <ref type="bibr" target="#b3">(Devlin et al., 2018)</ref>, we employ the hidden state of the first token [CLS] as the shared sentiment representation for each category, denoted by S ∈ R d .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2">Hierarchical Graph Convolutional Network (Hier-GCN)</head><p>Motivation. As introduced before, we model the task of ACSA as a hierarchy prediction problem with two sub-tasks: Aspect Category Detection and Category-oriented Sentiment Classification. For Aspect Category Detection, since some aspect categories tend to frequently co-occur with each other, it is necessary to model the inner-relations between categories (e.g., in Fig. <ref type="figure" target="#fig_0">1</ref>, if food is mentioned in a user The food here is rather good, but only if you like to wait for it.  review, the service of the restaurant is likely to be mentioned as well). Similarly, for Category-oriented Sentiment Classification, since the sentiment prediction is highly dependent on the prediction of aspect category, it is crucial to model the inter-relations between categories and sentiment (e.g., in Fig. <ref type="figure" target="#fig_0">1</ref>, we only need to predict sentiment for Food and Service categories but not the others). As the graph convolutional network (GCN) can better capture the two kinds of relations by incorporating category-category and category-sentiment co-occurrence as prior knowledge, we employ it to model the inner-realtions and the inter-relations simultaneously. Specifically, we propose a hierarchical GCN model with two sub-layers, where the lower GCN sub-layer is to learn the inner interactions between categories, and the higher GCN sub-layer is to learn the inter interactions between categories and sentiments. The two sub-layers are coupled together as a Hier-GCN structure.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.1">Category GCN Sub-Layer</head><p>To adapt GCN to model the inner-relations between multiple categories, we construct a directed graph by treating each category as a node, and obtain the adjacent matrix M c ∈ R m×m by calculating the co-occurrence between every category pair over the entire training corpus. Formally, we use M c i,j to denote the transition probability of having the j-th category given the i-th category, and M c ∈ R m×m can be computed as follows:</p><formula xml:id="formula_2">M c i,j = count(c i ,c j ) count(c i )+1 i = j , 1 i = j . (<label>2</label></formula><formula xml:id="formula_3">)</formula><p>where count(c i ) refers to the number of samples with the i-th category, and count(c i , c j ) denotes the number of samples with both the i-th and the j-th category. Note that in most cases, M c i,j is not equal to M c j,i , which indicates that for a co-occurred category pair (c i , c j ), the category with high frequency will have a high effect on the category with low frequency but not vice versa. This implies that modeling the inner-relations between categories may help detect more categories with low frequency, which is more significant for large-scale multi-label classification with many low frequency categories.</p><p>With the adjacent matrix M c , we perform the standard graph convolution on the node representations as follows:</p><formula xml:id="formula_4">X l+1 = f (W l X l M c + b l ),<label>(3)</label></formula><p>where C is the initial state of X, i.e., X 0 , l refers to the l-th category GCN sub-layer, W l ∈ R d×d and b l ∈ R d are the linear transformation weight and bias, and f (•) is a nonlinear activation function, i.e., GELU.</p><p>After obtaining the output of the l + 1-th sub-layer X l+1 , we not only feed it to the next category GCN sub-layer as the input category representation, but also combine it with sentiment representations as the initial state of the l + 1-th category-sentiment GCN sub-layer. Note that in the final Hier-GCN layer, it is used to perform multi-label classification for aspect category detection.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.2">Category-Sentiment GCN Sub-Layer</head><p>Similarly, to employ GCN to model the inter-relations between m categories and m * 3 category-oriented sentiments, we construct another directed graph by treating the m categories and m * 3 sentiments as graph nodes. Since our final goal is to predict sentiment for each detected category, we propose to obtain an adjacent matrix for the positive, negative, and neutral sentiment, respectively. We use M c-s i,j to denote the transition probability that the sentiment polarity of the j-th category given the i-th category:</p><formula xml:id="formula_5">M c-s i,j = count(c i ,(s|c j )) count(c i )+1 i = j , 1 i = j . (<label>4</label></formula><formula xml:id="formula_6">)</formula><p>where (s|c j ) denotes the sentiment polarity towards the j-th category, and s ∈ {positive, negative, neutral}.</p><p>Next, we first obtain the fused sentiment-sensitive category representation for each input node to derive F l ∈ R m×d as follows:</p><formula xml:id="formula_7">F l = Tanh(W c,s l X l+1 ⊕ S l + b c,s l ),<label>(5)</label></formula><p>where ⊕ denotes the concatenation operation, and W c,s l ∈ R d×2d and b c,s l ∈ R d refer to the weight and bias.</p><p>With the node representation and the three adjacent matrices, the standard graph convolution is then performed on the input nodes to obtain F l ∈ R m×d :</p><formula xml:id="formula_8">F s l = f (W s l F l M c-s ),<label>(6)</label></formula><p>where W s l ∈ R d×d and bias are learnable parameters. Finally, we can obtain the category-oriented sentiment representation S l+1 as follows:</p><formula xml:id="formula_9">S l+1 = pooling(dense( F pos l ); dense( F neg l ); dense( F neu l )),<label>(7)</label></formula><p>where dense(•) is a parameter sharing feed-forward network with tanh as the activation function.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3">Hierarchical Prediction Integration</head><p>Based on the final category representation X i and sentiment representation S i generated from the L-th layer Hier-GCN, we can obtain the probability of having the i-th category p c i ∈ R 1 and its corresponding sentiment probability distribution p s i ∈ R 3 as follows:</p><formula xml:id="formula_10">p c i = p(y c i |r) = sigmoid(W c i X i + b c i ),<label>(8)</label></formula><formula xml:id="formula_11">p s i = p(y s i |y c i , r) = softmax(W s S i + b s ),<label>(9)</label></formula><p>where the parameters W s and b s are used for sentiment classification, which is shared for all categories. Then, Hierarchical Prediction Module is used to get the final prediction of the i-th category-sentiment pair (ŷ c i , ŷs i ):</p><formula xml:id="formula_12">(ŷ c i , ŷs i ) = (I(p c i &gt; 0.5), arg max p s i ),<label>(10)</label></formula><p>where I(•) is an indicator function.</p><p>The loss of ACSA has two parts, in correspondence with Equation (1). The first component (category detection) is modeled as a multi-label classification problem, and the cross-entropy loss, i.e., negative log-likelihood of p(y c |r), is defined as: where y c i ∈ {0, 1} is the ground truth of the i-th category. The second component (category-oriented sentiment classification) is modeled as a multi-class classification problem for each category, and the cross-entropy loss, i.e., negative log-likelihood of p(y s |y c , r), is defined as:</p><formula xml:id="formula_13">loss c = - m i=1 y c i logp c i + (1 -y c i )log(1 -p c i ),<label>(11)</label></formula><formula xml:id="formula_14">loss s = - m i=1 3 j=1 I(y s i,j )logp s i,j ,<label>(12)</label></formula><p>where y s i,j is the ground truth of j-th sentiment for the i-th category. The cross-entropy loss is equivalent to negative log-likelihood. Therefore, the final loss function of ACSA, i.e., negative log-likelihood of p(y c , y s |r), equals the sum of two component cross-entropy losses:</p><formula xml:id="formula_15">loss = loss c + loss s .<label>(13)</label></formula><p>4 Experiments</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1">Datasets and Experimental Settings</head><p>We evaluate our model on the benchmark SemEval 2015 and 2016 datasets <ref type="bibr" target="#b14">(Pontiki et al., 2015;</ref><ref type="bibr" target="#b15">Pontiki et al., 2016)</ref>, which contain customer reviews from laptop and restaurant domains.To ensure that aspect category can accurately describe an opinion expression object, a category is predefined as specific entity type E and its attribute label A in SemEval 2015 and 2016 datasets. The E#A pair defines an aspect category. The details of the data sets are summarized in Table <ref type="table" target="#tab_2">3</ref>. We compute the Precision, Recall of the predicted (category, sentiment) pairs respectively, and use Micro-F1 score as the final evaluation metric. We randomly split the training set into the ratio of 9:1 as training, validation set. The reported results are averaged scores of 10 runs to obtain statistically stable results. We use BERT-base as basic encoder, and refer readers to <ref type="bibr" target="#b3">(Devlin et al., 2018)</ref> for the detailed BERT-base model setting. We adopt the same AdamW optimizer in BERT. The learning rate and batch size are set to 5e-5 and 8, respectively. We set the maximum sentence length to 128 for SemEval 2015 and 100 for SemEval 2016, and run 20 epochs for every fold, a dropout rate of 0.1 is used, and the hidden size of Transformer is 768.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2">Compared Systems</head><p>In Section 2, we have summarized several problem formalization methods including Cartesian, Add one dimension. We use them as baseline systems for comparison. We furthermore implement a pipeline method of category detection and sentiment classification. All compared systems are as follows:</p><p>• Cartesian-BERT: The Cartesian method with BERT as the sentence encoder.</p><p>• Pipeline-BERT: Pipeline of individual aspect category detection and category sentiment classification, both with BERT as the review encoder. This method can better model each sub-task, but ignores the associations between two sub-tasks. • AddOneDim-LSTM: The Add one dimension method with LSTM as the sentence encoder. This represents the state-of-the-art work by <ref type="bibr" target="#b17">(Schmitt et al., 2018)</ref>.</p><p>I have never ever had such an unpleasant experience. Different from ATSA, ACSA targets at identifying the aspect category as well as its corresponding sentiment. Most existing studies on ACSA focused on its sub-tasks, namely, the aspect category detection (ACD) and category-oriented sentiment classification (CSC). For the task of ACD, <ref type="bibr" target="#b25">(Zhou et al., 2015;</ref><ref type="bibr" target="#b18">Schouten et al., 2017)</ref> proposed algorithms to predict categories. More recently, <ref type="bibr" target="#b13">Movahedi et al. (2019)</ref> proposed an attention-based neural network method to identify different aspect categories based on different topics. For the task of CSC, <ref type="bibr" target="#b16">(Ruder et al., 2016;</ref><ref type="bibr" target="#b22">Wang et al., 2016;</ref><ref type="bibr" target="#b23">Xue and Li, 2018;</ref><ref type="bibr" target="#b21">Tay et al., 2018;</ref><ref type="bibr" target="#b20">Sun et al., 2019)</ref> proposed neural networks to make the most of context and aspect category information. <ref type="bibr" target="#b11">(Ma et al., 2018;</ref><ref type="bibr" target="#b6">Hu et al., 2018)</ref> proposed attention-based networks to perform category and sentiment co-classification. Apart from the researches on the two subtasks, there are a few studies focusing on the end-to-end ACSA task. <ref type="bibr" target="#b17">Schmitt et al. (2018)</ref> proposed a joint model and transform the task into a multi-class classification problem. However, most of these studies fail to explore the relations between ACD and CSC. Therefore, we propose a hierarchical graph network to achieve this goal.</p><p>Hierarchical Classification &amp; GCN: The hierarchical classification problem has been studied in some previous work. Silla and Freitas (2011) defined the task of hierarchical classification and presented a new perspective about hierarchical classification approaches, <ref type="bibr" target="#b1">Aly et al. (2019)</ref> investigated simple shallow capsule networks for hierarchical multi-label text classification. GCN can be used for non-Euclidean Structure data, <ref type="bibr" target="#b2">Bruna et al. (2013)</ref> proposed spectral graph convolutional neural networks, and Kipf and Welling (2016) designed a convolutional architecture via a localized first-order approximation of spectral graph convolutions. Inspired by this work, we propose a BERT-based Hier-GCN model, which decomposes the inner-relations between categories and the inter-relations between sentiment polarities into two hierarchically related sub-graphs and get the final predictions in hierarchy manner.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6">Conclusion</head><p>In this paper, we first examined the limitations of existing approaches for the task of Aspect Categorybased Sentiment Analysis, and proposed a hierarchy output structure to first detect the aspect categories, and then perform sentiment classification for each detected category. Given the output structure, we further proposed a Hierarchical Graph Convolutional Network to capture the inner-relations between multiple categories as well as the inter-relations between categories and sentiments. Experimental results on four benchmark datasets show that our hierarchy output structure performs significantly better than any existing output structure, and Hier-GCN can outperform a number of highly competive approaches including a strong hierarchical Transformer model proposed by us.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 :</head><label>1</label><figDesc>Figure 1: Comparison between hierarchical prediction structure and other available structures. (a) refers to "Cartesian product", (b) refers to "Add one dimension", and (c) refers to "Hierarchy" methods, respectively.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 2 :</head><label>2</label><figDesc>Figure 2: An overview of the proposed Hier-GCN framework. SA denote self-attention modules.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 :</head><label>1</label><figDesc>Example of Aspect-Based Sentiment Analysis.</figDesc><table><row><cell/><cell>Number</cell><cell>Total</cell><cell>Percentage</cell></row><row><cell>Rest-15</cell><cell>623</cell><cell>2499</cell><cell>24.93%</cell></row><row><cell>Rest-16</cell><cell>836</cell><cell>3368</cell><cell>24.82%</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2 :</head><label>2</label><figDesc>Percentage of implicit aspects in Restaurant datasets of SemEval 2015 and 2016.</figDesc><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 3 :</head><label>3</label><figDesc>Data statistic. # Train and # Test mean the sentence number of train and test sets, respectively. # Categories denotes the number of predefined categories, and # Positive/Negative/Neutral Sentences refers to the number of sentences of corresponding sentiment.</figDesc><table><row><cell/><cell>Restaurant-15</cell><cell>Laptop-15</cell><cell>Restaurant-16</cell><cell>Laptop-16</cell></row><row><cell># Train</cell><cell>1102</cell><cell>1397</cell><cell>1680</cell><cell>2037</cell></row><row><cell># Test</cell><cell>572</cell><cell>644</cell><cell>580</cell><cell>572</cell></row><row><cell># Categories</cell><cell>30</cell><cell>198</cell><cell>30</cell><cell>198</cell></row><row><cell># Positive Sentences</cell><cell>1458</cell><cell>1641</cell><cell>1966</cell><cell>2113</cell></row><row><cell># Negative Sentences</cell><cell>663</cell><cell>1091</cell><cell>848</cell><cell>1353</cell></row><row><cell># Neutral Sentences</cell><cell>91</cell><cell>185</cell><cell>137</cell><cell>234</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 8 :</head><label>8</label><figDesc>Case study on AddOneDim, Hier and Hier-GCN. Wrong predictions are marked with .the above approach by designing several neural models, and achieved better performance. Based on this,<ref type="bibr" target="#b9">Li et al. (2019)</ref> proposed a unified neural architecture with multi-task learning for the task.<ref type="bibr" target="#b10">Luo et al. (2019)</ref> proposed a joint model to solve the problem. Moreover,<ref type="bibr" target="#b7">Hu et al. (2019)</ref> designed a span extraction-based neural framework and addressed the problem in an extract-then-classify manner.</figDesc><table><row><cell/><cell>Restaurant#General,NEG</cell><cell>Empty</cell><cell cols="2">Restaurant#General,POS Restaurant#General,NEG</cell></row><row><cell>Highly impressed from the decor to the food to the hospitality to the great night I had!</cell><cell cols="2">Ambience#General,POS Ambience#General,POS Food#Quality,POS Food#Quality,POS Service#General,POS Empty Restaurant#General,POS Empty</cell><cell>Ambience#General,POS Food#Quality,POS Empty Empty</cell><cell>Ambience#General,POS Food#Quality,POS Service#General,POS Empty</cell></row></table></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>This work was supported by the <rs type="funder">Natural Science Foundation of China</rs> (No. <rs type="grantNumber">61672288</rs>, <rs type="grantNumber">62076133</rs>, and <rs type="grantNumber">62006117</rs>), and the <rs type="funder">Natural Science Foundation of Jiangsu Province for Young Scholars</rs> (<rs type="grantNumber">SBK2020040749</rs>), and <rs type="grantName">Distinguished Young Scholars</rs> (<rs type="grantNumber">SBK2020010154</rs>).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_mRXSnzH">
+					<idno type="grant-number">61672288</idno>
+				</org>
+				<org type="funding" xml:id="_uVtmshG">
+					<idno type="grant-number">62076133</idno>
+				</org>
+				<org type="funding" xml:id="_9apCTAF">
+					<idno type="grant-number">62006117</idno>
+				</org>
+				<org type="funding" xml:id="_bJvgshv">
+					<idno type="grant-number">SBK2020040749</idno>
+					<orgName type="grant-name">Distinguished Young Scholars</orgName>
+				</org>
+				<org type="funding" xml:id="_2BwXXGv">
+					<idno type="grant-number">SBK2020010154</idno>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0">  <p>Hier-  Table <ref type="table">4</ref>: Main results of the ACSA task on four benchmark datasets.</p><p>• AddOneDim-BERT: The Add one dimension method with BERT as the sentence encoder.</p><p>• Hier-BERT: The hierarchy method with BERT as the sentence encoder.</p><p>• Hier-Transformer-BERT: As a strong baseline, we use Transformer to model the inner-relations between category and inter-relations between category and sentiment based on Hier-BERT. • Hier-GCN-BERT: Our proposed hierarchy prediction model with Hier-GCN as the relation learning module based on Hier-BERT.</p><p>It should be noted that except AddOneDim-LSTM, all the other systems are proposed in this work.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3">Main Results</head><p>Table <ref type="table">4</ref> shows the results of different systems on two datasets. It can be observed that AddOneDim-LSTM seems difficult to achieve good performance when the number of categories is large. For example, in the Laptop dataset, the training algorithm fails to converge. In comparison, AddOneDim-BERT can perform much better. Cartesian-BERT is less effective probably due to the class-parse problem especially when the number of categories is large (e.g., Recall on Laptop is very low). The precision of the pipeline method is low although its recall is high, because it ignores the relations among sub-tasks and leads to too many sentiment predictions without taking category-sentiment restriction into consideration. This also indicates that our proposed category-sentiment hierarchy structure is more suitable for joint aspect category detection and category-oriented sentiment classification. We can see that among all systems, our hierarchical methods (Hier, Hier-Transfomer-BERT, Hier-GCN-BERT) achieves significantly better F1 performance than the other baseline systems, among which, Hier-GCN-BERT gets the best performance on three datasets. This indicates that the modeling of hierarchical relationship can better describe the original problem on the basis of hierarchical label prediction.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.4">Discussions on Hier-GCN</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.4.1">GCN vs Transformer</head><p>In Table <ref type="table">4</ref>, we further present the result of Hier-Transformer-BERT where we replace GCN with Transformer to learn the relations among categories and sentiments. The layers of Transformer is kept the same as that in Hier-GCN-BERT. The first Transformer layer is used to model the inner-relation between categories, and the second layer is used to capture the inter-relation between category and sentiment. It can be found that Hier-Transformer-BERT is quite efficient but still lower than Hier-GCN-BERT on three datasets, only slightly better on Restaurant 2015. The improvement of GCN upon Transformer is more substantial when the number of categories is larger (e.g., the Laptop dataset), due to the GCN's ability in learning the inner-relations between categories and inter-relations between category and sentiment.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.4.2">Ablation Study</head><p>In Table <ref type="table">5</ref>, we conduct experiments to test the effectiveness of each component in Hier-GCN-BERT.</p><p>• C-GCN-BERT: only category GCN without category-sentiment GCN;</p><p>• CS-GCN-BERT: only category-sentiment GCN without category GCN.</p><p>It can be seen that both C-GCN-BERT and CS-GCN-BERT have incremental effects compared with the basic hierarchy prediction model Hier-BERT. Among two sub-GCNs, category GCN plays a more important role than category-sentiment GCN, because it captures the inner-relations among multiple categories and lays the basis of the following category-sentiment inter-relation learning. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.4.3">Impact of the Number of Hier-GCN Layers</head><p>We further investigate the impact of the number of Hier-GCN layers L. Considering the over-smoothing problem caused by high co-occurrence nodes, we vary L from 1 to 3, and reports the results in Table <ref type="table">6</ref>. The best performance is obtained when L = 2. Layers more than 3 in GCN may incorporate too much node co-occurrence information and result in non-discriminative representations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.5">Results on Implicit Aspects</head><p>As we have mentioned in Table <ref type="table">2</ref>, there are nearly 25% of aspect terms are not annotated in the Restaurant 2015 dataset. We refer to them as implicit aspects. To test our approach's ability to capture the implicit aspects, we split the Restaurant 2015 test set into two parts: Explicit Aspects (containing 212 samples) and Implicit Aspects (containing 360 samples), and report the performance of category-sentiment hierarchy prediction in Table <ref type="table">7</ref>. We find that although the performance of our approaches on the Implicit Aspects part is lower than the Explicit Aspects part, it can still accurately identify a considerable amount of category and sentiment pairs, and outperform all the compared systems in implicit aspects.</p><p>Case study: In order to verify the advantages of our model in detecting categories and predicting category sentiment polarity intuitively, we further study cases of approaches AddOneDim-BERT, Hier-BERT and Hier-GCN-BERT on implicit aspects of Restaurant 2015. As shown in Table <ref type="table">8</ref>, review Once you try it for a special occasion beware.. you can't stop! implies positive sentiment towards category miscellaneous of restaurant, only AddOneDim-BERT cannot detect the corresponding category. Review I have never ever had such an unpleasant experience. implies general negative sentiment towards category restaurant, AddOneDim-BERT cannot detect the mentioned category, while Hier-BERT detects the mentioned category correctly, but predicts the sentiment polarity as positive. Only Hier-GCN-BERT predicts the category-sentiment pairs correctly. Besides, in a complex context with both implicit and explicit aspects, Hier-GCN-BERT can still perform better. Review Highly impressed from the decor to the food to the hospitality to the great night I had! has two explicit aspects and two implicit aspects, all approaches can predict the explicit aspects, while only Hier-GCN-BERT finds one more category-sentiment pair.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5">Related Work</head><p>Aspect-Based Sentiment Analysis: Aspect-Based Sentiment Analysis <ref type="bibr" target="#b5">(Hu and Liu, 2004;</ref><ref type="bibr" target="#b4">Ding et al., 2008)</ref> is an important fine-grained subtask in sentiment analysis (also called opinion mining). Most recent approaches can be categorized into two branches, namely Aspect Term-based Sentiment Analysis (ATSA) and Aspect Category-based Sentiment Analysis (ACSA).</p><p>ATSA aims to detect the aspect term and identify their corresponding sentiment polarities given a piece of text. <ref type="bibr" target="#b12">Mitchell et al. (2013)</ref> first explored the end-to-end task by applying traditional approaches with shallow features to extract aspect terms and their sentiments jointly. Later, <ref type="bibr" target="#b24">Zhang et al. (2015)</ref>   </p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<idno>55 54.15 64.23 62.13 C-GCN-BERT 74.01 54.09 64.88 61.43 CS-GCN-BERT 73.51 52.64 63.40 57.24 Hier-BERT 70.30 49.19 62.36 50</idno>
+		<title level="m">Restaurant-16 Laptop-16 Restaurant-15 Laptop-15 Hier</title>
+		<imprint/>
+	</monogr>
+	<note>Review text Ground-Truth AddOneDim-BERT Hier-BERT Hier-GCN-BERT Once you try it for a special occasion beware.. you can't stop! Restaurant#MISC,NEG Empty Restaurant#MISC,NEG Restaurant#MISC,NEG References</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Hierarchical multi-label classification of text with capsule networks</title>
+		<author>
+			<persName><forename type="first">Rami</forename><surname>Aly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Steffen</forename><surname>Remus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><surname>Biemann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics: Student Research Workshop</title>
+		<meeting>the 57th Annual Meeting of the Association for Computational Linguistics: Student Research Workshop</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="323" to="330"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<author>
+			<persName><forename type="first">Joan</forename><surname>Bruna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wojciech</forename><surname>Zaremba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arthur</forename><surname>Szlam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yann</forename><surname>Lecun</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1312.6203</idno>
+		<title level="m">Spectral networks and locally connected networks on graphs</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<title level="m" type="main">Bert: Pre-training of deep bidirectional transformers for language understanding</title>
+		<author>
+			<persName><forename type="first">Jacob</forename><surname>Devlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ming-Wei</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kenton</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kristina</forename><surname>Toutanova</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1810.04805</idno>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">A holistic lexicon-based approach to opinion mining</title>
+		<author>
+			<persName><forename type="first">Xiaowen</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Philip</forename><forename type="middle">S</forename><surname>Yu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2008 international conference on web search and data mining</title>
+		<meeting>the 2008 international conference on web search and data mining</meeting>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+			<biblScope unit="page" from="231" to="240"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Mining and summarizing customer reviews</title>
+		<author>
+			<persName><forename type="first">Minqing</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the tenth ACM SIGKDD international conference on Knowledge discovery and data mining</title>
+		<meeting>the tenth ACM SIGKDD international conference on Knowledge discovery and data mining</meeting>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+			<biblScope unit="page" from="168" to="177"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<author>
+			<persName><forename type="first">Mengting</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shiwan</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Li</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Keke</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhong</forename><surname>Su</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Renhong</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaowei</forename><surname>Shen</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1812.10735</idno>
+		<title level="m">Can: constrained attention networks for multi-aspect sentiment analysis</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Open-domain targeted sentiment analysis via span-based extraction and classification</title>
+		<author>
+			<persName><forename type="first">Minghao</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuxing</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhen</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dongsheng</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yiwei</forename><surname>Lv</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 57th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="537" to="546"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<title level="m" type="main">Semi-supervised classification with graph convolutional networks</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Thomas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Max</forename><surname>Kipf</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Welling</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1609.02907</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">A unified model for opinion target extraction and target sentiment prediction</title>
+		<author>
+			<persName><forename type="first">Xin</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lidong</forename><surname>Bing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Piji</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wai</forename><surname>Lam</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the AAAI Conference on Artificial Intelligence</title>
+		<meeting>the AAAI Conference on Artificial Intelligence</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="6714" to="6721"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Doer: Dual cross-shared rnn for aspect term-polarity co-extraction</title>
+		<author>
+			<persName><forename type="first">Huaishao</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tianrui</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Junbo</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 57th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="591" to="601"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Targeted aspect-based sentiment analysis via embedding commonsense knowledge into an attentive lstm</title>
+		<author>
+			<persName><forename type="first">Yukun</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Haiyun</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Erik</forename><surname>Cambria</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Aaai</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="5876" to="5883"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Open domain targeted sentiment</title>
+		<author>
+			<persName><forename type="first">Margaret</forename><surname>Mitchell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jacqui</forename><surname>Aguilar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Theresa</forename><surname>Wilson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Benjamin</forename><surname>Van Durme</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2013 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="1643" to="1654"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<title level="m" type="main">Aspect category detection via topicattention network</title>
+		<author>
+			<persName><forename type="first">Sajad</forename><surname>Movahedi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Erfan</forename><surname>Ghadery</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Heshaam</forename><surname>Faili</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Azadeh</forename><surname>Shakery</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1901.01183</idno>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Semeval-2015 task 12: Aspect based sentiment analysis</title>
+		<author>
+			<persName><forename type="first">Maria</forename><surname>Pontiki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dimitrios</forename><surname>Galanis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Harris</forename><surname>Papageorgiou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Suresh</forename><surname>Manandhar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ion</forename><surname>Androutsopoulos</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 9th international workshop on semantic evaluation</title>
+		<meeting>the 9th international workshop on semantic evaluation<address><addrLine>SemEval</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2015">2015. 2015</date>
+			<biblScope unit="page" from="486" to="495"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Semeval-2016 task 5: Aspect based sentiment analysis</title>
+		<author>
+			<persName><forename type="first">Maria</forename><surname>Pontiki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dimitrios</forename><surname>Galanis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Haris</forename><surname>Papageorgiou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ion</forename><surname>Androutsopoulos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Suresh</forename><surname>Manandhar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mohammad</forename><surname>Al-Smadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mahmoud</forename><surname>Al-Ayyoub</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yanyan</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Qin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Orphée</forename><surname>De Clercq</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">10th International Workshop on Semantic Evaluation</title>
+		<meeting><address><addrLine>SemEval</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2016">2016. 2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">A hierarchical model of reviews for aspect-based sentiment analysis</title>
+		<author>
+			<persName><forename type="first">Sebastian</forename><surname>Ruder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Parsa</forename><surname>Ghaffari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John</forename><forename type="middle">G</forename><surname>Breslin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2016 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="999" to="1005"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Joint aspect and polarity classification for aspect-based sentiment analysis with end-to-end neural networks</title>
+		<author>
+			<persName><forename type="first">Martin</forename><surname>Schmitt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Simon</forename><surname>Steinheber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Konrad</forename><surname>Schreiber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Benjamin</forename><surname>Roth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2018 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="1109" to="1114"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Supervised and unsupervised aspect category detection for sentiment analysis with co-occurrence data</title>
+		<author>
+			<persName><forename type="first">Kim</forename><surname>Schouten</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Onne</forename><surname>Van Der Weijde</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Flavius</forename><surname>Frasincar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rommert</forename><surname>Dekker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE transactions on cybernetics</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1263" to="1275"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">A survey of hierarchical classification across different application domains</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Carlos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alex</forename><forename type="middle">A</forename><surname>Silla</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Freitas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Data Mining and Knowledge Discovery</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">1-2</biblScope>
+			<biblScope unit="page" from="31" to="72"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<author>
+			<persName><forename type="first">Chi</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Luyao</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xipeng</forename><surname>Qiu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1903.09588</idno>
+		<title level="m">Utilizing bert for aspect-based sentiment analysis via constructing auxiliary sentence</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Learning to attend via word-aspect associative fusion for aspect-based sentiment analysis</title>
+		<author>
+			<persName><forename type="first">Yi</forename><surname>Tay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anh</forename><surname>Luu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Siu</forename><surname>Tuan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hui</forename><surname>Cheung</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Thirty-Second AAAI Conference on Artificial Intelligence</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Attention-based lstm for aspect-level sentiment classification</title>
+		<author>
+			<persName><forename type="first">Yequan</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Minlie</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaoyan</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Li</forename><surname>Zhao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2016 conference on empirical methods in natural language processing</title>
+		<meeting>the 2016 conference on empirical methods in natural language processing</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="606" to="615"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Aspect based sentiment analysis with gated convolutional networks</title>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Xue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tao</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 56th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="2514" to="2523"/>
+		</imprint>
+	</monogr>
+	<note>Long Papers</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Neural networks for open domain sentiment</title>
+		<author>
+			<persName><forename type="first">Meishan</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yue</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Duy-Tin</forename><surname>Vo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2015 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="612" to="621"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Representation learning for aspect category detection in online reviews</title>
+		<author>
+			<persName><forename type="first">Xinjie</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaojun</forename><surname>Wan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jianguo</forename><surname>Xiao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Twenty-Ninth AAAI Conference on Artificial Intelligence</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

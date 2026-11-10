@@ -1,0 +1,2103 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Multi-source aggregated classification for stock price movement prediction</title>
+				<funder ref="#_3XaN6Ks #_ezGQbem">
+					<orgName type="full">National Natural Science Foundation of China</orgName>
+				</funder>
+				<funder ref="#_wQB2Tut">
+					<orgName type="full">Program for Jiangsu Excellent Scientific and Technological Innovation Team, China</orgName>
+				</funder>
+				<funder ref="#_eFPN5Bg">
+					<orgName type="full">Agency for Science, Technology and Research (A*STAR)</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date>8 November 2022 1566</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Ma</surname></persName>
+							<email>mayu@njust.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Economics and Management</orgName>
+								<orgName type="institution">Nanjing University of Science &amp; Technology</orgName>
+								<address>
+									<addrLine>200. Xiaolingwei Road.</addrLine>
+									<postCode>210094</postCode>
+									<settlement>Nanjing Jiangsu</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rui</forename><surname>Mao</surname></persName>
+							<email>mao.r@ruimao.tech</email>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Nanyang Technological University</orgName>
+								<address>
+									<addrLine>50 Nanyang Avenue</addrLine>
+									<postCode>639798</postCode>
+									<settlement>Singapore</settlement>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qika</forename><surname>Lin</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Xi'an Jiaotong University</orgName>
+								<address>
+									<addrLine>Xi'an</addrLine>
+									<postCode>710049</postCode>
+									<settlement>Shaanxi</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Peng</forename><surname>Wu</surname></persName>
+							<email>wupeng@njust.edu.cn</email>
+							<affiliation key="aff3">
+								<orgName type="department">School of Intelligent Manufacturing</orgName>
+								<orgName type="institution">Nanjing University of Science &amp; Technology</orgName>
+								<address>
+									<addrLine>200. Xiaolingwei Road. Nanjing</addrLine>
+									<postCode>210094</postCode>
+									<settlement>Jiangsu</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Erik</forename><surname>Cambria</surname></persName>
+							<email>cambria@ntu.edu.sg</email>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Nanyang Technological University</orgName>
+								<address>
+									<addrLine>50 Nanyang Avenue</addrLine>
+									<postCode>639798</postCode>
+									<settlement>Singapore</settlement>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Multi-source aggregated classification for stock price movement prediction</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published">8 November 2022 1566</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">30249F341F1A7E744054ED70B5E9D283</idno>
+					<idno type="DOI">10.1016/j.inffus.2022.10.025</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-02T20:32+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>Stock prediction Event-driven investing Multi-source aggregating Sentiment</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Predicting stock price movements is a challenging task. Previous studies mostly used numerical features and news sentiments of target stocks to predict stock price movements. However, their semantics-based sentiment analysis is sub-optimal to represent real market sentiments. Moreover, only considering the information of target companies is insufficient because the stock prices of target companies can be affected by their related companies. Thus, we propose a novel Multi-source Aggregated Classification (MAC) method for stock price movement prediction. MAC incorporates the numerical features and market-driven news sentiments of target stocks, as well as the news sentiments of their related stocks. To better represent real market sentiments from the news, we pre-train an embedding feature generator by fitting the news to real stock price movements. Embeddings given by the pre-trained sentiment classifier can represent the sentiment information in vector space. Moreover, MAC introduces a graph convolutional network to capture the news effects of related companies on the target stock. Finally, MAC can predict stock price movements for the next trading day based on the aforementioned features. Extensive experiments prove that MAC outperforms state-of-the-art baselines in stock price movement prediction, Sharpe Ratio, and backtesting trading incomes.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>Recent developments in artificial intelligence and machine learning have caused significant impacts on the financial industry, specifically on quantitative stock prediction <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref>. The development of an effective method for stock price movement prediction is critical for investors to grasp investment opportunities and also for security companies to reduce the risk caused by margin trading. The stock market is highly complex because stock prices are affected by many factors <ref type="bibr" target="#b3">[4,</ref><ref type="bibr" target="#b4">5]</ref>. Therefore, aggregating and using adequate information from different sources to improve the prediction performance of stock price movements is a challenging task in both academia and industry.</p><p>Extensive research on stock price movement prediction has been performed by using quantitative indicators, including historical transaction data and technical indicators <ref type="bibr" target="#b1">[2,</ref><ref type="bibr" target="#b5">6]</ref>. These indicators have been proven effective for predicting stock price movements. Event-driven trading is another widely used investment strategy because stock price movements are influenced with the release, dissemination and absorption of information <ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref>. In this sense, financial news is also a critical information source for investors, which affects their sentiments and investment behaviors, directly impacting stock prices <ref type="bibr" target="#b10">[11,</ref><ref type="bibr" target="#b11">12]</ref>. By using Natural Language Processing (NLP) techniques, current studies combined financial news sentiment analysis with quantitative indicators to predict stock price movements <ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref>. The predefined sentiment dictionaries have been widely applied to analyze news sentiments for stock price prediction with their lexical sentiment scores used as sentiment features <ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref>. However, the performance of these dictionary-based methods highly depends on the knowledge quality and coverage of the dictionaries <ref type="bibr" target="#b18">[19]</ref><ref type="bibr" target="#b20">[20]</ref><ref type="bibr" target="#b21">[21]</ref><ref type="bibr" target="#b22">[22]</ref>. The lexical sentiment knowledge cannot be updated in time according to different market environments, e.g., bull and bear markets. Recently, deep learning-based models have been applied for sentiment analysis of financial news to improve stock price prediction <ref type="bibr" target="#b23">[23]</ref><ref type="bibr" target="#b24">[24]</ref><ref type="bibr" target="#b25">[25]</ref>. These approaches used labeled data to learn sentiment polarities, i.e., positive, neutral, and negative, to fit stock price movements. However, these methods have two shortcomings:</p><p>(1) Annotating a huge domain-specific sentiment analysis dataset is expensive and time-consuming; <ref type="bibr" target="#b1">(2)</ref> The sentiment polarities based on semantic understanding and human annotation cannot reflect the real market sentiments <ref type="bibr" target="#b26">[26]</ref> because these annotators are not investors who really have effects on market prices in real time. <ref type="url" target="https://doi.org/10.1016/j.inffus.2022">https://doi.org/10.1016/j.inffus.2022</ref>. <ref type="bibr" target="#b9">10</ref>.025 <ref type="bibr">Received 19</ref> April 2022; Received in revised form 7 October 2022; <ref type="bibr">Accepted 26 October 2022</ref> In addition, previous studies in event-driven stock price prediction mainly focused on a one-to-one problem, assuming the stock prices of a company are only affected by the news about the company itself, rarely considering the effects that the news about related companies could have <ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref>. However, with the rapid development of the market economy, listed companies in stock markets are interconnected by various relationships, such as the supply chain <ref type="bibr" target="#b27">[27]</ref>, the shareholding <ref type="bibr" target="#b28">[28]</ref> and the industry competition relationships <ref type="bibr" target="#b29">[29]</ref>. The crisis spillover effect indicates that the negative effects of a crisis in a company do not only affect the company itself but also spread to other related companies <ref type="bibr" target="#b30">[30]</ref>. Therefore, it is essential to incorporate news about related companies into the stock price movement prediction of a target company.</p><p>In this paper, we propose a novel Multi-source Aggregated Classification (MAC) model for stock price movement prediction. Conceptually, the decision-making framework in stock market investment involves two main tasks, namely portfolio management and stock trading <ref type="bibr" target="#b31">[31]</ref>. Portfolio management focuses on managing a batch of selective stocks in a long-term investment, while stock trading studies short-term trading strategies for individual stocks. Our research focuses on stock trading. The proposed MAC model can assist investors in achieving better decision-making by predicting the price movement of a specific stock on the next trading day. If the model predicts an 'up' signal for the next trading day, an investor may buy or hold the stock today. On the contrary, the investor may not buy or hold the stock if the model predicts a 'down' signal.</p><p>The MAC model integrates three feature sources, i.e., transaction data and technical indicators of target stocks, news about the target stocks, and news about their related stocks. We employ 31 robust quantitative indicators to represent the morphology of stock price movements. To represent news information, we pre-train a Chinese RoBERTa-based <ref type="bibr" target="#b32">[32,</ref><ref type="bibr" target="#b33">33]</ref> embedding generator by fitting the news of a company to its real stock price movements on the next trading day, i.e., up and down. Thus, the news embeddings can reflect the real market sentiment, i.e., up is positive and down is negative. Then, we use the Graph Convolutional Networks (GCN) <ref type="bibr" target="#b34">[34]</ref> to model the connections between a target company and its related companies. Lastly, the multisource features are concatenated and fed into the Bidirectional Long Short-Term Memory (BiLSTM) networks <ref type="bibr" target="#b35">[35]</ref> to predict stock price movements on the next trading day.</p><p>We demonstrate the validity of our MAC method with six target stocks corresponding to six different industries in the Chinese stock market. The results indicate that, in the evaluation of the stock price movement classification task, our MAC outperforms the state-of-the-art baseline, i.e., eLSTM <ref type="bibr" target="#b16">[17]</ref> by 2.38% in accuracy (ACC) and 4.62% in Matthews Correlation Coefficient (MCC) on average. In terms of the financial evaluation, MAC exceeds eLSTM by 0.68 in Sharpe Ratio <ref type="bibr" target="#b36">[36]</ref> on average, achieving large margins in the backtesting trading incomes, based on the recommended trading strategies. We also conduct systematic ablation studies to demonstrate the effectiveness of each feature source and of different pre-training methods, i.e., market-driven sentiment analysis and semantics-based sentiment analysis.</p><p>The contributions of this work can be summarized as follows:</p><p>• We propose a novel model for stock price movement prediction that incorporates features from different sources. To the best of our knowledge, this is the first method that incorporates news about related companies in this task. • We propose an effective pre-training task for market-driven sentiment analysis to learn the representations of news in vector space. • Our experimental results demonstrate the superiority of our model compared with state-of-the-art baselines. We also prove that the market-driven sentiment analysis pre-training is more effective than the semantics-based sentiment analysis pre-training.</p><p>The remainder of this paper is organized as follows: Section 2 reviews the related work; Section 3 explains the proposed MAC method; Section 4 shows our experimental setups; Section 5 presents the results, the ablation studies, the hyperparameter analysis and the breakdown analysis; Finally, Section 6 contains the conclusions of the present work and the futures perspectives.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Related work</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.">Information and stock price movements</head><p>The stock price movements are the results of the release, dissemination and absorption of multi-source information <ref type="bibr" target="#b6">[7,</ref><ref type="bibr" target="#b37">37]</ref>. Material news events are essential sources of stock return volatility <ref type="bibr" target="#b8">[9]</ref>. Jeon et al. <ref type="bibr" target="#b8">[9]</ref> found that stock return volatility is significantly related to news quantity and content. Shi and Ho <ref type="bibr" target="#b38">[38]</ref> indicated that negative news events would lead to abnormal volatility of stock prices in the short term. Strauss et al. <ref type="bibr" target="#b39">[39]</ref> argued that excessive media attention and negative news would have negative effects on stock returns. In conclusion, news events are important driving forces of stock price movements.</p><p>The development of the market economy has caused the interconnection of listed companies through different relationships, such as the supply chain <ref type="bibr" target="#b27">[27]</ref>, the shareholding chain <ref type="bibr" target="#b28">[28]</ref> and the industry competition <ref type="bibr" target="#b29">[29]</ref>. In fact, the stock price movements of a company are influenced not only by the news about the company itself but also by the news about its related companies. Relevant studies on marketing and crisis management indicate that there is a spillover effect between related companies meaning that information about Company A will affect public cognition and judgment of Company B <ref type="bibr" target="#b40">[40]</ref>. The magnitude of the spillover depends on the strength of their correlation <ref type="bibr" target="#b40">[40]</ref>. Jacobs and Singhal <ref type="bibr" target="#b41">[41]</ref> showed that negative public opinions of a listed company have a vertical spillover effect in the supply chain, which can lead to a decline in the stock price of its suppliers and customers. Moreover, when a parent brand suffers an adverse event, the sub-brands become vulnerable <ref type="bibr" target="#b42">[42]</ref>, and vice versa <ref type="bibr" target="#b40">[40]</ref>. Moreover, several studies found that a brand crisis of a listed company may also spill over to its competitors <ref type="bibr" target="#b29">[29,</ref><ref type="bibr" target="#b41">41,</ref><ref type="bibr" target="#b43">43]</ref>, subsequently impacting the whole industry. Therefore, financial news about companies in the relationships of the supply chain, shareholding and competition is an important feature for predicting the stock prices of a target company.</p><p>The related studies show that it is critical to consider news-driven stock price prediction, where the news should be about both target companies and their related companies.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.">Stock price movement prediction</head><p>The prediction of stock price movements is a popular research area in academia and industry <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b1">2]</ref>. Quantitative indicators, including daily prices and technical indicators, such as the Moving Average (MA), the Williams Indicator (WR) and the Relative Strength Index (RSI), have been widely used for stock price prediction <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b5">6,</ref><ref type="bibr" target="#b28">28]</ref> as they can represent the morphology and trading behaviors of stocks in time series.</p><p>With the development of NLP, many studies combined financial news with quantitative indicators to improve the performance of stock prediction based on the behavioral finance theory <ref type="bibr" target="#b12">[13,</ref><ref type="bibr" target="#b44">44]</ref>. Several studies applied sentiment lexicons to extract financial news features for stock price prediction <ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b45">45]</ref>. Chen et al. <ref type="bibr" target="#b14">[15]</ref> input the quantitative indicators and the news features extracted by a sentiment dictionary into their RNN-boost model improving the stock prediction performance in the Chinese stock market. Chen et al. <ref type="bibr" target="#b15">[16]</ref> also improved the prediction performance of stock prices by incorporating daily price and news sentiment features into the LSTM <ref type="bibr" target="#b46">[46]</ref> model. Li et al. <ref type="bibr" target="#b13">[14]</ref> combined the quantitative indicators and news sentiments extracted from sentiment dictionaries into the LSTM-based model for stock price prediction in the Hong Kong market. They reported that the prediction models using news sentiments extracted from finance domain-specific sentiment dictionaries could outperform the models that only use either technical indicators or news sentiments given by general sentiment dictionaries. Besides, machine learning-based methods have been used to extract financial news features for stock price prediction <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b47">47]</ref>. Researchers commonly used manually labeled positive and negative sentences to train a sentiment classifier for financial news <ref type="bibr" target="#b23">[23]</ref><ref type="bibr" target="#b24">[24]</ref><ref type="bibr" target="#b25">[25]</ref>. For example, De Oliveira Carosia et al. <ref type="bibr" target="#b23">[23]</ref> trained an ANN-based classifier by financial news in Brazilian Portuguese to extract news features. Their news had been manually labeled by experts according to the semantic sentiment. Sousa et al. <ref type="bibr" target="#b24">[24]</ref> manually annotated 582 stock news articles as positive, neutral or negative to fine-tune a BERT <ref type="bibr" target="#b48">[48]</ref> model for sentiment analysis of financial news.</p><p>However, the mentioned publications presented some shortcomings. On one hand, the dictionary-based methods commonly obtained sentiment features by using either the positive and negative word frequencies or the lexical sentiment scores. However, these methods highly depend on the quality and coverage of dictionaries, and they do not take into account the dependency information in the overall context <ref type="bibr" target="#b21">[21]</ref>. Besides, the development of dictionaries relies on the great efforts of annotators, which can hardly be updated in time according to different stock market environments, e.g., bull and bear markets. On the other hand, the machine learning-based methods used human annotated sentiment analysis datasets to conduct supervised learning to obtain sentiment features. However, the datasets were annotated by the semantic interpretation of texts. The annotators are not real investors whose investments can impact the stock price movements in real time. Thus, there is a gap between the semantics-based sentiment features and the real market sentiment features. Lastly, the dictionary-based and machine learning-based methods did not take the news about related companies into account, although it has been reported that the related company news indeed impacts the stock prices of a target company according to the above empirical and theoretical studies.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Methodology</head><p>In this work, we propose a novel model that incorporates information from different sources, i.e., quantitative indicators of target stocks, news about target stocks and news about their related stocks. Following previous studies <ref type="bibr" target="#b13">[14,</ref><ref type="bibr" target="#b16">17]</ref>, the task of our study is to predict stock price movement directions, i.e., up or down, of a target stock on the next trading day. The label 𝑦 𝑡+1 is 1, if 𝐶𝑃 𝑡+1 -𝐶𝑃 𝑡 ⩾ 0. Otherwise, the label 𝑦 𝑡+1 is 0. 𝐶𝑃 𝑡+1 is the closing price of a target stock on the trading day 𝑡 + 1, and 𝐶𝑃 𝑡 is the closing price on day 𝑡. We do not introduce an extra label for 𝐶𝑃 𝑡+1 -𝐶𝑃 𝑡 = 0 because it is uncommon that the closing prices are exactly the same on two consecutive trading days.</p><p>As shown in Fig. <ref type="figure" target="#fig_1">1</ref>, the proposed MAC model consists of four technical parts. Firstly (Section 3.1), we extract the quantitative indicators 1 of the target stocks and the subseries of the quantitative indicators within a period of time 𝑇 . The target stocks are the stocks for which we intend to predict the stock price movements on the next trading day. 𝑇 denotes the number of trading days before the stock price movement prediction day. 𝑄 𝑡𝑎𝑟 represents the quantitative indicators of a target stock (𝑡𝑎𝑟) in 𝑇 trading days. Secondly (Section 3.2), the news features of target stocks in 𝑇 trading days (𝑁 𝑡𝑎𝑟 ) are given by an embedding generator, which is a pre-trained market-driven sentiment classifier based on Chinese-RoBERTa <ref type="bibr" target="#b33">[33]</ref>. We use this classifier to obtain the embedding feature of each news title. The news embeddings of a target stock in a day are averaged. Subsequently, we obtain the news representations of the target stock in 𝑇 trading days. Thirdly (Section 3.3), we identify the important related stocks of the target stocks according to the cosine similarity of stock nodes. The news features of the important related stocks are also generated from the pre-trained classifier and averaged over a day, yielding the news representations of the important related stocks (𝑟𝑒𝑙) in 𝑇 trading days (𝑁 𝑟𝑒𝑙 ). We use GCN to capture the relationships of stocks and fuse the news representations (𝑁 𝑟𝑒𝑙 ) of the relevant stocks, yielding the related stock news representations of the target stocks (𝑅 𝑡𝑎𝑟 ). Lastly (Section 3.4), the multi-source information (𝑄 𝑡𝑎𝑟 , 𝑁 𝑡𝑎𝑟 and 𝑅 𝑡𝑎𝑟 ) is concatenated and fed into a BiLSTM-based classifier to predict the stock price movements on the next trading day (𝑦 𝑡+1 ). The technical components are detailed in the following subsections. Table <ref type="table" target="#tab_0">1</ref> summarizes the symbols used in this section.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.">Extraction of quantitative indicators for a target stock</head><p>Quantitative indicators are widely used as numerical features for stock price prediction. Quantitative indicators are composed of historical transaction data and technical indicators. Following previous studies <ref type="bibr" target="#b13">[14,</ref><ref type="bibr" target="#b16">17,</ref><ref type="bibr" target="#b45">45]</ref>, 31 popular quantitative indicators are selected in this study. The details of our employed quantitative indicators are shown in Table <ref type="table" target="#tab_1">2</ref>. The technical indicators are given by the equations presented in Appendix. The historical quantitative data of target stocks were collected using the RESSET platform.  Due to different value ranges, each quantitative indicator is normalized using Min-Max normalization <ref type="bibr" target="#b45">[45]</ref>. Then, the quantitative indicators of a target stock (𝑡𝑎𝑟) in the trading day 𝑡 are denoted as</p><formula xml:id="formula_0">𝐪 𝑡𝑎𝑟,𝑡 = [𝑂𝑃 𝑡𝑎𝑟,𝑡 , 𝐶𝑃 𝑡𝑎𝑟,𝑡 , … , 𝐿𝑜𝑤𝑒𝑟𝐵𝑎𝑛𝑑 𝑡𝑎𝑟,𝑡 ],<label>(1)</label></formula><p>where 𝐪 𝑡𝑎𝑟,𝑡 ∈ R 1×31 is a 31-dimensional vector.</p><p>We gather the quantitative indicators of a target stock over 𝑛 trading days, where 𝑛 denotes the time span of our training and testing data. For each training step that learns the stock price movement (𝑦 𝑡+1 ) at day 𝑡 + 1, we use the quantitative indicators from 𝑇 (𝑇 ∈ 𝑛) trading days before day 𝑡 + 1 to capture the time series information.</p><p>We do not consider all the historical data from day 1 because the ancient data could bring noise to the prediction of stock price movements on day 𝑡 + 1. We examine 𝑇 with different values in Section 5.4. Then, the quantitative indicators within the window 𝑇 are given by</p><formula xml:id="formula_1">𝑄 𝑡𝑎𝑟 = [𝐪 𝑡𝑎𝑟,𝑡-𝑇 +1 , … , 𝐪 𝑡𝑎𝑟,𝑡-1 , 𝐪 𝑡𝑎𝑟,𝑡 ],<label>(2)</label></formula><p>where 𝑄 𝑡𝑎𝑟 ∈ R 𝑇 ×31 is the quantitative indicator feature matrix of a target stock.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.">Extraction of the news features for a target stock</head><p>In this section, we first introduce the pre-trained Market-driven Sentiment Classifier (MSC) that is used for generating news embeddings (Section 3.2.1). Then, we present the process of preparing the news features for a target stock based on MSC (Section 3.2.2).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.1.">Pre-trained market-driven sentiment classifier</head><p>In this section, we aim to pre-train a sentiment classifier driven by market sentiments to generate effective embedding features for news. The motivation is that there is a gap between semantic sentiment and market sentiment because the semantics of financial news cannot directly reflect investment behaviors. For example, the decrease in debt ratio and investment may have different effects on a company's  <ref type="foot" target="#foot_1">3</ref> although both statements semantically mean that the value of a financial indicator diminishes.</p><p>Thus, we hypothesize that the stock price movements can represent the real sentiment of investors towards a piece of news. We use news titles as input because a title can summarize the main idea of a piece of news. It is in line with related works which argue that news titles can extract the information more precisely than the news content in stock prediction <ref type="bibr" target="#b49">[49,</ref><ref type="bibr" target="#b50">50]</ref>. The pre-training target is to predict the stock price movements of a company on the next trading day, given a news title of the company on the current day. We first collect 24,000 Chinese finance news about 32 stocks from 02/01/2018 to 12/10/2020.</p><p>The data were collected from Hundsun Electronics. <ref type="foot" target="#foot_2">4</ref> According to the taxonomy of Hundsun Electronics, the collected news can be categorized into three classes, namely company information, business information and financial information. <ref type="foot" target="#foot_3">5</ref> To avoid information leakage, the pre-training dataset does not contain either the target companies or their related companies that are examined in our main task. Then, according to the actual stock price movements on the next day of the news release, the news titles are labeled as positive (up and unchanged) or negative (down). We use Chinese-RoBERTa <ref type="bibr" target="#b33">[33]</ref> as the encoder because it has been proved that RoBERTa is an effective pre-trained language model in many NLP tasks <ref type="bibr" target="#b51">[51]</ref><ref type="bibr" target="#b52">[52]</ref><ref type="bibr" target="#b53">[53]</ref><ref type="bibr" target="#b54">[54]</ref><ref type="bibr" target="#b55">[55]</ref><ref type="bibr" target="#b56">[56]</ref>. A news title is padded with CLS and SEP<ref type="foot" target="#foot_4">foot_4</ref> on both sides. Then, the padded sequence is fed into the RoBERTa encoder (𝑒𝑛𝑐(⋅)), yielding the hidden states (𝐒) by</p><formula xml:id="formula_2">𝐒 = 𝑒𝑛𝑐(𝐶𝐿𝑆, 𝑤 1 , 𝑤 2 , … , 𝑤 𝑙 , 𝑆𝐸𝑃 ),<label>(3)</label></formula><p>where 𝑤 denotes a token in a news title. 𝑙 denotes the length of the input news title. 𝐒 ∈ R 𝑙×768 . We use the embedding (𝐞) that corresponds to the CLS position of 𝑆 as the embedding of the news title</p><formula xml:id="formula_3">𝐞 = 𝐒 [𝐶𝐿𝑆] ,<label>(4)</label></formula><p>where 𝐞 ∈ R 1×768 . Next, 𝐞 is fed into a feedforward neural network (FNN) and a softmax to predict the market-driven sentiment labels ( ŷ𝑝𝑟𝑒 ) during pre-training</p><formula xml:id="formula_4">ŷ𝑝𝑟𝑒 = 𝑠𝑜𝑓 𝑡𝑚𝑎𝑥(𝐹 𝑁𝑁(𝐞)). (<label>5</label></formula><formula xml:id="formula_5">)</formula><p>Cross Entropy loss is employed for pre-training, which is given by</p><formula xml:id="formula_6"> 𝑝𝑟𝑒 = 𝐶𝑟𝑜𝑠𝑠𝐸𝑛𝑡𝑟𝑜𝑦( ŷ𝑝𝑟𝑒 , 𝑦 𝑝𝑟𝑒 ),<label>(6)</label></formula><p>where 𝑦 𝑝𝑟𝑒 denotes the ground truth pre-training label, i.e., positive or negative.</p><p>Thus, we can use the pre-trained sentiment classifier to generate market-driven sentiment embeddings (𝐞) for a given input news title. In our downstream task applications, there is likely more than one news for a stock in a day. We average the news embeddings, yielding a daily news feature representing all news titles in a day</p><formula xml:id="formula_7">𝐧 = 1 𝑚 𝑚 ∑ 𝑖 𝐞 𝑖 , (<label>7</label></formula><formula xml:id="formula_8">)</formula><p>where 𝑚 is the number of news titles of the stock in a day. The workflow of generating news embeddings can be viewed in Fig. <ref type="figure" target="#fig_0">2</ref>.</p><p>For simplification, we combine Eqs. ( <ref type="formula" target="#formula_2">3</ref>), ( <ref type="formula" target="#formula_3">4</ref>) and <ref type="bibr" target="#b6">(7)</ref>. Given a set of news titles of the stock on a trading day, we represent the daily news feature by</p><formula xml:id="formula_9">𝐧 = 𝑀𝑆𝐶(𝑛𝑒𝑤𝑠 1 , 𝑛𝑒𝑤𝑠 2 , … , 𝑛𝑒𝑤𝑠 𝑚 ),<label>(8)</label></formula><p>where 𝑀𝑆𝐶(⋅) denotes the news embedding generator based on the pre-trained market-driven sentiment classifier.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.2.">The news features of a target stock</head><p>We employ the pre-trained MSC module (𝑀𝑆𝐶(⋅) in Eq. ( <ref type="formula" target="#formula_9">8</ref>)) to extract news features (𝐧 𝑡𝑎𝑟,𝑡 ∈ R 1×768 ) for a target stock in day 𝑡. If there is no financial news about the target stock on a trading day, the news feature is a 0-vector. Then, we prepare the news features of each target stock over 𝑛 trading days for training and testing. Similarly, for each training step, we look up the news features from 𝑇 trading days before the day (day 𝑡 + 1) of stock price movement prediction. MAC employs a linear layer (𝐿𝑖𝑛𝑒𝑎𝑟(⋅)) on the MSC output to reduce the dimensionality of news features for the target stock. Thus, the news features of a target company are given by</p><formula xml:id="formula_10">𝑁 𝑡𝑎𝑟 = 𝐿𝑖𝑛𝑒𝑎𝑟([𝐧 𝑡𝑎𝑟,𝑡-𝑇 +1 , … , 𝐧 𝑡𝑎𝑟,𝑡-1 , 𝐧 𝑡𝑎𝑟,𝑡 ]),<label>(9)</label></formula><p>where 𝑁 𝑡𝑎𝑟 ∈ R 𝑇 ×200 is the news feature matrix of a target stock. 𝐿𝑖𝑛𝑒𝑎𝑟(⋅) is updated during the MAC training.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.">Extraction of news features for related stocks</head><p>The extraction of news features for related stocks is divided into three parts: firstly, the discovery of related stocks (Section 3.3.1), secondly, the news features of related stocks (Section 3.3.2), thirdly, the GCN-based information fusion of related stocks (Section 3.3.3).   </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.1.">Discovery of related stocks</head><p>The discovery of related stocks refers to the identification of the most related stocks to a target stock. We select several of the most related stocks in order to avoid introducing extra noise from less relevant news and also to reduce the computation cost. The stock relationships are collected from Qichacha. <ref type="foot" target="#foot_5">7</ref>In total, we collected the relationship data for 3495 stocks in the Chinese stock market. For each stock, we collected its relation data, including the supply chain (suppliers and customers), the shareholding chain (holding and being held) and the industry competitor relationships. Next, we identify the most related stocks to a target stock. Fig. <ref type="figure" target="#fig_4">3</ref> illustrates the process of the relevant stock discovery and the adjacent matrix construction for the most related stocks. First, we use the collected data about relationships to construct a stock relation graph. The graph (𝐺 = (𝑉 , 𝐸)) includes 3495 nodes (𝑉 ) and 22,886 edges (𝐸). Each node denotes a stock, and each edge denotes the connection between two stocks. Then, we use a node2vec <ref type="bibr" target="#b57">[57]</ref> algorithm to embed the graph, yielding vector representations for all nodes. Next, given a target stock and its node2vec embedding, we use cosine similarity to identify the top-𝐾 related stocks to the target stock. The most related one among the top-𝐾 is the target stock itself because its cosine similarity is the highest. Finally, we construct an adjacency matrix 𝐴 ∈ R 𝐾×𝐾 which represents the relationships among the 𝐾 most related stocks to each other. 𝐾 is a hyperparameter. We examine 𝐾 with different values in Section 5.4.</p><p>The adjacency matrix 𝐴 is defined as Eq. <ref type="bibr" target="#b9">(10)</ref>. 𝑎 𝑖,𝑗 is the element of Matrix 𝐴. If there is a connection between stocks 𝑠 𝑖 and 𝑠 𝑗 , the conjunction 𝑎 𝑖,𝑗 is 1, otherwise is 0. The row and column are indexed with the relevant stocks that are sorted in descending order by the values of the cosine similarities.</p><formula xml:id="formula_11">𝐴 = ⎡ ⎢ ⎢ ⎢ ⎢ ⎢ ⎣ 𝑎 1,1 𝑎 1,2 ... 𝑎 1,𝐾 𝑎 2,1 𝑎 2,2 ... 𝑎 2,𝐾 ⋮ ⋮ ⋱ ⋮ 𝑎 𝐾,1 𝑎 𝐾,2 ... 𝑎 𝐾,𝐾 ⎤ ⎥ ⎥ ⎥ ⎥ ⎥ ⎦ . (<label>10</label></formula><formula xml:id="formula_12">)</formula><p>Fig. <ref type="figure">4</ref>. Illustration of the construction of the feature matrix for related stocks.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.2.">The news features of related stocks</head><p>In this step, we construct the feature matrix by taking financial news of related stocks into account. Fig. <ref type="figure">4</ref> shows the construction of the feature matrix for related stocks. After collecting the financial news titles about each stock among Top-𝐾 related stocks on the trading day 𝑡, the MSC module (see Section 3.2.1) is also applied to extract news features for each related stock. Given Eq. ( <ref type="formula" target="#formula_9">8</ref>), we extract the news features (𝐧 𝑖,𝑡 ) for the 𝑖th important related stock on the trading day 𝑡. Then, we obtain the feature matrix 𝑁 𝑟𝑒𝑙,𝑡 ∈ R 𝐾×768 that represents the news features of the 𝐾 important related stocks on the trading day 𝑡 by</p><formula xml:id="formula_13">𝑁 𝑟𝑒𝑙,𝑡 = [𝐧 1,𝑡 , 𝐧 2,𝑡 , … , 𝐧 𝑖,𝑡 , … , 𝐧 𝐾,𝑡 ].<label>(11)</label></formula><p>In each training step, we also look up the news features (𝑁 𝑟𝑒𝑙 ) of the important related stocks in the time window 𝑇</p><formula xml:id="formula_14">𝑁 𝑟𝑒𝑙 = [𝑁 𝑟𝑒𝑙,𝑡-𝑇 +1 , … , 𝑁 𝑟𝑒𝑙,𝑡-1 , 𝑁 𝑟𝑒𝑙,𝑡 ],<label>(12)</label></formula><p>where 𝑁 𝑟𝑒𝑙 ∈ R (𝑇 ×𝐾)×768 . The corresponding adjacency matrix (𝑀) with 𝑇 time steps is defined as</p><formula xml:id="formula_15">𝑑𝑒𝑡(𝑀) = [𝐴, 𝐴, … , 𝐴] ⏟⏞⏞⏞⏞⏞⏟⏞⏞⏞⏞⏞⏟ 𝑇 , (<label>13</label></formula><formula xml:id="formula_16">)</formula><p>where 𝑀 ∈ R (𝑇 ×𝐾)×(𝑇 ×𝐾) . 𝐴 ∈ R 𝐾×𝐾 is an adjacency matrix (see Eq. ( <ref type="formula" target="#formula_11">10</ref>)) on the diagonal of 𝑀. The rest of the positions in 𝑀 are zeros.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.3.">GCN-based information fusion of related stocks</head><p>Since our proposed MAC model intends to incorporate news about related stocks and we represent the relationships of a target stock  and its related stocks in a graph, we use the GCN model from the of Kipf and Welling <ref type="bibr" target="#b34">[34]</ref> to learn the graph, thereby fusing the information of related stocks. GCN is selected as it can effectively capture the structural information of nodes and edges <ref type="bibr" target="#b58">[58,</ref><ref type="bibr" target="#b59">59]</ref>. The input of the GCN model contains: (1) a feature matrix including the features of each node and (2) an adjacency matrix showing the relations between these nodes. Through the convolutional operation, the feature of each node is updated by using the given adjacency matrix to fuse the feature representations of its neighbors. Fig. <ref type="figure" target="#fig_5">5</ref> shows the procedure of the information fusion of related stocks based on the GCN model. We first build the news feature matrix 𝑁 𝑟𝑒𝑙 of related stocks by a rolling window with the time step 𝑇 as input of the GCN (see Eq. ( <ref type="formula" target="#formula_14">12</ref>)).</p><p>We also build the corresponding adjacency matrix (𝑀) with 𝑇 time steps (see Eq. ( <ref type="formula" target="#formula_15">13</ref>)). Then, the news feature matrix (𝑁 𝑟𝑒𝑙 ) and the adjacency matrix (𝑀) are fed into a GCN layer for the convolutional operation, which is presented as:</p><formula xml:id="formula_17">𝐻 = 𝑅𝑒𝐿𝑈 ( D-1∕2 𝑀 D-1∕2 𝑁 𝑟𝑒𝑙 𝑊 ),<label>(14)</label></formula><p>where D-1∕2 𝑀 D-1∕2 ∈ R (𝑇 ×𝐾)×(𝑇 ×𝐾) is a Laplacian matrix. D ∈ R (𝑇 ×𝐾)×(𝑇 ×𝐾) is a diagonal degree matrix, where D = 𝛴 𝑗 𝑀 𝑖,𝑗 . 𝑀 ∈ R (𝑇 ×𝐾)×(𝑇 ×𝐾) is the adjacency matrix. 𝑁 𝑟𝑒𝑙 ∈ R (𝑇 ×𝐾)×768 is the news feature matrix of the related stocks. 𝑊 ∈ R 768×200 is the trainable weight matrix of the GCN layer. 𝑅𝑒𝐿𝑈 (⋅) is the activation function. 𝐻 ∈ R (𝑇 ×𝐾)×200 is the output of the GCN layer.</p><p>The feature vector of each node is updated by fusing the information of its neighbor nodes in GCN. In this way, the updated representation of each stock node contains the information of its related stocks on the same trading day. Next, we reshape the matrix 𝐻 from 2-dimension (R (𝑇 ×𝐾)×200 ) to 3-dimension (R 𝑇 ×𝐾×200 ). It is represented as</p><formula xml:id="formula_18">𝐻 = [𝐻 𝑡-𝑇 +1 , … , 𝐻 𝑡-1 , 𝐻 𝑡 ],<label>(15)</label></formula><p>where 𝐻 𝑡 ∈ R 𝐾×200 is the matrix that includes 𝐾 related stock feature vectors on the trading day 𝑡. 𝐻 𝑡 can be represented as</p><formula xml:id="formula_19">𝐻 𝑡 = [𝐧 ′ 1,𝑡 , 𝐧 ′ 2,𝑡 , … , 𝐧 ′ 𝑖,𝑡 , … , 𝐧 ′ 𝐾,𝑡 ],<label>(16)</label></formula><p>where 𝐧 ′ 1,𝑡 ∈ R 1×200 is the updated feature vector of the Top-1 related stock (the target stock as explained before) by fusing the information of its related stocks from Top-2 to Top-𝐾 on the trading day 𝑡.</p><p>Lastly, we extract the feature vector 𝐧 ′ 1 on each trading day in the window size 𝑇 to build the matrix 𝑅 𝑡𝑎𝑟 ∈ R 𝑇 ×200 , which represents the sequential news features of related stocks of a target stock in the past 𝑇 trading days. 𝑅 𝑡𝑎𝑟 is defined as</p><formula xml:id="formula_20">𝑅 𝑡𝑎𝑟 = [𝐧 ′ 1,𝑡-𝑇 +1 , … , 𝐧 ′ 1,𝑡-1 , 𝐧 ′ 1,𝑡 ].<label>(17)</label></formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4.">Prediction of stock price movements</head><p>BiLSTM is an effective sequential learning model, which achieves great performance in processing sequential data <ref type="bibr" target="#b60">[60]</ref>. In this part, we leverage BiLSTM to capture temporal financial information to predict stock price movements. We also tested other popular NLP encoders, i.e., LSTM <ref type="bibr" target="#b46">[46]</ref>, GRU <ref type="bibr" target="#b61">[61]</ref>, Bi-GRU and Transformer <ref type="bibr" target="#b62">[62]</ref>, however, BiLSTM is the most robust model to perform this task. The process of BiLSTM-based stock price movement prediction is shown in Fig. <ref type="figure" target="#fig_6">6</ref>. Firstly, given the rolling window size of 𝑇 , the quantitative indicators of a target stock 𝑄 𝑡𝑎𝑟 , the news features of the target stock 𝑁 𝑡𝑎𝑟 and the news features of its related stocks 𝑅 𝑡𝑎𝑟 are concatenated, which is denoted as 𝑋. The input of BiLSTM is</p><formula xml:id="formula_21">𝑋 = [𝑄 𝑡𝑎𝑟 ⊕ 𝑁 𝑡𝑎𝑟 ⊕ 𝑅 𝑡𝑎𝑟 ],<label>(18)</label></formula><p>where 𝑋 ∈ R 𝑇 ×431 . ⊕ denotes concatenation. 𝐱 𝑡-𝑇 +1 , … , 𝐱 𝑡-1 , 𝐱 𝑡 are the concatenated daily features in 𝑋, where 𝐱 𝑡 ∈ R 1×431 . Then, 𝑋 is fed into two BiLSTM layers (the number of BiLSTM layers is verified in Section 5.4) to discover temporal patterns for stock price movement prediction. We employ dropout ((⋅)) after each BiLSTM where ℎ 𝑡+1 ∈ R 1×256 is the concatenation of the last hidden states of the forward and backward outputs of 𝐵𝑖𝐿𝑆𝑇 𝑀 2 (⋅) with dropout. It is used for predicting the stock price movement on day 𝑡 + 1.</p><formula xml:id="formula_22">ℎ 𝑡+1 = (𝐵𝑖𝐿𝑆𝑇 𝑀 2 ((𝐵𝑖𝐿𝑆𝑇 𝑀 1 (𝑋)))),<label>(19)</label></formula><p>Finally, ℎ 𝑡+1 is fed into a dense layer and softmax to predict the probability of a movement label ( ŷ𝑡+1 )</p><formula xml:id="formula_23">ŷ𝑡+1 = 𝑠𝑜𝑓 𝑡𝑚𝑎𝑥(𝐷𝑒𝑛𝑠𝑒(ℎ 𝑡+1 )). (<label>20</label></formula><formula xml:id="formula_24">)</formula><p>We employ Cross Entropy loss to update the neural network</p><formula xml:id="formula_25"> = 𝐶𝑟𝑜𝑠𝑠𝐸𝑛𝑡𝑟𝑜𝑝𝑦( ŷ𝑡+1 , 𝑦 𝑡+1 ),<label>(21)</label></formula><p>where 𝑦 𝑡+1 denotes the ground truth label, i.e., up or down.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Experiments</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1.">Datasets</head><p>The stocks used in our experiments are from the Chinese stock market. We select six representative target stocks (no intersection with the pre-training data) from different industries. These stocks have higher market capital and more financial news in their respective industries. The basic information of each target stock is shown in Table <ref type="table" target="#tab_2">3</ref>. We collected 54,969 news titles from January 2, 2018 to June 18, 2021, 11,040 of which were about the six target stocks, and the rest <ref type="bibr" target="#b43">(43,</ref><ref type="bibr">929)</ref> were about the respectively related stocks. The statistics of training (80%), validation (10%) and testing (10%) sets are summarized in Table <ref type="table" target="#tab_3">4</ref>. Following previous research <ref type="bibr" target="#b13">[14,</ref><ref type="bibr" target="#b63">63]</ref>, to maximally utilize the available data, we conduct a 'walk forward testing' method <ref type="bibr" target="#b63">[63]</ref> to train and validate the model.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2.">Baselines</head><p>To evaluate the performance of the proposed approach, we benchmark it against the baselines, including eLSTM, LSTM-news, GCN-S and RoBERTa. The baselines are described as follows:</p><p>• eLSTM <ref type="bibr" target="#b16">[17]</ref> is a tensor-based event-driven LSTM model that effectively utilizes the news signals for stock price movement prediction. The authors developed a dictionary to generate sentiment features. The original settings of eLSTM and their developed dictionary are adopted in our benchmarking. • LSTM-news <ref type="bibr" target="#b13">[14]</ref> is an LSTM-based model for stock price prediction that incorporates technical indicators and news sentiments of target stocks. The news sentiment features of the original work are given by an English financial sentiment dictionary. However, we cannot find the paired dictionary in Chinese. Thus, we employ our pre-trained MSC to generate news features. The quantitative indicators and model structure are implemented according to the original settings. • GCN-S <ref type="bibr" target="#b28">[28]</ref> is a GCN-based model for stock price movement prediction by incorporating a shareholding graph. The employed features are OP, CP, HP, LP and Vol (see Table <ref type="table" target="#tab_1">2</ref>). The original settings of GCN-S are adopted. • RoBERTa <ref type="bibr" target="#b33">[33]</ref> is one of the most popular and competitive methods for text analysis. The pre-trained RoBERTa is adopted to extract news features. In the experiments, the news features of target stocks on a trading day 𝑡 are directly used to predict stock price movements on the trading day 𝑡 + 1. We do not benchmark with FinBERT (a pre-trained language model in the financial domain) <ref type="bibr" target="#b64">[64]</ref> because it does not support Chinese text.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3.">Setups</head><p>The basic framework of our model is performed by using Keras and TensorFlow. The batch size is 32 and the maximum number of training epochs is 200. The early-stop mechanism is employed to automatically stop the training process and reduce the overfitting risk.</p><p>We adopt the Adam optimizer with an initial learning rate of 0.001 to train the model parameters. The dimension of BiLSTM hidden states is 128. The activity regularization L2 (0.001) is applied to the weight matrix of kernel. In particular, several experiments are carried out to explore the optimal time step 𝑇 within {1, 2, … , 14}, the number of related stocks 𝐾 within {1, 2, … , 15}, and the number of BiLSTM layers within {1, 2, 3, 4}, based on the validation sets. These hyperparameters are verified in Section 5.4. We report the benchmarking results on the testing sets based on the optimal time step (𝑇 = 6), the number of related stocks (𝐾 = 10) and two BiLSTM layers.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.4.">Evaluation metrics</head><p>The evaluation of a data science model is difficult when applied to the financial domain <ref type="bibr" target="#b44">[44]</ref>. Thus, we evaluate the proposed model in terms of classification performance and financial evaluation. To evaluate classification performance, following previous studies <ref type="bibr" target="#b16">[17,</ref><ref type="bibr" target="#b49">49,</ref><ref type="bibr" target="#b50">50]</ref>, accuracy (ACC) and Matthews Correlation Coefficient (MCC) are adopted as the evaluation metrics. MCC can avoid data imbalance biases. The two metrics are defined as follows:</p><formula xml:id="formula_26">𝐴𝐶𝐶 = 𝑇 𝑃 + 𝑇 𝑁 𝑇 𝑃 + 𝑇 𝑁 + 𝐹 𝑃 + 𝐹 𝑁 , (<label>22</label></formula><formula xml:id="formula_27">)</formula><formula xml:id="formula_28">𝑀𝐶𝐶 = 𝑇 𝑃 × 𝑇 𝑁 -𝐹 𝑃 × 𝐹 𝑁 √ (𝑇 𝑃 + 𝐹 𝑃 )(𝑇 𝑃 + 𝐹 𝑁)(𝑇 𝑁 + 𝐹 𝑃 )(𝑇 𝑁 + 𝐹 𝑁) , (<label>23</label></formula><formula xml:id="formula_29">)</formula><p>where 𝑇 𝑃 is true positive, 𝐹 𝑃 is false positive, 𝑇 𝑁 is true negative and 𝐹 𝑁 is false negative.</p><p>For financial evaluation, we simulate stock trading according to the prediction results of stock price movements. We focus on trading returns and risks. Total money (TMoney) <ref type="bibr" target="#b65">[65]</ref> and Sharpe Ratio <ref type="bibr" target="#b36">[36]</ref> are adopted to evaluate the simulated trading performance. Sharpe Ratio is the average return earned in excess of the risk-free rate per unit of volatility or total risk. The annual risk-free rate is 3.0%. The two metrics are defined by:</p><formula xml:id="formula_30">𝑇 𝑀𝑜𝑛𝑒𝑦 = 𝐴𝑣𝑎𝑖𝑙𝑎𝑏𝑙𝑒 𝐶𝑎𝑝𝑖𝑡𝑎𝑙 + 𝐶𝑙𝑜𝑠𝑖𝑛𝑔 𝑃 𝑟𝑖𝑐𝑒 × 𝑁𝑢𝑚𝑏𝑒𝑟 𝑜𝑓 𝑆𝑡𝑜𝑐𝑘𝑠, (24) 𝑆ℎ𝑎𝑟𝑝𝑒𝑅𝑎𝑡𝑖𝑜 = 𝑅𝑎𝑡𝑒 𝑜𝑓 𝑅𝑒𝑡𝑢𝑟𝑛 -𝑅𝑖𝑠𝑘 𝐹 𝑟𝑒𝑒 𝑅𝑎𝑡𝑒 𝑆𝑡𝑎𝑛𝑑𝑎𝑟𝑑 𝐷𝑒𝑣𝑖𝑎𝑡𝑖𝑜𝑛 𝑜𝑓 𝑅𝑒𝑡𝑢𝑟𝑛 . (<label>25</label></formula><formula xml:id="formula_31">)</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.1.">Results of stock price movement prediction</head><p>In this section, we compare the classification performance of our MAC model against the state-of-the-art baselines. The evaluation results of different models for six target stocks are shown in Table <ref type="table" target="#tab_4">5</ref>. It can be observed that our proposed method achieves the best performance for the six stocks in terms of both the ACC and MCC metrics, yielding at least 2.38% gains in ACC and 4.62% gains in MAC on average. Compared with eLSTM (the strongest baseline), we find that the GCN module can better capture the structural information of the stock correlation graph and aggregate the effects of related stocks.</p><p>The pre-training of market-driven sentiment classification also performs better. Besides, compared with LSTM-news which only uses the quantitative indicators and news features of the target stocks, the improvements of our method are presented with 7.81% and 15.88% gains in ACC and MCC, respectively, which demonstrates the effectiveness of using the news about related stocks. Next, compared with GCN-S, which uses a single shareholding graph and price features, the results demonstrate that our method can capture more effective stock relations and useful news features. The result of RoBERTa shows that it is a useful module for learning news features. However, the gap between RoBERTa and our MAC proves the advantage and necessity of both learning the time series information in the financial domain and integrating features from multiple sources.</p><p>In summary, the results indicate that the proposed method achieves significant improvements over the baselines by considering the sequential dependencies of financial data, market-driven sentiment pretraining and incorporating information from multiple sources, such as news about related stocks.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2.">Ablation studies</head><p>We conduct several ablation experiments to analyze the effectiveness of each feature of MAC, including (A) the quantitative indicators of the target stocks (𝑄 𝑡𝑎𝑟 ), (B) the news features of the target stocks (𝑁 𝑡𝑎𝑟 ) and (C) the news features of the related stocks (𝑅 𝑡𝑎𝑟 ). We use A+B+C to represent the proposed full MAC model. A, B, C, A+B and A+C are considered the baselines of the ablation study. The news features in B and C are given by our pre-trained MSC module. To demonstrate the utility of MSC and pre-training, we examine the other two feature generators as baselines. A+B 0 +C 0 represents the concatenation of all the features, where the news features are extracted from the original Chinese-RoBERTa without domain-specific pre-training. A+B 1 +C 1 represents the concatenation of all the features, where the news features are given by a pre-trained semantics-based sentiment classifier. The classifier is also powered by Chinese-RoBERTa. However, we use a typical Chinese financial news sentiment analysis dataset ('THUC-News' <ref type="bibr" target="#b66">[66,</ref><ref type="bibr" target="#b67">67]</ref>) whose labels are given by the semantic interpretations of annotators to pre-train the classifier.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Table 6</head><p>Results of the ablation analysis. 'A' denotes the quantitative indicators of the target stocks (𝑄 𝑡𝑎𝑟 ); 'B' denotes the news features of the target stocks (𝑁 𝑡𝑎𝑟 ); 'C' denotes the news features of the related stocks (𝑅 𝑡𝑎𝑟 ); 'A+B 0 +C 0 ' denotes the concatenation of all the features, in which the news features are extracted from the original Chinese-RoBERTa that is not pre-trained by a domain-specific corpus; 'A+B 1 +C 1 ' denotes the concatenation of all the features which are extracted from Chinese-RoBERTa that is pre-trained with a semantics-driven financial news sentiment dataset and, lastly, 'A+B+C' denotes our proposed full MAC model.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Features</head><p>Metr The results of the ablation study are shown in Table <ref type="table">6</ref>. When we use the features individually (A vs. B vs. C) for stock price movement prediction, the news features (B and C) are more effective than the quantitative indicators (A). When we integrate two feature sources, the performance is improved with A+B outperforming A+C. This means that using the quantitative indicators and the news features of target stocks is more effective than using the quantitative indicators of target stocks and the news features of their related stocks. When we combine all the features in our MAC model, A+B+C obtains the highest ACC and MCC values proving the effectiveness of our model. On the other hand, the use of the original Chinese-RoBERTa (A+B 0 +C 0 ) achieves the worst average results in comparison with A+B 0 +C 0 , A+B 1 +C 1 and A+B+C.</p><p>Pre-training a Chinese-RoBERTa with a semantics-driven sentiment analysis dataset (A+B 1 +C 1 ) can yield better results (+0.77% in ACC; +1.00% in ACC) than the original Chinese-RoBERTa (A+B 0 +C 0 ). However, its performance is still weaker (-1.94% in ACC; -3.71% in MCC) than our proposed market-driven sentiment classification pretraining (A+B+C). This marked difference proves the effectiveness of our proposed market-driven sentiment classification pre-training due to more direct corresponding to actual stock market reactions towards news than the semantics-based sentiment polarity analysis.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3.">Financial evaluation</head><p>In terms of financial evaluation, we performed simulations of stock trading (backtesting) according to the prediction results of different models. The backtesting data is based on the combination of the validation and testing sets of each target stock. The Buy &amp; Hold strategy is adopted as an additional financial benchmark in this evaluation task. We take 10,000 RMB as the initial investment capital. And we assume that the transaction cost is zero during the backtesting trading. If the predicted label is 1 (up) on the next trading day (𝑡 + 1), we buy the target stock at the closing price of the current trading day (𝑡), using all of the currently available capital. If the predicted label is 0 (down), we sell the stock at the closing price of the current trading day (𝑡).</p><p>If the predicted label for the next trading day (𝑡 + 1) is the same as yesterday's predicted label for the current trading day (𝑡), we do not buy or sell. For the Buy &amp; Hold strategy, we buy the stock at the beginning with all of the initial capital and hold it without any further operations <ref type="bibr" target="#b68">[68,</ref><ref type="bibr" target="#b69">69]</ref>. Thus, the capital of Buy&amp; Hold also reflects the price movements of the stock in real time. The backtesting trading results of all the target stocks are shown in Fig. <ref type="figure">7</ref>. As seen, the proposed MAC model can gain more profits for all the target stocks than the baseline methods. The proposed method achieves positive returns on five target stocks, except for Stock 601933. However, MAC achieves lower losses than the baselines for Stock 601933, yielding more returns (745.96 RMB) than eLSTM. Therefore, the results of backtesting trading show that the proposed method can not only obtain a higher ACC (shown in Section 5.1), i.e., more accurate classification results, but also can capture more effective transaction signals to subsequently achieve higher profits. The Sharpe Ratio of different methods is shown in Table <ref type="table" target="#tab_6">7</ref>. A higher Sharpe Ratio means a higher return relative to the amount of risk taken. As seen in Table <ref type="table" target="#tab_6">7</ref>, the proposed MAC method achieves a higher Sharpe Ratio for all six target stocks. The negative Sharpe Ratio of stock 601933 means the return does not exceed the risk-free rate (3.0%). To a large extent, this is due to the dramatic decline in its market performance, as shown by the capital line of the Buy &amp; Hold strategy in Fig. <ref type="figure">7</ref>. Nevertheless, the proposed method still achieves relatively better performance than the baseline methods. These results further indicate the validity and superiority of MAC.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.4.">Hyperparameter analysis</head><p>Financial data are typical time-series data. To capture financial temporal information, we perform several experiments in order to explore the optimal window size 𝑇 within {1, 2, … , 14}. Besides, we also test the number of related stocks 𝐾 within {1, 2, … , 15} to capture enough useful information from related stocks, as well as to avoid introducing noise that can mislead target stock predictions. Last, we report the MAC model performance with different numbers of BiLSTM layers, i.e., 1, 2, 3 and 4. These experiments are conducted based on the validation sets of all the target stocks. The ACCs corresponding to different window    sizes (𝑇 ) and related stocks (𝐾) are shown in Fig. <ref type="figure">8</ref>, which shows that most stocks achieve higher ACC by 𝑇 = 6 and 𝐾 = 10 (the lighter areas).</p><p>Larger 𝑇 and 𝐾 do not bring extra gains to the model. Fig. <ref type="figure" target="#fig_9">9</ref> shows that using two BiLSTM layers achieves the optimal performance (the highest averaged ACC and MCC over the six stocks). Thus, we employ the above hyperparameters in our proposed MAC model.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.5.">Breakdown analysis</head><p>As mentioned in Section 3.2.1, the news about listed companies can be categorized as company information, business information and financial information. On the other hand, news can also be categorized by sentiment polarities, e.g., positive news regarding stock rises and negative news regarding stock falls.</p><p>Here, we conduct the breakdown analysis to explore what types of news have higher utilities in predicting stock price movements based on the above categories. To conduct the experiments, we consider the news features from each class together with the quantitative indicators. The results of the breakdown analysis are shown in Table <ref type="table" target="#tab_7">8</ref>. Compared with the model integrating news about company information (A+B  +C  ) and business information (A+B  +C  ), the model integrating news about financial information (A+B  +C  ) achieves better performance in ACC and MCC. It shows that financial information-related news has a higher utility in stock price movement prediction. The negative news-based model (A+B  +C  ) outperforms the positive news-based model (A+B  +C  ) by 1.12% in ACC and 1.81% in MCC on average. It indicates that negative news regarding stock falls has a higher utility in stock movement prediction than positive news regarding stock rises. When all the news types are considered in our MAC model (A+B+C), the model achieves the highest ACC and MCC. The results demonstrate that the employed news types can complement each other, presenting the highest utility in the stock price movement prediction task.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.">Conclusion</head><p>In order to capture the news effect of related stocks, we propose a model by combining GCN and BiLSTM to predict stock price movements in the Chinese stock market. Our model integrates multisource information, e.g., quantitative indicators, news about a target company, and news about the related companies of the target company. To achieve effective news embeddings, we pre-train a market-driven sentiment classifier, which reflects the sentiment of the real market and investors to a piece of news.</p><p>We examine our method on six target stocks that are from different industries. The experimental results show that our method surpasses the strongest baselines by at least 2.38% and 4.62% in terms of the averaged ACC and MCC, respectively. Regarding the financial evaluation, our model also performs better, showing more profits and a higher Sharpe Ratio than the state-of-art baselines. These results demonstrate that the prediction performance can be improved significantly by aggregating news features of related stocks. Moreover, the pre-trained market-driven sentiment classifier is more effective for news feature embeddings than the semantics-based sentiment polarity analysis due to more direct corresponding to actual stock market reactions towards news. In summary, the proposed method can achieve better performance for stock price movement prediction and provides better decision supports for investors to optimize their investment strategies and reduce risks caused by margin trading.</p><p>Our model presents some limitations that should be addressed in future work. First, the model does not detect if a piece of news is real. A piece of news about a target stock may be fake information published by competitors for market competition. A fake news detector <ref type="bibr" target="#b68">[68]</ref> should be introduced and the impacts of real and fake news on stock markets should be investigated in the future. Second, we find that figurative languages, e.g., metaphors, widely appear in financial news, which creates challenges for computational language understanding. To tackle this problem, metaphor processing technologies <ref type="bibr" target="#b69">[69,</ref><ref type="bibr" target="#b70">70]</ref> could be introduced in order to paraphrase the metaphorical expressions into machine-friendly literal ones, thereby improving the prediction performance of stock price movements. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>CRediT authorship contribution statement</head></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>2 1</head><label>2</label><figDesc>Quantitative indicators are the collection of transaction data and technical indicators over several trading days. Technical indicators refer to mathematical operation outputs given historical transaction data, e.g., price, trading volume or time span. Different mathematical operations can yield different technical indicators to represent the morphology and investment behaviors of stock prices.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. Overview of the MAC framework.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Y</head><label/><figDesc>.Ma et al.    </figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 2. The diagram of the MSC module for extracting daily financial news features.</figDesc><graphic coords="6,108.21,202.55,382.90,57.31" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 3 .</head><label>3</label><figDesc>Fig. 3. Illustration of related stock discovery and adjacent matrix construction.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 5 .</head><label>5</label><figDesc>Fig. 5. Information fusion of related stocks based on GCN.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Fig. 6 .</head><label>6</label><figDesc>Fig. 6. The prediction of stock price movements based on BiLSTM.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Y</head><label/><figDesc>.Ma et al.    </figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Fig. 7 .Fig. 8 .</head><label>78</label><figDesc>Fig. 7. TMoney of different models. 'B&amp;H' denotes a Buy &amp; Hold trading strategy.</figDesc><graphic coords="11,103.04,57.13,389.33,421.87" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Fig. 9 .</head><label>9</label><figDesc>Fig. 9. The prediction ACC and MCC by different numbers of BiLSTM layers. The results are averaged over the six target stocks on their validation sets.</figDesc><graphic coords="12,38.87,247.99,248.63,148.80" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>Yu Ma :</head><label>Ma</label><figDesc>Conceptualization, Methodology, Writing -original draft. Rui Mao: Conceptualization, Methodology, Writing -review &amp; editing. Qika Lin: Methodology, Software, Visualization. Peng Wu: Writingreview &amp; editing, Funding acquisition. Erik Cambria: Writing -review &amp; editing, Project administration, Supervision, Funding acquisition.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1</head><label>1</label><figDesc>Descriptions of symbols. 1×31 , the quantitative indicators of a target stock on day 𝑡. 𝑄 𝑡𝑎𝑟,𝑡 𝑄 𝑡𝑎𝑟,𝑡 ∈ R 𝑇 ×31 , the quantitative indicators of a target stock within a time window 𝑇 . 𝑇 ×200 , the news features of related stocks to a target stock within a time window 𝑇 .</figDesc><table><row><cell>Notation</cell><cell>Description</cell></row><row><cell>𝐶𝑃 𝑡</cell><cell>The closing price of a target stock on day 𝑡.</cell></row><row><cell>𝑇</cell><cell>The number of trading days before the stock price movement prediction day.</cell></row><row><cell>𝐾</cell><cell>The top-K related stocks to a target stock.</cell></row><row><cell cols="2">𝐪 𝑡𝑎𝑟,𝑡 𝐪 𝑡𝑎𝑟,𝑡 ∈ R e The market-driven sentiment embedding for a news title.</cell></row><row><cell>n</cell><cell>A daily news feature.</cell></row><row><cell>𝑀𝑆𝐶(⋅)</cell><cell>The news embedding generator based on the pre-trained market-driven sentiment classifier.</cell></row><row><cell>𝐧 𝑡𝑎𝑟,𝑡</cell><cell>𝐧 𝑡𝑎𝑟,𝑡 ∈ R 1×768 , the news features of a target stock on day 𝑡.</cell></row><row><cell>𝑁 𝑡𝑎𝑟</cell><cell>𝐍 𝑡𝑎𝑟 ∈ R 𝑇 ×768 , the news features of a target stock within a time window 𝑇 .</cell></row><row><cell>𝐺 = (𝑉 , 𝐸)</cell><cell>𝐺 is a stock relation graph. 𝑉 is the set of nodes (stocks). 𝐸 is the set of edges (relations).</cell></row><row><cell>𝑁 𝑟𝑒𝑙,𝑡</cell><cell>𝑁 𝑟𝑒𝑙,𝑡 ∈ R 𝐾×768 , the news features of K related stocks on day 𝑡.</cell></row><row><cell>𝑁 𝑟𝑒𝑙</cell><cell>𝑁 𝑟𝑒𝑙 ∈ R (𝑇 ×𝐾)×768 , the news features of K related stocks within a time window 𝑇 .</cell></row><row><cell>𝐴</cell><cell>𝐴 ∈ R 𝐾×𝐾 , an adjacency matrix.</cell></row><row><cell>𝑀</cell><cell>𝑀 ∈ R (𝑇 ×𝐾)×(𝑇 ×𝐾) , an adjacency matrix with 𝑇 time steps.</cell></row><row><cell>𝐻</cell><cell>𝐻 ∈ R (𝑇 ×𝐾)×200 , the hidden states of GCN, representing the features of related stocks.</cell></row><row><cell>𝑅 𝑡𝑎𝑟</cell><cell>𝑅 𝑡𝑎𝑟 ∈ R</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2</head><label>2</label><figDesc>The employed quantitative indicators of target stocks.</figDesc><table><row><cell>Feature name</cell><cell>Feature name</cell></row><row><cell>Opening/Closing Price (OP/CP)</cell><cell>Moving Average (MA10/MA20/MA30)</cell></row><row><cell>Highest/Lowest Price (HP/LP)</cell><cell>Weight Moving Average (WMA)</cell></row><row><cell>Volume of Trade (Vol)</cell><cell>Exponential Moving Average(EMA)</cell></row><row><cell>Turnover Rate (TurR)</cell><cell>Relative Strength Index (RSI6/RSI12/RSI24)</cell></row><row><cell>Daily Amplitude (DA)</cell><cell>Money Flow Index (MFI)</cell></row><row><cell>Daily Return (DR)</cell><cell>Stochastic Indicator KDJ (Slowk/Slowd)</cell></row><row><cell>Price-to-Earnings Ratio (P/E)</cell><cell>True Range (TR)</cell></row><row><cell>Price-to-Book Ratio (P/B)</cell><cell>Average True Range (ATR)</cell></row><row><cell>Price-to-Sales Ratio (P/S)</cell><cell>Williams Indicator (WR)</cell></row><row><cell>Moving Average Convergence and</cell><cell>Bollinger Bands</cell></row><row><cell>Divergence (DIFF/DEA/MACD)</cell><cell>(UpperBand/MiddleBand/LowerBand)</cell></row><row><cell>stock,</cell><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 3</head><label>3</label><figDesc>The basic information of each target stock.</figDesc><table><row><cell>Code</cell><cell>Name</cell><cell>Industry</cell></row><row><cell>000063</cell><cell>ZTE Corporation</cell><cell>Manufacturing of communications</cell></row><row><cell>000651</cell><cell>Gree Electric Appliances. Inc of Zhuhai</cell><cell>Manufacturing of electrical machinery</cell></row><row><cell>601800</cell><cell>China Communications Construction Ltd.</cell><cell>Civil engineering construction</cell></row><row><cell>000876</cell><cell>New Hope Liuhe Ltd.</cell><cell>Farm and sideline food processing</cell></row><row><cell>600104</cell><cell>Saic Motor Ltd.</cell><cell>Automobile industry</cell></row><row><cell>601933</cell><cell>Yonghui Superstores Ltd.</cell><cell>Wholesales and retail trade</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 4</head><label>4</label><figDesc>Dataset statistics. The # tar denotes the number of target stock news, the # rel denotes the number of related stock news, the # days denotes the number of trading days, the up denotes the number of up days and the # down denotes the number of down days.</figDesc><table><row><cell>Stock</cell><cell>Dataset</cell><cell>Start</cell><cell>End</cell><cell># tar</cell><cell># rel</cell><cell># days</cell><cell># up</cell><cell># down</cell></row><row><cell/><cell>Train</cell><cell>02/01/2018</cell><cell>21/10/2020</cell><cell>1992</cell><cell>3924</cell><cell>640</cell><cell>325</cell><cell>315</cell></row><row><cell>000063</cell><cell>Val. Test</cell><cell>22/10/2020 19/02/2021</cell><cell>18/02/2021 18/06/2021</cell><cell>540 1011</cell><cell>2157 2732</cell><cell>80 80</cell><cell>37 37</cell><cell>43 43</cell></row><row><cell/><cell>All</cell><cell>02/01/2018</cell><cell>18/06/2021</cell><cell>3543</cell><cell>8813</cell><cell>800</cell><cell>399</cell><cell>401</cell></row><row><cell/><cell>Train</cell><cell>02/01/2018</cell><cell>14/10/2020</cell><cell>1422</cell><cell>2054</cell><cell>668</cell><cell>329</cell><cell>339</cell></row><row><cell>000651</cell><cell>Val. Test</cell><cell>15/10/2020 10/02/2021</cell><cell>09/02/2021 18/06/2021</cell><cell>404 784</cell><cell>1547 2153</cell><cell>83 83</cell><cell>46 40</cell><cell>37 43</cell></row><row><cell/><cell>All</cell><cell>02/01/2018</cell><cell>18/06/2021</cell><cell>2610</cell><cell>5754</cell><cell>834</cell><cell>415</cell><cell>419</cell></row><row><cell/><cell>Train</cell><cell>02/01/2018</cell><cell>12/10/2020</cell><cell>209</cell><cell>3850</cell><cell>672</cell><cell>315</cell><cell>357</cell></row><row><cell>601800</cell><cell>Val. Test</cell><cell>13/10/2020 09/02/2121</cell><cell>08/02/2021 18/06/2021</cell><cell>92 67</cell><cell>1424 2162</cell><cell>84 84</cell><cell>32 40</cell><cell>52 44</cell></row><row><cell/><cell>All</cell><cell>02/01/2018</cell><cell>18/06/2021</cell><cell>368</cell><cell>7436</cell><cell>840</cell><cell>387</cell><cell>453</cell></row><row><cell/><cell>Train</cell><cell>02/01/2018</cell><cell>12/10/2020</cell><cell>623</cell><cell>2530</cell><cell>672</cell><cell>349</cell><cell>323</cell></row><row><cell>000876</cell><cell>Val. Test</cell><cell>13/10/2020 09/02/2121</cell><cell>08/02/2021 18/06/2021</cell><cell>429 569</cell><cell>1561 2259</cell><cell>84 84</cell><cell>40 31</cell><cell>44 53</cell></row><row><cell/><cell>All</cell><cell>02/01/2018</cell><cell>18/06/2021</cell><cell>1621</cell><cell>6350</cell><cell>840</cell><cell>420</cell><cell>420</cell></row><row><cell/><cell>Train</cell><cell>02/01/2018</cell><cell>12/10/2020</cell><cell>863</cell><cell>4474</cell><cell>672</cell><cell>331</cell><cell>341</cell></row><row><cell>600104</cell><cell>Val. Test</cell><cell>13/10/2020 09/02/2121</cell><cell>08/02/2021 18/06/2021</cell><cell>464 695</cell><cell>2315 3578</cell><cell>84 84</cell><cell>40 40</cell><cell>44 44</cell></row><row><cell/><cell>All</cell><cell>02/01/2018</cell><cell>18/06/2021</cell><cell>2022</cell><cell>10367</cell><cell>840</cell><cell>411</cell><cell>429</cell></row><row><cell/><cell>Train</cell><cell>02/01/2018</cell><cell>13/10/2020</cell><cell>399</cell><cell>1927</cell><cell>672</cell><cell>329</cell><cell>343</cell></row><row><cell>601933</cell><cell>Val. Test</cell><cell>14/10/2020 10/02/2021</cell><cell>09/02/2021 18/06/2021</cell><cell>203 274</cell><cell>1221 2061</cell><cell>84 83</cell><cell>35 34</cell><cell>49 49</cell></row><row><cell/><cell>All</cell><cell>02/01/2018</cell><cell>18/06/2021</cell><cell>876</cell><cell>5209</cell><cell>839</cell><cell>398</cell><cell>441</cell></row><row><cell>Overall</cell><cell/><cell>02/01/2018</cell><cell>18/06/2021</cell><cell>11040</cell><cell>43929</cell><cell>4993</cell><cell>2430</cell><cell>2563</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 5</head><label>5</label><figDesc>The results of different prediction models.</figDesc><table><row><cell>Methods</cell><cell>Metr.</cell><cell>000063</cell><cell>000651</cell><cell>601800</cell><cell>000876</cell><cell>600104</cell><cell>601933</cell><cell>Avg.</cell></row><row><cell>RoBERTa</cell><cell>ACC MCC</cell><cell>0.6017 0.1949</cell><cell>0.5941 0.1855</cell><cell>0.5688 0.0899</cell><cell>0.5652 0.0685</cell><cell>0.5909 0.1750</cell><cell>0.5962 0.1744</cell><cell>0.5862 0.1480</cell></row><row><cell>GCN-S</cell><cell>ACC MCC</cell><cell>0.5676 0.1471</cell><cell>0.5613 0.1272</cell><cell>0.5962 0.2026</cell><cell>0.5962 0.1348</cell><cell>0.5897 0.1759</cell><cell>0.5897 0.1136</cell><cell>0.5835 0.1502</cell></row><row><cell>LSTM-news</cell><cell>ACC MCC</cell><cell>0.6096 0.2174</cell><cell>0.6078 0.2717</cell><cell>0.5714 0.1144</cell><cell>0.5897 0.1524</cell><cell>0.5909 0.1840</cell><cell>0.5974 0.1782</cell><cell>0.5945 0.1864</cell></row><row><cell>eLSTM</cell><cell>ACC MCC</cell><cell>0.6795 0.3548</cell><cell>0.6383 0.3160</cell><cell>0.6646 0.3147</cell><cell>0.6218 0.2347</cell><cell>0.6667 0.3326</cell><cell>0.6220 0.2414</cell><cell>0.6488 0.2990</cell></row><row><cell>Ours</cell><cell>ACC MCC</cell><cell>0.7000 0.4017</cell><cell>0.6828 0.3697</cell><cell>0.6859 0.3593</cell><cell>0.6346 0.2775</cell><cell>0.6923 0.3821</cell><cell>0.2808</cell><cell>0.6726 0.3452</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_6"><head>Table 7</head><label>7</label><figDesc>The Sharpe Ratio of different methods.</figDesc><table><row><cell>Model</cell><cell>000063</cell><cell>000651</cell><cell>601800</cell><cell>000876</cell><cell>600104</cell><cell>601933</cell></row><row><cell>B&amp;H</cell><cell>0.0065</cell><cell>-1.1768</cell><cell>-0.8146</cell><cell>-2.0120</cell><cell>-0.0249</cell><cell>-2.5294</cell></row><row><cell>GCN-S</cell><cell>1.0378</cell><cell>-0.4178</cell><cell>0.8530</cell><cell>-0.0029</cell><cell>1.5067</cell><cell>-1.7214</cell></row><row><cell>RoBERTa</cell><cell>1.2566</cell><cell>-0.0382</cell><cell>0.8782</cell><cell>0.1258</cell><cell>1.2418</cell><cell>-1.7184</cell></row><row><cell>LSTM-news</cell><cell>1.3609</cell><cell>0.1043</cell><cell>0.9847</cell><cell>0.1969</cell><cell>1.2621</cell><cell>-1.9863</cell></row><row><cell>eLSTM</cell><cell>2.3786</cell><cell>0.2975</cell><cell>1.6989</cell><cell>0.5676</cell><cell>1.8346</cell><cell>-0.9372</cell></row><row><cell>Ours</cell><cell>3.0053</cell><cell>1.0384</cell><cell>2.1627</cell><cell>0.9668</cell><cell>2.8595</cell><cell>-0.1238</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_7"><head>Table 8</head><label>8</label><figDesc>Results of the breakdown analysis. 'A+B+C' denotes our proposed full MAC model, using the quantitative indicators of a target stock (A), all types of news about the target stock (B) and it related stocks (C). 'A+B  +C  ', 'A+B  +C  ', and 'A+B  +C  ' use news about company information (), business information () and financial information ( ), respectively. 'A+B  +C  ' and 'A+B  +C  ' use positive news () and negative news ( ), respectively.</figDesc><table><row><cell>Features</cell><cell>Metr.</cell><cell>000063</cell><cell>000651</cell><cell>601800</cell><cell>000876</cell><cell>600104</cell><cell>601933</cell><cell>Avg.</cell></row><row><cell>A+B  +C </cell><cell>ACC MCC</cell><cell>0.6223 0.2410</cell><cell>0.6306 0.2617</cell><cell>0.6064 0.1684</cell><cell>0.6017 0.1949</cell><cell>0.6239 0.2468</cell><cell>0.6098 0.1963</cell><cell>0.6158 0.2182</cell></row><row><cell>A+B  +C </cell><cell>ACC MCC</cell><cell>0.6310 0.2577</cell><cell>0.6343 0.2675</cell><cell>0.6104 0.1786</cell><cell>0.6096 0.2152</cell><cell>0.6330 0.2590</cell><cell>0.6037 0.2155</cell><cell>0.6203 0.2323</cell></row><row><cell>A+B  +C </cell><cell>ACC MCC</cell><cell>0.6388 0.2717</cell><cell>0.6370 0.2706</cell><cell>0.6154 0.1911</cell><cell>0.6104 0.2168</cell><cell>0.6463 0.2916</cell><cell>0.6159 0.1962</cell><cell>0.6273 0.2397</cell></row><row><cell>A+B  +C </cell><cell>ACC MCC</cell><cell>0.6407 0.2788</cell><cell>0.6403 0.2944</cell><cell>0.6096 0.1782</cell><cell>0.6090 0.1904</cell><cell>0.6296 0.2634</cell><cell>0.6154 0.2508</cell><cell>0.6241 0.2427</cell></row><row><cell>A+B  +C </cell><cell>ACC MCC</cell><cell>0.6543 0.3080</cell><cell>0.6414 0.2850</cell><cell>0.6194 0.2144</cell><cell>0.6098 0.1868</cell><cell>0.6667 0.3309</cell><cell>0.6201 0.2399</cell><cell>0.6353 0.2608</cell></row><row><cell>A+B+C</cell><cell>ACC MCC</cell><cell>0.7000 0.4017</cell><cell>0.6828 0.3697</cell><cell>0.6859 0.3593</cell><cell>0.6346 0.2775</cell><cell>0.6923 0.3821</cell><cell>0.6402 0.2808</cell><cell>0.6726 0.3452</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2" xml:id="foot_0"><p>RESSET (http://www.resset.com/) is a popular provider for financial information services in China.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="3" xml:id="foot_1"><p>Investors may be positive about the decrease of the debt ratio because a lower debt ratio means lower corporate operational risk. In contrast, investors may be negative about the decrease in investment, e.g., the investment in marketing, research, and development, because lower investment means that the company's development has encountered obstacles.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="4" xml:id="foot_2"><p>Hundsun Electronics (https://www.hundsun.com) is a leading financial technology company in China to provide one-stop financial technology services.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="5" xml:id="foot_3"><p>Company information is about the change of business and managers, qualifications and honors and external credit ratings. Business information is about business risks, products, projects, cooperation, contracts, operations, and violations of laws and regulations. Financial information is about equity assets, enterprise finance, financing transactions, and debts.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="6" xml:id="foot_4"><p>CLS and SEP are predefined special tokens in RoBERTa.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="7" xml:id="foot_5"><p>Qichacha (https://www.qcc.com/) is a leading information service in China, which focuses on enterprise credit and relationship information of companies.</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>This research is supported by the <rs type="funder">Agency for Science, Technology and Research (A*STAR)</rs> under its <rs type="programName">AME Programmatic Funding Scheme</rs> (Project #<rs type="grantNumber">A18A2b0046</rs>). The paper is also supported by the <rs type="funder">National Natural Science Foundation of China</rs> (project numbers are <rs type="grantNumber">72274096</rs> and <rs type="grantNumber">71774084</rs>), <rs type="funder">Program for Jiangsu Excellent Scientific and Technological Innovation Team, China</rs> (project number is [<rs type="grantNumber">2020]10</rs>).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_eFPN5Bg">
+					<idno type="grant-number">A18A2b0046</idno>
+					<orgName type="program" subtype="full">AME Programmatic Funding Scheme</orgName>
+				</org>
+				<org type="funding" xml:id="_3XaN6Ks">
+					<idno type="grant-number">72274096</idno>
+				</org>
+				<org type="funding" xml:id="_ezGQbem">
+					<idno type="grant-number">71774084</idno>
+				</org>
+				<org type="funding" xml:id="_wQB2Tut">
+					<idno type="grant-number">2020]10</idno>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data availability</head><p>No data was used for the research described in the article.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Declaration of competing interest</head><p>The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Appendix</head><p>The Opening/Closing Price (OP/CP), Highest/Lowest Price (HP/LP), Volume of Trade (Vol), Turnover Rate (TurR), Daily Amplitude (DA), Daily Return (DR), Price-to-Earnings Ratio (P/E), Price-to-Book Ratio (P/B) and Price-to-Sales Ratio (P/S) in the Table <ref type="table">2</ref> can be directly obtained from RESSET platform. The rest of the features are calculated as follows:</p><p>Moving Average (MA):</p><p>where 𝑛 is the length of the time period. Exponential Moving Average (EMA):</p><p>where 𝛼 = 2 𝑛+1 is the smoothing factor. Weight Average (WMA):</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Moving Average Convergence and Divergence (MACD):</head><p>MACD includes DIF, DEA, and MACD histogram:</p><p>Relative Strength Index (RSI):</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Money Flow Index (MFI):</head><p>𝑀𝐹 𝐼 𝑡 = 100 -100</p><p>where 𝑀𝑜𝑛𝑒𝑦 𝐹 𝑙𝑜𝑤 = 𝑇 𝑦𝑝𝑖𝑐𝑎𝑙 𝑝𝑟𝑖𝑐𝑒 × 𝑉 𝑜𝑙𝑢𝑚𝑒. 𝑇 𝑦𝑝𝑖𝑐𝑎𝑙 𝑝𝑟𝑖𝑐𝑒 = 𝐻𝑃 +𝐿𝑃 +𝐶𝑃 3 .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Stochastic Indicator KDJ:</head><p>where 𝐻 and 𝐿 are sets of highest prices and lowest prices in recent 𝑛 days, respectively.</p><p>True Range (TR): </p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Applications of deep learning in stock market prediction: Recent progress</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Jiang</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.eswa.2021.115537</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.eswa.2021.115537"/>
+	</analytic>
+	<monogr>
+		<title level="j">Expert Syst. Appl</title>
+		<imprint>
+			<biblScope unit="volume">184</biblScope>
+			<biblScope unit="page">115537</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Stock market movement forecast: A systematic review</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Bustos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pomares-Quimbaya</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.eswa.2020.113464</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.eswa.2020.113464"/>
+	</analytic>
+	<monogr>
+		<title level="j">Expert Syst. Appl</title>
+		<imprint>
+			<biblScope unit="volume">156</biblScope>
+			<biblScope unit="page">113464</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Ensemble application of transfer learning and sample weighting for stock market prediction</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Merello</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Picasso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Oneto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Cambria</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">IJCNN</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">A tensor-based information framework for predicting the stock market</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">L</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/2838731</idno>
+		<ptr target="http://dx.doi.org/10.1145/2838731"/>
+	</analytic>
+	<monogr>
+		<title level="j">ACM Trans. Inf. Syst</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Financial sentiment analysis: An investigation into common mistakes and silver bullets</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Xing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Malandri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Cambria</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">COLING</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="978" to="987"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">A systematic review of fundamental and technical analysis of stock market predictions</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">K</forename><surname>Nti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Adekoya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Weyori</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10462-019-09754-z</idno>
+		<ptr target="http://dx.doi.org/10.1007/s10462-019-09754-z"/>
+	</analytic>
+	<monogr>
+		<title level="j">Artif. Intell. Rev</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="3007" to="3057"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Web media and stock markets : A survey and future directions from a big data perspective</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TKDE.2017.2763144</idno>
+		<ptr target="http://dx.doi.org/10.1109/TKDE.2017.2763144"/>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Knowl. Data Eng</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="381" to="399"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">More than words: Quantifying language to measure firms' fundamentals</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Tetlock</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Saar-Tsechansky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Macskassy</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/j.1540-6261.2008.01362.x</idno>
+		<ptr target="http://dx.doi.org/10.1111/j.1540-6261.2008.01362.x"/>
+	</analytic>
+	<monogr>
+		<title level="j">J. Financ</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1437" to="1467"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">News as sources of jumps in stock returns: Evidence from 21 million news articles for 9000 companies</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Jeon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">H</forename><surname>Mccurdy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhao</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jfineco.2021.08.002</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.jfineco.2021.08.002"/>
+	</analytic>
+	<monogr>
+		<title level="j">J. Financ. Econ</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Stock trading rule discovery with double deep Q-network</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Cambria</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Soft Comput</title>
+		<imprint>
+			<biblScope unit="volume">107</biblScope>
+			<biblScope unit="page">107320</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">The effect of news and public mood on stock movements</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Gong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ins.2014.03.096</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.ins.2014.03.096"/>
+	</analytic>
+	<monogr>
+		<title level="j">Inform. Sci</title>
+		<imprint>
+			<biblScope unit="volume">278</biblScope>
+			<biblScope unit="page" from="826" to="840"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Public mood-driven asset allocation: the importance of financial sentiment in portfolio management</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Malandri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Xing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Orsenigo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Vercellis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Cambria</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cogn. Comput</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="1167" to="1176"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Fusion in stock market prediction: A decade survey on the necessity, recent developments, and potential future directions</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Thakkar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Chaudhari</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.inffus.2020.08.019</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.inffus.2020.08.019"/>
+	</analytic>
+	<monogr>
+		<title level="j">Inf. Fusion</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page" from="95" to="107"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Incorporating stock prices and news sentiments for stock market prediction: A case of Hong Kong</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ipm.2020.102212</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.ipm.2020.102212"/>
+	</analytic>
+	<monogr>
+		<title level="j">Inf. Process. Manage</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page">102212</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Leveraging social media news to predict stock index movement using RNN-boost</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">K</forename><surname>Yeo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">T</forename><surname>Lau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">S</forename><surname>Lee</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.datak.2018.08.003</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.datak.2018.08.003"/>
+	</analytic>
+	<monogr>
+		<title level="j">Data Knowl. Eng</title>
+		<imprint>
+			<biblScope unit="volume">118</biblScope>
+			<biblScope unit="page" from="14" to="24"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Modeling public mood and emotion: Stock market trend prediction with anticipatory computing approach</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Liao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">P</forename><surname>Hsieh</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.chb.2019.03.021</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.chb.2019.03.021"/>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Hum. Behav</title>
+		<imprint>
+			<biblScope unit="volume">101</biblScope>
+			<biblScope unit="page" from="402" to="408"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">A multimodal event-driven LSTM model for stock prediction using online news</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TKDE.2020.2968894</idno>
+		<ptr target="http://dx.doi.org/10.1109/TKDE.2020.2968894"/>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Knowl. Data Eng</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="3323" to="3337"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Investigating timing and impact of news on the stock market</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Merello</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Picasso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Oneto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Cambria</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of ICDM Workshops</title>
+		<meeting>ICDM Workshops</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="1348" to="1354"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Cognitive-inspired domain adaptation of sentiment lexicons</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Xing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Pallucchini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Cambria</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Information Processing and Management</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="554" to="564"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ma</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">User reviews: sentiment analysis using lexicon integrated two-channel CNN-LSTM family models</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Cambria</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Applied Soft Computing</title>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="page">106435</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Text mining for market prediction: A systematic review</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Khadjeh Nassirtoussi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Aghabozorgi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ying Wah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C L</forename><surname>Ngo</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.eswa.2014.06.009</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.eswa.2014.06.009"/>
+	</analytic>
+	<monogr>
+		<title level="j">Expert Syst. Appl</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="issue">16</biblScope>
+			<biblScope unit="page" from="7653" to="7670"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">SenticNet 7: A commonsensebased neurosymbolic AI framework for explainable sentiment analysis</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Cambria</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Decherchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Xing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kwok</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 13th Language Resources and Evaluation Conference</title>
+		<meeting>the 13th Language Resources and Evaluation Conference</meeting>
+		<imprint>
+			<publisher>European Language Resources Association</publisher>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="3829" to="3839"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Investment strategies applied to the Brazilian stock market: A methodology based on sentiment analysis with deep learning</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>De Oliveira Carosia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">P</forename><surname>Coelho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E A</forename><surname>Da Silva</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.eswa.2021.115470</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.eswa.2021.115470"/>
+	</analytic>
+	<monogr>
+		<title level="j">Expert Syst. Appl</title>
+		<imprint>
+			<biblScope unit="volume">184</biblScope>
+			<biblScope unit="page">115470</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">BERT for stock market sentiment analysis</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Sousa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sakiyama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">D S</forename><surname>Rodrigues</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">H</forename><surname>Moraes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">R</forename><surname>Fernandes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">T</forename><surname>Matsubara</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/ICTAI.2019.00231</idno>
+		<ptr target="http://dx.doi.org/10.1109/ICTAI.2019.00231"/>
+	</analytic>
+	<monogr>
+		<title level="m">IEEE 31st International Conference on Tools with Artificial Intelligence, ICTAI</title>
+		<imprint>
+			<date type="published" when="2019">2019. 2019</date>
+			<biblScope unit="page" from="1597" to="1601"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Fine-grained analysis of explicit and implicit sentiment in financial news articles</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Van De Kauter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Breesch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Hoste</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.eswa.2015.02.007</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.eswa.2015.02.007"/>
+	</analytic>
+	<monogr>
+		<title level="j">Expert Syst. Appl</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="4999" to="5010"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Statistical inferences for polarity identification in natural language</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Pröllochs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Feuerriegel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Neumann</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pone.0209323</idno>
+		<ptr target="http://dx.doi.org/10.1371/journal.pone.0209323"/>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS One</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="1" to="21"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Information externalities along the supply chain: The economic determinants of suppliers' stock price reaction to their customers' earnings announcements</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Pandit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Wasley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Zach</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/j.1911-3846.2011.01092.x</idno>
+		<ptr target="http://dx.doi.org/10.1111/j.1911-3846.2011.01092.x"/>
+	</analytic>
+	<monogr>
+		<title level="j">Contemp. Account. Res</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1304" to="1343"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Incorporating corporation relationship via graph convolutional neural networks for stock price prediction</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Huang</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3269206.3269269</idno>
+		<ptr target="http://dx.doi.org/10.1145/3269206.3269269"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 27th ACM International Conference on Information and Knowledge Management, CIKM '18</title>
+		<meeting>the 27th ACM International Conference on Information and Knowledge Management, CIKM '18</meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="1655" to="1658"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Social media strategies in product-harm crises</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Rui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">B</forename><surname>Whinston</surname></persName>
+		</author>
+		<idno type="DOI">10.1287/isre.2017.0707</idno>
+		<ptr target="http://dx.doi.org/10.1287/isre.2017.0707"/>
+	</analytic>
+	<monogr>
+		<title level="j">Inf. Syst. Res</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="362" to="380"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Misery Loves company: The spread of negative impacts resulting from an organizational crisis</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sengul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">H</forename><surname>Lester</surname></persName>
+		</author>
+		<idno type="DOI">10.5465/amr.2008.31193499</idno>
+		<ptr target="http://dx.doi.org/10.5465/amr.2008.31193499"/>
+	</analytic>
+	<monogr>
+		<title level="j">Acad. Manage. Rev</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="452" to="472"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<monogr>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Smart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Zutter</surname></persName>
+		</author>
+		<title level="m">Fundamentals of Investing</title>
+		<meeting><address><addrLine>London, United Kingdom</addrLine></address></meeting>
+		<imprint>
+			<publisher>Pearson</publisher>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note>fourteenth ed</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<monogr>
+		<title level="m" type="main">RoBERTa: A robustly optimized BERT pretraining approach</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Goyal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Joshi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Levy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lewis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zettlemoyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Stoyanov</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/ARXIV.1907.11692</idno>
+		<ptr target="http://dx.doi.org/10.48550/ARXIV.1907.11692"/>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<monogr>
+		<title level="m" type="main">UER: An open-source toolkit for pre-training models</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Ju</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Du</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/ARXIV.1909.05658</idno>
+		<ptr target="http://dx.doi.org/10.48550/ARXIV.1909.05658"/>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Semi-supervised classification with graph convolutional networks</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">N</forename><surname>Kipf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Welling</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/ARXIV.1609.02907</idno>
+		<ptr target="http://dx.doi.org/10.48550/ARXIV.1609.02907"/>
+	</analytic>
+	<monogr>
+		<title level="m">5th International Conference on Learning Representations, ICLR 2017</title>
+		<meeting><address><addrLine>Toulon, France</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="24" to="26"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Framewise phoneme classification with bidirectional LSTM and other neural network architectures</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Graves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schmidhuber</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neunet.2005.06.042</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.neunet.2005.06.042"/>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Netw</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">5-6</biblScope>
+			<biblScope unit="page" from="602" to="610"/>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Financial market imperfections, firm leverage, and the cyclicality of employment</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Sharpe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am. Econ. Rev</title>
+		<imprint>
+			<biblScope unit="volume">84</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1060" to="1074"/>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">The behavior of stock-market prices</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">F</forename><surname>Fama</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Bus</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="34" to="105"/>
+			<date type="published" when="1965">1965</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">News sentiment and states of stock return volatility: Evidence from long memory and discrete choice models</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">Y</forename><surname>Ho</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.frl.2020.101446</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.frl.2020.101446"/>
+	</analytic>
+	<monogr>
+		<title level="j">Financ. Res. Lett</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page">101446</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Lagging behind? Emotions in newspaper articles and stock market prices in the Netherlands</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Strauss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Vliegenthart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Verhoeven</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.pubrev.2016.03.010</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.pubrev.2016.03.010"/>
+	</analytic>
+	<monogr>
+		<title level="j">Publ. Relat. Rev</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="548" to="555"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Negative spillover in brand portfolios: Exploring the antecedents of asymmetric effects</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Dawar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lemmink</surname></persName>
+		</author>
+		<idno type="DOI">10.1509/JMKG.72.3.111</idno>
+		<ptr target="http://dx.doi.org/10.1509/JMKG.72.3.111"/>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mark</title>
+		<imprint>
+			<biblScope unit="volume">72</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="111" to="123"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Shareholder value effects of the Volkswagen emissions scandal on the automotive ecosystem</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">W</forename><surname>Jacobs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">R</forename><surname>Singhal</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/poms.13228</idno>
+		<ptr target="http://dx.doi.org/10.1111/poms.13228"/>
+	</analytic>
+	<monogr>
+		<title level="j">Prod. Oper. Manag</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="2230" to="2251"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Spillover effects within business groups: The case of Korean chaebols</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">Y</forename><surname>Joe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">D</forename><surname>Oh</surname></persName>
+		</author>
+		<idno type="DOI">10.1287/mnsc.2016.2596</idno>
+		<ptr target="http://dx.doi.org/10.1287/mnsc.2016.2596"/>
+	</analytic>
+	<monogr>
+		<title level="j">Manage. Sci</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1396" to="1412"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">How emerging market investors' value competitors' customer equity: Brand crisis spillover in China</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Zou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jbusres.2015.12.068</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.jbusres.2015.12.068"/>
+	</analytic>
+	<monogr>
+		<title level="j">J. Bus. Res</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="3765" to="3771"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Natural language based financial forecasting: a survey</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">Z</forename><surname>Xing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Cambria</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Welsch</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10462-017-9588-9</idno>
+		<ptr target="http://dx.doi.org/10.1007/s10462-017-9588-9"/>
+	</analytic>
+	<monogr>
+		<title level="j">Artif. Intell. Rev</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="49" to="73"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Technical analysis and sentiment embeddings for market trend prediction</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Picasso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Merello</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Oneto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Cambria</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.eswa.2019.06.014</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.eswa.2019.06.014"/>
+	</analytic>
+	<monogr>
+		<title level="j">Expert Syst. Appl</title>
+		<imprint>
+			<biblScope unit="volume">135</biblScope>
+			<biblScope unit="page" from="60" to="70"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Long short-term memory</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hochreiter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schmidhuber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="1735" to="1780"/>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Deep learning based text classification: A comprehensive review</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Minaee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Kalchbrenner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Cambria</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Nikzad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Chenaghlu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gao</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3439726</idno>
+		<ptr target="http://dx.doi.org/10.1145/3439726"/>
+	</analytic>
+	<monogr>
+		<title level="j">ACM Comput. Surv</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">62</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<monogr>
+		<title level="m" type="main">BERT: Pre-training of deep bidirectional transformers for language understanding</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Devlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-W</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Toutanova</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/ARXIV.1810.04805</idno>
+		<ptr target="http://dx.doi.org/10.48550/ARXIV.1810.04805"/>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Improving stock market prediction via heterogeneous inf. fusion</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Fang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">S</forename><surname>Yu</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.knosys.2017.12.025</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.knosys.2017.12.025"/>
+	</analytic>
+	<monogr>
+		<title level="j">Knowl.-Based Syst</title>
+		<imprint>
+			<biblScope unit="volume">143</biblScope>
+			<biblScope unit="page" from="236" to="247"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">News-driven stock prediction via noisy equity state representation</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Feng</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neucom.2021.10.092</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.neucom.2021.10.092"/>
+	</analytic>
+	<monogr>
+		<title level="j">Neurocomputing</title>
+		<imprint>
+			<biblScope unit="volume">470</biblScope>
+			<biblScope unit="page" from="66" to="75"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Comparative analyses of Bert, Roberta, Distilbert, and Xlnet for text-based emotion recognition</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Adoma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N.-M</forename><surname>Henry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/ICCWAMTIP51612.2020.9317379</idno>
+		<ptr target="http://dx.doi.org/10.1109/ICCWAMTIP51612.2020.9317379"/>
+	</analytic>
+	<monogr>
+		<title level="m">2020 17th International Computer Conference on Wavelet Active Media Technology and Information Processing</title>
+		<imprint>
+			<publisher>ICCWAMTIP</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="117" to="121"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">An end-to-end multigranularity reading comprehension model for question answering</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Geng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Qin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mgrc</forename></persName>
+		</author>
+		<idno type="DOI">10.1109/TNNLS.2021.3107029</idno>
+		<ptr target="http://dx.doi.org/10.1109/TNNLS.2021.3107029"/>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Neural Netw. Learn. Syst</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="12"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Bridging towers of multitask learning with a gating mechanism for aspect-based sentiment analysis and sequential metaphor identification</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 35th AAAI Conference on Artificial Intelligence</title>
+		<meeting>the 35th AAAI Conference on Artificial Intelligence</meeting>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="13534" to="13542"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Explainable metaphor identification inspired by conceptual metaphor theory</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Cambria</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 36th AAAI Conference on Artificial Intelligence</title>
+		<meeting>the 36th AAAI Conference on Artificial Intelligence</meeting>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="10681" to="10689"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Construction of genealogical knowledge graphs from obituaries: Multitask neural network extraction system</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.2196/25670</idno>
+		<ptr target="http://dx.doi.org/10.2196/25670"/>
+	</analytic>
+	<monogr>
+		<title level="j">J. Med. Internet Res</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page">25670</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">The biases of pre-trained language models: An empirical study on prompt-based sentiment analysis and emotion detection</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Cambria</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TAFFC.2022.3204972</idno>
+		<ptr target="http://dx.doi.org/10.1109/TAFFC.2022.3204972"/>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Affect. Comput</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="11"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Node2vec: Scalable feature learning for networks</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Grover</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Leskovec</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/2939672.2939754</idno>
+		<ptr target="http://dx.doi.org/10.1145/2939672.2939754"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</title>
+		<meeting>the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining<address><addrLine>New York, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="855" to="864"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Improving university faculty evaluations via multi-view knowledge graph</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Niu</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.future.2020.11.021</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.future.2020.11.021"/>
+	</analytic>
+	<monogr>
+		<title level="j">Futur. Gener. Comput. Syst</title>
+		<imprint>
+			<biblScope unit="volume">117</biblScope>
+			<biblScope unit="page" from="181" to="192"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Contrastive graph representations for logical formulas embedding</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zeng</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TKDE.2021.3139333</idno>
+		<ptr target="http://dx.doi.org/10.1109/TKDE.2021.3139333,1-1"/>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Knowl. Data Eng</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">End-to-end sequential metaphor identification inspired by linguistic theories</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Guerin</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/P19-1378</idno>
+		<ptr target="http://dx.doi.org/10.18653/v1/P19-1378"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 57th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="3888" to="3898"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Learning phrase representations using RNN encoder-decoder for statistical machine translation</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Van Merriënboer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gulcehre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Bahdanau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Bougares</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Schwenk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing, EMNLP</title>
+		<meeting>the 2014 Conference on Empirical Methods in Natural Language Processing, EMNLP</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="1724" to="1734"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Attention is all you need</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vaswani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Shazeer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Parmar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Uszkoreit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">N</forename><surname>Gomez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ł</forename><surname>Kaiser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Polosukhin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Neural Inf. Process. Syst</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">Ensemble of technical analysis and machine learning for market trend prediction</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Ratto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Merello</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Oneto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Malandri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Cambria</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/SSCI.2018.8628795</idno>
+		<ptr target="http://dx.doi.org/10.1109/SSCI.2018.8628795"/>
+	</analytic>
+	<monogr>
+		<title level="m">IEEE Symposium Series on Computational Intelligence</title>
+		<imprint>
+			<publisher>SSCI</publisher>
+			<date type="published" when="2018">2018. 2018</date>
+			<biblScope unit="page" from="2090" to="2096"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<monogr>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C S</forename><surname>Uy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Huang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2006.08097</idno>
+		<title level="m">FinBERT: A pretrained language model for financial communications</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">A novel graph convolutional feature based convolutional neural network for stock trend prediction</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W.-G</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ins.2020.12.068</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.ins.2020.12.068"/>
+	</analytic>
+	<monogr>
+		<title level="j">Inform. Sci</title>
+		<imprint>
+			<biblScope unit="volume">556</biblScope>
+			<biblScope unit="page" from="67" to="94"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">Scalable term selection for text categorization</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sun</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2007 Joint Conference on Empirical Methods in Natural Language Processing and Computational Natural Language Learning (EMNLP-CoNLL)</title>
+		<meeting>the 2007 Joint Conference on Empirical Methods in Natural Language Processing and Computational Natural Language Learning (EMNLP-CoNLL)</meeting>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+			<biblScope unit="page" from="774" to="782"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">A comparison and semi-quantitative analysis of words and character-bigrams as features in chinese text categorization</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 21st International Conference on Computational Linguistics and 44th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 21st International Conference on Computational Linguistics and 44th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<date type="published" when="2006">2006</date>
+			<biblScope unit="page" from="545" to="552"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<monogr>
+		<title level="m" type="main">Rumour detection on social media for crisis management</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Ciravegna</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<publisher>ISCRAM</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title level="a" type="main">Word embedding and WordNet based metaphor identification and interpretation</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Guerin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 56th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="1222" to="1231"/>
+		</imprint>
+	</monogr>
+	<note>Long Papers</note>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title level="a" type="main">MetaPro: A computational metaphor processing model for text pre-processing</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Cambria</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.inffus.2022.06.002</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.inffus.2022.06.002"/>
+	</analytic>
+	<monogr>
+		<title level="j">Inf. Fusion</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="issue">87</biblScope>
+			<biblScope unit="page" from="30" to="43"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

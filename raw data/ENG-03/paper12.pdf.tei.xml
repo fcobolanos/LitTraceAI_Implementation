@@ -1,0 +1,1268 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">The Use of Sentinel-1 Synthetic Aperture Radar (SAR) Images and Open-Source Software for Cultural Heritage: An Example from Paphos Area in Cyprus for Mapping Landscape Changes after a 5.6 Magnitude Earthquake</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2019-07-26">26 July 2019</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Marios</forename><surname>Tzouvaras</surname></persName>
+							<email>marios.tzouvaras@cut.ac.cy</email>
+							<idno type="ORCID">0000-0002-4543-3112</idno>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Eratosthenes Research Centre</orgName>
+								<orgName type="department" key="dep2">Department of Civil Engineering and Geomatics</orgName>
+								<orgName type="department" key="dep3">School of Engineering and Technology</orgName>
+								<orgName type="institution">Cyprus University of Technology</orgName>
+								<address>
+									<postCode>3036</postCode>
+									<settlement>Limassol</settlement>
+									<country key="CY">Cyprus</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dimitris</forename><surname>Kouhartsiouk</surname></persName>
+							<idno type="ORCID">0000-0002-4543-3112</idno>
+							<affiliation key="aff1">
+								<orgName type="institution">GEOFEM Ltd</orgName>
+								<address>
+									<postCode>1080</postCode>
+									<settlement>Nicosia</settlement>
+									<country key="CY">Cyprus</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Athos</forename><surname>Agapiou</surname></persName>
+							<idno type="ORCID">0000-0001-9106-6766</idno>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Eratosthenes Research Centre</orgName>
+								<orgName type="department" key="dep2">Department of Civil Engineering and Geomatics</orgName>
+								<orgName type="department" key="dep3">School of Engineering and Technology</orgName>
+								<orgName type="institution">Cyprus University of Technology</orgName>
+								<address>
+									<postCode>3036</postCode>
+									<settlement>Limassol</settlement>
+									<country key="CY">Cyprus</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chris</forename><surname>Danezis</surname></persName>
+							<idno type="ORCID">0000-0002-0248-1085</idno>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Eratosthenes Research Centre</orgName>
+								<orgName type="department" key="dep2">Department of Civil Engineering and Geomatics</orgName>
+								<orgName type="department" key="dep3">School of Engineering and Technology</orgName>
+								<orgName type="institution">Cyprus University of Technology</orgName>
+								<address>
+									<postCode>3036</postCode>
+									<settlement>Limassol</settlement>
+									<country key="CY">Cyprus</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Diofantos</forename><forename type="middle">G</forename><surname>Hadjimitsis</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Eratosthenes Research Centre</orgName>
+								<orgName type="department" key="dep2">Department of Civil Engineering and Geomatics</orgName>
+								<orgName type="department" key="dep3">School of Engineering and Technology</orgName>
+								<orgName type="institution">Cyprus University of Technology</orgName>
+								<address>
+									<postCode>3036</postCode>
+									<settlement>Limassol</settlement>
+									<country key="CY">Cyprus</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">The Use of Sentinel-1 Synthetic Aperture Radar (SAR) Images and Open-Source Software for Cultural Heritage: An Example from Paphos Area in Cyprus for Mapping Landscape Changes after a 5.6 Magnitude Earthquake</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2019-07-26">26 July 2019</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">4AA4E4578C651770370EB7A2921F9617</idno>
+					<idno type="DOI">10.3390/rs11151766</idno>
+					<note type="submission">Received: 30 June 2019; Accepted: 23 July 2019;</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-09-01T12:24+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>land movements</term>
+					<term>SAR interferometry</term>
+					<term>Sentinel-1</term>
+					<term>Copernicus</term>
+					<term>cultural heritage</term>
+					<term>decision-making</term>
+					<term>policy</term>
+					<term>Cyprus</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Active satellite remote sensors have emerged in the last years in the field of archaeology, providing new tools for monitoring extensive cultural heritage landscapes and areas. These active sensors, namely synthetic aperture radar (SAR) satellites, provide systematic datasets for mapping land movements triggered from earthquakes, landslides, and so on. Copernicus, the European program for monitoring the environment, provides continuous radar datasets through the Sentinel-1 mission with an almost worldwide coverage. This paper aims to demonstrate how the use of open-access and freely distributed datasets such as those under the Copernicus umbrella, along with the exploitation of open-source radar processing software, namely the sentinel applications platform (SNAP) and SNAPHU tools, provided respectively by the European Space Agency (ESA) and the University of Stanford, can be used to extract an SAR interferogram in the wider area of Paphos, located in the western part of Cyprus. The city includes various heritage sites and monuments, some of them already included in the UNESCO World Heritage list. The interferogram was prepared to study the effects of an earthquake to the buildings and sites of the area. The earthquake of a 5.6 magnitude on the Richter scale was triggered on 15 April 2015 and was strongly felt throughout the whole island. The interferogram results were based on Differential Synthetic Aperture Radar Interferometry (D-InSAR) methodology, finding a maximum uplift of 74 mm and a maximum subsidence of 31 mm. The overall process and methodology are presented in this paper.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>Applications of Earth Observation for cultural heritage have rapidly increased in the last years. A review of the available literature indicates a growing interest in the exploitation of active satellite sensors with particular emphasis on the use of synthetic aperture radar (SAR) <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref>. The increase in spatial resolution, as in the case of TerraSAR-X, and in temporal resolution, as in the case of the Sentinel-1 constellation, are two main developments in this domain. The free, full, and open data policy adopted by the Copernicus program, which foresees free access to the Sentinel datasets, can be considered as a milestone for the scientific progress of radar space technology <ref type="bibr" target="#b3">[4]</ref>. The launch of Sentinel-1A in 2014 and Sentinel-1B two years later has made possible the systematic supply of data for multitemporal analyses. Several studies have been carried out on investigating the effectiveness of Differential SAR Interferometry (D-InSAR) on the detection of land movements. D-InSAR has been used successfully for monitoring land subsidence <ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref> and uplift, with particular applications such as landslides <ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref> and other ground displacements caused by natural occurring phenomena such as earthquakes <ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref>, volcano eruptions <ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref>, and also human activities <ref type="bibr" target="#b19">[20,</ref><ref type="bibr" target="#b20">21]</ref>. D-InSAR can be used to detect and monitor, under certain conditions, ground deformations on a centimetric scale, offering an effective method for assessing land movements over large areas <ref type="bibr" target="#b21">[22]</ref>.</p><p>In recent years, there has been a growing interest in the use of remote sensing techniques, such as the application of D-InSAR for deformation monitoring, for risk monitoring and assessment of cultural heritage <ref type="bibr" target="#b22">[23]</ref>. This interest was further enhanced by free provision and access to SAR data of various spatial resolutions and temporal coverage. Research interests have often focused on identifying the perspectives of SAR remote sensing for cultural heritage applications <ref type="bibr" target="#b1">[2,</ref><ref type="bibr" target="#b23">24]</ref>. In other cases, the aim has been to monitor cultural heritage sites and assess the risk of geohazards <ref type="bibr" target="#b2">[3,</ref><ref type="bibr" target="#b24">25]</ref>. Polarimetric C-and L-band SAR sensitivity has been analyzed with buried archaeological structures <ref type="bibr" target="#b25">[26]</ref>, and integration of radar and laser-based remote sensing techniques for monitoring structural deformation of archaeological monuments has also been studied <ref type="bibr" target="#b26">[27]</ref>. Additionally, Persistent Scatterer Interferometry (PSI) techniques such as Permanent Scatterer SAR Interferometry (PSInSAR) and "Squeezed" SAR (SqueeSAR) have proven to be suitable for deformation analyses in cultural heritage sites <ref type="bibr" target="#b27">[28]</ref>.</p><p>Based on these studies, selection of SAR data should be case-specific and should always be based on the properties and characteristics of the cultural heritage monuments and their surroundings to achieve optimum results. Therefore, SAR acquisitions with a long wavelength (L-band, P-band, etc.), having enhanced capabilities for penetration, are recommended for areas covered with vegetation, whereas in the cases of D-InSAR and MT-InSAR, SAR data with a short wavelength (C-band) are preferred, as there is a need to improve the accuracy of the calculated deformations. In the case of early warning systems and detailed monitoring, high-resolution SAR data are required <ref type="bibr" target="#b2">[3]</ref>. Integration of different SAR interferometry techniques can overcome any obstacles by combining their respective advantages <ref type="bibr" target="#b22">[23]</ref>.</p><p>The 12 day repeat cycle of the Sentinel sensors can be also used for mapping rapid changes in the landscape such as those in the case of an earthquake. The use of freely distributed datasets, such as those of Sentinel-1, along with the exploitation of open-source software for processing radar images are key characteristics for assessing the impact to cultural heritage worldwide, even in areas with limited budgets. The main goal of the present study is to monitor the vulnerability of built heritage with regards to land movements at the area of Paphos by exploiting free datasets and open software, aiming to demonstrate the capabilities that can be offered by such solutions. The present article is a continuation of a previous study that was carried out on "Earth observation technologies in service to the cultural landscape of Cyprus: risk identification and assessment" <ref type="bibr" target="#b28">[29]</ref>.</p><p>The paper is organized as follows: first, the case study area is presented, followed by a description of the datasets and software used. Then, the overall methodology is presented. In Section 4 the methodology applied is described, and in Section 5, the results of this analysis are highlighted. The paper ends with a discussion and the conclusions.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Case Study</head><p>The area of interest is the wider region of the city of Paphos, located in the western part of Cyprus. In this region, important archaeological sites and monuments attract thousands of tourists every year. The historic center of Paphos hosts important heritage buildings, most of them nowadays renovated. The sites are scattered around the wider area of the city, while the main attractions are the sites of "Nea Paphos" and the "Tombs of the Kings", which were inscribed on the World Heritage List of UNESCO in 1980. These sites, placed in the most western part of Paphos, preserve a unique heritage identity of the island, revealing the rich cultural heritage of the area <ref type="bibr">[30]</ref>.</p><p>"Nea Paphos" is considered one of the most important sites of the island. It was founded at the end of the 4th century and in the beginning of the 3rd century B.C., when Cyprus became part of the Ptolemaic kingdom. Nea Paphos became the center of Ptolemaic administration on the island. Until the end of the 2nd century B.C., Nea Paphos was the capital of the whole island and remained as such until the 4th century A.D. The remains that can be visited today are mainly dated to the Hellenistic and Roman periods. The city seems to have already been fortified by Nicocles, and the city walls formed a considerable work of defense. Most of their superstructure has disappeared or quarried, but the course of the city wall can be traced over most of its length by the rock cut foundations. Systematic excavations at Nea Paphos started in 1962 by the Department of Antiquities, during which many of the ancient town´s administrative buildings as well as private houses and ecclesiastical buildings came to light. Some of the most important monuments of the site are the Roman villas decorated with impressive floor mosaics, such as the "House of Dionysos", the "House of Aion", and the "House of Orpheus". Apart from the villas, the civic center of Nea Paphos was situated in the northwestern part of the city and included the important public buildings of the town, such as the Agora, the theatre, and the Asklepieion, parts of which can be visited today <ref type="bibr">[31]</ref>.</p><p>The "Tombs of the Kings" site is an impressive necropolis that is located just outside the walls, to the north and east of Paphos city. It was built during the Hellenistic period (3rd century B.C.) to satisfy the needs of the newly founded Nea Paphos. Its name is connected with the impressive character of its burial monuments. It was the place where the higher administrative officers and distinguished Ptolemaic personalities as well as the members of their families were buried. In 1977, systematic excavations were carried out by the Department of Antiquities, which brought to light eight large tomb complexes. Most of the tombs are characterized by an underground, open aired, peristyled rectangular atrium completely carved into the natural rock. Columns or pillars of the Doric style support the porticoes, which surround the atrium <ref type="bibr">[32]</ref>.</p><p>It is possible that these monuments were built over unstable underlying ground conditions, thus increasing the risk for severe damages or even their collapse. Cyprus is located within a seismically active zone, a fact that further enhances the importance of monitoring cultural heritage sites located in Cyprus. Paphos is situated in the most tectonic region of Cyprus, and several earthquakes have been reported in the past. One of the most devastating earthquakes in the area was the 6.5 Richter earthquake in 1953, which had a result of 40 people killed, 100 people injured, and 4000 people becoming homeless.</p><p>On 15 April 2015, at 8:25 AM UTC, Cyprus was hit by a new earthquake. The earthquake had a magnitude 5.6 on the Richter scale with an epicenter 3 km offshore, west of Kissonerga, and 8 km northwest of Paphos as shown in Figure <ref type="figure" target="#fig_0">1</ref> [33]. The earthquake was strongly felt throughout Cyprus. Many minor earthquakes occurred in the vicinity during the day raising concern to citizens and local authorities. In total, the post-seismic sequence consisted of around 60 smaller scale earthquakes in the same epicentral area. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Datasets</head><p>In order to study the deformation caused by the earthquake and its effects to the wider area of Paphos, SAR images before and after the event were obtained to apply D-InSAR methodology. Therefore, two Sentinel-1 SAR images were acquired, one on 14 April 2015 (i.e., one day before the earthquake) and one on 26 April 2015. A detailed list of the characteristics of the acquired images is presented in Table <ref type="table" target="#tab_0">1</ref>. The image pair was processed using the open-source software Sentinel Applications Platform (SNAP) <ref type="bibr" target="#b29">[34]</ref>. The open source policy and the great number of capabilities make it an ideal candidate software for SAR as well as optical imagery processing. SNAPHU v1.4.2 software <ref type="bibr" target="#b30">[35]</ref>, a statistical-cost network-flow algorithm for phase unwrapping developed at Stanford University, was used for the phase unwrapping process of the methodology.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Methodology</head><p>This section presents the overall methodology followed. An overview of the methodology steps that were carried out is presented in Figure <ref type="figure" target="#fig_1">2</ref>. As described in the previous section, two SAR acquisitions were downloaded from the European Space Agency (ESA) Copernicus Open Access Hub <ref type="bibr" target="#b31">[36]</ref> to study the earthquake's effects in the Paphos area. For the needs of the interferometric analysis it is very important to have a high coherence between the two image acquisitions. Coherence is used as a quantitative indicator of the quality of the associated interferogram and is an indication of any significant radar signal changes between acquisitions. Surface cover changes, such as vegetation growth, often exhibit and introduce sudden changes in coherence in SAR imagery. Thus, for higher accuracy of results, it is suggested that the final displacement maps are masked according to high coherence for land cover such as urban areas. Therefore, it is recommended that the acquisition times for the pair of SAR images are temporally close in order to minimize the loss of coherence. Small perpendicular baseline interferograms are preferable, as these do not suffer from geometric decorrelation, show good fringes, and are usually easy to unwrap <ref type="bibr" target="#b32">[37]</ref>. For D-InSAR, the limit of their perpendicular baselines was set to 200 m <ref type="bibr" target="#b33">[38]</ref>. In general, D-InSAR favors short baselines (less than 200 m) for C-band systems. Due to the high revisit frequency and the excellent orbital accuracy of Sentinel-1, the perpendicular baseline is usually not a limiting factor, facilitating the application of InSAR in many countries <ref type="bibr" target="#b34">[39]</ref>. The perpendicular baseline aspect, though, can be used to select the optimal pair of images <ref type="bibr" target="#b35">[40]</ref>.</p><p>After downloading the pair of Sentinel-1 images, these were inserted into the SNAP software. The coregistration step followed, and then the interferogram was developed. Images were aligned and matched using coarse followed by DEM-assisted fine coregistration of subpixel accuracy. The derived original interferogram was used to remove the topographic phase using the digital elevation model (DEM) that was automatically acquired by the SNAP software in order to produce a differential interferogram. The Goldstein phase filter was also applied to enhance the developed interferogram and make the interferometric fringes visually clearer. Then, phase unwrapping was carried out using the SNAPHU software. After importing the results back in SNAP, the phase values were converted to displacement values. In order to obtain accurate results, geometric correction and coherence masking were applied to lead to the final output, which was the displacement map.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.1.">Synthetic Aperture Radar (SAR) Processing</head><p>The images were initially imported to SNAP software. After checking that the pair of images were suitable for the task in hand, the two images were coregistered in the SNAP environment into a stack, selecting the image prior to the earthquake (14f April) as the master and the SAR image after the earthquake (26 April) as the slave. During this process, the pixels in the slave image were aligned with the master image to subpixel accuracy. Coregistration ensured that each ground target contributed to the same (range, azimuth) pixel in both the master and the slave images <ref type="bibr" target="#b36">[41]</ref>. In order to achieve fine azimuth coregistration accuracy, the enhanced spectral diversity (ESD) method was applied <ref type="bibr" target="#b37">[42]</ref>. ESD exploits the overlapping area between two consecutive bursts to estimate the mis-registration with the required sensitivity. During this process, the "Sentinel Precise Orbits" file, which contains information about the position of the satellite during the acquisition of SAR data, was used. Additionally, a digital elevation model (DEM), SRTM (Shuttle Radar Topography Mission) 3 s, was used, and the cubic convolution resampling method was chosen to achieve more accurate results of the subpixel coregistration. When available, DEMs of higher resolution, such as SRTM 1, ASTER GDEM (Global Digital Elevation Model), and so on, can be used instead to improve the results even further. The coregistration result can be manually assessed by vertically displaying both images at the same time. Coherence was also very high in both images, being a good indicator for the successful completion of the coregistration step, as a higher coherence area indicates a better coregistration location <ref type="bibr" target="#b38">[43]</ref>. The quality of the results from interferometric processing is greatly affected by the quality of the coregistration.</p><p>The next step leads both to the development of the interferogram and the derivation of the coherence. The synthesized interferogram from the DEM used at the previous step was combined with the interferogram from the input interferometric pair to create the differential interferogram. The fringes represent the changes in phase between the two images in terms of radians of a full 2π cycle. Each cycle of colors represents half the sensor's wavelength. In the case of Sentinel-1, each cycle represents a line-of-sight phase displacement of approximately 2.7 cm. In general, the closer the distance between the fringes, the greater is the shift in position of the surface. Where no clear colors are visible, this is the result of phase noise, which in turn is due to temporal change of the scatterers. This is also an indicator of low coherence regions.</p><p>The derived interferogram, essentially being the difference between the phases of two SAR images, is influenced by the topography as it is highly correlated to elevation. In order to derive a SAR interferogram without the influence of surface elevation, a DEM was used to simulate the topographic fringes (topographic phase), which were then removed from the produced interferogram. Goldstein phase filtering was then carried out prior to unwrapping as a preparatory step for increasing the signal-to-noise ratio. The differential interferogram (Figure <ref type="figure" target="#fig_2">3</ref>) produced in the previous step contains information regarding elevation displacement. The process of converting the interferogram from a cyclical to a linear format is called interferogram phase "unwrapping". This step was carried out in order to calculate the absolute phase, which can then be transformed into height or displacement. Phase unwrapping was carried out in SNAPHU software plugin, and the results were then used as an input to SNAP software.</p><p>One of the final steps of the process in the conversion of phase to displacement, leading to the calculation of vertical land movements/displacement, indicates the impact of the earthquake on the cultural heritage sites under study in terms of displacement in millimeters. Firstly, the location of a pixel of a known displacement was identified. Such information can be acquired from Global Navigation Satellite System (GNSS) receivers. The value of the pixel of known displacement was then used to convert relative displacement values to absolute ones. This was achieved by subtracting the value of the specific pixel from all the pixels in the areas of interest. If more than one pixel with such information was available, it could be used to validate the final output of the displacement map. To convert the unwrapped phase ϕ to vertical displacement in millimetres, the following equation was used:</p><formula xml:id="formula_0">vertical displacement (mm) = ϕ unwrapped • λ(mm) -4π • cos θ incident . (<label>1</label></formula><formula xml:id="formula_1">)</formula><p>At this stage, the displacement values are relative. Further processing is required to calculate the absolute displacement values. As aforementioned, in order to achieve this, a reference point of known displacement is to be incorporated into the procedure, that is, a point or location that has remained stable between the two SAR image acquisitions.</p><p>In Paphos, the department of Civil Engineering and Geomatics of the Cyprus University of Technology conducted an analysis on the deformation introduced at the continuously operating reference station (CORS) PAFO. PAFO is located in the area of interest and is one of the stations of the Cyprus Positioning System (CYPOS)-the National Reference Station Network operated by the Department of Lands and Surveys. Deformation analysis was conducted by processing daily GNSS observation files for the timespan 14-16 April 2015 (i.e., before and after the earthquake of Paphos). GNSS processing was carried out using Leica Geo Office v.8.40. Specifically, an ionospheric-free linear combination was used using precise ephemeris and clock products and the Hopfield tropospheric model. An elevation cutoff angle of 15 • was further imposed to exclude low-elevation satellites from the final solution. Reference data were obtained by the IGS (International GNSS Service) station NICO for the same period. Furthermore, the observations were inspected, both automatically and manually, for cycle slips to enhance the quality of the observations and the accuracy of the final solution. The results indicated that the specific station did not show any statistically significant displacement (a vertical displacement of 0.5 mm was observed); thus, PAFO was considered stable and was set as "Zero Point Reference." It is noted that GNSS performance suffers in the vertical component because of the architecture of the system (only satellites above the horizon are used). However, with proper processing techniques, results at the millimeter level can be obtained. Taking this into account, our result was further supported by the findings of a recent study <ref type="bibr" target="#b39">[44]</ref>, which examined daily solutions from PAFO station for a time span of 5 years using the Bernese GNSS v.5.2 software. The later concluded that vertical velocities on the order of 1.6 mm/y occurred at this location. In order to define the exact position of the point, the produced displacement image above needed to be geometrically corrected. The result of this step was the development of a geo-referenced displacement map.</p><p>Following completion of the aforementioned steps, the resulting displacement map for our area of interest was produced. The resulting displacement map indicated vertical displacement ranging between -79.43 and 102.92 mm. For a higher accuracy of results, it is suggested that the final displacement map is masked to remove regions of low coherence. For our case study, all areas with coherence less than 0.6 were chosen as the mask. This allowed us to exclude all vegetated land cover from the displacement map, which often introduces errors to results because of temporal variations, and allowed us to concentrate on coherent areas such as urban cover.</p><p>The final vertical displacement map is shown in Figure <ref type="figure" target="#fig_3">4</ref>. From the legend of the figure, it is clear that during the 12 days between the two SAR acquisitions there was a maximum uplift of 74 mm and a maximum subsidence of 31 mm. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2.">Displacements and Cultural Heritage Sites</head><p>Based on the findings of D-InSAR processing, a further investigation of the displacement characteristics, in sites of cultural interest was performed. As shown in Figure <ref type="figure" target="#fig_4">5</ref>, two important archaeological sites of Cyprus, namely the "Nea Paphos" (Figure <ref type="figure" target="#fig_4">5a</ref>) and "Tombs of the Kings" (Figure <ref type="figure" target="#fig_4">5b</ref>), as well as the broader area of the historic center of Paphos (Figure <ref type="figure" target="#fig_4">5c</ref>) were studied. The analysis shows that displacement was close to 0 mm in both UNESCO World Heritage sites. Some areas, mainly in the southern part of "Nea Paphos", indicated minor vertical displacement, which were, however, modern constructions. A similar pattern was also observed in the "Tombs of the Kings" site where hotels and buildings in the eastern part of the site showed some small displacement in contrast to the archaeological site in the west. On the contrary, in the wider area of the historic center of Paphos, a negative vertical displacement (subsidence) was recorded in the eastern and northern parts. The western part of that region seemed to be unaffected from the event.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.">Discussion</head><p>In the last years, the Earth Observation sector has provided remarkable opportunities for monitoring cultural heritage sites. This paper aimed to present a case study to evaluate the impact of a specific event (earthquake) in a wider heritage landscape. For this aim, the use of freely distributed Sentinel-1 datasets as well as the use of open-source software were exploited. The Sentinel-1 sensors, due to their high temporal resolution, enabled us to acquire radar images before and after the event, which were then processed and analyzed.</p><p>D-InSAR investigation is the first step to map the displacement pattern over large areas, as those of Paphos district, which includes cultural heritage sites, thus providing fast and reliable information to local stakeholders and policy makers about the hazard. Based on this evaluation, and taking into account the structural stability of standing and/or buried monuments, vulnerability maps can be developed. D-InSAR processing can, therefore, be part of a continuous updated risk management plan of cultural heritage sites and landscapes, aligned with state-of-the-art geoinformation technologies such as those provided under the Copernicus umbrella.</p><p>Indeed, the contributions of the Copernicus program through the freely available Sentinel-1 satellite data along with the open-source software SNAP provided freely by ESA, as well as SNAPHU plugin/software developed at Stanford university, which can be used to process the Copernicus data, can lead to the collection of valuable information in a timely manner due to the high temporal resolution of Sentinels (Figure <ref type="figure" target="#fig_5">6</ref>). Geographic information systems (GISs) were employed in order to provide a valuable mapping representation of all the different parameters and collected data, enabling the spatial representation of the various findings. This information in the form of displacement maps can be utilized in the decision-making process of local stakeholders and responsible authorities, and it can be used for the on-time activation of disaster/emergency management services for the protection of the environment and citizens. Such a kind of solution will allow stakeholders to observe, moFnitor, and model hazards such as earthquakes in minimum time. This hazard-related information combined with vulnerability maps that will present the condition of the cultural heritage monuments of interest can enable authorities to apply specialized protective measures for the respective monuments based on their characteristics and residing risks on each specific site.</p><p>However, certain limitations exist mostly because of the spatial resolution of Sentinel-1 images and the C-band wavelength. As presented in the literature review, areas covered with vegetation cannot be monitored very efficiently with Sentinel-1 images; thus, P-band SAR images, which have enhanced capabilities for penetration, are preferred instead. Last but not least, higher resolution SAR data, such as COSMO-SkyMed and TerraSAR-X are required in the case of early warning systems and detailed monitoring.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="7.">Conclusions</head><p>In our example of the Paphos area, major vertical displacement was observed in the northern part of the city of Paphos, whereas in the historic center, some smaller displacements were observed. The findings recorded, from 14 April 2015 until 26 April 2015, a maximum uplift of 74 mm and a maximum subsidence of 31 mm. This displacement was visualized as a thematic map, and further interpretation was conducted. As shown, both archaeological sites in the eastern part of the area showed nearly zero displacement. The results were also confirmed with a GNSS study, used as a ground truth of this analysis.</p><p>The proposed methodology implemented in this study as well as the overall outcomes of the study allow the exploitation of this opportunity to develop a system for the systematic monitoring of sites and monuments covering wide areas of interest, which can offer support to local stakeholders and responsible local authorities. This can be included in decision-making processes to identify risks and adopt mitigation measures to eliminate residing risks and protect cultural heritage monuments. However, this requires strong interactions and synergies among experts in the fields of archaeology and remote sensing. Cultural heritage managers need to improve traditional methodology for the monitoring and protection of cultural heritage as well. This can be achieved by raising awareness to the public authorities and local stakeholders regarding the use of such innovative techniques.</p><p>The use of open-source software and freely distributed images is also highlighted in this paper. Freely distributed Earth Observation datasets supported by national and international space agencies, such as those of the Copernicus space program and Landsat series, will continue to provide optical and radar images with a high temporal resolution around the world. The need to provide tangible end-products and services to nonexperts in remote sensing, thus addressing societal challenges both on a local and a regional level, is essential to the scientific community.</p><p>The Sentinel-1 constellation benefits its users with its very short revisit times and continuity of a wide area coverage; however, it has a low spatial resolution compared with other SAR satellites such as COSMO-SkyMed or TerraSAR-X. For Cyprus, Interferometric Wide swath Sentinel-1 products are only available with a resolution of 2.7 × 22 m to 3.5 × 22 m. This can be a constraint for smaller scale studies where more detailed monitoring is required.</p><p>In the future, the authors will continue to investigate ways of how Copernicus sensors can be exploited further for noninvasive monitoring and management of cultural heritage. The exploitation of the Copernicus program in its full capacity, including all other sensors, is expected to enhance research in new directions and methodologies. In the present study, a pair of Sentinel-1 images was used to map landscape changes after a 5.6 magnitude earthquake in Paphos area. More systematic monitoring through a time-series of SAR images is planned to be carried out on a long-term basis, which is expected to help us derive information regarding rates and velocities of displacement.</p><p>As a future step, interferometric stacking techniques, such as the analysis of persistent scatterers, will be tested for different combinations of SAR image pairs, such as pairs of ascending or descending images, for the temporal monitoring of ground deformation in the vicinity of cultural heritage sites. The application of interferometric stacking methods will help to study the vulnerability of exposed and/or buried cultural heritage monuments to the residing site-specific risks, and it will aid in the development of appropriate vulnerability maps that will assist local authorities in adopting protective measures to conserve cultural and archaeologic heritage.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Map of Paphos and the epicenter of the 15 April 2015 earthquake.</figDesc><graphic coords="4,97.72,87.89,399.84,286.08" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Outline of the Displacement Map Processing Chain.</figDesc><graphic coords="5,122.44,146.61,350.40,305.28" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. Differential interferogram after the application of phase filtering at (a) western Cyprus; (b) "Nea Paphos"; and (c) "Tombs of the Kings".</figDesc><graphic coords="7,116.63,87.89,362.02,231.12" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. Final displacement map at (a) western Cyprus; (b) "Nea Paphos"; and (c) "Tombs of the Kings".</figDesc><graphic coords="8,101.80,394.71,391.68,267.36" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Final displacement map at (a) Nea Paphos; (b) "Tombs of the Kings"; and (c) historic center of Paphos.</figDesc><graphic coords="9,113.64,87.88,367.99,254.90" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. The contribution of Copernicus, ESA, and Stanford University on natural hazards monitoring and the protection of cultural heritage.</figDesc><graphic coords="10,94.60,127.12,406.08,96.48" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 .</head><label>1</label><figDesc>Sentinel-1 synthetic aperture radar (SAR) image characteristics.</figDesc><table><row><cell>Name</cell><cell>S1A_IW_SLC__1SDV_20150414T154 911_20150414T154938_005482_006FEA</cell><cell>S1A_IW_SLC__1SDV_20150426T154 912_20150426T154939_005657_007411</cell></row><row><cell>Date</cell><cell>14 April 2015</cell><cell>26 April 2015</cell></row><row><cell>Instrument</cell><cell>SAR-C</cell><cell>SAR-C</cell></row><row><cell>Mode</cell><cell>Interferometric Wide swath (IW)</cell><cell>Interferometric Wide swath (IW)</cell></row><row><cell>Satellite</cell><cell>Sentinel-1</cell><cell>Sentinel-1</cell></row><row><cell>Cycle number</cell><cell>45</cell><cell>46</cell></row><row><cell>Orbit number</cell><cell>5482</cell><cell>5657</cell></row><row><cell>Pass direction</cell><cell>ASCENDING</cell><cell>ASCENDING</cell></row><row><cell>Polarization</cell><cell>VV VH</cell><cell>VV VH</cell></row><row><cell>Product level</cell><cell>L1</cell><cell>L1</cell></row><row><cell>Product type</cell><cell>Single Look Complex (SLC)</cell><cell>Single Look Complex (SLC)</cell></row><row><cell>Relative orbit</cell><cell>160</cell><cell>160</cell></row></table></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><p>Acknowledgments: The authors would like to acknowledge the use of free open-access Copernicus Sentinel-1 data [2015] and the use of SNAP-ESA Sentinel Application Platform v6.0.0, <ref type="url" target="http://step.esa.int">http://step.esa.int</ref> and SNAPHU (Copyright 2002-2019 Board of Trustees, <rs type="institution">Leland Stanford Jr</rs>. University) software, <ref type="url" target="https://web.stanford.edu/group/radar/softwareandlinks/sw/snaphu/">https://web.stanford.edu/group/ radar/softwareandlinks/sw/snaphu/</ref> for the processing of the SAR acquisitions. The authors would like also to acknowledge the <rs type="institution">Eratosthenes Research Centre of the Department of Civil Engineering and Geomatics, Cyprus University of Technology</rs>. The present study is part of M.T.s PhD thesis.</p></div>
+			</div>			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conflicts of Interest:</head><p>The authors declare no conflict of interest.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Remote sensing archaeology: Tracking and mapping evolution in European scientific literature from 1999 to 2015</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Agapiou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Lysandrou</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jasrep.2015.09.010</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Archaeol. Sci. Rep</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="192" to="200"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Trends and perspectives of space-borne SAR remote sensing for archaeological landscape and cultural heritage applications</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Tapete</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Cigna</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jasrep.2016.07.017</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Archaeol. Sci. Rep</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="716" to="726"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">An overview of satellite synthetic aperture radar remote sensing in archaeology: From site detection to monitoring</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lasaponara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Masini</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.culher.2015.05.003</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Cult. Herit</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="5" to="11"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<ptr target="https://sentinel.esa.int/web/sentinel/sentinel-data-access"/>
+	</analytic>
+	<monogr>
+		<title level="j">Sentinel Data Access Overview-Sentinel Online</title>
+		<imprint>
+			<date type="published" when="2019-06-26">26 June 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Ground subsidence monitoring with SAR interferometry techniques in the rural area of Al Wagan, UAE</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Liosis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">R</forename><surname>Marpu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Pavlopoulos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">B M J</forename><surname>Ouarda</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.rse.2018.07.001</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens. Environ</title>
+		<imprint>
+			<biblScope unit="volume">216</biblScope>
+			<biblScope unit="page" from="276" to="288"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Polarimetric differential SAR interferometry in an arid natural environment</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Mullissa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Tolpekin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Stein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Perissin</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jag.2017.02.019</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Appl. Earth Obs. Geoinf</title>
+		<imprint>
+			<biblScope unit="volume">59</biblScope>
+			<biblScope unit="page" from="9" to="18"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Surface displacement estimation using space-borne SAR interferometry in a small portion along Himalayan Frontal Fault</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bhattacharya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">K</forename><surname>Arora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Sharma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vöge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bhasin</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.optlaseng.2013.09.001</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Opt. Lasers Eng</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="page" from="164" to="178"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Evaluating landfast sea ice stress and fracture in support of operations on sea ice using SAR interferometry</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">O</forename><surname>Dammann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Eicken</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Mahoney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">J</forename><surname>Meyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Freymueller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Kaufman</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.coldregions.2018.02.001</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Cold Reg. Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">149</biblScope>
+			<biblScope unit="page" from="51" to="64"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Land subsidence in the Friuli Venezia Giulia coastal plain, Italy: 1992-2010 results from SAR-based interferometry</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Da Lio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Tosi</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.scitotenv.2018.03.244</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Sci. Total Environ</title>
+		<imprint>
+			<biblScope unit="volume">633</biblScope>
+			<biblScope unit="page" from="752" to="764"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Satellite SAR interferometry for the improved assessment of the state of activity of landslides: A case study from the Cordilleras of Peru</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Strozzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Klimeš</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Frey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Caduff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Huggel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Wegmüller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Rapre</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.rse.2018.08.014</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens. Environ</title>
+		<imprint>
+			<biblScope unit="volume">217</biblScope>
+			<biblScope unit="page" from="111" to="125"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Landslide monitoring for risk mitigation by using corner reflector and satellite SAR interferometry: The large landslide of Carlantino (Italy)</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Bovenga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pasquariello</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Pellicani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Refice</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Spilotro</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.catena.2016.12.006</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Catena</title>
+		<imprint>
+			<biblScope unit="volume">151</biblScope>
+			<biblScope unit="page" from="49" to="62"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Landslide detection integrated system (LaDIS) based on in-situ and satellite SAR interferometry measurements</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Di Martire</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tessitore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Brancato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Ciminelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Costabile</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Costantini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">V</forename><surname>Graziano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Minati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ramondini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Calcaterra</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.catena.2015.10.002</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Catena</title>
+		<imprint>
+			<biblScope unit="volume">137</biblScope>
+			<biblScope unit="page" from="406" to="421"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Extracting damages caused by the 2008 Ms 8.0 Wenchuan earthquake from SAR remote sensing data</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jseaes.2010.07.009</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Asian Earth Sci</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="907" to="914"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Earthquake monitoring in Australia using satellite radar interferometry</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Lin-Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Polonska</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Rizos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Collins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Smith</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/BF02899830</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Wuhan Univ. J. Nat. Sci</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="649" to="658"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">SAR interferometry for detecting the effects of earthquakes on buildings</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pieraccini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Mecatti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Noferini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Luzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Franchioni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Atzeni</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0963-8695(02)00047-6</idno>
+	</analytic>
+	<monogr>
+		<title level="j">NDT E Int</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="615" to="625"/>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Monitoring volcano slope instability with Synthetic Aperture Radar: A review and new data from Pacaya (Guatemala) and Stromboli (Italy) volcanoes</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">N</forename><surname>Schaefer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Di Traglia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Chaussard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Nolesini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Casagli</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.earscirev.2019.03.009</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Earth-Sci. Rev</title>
+		<imprint>
+			<biblScope unit="volume">192</biblScope>
+			<biblScope unit="page" from="236" to="257"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Integrating SAR and derived products into operational volcano monitoring and decision support systems</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">J</forename><surname>Meyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Mcalpin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Gong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Ajadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Arko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">W</forename><surname>Webley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dehn</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.isprsjprs.2014.05.009</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ISPRS J. Photogramm. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="page" from="106" to="117"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Insight into ground deformations at Lascar volcano (Chile) from SAR interferometry, photogrammetry and GPS data: Implications on volcano dynamics and future space monitoring</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pavez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Remy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bonvalota</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Diament</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Gabalda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-L</forename><surname>Frogera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Julien</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Legrand</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Moisset</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.rse.2005.10.013</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens. Environ</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="page" from="307" to="320"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">A satellite geodetic survey of large scale deformation of volcanic centers in the central Andes</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Pritchard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Simons</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature00872</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">418</biblScope>
+			<biblScope unit="page" from="167" to="171"/>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Using differential SAR interferometry to map land subsidence: A case study in the Pingtung Plain of SW Taiwan</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hsieh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Shih</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Angelier</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11069-011-9734-7</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Hazards</title>
+		<imprint>
+			<biblScope unit="volume">58</biblScope>
+			<biblScope unit="page" from="1311" to="1332"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Radar interferometry-based mapping of the present land subsidence along the low-lying northern Adriatic coast of Italy</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Bitelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Bonsignore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Carbognin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ferretti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Strozzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Teatini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Tosi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Vittuari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the EISOLS</title>
+		<meeting>the EISOLS<address><addrLine>Queretaro, Mexico</addrLine></address></meeting>
+		<imprint>
+			<publisher>IAHS Publ</publisher>
+			<date type="published" when="2010-10">October 2010</date>
+			<biblScope unit="volume">339</biblScope>
+			<biblScope unit="page" from="17" to="22"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Validation and intercomparison of Persistent Scatterers Interferometry: PSIC4 project results</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Raucoules</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Bourgine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>De Michele</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Le Cozannet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Bremmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Veldkamp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Tragheim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bateson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Crosetto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Agudo</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jappgeo.2009.02.003</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Geophys</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page" from="335" to="347"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Differential Radar Interferometry for Structural and Ground Deformation Monitoring: A New Tool for the Conservation and Sustainability of Cultural Heritage Sites</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Guo</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/su7021712</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Sustainability</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="1712" to="1729"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Satellite remote sensing in archaeology: Past, present and future perspectives</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lasaponara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Masini</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jas.2011.02.002</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Archaeol. Sci</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page" from="1995" to="2002"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">InSAR data for geohazard assessment in UNESCO World Heritage sites: State-of-the-art and perspectives in the Copernicus era</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Tapete</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Cigna</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jag.2017.07.007</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Appl. Earth Obs. Geoinf</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page" from="24" to="32"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Multi-frequency, polarimetric SAR analysis for archaeological prospection</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Stewart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lasaponara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Schiavon</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jag.2013.11.007</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Appl. Earth Obs. Geoinf</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="211" to="219"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Integrating radar and laser-based remote sensing techniques for monitoring structural deformation of archaeological monuments</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Tapete</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Casagli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Luzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Fanti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Gigli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Leva</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jas.2012.07.024</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Archaeol. Sci</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="176" to="189"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Satellite radar interferometry for monitoring and early-stage warning of structural instability in archaeological sites</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Tapete</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Fanti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Cecchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Petrangeli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Casagli</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/1742-2132/9/4/S10</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Geophys. Eng</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="10" to="S25"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Earth observation technologies in service to the cultural landscape of Cyprus: Risk identification and assessment</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Cuca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tzouvaras</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Agapiou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Lysandrou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Themistocleous</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Nisantzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Hadjimitsis</surname></persName>
+		</author>
+		<idno type="DOI">10.1117/12.2241669</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Fourth International Conference on Remote Sensing and Geoinformation of the Environment (RSCy2016)</title>
+		<meeting>the Fourth International Conference on Remote Sensing and Geoinformation of the Environment (RSCy2016)<address><addrLine>Paphos, Cyprus</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2016-04-08">4-8 April 2016. 9688</date>
+			<biblScope unit="page">96880</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Snap</surname></persName>
+		</author>
+		<ptr target="https://step.esa.int/main/toolboxes/snap/"/>
+		<imprint>
+			<date type="published" when="2019-07-17">17 July 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Snaphu</surname></persName>
+		</author>
+		<ptr target="https://web.stanford.edu/group/radar/softwareandlinks/sw/snaphu/"/>
+		<imprint>
+			<date type="published" when="2019-07-17">17 July 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<monogr>
+		<ptr target="https://scihub.copernicus.eu/"/>
+		<title level="m">Copernicus Open Access Hub</title>
+		<imprint>
+			<date type="published" when="2019-06-28">28 June 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">InSAR Principles: Guidelines for SAR Interferometry Processing and Interpretation</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ferretti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Monti-Guarnieri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Prati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Rocca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Massonnet</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ESA Publications TM-19</title>
+		<meeting><address><addrLine>Noordwijk, The Netherlands</addrLine></address></meeting>
+		<imprint>
+			<publisher>ESA Publications</publisher>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">A least squares adjustment of multi-temporal InSAR data: Application to the ground deformation of Paris</title>
+		<author>
+			<persName><forename type="first">Le</forename><surname>Mouélic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Raucoules</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Carnec</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>King</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename></persName>
+		</author>
+		<idno type="DOI">10.14358/PERS.71.2.197</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Photogramm. Eng. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="page" from="197" to="204"/>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">How to avoid false interpretations of Sentinel-1A TOPSAR interferometric data in landslide mapping? A case study: Recent landslides in Transdanubia, Hungary</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">P</forename><surname>Kovács</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Bugya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Czigány</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Defilippi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lóczy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Riccardi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ronczyk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Pasquali</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11069-018-3564-9</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Hazards</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page" from="693" to="712"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<monogr>
+		<title level="m" type="main">Analysing the Capabilities and Limitations of InSAR using Sentinel-1 Data for Landslide Detection and Monitoring</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Höser</surname></persName>
+		</author>
+		<idno type="DOI">10.13140/RG.2.2.35085.59362</idno>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<pubPlace>Bonn, Germany</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>University of Bonn</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">Master's Thesis</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<monogr>
+		<author>
+			<persName><forename type="first">L</forename><surname>Veci</surname></persName>
+		</author>
+		<title level="m">Sentinel-1 Toolbox-TOPS Interferometry Tutorial</title>
+		<meeting><address><addrLine>Auckland, New Zealand</addrLine></address></meeting>
+		<imprint>
+			<publisher>ESA Publications</publisher>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Interferometric Processing of Sentinel-1 TOPS Data</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">Y</forename><surname>Martinez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">P</forename><surname>Israola</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">R</forename><surname>Gonzalez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Brcic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Shau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Geudtner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Eineder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bamler</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TGRS.2015.2497902</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="2220" to="2234"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Image coregistration in SAR interferometry</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bethel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int. Arch. Photogramm. Remote Sens. Spat. Inf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page" from="433" to="438"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Linear and nonlinear deformation effects in the permanent GNSS network of Cyprus</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Danezis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Chatzinikos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kotsakis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 4th Joint International Symposium on Deformation Monitoring (JISDM)</title>
+		<meeting>the 4th Joint International Symposium on Deformation Monitoring (JISDM)<address><addrLine>Athens, Greece</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2019-05">May 2019</date>
+			<biblScope unit="page" from="15" to="17"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

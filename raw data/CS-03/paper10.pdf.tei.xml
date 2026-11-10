@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Accessibility Analysis of Higher Education Rankings on Webometrics Using WCAG 2.0</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>IEEE</publisher>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2024-07-17">2024-07-17</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ferian</forename><forename type="middle">Fauzi</forename><surname>Abdulloh</surname></persName>
+							<email>ferian@amikom.ac.id</email>
+							<affiliation key="aff0">
+								<orgName type="department">Faculty of Computer Science</orgName>
+								<orgName type="institution">Universitas Amikom Yogyakarta Sleman</orgName>
+								<address>
+									<country key="ID">Indonesia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rifda</forename><forename type="middle">Faticha Alfa</forename><surname>Aziza</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Caroline</forename><surname>Sentiaji</surname></persName>
+							<email>caroline.2697@students.amikom.ac.id</email>
+							<affiliation key="aff2">
+								<orgName type="department">Faculty of Computer Science</orgName>
+								<orgName type="institution">Universitas Amikom Yogyakarta Sleman</orgName>
+								<address>
+									<country key="ID">Indonesia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Afrig</forename><surname>Aminuddin</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">Faculty of Computer Science</orgName>
+								<orgName type="institution">Universitas Amikom Yogyakarta Sleman</orgName>
+								<address>
+									<country key="ID">Indonesia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Majid</forename><surname>Rahardi</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="department">Faculty of Computer Science</orgName>
+								<orgName type="institution">Universitas Amikom Yogyakarta Sleman</orgName>
+								<address>
+									<country key="ID">Indonesia</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Accessibility Analysis of Higher Education Rankings on Webometrics Using WCAG 2.0</title>
+					</analytic>
+					<monogr>
+						<title level="m">2024 7th International Conference on Informatics and Computational Sciences (ICICoS)</title>
+						<imprint>
+							<publisher>IEEE</publisher>
+							<biblScope unit="page" from="342" to="346"/>
+							<date type="published" when="2024-07-17"/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">E1D1F629366E57885A144F0E977131DC</idno>
+					<idno type="DOI">10.1109/icicos62600.2024.10636874</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-11T13:38+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Website Accessibility</term>
+					<term>WCAG 2.0</term>
+					<term>Webometric</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>As one of the educational institutions open to people with disabilities, universities are using websites as their primary source of information. Website accessibility becomes crucial so the user can use and understand the information properly regardless of someone's physical disabilities. This research aims to analyze the correlation between website accessibility and the ranking of Indonesian universities on Webometric. The accessibility of websites is measured by websites compliance with WCAG (Web Content Accessibility Guidelines) 2.0, using evaluation tools WAVE and AChecker. In comparison, the correlation was measured by Spearman Rank Correlation. The results show that there is no significant correlation between them. This means universities with high Webometric rankings do not necessarily have good website accessibility. The most common accessibility problems found are in the unavailability of alternative text in non-text content, which causes the non-text content not to be represented in other forms required by users.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>Indonesia is the fourth most populous country in the world, with a population of more than 270 million people <ref type="bibr" target="#b0">[1]</ref>. Most of Indonesia's population are students and students. According to the Indonesian Central Bureau of Statistics (BPS), 44.7 million children aged 15-24 will be in 2022 <ref type="bibr" target="#b1">[2]</ref>. Meanwhile, according to the National Socio-Economic Survey (Susenas), in 2020, there were 22.97 million Indonesians with disabilities <ref type="bibr" target="#b2">[3]</ref>. According to BPS, access to education for people with disabilities is still relatively low; this is shown by data obtained from the Susenas in 2018, which states that only 56% of people with disabilities graduated from elementary school, while people with disabilities who successfully graduated tertiary institutions, there are only 17.6% of the total number of persons with disabilities <ref type="bibr" target="#b3">[4]</ref>.</p><p>Persons with disabilities have problems carrying out certain activities, requiring specific methods, tools, or environments <ref type="bibr" target="#b4">[5]</ref>. People with disabilities have the same rights to education as other citizens; however, based on 2019 statistical data, only 17 universities in Indonesia have disability services <ref type="bibr" target="#b5">[6]</ref>.</p><p>As one of the educational institutions open to people with disabilities, universities use websites as the primary source of information <ref type="bibr" target="#b6">[7]</ref>. Therefore, website accessibility is essential in facilitating the services of people with disabilities; besides that, site accessibility will benefit all levels of users. Website accessibility allows users to understand, use, interact, and contribute to websites without being hindered by a person's physical limitations, such as decreased vision, comprehension, sensory and motor skills due to aging <ref type="bibr" target="#b7">[8]</ref>.</p><p>The large number of universities that use websites as a medium of information has triggered the growth of organizations that rank the quality of the main pages of college websites. The ranking of world universities, or what is known as the Academic Ranking of World Universities (ARWU), was first carried out by Shanghai Jiao Tong University in China <ref type="bibr" target="#b8">[9]</ref>. Several institutions rank world universities; Webometrics is one of the most well-known institutions <ref type="bibr" target="#b9">[10]</ref>. The ranking is done not based on the number of visits or website appearance design but on the global performance and visibility of the website; this is because the research activities carried out by professors and researchers will be shown by their websites <ref type="bibr" target="#b10">[11]</ref>.</p><p>Therefore, this research will analyze the accessibility of the main page of university websites in Indonesia and its relationship to the ranking of these universities on Webometrics. Website accessibility will be measured by the level of website compliance with guidelines that have been established as international standards by the World Wide Web Consortium (W3C), namely Web Content Accessibility Guidelines (WCAG) 2.0 <ref type="bibr" target="#b11">[12]</ref>, using the help of the WAVE evaluation tool and AChecker. The existing correlation was measured using Spearman Rank Correlation, and based on the results obtained, there was no significant correlation between the two variables. The results of this research are expected to provide recommendations for improvements that can be implemented to increase the accessibility of higher education websites in Indonesia.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. RELATED WORKS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Literature Review</head><p>Based on a literature review conducted by a previous study, it is known that the websites most frequently analyzed in website accessibility studies are university sites <ref type="bibr" target="#b12">[13]</ref> and government sites <ref type="bibr" target="#b13">[14]</ref>. However, many researchers examine the level of website accessibility compliance and its user experience in various other industries, such as e-commerce <ref type="bibr" target="#b14">[15]</ref> and e-payment <ref type="bibr" target="#b15">[16]</ref>.</p><p>Research related to the accessibility of higher education websites was carried out by Acosta-Vargas et al.. Researchers examined the relationship between the accessibility of higher education websites in Latin America and their ranking on Webometric sites using the WAVE evaluation tool <ref type="bibr" target="#b16">[17]</ref>. Another research was conducted by Arasid et al., who examined the level of accessibility of higher education websites in Indonesia and categorized them into three categories according to the evaluation results obtained, namely accessible, partially accessible, and inaccessible <ref type="bibr" target="#b17">[18]</ref>. Meanwhile, research on the accessibility of Bangladesh government websites conducted by Ahmed et al. was carried out using various online, offline, and manual tools, according to the components tested, namely accessibility, usability, and security aspects <ref type="bibr" target="#b18">[19]</ref>.</p><p>Using automatic evaluation tools is the easiest and fastest research to evaluate website accessibility <ref type="bibr" target="#b13">[14]</ref>. Even though the evaluation tools and data processing techniques vary according to the research objectives, the main guidelines are still WCAG 2.0. Several researchers who use WAVE as an evaluation tool present results in six categories: Error, Alerts, Features, Structural Elements, HTML 5, and Aria, Contrast Error <ref type="bibr" target="#b16">[17]</ref>. Several studies use AChecker as an evaluation tool and present results based on Known Problems, Likely Problems, and Potential Problems <ref type="bibr" target="#b19">[20]</ref>. In addition, several studies also present evaluation results based on the twelve WCAG 2.0 guidelines <ref type="bibr" target="#b20">[21]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. WCAG 2.0</head><p>Web Content Accessibility Guidelines (WCAG) 2.0, published by W3C in collaboration with individuals and organizations worldwide, contains guidelines for website content accessibility and has been officially designated as a standard in ISO/IEC 40500:2012 <ref type="bibr" target="#b21">[22]</ref>. WCAG 2.0 provides guidelines so that website content can be used by persons with disabilities, covering various types of disabilities, namely visual, hearing, physical, language, neurological, and cognitive impairments. These guidelines also make website content more accessible for older people with decreased abilities due to aging and increase website usability for normal users <ref type="bibr" target="#b7">[8]</ref>. WCAG 2.0 has four main principles, namely perceivable, operable, understandable, and robust (POUR), where each principle covers guidelines for website content accessibility, with twelve existing guidelines <ref type="bibr" target="#b7">[8]</ref>. In WCAG 2.0, apart from the twelve existing guidelines, success criteria are used in testing websites. Success criteria or Levels are used as requirements and tests for compliance with existing accessibility guidelines. There are various types, purposes, and users of different websites. Therefore, three compliance levels can be used according to the situation needed: Level A (lowest), Level AA, and Level AAA <ref type="bibr" target="#b7">[8]</ref>. The following is the arrangement of rules contained in WCAG 2.0, which can be seen in Fig. <ref type="figure" target="#fig_0">1</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Website Accessibility Tools</head><p>Website accessibility tools are automatic programs that evaluate and provide recommendations for website accessibility. Several automatic evaluation tools are used in website accessibility research based on WCAG 2.0, namely WAVE, Taw, and AChecker. These three evaluation tools were chosen because they can be used by anyone for free and accessed online, and the evaluation results report can be read easily by researchers <ref type="bibr" target="#b16">[17]</ref>. Each automatic evaluation tool has different algorithms and accuracy. Therefore, using several evaluation tools will help overcome some of the limitations of evaluation tools and improve evaluation results to be more reliable <ref type="bibr" target="#b20">[21]</ref>.</p><p>The WAVE evaluation tool developed by WebAIM comes in the form of a web application and browser extension that can be used to evaluate local, dynamic, or password-protected website pages. WAVE classifies website accessibility into six groups, namely Errors, Alerts, Features, Structural Elements, HTML 5 &amp; Aria, and Contrast Errors. WAVE displays the evaluation results as icons and indicators of the accessibility problems found. This differentiates WAVE from the AChecker and TAW evaluation tools; WAVE not only identifies accessibility problems but also shows the location of errors on the evaluated page.</p><p>The AChecker evaluation tool is a free tool trusted and used by researchers in evaluating website accessibility <ref type="bibr" target="#b20">[21]</ref>. AChecker identifies the accessibility problems into three groups, namely Known Problems (problems identified as accessibility barriers), Likely Problems (problems that have the possibility of becoming accessibility barriers), and Potential Problems (problems that cannot be identified by AChecker and require a decision man). In AChecker, evaluation can be determined based on the WCAG 2.0 success criteria required by researchers (A, AA, AAA).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. METHODOLOGY</head><p>This research will use a descriptive analysis method to analyze the accessibility evaluation results obtained from the WAVE and AChecker evaluation tools. In contrast, the quantitative method will be used to measure the closeness of the correlation between website accessibility and the ranking of Indonesian tertiary institutions on Webometrics, using the Spearman Rank Correlation calculation. The flow of this research can be seen in Fig. <ref type="figure" target="#fig_1">2</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Research Design</head><p>After conducting a literature study, the research design was carried out to determine the direction and objectives of the research to be carried out. Existing research design includes determining the research object, formulating the problem, determining research objectives, and designing the research flow.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Data Collection</head><p>At this stage, data collection was carried out from the research object, namely data on the ranking of universities in Indonesia contained in Webometrics. After that, data cleaning and sampling were carried out to process the data. The following equation calculates the number of samples (1):</p><formula xml:id="formula_0">𝑛 = 𝑁 1+𝑁𝑒 2 ()</formula><p>Where n is the number of samples, N is the number of population, and e is the margin of error (percentage of error that is tolerated), 5% is used here.</p><p>Based on the 2624 population data, 347 sample data were taken to be tested. The sampling was carried out using a systematic random sampling technique or random sampling using intervals. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Website Accessibility Evaluation</head><p>Website accessibility will be evaluated using an evaluation tool in the form of the WAVE and AChecker web applications, which will be accessed via a web browser. Website evaluation will be carried out once using Wave and three times using AChecker at different WCAG 2.0 Levels (A, AA, AAA).</p><p>Evaluation results are documented based on the number of problems detected automatically and do not require further decisions for the evaluator, namely based on Errors in the WAVE evaluation tool and Known Problems in the AChecker evaluation tool.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>D. Some Common Mistakes</head><p>Next, the evaluation results will be analyzed to determine the level of accessibility of existing websites and accessibility problems that are often found and affect the accessibility of higher education websites in Indonesia. In addition, to determine whether there is a correlation between site accessibility and higher education rankings, Spearman Rank Correlation (2) was calculated based on the number of accessibility problems found in the evaluation results with the higher education ranking on Webometrics.</p><formula xml:id="formula_1">𝑅 𝑠 = 1 - 6 ∑ 𝑑 2 𝑛(𝑛 2 -1) ()</formula><p>Where d is the value of the difference between the rankings of variables x and y, n is the number of samples tested, and Rs is the final result of the Spearman Rank calculation between -1 and 1. The calculations are carried out with the help of the Python programming language.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. ANALYSIS OF EVALUATION RESULTS</head><p>After an evaluation, it was found that there were several accessibility problems, namely violations of the WCAG 2.0 guidelines on the website being tested. A comparison graph of WAVE and AChecker evaluation results has been documented.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Wave Evaluation Results</head><p>Based on the results of website evaluation using WAVE, 41 websites were found to be inaccessible, one website was accessible (no accessibility problems), and 306 websites could be evaluated. From the successfully evaluated websites, 16048 problems were detected by WAVE. Table <ref type="table" target="#tab_0">I</ref> shows the distribution of the number of detected accessibility problems (errors) based on the WAVE evaluation variable. In Table <ref type="table" target="#tab_0">I</ref>, it can be concluded that the accessibility that influences the accessibility of higher education websites are shallow contrast, empty links, and linked images missing alternative text.</p><p>To facilitate data comparison and consistency, the data in Table <ref type="table" target="#tab_0">I</ref>, evaluation results obtained from the WAVE evaluation tool, are reclassified into the twelve WCAG 2.0 guidelines in Table <ref type="table" target="#tab_1">II</ref>. This can be done because WAVE uses WCAG 2.0 guidelines as a basis for evaluation, and there is documentation on the WAVE website that shows the number of WAVE test variables obtained from the WCAG guidelines. In Table <ref type="table" target="#tab_1">II</ref>, it can be concluded that accessibility problems that greatly influence the evaluation results are found in WCAG 2.0 guidelines: 1.4 Distinguishable (53.33%), 1.1 Text Alternatives (23.02%), and 2.4 Navigable (18.62%). These three problems cover 94% of website accessibility problems found on university websites in Indonesia. Distinguishable means making it easier for users to see and hear the available content, including color, contrast, images, background, audio, etc. Text Alternatives mean providing additional information in writing for non-text content so that the content can be presented in another form as the user requires. Navigable means providing a way to help users navigate, find content, and understand where users are.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. AChecker Evaluation Results</head><p>AChecker testing was done three times using WCAG 2.0 Levels A, AA, and AAA. Table <ref type="table" target="#tab_2">III</ref> is the distribution of evaluation results carried out using AChecker. Based on Table <ref type="table" target="#tab_2">III</ref>, it can be seen that the number of accessible websites decreases with the complexity of the rules used. In addition, since AChecker cannot evaluate pages with a size that exceeds the storage capacity provided, the number of inaccessible websites also increases as the complexity of the rules used increases. This is because WCAG 2.0 Level AAA has more rules than WCAG Level A and AA. Therefore, the number of parameters tested also increases and requires a more significant storage memory. The number of website accessibility problems found in the AChecker evaluation can be seen in Table <ref type="table" target="#tab_3">IV</ref>. Based on Table <ref type="table" target="#tab_3">IV</ref>, the number of problems obtained from the AChecker evaluation results using WCAG 2.0 Level A was 12739, Level AA was 16091, and Level AAA was 17606. The most accessibility problems at Level A were found in the WCAG 2.0 1.1 Text Alternative guidelines (59.27%), 2.4 Navigable (25.53%), and 1.3 Adaptable (3.87%). Meanwhile, for Levels AA and AAA, the accessibility problems that most influenced the evaluation results were in the 1.4 Distinguishable (52.31%), 2.4 Navigable (25.10%), and 1.1 Text Alternatives (16.66%) guidelines.</p><p>The difference in results occurs because of the difference in the number of rules used. Level A has the fewest rules, while Level AAA has the most number of rules, which includes Level A and Level AA rules.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Spearman Rank Correlation</head><p>Spearman Rank Correlation is used to validate the relationship between university rankings on Webometric and website accessibility problems found. This method was chosen because there is ordinal data, namely university ranking data. In this study, H0, or the hypothesis being tested, is that there is no correlation between website accessibility and university rankings on Webometrics.</p><p>Based on the calculation results, the Rs value is -0.25 on the results of the WAVE evaluation, and the p-value is 7.72. Meanwhile, the AChecker obtained an Rs value of -0.033 and a p-value of 0.58. Since both Rs values are negative, this indicates a weak negative correlation between website ranking and the number of problems found. Meanwhile, because the two p-values obtained are more than 0.05, hypothesis H0 is accepted with a weak or insignificant relationship between the two tested variables. Fig. <ref type="figure" target="#fig_2">3</ref> shows the data distribution from AChecker evaluation results with university rankings. From the distribution of existing data, it can be concluded that the relationship between website accessibility and university rankings on Webometrics is low or insignificant. This research presented the correlation between the accessibility of higher education websites in Indonesia and their ranking on Webometrics, utilizing WCAG 2.0 standards, which offers insights into the problem. The evaluation encompassed 347 university websites, employing tools like the WAVE application and AChecker. From this analysis, it was discovered that out of the evaluated websites, 41 were inaccessible, while one met all WAVE rules, leaving 306 successfully evaluated sites. However, these sites collectively presented 16048 accessibility issues. Additionally, AChecker testing revealed that, on average, 19 websites were accessible, 48 were inaccessible, and 298 were successfully evaluated. Notably, the most prevalent accessibility issues stemmed from WCAG 2.0 guideline violations concerning text alternatives, adaptability, distinguishability, and navigability. Despite these findings, Spearman Rank Correlation calculations between website evaluation results and university rankings on Webometrics unveiled no significant correlation between the two variables. This suggests that high rankings on Webometric sites do not necessarily equate to good website accessibility among universities.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. WCAG 2.0 rule structure</figDesc><graphic coords="2,71.75,468.27,190.35,183.58" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 2. Research flow diagram</figDesc><graphic coords="3,52.25,203.52,228.90,278.95" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 3 .</head><label>3</label><figDesc>Fig. 3. Spearman Rank Correlation Achecker V. CONCLUSION</figDesc><graphic coords="5,55.25,53.37,223.04,147.90" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>TABLE I .</head><label>I</label><figDesc>ERROR DISTRIBUTION OF WAVE EVALUATION RESULTS</figDesc><table><row><cell cols="2">2024 7th International Conference on Informatics and Computational Sciences (ICICoS)</cell><cell/></row><row><cell>Error Description</cell><cell>Number of Errors</cell><cell>Percentage of Problems</cell></row><row><cell>Shallow contrast</cell><cell>8751</cell><cell>53.33%</cell></row><row><cell>Empty link</cell><cell>2722</cell><cell>16.59%</cell></row><row><cell>Linked image missing alternative text</cell><cell>2498</cell><cell>15.22%</cell></row><row><cell>Missing alternative text</cell><cell>1229</cell><cell>7.49%</cell></row><row><cell>Empty button</cell><cell>327</cell><cell>1.99%</cell></row><row><cell>Missing form label</cell><cell>258</cell><cell>1.57%</cell></row><row><cell>Empty heading</cell><cell>201</cell><cell>1.23%</cell></row><row><cell>Broken ARIA reference</cell><cell>199</cell><cell>1.21%</cell></row><row><cell>Broken ARIA menu</cell><cell>90</cell><cell>0.55%</cell></row><row><cell>Spacer image missing alternative text</cell><cell>45</cell><cell>0.27%</cell></row><row><cell>Document language missing</cell><cell>39</cell><cell>0.24%</cell></row><row><cell>Marquee</cell><cell>18</cell><cell>0.11%</cell></row><row><cell>Empty table header</cell><cell>8</cell><cell>0.05%</cell></row><row><cell>Missing or uninformative page title</cell><cell>6</cell><cell>0.04%</cell></row><row><cell>Empty form label</cell><cell>5</cell><cell>0.03%</cell></row><row><cell>Broken skip link</cell><cell>4</cell><cell>0.02%</cell></row><row><cell>Invalid longdesc</cell><cell>2</cell><cell>0.01%</cell></row><row><cell>The page refreshes or redirects</cell><cell>2</cell><cell>0.01%</cell></row><row><cell>The image button is missing alternative text</cell><cell>1</cell><cell>0.01%</cell></row><row><cell>Image map area missing alternative text</cell><cell>1</cell><cell>0.01%</cell></row><row><cell>Image map missing alternative text</cell><cell>1</cell><cell>0.01%</cell></row><row><cell>Multiple form labels</cell><cell>1</cell><cell>0.01%</cell></row><row><cell>Blinking content</cell><cell>0</cell><cell>0.00%</cell></row><row><cell>Total</cell><cell>16408</cell><cell>100.00%</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>TABLE II .</head><label>II</label><figDesc>WAVE DISTRIBUTION BASED ON WCAG 2.0</figDesc><table><row><cell>WCAG 2.0 Guidelines</cell><cell>Number of Errors</cell><cell>Percentage of Problems</cell></row><row><cell>1.1 Text Alternatives</cell><cell>3777</cell><cell>23.02%</cell></row><row><cell>1.2 Time-based Media</cell><cell>0</cell><cell>0.00%</cell></row><row><cell>1.3 Adaptable</cell><cell>672</cell><cell>4.10%</cell></row><row><cell>1.4 Distinguishable</cell><cell>8751</cell><cell>53.33%</cell></row><row><cell>2.1 Keyboard Accessible</cell><cell>4</cell><cell>0.02%</cell></row><row><cell>2.2 Enough Time</cell><cell>20</cell><cell>0.12%</cell></row><row><cell>2.3 Seizures</cell><cell>0</cell><cell>0.00%</cell></row><row><cell>2.4 Navigable</cell><cell>3055</cell><cell>18.62%</cell></row><row><cell>3.1 Readable</cell><cell>39</cell><cell>0.24%</cell></row><row><cell>3.2 Predictable</cell><cell>0</cell><cell>0.00%</cell></row><row><cell>3.3 Input Assistance</cell><cell>0</cell><cell>0.00%</cell></row><row><cell>4.1 Compatible</cell><cell>90</cell><cell>0.55%</cell></row><row><cell>Total</cell><cell>16408</cell><cell>100.00%</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>TABLE III .</head><label>III</label><figDesc>ACHECKER EVALUATION RESULTS</figDesc><table><row><cell>WCAG 2.0 Levels</cell><cell>Accessible</cell><cell>Not Evaluated</cell><cell>Evaluated</cell></row><row><cell>Level A</cell><cell>22</cell><cell>46</cell><cell>301</cell></row><row><cell>Level AA</cell><cell>19</cell><cell>49</cell><cell>298</cell></row><row><cell>Level AAA</cell><cell>18</cell><cell>50</cell><cell>297</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>TABLE IV .</head><label>IV</label><figDesc>NUMBER OF ACHECKER PROBLEMS</figDesc><table><row><cell>WCAG 2.0 Guidelines</cell><cell>Level A</cell><cell>Level AA</cell><cell>Level AAA</cell></row><row><cell>1.1 Text Alternatives</cell><cell>7551</cell><cell>2869</cell><cell>2889</cell></row><row><cell>1.2 Time-based Media</cell><cell>0</cell><cell>0</cell><cell>0</cell></row><row><cell>1.3 Adaptable</cell><cell>493</cell><cell>435</cell><cell>434</cell></row><row><cell>1.4 Distinguishable</cell><cell>1</cell><cell>8740</cell><cell>9317</cell></row><row><cell>2.1 Keyboard Accessible</cell><cell>123</cell><cell>25</cell><cell>22</cell></row><row><cell>2.2 Enough Time</cell><cell>19</cell><cell>19</cell><cell>21</cell></row><row><cell>2.3 Seizures</cell><cell>6</cell><cell>0</cell><cell>0</cell></row><row><cell>2.4 Navigable</cell><cell>3929</cell><cell>4315</cell><cell>4346</cell></row><row><cell>3.1 Readable</cell><cell>86</cell><cell>90</cell><cell>166</cell></row><row><cell>3.2 Predictable</cell><cell>2</cell><cell>0</cell><cell>0</cell></row><row><cell>3.3 Input Assistance</cell><cell>451</cell><cell>333</cell><cell>334</cell></row><row><cell>4.1 Compatible</cell><cell>78</cell><cell>75</cell><cell>77</cell></row><row><cell>Total</cell><cell>12739</cell><cell>16901</cell><cell>17606</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2024" xml:id="foot_0"><p>7th International Conference on Informatics and Computational Sciences (ICICoS)</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>Authorized licensed use limited to: The Open University. Downloaded on October 09,2025 at 22:35:13 UTC from IEEE Xplore. Restrictions apply.</p></note>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Big data for government policy: Potential implementations of bigdata for official statistics in Indonesia</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Pramana</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/IWBIS.2017.8275097</idno>
+	</analytic>
+	<monogr>
+		<title level="m">2017 International Workshop on Big Data and Information Security (IWBIS)</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="17" to="21"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Declining age at menarche in Indonesia: a systematic review and meta-analysis</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Wahab</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Wilopo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hakimi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ismail</surname></persName>
+		</author>
+		<idno type="DOI">10.1515/ijamh-2018-0021</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Adolesc. Med. Health</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page">20180021</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Disability, employment and wages: evidence from Indonesia</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Caron</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/IJM-01-2020-0022/FULL/XML</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Manpow</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="866" to="888"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Overcoming adversity for disabled students in higher education in Indonesia</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sujarwanto</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Sheehy</surname></persName>
+		</author>
+		<idno type="DOI">10.4324/9781003180029-12</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Overcoming Advers. Educ</title>
+		<imprint>
+			<biblScope unit="page" from="126" to="138"/>
+			<date type="published" when="2022-11">Nov. 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Universal access to ambient intelligence environments: Opportunities and challenges for people with disabilities</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Emiliani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Stephanidis</surname></persName>
+		</author>
+		<idno type="DOI">10.1147/sj.443.0605</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IBM Syst. J</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="605" to="619"/>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">The Management Gaps toward Inclusive Education Implementation at Higher Education in Indonesia</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Riswari</surname></persName>
+		</author>
+		<idno type="DOI">10.21776/UB.IJDS.2022.009.01.12</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Indones. J. Disabil. Stud</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="153" to="162"/>
+			<date type="published" when="2022-06">Jun. 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">User Experience Analysis of Student Assistant Application Using The Five Planes Method</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">F</forename><surname>Alfa Aziza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aminuddin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">N</forename><surname>Widianingsih</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">I S</forename><surname>Saputra</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/CONMEDIA60526.2023.10428524</idno>
+	</analytic>
+	<monogr>
+		<title level="m">2023 7th International Conference on New Media Studies (CONMEDIA)</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2023-12">Dec. 2023</date>
+			<biblScope unit="page" from="105" to="109"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">The relationship between accessibility and usability of Websites</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Petrie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Kheir</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/1240624.1240688</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Conf. Hum. Factors Comput. Syst. -Proc</title>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+			<biblScope unit="page" from="397" to="406"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">The Academic Ranking of World High</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">C</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Cheng</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/03797720500260116</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Educ. Eur</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="127" to="136"/>
+			<date type="published" when="2005-07">Jul. 2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Advantages and Disadvantages of the Webometrics Ranking System</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kunosić</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Čeke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Zerem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kunosić</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Čeke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Zerem</surname></persName>
+		</author>
+		<idno type="DOI">10.5772/INTECHOPEN.87207</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Sci. Recent Adv</title>
+		<imprint>
+			<date type="published" when="2019-06">Jun. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Webometrics: evolution of social media presence of universities</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Sarwar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Nawaz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fayoumi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Aljohani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">U</forename><surname>Hassan</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/S11192-020-03804-Y/FIGURES/6</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Scientometrics</title>
+		<imprint>
+			<biblScope unit="volume">126</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="951" to="967"/>
+			<date type="published" when="2021-02">Feb. 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Accessibility evaluation using Web Content Accessibility Guidelines (WCAG) 2.0</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A R W M</forename><surname>Isa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I H</forename><surname>Suhaimi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Ariffrn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">F</forename><surname>Ishak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">M</forename><surname>Ralim</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/IUSER.2016.7857924</idno>
+	</analytic>
+	<monogr>
+		<title level="m">2016 4th International Conference on User Science and Engineering (i-USEr)</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="1" to="4"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">UI/UX Development Based on Design Thinking Framework for Mentor on Demand Service</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">P</forename><surname>Asaddulloh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aminuddin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rahardi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">F</forename><surname>Abdulloh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Saputra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">R</forename><surname>Alfana</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/ICOIACT59844.2023.10455862</idno>
+	</analytic>
+	<monogr>
+		<title level="m">2023 6th International Conference on Information and Communications Technology (ICOIACT)</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2023-11">Nov. 2023</date>
+			<biblScope unit="page" from="120" to="125"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Accessibility, usability, and security evaluation of universities' prospective student web pages: a comparative study of Europe, North America, and Oceania</title>
+		<author>
+			<persName><forename type="first">Ş</forename><forename type="middle">S</forename><surname>Macakoğlu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Peker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">İ</forename><forename type="middle">T</forename><surname>Medeni</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/S10209-022-00869-9/TABLES/10</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Univers. Access Inf. Soc</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="671" to="683"/>
+			<date type="published" when="2023-06">Jun. 2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Development of Augmented Reality Face Tracking Features on Glasses E-Commerce Websites</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">A</forename><surname>Astuti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nuraminudin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aminuddin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">S</forename><surname>Putra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Purwanto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Hasan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2023 7th International Conference on New Media Studies (CONMEDIA)</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2023-12">Dec. 2023</date>
+			<biblScope unit="page" from="76" to="81"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Determinants Influencing E-Payment Adoption Amidst COVID-19: A Conceptual Framework</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Hammood</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">H</forename><surname>Abdullah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">A</forename><surname>Hammood</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aminuddin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">Asti</forename><surname>Astuti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Hadi Purwanto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 7th 2023 International Conference on New Media Studies</title>
+		<meeting>the 7th 2023 International Conference on New Media Studies<address><addrLine>CONMEDIA</addrLine></address></meeting>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2023-12">2023. Dec. 2023</date>
+			<biblScope unit="page" from="39" to="43"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Challenges to Assess Accessibility in Higher Education Websites: A Comparative Study of Latin America Universities</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Acosta-Vargas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Acosta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Luján-Mora</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/ACCESS.2018.2848978</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="36500" to="36508"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">An Analysis of Website Accessibility in Higher Education in Indonesia Based on WCAG 2.0 Guidelines</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Arasid</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/1757-899X/306/1/012130</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IOP Conf. Ser. Mater. Sci. Eng</title>
+		<imprint>
+			<biblScope unit="volume">306</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">12130</biblScope>
+			<date type="published" when="2018-02">Feb. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Accessibility Analysis of Bangladesh Government Websites Based on WCAG 2.0</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ahmed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Islam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Mehedi</forename><surname>Hasan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sunny</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Comput. Sci. Mob. Comput</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="157" to="167"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">An Improved Image Compression Technique using Large Adaptive DCT Psychovisual Thresholds</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Ernawan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Kabir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Mustaffa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Moorthy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ramalingam</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/ICKII46306.2019.9042705</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 2nd IEEE Int. Conf. Knowl. Innov. Invent</title>
+		<meeting>2nd IEEE Int. Conf. Knowl. Innov. Invent<address><addrLine>ICKII</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2019-07">2019. 2019. Jul. 2019</date>
+			<biblScope unit="page" from="561" to="564"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">The effects of web accessibility certification on the perception of companies' corporate social responsibility</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Katerattanakul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">M</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Kam</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/S10209-017-0532-1/TABLES/9</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Univers. Access Inf. Soc</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="161" to="173"/>
+			<date type="published" when="2018-03">Mar. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Accessibility evaluation of Arabic University websites for compliance with success criteria of WCAG 1.0 and WCAG 2.0</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Akram</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Ali</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sulaiman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hassan</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/S10209-022-00921-8/TABLES/12</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Univers. Access Inf. Soc</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="1" to="16"/>
+			<date type="published" when="2022-10">Oct. 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -1,0 +1,1585 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Integrated Analysis of Satellite and Geological Data to Characterize Ground Deformation in the Area of Bologna (Northern Italy) Using a Cluster Analysis-Based Approach</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2025-07-30">30 July 2025</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mimmo</forename><surname>Palano</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Alessandra</forename><surname>Carollo</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Federica</forename><surname>Sparacino</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Alberto</forename><surname>Manuel</surname></persName>
+							<email>alberto_garcia@polito.it</email>
+						</author>
+						<author>
+							<persName><forename type="first">Garcia</forename><surname>Navarro</surname></persName>
+							<idno type="ORCID">0000-0001-9477-8769</idno>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Environment, Land and Infrastructure Engineering</orgName>
+								<orgName type="institution">Politecnico di Torino</orgName>
+								<address>
+									<addrLine>Corso Duca degli Abruzzi 24</addrLine>
+									<postCode>10129</postCode>
+									<settlement>Torino</settlement>
+									<country>Italy;</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Celine</forename><surname>Eid</surname></persName>
+							<email>celine.eid@totalenergies.com</email>
+							<idno type="ORCID">0000-0001-9477-8769</idno>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Environment, Land and Infrastructure Engineering</orgName>
+								<orgName type="institution">Politecnico di Torino</orgName>
+								<address>
+									<addrLine>Corso Duca degli Abruzzi 24</addrLine>
+									<postCode>10129</postCode>
+									<settlement>Torino</settlement>
+									<country>Italy;</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Total Energies</orgName>
+								<address>
+									<addrLine>2 Place Jean Millier La Défense 6</addrLine>
+									<postCode>92400</postCode>
+									<settlement>Paris</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Vera</forename><surname>Rocca</surname></persName>
+							<email>vera.rocca@polito.it</email>
+							<idno type="ORCID">0000-0001-8045-9388</idno>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Environment, Land and Infrastructure Engineering</orgName>
+								<orgName type="institution">Politecnico di Torino</orgName>
+								<address>
+									<addrLine>Corso Duca degli Abruzzi 24</addrLine>
+									<postCode>10129</postCode>
+									<settlement>Torino</settlement>
+									<country>Italy;</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Christoforos</forename><surname>Benetatos</surname></persName>
+							<email>christoforos.benetatos@polito.it</email>
+							<idno type="ORCID">0000-0002-2752-9428</idno>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Environment, Land and Infrastructure Engineering</orgName>
+								<orgName type="institution">Politecnico di Torino</orgName>
+								<address>
+									<addrLine>Corso Duca degli Abruzzi 24</addrLine>
+									<postCode>10129</postCode>
+									<settlement>Torino</settlement>
+									<country>Italy;</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Claudio</forename><surname>De Luca</surname></persName>
+							<email>deluca.c@irea.cnr.it</email>
+							<idno type="ORCID">0000-0002-5197-7503</idno>
+							<affiliation key="aff2">
+								<orgName type="department">Institute for the Electromagnetic Sensing of the Environment</orgName>
+								<orgName type="institution">Consiglio Nazionale Per la Ricerca</orgName>
+								<address>
+									<addrLine>Via Diocleziano 328</addrLine>
+									<postCode>80124</postCode>
+									<settlement>Napoli</settlement>
+									<country>Italy;</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Giovanni</forename><surname>Onorato</surname></persName>
+							<email>onorato.g@irea.cnr.it</email>
+							<idno type="ORCID">0000-0002-5197-7503</idno>
+							<affiliation key="aff2">
+								<orgName type="department">Institute for the Electromagnetic Sensing of the Environment</orgName>
+								<orgName type="institution">Consiglio Nazionale Per la Ricerca</orgName>
+								<address>
+									<addrLine>Via Diocleziano 328</addrLine>
+									<postCode>80124</postCode>
+									<settlement>Napoli</settlement>
+									<country>Italy;</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Riccardo</forename><surname>Lanari</surname></persName>
+							<email>lanari.r@irea.cnr.it</email>
+							<idno type="ORCID">0000-0002-7296-2749</idno>
+							<affiliation key="aff2">
+								<orgName type="department">Institute for the Electromagnetic Sensing of the Environment</orgName>
+								<orgName type="institution">Consiglio Nazionale Per la Ricerca</orgName>
+								<address>
+									<addrLine>Via Diocleziano 328</addrLine>
+									<postCode>80124</postCode>
+									<settlement>Napoli</settlement>
+									<country>Italy;</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Integrated Analysis of Satellite and Geological Data to Characterize Ground Deformation in the Area of Bologna (Northern Italy) Using a Cluster Analysis-Based Approach</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2025-07-30">30 July 2025</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">2B2296F69569639DBA37F327A5E3953B</idno>
+					<idno type="DOI">10.3390/rs17152645</idno>
+					<note type="submission">Received: 15 May 2025 Revised: 22 July 2025 Accepted: 24 July 2025</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-09-01T12:24+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>DInSAR</term>
+					<term>ground deformations</term>
+					<term>subsidence</term>
+					<term>groundwater extraction</term>
+					<term>underground gas storage</term>
+					<term>cluster analysis</term>
+					<term>time series decomposition</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>This study investigates ground deformations in the southeastern Po Plain (northern Italy), focusing on the Bologna area-a densely populated region affected by natural and anthropogenic subsidence. Ground deformations in the area result from geological processes (e.g., sediment compaction and tectonic activity) and human activities (e.g., ground water production and underground gas storage-UGS). We apply a multidisciplinary approach integrating subsurface geology, ground water production, advanced differential interferometry synthetic aperture radar-DInSAR, gas storage data, and land use information to characterize and analyze the spatial and temporal variations in vertical ground deformations. Seasonal and trend decomposition using loess (STL) and cluster analysis techniques are applied to historical DInSAR vertical time series, targeting three representatives areas close to the city of Bologna. The main contribution of the study is the attempt to correlate the lateral extension of ground water bodies with seasonal ground deformations and water production data; the results are validated via knowledge of the geological characteristics of the uppermost part of the Po Plain area. Distinct seasonal patterns are identified and correlated with ground water production withdrawal and UGS operations. The results highlight the influence of superficial aquifer characteristics-particularly the geometry, lateral extent, and hydraulic properties of sedimentary bodies-on the ground movements behavior. This case study outlines an effective multidisciplinary approach for subsidence characterization providing critical insights for risk assessment and mitigation strategies, relevant for the future development of CO 2 and hydrogen storage in depleted reservoirs and saline aquifers.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>Land subsidence and uplift are global phenomena that affect the sustainable development of urbanized and industrialized areas and can result in severe socioeconomic and environmental impacts, e.g., <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref>. Land movements act on different spatial and temporal scales originating from natural causes, human activities, or both <ref type="bibr" target="#b3">[4,</ref><ref type="bibr" target="#b4">5]</ref>, and their impacts range from regional flooding to local destruction of present infrastructures <ref type="bibr" target="#b1">[2]</ref>.</p><p>The monitoring of land movements on a regional or local scale is essential for the continuous understanding of their causes and for the identification of temporal and spatial patterns that can help in mitigating the impacts of these phenomena. Different techniques have been developed and applied from ground-based global navigation satellite systems (GNSS) positioning, leveling, and extensometers to remotely sensed synthetic aperture radar (SAR).</p><p>The Po Plain is a sedimentary basin in northern Italy affected by extensive land movements of natural and anthropogenic sources, and has been under investigation for several decades <ref type="bibr" target="#b5">[6,</ref><ref type="bibr" target="#b6">7]</ref>. Natural land movements in the Po Plain, still ongoing, are mainly due to sediment compaction and consolidation, as well as tectonic activity <ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref>, whereas human-induced land movements result from the extraction of fluids from the subsurface, such as groundwater from superficial acquirers and gas from underground reservoirs, and their re-injection in the case of UGS systems <ref type="bibr" target="#b3">[4,</ref><ref type="bibr" target="#b10">11]</ref>. In particular, natural land movements contribute up to a few millimeters per year, whereas movements due to fluid extraction can reach higher values. Moreover, after World War II, in several areas of the Po Plain and in particular north of the city of Bologna, values of ground subsidence up to 70 mm/year have been recorded, which have significantly decreased since then <ref type="bibr" target="#b7">[8]</ref>.</p><p>The southeastern Po Plain has been subject to significant subsidence due to both natural processes and human activities, as was pointed out by various researchers, e.g., <ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref>, who studied ground surface movements using a variety of geodetic techniques to monitor and analyze subsidence patterns. Their results provided insights into the spatial and temporal variability of ground deformation, primarily focused on the natural causes of subsidence and the effect of groundwater production in various parts of the basin. Their work revealed varying subsidence rates across different regions within the plain, contributing valuable data toward the understanding of the underlying causes of subsidence. Nevertheless, the contribution to ground movements (e.g., <ref type="bibr" target="#b7">[8]</ref>) of water production from surface aquifers is still under investigation, mainly due to the high uncertainty of the lateral and vertical continuity of the sand bodies.</p><p>In the Po Plain area, satellite techniques such as GNSS and advanced Differential Interferometry (DInSAR) have provided effective ways to monitor the temporal evolution of land movements, especially their vertical component, which is the subject of this study.</p><p>In more recent times, post-processing techniques are focused on applying machine learning and artificial intelligence algorithms for the automatic identification of ground movements due to various anthropogenic and natural activities, e.g., <ref type="bibr" target="#b15">[16,</ref><ref type="bibr" target="#b16">17]</ref>. Ref. <ref type="bibr" target="#b17">[18]</ref> tested a methodology for identifying areas affected by gas storage activities and quantifying ground movements using STL-described by <ref type="bibr" target="#b18">[19]</ref>-and unsupervised clustering algorithms over DInSAR data. The seasonal and trend components of the time series depicting the vertical component of the ground deformations were analyzed using cluster analysis to detect movement anomalies and pattern distributions (in spatial and temporal domain).</p><p>To date, in the Po Plain area, only the trend components of the vertical ground movements (subsidence and uplift) have been thoroughly investigated. The present research also focuses on the seasonal components of ground deformation that exhibit cyclic patterns that can be directly correlated with anthropic activities, such as groundwater production and UGS.</p><p>This work focuses on the investigation of the contribution of the superficial sedimentary bodies, affected by ground water production and other human activities, to the total vertical ground deformation. In particular, the lateral continuity of the aquifer bodies is studied via its correlation with the seasonal components of the ground deformation and ground water production data. The results are compared and validated with geological information of the upper-most layers of the Po Plain in the studied area. A case study of an integrated analysis on both seasonal and vertical trend components of the land movements to identify and quantify their superposition, primarily due to groundwater production and gas storage activities, and also due to tectonic phenomena observed in the broader area of the city of Bologna from 2016 to 2021, is presented.</p><p>Among several space-borne advanced DInSAR techniques aimed at generating ground deformation time series, one comes from Small BAseline Subset (SBAS) <ref type="bibr" target="#b19">[20]</ref> elaborations in its parallel computing version (P-SBAS) <ref type="bibr" target="#b20">[21,</ref><ref type="bibr" target="#b21">22]</ref> applied to Sentinel 1 acquisitions.</p><p>The ground deformation data were analyzed using a validated approach proposed by <ref type="bibr" target="#b17">[18]</ref> to treat the same kind of time series of ground deformation related to multiple underground gas storage sites, which allowed for the identification, localization, and quantification of the main ground movement phenomena with similar seasonal patterns. Our work is focused on applying and expanding this methodology to the southeastern area of the Po Plain and particularly the area around the city of Bologna (Emilia-Romagna). The study area was selected due to a series of factors that distinguish it in the basin, such as the large amount of available scientific data and its particular geological characteristics. The findings were compared with datasets related to groundwater activities such as production volumes and piezometric data, aquifer characteristics and subsurface geology, UGS activities, and land use maps.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Materials and Methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.">Geological Framework</head><p>The study domain includes the broader region of the Metropolitan City of Bologna (Emilia-Romagna) in the Po Plain, northern Italy (Figure <ref type="figure" target="#fig_0">1</ref>), covering an area of 47 × 38 km. The Po Plain basin is a foreland sedimentary basin enclosed by the Southern Alps and the Northern Apennines, with the foreland in between characterized by active thrusts with subsequent sediment infilling of the foredeep basin, e.g., <ref type="bibr" target="#b22">[23]</ref>. The upper part of the sedimentary sequence is of Quaternary origin and composed of alternating layers of sand and clay that reach a maximum thickness of 2-6 km <ref type="bibr" target="#b23">[24,</ref><ref type="bibr" target="#b24">25]</ref> in the Southern Alps and up to 7 km in the deepest depocenters of the Northern Apennines <ref type="bibr" target="#b25">[26]</ref>. Inside the study domain are also located several gas fields that characterize large parts of the basin. Most of them are described by anticline structures against thrust faults linked to the front thrusts and are located in depths ranging between 1000 and 1500 m. One of them, located in the north of Bologna-discovered in 1956-was converted to an UGS in 1975 once the primary production was completed, and it is still operational today.</p><p>In the Emilia-Romagna alluvial plane, a multiaquifer freshwater system is developed in the upper 500 m of the Quaternary sedimentary sequence. Figure <ref type="figure" target="#fig_0">1</ref> shows two cross-sections along the Emilia-Romagna alluvial plane, indicating the presence of 3 main hydrostratigraphic units known as A, B, and C. Aquifer group A represents the most recent (Middle Pleistocene-Holocene) hydrostratigraphic unit and extends to the first 150-200 m from ground-level. Aquifer groups B and C are older (Upper Pliocene-Middle Pleistocene) and reach depths of 300-350 m or deeper, respectively. The first two aquifer groups (A and B) mainly consist of alluvial deposits, including gravels of alluvial conoid origin, fine material of alluvial plain origin, and sand deposits of meandric origin <ref type="bibr" target="#b3">[4]</ref>. Aquifer C consists of alternating layers of sand and finer sediments of coastal and marine-marginal origins. Aquifer groups A and B are subdivided into minor hydrostratigraphic structures called aquifer complexes, respectively named A1-A4 and B1-B4 from shallow to deep (Figure <ref type="figure" target="#fig_0">1</ref>). The subdivision is based on the overall volume of aquifers in each unit, as well as the areal continuity and thickness of the corresponding aquitards. These aquitards are in turn, referred to as basal aquitards and are not related to any depositional sequences or hydrostratigraphic units <ref type="bibr" target="#b26">[27]</ref>. The aquifer groups in the Emilia-Romagna plain are influenced by both their location and their depositional environment that affect sedimentation continuity throughout the basin and hydraulic connections between the sedimentary bodies. Discontinuity surfaces can be recognized from the geometry of deposition and gaps in sedimentation, especially near active fault structures, while more continuous sedimentation is observed farther from these features <ref type="bibr" target="#b27">[28]</ref>. The north and northeast portions of the Emilia Romagna basin exhibit significant aquifer thickness, but the thickest parts of the aquifers are located in the river conoids in the southern part of Emilia-Romagna. The regional aquifers are vertically divided into two main groundwater bodies: the upper bodies, consisting of confined portions of aquifer complexes A1 and A2, and the lower bodies, which include complexes A3 and A4, as well as aquifers B and C. Above them, there is a single unconfined aquifer body linked to the Apennine alluvial fans. The superficial unconfined aquifer is recharged directly by meteoric infiltration, while the confined aquifers (A1 to C) receive lateral recharge from meteoric waters of Apennine and Alpine origin <ref type="bibr" target="#b28">[29]</ref>. However, confined aquifers in the central Po Plain exhibit low hydraulic gradients and circulation velocities, indicating minimal current recharge processes <ref type="bibr" target="#b29">[30]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.">Study Area</head><p>The area under investigation encompasses around 1850 km 2 , is predominantly agricultural, with urban settlements and industrial activities primarily concentrated within the Metropolitan City of Bologna, also characterized by a high concentration of water production for civil and industrial purposes. Figure <ref type="figure" target="#fig_1">2</ref> shows the land use map of the entire investigated area, named hereafter as the "Extended area", and Table <ref type="table" target="#tab_0">1</ref> summarizes the main groups of activities. Toward the NE direction, the urban settlements and the industrial activities progressively decrease, as well as water production, both in terms of numbers of wells and extracted volumes. Figure <ref type="figure" target="#fig_2">3</ref> illustrates the typology, positions, and production volume for the water production wells, as well as the position of the piezometric wells and of the gas storage ones considered in the present study. Furthermore, a system for the underground storage of natural gas is located a few tens of kilometers from Bologna area, while in the south, it is located in the Apennines chain, characterized by buried tectonic structures that have contributed to a general uplift-active since the Early Pleistocene.   To better depict the key local (mainly seasonal) land movement phenomena and to recognize the trend evolution present in the area, three sub-set domains of investigation were identified (Figures <ref type="figure" target="#fig_1">2</ref> and<ref type="figure" target="#fig_2">3</ref>):</p><p>1. "Area 1" focuses on the Metropolitan City of Bologna characterized by numerous industrial activities, a strong water production and a specific geological framework. It has been analyzed by numerous studies regarding the overall trend of ground deformation, focusing on the city of Bologna, which has been affected by intensive subsidence related to groundwater exploitation, e.g., <ref type="bibr" target="#b30">[31]</ref><ref type="bibr" target="#b31">[32]</ref><ref type="bibr" target="#b32">[33]</ref>. 2. "Area 2" is located to the NE of Bologna and is characterized by a low concentration of urban areas and industrial activities, and by negligeable water production, suggesting a stable condition. 3. "Area 3", in between, shows poor and scattered urban and industrial areas, numerous widespread water production wells with average production volume, and is marked by the presence of a UGS system. It represents a transition zone with superimposed effects from superficial aquifer exploitation and deep subsurface operations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3.">Datasets</head><p>The dataset in this study includes land-use maps, ground movement measurements, water production data, gas storage data, and geological and structural information derived from different acquisition techniques and also at different scales. In particular:</p><p>1.</p><p>Land use maps from the geoportal of Regione Emilia-Romagna; 2.</p><p>Ground movement surveys: a. P-SBAS DInSAR time series of vertical ground deformation component provided by CNR-IREA (Table <ref type="table" target="#tab_1">2</ref>). The exploited parameters for the Line of Site (LoS) analyses are reported in Table <ref type="table" target="#tab_2">3</ref> and deeply described in <ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref><ref type="bibr" target="#b21">[22]</ref>;</p><p>b. GNSS time-series from the "BOLG00ITA" station nearest Bologna, from EUREF Permanent GNSS Network (Residual Position Time Series-Extended Hybrid EPN Solution C2235) <ref type="bibr" target="#b33">[34]</ref> (Figure <ref type="figure" target="#fig_2">3</ref>);</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>3.</head><p>Water production data provided by Regione Emilia-Romagna (Figure <ref type="figure" target="#fig_2">3</ref>) and by <ref type="bibr" target="#b3">[4]</ref>:</p><p>a.</p><p>Groundwater production volumes (in 106 m 3 /yr) in the time frame 2016-2018, and well positions; b.</p><p>Well use: for agricultural, civil, and industrial purposes; c.</p><p>piezometric data measurements publicly available on the Open Data portal of ARPAE (Agenzia Prevenzione Ambiente Energia Emilia-Romagna);</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>4.</head><p>Location of storage wells and cumulative stored gas volumes <ref type="bibr" target="#b34">[35]</ref> (Figure <ref type="figure" target="#fig_2">3</ref>); 5.</p><p>Geological data collected from technical literature and the geoportal of Regione Emilia-Romagna: a. Geological cross-sections; b.</p><p>Hydrodynamic aquifer parametrization.  In particular, the data on water production were derived from <ref type="bibr" target="#b3">[4]</ref> and further integrated to reach the desired detail. As is described in <ref type="bibr" target="#b3">[4]</ref>, the data are affected by a certain degree of uncertainty due to the lack of specific information. Furthermore, the temporal availability of the data is discontinuous, and they cover three periods in time: 2003; from 2009 to 2001; and from 2015 to 2018. The present research considers the water production data acquired in the period of 2016-2018 because they coincide with the availability of land movement surveys in the same time interval.</p><p>Among all the piezometric wells present in the extended area, we analyzed the most representative, i.e., the ones nearest to the water production wells or to the storage site or representative of a certain area (Area 2). Unfortunately, some of them lack available measurement points that could have assisted in a clear identification of seasonal behaviors.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.4.">P-SBAS DInSAR</head><p>The Sentinel-1 (S-1) constellation of the Copernicus Program represented a big revolution within the Earth observation scenario, providing an unprecedented operational capability for intensive radar mapping of the Earth's surface. Indeed, the S-1 constellation is characterized by enhanced revisit frequency, spatial coverage, and reliability for operational services and applications requiring a long SAR data time series. Moreover, the S-1 constellation archive is available with a free and open access policy, thus easing data access and enlarging the scientific community interested in its use. These peculiarities make the S-1 IWS (interferometric wide swath) data particularly suitable for exploitation through advanced differential SAR interferometry (DInSAR) <ref type="bibr" target="#b35">[36,</ref><ref type="bibr" target="#b36">37]</ref>, which is a well-known remote sensing technique that allows for the generation of spatially dense line-of-sight (LOS) deformation time series and corresponding mean deformation velocity maps.</p><p>As previously stated, the vertical DInSAR data exploited for this work (in the form of time series) benefited from the Small BAseline Subset (SBAS) <ref type="bibr" target="#b19">[20]</ref> technique and, in particular, its parallel computing version (P-SBAS) <ref type="bibr" target="#b20">[21,</ref><ref type="bibr" target="#b21">22]</ref>, which implemented the entire advanced DInSAR processing chain (P-SBAS DInSAR). Moreover, by exploiting the LOS displacement time series generated from ascending and descending orbits, was possible to compute the vertical and east-west components <ref type="bibr" target="#b37">[38,</ref><ref type="bibr" target="#b38">39]</ref>.</p><p>The P-SBAS procedure yields deformation time series along the line-of-sight (LOS) of the satellite through an inversion of an over-determined system of differential interferograms, each of them characterized by small temporal and spatial baselines. Typically, the used upper limit thresholds are 2 months for the temporal baseline and 500 m for the spatial one. After the system inversion, the time series is still corrupted by the atmospheric phase screen (APS) removed through a cascade of external data exploitation (ERA5) and a data-driven filtering algorithm, described in <ref type="bibr" target="#b39">[40]</ref>. That said, a deeper description of the P-SBAS technique and its parameters is reported in the reference <ref type="bibr" target="#b20">[21,</ref><ref type="bibr" target="#b21">22]</ref>, previously mentioned.</p><p>These datasets are in the framework of an active agreement between the Institute for the Electromagnetic Sensing of the Environment (IREA-CNR) and the Italian Ministry aimed at supporting the Italian administrations with the advanced DInSAR analysis on a national scale, and deepening insight into the specific of these elaborations falls outside the main focus of our present research.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.5.">Seasonal and Trend Decomposition Using Loess</head><p>The STL (seasonal and trend decomposition using loess) method, developed by <ref type="bibr" target="#b18">[19]</ref>, is a widely used technique for decomposing time-series data into trend, seasonal, and remainder components through an iterative process based on locally weighted regression (loess). This approach provides flexibility by allowing the seasonal pattern to change over time and enables user control over the smoothness of both the trend and seasonal components. STL is robust to outliers, minimizing their influence on the decomposition, and can handle any type of seasonality beyond fixed monthly or quarterly periods. Due to its adaptability and robustness, STL is extensively applied in diverse time series analyses <ref type="bibr" target="#b18">[19]</ref>. For our case, we adopted the additive approach for obtaining the decomposed series using STL, in which the raw time series is considered to be the sum of its seasonal (S), trend (T), and random components (R).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.6.">Cluster Analysis-K-Means</head><p>Cluster analysis is an unsupervised machine learning method used to group a set of objects into clusters according to the similarity of certain properties or attributes <ref type="bibr" target="#b40">[41]</ref>.</p><p>K-means is a prototype-based partitional clustering technique (an unnested method with non-overlapping classes). Once the desired number of clusters is defined by the user, the method attempts to group the data in clusters that are represented by their centroids (e.g., the mean value of a group of points). According to <ref type="bibr" target="#b40">[41]</ref>, in its basic form, the algorithm starts by selecting k points as centroids, randomly or user-defined, where k is the desired number of clusters. Each data point is assigned to its closest centroids during the first iteration, and consequently, the centroid's clusters are re-calculated. Until the optimization process of an objective function reaches the convergence, the process is repeated-i.e., the centroid change between two successive iterations is lower than a threshold value.</p><p>We implement the <ref type="bibr" target="#b41">[42]</ref> algorithm: the optimization of the squared error function (Equation ( <ref type="formula" target="#formula_0">1</ref>)) allows for the selection of the optimal cluster configuration, based on the method developed by <ref type="bibr" target="#b42">[43]</ref>:</p><formula xml:id="formula_0">SSE2 = N i ∑ J x ij -c i 2 N i -1 &lt; SSE1 = N 1 ∑ j x 1j -c 1 2 N 1 -1<label>(1)</label></formula><p>where SSE corresponds to the sum of squared errors, N is the number of points assigned to cluster i, x ij the j point of cluster i, and c i the centroid of the cluster (its mean).</p><p>For the scope of this work, the initial centroids were randomly defined, but the seed "123" was imposed for the generation of the random series.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.7.">Methodology</head><p>The methodology developed for the critical and comprehensive analysis of the dataset includes the following steps:</p><p>1.</p><p>The relative P-SBAS DInSAR vertical measurements were compared with the GNSS absolute vertical measurements from the "BOLG00ITA" station located close to the city of Bologna (Figure <ref type="figure" target="#fig_2">3</ref>); 2.</p><p>P-SBAS DInSAR vertical time-series were processed through STL and successive cluster analysis on seasonal and trend components using the methodology developed by <ref type="bibr" target="#b17">[18]</ref>; 3.</p><p>The behavior and magnitude of the identified clusters (where a cluster groups objects based on the similarity of some shared properties or features <ref type="bibr" target="#b40">[41]</ref>) were compared with both groundwater production and UGS information; 4.</p><p>The geological framework of the superficial aquifers from <ref type="bibr" target="#b3">[4]</ref> was further investigated for the specific area under analysis and, together with the general geological framework of the Po Plain, they were related to the phenomena identified by the cluster analysis output.</p><p>In particular, the adoption of P-SBAS DInSAR data investigation methodology allowed for the identification, geo-localization, and quantification of the main ground-movement events, which were subsequently analyzed considering both anthropogenic and natural sources. Figure <ref type="figure" target="#fig_3">4</ref> summarizes the details of the approach. Based on the STL, the P-SBAS DInSAR time series of vertical movements for each MP is subdivided into three components: seasonality, trend, and residual. The seasonality characterizes the data's periodic oscillation; trend accounts for values that increase or decrease (a change in direction of movement); and the residual accounts for any other random changes <ref type="bibr" target="#b43">[44]</ref>. The cluster analyses subsequently groups objects (MPs in this case) into clusters, based on the similarity of some shared properties or features. The K-means algorithm was adopted. The results can be visualized in a GIS environment. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.">Analyses of Ground Movement Survey Data: P-SBAS DInSAR and GNSS</head><p>The P-SBAS DInSAR dataset for the extended area was validated with the GNSS absolute vertical measurements from the "BOLG00ITA" station nearest Bologna (EUREF network). The GNSS data were compared with the values coming from the nearest available P-SBAS DInSAR MP (less than 10 m away from the station). As this work mainly focuses on the seasonal oscillatory behavior of the deformations, for both time-series, we removed the first-order component (trend) and plot them together for comparison (Figure <ref type="figure" target="#fig_4">5a</ref>), obtaining an RMS of 4.7 mm. For obtaining the seasonal component, STL <ref type="bibr" target="#b18">[19]</ref> was applied to the raw time-series of both acquisitions. The results are shown in Figure <ref type="figure" target="#fig_4">5b,</ref><ref type="figure">c</ref>. Both series show well-defined and similar seasonal behavior, ensuring the validity of the subsequent analysis. On the other hand, we remark that a partial suppression of the low-amplitude displacement retrieved from the DInSAR measurements is possible due to the atmospheric phase screen signal removal, which is carried out at the end of the interferometric processing <ref type="bibr" target="#b44">[45]</ref>. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.">Analyses of Seasonal and Trend Behavior of Ground Movements: Regional Scale</head><p>The cluster analysis of the seasonal and trend components of P-SBAS DInSAR vertical time series was developed at the scale of the extended area (Figure <ref type="figure" target="#fig_2">3</ref>) to identify the dominant phenomena and thus the sub-domains of investigation.</p><p>The overall investigated region is characterized by a variety of seasonal phenomena with local diversities, as depicted by Figures <ref type="figure" target="#fig_5">6</ref> and<ref type="figure" target="#fig_6">7</ref>. As a result, the cluster analyses on seasonal components were applied at each of the sub-areas (Area 1, Area 2, and Area 3), and the results are presented and discussed in the following sections.  Conversely, the cluster analysis of the trend components developed at the scale of the extended area was able to identify dominant trends. The K-means cluster analysis was performed using four clusters. Figure <ref type="figure" target="#fig_7">8</ref> displays the spatial distribution of the clusters and Figure <ref type="figure" target="#fig_8">9</ref> groups the trend for each cluster with its net average displacement, which represents an average value for each cluster. The map depicts the highest concentration of net displacement of up to -68 mm (cluster 1) over the investigated period (June 2016-October 2021) in the Bologna area, characterized by high water production volumes. Coherently, the three piezometric wells analyzed in this area, the locations of which are shown in Figure <ref type="figure" target="#fig_7">8</ref>, exhibit a continuous decreasing trend in the groundwater level, as it will be analyzed deep into detail in the following sections. Cluster 2, surrounding cluster 1, still depicts a significant subsidence effect together with a gradual transition toward the surrounding clusters 3 and 4, which show a more stable behavior. In particular, the latter collects the majority of MPs and is characterized by a mean, even if very low, uplift value and it has been the object of further local investigations focused on the southern area of Bologna and the NW area. The outcomes of the analyses focused only on this area are presented in Figures <ref type="figure" target="#fig_0">10</ref> and<ref type="figure" target="#fig_0">11</ref> and they clearly isolate the MPs still experiencing a significant uplift (cluster 4), compared with the almost stable ones (cluster 3). Clusters 1 and 2 isolated localized subsidence areas.   The trend behavior of the extended area is coherent with the distribution of water production and the land use effects (i.e., urban and industrial Bologna area). Furthermore, the comparison with the ARPAE velocity subsidence map for the same timeframe (2016-2021) focused on the Metropolitan City of Bologna shows a good agreement. Figure <ref type="figure" target="#fig_10">12</ref> presents a comparison between the two maps. Although the overall shape of the average velocities is comparable on both maps, there is a discrepancy in the absolute values of the motion. This is probably due to the different types of input data used for the map construction and the fact that the values used to create our map were averaged across each of the clusters. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.">Analyses of Seasonal and Trend Behavior of Ground Movements: Local Scale</head><p>Once the general behavior of the extended area was studied, we performed a more detailed analysis on each of the 3 areas of study (Area 1, Area 2, and Area 3) to investigate possible small-scale characteristics of interest of the ground motion. Below are our findings for each study area.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.1.">Area 1</head><p>Area 1 includes the city of Bologna and an abundant number of water-production wells, characterized by some of the highest production volumes (0.5 to 2.25 × 10 6 m 3 /year). The wells are concentrated in three punctual areas and are used mainly for civil and industrial purposes. The distribution of water production wells with their corresponding production volumes along with the three most representative piezometric wells can be seen in Figure <ref type="figure" target="#fig_11">13</ref>. Furthermore, Area 1 is characterized by the denser areal coverage of P-SBAS DInSAR data. K-means cluster analysis of the P-SBAS DInSAR time series of the vertical seasonal components on Area 1 was performed using four clusters. The results provided a map with the spatial distribution of the clusters (Figure <ref type="figure" target="#fig_11">13</ref>) and a plot showing the seasonal behavior of each cluster with its average amplitude highlighting the seasonality (Figure <ref type="figure" target="#fig_12">14</ref>). Clusters 1 and 2 are the most cohesive ones and show the highest seasonal amplitude; clusters 3 and 4 show a widespread extension and they are characterized by lower amplitude. In particular, cluster 2 surrounds the water wells with the highest water production volumes and it shows a seasonal behavior coherent with the water exploitation and the aquifers' behavior: uplift during the aquifer recharge in the autumn-winter period and subsidence during the spring-summer period of maximum water extraction.</p><p>To better detect the seasonal ground movement effects related to water production, the groundwater piezometric levels were compared with the P-SBAS DInSAR data, considering the vertical seasonal displacements of the cluster(s) surrounding the piezometric wells, and the vertical seasonal displacements of the MPs within a buffer zone around the piezometric wells (considering a distance of about 100-150 m from the well). Figures <ref type="figure" target="#fig_2">A1-A3</ref> (in Appendix A) show the comparisons for wells BO20-01, BO27-00, and BO30-00, respectively, for the nearby clusters (a) and the buffer zone (b).  Well BO20-01 and the adjacent water-production wells are surrounded by cluster 2 and subsequently by cluster 4. A direct correlation was observed between the vertical seasonal component of cluster 2 and the groundwater level with uplift in the autumn-winter period and subsidence in the spring-summer. Instead, cluster 4, placed at more than 200 m from the wells, is characterized by a temporal shift in the order of few months and a lower amplitude, showing a lower degree of correlation with the water production-induced phenomena A1a). The MPs within the buffer zone belong only to cluster 2 and they show a straightforward correlation between their seasonal displacement and the ground water level (Figure <ref type="figure" target="#fig_0">A1b</ref>).</p><p>Well BO30-00 and the adjacent water-production wells are surrounded by cluster 2 and subsequently by cluster 1. The straightforward correlation between the vertical seasonal component of cluster 2 and the groundwater level is confirmed. Instead, the behavior of cluster 1, placed at around 100 m from the wells, shows a seasonality not related to water-production effects (Figure <ref type="figure" target="#fig_1">A2a</ref>). The MPs within the buffer zone belong only to cluster 2 and they confirm a straightforward correlation between their vertical seasonal displacement and the ground water level (Figure <ref type="figure" target="#fig_1">A2b</ref>).</p><p>Finally, well BO27-00 and the adjacent water-production wells are surrounded only by cluster 2 and the direct correlation between P-SBAS DInSAR vertical seasonal movements and groundwater level can be appreciated at each investigated scale level (Figure <ref type="figure" target="#fig_2">A3a,</ref><ref type="figure">b</ref>).</p><p>The investigation of vertical trend components in Area 1 confirms the findings of the analysis performed on the extended area, adding no extra information.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.2.">Area 2</head><p>Area 2 hosts small villages, while the main land-use activity is agriculture, with several green areas. Water production in this area is negligeable (within the range of 0-0.2 × 10 6 m 3 /yr) from few, sparse production wells. The density of P-SBAS DInSAR data is quite low, with measurements concentrated in correspondence to the sparse villages.</p><p>The K-means cluster analysis of the P-SBAS DInSAR time-series of the vertical seasonal components was performed using four clusters. The results provided a map (Figure <ref type="figure" target="#fig_13">15</ref>) and a plot (Figure <ref type="figure" target="#fig_14">16</ref>) showing a very stable zone in which the majority of the MPs belonged to cluster 4 with very low average vertical seasonal amplitudes (in the order of a few millimeters), making it almost flat. The water-production wells are surrounded only by cluster 4, showing practically negligible seasonal land movements. Very local phenomena are depicted by the other three clusters. In particular, clusters 1 and 2, which collect a very narrow number of MPs with the highest amplitude, correspond to an orchard area, and they are unrelatable with the position of the known water production wells.  The piezometric data available in the area suffer from a low acquisition frequency, making the comparison with the P-SBAS DInSAR values barely meaningful. Nevertheless, data at piezometric well FE73-00 and FE34-02 show a seasonal behavior of very small amplitude, which is coherent with the aquifer's production/recharge mechanism.</p><p>The analysis of vertical trend components confirm the stability of the area investigated. The majority of MPs show negligeable net displacement, very local and isolated uplift, and subsidence phenomena effects on the same area showing evident seasonal phenomena, and they correspond to agricultural zones, prone to possible water extraction from local wells.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.3.">Area 3</head><p>The land-use activities in Area 3 are very similar to those in Area 2, with a slightly higher number of water-production wells, yet still with very low annual production rates (within the range of 0-0.2 × 10 6 m 3 /yr). Area 3 hosts a system for the underground storage of natural gas, already investigated in a previous publication <ref type="bibr" target="#b34">[35]</ref>. The underground storage of natural gas is a widespread practice to guarantee a real-time response to energy market requests, as well as providing "strategic" reserves to be accessed in case of shortages or disruption of gas supply <ref type="bibr" target="#b34">[35,</ref><ref type="bibr" target="#b45">46]</ref>. UGS operations consist of the seasonal and cyclical withdrawal and injection of natural gas in deep porous and permeable geological formations.</p><p>The validity of the cluster analysis in detecting the vertical seasonal ground movements associated with storage operations has already been assessed by <ref type="bibr" target="#b17">[18]</ref>. The same workflow of K-means seasonal cluster analysis was applied to Area 3 using four clusters. The results provided a map showing the spatial distribution of the four clusters (Figure <ref type="figure" target="#fig_15">17</ref>) and a plot showing the vertical seasonal behavior of each cluster (Figure <ref type="figure" target="#fig_16">18</ref>). The distribution of the clusters is dominated by the localized concentration of cluster 1 (Figure <ref type="figure" target="#fig_15">17</ref>) above the UGS, identified by the storage well position. Figure <ref type="figure" target="#fig_17">19</ref> shows the straightforward correlation between the gas cumulative volume curve <ref type="bibr" target="#b34">[35]</ref> and the vertical seasonal variation of cluster 1. The gas volume variations, as well as the induced fluid pressure variations, behave according to the two seasonal and cyclical storage operations, with an increase in the spring-summer injection period and decrease in the autumn-winter production period. Consequently, a seasonal and cyclical uplift and subsidence ground movement is induced, with maximum and minimum peaks accordingly occurring at the end of each injection and withdrawal period, respectively. Cluster 2 surrounding cluster 1 (and the UGS wells) shows a smaller amplitude and a temporal shift compared with cluster 1 MPs: it is characterized by a smoother influence of UGS activities together with the superposition of other more generic and widespread phenomena collected by cluster 4. Cluster 4 groups the highest number of MPs of the area with the lowest average seasonal amplitude and no strong periodicity, in line with the 'stable' zone identified by cluster 4 of Area 2.   In line with Area 2, water production induces no appreciable vertical seasonal ground movements in the surroundings of the documented water wells present in Area 3, whereas the vertical seasonality of cluster 3, which collect a very narrow amount of MP, is coherent with water production/aquifer recharge, but it is unrelated to the position of the known water production wells.</p><p>The cluster analyses performed on vertical trend components in the area of Area 3 does not add any further information; the area turns out to be a transition zone from the high subsidence observed in the area of Bologna (Area 1) through the almost stable NW area (Area 2). No vertical trend effects due to the storage operations can be appreciated.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Discussion</head><p>The different hydrogeological conditions characterizing the key areas in the studied region-Areas 1-3-led to a distinct response of the geological layers to water production and subsequent recharge from rainfall or meteoric water. These responses highlight the complexities of groundwater dynamics and their relationship to geological characteristics throughout the region and have an impact on both the seasonal and trend components of ground movement.</p><p>Area 1 is characterized by a high concentration of water production. It is located inside the Reno alluvial fan <ref type="bibr" target="#b46">[47]</ref> with a high thickness of sand/gravel deposits and a high lateral continuity, as represented in geological sections S1 and S2 (Figures <ref type="figure" target="#fig_18">20</ref> and<ref type="figure" target="#fig_19">21</ref>). The groundwater levels of the piezometric wells in this area are consistent with the groundwater recharge/withdrawal regime with high hydraulic heads (30-50 m), and are coherent with the P-SBAS DInSAR vertical seasonal movements. This can be attributed to the recharge of the aquifers directly from rainfall precipitation with high circulation velocities <ref type="bibr" target="#b29">[30]</ref>. Thus, the consistency of the vertical seasonal component of P-SBAS DInSAR with the groundwater regime is attributed to the high volume of water production accompanied by fast recharge. Furthermore, the areal continuity of the sediments allows for pressure areal sink propagation that also explains the vertical seasonal ground movement variation spread throughout the investigated area.  On the other hand, Area 2 is located in the NE part of the broader studied region. This part of the basin is characterized by lower concentrations of sand/gravel deposits that also exhibit lower lateral continuity (Figures <ref type="figure" target="#fig_18">20</ref> and<ref type="figure" target="#fig_19">21</ref>). There are not enough data to make a direct correlation between the groundwater levels of the piezometric wells in this area and the P-SBAS DInSAR vertical seasonal movements, but it is assumed to be a "stable" area in relation to seasonality with low hydraulic heads (2-7 m). The recharge of the aquifers in this area is by meteoric waters of Apennine and Alpine origin <ref type="bibr" target="#b29">[30]</ref>, and the inconsistency of the vertical seasonal component of P-SBAS DInSAR data with the groundwater regime can be attributed to extremely low circulation velocities and the lack of present-day recharge phenomena. The vertical seasonal phenomena depicted by the cluster analysis performed on Area 2 are very local due to the low areal continuity of the aquifer deposits displaying lenticular shapes.</p><p>The central part of the investigated region, Area 3, is characterized by the presence of the UGS site. In fact, MPs belonging to Cluster 1 are located directly above the UGS site (Figures <ref type="figure" target="#fig_15">17</ref> and<ref type="figure" target="#fig_16">18</ref>) and also exhibit very cohesive behavior in respect to the other clusters. Their vertical seasonal components show seasonal correlations both in time and space with storing activities-broadly characterized by injection cycles from April to October and withdrawals from November to March <ref type="bibr" target="#b47">[48]</ref>, in agreement with the seasonal behavior of the vertical ground deformation shown in Figure <ref type="figure" target="#fig_17">19</ref>. The location and dimensions of the underground reservoir are in good agreement with the observed oscillations on the ground surface. The results are in agreement with those of <ref type="bibr" target="#b17">[18]</ref>, where several UGS sites were studied in the Po Plain area in Northern Italy, and those of <ref type="bibr" target="#b34">[35]</ref> that show that the peak ground deformations are localized immediately above the reservoir area while a transitional area extends toward the field borders before ceasing completely in a zone outside the reservoir borders. The ground motions observed above the underground gas storage site can be more easily interpreted compared with those in areas where only aquifers are present. The UGS site dimensions and its geological characteristics have been thoroughly investigated through detailed analysis of numerous wells and 3D seismic data. In contrast, the dimensions and potential connections of superficial aquifers are more difficult to identify, making it harder to correlate them with the observed ground movements.</p><p>The long-term trend of vertical ground movements in the studied area reveals that most of the Northern Apennines, including the area south of Bologna, have undergone uplift (Figures <ref type="figure" target="#fig_0">10</ref> and<ref type="figure" target="#fig_0">11</ref>) since the early Pleistocene <ref type="bibr" target="#b48">[49,</ref><ref type="bibr" target="#b49">50]</ref>. In fact, the area of interest is affected by the activity of the Bologna anti-cline associated with an active blind thrust <ref type="bibr" target="#b14">[15,</ref><ref type="bibr" target="#b50">51]</ref>. Thus, the uplift in the range of up to 2 mm/yr is very close to the surface expression of the thrust and represents movements from natural tectonic activities.</p><p>The entire study area can be characterized as a transition zone moving from SW to NE (Figure <ref type="figure" target="#fig_7">8</ref>). The vertical trend of the extended area is described by significant subsidence values in the Bologna area due to high water production and continuous recovery of groundwater levels, considering that, in that area, the thickness of the groundwater aquifers is the largest (Figure <ref type="figure" target="#fig_19">21</ref>). The subsidence values gradually diminish approaching the more stable NE area. The UGS site is located in the central part of the region, which exhibits no distinctive vertical trend behavior. The analysis indicates that no direct correlation exists between UGS activities and the area's overall vertical movement trends, suggesting instead that these trends are more closely related to the regional geological dynamics and localized water production.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">Conclusions</head><p>This work focused on the quantification of the contribution of the superficial sedimentary bodies and of deeper sedimentary formations, affected by ground water production and UGS activities, respectively, to the total vertical ground deformation. The results were compared and validated with geological information of the upper-most layers of the Po Plain in the studied area.</p><p>This study identified and quantified the contributions of different and superimposed causes of natural and anthropogenic origins to the vertical ground movements in an area of the Po Plain (Italy) deeply affected by land movement phenomena. The adopted approach integrated land movement surveys, i.e., advanced satellite DInSAR and GNSS acquisitions, with groundwater and gas storage activities, land use maps, and subsurface geology. The investigation was developed separately on seasonal and trend components of the vertical land movements adopting the STL and the cluster analysis techniques applied on the P-SBAS DInSAR time series of vertical displacement. In particular, the findings on the trend component turn out to be in line with previous research, whereas the outcomes related to seasonal components, historically scarcely investigated, have allowed a straightforward correlation with ground water production and UGS activities. Furthermore, the depicted vertical ground movement phenomena were analyzed in light of the subsurface geological framework, focusing on the aquifer groups characterizing the Emilia-Romagna plain. The extension of the phenomena was correlated to the variable areal continuity of the sand/gravel aquifer bodies throughout the investigated part of the Po Plain basin.</p><p>The results showed vertical seasonal oscillations in the areas of mayor water withdrawn of about ±3 mm every 6 months (areas around water-production wells presented in Case 1 near Bologna city) in agreement with aquifer recharge dynamics. For the area above the UGS site (Case 3), the values average ± 12 mm every six months, in agreement with gas injection/withdrawal cycles. In terms of absolute vertical displacement, the extended area showed values ranging from around -68 mm (near Bologna area) to +8.5 mm at the foot of the Apennines (south Bologna) over the entire 5-year period, in agreement with previous findings.</p><p>In conclusion, the findings of this research can be adopted by local and national authorities for safety assessment during the production of groundwater from superficial aquifers or injection of fluids deeper in the subsurface; this paper proposed a methodological approach of general validity, which can be successfully adopted for successive case studies elsewhere.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. (a) Emilia-Romagna map with location of cross-sections AA' and BB'; (b) Cross-sections showing the main aquifer groups. Letters from A1 to C3 represent the aquifer distribution along the cross-sections (modified from [5]). The location of the study area is shown with the dashed line. Orange lines represent seismic acquisitions.</figDesc><graphic coords="4,160.55,107.15,295.68,298.56" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Land use activities across the entire study area (modified from Emilia-Romagna Region authorities https://www.arpae.it/it (accessed on 1 February 2025)).</figDesc><graphic coords="5,83.07,212.96,468.48,357.60" type="vector_box"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. Case studies inside extended area used for analysis.</figDesc><graphic coords="6,62.47,72.74,482.16,305.76" type="vector_box"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. Schematic representation of the workflow methodology. Only seasonal clustering examples are shown on the graph for clarity (modified from [30]).</figDesc><graphic coords="9,67.03,585.21,460.94,146.02" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Comparison of the vertical displacement of BOLG00ITA: (a) Detrended GNSS (red) and detrended near P-SBAS DInSAR MP (black) RMS of 4.7 mm, (b) seasonal component of vertical displacements of GNSS, (c) seasonal components of vertical displacements of near P-SBAS DInSAR MP.</figDesc><graphic coords="10,33.96,287.69,504.60,266.16" type="vector_box"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. Spatial distribution of the 4 clusters from extended area seasonal analysis.</figDesc><graphic coords="11,167.65,398.46,374.40,201.60" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 7 .</head><label>7</label><figDesc>Figure 7. Extended area seasonal behavior of the 4 clusters from the analysis displaying average amplitude.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 8 .</head><label>8</label><figDesc>Figure 8. Spatial distribution of the 4 clusters from extended area trend analysis.</figDesc><graphic coords="12,64.41,166.99,466.32,300.72" type="vector_box"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 9 .</head><label>9</label><figDesc>Figure 9. Extended area trend behavior of the 4 clusters with net displacement.</figDesc><graphic coords="12,167.35,504.60,373.80,201.60" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Figure 10 .Figure 11 .</head><label>1011</label><figDesc>Figure 10. Spatial distribution of the 4 clusters from analysis with clusters' average velocities in mm/yr, southern area with high concentration of uplifting</figDesc><graphic coords="13,43.81,72.30,508.03,186.48" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>Figure 12 .</head><label>12</label><figDesc>Figure 12. Left: Regional trend map interpolated from the average velocities of the 4 clusters; Right: Subsidence map of the Metropolitan City of Bologna published by ARPAE on 2023.</figDesc><graphic coords="14,45.35,71.44,260.40,205.56" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head>Figure 13 .</head><label>13</label><figDesc>Figure 13. Area 1 spatial distribution of the 4 clusters from seasonal analysis.</figDesc><graphic coords="15,54.38,73.41,496.08,307.20" type="vector_box"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><head>Figure 14 .</head><label>14</label><figDesc>Figure 14. Area 1 seasonal behavior of the 4 clusters from the analysis displaying average amplitude.</figDesc><graphic coords="15,167.68,423.74,374.10,201.48" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_13"><head>Figure 15 .</head><label>15</label><figDesc>Figure 15. Area 2 spatial distribution of the 4 clusters from seasonal analysis.</figDesc><graphic coords="16,84.07,460.19,431.57,288.36" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_14"><head>Figure 16 .</head><label>16</label><figDesc>Figure 16. Area 2 seasonal behavior of the 4 clusters from the analysis displaying average amplitude.</figDesc><graphic coords="17,168.33,72.10,374.10,201.48" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_15"><head>Figure 17 .</head><label>17</label><figDesc>Figure 17. Area 3 spatial distribution of the 4 clusters from seasonal analysis.</figDesc><graphic coords="18,168.28,487.49,374.10,201.48" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_16"><head>Figure 18 .</head><label>18</label><figDesc>Figure 18. Area 3 seasonal behavior of the 4 clusters from the analysis displaying average amplitude.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_17"><head>Figure 19 .</head><label>19</label><figDesc>Figure 19. Comparison between the seasonal components of cluster 1 inside the UGS boundary and the curve of the field gas cumulative volumes (blue line) [35].</figDesc><graphic coords="19,167.55,68.38,335.64,251.70" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_18"><head>Figure 20 .</head><label>20</label><figDesc>Figure 20. Examples of typical geological sections in the studied area that indicate the expected continuity of the sand bodies in the superficial aquifers. (Figure modified from geological crosssections from Regione Emilia-Romagna database: https://servizimoka.regione.emilia-romagna.it/ mokaApp/apps/pozzi_sez/index.html (accessed on 1 November 2024)).</figDesc><graphic coords="20,164.72,72.32,336.53,292.90" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_19"><head>Figure 21 .</head><label>21</label><figDesc>Figure 21. Extended area trend map with contour lines of aquifer A's thickness.</figDesc><graphic coords="20,81.46,438.30,432.86,290.52" type="vector_box"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head/><label/><figDesc/><graphic coords="23,85.43,398.58,425.82,248.64" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head/><label/><figDesc/><graphic coords="24,167.49,96.31,381.89,222.48" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head/><label/><figDesc/><graphic coords="24,165.69,433.44,369.85,231.12" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 .</head><label>1</label><figDesc>Land use distribution across the studied area (%).</figDesc><table><row><cell>Category</cell><cell>Extended Area</cell><cell>Area 1</cell><cell>Area 2</cell><cell>Area 3</cell></row><row><cell>Agricultural and green areas</cell><cell>81.6</cell><cell>61.5</cell><cell>88.8</cell><cell>86.0</cell></row><row><cell>Urban areas</cell><cell>10.5</cell><cell>21.4</cell><cell>6.2</cell><cell>6.9</cell></row><row><cell>Industrial areas</cell><cell>2.5</cell><cell>6.0</cell><cell>0.6</cell><cell>1.3</cell></row><row><cell>Road and railway networks</cell><cell>2.8</cell><cell>7.4</cell><cell>1.2</cell><cell>1.5</cell></row><row><cell>Others</cell><cell>2.6</cell><cell>3.7</cell><cell>3.2</cell><cell>4.4</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2 .</head><label>2</label><figDesc>Features of P-SBAS DInSAR dataset (*<ref type="bibr" target="#b21">[22]</ref>).</figDesc><table><row><cell>Covered Area (km × km)</cell><cell>Number of Measuring Points (MPs)</cell><cell>MPs Density (MP/km 2 )</cell><cell>Grid Spatial Resolution (m × m)</cell><cell>Satellite</cell><cell>Processing Algorithm</cell><cell>Time Frame</cell></row><row><cell>1850</cell><cell>223,311</cell><cell>121</cell><cell>40 × 30</cell><cell>Sentinel 1</cell><cell>Parallel SBAS Interferometry Chain (*)</cell><cell>June-2016 October-2021</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 3 .</head><label>3</label><figDesc>P-SBAS DInSAR technical parameters.</figDesc><table><row><cell>Azimuth Multilook Factor (Pixels)</cell><cell>Range Multilook Factor (Pixels)</cell><cell>Maximum Temporal Baseline (Days)</cell><cell>Maximum Spatial Baseline (m)</cell><cell>Temporal Coherence Threshold</cell></row><row><cell>5</cell><cell>20</cell><cell>360</cell><cell>200</cell><cell>0.85</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>Remote Sens. 2025, 17, 2645 https://doi.org/10.3390/rs17152645</p></note>
+		</body>
+		<back>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data Availability Statement:</head><p>The authors do not have permission to share the DInSAR data; the rest of the datasets were open-source.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The remaining authors declare that the research was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Abbreviations</head><p>The   </p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Land Subsidence and Hydrodynamic Compaction of Sedimentary Basins</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kooi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Vries</surname></persName>
+		</author>
+		<idno type="DOI">10.5194/hess-2-159-1998</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Hydrol. Earth Syst. Sci</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="159" to="171"/>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m" type="main">Land Subsidence: Natural Causes, Measuring Techniques, the Groningen Gasfields</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">B J</forename><surname>Barends</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">J J</forename><surname>Brouwer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">H</forename><surname>Schroder</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1995">1995</date>
+			<publisher>IAHS Publications</publisher>
+			<biblScope unit="volume">234</biblScope>
+			<biblScope unit="page">409</biblScope>
+			<pubPlace>Wallingford, UK</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Coupled Ground Uplift and Groundwater Rebound in the Metropolitan City of Naples (Southern Italy)</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Coda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tessitore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Martire</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Calcaterra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Vita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Allocca</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jhydrol.2018.11.074</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Hydrol</title>
+		<imprint>
+			<biblScope unit="volume">569</biblScope>
+			<biblScope unit="page" from="470" to="482"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Fluid Production Dataset for the Assessment of the Anthropogenic Subsidence in the Po Plain Area (Northern Italy)</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Eid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Benetatos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Rocca</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/resources11060053</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Resources</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">53</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Land Subsidence Processes</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">L</forename><surname>Galloway</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Erkens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">L</forename><surname>Kuniansky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Rowland</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Preface</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10040-016-1386-y</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Hydrogeol. J</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="547" to="550"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Geometric investigation of the subsidence in the Po Delta</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Caputo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Pieri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Unguendoli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Boll. Geod. Teor. Appl</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="187" to="207"/>
+			<date type="published" when="1970">1970</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Prima sintesi geodetico-geologica sui movimenti verticali del suolo nell'Italia Settentrionale (1897-1957</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Arca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Beretta</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Boll. Geod. Sci. Affin</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page" from="125" to="156"/>
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Subsidence Rates in the Po Plain, Northern Italy: The Relative Impact of Natural and Anthropogenic Causation</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Carminati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Martinelli</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0013-7952(02)00031-5</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Eng. Geol</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page" from="241" to="255"/>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Updating the Subsidence Map of Emilia-Romagna Region (Italy) by Integration of SAR Interferometry and GNSS Time Series: The 2011-2016 Period</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Bitelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Bonsignore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Del Conte</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Franci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Lambertini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Novali</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Severi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Vittuari</surname></persName>
+		</author>
+		<idno type="DOI">10.5194/piahs-382-39-2020</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. IAHS</title>
+		<imprint>
+			<biblScope unit="volume">382</biblScope>
+			<biblScope unit="page" from="39" to="44"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Separating Natural and Anthropogenic Vertical Movements in Fast Subsiding Areas: The Po Plain (N. Italy) Case</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Carminati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Donato</surname></persName>
+		</author>
+		<idno type="DOI">10.1029/1999GL900518</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Geophys. Res. Lett</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="2291" to="2294"/>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Groundwater Pumping and Land Subsidence in the Emilia-Romagna Coastland, Italy: Modeling the Past Occurrence and the Future Trend</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Teatini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ferronato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Gambolati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gonella</surname></persName>
+		</author>
+		<idno type="DOI">10.1029/2005WR004242</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Water Resour. Res</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page">1406</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">A Combination of Space and Terrestrial Geodetic Techniques to Monitor Land Subsidence: Case Study, the Southeastern Po Plain, Italy</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Zerbini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Richter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Rocca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Dam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Matonti</surname></persName>
+		</author>
+		<idno type="DOI">10.1029/2006JB004338</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Geophys. Res. Solid Earth</title>
+		<imprint>
+			<biblScope unit="page">5401</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">La Subsidenza nell'italia Centro-Settentrionale da Misure GPS</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Baldi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bonvalot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Borghi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Brancolini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Carminati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Cavaliere</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Teatini</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Gruppo Nazionale di Geofisica della Terra Solida</title>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+			<pubPlace>Rome, Italy</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Monitoring of Land Subsidence in the Po River Delta (Northern Italy) Using Geodetic Networks</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Cenni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Fiaschi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fabris</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/rs13081488</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page">1488</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Surface Movements in Bologna (Po Plain, Italy) Detected by Multitemporal DInSAR</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Stramondo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Saroli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Tolomei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Moro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Doumaz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pesci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Loddo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Baldi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Boschi</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.rse.2007.02.023</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens. Environ</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<biblScope unit="page" from="304" to="316"/>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">The Interaction between Displacements and Water Level Changes Due to Natural and Anthropogenic Effects in the Po Plain (Italy): The Different Point of View of GNSS and Piezometers</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nespoli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Cenni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Belardinelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Marcaccio</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jhydrol.2021.126112</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Hydrol</title>
+		<imprint>
+			<biblScope unit="volume">596</biblScope>
+			<biblScope unit="page">126112</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+	<note>CrossRef</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Sentinel-1-Based Monitoring Services at Regional Scale in Italy: State of the Art and Main Findings</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Confuorto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Del Soldato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Solari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Festa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bianchini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Raspini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Casagli</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jag.2021.102448</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Appl. Earth Obs. Geoinf</title>
+		<imprint>
+			<biblScope unit="volume">102</biblScope>
+			<biblScope unit="page">102448</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+	<note>CrossRef</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Investigation of Ground Movements Induced by Underground Gas Storages via Unsupervised ML Methodology Applied to InSAR Data</title>
+		<author>
+			<persName><forename type="first">Garcia</forename><surname>Navarro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Rocca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Capozzoli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chiosa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Verga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jgsce.2024.205293</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Gas Sci. Eng</title>
+		<imprint>
+			<biblScope unit="volume">125</biblScope>
+			<biblScope unit="page">205293</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note>CrossRef</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">STL: A Seasonal-Trend Decomposition Procedure Based on Loess (with Discussion)</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Cleveland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">S</forename><surname>Cleveland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Mcrae</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Terpenning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Stat. Softw</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="3" to="73"/>
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">A New Algorithm for Surface Deformation Monitoring Based on Small Baseline Differential SAR Interferograms</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Berardino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Fornaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Sansosti</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TGRS.2002.803792</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="2375" to="2383"/>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">A First Assessment of the P-SBAS DInSAR Algorithm Performances within a Cloud Computing Environment</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Zinno</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/JSTARS.2015.2426054</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE J. Sel. Top. Appl. Earth Obs. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="4675" to="4686"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">SBAS-DInSAR Parallel Processing for Deformation Time-Series Computation</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Casu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Elefante</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Imperatore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Zinno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Manunta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Luca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/JSTARS.2014.2322671</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE J. Sel. Top. Appl. Earth Obs. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="3285" to="3296"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Influence of Structural Inheritance on Foreland-Foredeep System Evolution</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Turrini</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.marpetgeo.2016.06.022</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Mar. Pet. Geol</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page" from="376" to="398"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Some Remarks on the Origin of Foredeeps</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Doglioni</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0040-1951(93)90211-2</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Tectonophysics</title>
+		<imprint>
+			<biblScope unit="volume">288</biblScope>
+			<biblScope unit="page" from="1" to="20"/>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">An Inventory of River Anomalies in the Po Plain, Northern Italy: Evidence for Active Blind Thrust Faulting</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Burrato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Ciucci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Valensise</surname></persName>
+		</author>
+		<idno type="DOI">10.4401/ag-3459</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Ann. Geophys</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="page" from="865" to="882"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pieri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Groppi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Finalizzato</forename><surname>Progetto</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Geodinamica</surname></persName>
+		</author>
+		<title level="m">Subsurface Geological Structure of the Po Plain</title>
+		<meeting><address><addrLine>Italy; Rome, Italy</addrLine></address></meeting>
+		<imprint>
+			<publisher>CNR Publication</publisher>
+			<date type="published" when="1981">1981</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<author>
+			<persName><forename type="first">Area</forename><surname>Geologia</surname></persName>
+		</author>
+		<title level="m">Suoli e Sismica-Settore Difesa del Territorio-Regione Emilia-Romagna. Riserve Idriche Sotterranee Della Regione Emilia-Romagna</title>
+		<meeting><address><addrLine>Selca; London, UK</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><surname>Farina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Marcaccio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zavatti</surname></persName>
+		</author>
+		<title level="m">Esperienze e Prospettive Nel Monitoraggio Delle Acque Sotterranee: Il Contributo Dell'emilia-Romagna</title>
+		<meeting><address><addrLine>Bologna, Italy</addrLine></address></meeting>
+		<imprint>
+			<publisher>Pitagora Editrice</publisher>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Geochemistry of Heavily Exploited Aquifers in the Emilia-Romagna Region (Po Valley, Northern Italy</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Martinelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Minissale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Verrucchi</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s002540050335</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Environ. Geol</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="195" to="206"/>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Geochemical Monitoring of the 2012 Po Valley Seismic Sequence: A Review and Update</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Martinelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dadomo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Italiano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Petrini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">F</forename><surname>Slejko</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.chemgeo.2016.12.013</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Geol</title>
+		<imprint>
+			<biblScope unit="volume">469</biblScope>
+			<biblScope unit="page" from="147" to="162"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Spatial-Temporal Analysis of the Subsidence in the City of Bologna</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Modoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Darini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Spacagna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Saroli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Russo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Croce</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Geotechnical Engineering for the Preservation of Monuments and Historic Sites</title>
+		<meeting><address><addrLine>Boca Raton, FL, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>CRC Press</publisher>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">La subsidenza nel centro storico della città di Bologna. Il grado di dissesto dei fabbricati nella zona di via Zamboni</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Alessi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Inarcos</title>
+		<imprint>
+			<biblScope unit="page">456</biblScope>
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Land Subsidence Induced by Groundwater Extraction: The Case of Bologna</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Darini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Modoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Saroli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Croce</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the IEMSs 2008: International Congress on Environmental Modelling and Software</title>
+		<meeting>the IEMSs 2008: International Congress on Environmental Modelling and Software<address><addrLine>Barcelona, Spain</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2008-07-03">3 July 2008</date>
+			<biblScope unit="page" from="1386" to="1393"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">GNSS Metadata and Data Validation in the EUREF Permanent Network</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Bruyninx</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Legrand</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fabian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Pottiaux</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10291-019-0880-9</idno>
+	</analytic>
+	<monogr>
+		<title level="j">GPS Solut</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page">106</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Multidisciplinary analysis of ground movements: An underground gas storage case study</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Benetatos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Codegone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ferraro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mantegazzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Rocca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Tango</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Trillo</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/rs12213487</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">3487</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Radar Interferometry and Its Application to Changes in the Earth's Surface</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Massonnet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Feigl</surname></persName>
+		</author>
+		<idno type="DOI">10.1029/97RG03139</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Rev. Geophys</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="441" to="500"/>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Synthetic Aperture Radar Interferometry to Measure Earth's Surface Topography and Its Deformation</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bürgmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Rosen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Fielding</surname></persName>
+		</author>
+		<idno type="DOI">10.1146/annurev.earth.28.1.169</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Earth Planet. Sci</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="169" to="209"/>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Surface Deformation Analysis in the Ischia Island (Italy) Based on Spaceborne Radar Interferometry</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Manzo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">P</forename><surname>Ricciardi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Casu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ventura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Zeni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Borgström</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Berardino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Del Gaudio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jvolgeores.2005.09.010</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Volcanol. Geotherm. Res</title>
+		<imprint>
+			<biblScope unit="volume">151</biblScope>
+			<biblScope unit="page" from="399" to="416"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Large Areas Surface Deformation Analysis through a Cloud Computing P-SBAS Approach for Massive Processing of DInSAR Time Series</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>De Luca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Zinno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Manunta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Casu</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.rse.2017.05.022</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens. Environ</title>
+		<imprint>
+			<biblScope unit="volume">202</biblScope>
+			<biblScope unit="page" from="3" to="17"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Pre-and Co-Eruptive Analysis of the September 2021 Eruption at Cumbre Vieja Volcano (La Palma, Canary Islands) Through DInSAR Measurements and Analytical Modeling</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Luca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Valerio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Giudicepietro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Macedonio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Casu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+		<idno type="DOI">10.1029/2021GL097293</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Geophys. Res. Lett</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="page">97293</biblScope>
+			<date type="published" when="2021">2022. 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<monogr>
+		<author>
+			<persName><forename type="first">P</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Steinbach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Karpatne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Kumar</surname></persName>
+		</author>
+		<title level="m">Introduction to Data Mining</title>
+		<meeting><address><addrLine>London, UK</addrLine></address></meeting>
+		<imprint>
+			<publisher>Pearson</publisher>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>2nd ed</note>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">The K-Means Clustering Technique: General Considerations and Implementation in Mathematica</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Morissette</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Chartier</surname></persName>
+		</author>
+		<idno type="DOI">10.20982/tqmp.09.1.p015</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Tutor. Quant. Methods Psychol</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="15" to="24"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Algorithm AS 136: A K-Means Clustering Algorithm</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Hartigan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Wong</surname></persName>
+		</author>
+		<idno type="DOI">10.2307/2346830</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. R. Stat. Society. Ser. C (Appl. Stat.)</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="100" to="108"/>
+			<date type="published" when="1979">1979</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<monogr>
+		<title level="m" type="main">Forecasting: Principles and Practice</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Hyndman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Athanasopoulos</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<pubPlace>OTexts; Melbourne, Australia</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">On The Exploitation of Etad Data for the Atmospheric Phase Screen Filtering of Medium/High Resolution Dinsar Products</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Zinno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Casamento</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the IGARSS 2023-2023 IEEE International Geoscience and Remote Sensing Symposium</title>
+		<meeting>the IGARSS 2023-2023 IEEE International Geoscience and Remote Sensing Symposium<address><addrLine>Pasadena, CA, USA</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2023-07-21">16-21 July 2023</date>
+			<biblScope unit="page" from="7882" to="7885"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">What's Conventional and What's Special in a Reservoir Study for Underground Gas Storage</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Verga</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/en11051245</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Energies</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">1245</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Soil Uplift in the Emilia-Romagna Plain (Italy) by Satellite Radar Interferometry</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Severi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bull. Geophys. Oceanogr</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page" from="527" to="542"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Istituto Nazionale di Geofisica e Vulcanologia. Concessione di Stoccaggio di Gas Naturale "MINERBIO Stoccaggio</title>
+	</analytic>
+	<monogr>
+		<title level="s">Relazione Finale; Istituto Nazionale di Geofisica e Vulcanologia</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<pubPlace>Rome, Italy</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">3D Geological Modelling of the Bologna Urban Area (Italy)</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Giacomelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zuccarini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Amorosi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bruno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Paola</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Martini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Severi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Berti</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.enggeo.2023.107242</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Eng. Geol</title>
+		<imprint>
+			<biblScope unit="volume">324</biblScope>
+			<biblScope unit="page">107242</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Gravity Tectonics Driven by Quaternary Uplift in the Northern Apennines: Insights from the La Spezia-Reggio Emilia Geo-Transect</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Argnani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Barbacini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bernini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Camurri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ghielmi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Papani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Rizzini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rogledi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Torelli</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S1040-6182(02)00088-5</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Quat. Int</title>
+		<imprint>
+			<biblScope unit="page" from="13" to="26"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Recent and Active Tectonics of the External Zone of the Northern Apennines (Italy)</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Boccaletti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Corti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Martelli</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s00531-010-0545-y</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Earth Sci</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="page" from="1331" to="1348"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<monogr>
+		<title level="m">The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of</title>
+		<imprint/>
+	</monogr>
+	<note>Disclaimer/Publisher's Note. MDPI and/or the editor(s. MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods, instructions or products referred to in the content</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

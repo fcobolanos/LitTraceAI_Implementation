@@ -1,0 +1,1773 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Agglomeration economies in the formal and informal sectors: a Bayesian spatial approach z</title>
+				<funder ref="#_5PHTAK5 #_BXQyGhQ">
+					<orgName type="full">unknown</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2019-01-14">14 January 2019</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Kiyoyasu</forename><surname>Tanaka</surname></persName>
+							<email>5kiyoyasu_tanaka@ide.go.jp4</email>
+							<affiliation key="aff0">
+								<orgName type="department">Research fellow</orgName>
+								<orgName type="institution" key="instit1">Institute of Developing Economies</orgName>
+								<orgName type="institution" key="instit2">JETRO</orgName>
+								<address>
+									<addrLine>3-2-2 Wakaba Mihama-ku Chiba-shi</addrLine>
+									<postCode>261-8545</postCode>
+									<settlement>Chiba</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yoshihiro</forename><surname>Hashiguchi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Research fellow</orgName>
+								<orgName type="institution" key="instit1">Institute of Developing Economies</orgName>
+								<orgName type="institution" key="instit2">JETRO</orgName>
+								<address>
+									<addrLine>3-2-2 Wakaba Mihama-ku Chiba-shi</addrLine>
+									<postCode>261-8545</postCode>
+									<settlement>Chiba</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Agglomeration economies in the formal and informal sectors: a Bayesian spatial approach z</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2019-01-14">14 January 2019</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">2EB271CF997F14FC7883560380B93B08</idno>
+					<idno type="DOI">10.1093/jeg/lby069</idno>
+					<note type="submission">Date submitted: 3 August 2017 Editorial decision: 15 December 2018 Date accepted: 20 December 2018</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-09-02T20:23+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Agglomeration economies</term>
+					<term>informal sector</term>
+					<term>Cambodia</term>
+					<term>bayes</term>
+					<term>spatial JEL classifications: C11</term>
+					<term>C21</term>
+					<term>C26</term>
+					<term>H26</term>
+					<term>O17</term>
+					<term>R12</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>This article examines whether localized clusters of similar industries produce agglomeration economies in the formal and informal sectors. We develop a Bayesian method to estimate a spatial autoregressive model with an endogenous independent variable. We use establishment-level census data that cover both formal registered and informal unregistered establishments in Cambodia. We find that the density of local employment has a significantly positive effect on productivity in the informal sector, but little effect in the formal sector. For manufacturing, a doubling of employment density increases productivity in the informal sector by 9% through local linkages and by 19% through spatial multiplier linkages, leading to a 28% increase in total. A spatial network magnifies the local impact of agglomeration economies in the informal sector.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>A spatial concentration of industrial production has crucial implications for developing economies. Firms and workers in an agglomerated area can benefit from agglomeration externalities through efficient sharing of local suppliers, better matching between employers and workers and knowledge spillovers <ref type="bibr" target="#b25">(Duranton and Puga, 2004)</ref>. Limited resources such as capital, human capital and infrastructure can be most efficiently utilized in an agglomerated area. Consequently, industrial agglomeration can promote economic growth at an early stage of development <ref type="bibr" target="#b77">(Williamson, 1965;</ref><ref type="bibr" target="#b31">Fujita and Thisse, 2003)</ref>.</p><p>However, it is an unsettled question as to whether industrial agglomeration produces similar benefits for low-income economies, as has been previously demonstrated for high-and middle-income countries <ref type="bibr" target="#b66">(Rosenthal and Strange, 2004;</ref><ref type="bibr" target="#b62">Melo et al., 2009)</ref>. In developing economies, self-employment and small enterprises provide major employment opportunities, but often do not formally register with the government. These informal enterprises are less productive and profitable than formally registered enterprises <ref type="bibr" target="#b60">(McKenzie and Seynabou Sakho, 2010;</ref><ref type="bibr" target="#b28">Fajnzylber et al., 2011)</ref>. Given the coexistence of formal and informal firms, <ref type="bibr">Annez and Buckely (2009, 15)</ref> state that 'some critics argue that informality is unproductive and raises the costs to the formal sector, crowding out agglomeration economies'. In contrast, <ref type="bibr">Overman and Venables (2005, 20)</ref> suggest that 'the informal sector also contributes to agglomeration economies'. <ref type="bibr">Glaeser and Henderson (2017, 3)</ref> argue that agglomeration economies are important for informal firms that rely on trust and face-to-face interactions. Therefore, it is a crucial empirical question as to whether industrial agglomeration produces productivity gains in both formal and informal sectors.</p><p>In this article, we estimate the long-run magnitude of agglomeration economies produced by a localized concentration of similar industries in Cambodia-a developing economy with the large informal sector. A localized cluster of similar industries, as defined by similar industrial codes, can produce both positive externalities and congestion costs for producers. If positive externalities exceed congestion costs, regional productivity should increase with the density of local employment in similar industries, and vice versa. Moreover, industrial clusters form a spatial network among firms and workers through the spatial diffusion of agglomeration externalities. The spatial interdependence of productivity may magnify the local impact of localization economies through a spatial multiplier effect. Additionally, producers in the formal and informal sectors may benefit differently from agglomeration economies. Formal firms adopt modern production technology to produce high-quality products and services for high-income customers, whereas informal firms use traditional production technology to produce low-quality products and services for low income customers. Formal and informal firms may have weak linkages in production and technology, so that the formal and informal sectors are segregated in developing economies <ref type="bibr" target="#b50">(La Porta and Shleifer, 2014)</ref>. The segregation between the formal and informal sectors suggests that formal and informal firms may benefit differently from a localized concentration of similar industries in which formal and informal firms exist unevenly across regions.</p><p>We specify a spatial autoregressive model with an endogenous independent variable to identify the causal effect of localization economies in the formal and informal sectors. We address an endogeneity problem in agglomeration by exploiting past data on the density of local employment and forest area as instruments for the current density of local employment. We account for a spatial network among firms by a spatial lag variable of productivity, which allows us to estimate local and spatial magnitudes of localization economies. To estimate our model, we develop a Bayesian method by extending the Bayesian instrumental variables (IV) method proposed by <ref type="bibr" target="#b67">Rossi et al. (2005)</ref>.</p><p>We exploit a unique dataset based on the Economic Census of Cambodia in 2011 (EC2011). This census covers all nonfarm establishments across all industrial sectors in all areas of Cambodia and asks whether individual establishments are registered with the Ministry of Commerce. Unregistered economic activity is a commonly used definition of informality, and business registration is an objective criterion to classify formal and informal economic activities <ref type="bibr" target="#b71">(Schneider and Enste, 2013)</ref>. The dataset allows us to estimate agglomeration economies in both formal and informal sectors. Additionally, Cambodia provides an interesting setting for our analysis. The Cambodian economy was devastated by the Pol Pot regime for <ref type="bibr">[1975]</ref><ref type="bibr">[1976]</ref><ref type="bibr">[1977]</ref><ref type="bibr">[1978]</ref><ref type="bibr">[1979]</ref> and the subsequent civil war. The Paris Conference on Cambodia in 1991 led to agreements on the comprehensive political settlement of the Cambodian conflict. While the economy experienced a rapid economic growth thereafter, per capita GDP reached only 931.2 USD in 2012 <ref type="bibr">(IMF, 2012)</ref>. <ref type="bibr" target="#b70">Schneider et al. (2010)</ref> estimate that informal activity accounted for 48.7% of GDP in Cambodia on average for the period 1999-2007.</p><p>The main findings can be summarized as follows. The density of local employment has a significantly positive effect on productivity in the informal sector. Since the validity of our instruments is supported, we interpret the positive coefficient of employment density as reflecting a causal effect. In contrast, we find little evidence of localization economies in the formal sector. These contrasting results are found in both manufacturing and wholesale/retail industries. Additionally, a spatial lag of productivity is significantly positive in the informal sector, suggesting that the positive spatial interdependence magnifies the positive localization effects. Based on the main result for manufacturing, we find that a doubling of the density of local employment in a region increases productivity in the informal sector by 9% through direct linkages and by 19% through spatial multiplier linkages, leading to a 28% increase in total. As the spatial multiplier linkages magnify the local agglomeration effect substantially, the spatial network is crucial for estimating the precise magnitude of localization economies.</p><p>This article contributes to the related literature in several ways. <ref type="bibr" target="#b54">Livingstone (1991)</ref> documents a spatial concentration of manufacturing microenterprises in developing economies, which are interpreted as evidence of externalities perceived by small producers. Drawing on case studies on industrial clusters, <ref type="bibr" target="#b72">Schmitz (1995)</ref> and <ref type="bibr" target="#b73">Schmitz and Nadvi (1999)</ref> examine how clustering promotes the growth and competitiveness of small manufacturers. In addition to local external economies from clustering in <ref type="bibr" target="#b57">Marshall (1890)</ref>, these papers highlight active joint action among firms in clusters. From a historical perspective, <ref type="bibr" target="#b79">Zeitlin (2008)</ref> and <ref type="bibr" target="#b41">Hashino and Otsuka (2013)</ref> explore long-term processes of industrial clusters and emphasize cooperative efforts among producers and local governments in clusters. On the other hand, Moreno-Monroy (2012) argues that small enterprises also exist in non-cluster areas and the case studies on successful industrial clusters may represent exceptions to the usual experience of small enterprises. In this respect, our article is advantageous in that we employ a comprehensive dataset on formal and informal firms to provide systematic evidence of clustering benefits.</p><p>A formal econometric approach has been taken to estimate agglomeration economies in developing economies, but informal enterprises are largely missed in prior analysis <ref type="bibr" target="#b17">(Combes and Gobillon, 2015)</ref>. 1 Duranton (2009, 82) argues that most of the econometric findings on agglomeration economies concern the formal sector. To fill this gap, recent studies attempt to estimate agglomeration economies in the informal sector. <ref type="bibr" target="#b10">Chhair and Newman (2014)</ref> use the same dataset in Cambodia as our analysis and show a negative effect of agglomeration on productivity for registered and unregistered firms mainly through a competition channel. However, they do not fully address an endogeneity issue of clustering, thereby showing only correlation relationships. <ref type="bibr">Ali and Peerings (2011)</ref> address an endogeneity issue in agglomeration by matching firms with similar characteristics between clustered and dispersed areas. In the handloom sector in Ethiopia, they find larger monthly profits for clustered small firms than non-clustered small. As clustering is defined by a cut-off point of the location quotient, they find that an increase in the cut-off point leads to higher profits for clustered firms, making their estimates sensitive to the definition of clustering. Additionally, <ref type="bibr" target="#b32">Garcı´a (2016)</ref> use Colombian worker-level surveys to estimate a relationship between employment density and wages for informal workers, who are not covered by the healthcare insurance and the retirement pension. The results show that the density increases wages for informal workers, but decreases for formal workers. While endogeneity of density is addressed by an instrumental-variables method, a large number of informal workers such as unpaid family workers may be missed in the survey data, suggesting that the coverage of informal workers is limited.</p><p>Compared with these prior studies, our paper is distinctive in that employment density is measured by all workers in formal registered and informal unregistered establishments. The establishment-level census data allow us to measure density of employment, including self-employed proprietors, unpaid family workers, and regular employees. The comprehensive coverage of the formal and informal sectors is a unique feature of our study because informal activities are often missed in official statistics in developing economies. Moreover, we exploit systematic empirical data on labor density and geographic characteristics in the past period as instruments to identify a causal effect of local employment density on productivity in both formal and informal sectors. As our measure of agglomeration does not rely on a specific measurement of clustering, we provide a robust estimate of agglomeration effects on productivity.</p><p>A spatial econometric model has been applied to estimate agglomeration economies. Van Oort (2007) adopts a feasible generalized least squares method to estimate the impact of industrial concentration on industrial employment growth in the Netherlands. The spatial lag of industrial concentration is included to capture agglomeration effects in neighboring regions, which are found to increase employment growth. <ref type="bibr" target="#b45">Ke (2010)</ref> estimates a simultaneous equation model of industrial output and non-agricultural labor productivity for city-level data in mainland China. After accounting for labor productivity in neighboring cities, a spatial concentration of industrial production is found to increase the productivity. Additionally, <ref type="bibr" target="#b4">Artis et al. (2012)</ref> adopt a feasible generalized spatial two-stage least-squares method proposed by <ref type="bibr" target="#b46">Kelejian and Prucha (1998)</ref> to account for both endogeneity of agglomeration and regional productivity in neighboring regions. Using regional data in the UK, they find a positive impact of agglomeration on productivity. Consistent with these studies, we find that agglomeration increases productivity in the same region after accounting for spatial externalities across regions. In contrast, we further demonstrate that a spatial network magnifies substantially the local impact of agglomeration economies through spatial multiplier linkages.</p><p>Finally, we make a methodological contribution to this line of inquiry. A Bayesian approach to instrumental variables regression has long been developed since the work of Dre`ze <ref type="bibr">(1976)</ref>. It is increasingly used to estimate a spatial autoregressive model <ref type="bibr" target="#b6">(Banerjee et al., 2004;</ref><ref type="bibr" target="#b51">LeSage and Pace, 2009)</ref>. Extending prior methods, we apply a Bayesian method for a spatial autoregressive model with an endogenous independent variable. To estimate such a model, <ref type="bibr" target="#b46">Kelejian and Prucha (1998)</ref> propose higher order spatial lags of exogenous independent variables as instruments for the spatial lag of a dependent variable. However, <ref type="bibr" target="#b33">Gibbons and Overman (2012)</ref> argue that this approach suffers from estimation problems for identification because the higher order spatial lags are assumed to have no direct influence on the dependent variable, and these instruments may be weak because of potentially high correlations among the higher order spatial lags. In contrast, our Bayesian approach does not exploit the higher order spatial lags as instruments, thereby relaxing the identification assumptions used in the prior method. Additionally, it should be mentioned that <ref type="bibr" target="#b40">Hashiguchi and Tanaka (2014)</ref> develop a Bayesian method for a hierarchical spatial model at the firm-level to address both endogeneity of agglomeration and spatial autocorrelation at the regional level. Because spatial autocorrelation of productivity among individual firms are not estimated in their model, they do not calculate a potential spatial multiplier effect of agglomeration economies. In contrast, this article develops a spatial model to calculate the spatial multiplier.</p><p>Taken together, we contribute to the agglomeration literature by estimating agglomeration economies in formal and informal sectors. We address both the endogeneity of agglomeration and the spatial dependence of productivity to estimate local and spatial impacts of industrial clusters separately for formal and informal firms. We also contribute to the spatial econometric literature by developing a Bayesian method for a spatial autoregressive model with an endogenous independent variable. Thus, this article contributes by carrying out these extensions together.</p><p>The rest of this article is organized as follows. Section 2 discusses a conceptual framework. Section 3 presents a spatial autoregressive model with an endogenous independent variable. Section 4 explains the Bayesian method for estimating our empirical model. Section 5 describes the data sources and the structure of industrial activity in Cambodia. Section 6 presents the estimation results. Section 7 concludes.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Conceptual framework</head><p>The main objective of our analysis is to estimate the long-run magnitude of agglomeration economies produced by a localized concentration of similar industries in a developing economy where both formal and informal firms exist unevenly across regions but are largely segregated. In the literature, Schneider and Enste (2013, Chapter 2) define the national economy as the dual economy of official sector and underground sector, the latter of which consists of the shadow economy based on market transactions and the household sector based on non-market transactions for selfsufficient individual needs. Our definition of the formal and informal sectors corresponds to the official sector and the shadow economy, respectively.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.">Agglomeration economies and spatial networks</head><p>To develop a conceptual framework, we start to discuss a concept of agglomeration economies and the network formation of firms and workers over space, followed by an argument of why the formal and informal sectors may benefit differently from agglomeration effects. As is well known, <ref type="bibr" target="#b57">Marshall (1890)</ref> argues that a cluster of firms can be more productive for localization economies through specialized suppliers, labor market pooling and knowledge spillovers. Firms need specialized equipment and support services to produce and develop goods and services. A localized cluster of firms provides a large market for supporting the specialized suppliers, which in turn produce a wide range of inputs at a low cost for firms in a cluster. Additionally, a cluster of firms supports a large pool of workers with a variety of specialized skills. In a pooled labor market, there is better matching between employers and employees, which reduces labor shortages and unemployment, respectively. Finally, knowledge and technology are crucial inputs of production. An exchange of information and knowledge takes place through personal Agglomeration economies . 41 interactions, and knowledge spillovers benefit producers and workers more effectively in a clustered area. In sum, firms and workers in a cluster benefit from localization externalities through more efficient sharing of local suppliers, better matching between employers and workers, and knowledge spillovers <ref type="bibr" target="#b25">(Duranton and Puga, 2004)</ref>.</p><p>These discussions suggest that a localized cluster of similar industries can produce positive externalities for producers. On the other hand, a spatial concentration of firms and workers increases congestion costs from congested roads, higher land prices and environmental pollution. Industrial clusters produce not only localization economies, but also congestion costs to reduce producers' productivity in a clustered area. Thus, if positive externalities exceed congestion costs, regional productivity should increase with the density of local employment in similar industries, and vice versa. Our first hypothesis is as follows.</p><p>Hypothesis 1. Regional productivity would be higher in regions with a greater density of local employment in similar industries if localization economies exceed congestion effects.</p><p>Formation of industrial clusters depends on local natural advantages, including geography, natural resources, economic infrastructure and social institutions. Some regions with strong natural advantages attract firms and workers, and vice versa. In addition, the spatial diffusion of knowledge externalities in a cluster shapes the network formation of firms and workers over space. Firms and workers in neighboring areas benefit from localization economies through spatial interactions with firms and workers in a clustered area. However, such spatial externalities decay as distance increases because the costs of economic and social interactions increase over space and deter the diffusion of knowledge across greater distances. Consequently, industrial clusters shape the spatial network among firms and workers, leading to the spatial interdependence of economic performance. Our second hypothesis is the following.</p><p>Hypothesis 2. Regional productivity would have a positive spatial interdependence if the spatial diffusion of positive knowledge externalities shapes the network formation of firms and workers over space.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.">Segregation between formal and informal firms</head><p>A distinction between the formal and informal sectors is crucial for understanding localization economies in a developing economy. In the formal sector, highly educated entrepreneurs typically manage firms to produce high quality products and services for high income customers using modern production technology with skilled labor and large capital equipment. Formal firms register with the government to establish a legal entity, and register with the tax authority to pay formal taxes based on their balance sheets. In the informal sector, uneducated entrepreneurs typically manage firms to produce low-quality products and services for low-income customers using traditional production technology with unskilled labor and small capital equipment. Informal firms conduct business activities but do not formally register with the government and the tax authority. Since they buy and sell in cash, they often lack bank accounts and accounting books. A comparison of these sectors indicate that formal firms are more likely than informal firms to be more productive, more profitable and larger in size (La <ref type="bibr" target="#b50">Porta and Shleifer, 2014)</ref>.</p><p>As suggested in the dual view of informality by <ref type="bibr" target="#b52">Lewis (1954)</ref>, the formal and informal sectors in a developing economy are largely segregated. Formal (informal) firms have more intensive relationships with other formal (informal) firms, although these sectors may not be completely isolated from each other. The segregation may arise from the weak technological and production linkages between these sectors. Formal firms typically build modern manufacturing facilities to expand production capacity and improve the quality of products. As technical and managerial skills are required to implement modern production systems, they adopt structured management practices such as human resource management. Informal firms use traditional production methods with simple tools and equipment for small-scale production and thus do not require modern management practices. Such a large gap in technology and management practices implies that formal firms would not gain knowledge and technology spillovers from informal firms, whereas informal firms have limited capabilities to absorb the spillovers from formal firms.</p><p>The technology gap consequently restricts vertical linkages between formal and informal firms. Formal firms require suppliers to produce parts and components of high quality at a competitive price and to supply them at a low defection rate in timely delivery. Such high requirements for suppliers effectively limit the participation of most informal firms in value chains for the formal sector <ref type="bibr" target="#b63">(Moreno-Monroy, 2012)</ref>. The level of subcontracting from formal to informal firms is quite limited in developing countries partly because formal firms rely importantly on imported intermediate inputs <ref type="bibr" target="#b53">(Lim, 1984;</ref><ref type="bibr" target="#b3">Arimah, 2001;</ref><ref type="bibr" target="#b9">Bo¨hme and Thiele, 2014)</ref>. Additionally, vertical linkages between these sectors are discouraged by tax systems in developing countries. For instance, formally registered firms in Cambodia are required to register with the General Department of Taxation to obtain a value-added tax (VAT) identification number. These firms must charge VAT on their sales and issue VAT invoices that contain the VAT identification numbers of suppliers and buyers. With the proper VAT invoices, taxpayers can offset the VAT paid on their purchases against the VAT paid on their sales. Because the tax authority does not accept the VAT invoices without the VAT identification numbers, the registered firms cannot claim tax credits for their purchases from unregistered suppliers. On the other hand, unregistered firms do not have the VAT identification number and thus cannot claim the VAT credit.<ref type="foot" target="#foot_2">foot_2</ref> Consequently, formal (informal) firms favor business transactions with other formal (informal) firms over those with informal (formal) firms. de <ref type="bibr" target="#b20">Paula and Scheinkman (2010)</ref> show that the VAT system creates informality chains in Brazil.</p><p>Linkages between the formal and informal sectors are also limited by worker transitions between these sectors. As described to characterize labor market dualism, formal firms are more likely than informal firms to offer more attractive wages and employment benefits <ref type="bibr" target="#b29">(Fields, 2009)</ref>. While workers in the informal sector may seek a more attractive job in the formal sector, relatively high skill requirements and stringent work environment pose a barrier to informal workers who are typically uneducated and lack work experiences in a modern company. While transitions of workers between formal and informal sectors exist in both directions, prior studies show that most workers stay in either the formal or informal sector, suggesting the lower transitions between the formal and informal sectors <ref type="bibr">(Maloney, 1999, McCaig and</ref><ref type="bibr" target="#b59">Pavcnik, 2015;</ref><ref type="bibr" target="#b61">Meghir et al., 2015)</ref>.</p><p>The segregation between the formal and informal sectors suggests that formal and informal firms may benefit differently from a localized concentration of similar industries in which formal and informal firms exist unevenly across regions. Formal firms may benefit strongly from a localized cluster of formal firms for strong networks and interactions, but weakly from that of informal firms for weak networks and interactions. On the other hand, informal firms may benefit strongly from a localized cluster of informal firms for strong social interactions through trust-based transactions and face-to-face contacts in neighborhood <ref type="bibr" target="#b35">(Glaeser and Henderson, 2017)</ref>. They benefit weakly from that of formal firms for weak interactions with formal firms. While the density of local employment should produce cluster benefits in the formal and informal sectors, the uneven existence of formal and informal firms in a localized cluster would produce varying cluster benefits. This implies that aggregating formal and informal firms may mask distinctive localization externalities. Thus, our third hypothesis is as follows.</p><p>Hypothesis 3. A greater density of local employment in similar industries would produce varying impacts on regional productivity in the formal and informal sectors if formal and informal firms coexist but are largely segregated for weak linkages in production and technology.</p><p>Our hypotheses suggest that a dense interaction among formal firms leads to the formation of spatial networks in the formal sector, which produces the spatial interdependence of economic performance in the formal sector. On the other hand, a strong interaction among informal firms produces spatial externalities in the informal sector, leading to the spatial dependence in the informal sector.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3.">Mechanisms of agglomeration benefits for formal and informal firms</head><p>In this article, we aim to assess the overall net impact of localization economies on the formal and informal sectors, but do not seek to identify the underlying mechanisms of agglomeration gains and costs separately. <ref type="foot" target="#foot_3">3</ref> Nevertheless, it is useful to discuss plausible channels through which formal and informal firms benefit from a localized cluster of similar industries to help us interpret a regression analysis. Specifically, we focus on two related questions. (i) How differently do formal and informal firms benefit from agglomeration? (ii) What advantages do informal firms and workers in an industrial cluster have as compared to those in an isolated location?</p><p>In the first issue, we predict that informal firms would have larger agglomeration gains than formal firms. Formal firms typically adopt advanced production facilities and management practices. Production technology is often embodied in capital equipment, whereas managerial skills are embodied in experienced managers. The adoption of such technology and skills requires large investment in physical capital and human resources. On the other hand, informal firms typically adopt elementary production techniques to produce simple low-quality products. Such techniques can be learned and imitated through face-to-face interactions to produce similar products <ref type="bibr" target="#b11">(Chung, 2012;</ref><ref type="bibr" target="#b37">Harris, 2014)</ref>. Because more elementary technical knowledge is more easily absorbed and exploited, informal firms would benefit more strongly from knowledge spillovers in a cluster.</p><p>Formal firms can internalize a wide range of production and sales functions, including product design, in-house production of intermediate inputs, final assembly and distribution for sales. If in-house production of intermediate inputs is too costly, they can rely on imported raw materials and intermediate inputs, for which a local government in a developing country often provides only the formal sector with a preferential treatment such as tariff reduction and exemption system. The internalization allows formal firms to exploit increasing returns to scale. In contrast, informal firms tend to specialize in specific tasks for the inter-firm division of labor and survive by participating in value chains. They are dependent on local external economies generated by the participation of value chains <ref type="bibr" target="#b72">(Schmitz, 1995)</ref>. As they may be more dependent on local industries than formal firms, they would benefit more strongly from local production linkages in a cluster.</p><p>In the second issue, a starting point is to consider a business environment for informal firms in a developing country. As the legal protection and contract enforcement of informal businesses is weak, illegitimate activities such as fraud, nonrepayment, and petty theft are pervasive in the informal sector <ref type="bibr" target="#b38">(Hart, 1973)</ref>. Selfinterest of own profits may shape unequal business relations at the expense of partners, and thus market transactions are subject to the high risk of opportunistic behavior. To reduce high transaction costs, people have frequent face-to-face contacts and build trust among social and personal networks <ref type="bibr" target="#b21">(Dijk and Rabellotti, 1997)</ref>. Trust-based networks encourage the development of repeated transactions in the informal sector. Consequently, trust-based transactions allow for a deeper inter-firm relationship such as a provision of informal credit through subcontracting and sales of machinery and raw materials <ref type="bibr" target="#b19">(Dei Ottati, 1994)</ref>. Because spatial proximity facilitates face-to-face communication, clustered informal firms are advantageous in finding good partners in close proximity among a large pool of alternative partners and building trust-based transactions with good partners.</p><p>Social networks and long-term business transactions provide a basis for informal firms to benefit from Marshallian agglomeration benefits. In the case of knowledge spillovers, for example, <ref type="bibr" target="#b47">Kimura (2011)</ref> studies the modernization process of a papermanufacturing village in Northern Vietnam from a traditional handicraft village into a modern industrial cluster. He shows that kinship networks help learning about the use of machine production technology and operational skills for mechanized production. The operation knowledge was diffused from one village pioneer to his sons and relatives, and subsequently to other followers in the village. Additionally, based on a qualitative study of the handicraft industry in Nairobi, Kenya, <ref type="bibr" target="#b37">Harris (2014)</ref> finds that proximity to suppliers is crucial for the location decision of clustered informal firms because small-batch middlemen in a cluster provide better access to needed materials in the quantities demanded. From a buyer's point of view, a cluster of individual operators can collectively fill a product order of any significant size and variety through subcontracting to neighboring operators. As a result, clustered informal firms can benefit from a local pool of suppliers and customers. Finally, workers in the informal sector are often non-permanent employees such as casual laborers and face a high risk of unemployment. Information on job vacancies flow along social networks in the informal sector <ref type="bibr" target="#b38">(Hart, 1973)</ref>, while public employment offices play an insignificant role. Informal workers in a cluster can reduce the risk of unemployment and benefit from greater job opportunities for proximity to employers <ref type="bibr" target="#b37">(Harris, 2014)</ref>.</p><p>There are alternative channels such as informal finance through which informal firms benefit from clustering. 4 As a financial market in developing countries is underdeveloped, formal access to credit such as bank loans are limited for informal firms. An important source of funds is their own savings and credit through personal networks such as borrowing from family, friends and neighbors for mutual support. These financial resources are used for an initial capital investment to start a micro business <ref type="bibr" target="#b5">(Bagachwa, 1997;</ref><ref type="bibr" target="#b47">Kimura, 2011)</ref>. Meanwhile, the fine division of labor in an industrial cluster reduces an entry barrier for specific segments of production processes, thereby lowering the capital requirements for informal firms to enter an industry <ref type="bibr" target="#b68">(Ruan and Zhang, 2009)</ref>. Thus, clustered informal firms would be more likely than isolated firms to take advantage of informal finance to mitigate capital constraints.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Econometric framework</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.">Structural equation</head><p>To examine our hypotheses in Section 2, we consider a spatial autoregressive model for region i and sector s 2 Formal; Informal È É :</p><formula xml:id="formula_0">y s i ¼ X n j¼1 w ij y s j þ x i 0 þ z i b 1 þ " i<label>ð1Þ</label></formula><p>where y s i and y s j are a measure of productivity in regions i and j, respectively. Regional productivity is measured by the log of total factor productivity (TFP) for region i and sector s. The variable w ij represents the degree of geographical connectivity between regions i and j in the following form:</p><formula xml:id="formula_1">w ij ¼ 0 for i ¼ j d À1 ij P n j d À1 ij for i 6 ¼ j 8 &gt; &lt; &gt; :</formula><p>where d ij is travel time between regions i and j. The parameter is the magnitude of spatial autocorrelation in regional productivity. x i is a variable to capture agglomeration of similar industries in region i. z i is a vector of control variables, and " i is an error term.</p><p>We are interested in an estimate of the coefficient 0 , which represents the magnitude of net agglomeration effects arising from both localization economies and congestion effects in a localized cluster of similar industrial activities. Following the prior literature <ref type="bibr" target="#b13">(Ciccone and Hall, 1996;</ref><ref type="bibr" target="#b8">Bru¨lhart and Mathys, 2008;</ref><ref type="bibr" target="#b7">Broersma and Oosterhaven, 2009)</ref>, we measure industrial agglomeration by using the density of local employment in 4 Other clustering benefits for informal firms may include trade networks in which low search and reach costs in a cluster attract trading middlemen from other regions <ref type="bibr" target="#b76">(Weijland, 1994;</ref><ref type="bibr" target="#b69">Sato, 2000)</ref>. similar industries: ln Employment i =Area i ð Þ .<ref type="foot" target="#foot_5">foot_5</ref> Thus, the coefficient 0 represents an elasticity of regional productivity with respect to the density of local employment. Since we exploit cross-regional variation in employment density, we interpret the estimated elasticity as indicating the net localization effects that have accumulated during past periods up to the point of the year in our cross-section data. <ref type="foot" target="#foot_6">6</ref>In examining the formal and informal sectors, we distinguish between manufacturing and service industries because industrial clusters in these industries may produce agglomeration economies differently. A manufactured product can be physically transported from a production plant to a consumer at a distance. Meanwhile, services are often produced in person, making it important to produce services near a consumer. Such a characteristic of services gives an incentive for services industries to concentrate in urban areas. <ref type="bibr" target="#b48">Kolko (2010)</ref> finds that manufacturing industries tend to be more agglomerated than service industries in the USA. As agglomeration benefits are likely to increase in more agglomerated industries, <ref type="bibr" target="#b36">Graham (2009)</ref> shows that the elasticity of localization economies tends to differ in magnitude across manufacturing and service industries. While our aim is to estimate agglomeration economies in the formal and informal sectors, the analysis may be biased if only manufacturing industry is examined. Thus, we estimate the coefficient 0 separately for four subsamples of our dataset: formal manufacturing, informal manufacturing, formal services, and informal services.</p><p>Potential spatial interdependence in regional productivity is modeled as a spatial lag variable, P n j¼1 w ij y s j , which can be considered as arising from the network formation of firms and workers over space <ref type="bibr" target="#b18">(Corrado and Fingleton, 2012)</ref>. Conceptually, our approach is similar to the prior literature in that spatial spillovers in knowledge and technology are captured by the spatial lag variable of total factor productivity in regional production function <ref type="bibr" target="#b27">(Ertur and Koch, 2007;</ref><ref type="bibr" target="#b39">Hashiguchi, 2010)</ref>. From an econometric point of view, significant spatial autocorrelation may magnify or reduce the impact of local employment density through a spatial multiplier effect on productivity across regions. Thus, the spatial lag variable allows us to estimate the global magnitude of localization economies.</p><p>Our control variables are defined as follows. First, the local market size can affect both agglomeration and productivity. We control for the market size by the population size in region i. Second, Jacobs urbanization economies can raise productivity in regions with a more diverse range of different industrial activities. To control for cross-industry externalities, we define an industrial diversity index for industry k as:</p><formula xml:id="formula_2">Diversity ik ¼ ln 1 . X k 0 6 ¼k Employment ik 0 Employment i À Employment ik 2 !</formula><p>where k 0 indicates all other industries except for industry k. Third, the strength of competition in a local market affects regional productivity. More intensive competition encourages managerial efforts to improve productivity. Meanwhile, stronger competition decreases the market share of individual producers, and a decline in the scale of production reduces productivity. To account for local competition effects, we define a competition index as:</p><formula xml:id="formula_3">Competition ik ¼ ln 1= H ik ð Þ ð Þ</formula><p>where</p><formula xml:id="formula_4">H ik ¼ P f2 ik Sales ikf Sales ik 2</formula><p>is the Herfindahl index of sales concentration within region i and industry k. Sales ikf is the volume of sales by firm f that belongs to the set of firms in region i and industry k, ik .</p><p>Regional productivity depends in part on industrial infrastructure such as access to electricity. We include an electricity access variable as measured by the proportion of households with access to city power or a generator for the main source of light in region i. Additionally, skilled workers may concentrate in denser areas, such as large cities, which contributes to spatial wage disparities <ref type="bibr" target="#b34">(Glaeser and Mare´, 2001;</ref><ref type="bibr" target="#b15">Combes et al., 2008)</ref>. <ref type="bibr" target="#b1">Andersson et al. (2007)</ref> show that more productive workers are matched with more productive firms in a denser region through assortative matching and production complementarity. To control for the linkage between skilled workers and agglomeration, we include a high-skill variable as measured by the proportion of persons completing technical/vocational diplomas and undergraduate/graduate degrees in region i. On the other hand, unskilled workers may reside in dispersed areas with lower regional productivity. Thus, we include a low-skill variable as measured by the proportion of persons completing only primary and secondary school programs in region i.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.">Reduced form equation</head><p>We seek to identify the causal impact of localization economies on regional productivity after controlling for a variety of regional characteristics that may affect regional productivity. The inclusion of control variables z i helps to reduce an omitted-variables bias in the estimated coefficient of localization economies, 0 . However, some regions may be endowed with unobserved natural advantages such as local climate, social infrastructure and natural resources. If these natural advantages attract more skilled workers for higher wages, the estimated coefficient, 0 , may contain a bias. Additionally, more productive firms may self-select to locate their economic activity in agglomerated regions to benefit from positive externality. Unobserved heterogeneity in the location decisions by individual firms may cause a reverse-causality bias in the estimated coefficient, 0 . Thus, there is a concern about an endogeneity bias in the estimation of localization economies. <ref type="foot" target="#foot_7">7</ref>To deal with the endogeneity problem, we employ the Bayesian instrumentalvariables method proposed by <ref type="bibr" target="#b67">Rossi et al. (2005)</ref>. We specify the reduced form equation:</p><formula xml:id="formula_5">x i ¼ q i c 0 þ z i c 1 þ i<label>ð2Þ</label></formula><p>where x i is an endogenous variable and assumed to be linearly related to a set of instruments q i ; z i À Á . q i is a vector of exogenous variables related to x i , but independent of the error term i . For instrumental variables, we exploit regional characteristics in a past period including the density of employment in similar industries and the geographic characteristics as measured by the share of forest and shrubland area. We use data in 1998 for employment and in 2002 for geography. The identifying assumption is that the employment density and geographic characteristics in the past period have persistent influences only on the preferences of workers about the location in which they seek employment opportunities. However, these instruments are not correlated with the current differences in regional productivity that are not explicitly accounted for by our model. Our approach follows <ref type="bibr" target="#b13">Ciccone and Hall (1996)</ref> and <ref type="bibr" target="#b12">Ciccone (2002)</ref> in that past labor and geography are used as instruments for current agglomeration.</p><p>Our instruments can be justified as follows. First, industrial agglomeration is a result of a cumulative process in which individual economic activities are attracted to specific points in geographic areas over time. A large concentration of economic activity in one region is more likely than a small concentration in another region to attract a larger number of workers because of the larger market size and wider availability of intermediate inputs and consumer products <ref type="bibr" target="#b30">(Fujita et al., 1999)</ref>. Consequently, the past density of labor should positively affect the formation of industrial agglomeration in specific regions. Additionally, we hypothesize that geographic characteristics affect the patterns of locations where workers seek jobs. Forest and shrubland regions are more likely than plain regions to deter the formation of industrial activity for the high cost of leveling the ground, thereby yielding a geographic barrier to worker settlement. Past land characteristics should negatively influence the formation of industrial agglomeration. Consistent with our justifications, <ref type="bibr" target="#b16">Combes et al. (2010)</ref> emphasize the usefulness of history and geology as instruments of agglomeration.</p><p>Exclusion restrictions of our instruments imply that labor density and geographic characteristics in the past are assumed to affect current regional productivity only through the current level of industrial agglomeration, but should not affect the regional productivity through other channels that are not explicitly accounted for by control variables, z i . If our instruments produce unobserved persistent effects on a local market over time, they affect the contemporaneous determinants of regional productivity. As long as such persistent influences are captured by any of the control variables, the exclusion restrictions are satisfied. On the other hand, any remaining correlation between instruments and unobserved current shocks violates the exclusion restrictions. For instance, past density and geography might produce unobserved shocks to regional productivity in the past period, which remain to affect current productivity through cumulation effects. If such linkages are not sufficiently accounted for by the control variables, it may be difficult to give a causal interpretation for an estimate of localization economies.<ref type="foot" target="#foot_8">foot_8</ref> Thus, we calculate the Sargan statistic to check the validity of the exclusion restrictions.</p><p>Finally, we emphasize that the recent economic growth of the Cambodian economy helps to meet the exclusion restrictions. The economy has experienced the rapid economic growth since the early 1990s, and its industrial structure has been substantially transformed from agriculture to manufacturing and services; for instance, the share of agriculture in GDP declined from 55.6% in 1990 to 33.8% in 2010, while the share of manufacturing increased from 5.2% to 14.9% during this period <ref type="bibr" target="#b43">(Hill and Menon, 2013)</ref>. These rapid structural changes should help to isolate our instruments based on past data from unobserved current shocks to regional productivity.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.">A system of equations</head><p>Combining equation ( <ref type="formula" target="#formula_5">2</ref>) with a structural equation (1), we specify a system of equations in vector and matrix notation as follows:</p><formula xml:id="formula_6">x ¼ Qc 0 þ Zc 1 þ g<label>ð3Þ</label></formula><formula xml:id="formula_7">Sy ¼ x 0 þ Zb 1 þ e<label>ð4Þ</label></formula><formula xml:id="formula_8">where x ¼ x 1 ; Á Á Á ; x n ð Þ 0 , Q ¼ q 1 ; Á Á Á ; q n À Á 0 , Z ¼ z 1 ; Á Á Á ; z n ð Þ 0 , g ¼ 1 ; Á Á Á ; n ð Þ 0 , y ¼ y 1 ; Á Á Á ; y n ð Þ 0 , e ¼ " 1 ; Á Á Á ; " n ð Þ 0</formula><p>, and S ¼ I n À W. This system of equations consists of a structural equation with an endogenous independent variable and multiple instrumental variables. For brevity, we suppress the superscript s.</p><p>After estimating the system of equations, we are interested in calculating a marginal effect of localization economies. If an estimate of spatial correlation, , is not significant, the marginal effect is simply based on the estimated coefficient of localization economies, 0 . In contrast, if there is significant spatial correlation in regional productivity, a marginal change in agglomeration for each region has an impact not only on its own productivity but also indirectly on the other regions' productivity through the spatial network structure. More specifically, the marginal impact in our model can be written by showing the total derivative of y in equation ( <ref type="formula" target="#formula_7">4</ref>) under the constraints dZ ¼ 0 and de ¼ 0:</p><formula xml:id="formula_9">dy ¼ @y @x 0 dx ¼ S À1 0 dx:<label>ð5Þ</label></formula><p>The marginal changes in agglomeration for region i can affect the productivity in both its own region and other regions. For ¼ 0, S À1 is reduced to an identity matrix, and spatial effects will be removed. We can measure the marginal effects by the total impact (TI), direct impact (DI), and indirect impact (IDI) of agglomeration on regional productivity in region i:</p><formula xml:id="formula_10">TI i ¼ DI i þ IDI i ;</formula><p>where</p><formula xml:id="formula_11">DI i ¼ @y i @x i dx i ; IDI i ¼ X n j¼1 @y j @x i dx i for j 6 ¼ i:</formula><p>In the following analysis, we calculate the averages of TI i , DI i and IDI i over all regions for dx i ¼ 1. These impacts are referred to as average total impact (ATI), average direct impact (ADI), and average indirect impact (AIDI), following the terminology by LeSage and Pace (2009).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Bayesian estimation</head><p>This section describes the Bayesian estimation of our model. The Bayesian estimation requires a posterior density to draw an inference regarding unknown parameters in the model. In general, the posterior is proportional to the likelihood function times the prior density:</p><formula xml:id="formula_12">hj y ð Þ!f yj h ð ÞÂ h ð Þ, where hj y ð Þ is the posterior; f yj h ð Þ is the likelihood; h ð Þ is</formula><p>the prior; y is the observed data, and h is the unknown parameters. In this section, we describe the likelihood and the prior in our model, and explain the computational scheme for estimating the posterior in Supplementary Appendix B.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1.">Likelihood and priors</head><p>To derive the likelihood function, we assume that g and e have a multivariate normal distribution:</p><formula xml:id="formula_13">g e ! $MVN 0; R I n ð Þ</formula><p>where R is a 2 Â 2 covariance matrix.<ref type="foot" target="#foot_9">foot_9</ref> Denoting ỹ ¼ x; y ð Þ 0 and u as a 2n Â 1 ð Þvector following a multivariate standard normal distribution N 0; I 2n ð Þ, we can express the system of equations ( <ref type="formula" target="#formula_6">3</ref>) and ( <ref type="formula" target="#formula_7">4</ref>) as:</p><formula xml:id="formula_14">u ¼ ðR I n Þ À 1 2 I n 0 À 0 I n S ! ỹ À Q 0 ! c 0 À Z 0 0 Z ! c 1 b 1 ! " # :<label>ð6Þ</label></formula><p>The Jacobian for the transformation of u into ỹ is written as:</p><formula xml:id="formula_15">J ¼ @u @ỹ ¼ jRj À n 2 jSj:<label>ð7Þ</label></formula><p>The likelihood function is specified by:</p><formula xml:id="formula_16">L ¼ 2 ð Þ À n 2 jRj À n 2 jSjexp x À Qc 0 À Zc 1 Sy À x 0 À Zb 1 " # 0 R I n ð Þ À1 x À Qc 0 À Zc 1 Sy À x 0 À Zb 1 " # ( ) :<label>ð8Þ</label></formula><p>Independent priors for the unknown parameters are specified as:</p><formula xml:id="formula_17">b Ã 0 b 1 0 @ 1 A $MVN b ; B À Á ; c Ã 0 c 1 0 @ 1 A $ MVN b ; B À Á ; $U À1 min ; À1 max À Á ; R $ IW b AE ; B AE ð Þ;<label>ð9Þ</label></formula><p>Japan International Cooperation Agency. 10 The census enumeration was conducted in March 2011 to survey all the establishments and enterprises, including the street vendors that operate at a fixed location but can move. 11 To collect the data, census enumerators visited each establishment to interview its representative and/or owner. Through face-to-face interviews, the enumerators filled out a questionnaire for each establishment. The NIS collected all the questionnaires for data input and checked data consistency by comparing two data files that were made separately by two data-input operators.</p><p>In the EC2011 questionnaire, each establishment is asked whether or not they register with the Ministry of Commerce or the Provincial Department of Commerce. 12 In the registration process, formal firms must provide the registrar with the specific location of their office and the name of their agent. 13 The registration procedures require a firm (i) to deposit the legally required initial capital in a bank and obtain deposit evidence, (ii) conduct an initial check of the uniqueness of the company name at the Intellectual Property Department and the Business Registration Office, and (iii) publish an abstract of the company organization documents and incorporate the company with the Business Registration Department in the Ministry of Commerce <ref type="bibr">(World Bank, 2014)</ref>. These procedures are estimated to cost at least 400 USD and to take one month. For analysis, we exploit the registration question to define the formal sector as the business activities of registered firms and the informal sector as the activities of unregistered firms. Thus, the EC2011 provides a unique dataset to examine the entire coverage of the formal and informal sectors.</p><p>To gauge the relative importance of the shadow economy in Cambodia, Table <ref type="table" target="#tab_0">1</ref> presents aggregate data on formal and informal establishments, with the financial figures measured for one month in February 2011. Across all industries, there were 17, 374 formal establishments and 487, 719 informal establishments. 14 The informal sector represents 96.6% of the total number of establishments, 76.6% of total sales, 59.2% of total wages and 66.4% of total employment. For manufacturing industries, there were 1723 formal establishments and 69,693 informal establishments, with the informal sector representing 97.6% of firms, 60.8% of sales, 35.8% of wages and 32.5% of employment. On the other hand, there were 6245 formal establishments and 286,101 informal establishments in wholesale and retail trade industries, with the informal 10 In preparing for the EC2011, the NIS made the establishment listing in Phnom Penh for 2006 and conducted the establishment survey in Phnom Penh for 2007. The nation-wide establishment listing was made for 2009. 11 The survey does not cover the establishments classified into (i) agriculture, forestry and fishing, (ii) public administration and defense, (iii) activities of households as employers, (iv) activities of extraterritorial organizations and bodies and (v) mobile establishments such as a bike taxi and a street peddler. 12 Each establishment is also asked about a composition of employment, including self-employed proprietors, unpaid family workers and regular employees. 13 A regulatory framework for commercial enterprises in Cambodia was first established by the 'Law Bearing upon Commercial Regulations and the Commercial Register', which was enacted in 1995 and modified in 1999. This law defines the meaning of commercial enterprise and commercial activity, stipulates the obligation of companies to register, and details the formal procedures of commercial registration. In 2005, the National Assembly in Cambodia adopted the 'Law on Commercial Enterprise', which applies to partnerships, private limited companies, public limited companies, and foreign businesses. 14 We exclude NGOs from the data. sector representing 97.9% of total firms, 87.8% of sales, 60.5% of wages and 93.1% of employment.</p><p>Our data show that the informal sector is remarkably large in Cambodia's industrial activities. While the formal sector provides large employment opportunities in manufacturing, the informal sector is prominent in both manufacturing and wholesale/retail industries. Additionally, these industries account for the large share of total industrial activity. The wholesale and retail industries accounted for 33.1% of total employment in nonfarm industries, and the manufacturing industries constituted 31.7%. Thus, the analysis of these industries is critical to understanding agglomeration effects in Cambodia.</p><p>Using the EC2011, we construct variables on regional productivity, the density of local employment, an industrial diversity index, and a competition index. More specifically, we estimate regional productivity y s i in two steps, with details of the data construction provided in Supplementary Appendix C1. First, we assume that production function for firm f follows a Cobb-Douglas form, q f ¼ A f K f k L f l , where q f is value added; K f is capital input; L f is labor input, and A f is the efficiency level that is observed by a producer, but not by an econometrician. We estimate a log-linear form of the above production function by OLS for a sample on individual firms in each industry. Based on the OLS estimates, we calculate the log of the residuals as a proxy for total factor productivity, ln TFP f À Á . Second, we compute the regional productivity of firms in region i and sector s 2 Formal; Informal f g separately for each industry:</p><formula xml:id="formula_18">y s i ¼ X f2 is q fis P f2 is q fis ln TFP fis À Á</formula><p>where is is the set of firms that belong to region i and sector s. The average productivity across region i and sector s for each industry is approximated by the average of firm-level TFP weighted by the share of its own value added in the total value added. An increase in regional productivity results from an increase in the firmlevel TFP values and an expansion of the market share of more productive firms, i.e., allocative efficiency. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2.">Data on spatial weight matrix</head><p>A spatial-weighting matrix is designed to capture the degree of connectivity between all pairs of distinct regions, which should approximate the spatial dependence in regional productivity that has been formed in past periods up to the year of our cross-sectional data. To approximate such connectivity, we construct a dataset on the shortest travel time between communes in Cambodia. Shorter travel time from one commune to another commune indicates greater connectivity between these communes, whereas longer travel time suggests weaker connectivity. We compute the travel time for the shortest path among all possible routes between commune pairs, which consists of a 1621 Â 1621 matrix with each element estimated in hours. We employ the Floyd-Warshall algorithm to compute the shortest travel time using data on travel distance and speed between communes. These data are constructed from (i) the Geographic Information System (GIS) shape file on 1, 621 administrative units at the commune level in Cambodia, (ii) the map of the Cambodian road network published by the Cambodian Ministry of Public Works and Transport, (iii) the Japan External Trade Organization (JETRO) survey on ASEAN logistics network map (JETRO, 2009) and (iv) satellite-image data of geographic conditions in each commune. Details of the data construction are given in Supplementary Appendix C2. Note that geographic distances between communes are predetermined. Travel speeds depend crucially on the location of major roads that were historically formed on the basis of Cambodia's geography. These facts support the exogenous assumption of the spatial weighting matrix.<ref type="foot" target="#foot_10">foot_10</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3.">Other data sources</head><p>Data on population and households are taken from the Population Census of Cambodia in 1998 and 2008. These datasets contain information on the characteristics of the population and households, including residential location, education, and electricity access. Additionally, geographic data on forest and shrubland are constructed from the satellite land cover images provided by the Land Processes Distributed Active Archive Center, a component of NASA's Earth Observing System Data and Information System. Land cover maps in Cambodia are matched with the GIS shape file of communes to calculate the proportion of land areas classified as forest and shrubland for year 2002.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.">Estimation results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.1.">Main results</head><p>Table <ref type="table" target="#tab_1">2</ref> presents the summary statistics of the sample used. The mean and standard deviation of variables are shown separately for the formal and informal sectors in manufacturing and wholesale/retail industries, respectively. Regional productivity in the formal sector is higher than that in the informal sector for manufacturing and wholesale/retail industries, consistent with the prior findings that formal enterprises are more productive than informal enterprises <ref type="bibr" target="#b60">(McKenzie and Seynabou Sakho, 2010;</ref><ref type="bibr" target="#b28">Fajnzylber et al., 2011)</ref>. The formal sector has the higher local density of employment in similar industries and the smaller number of observations than the informal sector does. This implies that formal firms tend to be located in fewer and denser regions, which are more developed in terms of the population size, industrial diversity and electricity access.</p><p>Table <ref type="table" target="#tab_2">3</ref> reports the main estimation results. In manufacturing, the posterior mean coefficient of employment density is 0.016 and insignificant for the formal sector in column (1). In contrast, the posterior mean coefficient is 0.092 for the informal sector in column (2) and statistically significant at the 1% level because the 99% credible interval of the posterior distribution does not contain zero. In wholesale/retail, the posterior mean coefficient of employment density is 0.039 and insignificant for the formal sector in column (3). The posterior mean coefficient is 0.041 and significant at the 10% level for the informal sector in column (4). These results indicate that the density of local employment has a significantly positive effect on the regional productivity only in the informal sector.</p><p>We examine the validity of our instruments to check whether positive localization economies in the informal sector can be interpreted as suggesting a causal relationship. First, the past density of employment has the significantly positive posterior mean coefficients at the 1% level across specifications. The past forest variable has significantly negative posterior mean coefficients at the 1% level for the informal sectors in columns (2), (3) and (4). These results imply that our specifications are not likely to suffer from a weak instrument problem. From an economic point of view, a large concentration of industrial activity is likely to attract a large number of workers, suggesting that the past level of employment density significantly affects the spatial pattern of agglomeration. On the other hand, forest regions are likely to discourage the formation of industrial activity for the high cost of leveling the ground. A geographic barrier to worker settlement also significantly influences agglomeration patterns. Second, we compute the Sargan statistic and p-values based on a 2 distribution to check the empirical validity of exclusion restrictions in the specifications. The p-values of the Sargan statistic are large; for instance, the p-values are 0.119 in column (2) and 0.409 in column (4). We do not find strong evidence to reject the null hypothesis that our instrumental variables do not correlate with an error term in equation (4). Taken together, these statistical tests lend support for the identification assumption of our instruments, thereby suggesting a causal impact of the localized concentration of similar industries for the informal sector. We turn to discuss the spatial lag in our model. In manufacturing, the posterior mean coefficient of the spatial lag of productivity is not significant for the formal sector in column (1), but significantly positive at the 1% level for the informal sector in column (2). In wholesale/retail, the posterior mean coefficient for the spatial lag is not significant for the formal sector in column (3), but significantly positive at the 1% level for the informal sector in column (4). These results suggest that there is not significant spatial interdependence of economic performance among formal firms. Meanwhile, informal firms exhibit the positive spatial interdependence among them, implying that the local impact of positive localization economies should be magnified by the positive spatial network within the informal sector. Thus, we find that it is crucial to control for the spatial lag of regional productivity in estimating agglomeration economies in the informal sector.</p><p>To further assess a fit of our model with the data, we compute a deviance information criterion (DIC), with a smaller value indicating a better fit of the model <ref type="bibr">(Speigelhalter et al., 2002)</ref>. Specifically, we compare model fits by computing the DIC for our spatialautoregressive model with a spatial lag variable and a nonspatial autoregressive model without the spatial lag. In manufacturing informal firms, the DIC is 5951.2 for the spatial model and 5993.4 for the non-spatial model, suggesting a better fit of the spatial model. In wholesale/retail informal firms, the DIC is 3782.8 for the spatial model and 3811.2 for the non-spatial model, implying a better fit of the spatial model. These results support that our spatial autoregressive model describes the data in the informal sector better than an alternative model without a spatial lag variable.</p><p>To examine the magnitude of localization economies, we compute marginal effects of employment density on regional productivity in the informal sector for manufacturing and wholesale/retail industries. Table <ref type="table" target="#tab_3">4</ref> presents a summary of average impacts on productivity, which are computed from the results in Table <ref type="table" target="#tab_2">3</ref>. In manufacturing industry, the average direct and indirect impacts are 0.09 and 0.19, respectively. Combining these impacts, we find the average total impact of 0.28. Intuitively, these results indicate that a doubling of the density of local employment increases informal firms' productivity by 9% through direct linkages in their own region and by 19% through spatial multiplier linkages in other regions. These linkages combine to produce a 28% increase in productivity. Additionally, the average direct and indirect impacts in wholesale/retail are 0.04 and 0.17, respectively. The average total impact is 0.21. Intuitively, a doubling of the density of local employment increases the productivity of informal firms by 4% through direct linkages in their own region and by 17% through spatial multiplier linkages, which combine to produce a 21% increase in productivity. Thus, the average indirect impact is larger than the average direct impact in both industries. These results suggest that informal firms benefit significantly from the local impact of localization economies, and consequently the spatial network structure contributes to magnify the localization economies through spatial multiplier linkages. The spatial dependence in economic performance plays a crucial role in estimating the precise magnitude of localization economies.<ref type="foot" target="#foot_11">foot_11</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.2.">Robustness checks</head><p>In the benchmark analysis, we measure industrial agglomeration by the density of workers. <ref type="bibr" target="#b42">Henderson (2003)</ref> and <ref type="bibr" target="#b56">Martin et al. (2011)</ref> argue that localization economies can be examined by using the number of firms in the same industry and region. If agglomeration externalities occur mainly through an interaction within firms rather than within workers, we might underestimate the localization economies in the benchmark results. To address this concern, we extend the main specification by measuring the agglomeration as the density of firms in the same industry and commune.</p><p>Table <ref type="table" target="#tab_4">5</ref> presents the estimation results. In manufacturing, the posterior mean coefficient of firm density is 0.015 and insignificant for the formal sector in column (1). The coefficient is 0.102 and significant at the 1% level for the informal sector in column (2). In wholesale/retail, the posterior mean coefficient of firm density is 0.038 and insignificant for the formal sector in column (3). The coefficient is 0.041 and significant at the 10% level for the informal sector in column (4). In columns ( <ref type="formula" target="#formula_5">2</ref>) and ( <ref type="formula" target="#formula_7">4</ref>), the posterior mean coefficients of past employment density and past forest are significantly positive at the 1% level. The Sargan statistic has a large p-value in these specifications. These results support the validity of our instrumental variables in the specification using the density of firms. Thus, the density of firms also has a positive impact on regional productivity in the informal sector across industries, and the magnitude of the posterior mean coefficient is similar to the results using employment density. The benchmark results are robust to the alternative definition of industrial agglomeration.</p><p>For further robustness checks, we estimate the benchmark specification with additional control variables. 17 In the first specification, we include cropland area to capture the effect of agriculture on industrial location and a dummy variable for border regions to account for an accessibility advantage in exporting to foreign markets through land borders. We also include a dummy variable for major international airports and special economic zones. In the second specification, we include the spatial lag of the density of local employment to address a possible confounding factor due to a spatial concentration of similar industries in other regions. We find that the estimation results in these alternative specifications do not differ substantially from the main estimation results, supporting the positive localization economies in the informal sector.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.3.">Further issues</head><p>Previous discussions up to this point suggest that the density of local employment in similar industries has a positive impact on regional productivity in the informal sector, but has little influence in the formal sector. These findings raise further questions. First, we have focused on the density of total employment in both formal and informal sectors to investigate the average cluster benefit. It is plausible that formal firms benefit strongly from a localized cluster of formal firms and weakly from that of informal firms, suggesting that our measure might lead to insignificant localization economies for the formal sector. On the other hand, informal firms may also benefit strongly (weakly) from a localized cluster of informal (formal) firms. The previous results may mask heterogeneous localization economies in terms of the proportion of formal firms in a cluster.</p><p>To address this issue, we extend the benchmark specification with an interaction term between the density of employment and the proportion of formal-firm employment in similar industries across regions. Table <ref type="table" target="#tab_5">6</ref> presents the estimation results. In manufacturing, the posterior mean coefficient of employment density remains insignificant for the formal sector in column (1). The posterior mean coefficient of the interaction term is À0.135 and the 95% credible interval of the posterior distribution does not contain zero. A large proportion of formal firms reduces positive localization impacts for the formal sector, possibly suggesting that a localized concentration of formal manufacturing firms significantly raises congestion costs. Additionally, the posterior mean coefficients of employment density and the interaction are 0.107 and À0.154 for the informal sector in column (2), respectively. The 99% credible intervals of their posterior distributions do not contain zero. Consistent with the result in column (1), a large share of formal firms decreases positive localization effects for the informal sector. In other words, a large proportion of informal firms in a cluster can magnify positive localization effects for the informal sector. Finally, the results for wholesale/  <ref type="formula" target="#formula_5">2</ref>) and those in wholesale/retail for columns (3) and (4); formal share shows the share of employment by registered firms in the same industry across regions.</p><p>Agglomeration economies . 61 retail industry show that the posterior mean coefficients of the interaction are insignificant for both formal and informal sectors in columns (3) and ( <ref type="formula" target="#formula_7">4</ref>). Finally, we discuss whether denser local employment always increases positive localization effects. Because more clustering would increase not only localization benefits but congestion costs, congestion costs may exceed positive localization externalities in high clustering regions. Thus, there may be a nonlinear relationship between clustering and productivity. The estimation results are explained in Supplementary Appendix D. Additionally, informal firms and workers are heterogeneous in many respects such as the degree of informality <ref type="bibr" target="#b58">(Mazumbar, 1976)</ref>. To shed light on heterogeneity in the informal sector, Supplementary Appendix D reports results for alternative classifications of informal unregistered firms in manufacturing.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="7.">Concluding remarks</head><p>It is widely held that industrial clusters produce agglomeration economies and promote industrialization in developing economies, as has been previously demonstrated for high and middle income countries. However, the large informal sector in developing economies poses a question as to whether both formal and informal firms would benefit from industrial clusters. Using a comprehensive dataset on formally registered and unregistered business establishments in Cambodia, this article estimates the long-run magnitude of agglomeration economies produced by a localized concentration of similar industries. We develop a Bayesian spatial approach to address the endogeneity of industrial agglomeration and spatial dependence in economic performance.</p><p>We find that localization economies are significantly positive in the informal sector, but have little effect on the formal sector. In manufacturing, a doubling of employment density increases regional productivity in the informal sector by 9% through local linkages and by 19% through spatial multiplier linkages, leading to a 28% increase in total. Similar results are found for wholesale/retail industry. A spatial network serves to magnify the positive impact of localization economies in the informal sector.</p><p>These results provide policy implications for developing economies. The low level of cluster benefits in the formal sector may indicate the weak linkages between formal and informal firms. To produce agglomeration economies for the formal sector, it would be necessary to promote the entry and growth of formal firms such as foreign-owned firms. On the other hand, the informal sector contributes to agglomeration economies, and thus it is not justified to encourage excessively the formalization of informal firms. Additionally, the spatial network among firms can magnify agglomeration economies through geographic connectivity. Because an improvement in transportation infrastructure can enhance agglomeration economies, investment in such infrastructures should be made to reduce congestion costs in excessively dense regions and to improve connectivity between dense regions.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 .</head><label>1</label><figDesc>The size of the formal and informal sectors in Cambodia Formal and Informal indicate registered and unregistered firms, respectively; figures in parentheses show the percentage share of registered or unregistered firms for the corresponding variable.</figDesc><table><row><cell/><cell>All</cell><cell/><cell cols="2">Manufacturing</cell><cell cols="2">Wholesale/Retail</cell></row><row><cell/><cell>Formal</cell><cell>Informal</cell><cell>Formal</cell><cell>Informal</cell><cell>Formal</cell><cell>Informal</cell></row><row><cell>Number of establishment</cell><cell>17,374</cell><cell>487,719</cell><cell>1723</cell><cell>69,693</cell><cell>6245</cell><cell>286,101</cell></row><row><cell/><cell>(3.4)</cell><cell>(96.6)</cell><cell>(2.4)</cell><cell>(97.6)</cell><cell>(2.1)</cell><cell>(97.9)</cell></row><row><cell>Sales (mil. USD)</cell><cell>140.31</cell><cell>459.75</cell><cell>20.91</cell><cell>32.49</cell><cell>42.01</cell><cell>301.82</cell></row><row><cell/><cell>(23.4)</cell><cell>(76.6)</cell><cell>(39.2)</cell><cell>(60.8)</cell><cell>(12.2)</cell><cell>(87.8)</cell></row><row><cell>Wages (mil. USD)</cell><cell>14.46</cell><cell>20.97</cell><cell>4.18</cell><cell>2.33</cell><cell>1.52</cell><cell>2.33</cell></row><row><cell/><cell>(40.8)</cell><cell>(59.2)</cell><cell>(64.2)</cell><cell>(35.8)</cell><cell>(39.5)</cell><cell>(60.5)</cell></row><row><cell>Employment (mil. people)</cell><cell>0.561</cell><cell>1.112</cell><cell>0.358</cell><cell>0.172</cell><cell>0.038</cell><cell>0.515</cell></row><row><cell/><cell>(33.6)</cell><cell>(66.4)</cell><cell>(67.5)</cell><cell>(32.5)</cell><cell>(6.9)</cell><cell>(93.1)</cell></row><row><cell>Notes:</cell><cell/><cell/><cell/><cell/><cell/><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2 .</head><label>2</label><figDesc>Summary statistics</figDesc><table><row><cell>Sample</cell><cell/><cell cols="2">Manufacturing</cell><cell/><cell/><cell cols="2">Wholesale/Retail</cell><cell/></row><row><cell/><cell cols="2">Formal</cell><cell cols="2">Informal</cell><cell cols="2">Formal</cell><cell cols="2">Informal</cell></row><row><cell>Variable</cell><cell cols="8">Mean Std. Dev. Mean Std. Dev. Mean Std. Dev. Mean Std. Dev.</cell></row><row><cell>Productivity</cell><cell>1.125</cell><cell>0.945</cell><cell>0.853</cell><cell>0.858</cell><cell>1.218</cell><cell>0.951</cell><cell>0.621</cell><cell>0.654</cell></row><row><cell>Density of employment</cell><cell>2.483</cell><cell>2.583</cell><cell>0.323</cell><cell>2.387</cell><cell>3.452</cell><cell>2.347</cell><cell>1.410</cell><cell>2.004</cell></row><row><cell cols="2">Formal employment share 0.298</cell><cell>0.289</cell><cell>0.092</cell><cell>0.230</cell><cell>0.087</cell><cell>0.117</cell><cell>0.022</cell><cell>0.070</cell></row><row><cell>Population size</cell><cell>9.281</cell><cell>0.581</cell><cell>8.867</cell><cell>0.594</cell><cell>9.275</cell><cell>0.624</cell><cell>8.820</cell><cell>0.643</cell></row><row><cell>Industrial diversity</cell><cell>1.124</cell><cell>0.273</cell><cell>0.977</cell><cell>0.256</cell><cell>1.357</cell><cell>0.410</cell><cell>1.224</cell><cell>0.393</cell></row><row><cell>Local competition</cell><cell>2.189</cell><cell>0.936</cell><cell>2.048</cell><cell>1.050</cell><cell>3.853</cell><cell>1.104</cell><cell>3.421</cell><cell>0.892</cell></row><row><cell>Electricity access</cell><cell>0.487</cell><cell>0.382</cell><cell>0.192</cell><cell>0.281</cell><cell>0.506</cell><cell>0.362</cell><cell>0.188</cell><cell>0.277</cell></row><row><cell>High-skilled labor</cell><cell>0.062</cell><cell>0.092</cell><cell>0.020</cell><cell>0.047</cell><cell>0.059</cell><cell>0.085</cell><cell>0.019</cell><cell>0.046</cell></row><row><cell>Low-skilled labor</cell><cell>0.764</cell><cell>0.192</cell><cell>0.605</cell><cell>0.234</cell><cell>0.777</cell><cell>0.187</cell><cell>0.594</cell><cell>0.240</cell></row><row><cell>Past density of</cell><cell>1.587</cell><cell>2.745</cell><cell>À0.789</cell><cell>2.531</cell><cell>2.577</cell><cell>2.650</cell><cell>À0.043</cell><cell>2.662</cell></row><row><cell>employment</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>Past forest</cell><cell>0.098</cell><cell>0.597</cell><cell>0.125</cell><cell>0.697</cell><cell>0.095</cell><cell>0.626</cell><cell>0.128</cell><cell>0.715</cell></row><row><cell>No. of observations</cell><cell/><cell>281</cell><cell/><cell>1558</cell><cell/><cell>353</cell><cell cols="2">1621</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 3 .</head><label>3</label><figDesc>Main estimation results</figDesc><table><row><cell/><cell>(1)</cell><cell>(2)</cell><cell>(3)</cell><cell>(4)</cell></row><row><cell/><cell cols="2">Manufacturing</cell><cell cols="2">Wholesale/Retail</cell></row><row><cell>Variable</cell><cell>Formal</cell><cell>Informal</cell><cell>Formal</cell><cell>Informal</cell></row><row><cell cols="2">Dependent variable: regional productivity</cell><cell/><cell/><cell/></row><row><cell>Density of employment</cell><cell>0.016</cell><cell>0.092**</cell><cell>0.039</cell><cell>0.041þ</cell></row><row><cell/><cell>(0.070)</cell><cell>(0.030)</cell><cell>(0.055)</cell><cell>(0.024)</cell></row><row><cell>Population size</cell><cell>0.282**</cell><cell>0.358**</cell><cell>0.218*</cell><cell>0.135**</cell></row><row><cell/><cell>(0.101)</cell><cell>(0.040)</cell><cell>(0.091)</cell><cell>(0.033)</cell></row><row><cell>Industrial diversity</cell><cell>0.295</cell><cell>0.104</cell><cell>0.100</cell><cell>0.195**</cell></row><row><cell/><cell>(0.237)</cell><cell>(0.091)</cell><cell>(0.121)</cell><cell>(0.039)</cell></row><row><cell>Local competition</cell><cell>À0.096</cell><cell>À0.183**</cell><cell>À0.078</cell><cell>À0.066**</cell></row><row><cell/><cell>(0.060)</cell><cell>(0.028)</cell><cell>(0.052)</cell><cell>(0.021)</cell></row><row><cell>Electricity access</cell><cell>0.338</cell><cell>0.559**</cell><cell>0.438</cell><cell>0.845**</cell></row><row><cell/><cell>(0.311)</cell><cell>(0.120)</cell><cell>(0.233)</cell><cell>(0.085)</cell></row><row><cell>High-skilled labor</cell><cell>0.889</cell><cell>À1.006</cell><cell>À0.509</cell><cell>À0.422</cell></row><row><cell/><cell>(0.987)</cell><cell>(0.642)</cell><cell>(1.060)</cell><cell>(0.556)</cell></row><row><cell>Low-skilled labor</cell><cell>0.097</cell><cell>À0.159</cell><cell>0.927**</cell><cell>À0.349**</cell></row><row><cell/><cell>(0.473)</cell><cell>(0.152)</cell><cell>(0.358)</cell><cell>(0.107)</cell></row><row><cell>Spatial lag of productivity</cell><cell>À0.433</cell><cell>0.669**</cell><cell>0.096</cell><cell>0.806**</cell></row><row><cell/><cell>(0.368)</cell><cell>(0.162)</cell><cell>(0.327)</cell><cell>(0.115)</cell></row><row><cell>Instrumental variable</cell><cell/><cell/><cell/><cell/></row><row><cell>Past density of employment</cell><cell>0.531**</cell><cell>0.442**</cell><cell>0.600**</cell><cell>0.416**</cell></row><row><cell/><cell>(0.050)</cell><cell>(0.021)</cell><cell>(0.024)</cell><cell>(0.013)</cell></row><row><cell>Past forest</cell><cell>À0.187</cell><cell>À0.195**</cell><cell>À0.205**</cell><cell>À0.160**</cell></row><row><cell/><cell>(0.117)</cell><cell>(0.044)</cell><cell>(0.055)</cell><cell>(0.026)</cell></row><row><cell>Sargan</cell><cell>0.382</cell><cell>2.437</cell><cell>0.019</cell><cell>0.683</cell></row><row><cell>(p-value)</cell><cell>(0.536)</cell><cell>(0.119)</cell><cell>(0.891)</cell><cell>(0.409)</cell></row><row><cell>No. of observations</cell><cell>281</cell><cell>1558</cell><cell>353</cell><cell>1621</cell></row><row><cell cols="5">Notes: Figures and those in parentheses indicate the mean and standard deviation of posterior distribution</cell></row><row><cell cols="5">for each variable; constant is not reported; þ, *, and ** indicate that the 90%, 95% and 99% credible</cell></row><row><cell cols="5">intervals of the posterior distribution do not contain zero, respectively; density of employment is based on</cell></row><row><cell cols="5">total workers in manufacturing sector for columns (1) and (2) and those in wholesale/retail for columns (3)</cell></row><row><cell>and (4).</cell><cell/><cell/><cell/><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 4 .</head><label>4</label><figDesc>Marginal effects of employment density on productivity Total, direct, and indirect impacts are computed for an increase of one unit in the log of employment density, implying that these impacts show a percentage change in productivity resulting from a one percentage increase in employment density; the calculations for manufacturing and wholesale/retail are based on the estimation results in columns (2) and (4) of Table3, respectively.</figDesc><table><row><cell/><cell>Manufacturing</cell><cell>Wholesale/Retail</cell></row><row><cell/><cell>Informal</cell><cell>Informal</cell></row><row><cell>Average total impact</cell><cell>0.28</cell><cell>0.21</cell></row><row><cell>Average direct impact</cell><cell>0.09</cell><cell>0.04</cell></row><row><cell>Average indirect impact</cell><cell>0.19</cell><cell>0.17</cell></row><row><cell>Notes:</cell><cell/><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 5 .</head><label>5</label><figDesc>Estimation results for the density of firms Figures and those in parentheses indicate the mean and standard deviation of posterior distribution for each variable; constant is not reported; þ, *, and ** indicate that the 90%, 95% and 99% credible intervals of the posterior distribution do not contain zero, respectively; density of employment is based on total workers in manufacturing sector for columns (1) and (2) and those in wholesale/retail for columns (3) and (4).</figDesc><table><row><cell/><cell>(1)</cell><cell>(2)</cell><cell>(3)</cell><cell>(4)</cell></row><row><cell/><cell cols="2">Manufacturing</cell><cell cols="2">Wholesale/Retail</cell></row><row><cell>Independent variable</cell><cell>Formal</cell><cell>Informal</cell><cell>Formal</cell><cell>Informal</cell></row><row><cell cols="2">Dependent variable: regional productivity</cell><cell/><cell/><cell/></row><row><cell>Density of firms</cell><cell>0.015</cell><cell>0.102**</cell><cell>0.038</cell><cell>0.041þ</cell></row><row><cell/><cell>(0.077)</cell><cell>(0.032)</cell><cell>(0.055)</cell><cell>(0.023)</cell></row><row><cell>Population size</cell><cell>0.287**</cell><cell>0.382**</cell><cell>0.219*</cell><cell>0.138**</cell></row><row><cell/><cell>(0.099)</cell><cell>(0.038)</cell><cell>(0.091)</cell><cell>(0.033)</cell></row><row><cell>Industrial diversity</cell><cell>0.302</cell><cell>0.103</cell><cell>0.100</cell><cell>0.195**</cell></row><row><cell/><cell>(0.245)</cell><cell>(0.090)</cell><cell>(0.121)</cell><cell>(0.039)</cell></row><row><cell>Local competition</cell><cell>À0.101</cell><cell>À0.202**</cell><cell>À0.081</cell><cell>À0.068**</cell></row><row><cell/><cell>(0.071)</cell><cell>(0.032)</cell><cell>(0.053)</cell><cell>(0.021)</cell></row><row><cell>Electricity access</cell><cell>0.357</cell><cell>0.661**</cell><cell>0.442</cell><cell>0.845**</cell></row><row><cell/><cell>(0.279)</cell><cell>(0.107)</cell><cell>(0.230)</cell><cell>(0.085)</cell></row><row><cell>High-skilled labor</cell><cell>0.869</cell><cell>À1.297</cell><cell>À0.442</cell><cell>À0.350</cell></row><row><cell/><cell>(1.103)</cell><cell>(0.680)</cell><cell>(1.001)</cell><cell>(0.532)</cell></row><row><cell>Low-skilled labor</cell><cell>0.094</cell><cell>À0.161</cell><cell>0.924**</cell><cell>À0.352**</cell></row><row><cell/><cell>(0.490)</cell><cell>(0.151)</cell><cell>(0.360)</cell><cell>(0.108)</cell></row><row><cell>Spatial lag of productivity</cell><cell>À0.471</cell><cell>0.682**</cell><cell>0.091</cell><cell>0.809**</cell></row><row><cell/><cell>(0.369)</cell><cell>(0.157)</cell><cell>(0.327)</cell><cell>(0.113)</cell></row><row><cell>Instrumental variable</cell><cell/><cell/><cell/><cell/></row><row><cell>Past density of employment</cell><cell>0.491**</cell><cell>0.401**</cell><cell>0.608**</cell><cell>0.421**</cell></row><row><cell/><cell>(0.036)</cell><cell>(0.017)</cell><cell>(0.024)</cell><cell>(0.012)</cell></row><row><cell>Past forest</cell><cell>À0.138</cell><cell>À0.169**</cell><cell>À0.207**</cell><cell>À0.164**</cell></row><row><cell/><cell>(0.086)</cell><cell>(0.034)</cell><cell>(0.055)</cell><cell>(0.024)</cell></row><row><cell>Sargan</cell><cell>0.384</cell><cell>2.328</cell><cell>0.019</cell><cell>0.689</cell></row><row><cell>(p-value)</cell><cell>(0.536)</cell><cell>(0.127)</cell><cell>(0.890)</cell><cell>(0.407)</cell></row><row><cell>No. of observations</cell><cell>281</cell><cell>1558</cell><cell>353</cell><cell>1621</cell></row><row><cell>Notes:</cell><cell/><cell/><cell/><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5"><head>Table 6 .</head><label>6</label><figDesc>Estimation results for the share of formal sector Figures and those in parentheses indicate the mean and standard deviation of posterior distribution for each variable; constant is not reported; þ, *, and ** indicate that the 90%, 95% and 99% credible intervals of the posterior distribution do not contain zero, respectively; density of employment is based on total workers in manufacturing sector for columns (1) and (</figDesc><table><row><cell/><cell>(1)</cell><cell>(2)</cell><cell>(3)</cell><cell>(4)</cell></row><row><cell/><cell cols="2">Manufacturing</cell><cell cols="2">Wholesale/Retail</cell></row><row><cell>Independent variable</cell><cell>Formal</cell><cell>Informal</cell><cell>Formal</cell><cell>Informal</cell></row><row><cell>Dependent variable: regional productivity</cell><cell/><cell/><cell/><cell/></row><row><cell>Density of employment</cell><cell>0.040</cell><cell>0.107**</cell><cell>0.045</cell><cell>0.045þ</cell></row><row><cell/><cell>(0.080)</cell><cell>(0.031)</cell><cell>(0.059)</cell><cell>(0.024)</cell></row><row><cell>Density of employment Â Formal share</cell><cell>À0.135*</cell><cell>À0.154**</cell><cell>À0.051</cell><cell>À0.104</cell></row><row><cell/><cell>(0.066)</cell><cell>(0.032)</cell><cell>(0.092)</cell><cell>(0.055)</cell></row><row><cell>Population size</cell><cell>0.381**</cell><cell>0.398**</cell><cell>0.222*</cell><cell>0.138**</cell></row><row><cell/><cell>(0.104)</cell><cell>(0.038)</cell><cell>(0.091)</cell><cell>(0.033)</cell></row><row><cell>Industrial diversity</cell><cell>0.368</cell><cell>0.133</cell><cell>0.101</cell><cell>0.194**</cell></row><row><cell/><cell>(0.239)</cell><cell>(0.090)</cell><cell>(0.121)</cell><cell>(0.039)</cell></row><row><cell>Local competition</cell><cell>À0.144*</cell><cell>À0.209**</cell><cell>À0.088</cell><cell>À0.074**</cell></row><row><cell/><cell>0.067</cell><cell>0.031</cell><cell>(0.056)</cell><cell>0.021</cell></row><row><cell>Electricity access</cell><cell>0.475</cell><cell>0.772**</cell><cell>0.438</cell><cell>0.852**</cell></row><row><cell/><cell>(0.286)</cell><cell>(0.112)</cell><cell>(0.235)</cell><cell>(0.084)</cell></row><row><cell>High-skilled labor</cell><cell>0.534</cell><cell>À1.059</cell><cell>À0.250</cell><cell>0.294</cell></row><row><cell/><cell>(1.061)</cell><cell>(0.640)</cell><cell>(1.121)</cell><cell>(0.641)</cell></row><row><cell>Low-skilled labor</cell><cell>0.199</cell><cell>À0.167</cell><cell>0.922*</cell><cell>À0.373**</cell></row><row><cell/><cell>(0.456)</cell><cell>(0.150)</cell><cell>(0.361)</cell><cell>(0.109)</cell></row><row><cell>Spatial lag of productivity</cell><cell>À0.421</cell><cell>0.651**</cell><cell>0.122</cell><cell>0.793**</cell></row><row><cell/><cell>(0.368)</cell><cell>(0.172)</cell><cell>(0.315)</cell><cell>(0.126)</cell></row><row><cell>Instrumental variable</cell><cell/><cell/><cell/><cell/></row><row><cell>Past density of employment</cell><cell>0.471**</cell><cell>0.416**</cell><cell>0.579**</cell><cell>0.409**</cell></row><row><cell/><cell>(0.035)</cell><cell>(0.018)</cell><cell>(0.025)</cell><cell>(0.013)</cell></row><row><cell>Past forest</cell><cell>À0.133</cell><cell>À0.164**</cell><cell>À0.213**</cell><cell>À0.161**</cell></row><row><cell/><cell>(0.082)</cell><cell>(0.038)</cell><cell>(0.054)</cell><cell>(0.026)</cell></row><row><cell>Sargan</cell><cell>0.482</cell><cell>1.929</cell><cell>0.030</cell><cell>0.765</cell></row><row><cell>(p-value)</cell><cell>(0.488)</cell><cell>(0.165)</cell><cell>(0.863)</cell><cell>(0.382)</cell></row><row><cell>No. of observations</cell><cell>281</cell><cell>1558</cell><cell>353</cell><cell>1621</cell></row><row><cell>Notes:</cell><cell/><cell/><cell/><cell/></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="1" xml:id="foot_0"><p>For instance,<ref type="bibr" target="#b49">Lall et al. (2004)</ref> estimate agglomeration economies of formal manufacturing industries in India. Agglomeration economies . 39 Downloaded from https://academic.oup.com/joeg/article/20/1/37/5289506 by Universidad Autónoma de Madrid user on</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="28" xml:id="foot_1"><p>July 2025   </p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2" xml:id="foot_2"><p>In Cambodia, tax systems for business as of the year 2011 consisted of estimated (simplified) and real regimes. Registered companies report to the tax authority and pay their tax based on the real regime. Because a vast number of small local and family businesses do not properly register with the tax authority, tax officials visit unregistered establishments and calculate taxable income based on the estimated regime. Tax payments are made to the official at the unregistered establishments.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="3" xml:id="foot_3"><p>Recent studies on the identification of agglomeration economies are discussed in<ref type="bibr" target="#b17">Combes and Gobillon (2015)</ref>.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_4"><p>Downloaded from https://academic.oup.com/joeg/article/20/1/37/5289506 by Universidad Autónoma de Madrid user on 28 July 2025</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="5" xml:id="foot_5"><p>For example, employment in similar industries is measured by total workers in manufacturing sector when the dependent variable is regional productivity in manufacturing sector.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="6" xml:id="foot_6"><p><ref type="bibr" target="#b56">Martin et al. (2011)</ref> exploit time-series variation of panel data in France to estimate agglomeration effects in the short run.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="7" xml:id="foot_7"><p>Endogeneity problems in agglomeration economies are discussed in<ref type="bibr" target="#b26">Eberts and McMillen (1999)</ref>,<ref type="bibr" target="#b66">Rosenthal and Strange (2004)</ref>,<ref type="bibr" target="#b14">Cohen and Paul (2009)</ref> and<ref type="bibr" target="#b65">Puga (2010)</ref>.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="8" xml:id="foot_8"><p>Another possible concern is that if unobserved time-specific effects in 2011 might increase regional productivity more strongly in more agglomerated regions, it could happen to produce a positive correlation between productivity and agglomeration in 2011.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="9" xml:id="foot_9"><p>Alternative forms of error terms would have little influence on the means of posterior distributions, but may affect the standard deviations. It is beyond the scope of this article to extend our model for alternative assumptions of the error terms.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="15" xml:id="foot_10"><p>We check that the main results are robust to alternative spatial weight matrix based on geographic distance. These results are reported in Supplementary Appendix D.Agglomeration economies . 55Downloaded from https://academic.oup.com/joeg/article/20/1/37/5289506 by Universidad Autónoma de Madrid user on 28 July 2025</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="16" xml:id="foot_11"><p>The regional variation in total impacts is determined by the structure of the spatial weighting matrix. In general, more accessible communes tend to have larger total impacts whereas less accessible communes have smaller total impacts.</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>We would like to thank <rs type="person">Fumihiko Nishi</rs> and <rs type="person">Souknilanh Keola</rs> for data assistance. For useful comments, we thank <rs type="person">Kentaro Nakajima</rs> and seminar participants at 2014 JEA conference, Kyoto University, 2015 CAED conference, 2017 SEA conference, and 2017 ISEAS workshop. We thank two anonymous referees for their comments to substantially improve our article. All remaining errors are our own.</p></div>
+			</div>
+			<div type="funding">
+<div><head>Funding</head><p>We acknowledge the financial support of <rs type="grantName">JSPS Grant-in-Aid for Young Scientists (B)</rs> Grant Number <rs type="grantNumber">16K17129</rs> and for <rs type="grantName">Scientific Research</rs> (A) <rs type="grantNumber">18H03637</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_5PHTAK5">
+					<idno type="grant-number">16K17129</idno>
+					<orgName type="grant-name">JSPS Grant-in-Aid for Young Scientists (B)</orgName>
+				</org>
+				<org type="funding" xml:id="_BXQyGhQ">
+					<idno type="grant-number">18H03637</idno>
+					<orgName type="grant-name">Scientific Research</orgName>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>where U ; ð Þ is a uniform distribution, and IW ; ð Þ is an inverted Wishart distribution. The prior parameters are denoted by b , B , b , B , min , max , b AE , and B AE . The parameters, min and max , are the minimum and maximum real eigenvalues of W, respectively. We use these values to put a limit on the parameter space of : 2 À1 min ; À1 max À Á If a vector of the eigenvalues of W contains only real values, this restriction ensures jSj &gt; 0. The values of the other prior parameters are assumed as follows: Specifying prior parameters is difficult when no information is available for unknown parameters. Following the standard practice in Bayesian estimation, we choose zero values for the location parameters of the prior distributions for the coefficients. This assumption implies that our prior beliefs for the coefficients are centered on zero. Based on these zero values, we investigate the extent to which the posterior distributions move away from the prior distributions. We set these priors to have large variances to ensure that our prior beliefs for the unknown parameters are non-informative.</p><p>Based on the likelihood and the prior for our model, we draw a posterior inference based on the Markov Chain Monte Carlo (MCMC) method. This method allows us to generate samples from the posteriors and to draw a statistical inference using the simulated samples. Bayesian inference is based on the posterior distributions of unknown parameters. Details of the MCMC sampling are given in Supplementary Appendix B. Additionally, we conduct Monte Carlo simulation to investigate the estimation performance of our model, with details given in Supplementary Appendix B.</p><p>Finally, we highlight the advantage of our approach over the prior approach in estimating a spatial autoregressive model with an endogenous independent variable. <ref type="bibr" target="#b46">Kelejian and Prucha (1998)</ref> propose higher order spatial lags of exogenous independent variables as instruments for the spatial lag of a dependent variable. This method is applied by <ref type="bibr" target="#b4">Artis et al. (2012)</ref> in estimating agglomeration economies. However, <ref type="bibr" target="#b33">Gibbons and Overman (2012)</ref> argue that this approach suffers from estimation problems for identification. Specifically, it is assumed that the higher order spatial lags do not affect the dependent variable directly. If this exclusion restriction is not valid, the instruments are not appropriate. Moreover, these instruments may be weak because of potentially high correlations among the higher order spatial lags. In this case, it leads to a biased estimate for the spatial lag variable. In contrast, our Bayesian approach does not exploit higher order spatial lags as instruments, thereby relaxing the identification assumptions used in the prior method. By controlling for potential spatial autocorrelation in the dependent variable, we can focus on the identification of the endogenous independent variable in the spatial autoregressive model. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">Data description</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplementary material</head><p>Supplementary data for this article are available at Journal of Economic Geography online.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Value added of cluster membership for micro enterprises of the handloom sector in Ethiopia</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ali</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Peerlings</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">World Development</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="363" to="374"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Cities, matching and the productivity gains of agglomeration</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Andersson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Burgess</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">I</forename><surname>Lane</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Urban Economics</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="112" to="128"/>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Urbanization and growth: setting the context</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Annez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Buckely</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Urbanization and Growth</title>
+		<editor>
+			<persName><forename type="first">M</forename><surname>Spence</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Annez</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Buckely</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Washington, DC</addrLine></address></meeting>
+		<imprint>
+			<publisher>The Commission on Growth and Development</publisher>
+			<date type="published" when="2009">2009</date>
+			<biblScope unit="page" from="1" to="45"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Nature and determinants of the linkages between informal and formal sector enterprises in Nigeria</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">C</forename><surname>Arimah</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">African Development Review</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="114" to="144"/>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Agglomeration economies and regional intangible assets: an empirical investigation</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Artis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Miguelez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Moreno</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Economic Geography</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="1167" to="1189"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Trust building in Tanzania's informal credit transactions</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S D</forename><surname>Bagachwa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Enterprise Clusters and Networks in Developing Countries</title>
+		<editor>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Dijk</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">R</forename><surname>Van Rabellotti</surname></persName>
+		</editor>
+		<meeting><address><addrLine>London</addrLine></address></meeting>
+		<imprint>
+			<publisher>Frank Cass</publisher>
+			<date type="published" when="1997">1997</date>
+			<biblScope unit="page" from="155" to="168"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title level="m" type="main">Hierarchical Modeling and Analysis for Spatial Data</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Banerjee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">P</forename><surname>Carlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Gelfand</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+			<publisher>Chapman and Hall/CRC</publisher>
+			<pubPlace>Boca Raton</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Regional labor productivity in the Netherlands: evidence of agglomeration and congestion effects</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Broersma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Oosterhaven</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Regional Science</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="page" from="483" to="511"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Sectoral agglomeration economies in a panel of European regions</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bru¨lhart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">A</forename><surname>Mathys</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Regional Science and Urban Economics</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page" from="348" to="362"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Informal-formal linkages and informal enterprise performance in urban west Africa</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Bo¨hme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Thiele</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The European Journal of Development Research</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="473" to="489"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title level="m" type="main">Clustering, productivity and spillover effects: evidence from Cambodia</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Chhair</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Newman</surname></persName>
+		</author>
+		<idno>No. WP2014-065</idno>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">UNU-WIDER Working Paper</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<title level="m" type="main">Ethnic networks and technical knowledge learning in industrial clusters</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">C Y</forename><surname>Chung</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="volume">37</biblScope>
+		</imprint>
+		<respStmt>
+			<orgName>JICA Research Institute</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">Working Paper</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Agglomeration effects in Europe</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ciccone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">European Economic Review</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="page" from="213" to="227"/>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Productivity and the density of economic activity</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ciccone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Hall</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">American Economic Review</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="page" from="54" to="70"/>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Agglomeration, productivity and regional growth: production theory approaches</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J M</forename><surname>Paul</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Handbook of Regional Growth and Development Theories</title>
+		<editor>
+			<persName><forename type="first">R</forename><surname>Capello</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">P</forename><surname>Nijkamp</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Cheltenham</addrLine></address></meeting>
+		<imprint>
+			<publisher>Edward Elgar</publisher>
+			<date type="published" when="2009">2009</date>
+			<biblScope unit="page" from="101" to="117"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Spatial wage disparities: sorting matters!</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Combes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Duranton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Gobillon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Urban Economics</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page" from="723" to="742"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Estimating agglomeration economies with history, geology, and worker effects</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Combes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Duranton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Gobillon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Roux</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Agglomeration Economics</title>
+		<editor>
+			<persName><forename type="first">E</forename><forename type="middle">L</forename><surname>Glaeser</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Chicago</addrLine></address></meeting>
+		<imprint>
+			<publisher>The University of Chicago Press</publisher>
+			<date type="published" when="2010">2010</date>
+			<biblScope unit="page" from="15" to="66"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">The empirics of agglomeration economies</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Combes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Gobillon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Handbook of Regional and Urban Economics</title>
+		<editor>
+			<persName><forename type="first">G</forename><surname>Duranton</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">J</forename><forename type="middle">V</forename><surname>Henderson</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">W</forename><forename type="middle">C</forename><surname>Strange</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Amsterdam</addrLine></address></meeting>
+		<imprint>
+			<publisher>Elsevier</publisher>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="247" to="348"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Where is the economics in spatial econometrics</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Corrado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Fingleton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Regional Science</title>
+		<imprint>
+			<biblScope unit="volume">52</biblScope>
+			<biblScope unit="page" from="210" to="239"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Trust, interlinking transactions and credit in the industrial district</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Dei Ottati</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cambridge Journal of Economics</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="529" to="546"/>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Value-added taxes, chain effects, and informality</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">´</forename><surname>De Paula</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Scheinkman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">American Economic Journal: Macroeconomics</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="195" to="221"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Clusters and networks as sources of co-operation and technology diffusion for small enterprises in developing countries</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Van Dijk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rabellotti</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Enterprise Clusters and Networks in Developing Countries</title>
+		<editor>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Van Dijk</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">R</forename><surname>Rabellotti</surname></persName>
+		</editor>
+		<meeting><address><addrLine>London</addrLine></address></meeting>
+		<imprint>
+			<publisher>Frank Cass</publisher>
+			<date type="published" when="1997">1997</date>
+			<biblScope unit="page" from="1" to="10"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Bayesian limited information analysis of the simultaneous equations model</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Dre`ze</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Econometrica</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page" from="1045" to="1075"/>
+			<date type="published" when="1976">1976</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Are cities engines of growth and prosperity for developing countries?</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Duranton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Urbanization and Growth</title>
+		<editor>
+			<persName><forename type="first">M</forename><surname>Spence</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Annez</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Buckely</surname></persName>
+		</editor>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+			<biblScope unit="page" from="67" to="113"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<title level="m" type="main">The Commission on Growth and Development</title>
+		<imprint>
+			<pubPlace>Washington, DC</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Micro-foundations of urban agglomeration economies</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Duranton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Puga</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Handbook of Regional and Urban Economics</title>
+		<editor>
+			<persName><forename type="first">J</forename><forename type="middle">V</forename><surname>Henderson</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">J.-F</forename><surname>Thisse</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Amsterdam</addrLine></address></meeting>
+		<imprint>
+			<publisher>Elsevier</publisher>
+			<date type="published" when="2004">2004</date>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="2063" to="2117"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Agglomeration economies and urban public infrastructure</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Eberts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Mcmillen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Handbook of Regional and Urban Economics</title>
+		<editor>
+			<persName><forename type="first">P</forename><surname>Cheshire</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Mills</surname></persName>
+		</editor>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>North-Holland</publisher>
+			<date type="published" when="1999">1999</date>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="1455" to="1495"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Growth, technological interdependence and spatial externalities: theory and evidence</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ertur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Koch</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Applied Econometrics</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="1033" to="1062"/>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Does formality improve micro-firm performance? evidence from the Brazilian SIMPLES program</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Fajnzylber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">F</forename><surname>Maloney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">V</forename><surname>Montes-Rojas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Development Economics</title>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="262" to="276"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Segmented labor market models in developing countries</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Fields</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The Oxford Handbook of Philosophy of Economics</title>
+		<editor>
+			<persName><forename type="first">H</forename><forename type="middle">D</forename><surname>Kincaid</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">D</forename><surname>Ross</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Oxford</addrLine></address></meeting>
+		<imprint>
+			<publisher>Oxford University Press</publisher>
+			<date type="published" when="2009">2009</date>
+			<biblScope unit="page" from="476" to="510"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fujita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Krugman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Venables</surname></persName>
+		</author>
+		<title level="m">The Spatial Economy: Cities, Regions, and International Trade</title>
+		<meeting><address><addrLine>Cambridge</addrLine></address></meeting>
+		<imprint>
+			<publisher>MIT Press</publisher>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Does geographical agglomeration foster economic growth? And who gains and loses from it?</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fujita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Thisse</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Japanese Economic Review</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="121" to="145"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<monogr>
+		<title level="m" type="main">Agglomeration economies in the presence of an informal sector The Colombian Case</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Garcı´a</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+		<respStmt>
+			<orgName>Mimeo, Department of Economics and CEDE, Universidad de los Andes</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Mostly pointless spatial econometrics?</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Gibbons</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">G</forename><surname>Overman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Regional Science</title>
+		<imprint>
+			<biblScope unit="volume">52</biblScope>
+			<biblScope unit="page" from="172" to="191"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Cities and skills</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">L</forename><surname>Glaeser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Mare´</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Labor Economics</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="316" to="342"/>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Urban economics for the developing world: an introduction</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">L</forename><surname>Glaeser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">V</forename><surname>Henderson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Urban Economics</title>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="page" from="1" to="5"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Identifying urbanization and localisation externalities in manufacturing and service industries</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Graham</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Papers in Regional Science</title>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+			<biblScope unit="page" from="63" to="84"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">The messy reality of agglomeration economies in urban informality: evidence from Nairobi's handicraft industry</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Harris</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">World Development</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="102" to="113"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Informal income opportunities and urban employment in Ghana</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hart</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Modern African Studies</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="61" to="89"/>
+			<date type="published" when="1973">1973</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Bayesian estimation of spatial externalities using regional production function: the case of China and Japan</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Hashiguchi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Economics Bulletin</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="751" to="764"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Agglomeration and firm-level productivity: a Bayesian spatial approach</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Hashiguchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Tanaka</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Papers in Regional Science</title>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="95" to="114"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Cluster-based industrial development in contemporary developing countries and modern Japanese economic history</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hashino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Otsuka</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Japanese and International Economies</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="19" to="32"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Marshall's scale economies</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">V</forename><surname>Henderson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Urban Economics</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="page" from="1" to="28"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Cambodia: rapid growth with weak institutions</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Menon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Asian Economic Policy Review</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="46" to="65"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<monogr>
+		<title level="m">World Economic Outlook 2012</title>
+		<meeting><address><addrLine>Washington, DC; Tokyo</addrLine></address></meeting>
+		<imprint>
+			<publisher>JETRO</publisher>
+			<date type="published" when="2009">2012. 2009</date>
+		</imprint>
+	</monogr>
+	<note>ASEAN Logistics Network Map. 2nd edn</note>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Agglomeration, productivity, and spatial spillovers across Chinese cities</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ke</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Annals of Regional Science</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="page" from="157" to="179"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">A generalized spatial two-stage least squares procedure for estimating a spatial autoregressive model with autoregressive disturbances</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">H</forename><surname>Kelejian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">R</forename><surname>Prucha</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Real Estate Finance and Economics</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="99" to="121"/>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Knowledge diffusion and modernization of rural industrial clusters: a papermanufacturing village in northern Vietnam</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kimura</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">World Development</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="2105" to="2118"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Urbanization, agglomeration, and coagglomeration of service industries</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kolko</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Agglomeration Economics</title>
+		<editor>
+			<persName><forename type="first">E</forename><forename type="middle">L</forename><surname>Glaeser</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Chicago</addrLine></address></meeting>
+		<imprint>
+			<publisher>The University of Chicago Press</publisher>
+			<date type="published" when="2010">2010</date>
+			<biblScope unit="page" from="151" to="180"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Agglomeration economies and productivity in Indian industry</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">V</forename><surname>Lall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Shalizi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Deichmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Development Economies</title>
+		<imprint>
+			<biblScope unit="volume">73</biblScope>
+			<biblScope unit="page" from="643" to="673"/>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Informality and development</title>
+		<author>
+			<persName><forename type="first">La</forename><surname>Porta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Shleifer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Economic Perspectives</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="109" to="126"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<monogr>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lesage</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">K</forename><surname>Pace</surname></persName>
+		</author>
+		<title level="m">Introduction to Spatial Econometrics</title>
+		<meeting><address><addrLine>Boca Raton</addrLine></address></meeting>
+		<imprint>
+			<publisher>CRC press</publisher>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Economic development with unlimited suppliers of labor</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Lewis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Manchester School of Economic and Social Studies</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="139" to="191"/>
+			<date type="published" when="1954">1954</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Small enterprises in ASEAN: need for regional co-operation</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">P</forename><surname>Lim</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ASEAN Economic Bulletin</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="89" to="114"/>
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">A reassessment of Kenya's rural and urban informal sector</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Livingstone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">World Development</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="651" to="670"/>
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Does informality imply segmentation in urban labor markets? Evidence from sectoral transitions in Mexico</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">F</forename><surname>Maloney</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The World Bank Economic Review</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="275" to="302"/>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Spatial concentration and plant-level productivity in France</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mayer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Mayneris</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Urban Economics</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="page" from="182" to="195"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><surname>Marshall</surname></persName>
+		</author>
+		<title level="m">Principles of Economics</title>
+		<meeting><address><addrLine>London</addrLine></address></meeting>
+		<imprint>
+			<publisher>Macmillan</publisher>
+			<date type="published" when="1890">1890</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">The urban informal sector</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Mazumbar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">World Development</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="655" to="679"/>
+			<date type="published" when="1976">1976</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Informal employment in a growing and globalizing low-income country</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Mccaig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Pavcnik</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">American Economic Review: Papers &amp; Proceedings</title>
+		<imprint>
+			<biblScope unit="volume">105</biblScope>
+			<biblScope unit="page" from="545" to="550"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Does it pay firms to register for taxes? The impact of formality on firm profitability</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Mckenzie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Seynabou Sakho</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Development Economics</title>
+		<imprint>
+			<biblScope unit="volume">91</biblScope>
+			<biblScope unit="page" from="5" to="24"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Wages and informality in developing countries</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Meghir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Narita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-M</forename><surname>Robin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">American Economic Review</title>
+		<imprint>
+			<biblScope unit="volume">105</biblScope>
+			<biblScope unit="page" from="1509" to="1546"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">A meta-analysis of estimates of urban agglomeration economies</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Melo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Graham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Noland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Regional Science and Urban Economics</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="332" to="342"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">Critical commentary. Informality in space: understanding agglomeration economies during economic development</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Moreno-Monroy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Urban Studies</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="page" from="2019" to="2030"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<monogr>
+		<title level="m" type="main">Cities in the developing world</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">G</forename><surname>Overman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Venables</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2005">2005</date>
+			<biblScope unit="volume">695</biblScope>
+		</imprint>
+		<respStmt>
+			<orgName>Centre for Economic Performance, London School of Economics</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">CEP Discussion Paper</note>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">The magnitude and causes of agglomeration economies</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Puga</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Regional Science</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page" from="203" to="219"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">Evidence on the nature and sources of agglomeration economies</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rosenthal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">C</forename><surname>Strange</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="s">Handbook of Regional and Urban Economics</title>
+		<editor>
+			<persName><forename type="first">J</forename><forename type="middle">V</forename><surname>Henderson</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Thisse</surname></persName>
+		</editor>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="2119" to="2171"/>
+			<date type="published" when="2004">2004</date>
+			<publisher>Elsevier</publisher>
+			<pubPlace>Amsterdam</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<monogr>
+		<title level="m" type="main">Bayesian Statistics and Marketing</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Rossi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Allenby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mcculloch</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2005">2005</date>
+			<publisher>John Wiley and Sons Lts</publisher>
+			<pubPlace>West Sussex</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">Finance and cluster-based industrial development in China</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ruan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Economic Development and Cultural Change</title>
+		<imprint>
+			<biblScope unit="volume">58</biblScope>
+			<biblScope unit="page" from="143" to="164"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title level="a" type="main">Linkage formation by small firms: the case of a rural cluster in Indonesia</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Sato</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bulletin of Indonesian Economic Studies</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="137" to="166"/>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<monogr>
+		<title level="m" type="main">Shadow economies all over the world: new estimates for 162 countries from 1999 to</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Buehn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Montenegro</surname></persName>
+		</author>
+		<idno>No. 5356</idno>
+		<imprint>
+			<date type="published" when="2007">2010. 2007</date>
+			<publisher>World Bank</publisher>
+		</imprint>
+	</monogr>
+	<note type="report_type">Policy Research Working Paper</note>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<monogr>
+		<author>
+			<persName><forename type="first">F</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Enste</surname></persName>
+		</author>
+		<title level="m">The Shadow Economy: An International Survey</title>
+		<meeting><address><addrLine>Cambridge</addrLine></address></meeting>
+		<imprint>
+			<publisher>Cambridge University Press</publisher>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<analytic>
+		<title level="a" type="main">Collective efficiency: growth path for small-scale industry</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Schmitz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Development Studies</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="529" to="566"/>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<analytic>
+		<title level="a" type="main">Clustering and industrialization: introduction</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Schmitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Nadvi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">World Development</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="1503" to="1514"/>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<analytic>
+		<title level="a" type="main">Bayesian measures of model complexity and fit</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Spiegelhalter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">G</forename><surname>Best</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">P</forename><surname>Carlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Van Der Linde</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Royal Statistical Society: Series B (Statistical Methodology)</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="page" from="583" to="639"/>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b75">
+	<analytic>
+		<title level="a" type="main">Spatial and sectoral composition effects of agglomeration economies in the Netherlands</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">G</forename><surname>Van Oort</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Papers in Regional Science</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="page" from="5" to="30"/>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b76">
+	<analytic>
+		<title level="a" type="main">Trade networks for flexible rural industry</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Weijland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Flexible Specialization: The Dynamics of Small-scale Industries in the South</title>
+		<editor>
+			<persName><forename type="first">P</forename><forename type="middle">O</forename><surname>Pedersen</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">A</forename><surname>Sverrisson</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Van Dijk</surname></persName>
+		</editor>
+		<meeting><address><addrLine>London</addrLine></address></meeting>
+		<imprint>
+			<publisher>Intermediate Technology Publications</publisher>
+			<date type="published" when="1994">1994</date>
+			<biblScope unit="page" from="97" to="110"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b77">
+	<analytic>
+		<title level="a" type="main">Regional inequality and the process of national development</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Williamson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Economic Development and Cultural Change</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="3" to="45"/>
+			<date type="published" when="1965">1965</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b78">
+	<monogr>
+		<title level="m">Doing Business 2014: Understanding Regulations for Small and Medium-size Enterprises</title>
+		<meeting><address><addrLine>Washington, DC</addrLine></address></meeting>
+		<imprint>
+			<publisher>World Bank</publisher>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b79">
+	<analytic>
+		<title level="a" type="main">Industrial districts and regional clusters</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zeitlin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The Oxford Handbook of Business History</title>
+		<editor>
+			<persName><forename type="first">G</forename><surname>Jones</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">J</forename><surname>Zeitlin</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Oxford</addrLine></address></meeting>
+		<imprint>
+			<publisher>Oxford University Press</publisher>
+			<date type="published" when="2008">2008</date>
+			<biblScope unit="page" from="219" to="243"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

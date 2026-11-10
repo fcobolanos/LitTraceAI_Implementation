@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Challenges to Assess Accessibility in Higher Education Websites: A Comparative Study of Latin America Universities</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Institute of Electrical and Electronics Engineers (IEEE)</publisher>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2018">2018</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Patricia</forename><surname>Acosta-Vargas</surname></persName>
+							<idno type="ORCID">0000-0003-4210-0117</idno>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Intelligent and Interactive Systems Lab</orgName>
+								<orgName type="institution">Universidad de Las Américas</orgName>
+								<address>
+									<postCode>EC170125</postCode>
+									<settlement>Quito</settlement>
+									<country key="EC">Ecuador</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tania</forename><surname>Acosta</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Departamento de Electrónica</orgName>
+								<orgName type="department" key="dep2">Telecomunicaciones y Redes de Información</orgName>
+								<orgName type="institution">Escuela Politécnica Nacional</orgName>
+								<address>
+									<postCode>170517</postCode>
+									<settlement>Quito</settlement>
+									<country key="EC">Ecuador</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sergio</forename><surname>Lujan-Mora</surname></persName>
+						</author>
+						<title level="a" type="main">Challenges to Assess Accessibility in Higher Education Websites: A Comparative Study of Latin America Universities</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">IEEE Access</title>
+						<title level="j" type="abbrev">IEEE Access</title>
+						<idno type="eISSN">2169-3536</idno>
+						<imprint>
+							<publisher>Institute of Electrical and Electronics Engineers (IEEE)</publisher>
+							<biblScope unit="volume">6</biblScope>
+							<biblScope unit="page" from="36500" to="36508"/>
+							<date type="published" when="2018"/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">FE6E6011088551F1D0BB5A34665F53F3</idno>
+					<idno type="DOI">10.1109/access.2018.2848978</idno>
+					<note type="submission">Received March 30, 2018, accepted May 10, 2018, date of publication June 19, 2018, date of current version July 25, 2018.</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-11T13:37+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Accessibility</term>
+					<term>assess</term>
+					<term>evaluation</term>
+					<term>higher education</term>
+					<term>Latin America</term>
+					<term>university</term>
+					<term>Website</term>
+					<term>Web accessibility</term>
+					<term>Web Content Accessibility Guidelines (WCAG) 2.0</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The Web has revolutionized our daily lives, becoming a prime source of information, knowledge, inquiry, and provision of services in various areas. It is possible to obtain information easily from any institution through the Internet; in fact, the first impression of an organization an individual perceives is almost always based on its official website. Services related to education are increasing worldwide; therefore, it is important that users, regardless of their disabilities, be able to access these websites in an effective manner. However, the homepages of universities in Latin America still do not meet web accessibility criteria. This paper describes the problems of web accessibility identified in 348 main university websites in Latin America according to their rankings on Webometrics. The results show that the universities' websites have frequent problems related to the lack of alternative image text. It was found that the university websites included in the present study violate Web accessibility requirements based on the Web Content Accessibility Guidelines 2.0. The many problems identified concerning Website accessibility indicate that it is necessary to strengthen Web accessibility policies in each country and apply better directives in this area to make Websites more inclusive.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>Internet technology now affects many aspects of life, including education <ref type="bibr" target="#b0">[1]</ref>. The number of educational websites has increased significantly in recent years, and this growth is largely based on internet availability. According to the Global Digital report, the number of internet users in 2018 reached 4.021 billion, with year-on-year growth of 7% <ref type="bibr" target="#b1">[2]</ref>. The World Health Organization estimated that 15% of the population, approximately one billion people worldwide, live with a disability.</p><p>Millions of higher-education websites exist, each with its own style and form. However, not all websites comply with the guidelines proposed by the World Wide Web Consortium (W3C). The W3C provides guidelines to websites with an effective function that specify the optimal access features that should be embedded in their structure. A well designed and developed website should comply with the guidelines established by the W3C. The standards reflected by the guidelines help to increase the number of potential website visits.</p><p>Web accessibility refers to web design features that allow people to perceive, understand, operate, and support technologically on the websites, the W3C developed the Web Content Accessibility Guidelines (WCAG) 2.0. The goal of the WCAG is to guide web designers and developers toward the elimination of accessibility errors <ref type="bibr" target="#b2">[3]</ref>.</p><p>Web Accessibility seeks to guarantee satisfactory web access for the maximum number of people regardless of their physical limitations, their environment, or the devices they use to access information.</p><p>An accessible web page does not present barriers that hinder access, regardless of the user's physical condition or situation. Web pages that comply with accessibility guidelines are more likely to display correctly on any device and any browser. Although acquiring the necessary skills to construct accessible web pages requires an initial investment, after that knowledge has been acquired, the costs of developing and maintaining accessible web pages is lower compared to those of less accessible sites <ref type="bibr" target="#b3">[4]</ref>.</p><p>An accessible website contains pages that comply with WCAG 2.0; compliance results in a smaller web page and a faster web server loading time. It should be noted that when separating the content from the presentation of a web page using Cascading Style Sheets (CSS), it is possible to reduce both the size of the web pages and the loading time <ref type="bibr" target="#b4">[5]</ref>.</p><p>WCAG 2.0 covers a wide range of recommendations that make Web content more accessible. Thus, following these guidelines makes content accessible to a wider range of people with disabilities, including blindness and low vision, deafness and hearing loss, learning disabilities, cognitive limitations, limited movement, speech disabilities, photosensitivity and combinations of these. Following these guidelines can also often make web content more usable for users in general <ref type="bibr" target="#b2">[3]</ref>.</p><p>Thus, website accessibility benefits people with disabilities, older adults whose skills have been reduced due to age, and all users. In addition, web accessibility helps in search engine optimization <ref type="bibr" target="#b5">[6]</ref>.</p><p>When search engines encounter barriers to web page access, they will be unable to index the content satisfactorily; consequently, the search engines will assign them a reduced ranking and they will be less likely to appear in search requests <ref type="bibr" target="#b6">[7]</ref>. Furthermore, when people experience difficulties with the website navigation, they are less likely to return.</p><p>In universities, websites have become a means of connecting students, teachers, university councils and administrative staff; as mentioned, the website must feature accessibility.</p><p>Users' first impressions of an educational website are highly important; therefore, this study is based on three main activities: research on the accessibility problems of various Latin American university websites, website accessibility assessment according to WCAG 2.0, an analysis of the relations between the websites and university classifications.</p><p>This study investigated whether the websites of Latin America universities meet the current web accessibility guidelines and whether these results are related to university ranking. To assess website accessibility, automatic tools were applied to verify compliance with the WCAG 2.0 <ref type="bibr" target="#b7">[8]</ref> guidelines.</p><p>The purpose of this study was to measure the accessibility of university websites in Latin America by measuring their compliance with the WCAG 2.0 guidelines in relation to the ranking list published by Webometrics, which rankings Latin America universities among the highest in the world. It is essential and reasonable to compare website accessibility based on the location of the universities. Depending on the laws of each individual country, some universities are more aware of the importance of website accessibility for people with disabilities.</p><p>According to the sample size calculated on the Netquest site, this study evaluated the existence of portal contents for 348 universities in Latin America. The sample was taken using a simple random probabilistic method from Webometrics,<ref type="foot" target="#foot_1">foot_1</ref> which ranks Latin America universities, based on the July 2017 edition of the report published by Webometrics.</p><p>This target audience for this study is people interested in knowing about website accessibility status (based on WCAG 2.0) of universities in Latin America, as well as the importance of using these guidelines. This study provides recommendations that will allow future web designers and developers to improve website accessibility. The application of web guidelines and accessibility contributes to educational institutions by fostering the development of more inclusive websites.</p><p>The remainder of this document is structured as follows. Section II presents the background and related work and discusses web accessibility. Section III presents the method and materials, including sample selection. Section IV describes the evidence and the analysis of the results obtained when evaluating the websites. Finally, Section V presents conclusions and future work. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. BACKGROUND AND RELATED WORK</head><p>Figure <ref type="figure" target="#fig_0">1</ref> shows the use of the internet in the studied countries through a graph obtained from the International Telecommunications Union. <ref type="foot" target="#foot_2">2</ref> The information in Figure <ref type="figure" target="#fig_0">1</ref> is for 2015 and shows the countries with the highest levels of internet use: Aruba with 88.66%, followed by Puerto Rico with 79.47%, Argentina with 69.4%, Trinidad and Tobago with 69.2%, Dominica with 67.6%, Antigua Barbuda with 65.2%, Uruguay with 64.6%, Chile with 64.29%, and Venezuela with 61.87%.</p><p>The graph of internet use can be seen online to expand the detail of the use of the internet. <ref type="foot" target="#foot_3">3</ref> According to this study and several others, web accessibility evaluations have been carried out on educational sites in Latin America. In this section, the previous research works are described in chronological order according to their publication year.</p><p>A 2012 study indicated that Brazilian university websites presented problems related to the use of forms; the main problem was observed when using tables that did not follow WCAG 2.0 recommendations. These forms caused website access difficulties even for people without disabilities <ref type="bibr" target="#b8">[9]</ref>.</p><p>In 2015, an article reported information concerning an access analysis of several Colombian online government websites. The study revealed a lack of knowledge of the rules and accessibility guidelines of the WCAG by a group of people in charge of the design and publication of web content <ref type="bibr" target="#b9">[10]</ref>.</p><p>A 2016 study described an evaluation of the academic service portal of the Universidad Técnica Particular de Loja. The results presented a web accessibility diagnosis for some subdomains of the university web portal and reported the absence of compliance guidelines needed to reach the compliance level AA normalized by WCAG 2.0 <ref type="bibr" target="#b10">[11]</ref>.</p><p>In our previous works <ref type="bibr" target="#b7">[8]</ref>, <ref type="bibr" target="#b11">[12]</ref>, <ref type="bibr" target="#b12">[13]</ref> we evaluated the websites of some universities that did not reach an acceptable level of compliance. Moreover, these studies suggested that future research would apply methods to implement WCAG 2.0 and help develop more inclusive websites.</p><p>In 2017, research in the Brazilian educational sector was conducted to verify whether federal universities comply with e-government guidelines when developing web portals. The results indicated that the main web portals of the federal universities did not apply accessibility guidelines in their designs <ref type="bibr" target="#b13">[14]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. WEB ACCESSIBILITY</head><p>The creator of the W3C, Tim Berners-Lee, shared the following statement: ''The power of the Web lies in its universality, access for all regardless of disability is an essential aspect'' <ref type="bibr" target="#b0">[1]</ref>.</p><p>The WCAG 2.0 defines how to make web content accessible to all people, regardless of their disability condition. Accessibility is associated with a wide range of learning disabilities, including visual, auditory, physical, speech, cognitive, language, and neurological <ref type="bibr" target="#b2">[3]</ref>.</p><p>These guidelines cover many disabilities, but not all. Furthermore, the guidelines describe how to make web content that is more useful for seniors with changing abilities due to age; they also improve usability for users in general.</p><p>The WCAG 1.0 encouraged the development of WCAG 2.0. The current version as of this writing, WCAG 2.1, is based on WCAG 2.0. For long term use, WCAG 2.0 includes the concept of extensions, thus allowing it to be augmented to adapt to a variety of web technologies.</p><p>The WCAG 2.1 was developed through the W3C in cooperation with individuals and organizations around the world with the aim of providing shared guidelines for accessing web content that meet the needs of individuals, organizations, and governments internationally <ref type="bibr" target="#b14">[15]</ref>.</p><p>Web accessibility depends not only on accessible content but also on accessible web browsers and other user agents. Authoring tools also play an important role in web accessibility. For a site to be accessible, <ref type="foot" target="#foot_4">4</ref> it is essential that several web development components interact appropriately; such components include: content, web browsers, media players, assistive technology, users' knowledge, developers, authoring tools and evaluation tools.</p><p>It is also important to consider the User Agent Accessibility Guidelines (UAAG) 2.0 <ref type="bibr" target="#b15">[16]</ref>, which include: browsers, browser extensions, media players, readers and other applications that process web content. A user agent that follows UAAG 2.0 will improve accessibility through its own user interface and its ability to communicate with other technologies, including assistive technologies; the software that some people with disabilities use to meet their requirements.</p><p>Presently, the authoring tools consist of software and services that the ''authors'' use to produce web content in static web pages, applications, and on the dynamic web. The Authoring Tool Accessibility Guidelines (ATAG) 2.0 <ref type="bibr" target="#b16">[17]</ref> explains how to make authoring tools accessible to people with disabilities. The purpose of the ATAG is to help authors create more accessible web content as well as to support and promote WCAG.</p><p>However, the ATAG is just one part of a series of accessibility guidelines that also includes the WCAG and the UAAG.</p><p>A new working draft, WCAG 2.1 <ref type="bibr" target="#b14">[15]</ref> has now been published with guidelines that cover a wide range of factors that make web content more accessible.</p><p>WCAG 2.0 is intended mainly as support material for developers, web accessibility evaluators, and others who require guidelines related to web accessibility. It includes 12 guidelines organized into four principles <ref type="bibr" target="#b2">[3]</ref>:</p><p>1) Perceivable: Considers the three main senses needed to perceive web content: sight, hearing, and touch. This principle <ref type="bibr" target="#b2">[3]</ref> has four guidelines: 1.1 provides text alternatives for any content other than text, which can be substituted with other forms people require such as large print, braille, audio, symbols or a simpler language; 1.2 provides alternatives for media as a function of time; 1.3 creates content that can be presented in different ways without losing information or structure; and 1.4 makes it easy for users to see and listen to content, including foreground and background separation.</p><p>2) Operable: Defines various methods for web accessibility such as navigation alternatives and appropriate user interfaces for people with disabilities. The second principle <ref type="bibr" target="#b2">[3]</ref> comprises four guidelines: 2.1 makes all functionality available from a keyboard; 2.2 provides users with sufficient time to read and use content; 2.3 addresses the design of content to prevent inducing seizures; and 2.4 provides ways to help users navigate, find content, and determine where they are in a site.</p><p>3) Understandable: This principle defines the forms of correct interpretation of the content and includes three guidelines: 3.1 discusses makes text content readable and understandable; 3.2 discusses making web pages appear and function predictably; and 3.3 helps users to avoid and correct errors.</p><p>4) Robust: This principle considers compatibility with both current and future technologies. This principle [3], 4.1, is intended to maximize web page compatibility with current and future user agents, including assistive technologies.</p><p>The guidelines include 61 success criteria, organized according to three levels of conformity <ref type="bibr" target="#b2">[3]</ref>:</p><p>Level A: The minimum level, which includes 25 success criteria.</p><p>Level AA: The middle level, in which a website must meet all the criteria for both levels A and AA. It includes 13 additional success criteria.</p><p>Level AAA: The highest level. At the AAA level, a website must comply with all the criteria in levels A, AA and AAA. It includes 23 additional success criteria.</p><p>Although compliance can be achieved only at the established levels, authors are encouraged to report any progress toward meeting the success criteria at any level beyond the level of compliance already achieved <ref type="bibr" target="#b2">[3]</ref>. Meeting AAA-level compliance is not recommended, however; the guidelines form only a general policy for full sites, because it is not possible to satisfy all AAA-level success criteria for some content.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. METHOD AND MATERIALS</head><p>Before beginning the process of evaluating the level of web accessibility of the sites of Latin American universities, the appropriate sample size was calculated. Given that the size of the domain was known and the data are heterogeneous <ref type="bibr" target="#b17">[18]</ref>, the following equation was applied <ref type="bibr" target="#b0">(1)</ref>:</p><formula xml:id="formula_0">n = N × Z 2 a × p × q d 2 × (N -1) + Z 2 a × p × q<label>(1)</label></formula><p>N = population size: 3,680; Z = level of confidence: 95%; p = probability of success, or expected proportion: 50%; q = failure probability: 50%, and d = precision, maximum error allowed in terms of proportion: 5%. The results showed that 348 websites should be evaluated. This value can also be calculated with the Netquest 5 online calculator. The samples were extracted using a random sample probabilistic method in which samples were chosen randomly. In this study, university websites from 26 different countries were selected randomly using the RANDBETWEEN (bottom, top) 6 function of Microsoft Excel. This function was applied to a value range from 1 to 3,680. In this study, 348 websites were selected based on the calculated appropriate sample size. Additionally, the following aspects were considered: the ranking of universities of Latin America, WCAG 2.0 verification, and the use of 5 <ref type="url" target="https://www.netquest.com/es/panel/calculadora-muestras/calculadoras-">https://www.netquest.com/es/panel/calculadora-muestras/calculadoras-</ref>estadisticas 6 <ref type="url" target="https://support.office.com/en-us/article/randbetween-function-">https://support.office.com/en-us/article/randbetween-function-</ref>4cc7f0d1-87dc-4eb7-987f-a469ab381685 the WAVE tool. The details of the evaluated websites can be obtained from the repository of the University of Alicante. <ref type="foot" target="#foot_5">7</ref></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. RANKING OF UNIVERSITIES OF LATIN AMERICA</head><p>Educational institution website rankings add important value to the institutions. Many different rankings of education websites exist and have different purposes <ref type="bibr" target="#b18">[19]</ref>.</p><p>Webometrics is the largest academic classification of Higher Education Institutions. The objective of the Webometric ranking is to promote an academic web presence in university websites along with open access initiatives, which can increase the transfer of scientific and cultural knowledge to the entire society. Table contains the order number, the name of the country and the number of websites of the evaluated Latin America universities. As observed, a total of 348 sites were evaluated. Brazil has 154 websites, followed by Mexico with 73 and Colombia with 32. Note that these university websites were selected at random using simple random sampling.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. WCAG VERIFICATION</head><p>The evaluation of educational websites was carried out in accordance with the WCAG 2.0 and Website Accessibility Conformance Evaluation Methodology (WCAG-EM), which comprises a set of documents from the Web Accessibility Initiative based on a methodology for evaluating access to a website <ref type="bibr" target="#b19">[20]</ref>. During the evaluation, tools were used to identify some of the web accessibility problems. Using this approach, 348 Latin American university websites were evaluated; only the sites' main pages were analyzed. Table <ref type="table" target="#tab_1">2</ref> shows assigned identifier and the name of the university for 30 of the 348 evaluated websites. For space reasons, Table <ref type="table" target="#tab_1">2</ref> does not include all the websites analyzed in this study.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. TOOLS FOR THE EVALUATION</head><p>An automatic evaluation tool cannot know whether an alternative text is suitable for an image. The tool can determine whether alternative text is associated with an image, but it cannot judge whether that text is correct without interpreting the content of the image. Several tools are available that assist in website evaluations <ref type="bibr" target="#b20">[21]</ref>; therefore, we first investigated which tools are used most often to verify the successful compliance with WCAG 2.0, and then investigated which are the easiest to use and the most appropriate.</p><p>Although such tools are invaluable aids in evaluating website accessibility, readers should understand that these tools are far from being infallible and have limitations that can result in false positives.</p><p>Among the tools available for analyzing web accessibility are AccessMonitor, AChecker, eXaminator, TAW, Tenon, WAVE and Web Accessibility Checker.</p><p>Tool evaluation depends on the experience of the evaluators as well as the personal judgments of the reviewers.</p><p>The conformity levels tested are levels A, AA, and AAA <ref type="bibr" target="#b21">[22]</ref>. In this study, a scale from 1-100 was used, where 1 is the lowest value and 100 is the highest.</p><p>Table <ref type="table" target="#tab_2">3</ref> contains the identifier number, tool name, level (A, AA, or AAA) and percentage score level. Tools such as and Web Accessibility Checker reached 66.7%, whereas AccessMonitor, eXaminator, TAW, Tenon, and WAVE<ref type="foot" target="#foot_6">foot_6</ref> reached 100.0%. Additionally, the response time, the type of license, and results reported were analyzed. When the tools had a Chrome plugin, an additional percentage was obtained through that data.</p><p>Table <ref type="table">4</ref> contains the identifier number, loading time, license, plugin Chrome, percent additional score, and percent average between the percent level score of Table <ref type="table" target="#tab_2">3</ref> and the additional score percentage of Table <ref type="table">4</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>TABLE 4. Selection of the tool with additional parameters.</head><p>To calculate the loading time required by a web page, each tool was against the same website. For times between 1 and 25 seconds, 100 points were awarded, which is considered excellent. From 26 to 50 seconds, 75 points are awarded, which means the site is very good. A time of 51 or more seconds garners 50 points indicating that it is good. When proof was not possible, 25 points were awarded, which means that the site is normal. The web page loading time depends somewhat on user judgment and the quality of internet service for each request.</p><p>To analyze the license types, 100 points were assigned to the free tools, 50 points to those that require an account, and 25 points for commercial or paid tools.</p><p>Regarding the reports, 100 points were assigned to tools that generate visual reports in comma-separated value (CSV) format, 75 points to tools that provide visual reports and 50 points to tools that provide web or textual reports. Finally, 100 points were assigned to tools that include a Chrome plugin, and 50 those that do not have that feature.</p><p>The analysis showed that the tool with the highest percentage is WAVE (90.6%), followed by AccessMonitor, eXaminator and Tenon (87.5% each), TAW (84.4%), AChecker (77.1%), and Web Accessibility Checker (61.5%).</p><p>Thus, the WAVE tool was applied in this research because it provides a complete automatic analysis. A filter can be applied to the report details to display the complete report or only the portions referring to WCAG 2.0 A, WCAG 2.0 AA or Section 508.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>D. WAVE TOOL</head><p>Tools that analyze website accessibility for compliance with WCAG 2.0 are important for accessibility experts. These tools are able to detect approximately 50% of the success criteria <ref type="bibr" target="#b22">[23]</ref>. However, they do not guarantee that the tool will detect all possible violations of the success criteria, and it is difficult to distinguish the advantages and limitations of the different tools. Figure <ref type="figure" target="#fig_1">2</ref> shows a screenshot of the plugin, which must be added to a Chrome browser. This plugin is quite useful because it makes it possible to view a page with or without styles, analyze the contrast or view a page's heading hierarchy. The tool provides an explanation of each error also in addition to other page features, such as HTML5/ARIA, structural elements, alternative texts, page language definitions, and labels. WAVE is an automatic evaluation tool used by designers and developers to help make websites more accessible and inclusive. This tool is most effective when operated by a user who has web accessibility expertise.</p><p>WAVE was developed as a free community service by Web Accessibility In Mind (WebAIM). Initially launched in 2001, this tool is used to evaluate the accessibility of millions of web pages. WAVE has both an online evaluation service and extensions for Chrome and Firefox browsers.</p><p>The web accessibility process was conducted using the WAVE tool because it has several advantages, as previously listed in Table <ref type="table" target="#tab_1">2</ref>. The implementation of the WAVE tool requires extension 1.0.9 to be installed in the browser; in this study, the WAVE tool was installed on a Chrome, updated to November 17, 2017. It should be noted that no tool used for evaluation purposes guarantees 100% accessibility on a website.</p><p>Table <ref type="table" target="#tab_3">5</ref> contains the assigned identifier, the URL of the university, and its Latin America ranking. For space reasons, only a sample of the total 348 websites are listed. Figure <ref type="figure" target="#fig_2">3</ref> shows a flowchart of the method applied to the university website evaluation process. The process is summarized in four phases.</p><p>Phase 1: Select the sample (the 348 websites calculated by Equation ( <ref type="formula" target="#formula_0">1</ref>)). The data were acquired from the Webometrics <ref type="bibr" target="#b23">[24]</ref> site (the Latin America option). Note that there are 3,680 registered universities according to the July 2017 edition.</p><p>Phase 2: Copy the 3,680 universities to a spreadsheet (Microsoft Excel). To extract the sample, the probabilistic method of simple random sampling was applied.</p><p>Phase 3: Evaluate the main page of the website of each university using the WAVE tool <ref type="bibr" target="#b24">[25]</ref>. In this case, the WAVE plugin (version 1.0.9) was installed on a Chrome browser.  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. ANALYSIS OF RESULTS</head><p>From the results obtained by evaluating 348 home pages, the correlation between the ranking of Latin American universities and the errors was -0.11-a strongly negative correlation. That a website with a good ranking does not necessarily have an accessible website.</p><p>One example is the Pontificia Universidade Católica do Campinas of Brazil, which was ranked 192 but presents a high number of errors (147). This was followed by the University of San Carlos de Guatemala, which was ranked 231 but garnered 242 errors. In third place was the Catholic University of Maule of Chile, which was ranked 282 but presented 78 errors.</p><p>Table <ref type="table" target="#tab_4">6</ref> lists the ID assigned to the university, the university's ranking within Latin America, and the Errors, Alerts, Features, Structural Elements, HTML5 and ARIA, as well as Contrast Errors.</p><p>The errors are related to the success criterion ''1.1.1 Nontext Content'' of Level A, which addresses a lack of alternative text. In most of the websites, this is a frequent error: the sites fail to provide alternative text for images. This error  occurs when no ''alt'' attribute is present in the image tag. Without alternative text, image content will not be available to users who use screen readers or when the image is unavailable. The solution is to add the ''alt'' attribute to each image along with appropriate alternative text that describes the image content. Another common error refers to guideline ''2.4.4 Purpose of the link, in context'' of Level A. This error occurs when images are the only target of a link. Ideally, such links should include an alternative descriptive text. When an image is the target of a link that does not contain alternative text, and the image itself does not provide alternative text, screen readers may be unable to clearly present the content and function that the link performs. This problem can be solved adding appropriate alternative text that presents the content of the image or the function of the link.</p><p>The results from the overall analysis of the 348 university websites showed that the highest error rates corresponded to the Universidad de Ciencias y Humanidades of Peru (3%), the Faculdade Padre Dourado FACPED of Brazil (2.9%), and the Universidad de San Carlos de Guatemala (2.8%). The universities that presented zero errors were the Universidad del Pedregal, the Instituto Latinoamericano de Ciencias y Humanidades from Mexico, the Academia de Policía Walter Mendoza Martínez of Nicaragua, the Faculdade Joaquim Nabuco and the UCP Faculdades do Centro do Paraná Pitanga FATEC Ivaiporã from Brazil.</p><p>Figure <ref type="figure" target="#fig_3">4</ref> shows a map with frequently repeated errors by country. The fewest errors for a country was 5, the highest was 3,728, and the median value was 1,866.5. Based on the number of evaluated sites, the countries with the highest number of errors were Brazil and Mexico.</p><p>When applying descriptive statics to the 348 evaluated university websites corresponding to 26 Latin American countries, a total of 8,638 errors were obtained. The mean number of errors was 332.2, the typical error is 150, the median was 107.5, the minimum 5.0, and the maximum was 3,728.</p><p>A summary grouped by country was generated from the obtained data. Table <ref type="table" target="#tab_5">7</ref> lists the country name, errors and percentage error rate. Brazilian university websites occupy first place with 3,728 errors (43.2%), followed by Mexico, with 1,514 errors (17.5%) and Colombia, with 841 errors (9.7%).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>V. CONCLUSIONS AND FUTURE WORK</head><p>The results obtained by this accessibility evaluation of university websites indicate that no website reached an acceptable accessibility level. The study discovered huge numbers of level ''A'' accessibility violation errors. Although warnings are less severe than errors, reducing the number of warnings results in enhanced web accessibility. Therefore, it is necessary to review the errors that need correcting according to the WCAG 2.0. Tests performed by accessibility experts are important, because they understand how web technology interacts and can contribute reports based on different groups of target users by applying specialized test tools. To complement this study, it is recommended that tests should be performed with multiple users to obtain results related to their specific capabilities and assistive technology. The tools to evaluate web accessibility are no substitute for the involvement of a web accessibility expert; instead, tools should be used as an initial step, but not as the sole assessment. One challenge for web accessibility experts is to combine several methods for website evaluation while also considering other aspects such as possible metrics and heuristics. Another challenge is to strengthen and share the web accessibility policies of each country, as well as apply better laws and encourage practices to make websites more accessible.</p><p>Future works should continue to analyze the evolution of the websites, providing regularly updated rankings and making the results and reports public. It is recommended that the most frequent errors should be analyzed to achieve more inclusive sites that comply with WCAG 2.0. Developers and designers of university websites are encouraged to apply WCAG 2.0 as a point of reference when developing accessible websites. In conclusion, the websites of Latin American universities must make significant efforts to improve their accessibility and build more inclusive websites.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>FIGURE 1 .</head><label>1</label><figDesc>FIGURE 1. Percentages of individuals using the internet in various countries; data obtained from International Telecommunication Union.</figDesc><graphic coords="2,298.68,303.09,238.00,144.44" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>FIGURE 2 .</head><label>2</label><figDesc>FIGURE 2. Screenshot of the WAVE Chrome plugin.</figDesc><graphic coords="6,37.77,424.73,238.00,149.68" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>FIGURE 3 .</head><label>3</label><figDesc>FIGURE 3. Method for evaluating websites.</figDesc><graphic coords="7,37.77,66.06,238.00,306.61" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Phase 4 :</head><label>4</label><figDesc>Present the results including errors, alerts, characteristics, structural elements, the use of HTML5, ARIA and contrast errors returned by the WAVE tool. The data were recorded by the evaluator in a spreadsheet for further analysis.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>FIGURE 4 .</head><label>4</label><figDesc>FIGURE 4. Map with errors by country.</figDesc><graphic coords="7,319.96,392.73,195.45,245.45" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>TABLE 1 .</head><label>1</label><figDesc>Countries and number of websites evaluated.</figDesc><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>TABLE 2 .</head><label>2</label><figDesc>Latin america universities with identifier.</figDesc><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>TABLE 3 .</head><label>3</label><figDesc>Selection of the evaluation tool.</figDesc><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>TABLE 5 .</head><label>5</label><figDesc>Latin America universities websites with the ranking.</figDesc><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>TABLE 6 .</head><label>6</label><figDesc>Results obtained with WAVE.</figDesc><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5"><head>TABLE 7 .</head><label>7</label><figDesc>Results obtained with WAVE tool by country.</figDesc><table/></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>2169-3536 2018 IEEE. Translations and content mining are permitted for academic research only.Personal use is also permitted, but republication/redistribution requires IEEE permission. See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.VOLUME 6, 2018   </p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="1" xml:id="foot_1"><p>http://www.webometrics.info/es/Americas/Latin_America</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2" xml:id="foot_2"><p>http://www.itu.int/net4/itu-d/icteye/</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="3" xml:id="foot_3"><p>http://xurl.es/3pp0u VOLUME 6, 2018</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="4" xml:id="foot_4"><p>https://www.w3.org/WAI/fundamentals/components/ 36502 VOLUME 6, 2018</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="7" xml:id="foot_5"><p>http://hdl.handle.net/10045/74109 VOLUME 6, 2018</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="8" xml:id="foot_6"><p>https://wave.webaim.org/</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_7"><p>VOLUME 6, 2018   </p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="36506" xml:id="foot_8"><p>  VOLUME 6, 2018   </p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENTS</head><p>The authors wish to thank the <rs type="institution">Translation Team at the Centro de Educación Continua of Escuela Politécnica Nacional</rs> for their support in proofreading this manuscript and to <rs type="person">Luis Salvador</rs> for the support in the statistical analysis.</p></div>
+			</div>			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>PATRICIA ACOSTA-VARGAS is currently pursuing the Ph.D. degree in computer science with the University of Alicante. She is also a member of the research group Intelligent and Interactive Systems, Universidad de Las Américas. In recent years, she has been involved in Web accessibility research. She also participates in the telerehabilitation project for the CEDIA network. Her works have been published in the IEEE, ACM, and Springer. Her research interests primarily involve engineering, education, banking, health, social, government, Web accessibility metrics, and heuristics. She is a SENESCYT Certified Researcher and the Vice President of the ACM Quito-Ecuador Chapter. She collaborates as a reviewer of scientific articles for several journals and conferences. She has been a speaker at several conferences. </p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Web accessibility among the countries of the European Union: A comparative study</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Luján-Mora</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Actual Problems Comput. Sci</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="18" to="27"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m" type="main">Global Digital Report</title>
+		<ptr target="https://digitalreport.wearesocial.com/"/>
+		<imprint>
+			<date type="published" when="2018">2018. 2018</date>
+			<publisher>We Are Social and Hootsuite</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<idno>ISO/IEC 40500:2012</idno>
+		<title level="m">Information Technology-W3C Web Content Accessibility Guidelines (WCAG) 2.0</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Enhancement of educational institutions dynamic websites by adding security and accesibility</title>
+		<author>
+			<persName><forename type="first">E.-B</forename><surname>Fgee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Abakar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Elhounie</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 4th Int. Conf. Next Gener. Mobile Appl</title>
+		<meeting>4th Int. Conf. Next Gener. Mobile Appl</meeting>
+		<imprint>
+			<date type="published" when="2010-07">Jul. 2010</date>
+			<biblScope unit="page" from="96" to="101"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">A style sheets based approach for semantic transformation of Web pages</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">V R J S</forename><surname>Prasad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Choppella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Chimalakonda</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Int. Conf. Distrib. Comput. Internet Technol</title>
+		<meeting>Int. Conf. Distrib. Comput. Internet Technol</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">10722</biblScope>
+			<biblScope unit="page" from="240" to="255"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Search engine optimization: A study</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">P</forename><surname>Swati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">V</forename><surname>Pawar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Ajay</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Res. J. Comput. Inf. Technol. Sci</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="10" to="13"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Archiving, ordering, and searching: Search engines, algorithms, databases, and deep mediatization</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Andersen</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/0163443718754652</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Media, Culture Soc</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Toward a combined method for evaluation of Web accessibility</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Acosta-Vargas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Luján-Mora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Acosta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Salvador-Ullauri</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Int. Conf. Inf. Technol. Syst. (ICITS)</title>
+		<meeting>Int. Conf. Inf. Technol. Syst. (ICITS)</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">721</biblScope>
+			<biblScope unit="page" from="602" to="613"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">An assessment of accessibility in contact forms of Brazilian public universities</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Bittar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">B</forename><surname>Faria</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Amaral</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">P</forename><surname>De Mattos Fortes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 7th Iberian Conf. Inf. Syst. Technol</title>
+		<meeting>7th Iberian Conf. Inf. Syst. Technol</meeting>
+		<imprint>
+			<date type="published" when="2012-06">Jun. 2012</date>
+			<biblScope unit="page" from="2421" to="2425"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Web accessibility: Study Web accessibility in public places of the Colombian state</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A R</forename><surname>Herrera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A B</forename><surname>Ricaurte</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Latin Amer. Comput. Conf. (CLEI)</title>
+		<meeting>Latin Amer. Comput. Conf. (CLEI)</meeting>
+		<imprint>
+			<date type="published" when="2015-10">Oct. 2015</date>
+			<biblScope unit="page" from="1" to="7"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Evaluation of the Web accessibility of university Web portal: Case study: Universidad tecnica particular de Loja</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Segarra-Faggioni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Campoverde</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 9th Int. Conf. Edu. Technol. Comput</title>
+		<meeting>9th Int. Conf. Edu. Technol. Comput</meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="203" to="206"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Evaluation of the Web accessibility of higher-education websites</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Acosta-Vargas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Luján-Mora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Salvador-Ullauri</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 15th Int. Conf. Inf. Technol. Based Higher Edu. Training</title>
+		<meeting>15th Int. Conf. Inf. Technol. Based Higher Edu. Training</meeting>
+		<imprint>
+			<date type="published" when="2016-09">Sep. 2016</date>
+			<biblScope unit="page" from="1" to="6"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Evaluación de la accesibilidad de las páginas Web de las universidades ecuatorianas</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Acosta-Vargas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Luján-Mora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Salvador-Ullauri</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Revista Congreso de Ciencia y Tecnología</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="181" to="187"/>
+			<date type="published" when="2016-06">Jun. 2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Strategies and challenges on the accessibility and interoperability of e-government Web portals: A case study on Brazilian federal universities</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D A</forename><surname>Oliveira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Eler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Int. Comput. Softw. Appl. Conf</title>
+		<meeting>Int. Comput. Softw. Appl. Conf</meeting>
+		<imprint>
+			<date type="published" when="2017-07">Jul. 2017</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="737" to="742"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Web Content Accessibility Guidelines (WCAG) 2</title>
+		<ptr target="https://www.w3.org/TR/WCAG21/"/>
+	</analytic>
+	<monogr>
+		<title level="m">World Wide Web Consortium (W3C)</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">User Agent Accessibility Guidelines (UAAG) 2.0</title>
+		<ptr target="https://www.w3.org/WAI/intro/uaag"/>
+	</analytic>
+	<monogr>
+		<title level="m">World Wide Web Consortium (W3C)</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Authoring Tool Accessibility Guidelines (ATAG) 2</title>
+		<ptr target="https://www.w3.org/TR/ATAG20/"/>
+	</analytic>
+	<monogr>
+		<title level="m">World Wide Web Consortium (W3C)</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<title level="m" type="main">The Art of Data Analysis: How to Answer Almost Any Question Using Basic Statistics</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">H</forename><surname>Jarman</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<publisher>Wiley</publisher>
+			<pubPlace>Hoboken, NJ, USA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">A study of website content in webometrics ranking of world university by using similar Web tool</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Suksida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Santiworarak</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 2nd Int. Conf. Signal Image Process</title>
+		<meeting>2nd Int. Conf. Signal Image ess</meeting>
+		<imprint>
+			<date type="published" when="2017-08">Aug. 2017</date>
+			<biblScope unit="page" from="480" to="483"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<monogr>
+		<ptr target="https://www.w3.org/TR/WCAG-EM/"/>
+		<title level="m">Website Accessibility Conformance Evaluation Methodology (WCAG-EM) 1.0</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>World Wide Web Consortium (W3C)</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Measuring the accessability based on Web content accessibility guidelines</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Wille</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">R</forename><surname>Dumke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wille</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Softw. Meas. Int. Conf. Softw. Process Product Meas</title>
+		<meeting>Softw. Meas. Int. Conf. Softw. ess Product Meas</meeting>
+		<imprint>
+			<date type="published" when="2016-10">Oct. 2016</date>
+			<biblScope unit="page" from="164" to="169"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Benchmarking Web accessibility evaluation tools</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vigo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Conway</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 10th Int. Cross-Disciplinary Conf. Web Accessibility</title>
+		<meeting>10th Int. Cross-Disciplinary Conf. Web Accessibility</meeting>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="1" to="10"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">A practitioner's approach to using WCAG evaluation tools</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tollefsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ausland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 6th Int. Conf. Inf. Commun. Technol. Accessibility</title>
+		<meeting>6th Int. Conf. Inf. Commun. Technol. Accessibility</meeting>
+		<imprint>
+			<date type="published" when="2017-12">Dec. 2017</date>
+			<biblScope unit="page" from="1" to="5"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Webometric ranking of world universities: Introduction, methodology, and future developments</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">F</forename><surname>Aguillo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Ortega</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fernández</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Higher Edu. Eur</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="issue">2-3</biblScope>
+			<biblScope unit="page" from="233" to="244"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Accessibility analysis of North Eastern India Region websites for persons with disabilities</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ismail</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Kuppusamy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Int. Conf. Accessibility Digit. World</title>
+		<meeting>Int. Conf. Accessibility Digit. World</meeting>
+		<imprint>
+			<date type="published" when="2016-12">Dec. 2016</date>
+			<biblScope unit="page" from="145" to="148"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

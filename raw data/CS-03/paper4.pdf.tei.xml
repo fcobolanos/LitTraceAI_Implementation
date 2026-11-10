@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Exploring the relationships between web accessibility, web traffic, and university rankings: a case study of Jordanian universities</title>
+				<funder ref="#_q2P9vAb">
+					<orgName type="full">University of Lodz/Poland</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Deanship of Research at Zarqa University/Jordan</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">University of Baghdad/Iraq</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Inderscience Publishers</publisher>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2018">2018</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Mohammed</forename><forename type="middle">N</forename><surname>Al-Kabi</surname></persName>
+							<email>mohammednaji@yahoo.com</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Computer Science Department</orgName>
+								<orgName type="department" key="dep2">IT Faculty</orgName>
+								<orgName type="institution">Zarqa University</orgName>
+								<address>
+									<postBox>P.O. Box 132222</postBox>
+									<postCode>13110</postCode>
+									<settlement>Zarqa</settlement>
+									<country key="JO">Jordan</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Computer Science Department</orgName>
+								<orgName type="department" key="dep2">Faculty of IT</orgName>
+								<orgName type="department" key="dep3">worked at Yarmouk</orgName>
+								<orgName type="institution" key="instit1">Zarqa University</orgName>
+								<orgName type="institution" key="instit2">joining Zarqa University</orgName>
+								<orgName type="institution" key="instit3">University in Jordan</orgName>
+								<orgName type="institution" key="instit4">Nahrain University for 11 years</orgName>
+								<orgName type="institution" key="instit5">Mustanserya University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Exploring the relationships between web accessibility, web traffic, and university rankings: a case study of Jordanian universities</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">International Journal of High Performance Computing and Networking</title>
+						<title level="j" type="abbrev">IJHPCN</title>
+						<idno type="ISSN">1740-0562</idno>
+						<idno type="eISSN">1740-0570</idno>
+						<imprint>
+							<publisher>Inderscience Publishers</publisher>
+							<biblScope unit="volume">12</biblScope>
+							<biblScope unit="issue">3</biblScope>
+							<biblScope unit="page">235</biblScope>
+							<date type="published" when="2018"/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">0B9FAF05CF06910B202ECD0E2B149CC9</idno>
+					<idno type="DOI">10.1504/ijhpcn.2018.094955</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-11T13:37+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>university websites</term>
+					<term>accessibility guidelines WCAG 1.0 and WCAG 2.0</term>
+					<term>web accessibility</term>
+					<term>web traffic</term>
+					<term>website popularity</term>
+					<term>university rankings</term>
+					<term>automated evaluation</term>
+					<term>Jordan</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Most statistics state that disabled people constitute approximately 20% of the world population; therefore, webmasters should consider this part of the world population when they design and implement their websites by following the web content accessibility guidelines. This paper aims to explore the relationships between web accessibility, web traffic (web), and university rankings using the metrics of 27 Jordanian university websites as a case study. Objective evaluations on the web accessibility, web traffic (website popularity), and university rankings of 27 Jordanian university websites are conducted using a number of online tools. An extensive analysis of the tool outputs is presented, and the relationships of these tool outputs are explored. This study represents a longitudinal overview of the accessibility of Jordanian university websites and re-explores the different relationships between web accessibility, web traffic, and university rankings, as well as the differences between the accessibility of private and public Jordanian universities. This paper explores the relationships between three parameters: accessibility, web traffic, and university rankings. Therefore, its scope is larger than earlier publications.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">Introduction</head><p>The World Wide Web (WWW) has witnessed the development of many new technologies to present information since its onset. The concept of WWW is different from the concept of cloud computing, where the services in cloud computing include providing shared computing resources across the internet to different machines <ref type="bibr" target="#b3">(Do and Hussain, 2013)</ref>. The scope of this study does not include any requirements validation of cloud systems <ref type="bibr" target="#b16">(Moscato, 2015)</ref>. The evolution of the WWW should involve providing web accessibility to disabled people. In addition to adopting web content accessibility guidelines (WCAG) in their websites, therefore, webmasters should ensure that their websites could accommodate new devices (smartphones, tablets, and computers regardless of their screen size) to benefit disabled internet users who use their websites. These websites are becoming more complex; hence, their compliance with WCAG is becoming more difficult. The first version of WCAG (WCAG 1.0) was released in 1999 and consists of 14 guidelines; each guideline is subdivided into checkpoints. The total number of these checkpoints is 65, and each checkpoint has three priority levels (Priority 1, Level A conformance; Priority 2, Level AA conformance; and Priority 3, Level AAA conformance). The second version of WCAG (WCAG 2.0) was released in 2008, and it consists of 12 guidelines and success criteria organised around four principles. Each success criterion describes specifically what must be achieved to conform to the guideline to which it belongs. The total number of success criteria in this version is 61. Websites that comply with these necessary guidelines ensure an accessible web environment. Manual evaluation is thought to be the most suitable choice to assess accessibility, but it is no more a feasible choice because the size of many websites is becoming unmanageable. In this approach, a specialised team is recruited to conduct a manual evaluation. Funds need to be allocated to the team, and waiting for their results takes time. Automatic accessibility evaluation tools are the most desirable choice because many of these tools are free and do not need a long waiting period for the results. These automatic online accessibility evaluation tools can help to correct accessibility errors. They also widely differ in their capabilities. These errors are different from those faults of different software systems <ref type="bibr" target="#b17">(Munawar and Ward, 2011)</ref>. However, many checkpoints can be manually tested only; hence, using these tools will not guarantee web accessibility. Evaluations with disabled internet users should be conducted to identify specific problems. Webmasters who plan to build accessible websites should use these evaluation tools during the web development life cycle.</p><p>WebAIM's web accessibility versatile evaluator (WAVE) (<ref type="url" target="http://wave.webaim.org/">http://wave.webaim.org/</ref>) uses an application program interface and is one of the most satisfactory free online tools for testing whether web pages are accessible to blind people. The WAVE tool was originally developed and sponsored by the Temple University Institute on Disabilities in Pennsylvania. The WAVE tool analyses the web page under consideration automatically and embeds icons and indicators. The WAVE tool also generates graphical and readable output for visually capable evaluators. WAVE enables web developers to identify most accessibility problems (accessibility violations) on their web pages. Red icons indicate accessibility errors, yellow icons indicate alerts or possible accessibility error, green icons indicate features, blue icons indicate structural or semantic elements, and purple icons indicate the use of HTML 5 structural elements or ARIA roles, states, or properties. Black icons indicate colour contrast errors according to WCAG guidelines. The WAVE tool is a quick and efficient way to identify many accessibility problems and features of the websites, and is thus used in the present study. WebAIM's WAVE accessibility reporting page does not provide its evaluation report in terms of 'pass' or 'fail'. Two additional free online tools are used to assess accessibility: AccessMonitor (<ref type="url" target="http://www.acessibilidade.gov.pt/accessmonitor/">http://www.acessibilidade.gov.pt/accessmonitor/</ref>) and the European Internet Inclusion Initiative (EIII) Page Checker (<ref type="url" target="http://checkers.eiii.eu/">http://checkers.eiii.eu/</ref>). Accessible websites enable normal and disabled people to visit them; consequently, the number of visitors (web traffic/website popularity) will increase, which may have a positive effect on the rank of university websites.</p><p>The higher education sector plays an essential role in building a generation of thinkers in different fields of science, technology, and humanities. Therefore, many countries, including developing countries, realise the role that science can play in driving economic development. National governments should invest in their science base to secure economic prosperity even in a period of economic turbulence. Hence, many national governments have presented a number of reforms in education and invested in infrastructure and projects designed to create knowledgebased economies. Education reforms take place when governments recognise that technology and innovation are key elements to achieve long-term economic and social development. Thus, expenditure on research and development is increased significantly by governments that have realised the significance of this type of investment in the past few years. In most cases, increased investment in research and development leads to increased university rankings. A number of magazines, universities, newspapers, websites, and governments conduct the ranking assessment of different higher education establishments worldwide. Therefore, many global rankings of colleges and universities exist; these rankings are different because of the difference in the algorithms that were used for ranking. In the present study, Jordan is selected because it lies in the middle of the list of Arab countries by population (Wikipedia 2016). In addition, according to <ref type="bibr" target="#b4">Elgohary (2008)</ref>, Jordanian universities constitute 40% of the top 10 Arab universities. To identify the ranks of 27 Jordanian universities, the present study is based on the Webometrics Ranking of World Universities published by Cybermetrics Lab because it is the only comprehensive university ranking that includes the rank of the 27 Jordanian universities.</p><p>Some specialists define web traffic as the number of visitors to a website; others define it as the amount of data sent and received by internet users to a website, excluding the traffic generated by web crawlers. Generally, the number of visitors to a website is not distributed equally on its web pages. Hence, the web traffic to each website is monitored by the website owner to identify popular web pages and links. Many free tools can be used to monitor website traffic, such as Google Analytics and Alexa.com. Alexa.com is used in this study to identify the ranks of 27 Jordanian university websites on the national and world levels; the national rank is used to identify its relationships to accessibility and university rankings.</p><p>This paper aims to explore the homepages of 27 Jordanian websites to determine their accessibility barriers (accessibility violations) and rank these websites according to their web traffic, web accessibility scores, and university rankings.</p><p>Websites that comply with WCAG are called accessible websites to people with disabilities. This study also aims to rediscover whether any relationship exists between accessibility, web traffic, and university rankings. Moreover, this study tests different hypotheses about the relationships between accessibility, web traffic, and university rankings. Although prior studies such as <ref type="bibr" target="#b12">Lilly et al. (1999</ref><ref type="bibr" target="#b19">), Schmetzke (2001)</ref> and <ref type="bibr" target="#b10">Kane et al. (2007)</ref> show no significant correlation between the ranks of the universities and their accessibilities, we conduct this study to rediscover these relationships, and found no significant correlations between the ranks of the universities and their accessibilities. Kendall's tau and Spearman's (rho) rank correlation coefficients are used to determine the relationships between accessibility, web traffic, and university rankings. The scope of this paper is larger than scope or earlier studies, wince it explores the relationships between three parameters: accessibility, web traffic, and university rankings.</p><p>The remaining parts of this paper are organised as follows: Section 2 presents a summary of a number of studies related to exploring the relationships between web accessibility, web traffic, and university rankings. Section 3 presents the methodology adopted in this study. Section 4 discusses the statistical methods. Section 5 presents the conclusions and future plans to improve this study.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2">Literature review</head><p>The relationship between accessibility and popularity of websites is presented by a number of studies, one of which is conducted by <ref type="bibr" target="#b12">Lilly et al. (1999)</ref>. Those authors include the library home web pages of Yahoo!'s list of the '100 Most Wired Colleges' in their study; they also use Bobby tool to analyse the accessibility of the web pages' understudy. The Bobby tool identifies 40 library homepages as accessible, and the study concludes that no relationship exists between accessibility and popularity. Our new study concludes that a negative relationship is present between accessibility and web traffic. In addition, Schmetzke (2001) uses the US News and World Report to determine the library home web pages of the top 24 schools of library and information science in the U.S. He discovered that 4 out of the 24 library websites are 100% accessible and that no relationship exists between accessibility and popularity. <ref type="bibr" target="#b8">Hackett et al. (2004)</ref> use the Internet Archive's Wayback Machine to select a random sample of websites from 1997 to 2002. Their sample consists of 240 websites that are distributed equally within those six years. They aim to study the effects of technology on accessibility, and they conclude that the adoption of new technologies in web pages increase their complexities, thereby increasing accessibility barriers.</p><p>The accessibilities of university websites are studied by many authors because these institutions should offer knowledge indiscriminately to all people whether they are disabled or not. One of these studies is conducted by <ref type="bibr" target="#b10">Kane et al. (2007)</ref>, which included a multi-method analysis of the homepages of the top 100 universities in the world; <ref type="bibr" target="#b10">Kane et al. (2007)</ref> consider the homepage as a representative of each university's website, which is a debatable issue. These homepages are analysed for their compliance with accessibility standards, choice of language, image accessibility, text-only content, and quality of web accessibility statements. The effects of language, geographic location, public funding status, and university ranking on university's level of web accessibility are also studied in their study. They conclude that a significant geographical variation exists in the website accessibility of these 100 universities in addition to the accessibility errors; many of those websites lack accessibility policies or documentation. Few homepages approach full accessibility, specifically those in English-speaking countries, such as the USA, UK, Canada, and Australia. The accessibility of the homepage of each public Portuguese university is examined by <ref type="bibr" target="#b5">Espadinha et al. (2011)</ref>; they used two recommended online tools, namely eXaminator and HERA, by the Portuguese government to measure the conformance of the websites under study with WCAG checkpoints and detect errors. They conclude that only 12.5% of these websites are accessible. <ref type="bibr" target="#b1">Comeaux et al. (2007)</ref> investigate the websites of 56 American Library Association-accredited library schools. They use manual and automatic evaluation of these websites. Bobby 3.1.1 tool is used to evaluate the accessibilities of these sites automatically. Their results indicate an improvement in accessibility, but the used tool could not detect any Bobby-detectable errors in 50%-60% of the 56 websites under study. They conclude that Canadian websites are more accessible than US websites, and a relationship exists between popularity and accessibility. They also test the accessibility of each of the 56 websites of North American academic libraries <ref type="bibr" target="#b2">(Comeaux et al., 2013)</ref>. Furthermore, they test the relationship between table-and CSS-based designs and accessibility, and conclude that a larger sample should be used to determine the effect of these designs on accessibility.</p><p>Two studies by <ref type="bibr">Lopes and Carriço (2010)</ref> and <ref type="bibr">Lopes et al. (2010)</ref> show high variability on the accessibility level of different web pages, and the low percentage of these web pages gains high accessibility levels. Furthermore, these two studies conclude that a correlation exists between accessibility and complexity. <ref type="bibr" target="#b11">Kaur et al. (2014)</ref> investigate the accessibilities of bank websites in India and find that all bank websites in India have accessibility barriers; their accessibility evaluation reveals no difference among the (private and public) bank websites in India. They also discover a positive correlation between complexity and importance, and a negative significant correlation between complexity and popularity. In addition, they conclude that no significant relation exists between accessibility from one side and complexity, importance, and popularity from the other side. <ref type="bibr" target="#b0">Buenadicha et al. (2001)</ref> propose a new web assessment index (WAI); their index is based on four key quality factors (accessibility, speed, navigability, and website content) that are essential to determine the quality of a website. They use their index to evaluate the websites of all Spanish universities and determine each of their score (based on a total of 100 points). <ref type="bibr" target="#b0">Buenadicha et al. (2001)</ref> present a high correlation between site popularity and university size (number of students). A similar study by <ref type="bibr" target="#b7">Gonzalez et al. (2004)</ref> proposes the WAI, which is based on the same four key factors presented by <ref type="bibr" target="#b0">Buenadicha et al. (2001)</ref>; these authors show a high correlation value between site popularity and firm size. Furthermore, <ref type="bibr" target="#b21">Zeng (2004)</ref> concludes that a significant relationship exists between WAB score and Alexa traffic ranking in his Ph.D. thesis; however, no statistically significant relationship is observed between WAB and PageRank scores.</p><p>Typically, the empirical analysis of the relationship between website ranking and accessibility score involves a bivariate correlation analysis; such analysis is conducted by <ref type="bibr" target="#b9">Kamoun et al. (2014)</ref> using 21 websites that are affiliated with the Dubai e-government. They conclude that a weak correlation exists between e-government website ranking and their web accessibility scores.</p><p>The relationship between accessibility and complexity is also explored by <ref type="bibr" target="#b8">Hackett et al. (2004)</ref>; they discover that governmental websites remain accessible and that using new technologies within web pages lead to an increased complexity, thereby increasing the number of accessibility barriers.</p><p>Many studies explore the correlation between the accessibility scores of (URLs/websites) and other metrics, such as web rank and complexity. <ref type="bibr" target="#b6">Freire et al. (2008)</ref> study the correlation between different web accessibility metrics and also present a good survey of recent progress in this area of study.</p><p>Accessibility is considered a subset of usability by some experts in this field, whereas others consider usability a subset of accessibility. Therefore, a number of studies were conducted to show the relation between accessibility and usability. <ref type="bibr" target="#b18">Petrie et al. (2007)</ref> show an overlap in the problems that face both disabled and non-disabled people; however, they fail to find any relationship between the ratings of the participants, researchers, and usability guidelines regardless of whether they are disabled or not. They conclude that accessibility problems are not a complete subset of usability problems and that usability problems are not a complete subset of accessibility problems. <ref type="bibr" target="#b20">Sullivan et al. (2000)</ref> also conclude a weak correlation between content accessibility and overall usability.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3">Methodology</head><p>This section is divided into three subsections. The first subsection presents the selection of websites used in this study, the second subsection shows the measurements and tools used in this study, and the third subsection shows the statistical methods adopted in this research.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1">Selection of websites</head><p>First, a sample of websites is collected as a case study. The websites of all 27 accredited universities from the Jordanian Higher Education Accreditation Commission (<ref type="url" target="http://www.heac.org.jo/">http://www.heac.org.jo/</ref>) are selected for this study because of our extensive experience as a faculty member in some of these universities.</p><p>Accreditation means implicitly improving the quality of education to all people in the society regardless of whether they are disabled or not. Therefore, universities should consider accessibility and try to offer accessible websites to their visitors. Currently, accredited universities focus on their ranks on the national and international levels, and conduct high-quality research to improve their ranks. Supposedly, accessible websites attract more visitors relative to inaccessible ones. Hence, accessibility, web traffic, and university rankings have to be correlated with one another. Therefore, this study explores the relationships between accessibility and web traffic, accessibility and university rankings, and web traffic and university rankings.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2">Evaluation of web accessibility, web traffic, and university rankings</head><p>A number of free online tools are used in this study. The first tool is called WAVE and is used to identify errors (WCAG Violations), alerts, features, structural elements, HTML 5, ARIA, and contrast errors. The second and third tools are AccessMonitor and EIII, which are used to evaluate accessibility. Alexa.com is the fourth tool used to measure the web traffic of different web pages. Webometrics ranking of world universities is used to identify the university rankings of the 27 accredited Jordanian universities under study.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3">Statistical methods</head><p>The non-parametric statistical analysis is used to analyse the collected data about 27 Jordanian universities. This study uses Kendall's tau-b and Spearman's rho rank correlations to determine the degree of concordance between two columns of ranked data. The coefficients of these two correlations will decrease as the number of inversions in the two ranks increases. The coefficient range of these two correlations is between -1.0 and 1.0. Generally, Kendall's tau_b obtains better estimations (probabilities) on population parameters relative to Spearman's rho correlation, specifically for a small sample size. Spearman's rho correlation obtains more accurate results than Kendall's tau-b in the case of large discrepancies between two columns of ranked data.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4">Experiments and results</head><p>WebAIM The values presented in Table <ref type="table" target="#tab_1">2</ref> represent the results of two free online accessibility tools: AccessMonitor (<ref type="url" target="http://www.acessibilidade.gov.pt/accessmonitor/">http://www.acessibilidade.gov.pt/accessmonitor/</ref>) and the EIII (<ref type="url" target="http://checkers.eiii.eu/">http://checkers.eiii.eu/</ref>). AccessMonitor is a Portuguese free online tool that is used to evaluate the accessibility of different URLs. A scale of 1-10 is used by AccessMonitor tool, where 10 represents the optimum (fully accessible URL), and 0 represents the worst (inaccessible URL). All the AccessMonitor (<ref type="url" target="http://www.acessibilidade.gov.pt/accessmonitor/">http://www.acessibilidade.gov.pt/accessmonitor/</ref>) results are verified; the results are stable and do not fluctuate within the same session as in the EIII Page Checker. Therefore, Table <ref type="table" target="#tab_1">2</ref> should be sorted in descending order based on one of the first four columns. Alexa.com is an online analytical tool that collects data about browsing behaviour to 30 million websites using its toolbar; these data form the basis for Alexa's web traffic reporting. The rank of each website within Alexa.com depends mainly on two important factors: number of visitors to this site and the number of web pages they visited within the site under consideration. The popularity of each of the 27 Jordanian university websites is listed in    <ref type="table">3</ref>, third metric presented in Table <ref type="table" target="#tab_3">5</ref>. SPSS Kendall's tau_b correlation coefficients of these 18 metrics show a significant (positive/negative) agreement between 36 pairs. Table <ref type="table">7</ref> shows only the significant concordant pairs ordered in descending order. The top 9 concordances presented in Table <ref type="table">7</ref> are between metrics of the same tool, but afterward, you can witness positive agreements between Alexa and Webometrics. Furthermore, Table <ref type="table">7</ref> presents agreements between (AccessMonitor-1.0 and EIII-Score-2.0), (AccessMonitor-2.0 and EIII-Score-2.0), (WAVE's HTML5 Rank and AccessMonitor-1.0), and (WAVE Errors Rank and EIII-Score-2.0). H 1 A difference exists between the ranks of private and public AccessMonitor index scores (WCAG 1.0).</p><p>The statistical analysis using SPSS shows that the null hypothesis (H 0 ) should be accepted because the Mann-Whitney U test obtains 0.178, which is not statistically significant at ( = 0.05).</p><p>Second, the H 0 (null) and H 1 (alternative) hypotheses of AccessMonitor index score (WCAG 1.0) should be defined.</p><p>H 0 No difference exists between the ranks of private and public AccessMonitor index scores (WCAG 2.0).</p><p>H 1 A difference exists between the ranks of private and public AccessMonitor index scores (WCAG 2.0).</p><p>The statistical analysis using SPSS shows that the null hypothesis (H 0 should be accepted because the Mann-Whitney U test obtains 0.195, which is not statistically significant at ( = 0.05).</p><p>Third, H 0 (null) and H 1 (alternative) hypotheses of the EIII score (WCAG 2.0) should be defined.</p><p>H 0 No difference exists between the ranks of private and public EIII scores (WCAG 2.0).</p><p>H 1 A difference exists between the ranks of private and public EIII scores (WCAG 2.0).</p><p>The statistical analysis using SPSS shows that the null hypothesis (H 0 ) should be accepted because the Mann-Whitney U test obtains 0.379, which is not statistically significant at ( = 0.05). This study uses a number of free online tools to assess the accessibility of Jordanian university websites against W3C's WCAG standard. Alexa.com. Subsequently, this study aims to rediscover the relationships between accessibility, web traffic, and university rankings. A fairly strong positive correlation is observed between different accessibility metrics, whereas a fairly weak negative correlation is observed between one of the accessibility metrics and Alexa Ranks; a fairly strong positive correlation is also observed between Alexa Ranks and Webometrics university rankings. Finally, this study explores the difference between the accessibility of public and private Jordanian universities; the statistical analysis using SPSS Mann-Whitney U test shows no difference between the accessibility of private and public Jordanian universities. Future work will explore the use of more metrics and a larger number of universities to assess the relationships between them.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1</head><label>1</label><figDesc>'s WAVE tool (http://wave.webaim.org/) failed to process the homepages of Al Isra Private University in Amman and Jadara University on August 28, 2015, due to a shutdown in their web servers, but this tool processed the homepages of the 25 other Jordanian university websites and obtained the results presented in Table1. The results of the WAVE tool related to the homepages of Jordanian universities are presented in Table1and sorted in ascending Bayt University: 74. One may deduce from Table1that the homepage of American University of Madaba website is more accessible than the 24 other homepages of Jordanian universities because it has the fewest errors and alerts. Some may also argue that the results of the WAVE tool clearly show that the homepage of American University of Madaba Website lacks the features, structural elements, and HTML 5/ARIA tags used by the 24 other homepages of Jordanian universities; in such case, judgments should consider these features, which is an appropriate approach. Web accessibility tests check compliance with WCAG. WebAIM's WAVE tool does not show whether the web page understudy achieves a 'pass' or 'fail' on the accessibility test; therefore, the sum of errors and alerts is the most desirable indicator to show compliance with accessibility guidelines. Table1shows the rank of each university in the list on the basis of the sum of errors, alerts, and contrast errors in their homepages and not in the entire website. Therefore, Table1values are sorted in ascending order according to the sum of three values (error, alert, and contrast error numbers). The highlighted values in Table1represent either a maximum or a minimum value within a column. The minimum, maximum, and an average number of universities are below average (better half) of each of the eight columns of errors and alerts; they are presented at the bottom of Table1. Summary of WAVE tool results ranked according to the sum of errors, alerts, and contrast errors (August 28, 2015 and March 1, 2016) Summary of WAVE tool results ranked according to the sum of errors, alerts, and contrast errors(August 28, 2015 and March 1, 2016) (continued)    </figDesc><table><row><cell cols="5">order based on their sum of all errors and alerts (web</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell cols="5">accessibility violations) as follows: American University of</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell cols="5">Madaba: 4; Yarmouk University: 13; Jordan University of</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell cols="5">Science and Technology: 24; Al Hussein bin Talal</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell cols="5">University: 34; Amman Arab University: 60; Mutah</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell cols="5">University: 64; Arab Academy for Banking and Financial</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell cols="5">Sciences: 65; University of Jordan: 72; Ajloun National</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell cols="4">University: 74; and Al Al-Table 1</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>#</cell><cell>University</cell><cell>name</cell><cell>University URL</cell><cell>Errors</cell><cell>Alerts</cell><cell>Features</cell><cell>Structural</cell><cell>elements</cell><cell>HTML 5</cell><cell>and ARIA</cell><cell>Contrast</cell><cell>errors</cell><cell>Sum of errors,</cell><cell>alerts, and</cell><cell>contrast errors</cell><cell>Sum of features,</cell><cell>structural</cell><cell>elements, and</cell><cell>HTML 5/ARIA</cell></row><row><cell cols="3">1 American</cell><cell>http://aum.edu.jo/</cell><cell>3</cell><cell>1</cell><cell>0</cell><cell>0</cell><cell/><cell>0</cell><cell/><cell>0</cell><cell/><cell/><cell>4</cell><cell/><cell/><cell>0</cell><cell/><cell/></row><row><cell cols="3">University of</cell><cell/><cell>3</cell><cell>1</cell><cell>0</cell><cell>0</cell><cell/><cell>0</cell><cell/><cell>0</cell><cell/><cell/><cell>0</cell><cell/><cell/><cell>0</cell><cell/><cell/></row><row><cell cols="2">Madaba</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell cols="2">2 Yarmouk</cell><cell/><cell>http://www.yu.edu.jo/</cell><cell>3</cell><cell>8</cell><cell>24</cell><cell cols="2">76</cell><cell>0</cell><cell/><cell>2</cell><cell/><cell/><cell>13</cell><cell/><cell/><cell cols="2">100</cell><cell/></row><row><cell cols="3">University</cell><cell/><cell>6</cell><cell>10</cell><cell>38</cell><cell cols="2">82</cell><cell>0</cell><cell/><cell>2</cell><cell/><cell/><cell>18</cell><cell/><cell/><cell cols="2">120</cell><cell/></row><row><cell cols="2">3 Jordan</cell><cell/><cell>http://www.just.edu.jo/</cell><cell>1</cell><cell>9</cell><cell>11</cell><cell cols="2">22</cell><cell>0</cell><cell/><cell cols="2">14</cell><cell/><cell>24</cell><cell/><cell/><cell cols="2">33</cell><cell/></row><row><cell cols="3">University of</cell><cell/><cell>?</cell><cell>?</cell><cell>?</cell><cell>?</cell><cell/><cell>?</cell><cell/><cell>?</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell cols="3">Science and</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell cols="3">Technology</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell cols="3">4 Al Hussein bin</cell><cell>http://www.ahu.edu.jo/</cell><cell>15</cell><cell>2</cell><cell>19</cell><cell cols="2">27</cell><cell>1</cell><cell/><cell cols="2">17</cell><cell/><cell>34</cell><cell/><cell/><cell cols="2">47</cell><cell/></row><row><cell cols="3">Talal University</cell><cell/><cell>21</cell><cell>3</cell><cell>21</cell><cell cols="2">29</cell><cell cols="2">11</cell><cell cols="2">16</cell><cell/><cell>40</cell><cell/><cell/><cell cols="2">61</cell><cell/></row><row><cell cols="3">5 Amman Arab</cell><cell>http://www.aau.edu.jo/</cell><cell>11</cell><cell>19</cell><cell>15</cell><cell cols="2">32</cell><cell>9</cell><cell/><cell cols="2">30</cell><cell/><cell>60</cell><cell/><cell/><cell cols="2">56</cell><cell/></row><row><cell cols="3">University</cell><cell/><cell>?</cell><cell>?</cell><cell>?</cell><cell>?</cell><cell/><cell>?</cell><cell/><cell>?</cell><cell/><cell/><cell>?</cell><cell/><cell/><cell>?</cell><cell/><cell/></row><row><cell>6 Mutah</cell><cell/><cell/><cell>http://www.mutah.edu.jo/</cell><cell>8</cell><cell>46</cell><cell>31</cell><cell cols="2">41</cell><cell>0</cell><cell/><cell cols="2">10</cell><cell/><cell>64</cell><cell/><cell/><cell cols="2">72</cell><cell/></row><row><cell cols="3">University</cell><cell/><cell>8</cell><cell>65</cell><cell>40</cell><cell cols="2">48</cell><cell>2</cell><cell/><cell>2</cell><cell/><cell/><cell>75</cell><cell/><cell/><cell cols="2">90</cell><cell/></row><row><cell cols="3">7 Arab Academy</cell><cell>http://www.aabfs.org/</cell><cell>34</cell><cell>24</cell><cell>9</cell><cell cols="2">29</cell><cell>0</cell><cell/><cell>7</cell><cell/><cell/><cell>65</cell><cell/><cell/><cell cols="2">38</cell><cell/></row><row><cell cols="3">for Banking and</cell><cell/><cell>?</cell><cell>?</cell><cell>?</cell><cell>?</cell><cell/><cell>?</cell><cell/><cell>?</cell><cell/><cell/><cell>?</cell><cell/><cell/><cell/><cell/><cell/></row><row><cell cols="2">Financial</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell cols="2">Sciences</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell cols="3">8 University of</cell><cell>http://www.ju.edu.jo/</cell><cell>32</cell><cell>23</cell><cell>39</cell><cell cols="2">127</cell><cell>0</cell><cell/><cell cols="2">17</cell><cell/><cell>72</cell><cell/><cell/><cell cols="2">166</cell><cell/></row><row><cell cols="2">Jordan</cell><cell/><cell/><cell>?</cell><cell>?</cell><cell>?</cell><cell>?</cell><cell/><cell>?</cell><cell/><cell>?</cell><cell/><cell/><cell>?</cell><cell/><cell/><cell>?</cell><cell/><cell/></row><row><cell cols="3">9 Ajloun National</cell><cell>http://www.anu.edu.jo/</cell><cell>16</cell><cell>10</cell><cell>27</cell><cell cols="2">23</cell><cell>4</cell><cell/><cell cols="2">48</cell><cell/><cell>74</cell><cell/><cell/><cell cols="2">54</cell><cell/></row><row><cell cols="3">University</cell><cell/><cell>?</cell><cell>?</cell><cell>?</cell><cell>?</cell><cell/><cell>?</cell><cell/><cell>?</cell><cell/><cell/><cell>?</cell><cell/><cell/><cell>?</cell><cell/><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2</head><label>2</label><figDesc>Summary of WAVE tool results ranked according to the sum of errors, alerts, and contrast errors (August 28, 2015 and March 1, 2016) (continued) /www.hu.edu.jo/) is 61, the number of applied tests is 801, and the number of barriers is 158; moreover, a rerun of the same tool to evaluate the same URL after 2 hours obtains 60, and the number of applied tests is 581 and 153. The results of EIII are also related to http://www.ju.edu.jo/; http://www.just.edu.jo does not change. We could not determine a logical explanation for this deviation in the results related to the URLs shown in Table2. Therefore, the results presented in Table2represent the tool results of the rerun for these three URLs. The highlighted values in Table2represent the unstable results of EIII tool. We also noticed that this tool sometimes fails to evaluate a certain URL, such as http://www.bau.edu.jo/, temporarily and shows running errors as well as on a rerun of the tool yield results. The Tafila Technical University website was down on September 12, 2015; however, this website was revisited on September 20, 2015, and was functional; the related measurements are shown in Table2. The EIII Page Checker failed to process the homepage of Al Isra Private University in Amman on September 20, 2015, because the server was down; on that same date, the website of Al Isra Private University in Amman was functioning, but a rerun of the EIII Page Checker again failed to measure its accessibility score. The EIII Page Checker fails to measure the accessibility score of the following universities: Al Zaytoonah University, Arab Academy for Banking and Financial Sciences, and Jadara University.</figDesc><table><row><cell cols="2">Table 2</cell><cell cols="5">Summary of WAVE tool results ranked according to the sum of errors, alerts, and contrast errors</cell><cell/></row><row><cell/><cell/><cell cols="2">(August 28, 2015 and March 1, 2016)</cell><cell/><cell/><cell/><cell/></row><row><cell/><cell/><cell/><cell/><cell>AccessMonitor</cell><cell>AccessMonitor</cell><cell>EIII</cell><cell>EIII</cell><cell>EIII</cell></row><row><cell>#</cell><cell cols="2">University name</cell><cell>University URL</cell><cell>index score</cell><cell>index score</cell><cell>score</cell><cell>barrier total</cell><cell>applied</cell></row><row><cell/><cell/><cell/><cell/><cell>WCAG 1.0</cell><cell>WCAG 2.0</cell><cell>WCAG 2.0</cell><cell>WCAG 2.0</cell><cell>test total</cell></row><row><cell>1</cell><cell cols="2">University of Jordan</cell><cell>http://www.ju.edu.jo/</cell><cell>4.7</cell><cell>3.9</cell><cell>87</cell><cell>52</cell><cell>1,057</cell></row><row><cell/><cell/><cell/><cell/><cell>4.7</cell><cell>3.8</cell><cell>86.38</cell><cell>59</cell><cell>1,163</cell></row><row><cell>2</cell><cell cols="2">Jordan University of</cell><cell>http://www.just.edu.jo/</cell><cell>4.5</cell><cell>3.8</cell><cell>85</cell><cell>12</cell><cell>462</cell></row><row><cell/><cell cols="2">Science and Technology</cell><cell/><cell>4.5</cell><cell>3.8</cell><cell>85.48</cell><cell>12</cell><cell>454</cell></row><row><cell>3</cell><cell cols="2">Hashemite</cell><cell>http://www.hu.edu.jo/</cell><cell>2.2</cell><cell>3.0</cell><cell>60</cell><cell>153</cell><cell>581</cell></row><row><cell/><cell cols="2">University</cell><cell/><cell>2.2</cell><cell>3.0</cell><cell>61.06</cell><cell>162</cell><cell>824</cell></row><row><cell>4</cell><cell cols="2">Yarmouk University</cell><cell>http://www.yu.edu.jo/</cell><cell>4.9</cell><cell>5.9</cell><cell>92</cell><cell>7</cell><cell>785</cell></row><row><cell/><cell/><cell/><cell/><cell>4.3</cell><cell>5.5</cell><cell>99.58</cell><cell>3</cell><cell>767</cell></row><row><cell>5</cell><cell cols="2">Al Balqa Applied</cell><cell>http://www.bau.edu.jo/</cell><cell>2.9</cell><cell>3.2</cell><cell>69</cell><cell>176</cell><cell>986</cell></row><row><cell/><cell cols="2">University</cell><cell/><cell>2.9</cell><cell>3.2</cell><cell>70.31</cell><cell>152</cell><cell>906</cell></row><row><cell>6</cell><cell cols="2">Mutah University</cell><cell>http://www.mutah.edu.jo/</cell><cell>3.8</cell><cell>4.3</cell><cell>100</cell><cell>19</cell><cell>969</cell></row><row><cell/><cell/><cell/><cell/><cell>3.6</cell><cell>4.2</cell><cell>99.57</cell><cell>15</cell><cell>933</cell></row><row><cell>7</cell><cell cols="2">Zarqa University</cell><cell>http://www.zu.edu.jo/</cell><cell>2.3</cell><cell>3.2</cell><cell>74</cell><cell>36</cell><cell>1,030</cell></row><row><cell/><cell/><cell/><cell/><cell>2.5</cell><cell>3.1</cell><cell>73.37</cell><cell>53</cell><cell>1,105</cell></row><row><cell>8</cell><cell cols="2">Al Ahliyya Amman</cell><cell>http://www.ammanu.edu.jo/</cell><cell>3.7</cell><cell>3.7</cell><cell>65</cell><cell>110</cell><cell>646</cell></row><row><cell/><cell cols="2">University</cell><cell/><cell>3.5</cell><cell>3.5</cell><cell>55.56</cell><cell>114</cell><cell>531</cell></row><row><cell>9</cell><cell cols="2">Princess Sumaya</cell><cell>http://www.psut.edu.jo/</cell><cell>6.8</cell><cell>6.1</cell><cell>87</cell><cell>10</cell><cell>783</cell></row><row><cell/><cell cols="2">University for Technology</cell><cell/><cell>6.8</cell><cell>6.1</cell><cell>86.64</cell><cell>10</cell><cell>715</cell></row><row><cell cols="3">10 American University</cell><cell>http://aum.edu.jo/</cell><cell>5.8</cell><cell>6.1</cell><cell>73</cell><cell>138</cell><cell>1,392</cell></row><row><cell/><cell cols="2">of Madaba</cell><cell/><cell>5.8</cell><cell>6.1</cell><cell>82.03</cell><cell>82</cell><cell>1,497</cell></row><row><cell cols="3">11 Al Al-Bayt</cell><cell>http://www.aabu.edu.jo/</cell><cell>2.7</cell><cell>3.2</cell><cell>82</cell><cell>19</cell><cell>854</cell></row><row><cell/><cell cols="2">University</cell><cell/><cell>3.0</cell><cell>3.3</cell><cell>80.86</cell><cell>22</cell><cell>546</cell></row><row><cell cols="3">12 Applied Science</cell><cell>http://www.asu.edu.jo/</cell><cell>2.8</cell><cell>2.8</cell><cell>68</cell><cell>68</cell><cell>787</cell></row><row><cell/><cell cols="2">University</cell><cell/><cell>2.9</cell><cell>3.0</cell><cell>73.95</cell><cell>64</cell><cell>798</cell></row><row><cell cols="3">13 German Jordanian</cell><cell>http://www.gju.edu.jo/</cell><cell>5.6</cell><cell>5.4</cell><cell>92</cell><cell>25</cell><cell>982</cell></row><row><cell/><cell cols="2">University</cell><cell/><cell>5.6</cell><cell>5.4</cell><cell>91.82</cell><cell>25</cell><cell>976</cell></row><row><cell cols="3">14 Middle East</cell><cell>http://www.meu.edu.jo/</cell><cell>4.1</cell><cell>5.1</cell><cell>96</cell><cell>30</cell><cell>928</cell></row><row><cell/><cell cols="2">University Jordan</cell><cell/><cell>4.1</cell><cell>5.1</cell><cell>95.49</cell><cell>35</cell><cell>944</cell></row><row><cell cols="3">15 University of Petra</cell><cell>http://www.uop.edu.jo/</cell><cell>3.8</cell><cell>4.2</cell><cell>83</cell><cell>44</cell><cell>1,288</cell></row><row><cell/><cell/><cell/><cell/><cell>3.3</cell><cell>4.2</cell><cell>83.60</cell><cell>45</cell><cell>1,245</cell></row><row><cell cols="3">16 World Islamic</cell><cell>http://www.wise.edu.jo/</cell><cell>2.5</cell><cell>3.9</cell><cell>82</cell><cell>75</cell><cell>1,251</cell></row><row><cell/><cell cols="2">Sciences and Education University</cell><cell/><cell>4.9</cell><cell>5.4</cell><cell>93.50</cell><cell>35</cell><cell>1,258</cell></row><row><cell cols="3">17 Philadelphia</cell><cell>http://www.</cell><cell>3.5</cell><cell>4.1</cell><cell>95</cell><cell>8</cell><cell>915</cell></row><row><cell/><cell cols="2">University at Jordan</cell><cell>philadelphia.edu.jo/</cell><cell>3.5</cell><cell>4.2</cell><cell>95.19</cell><cell>8</cell><cell>894</cell></row><row><cell cols="3">18 Amman Arab</cell><cell>http://www.aau.edu.jo/</cell><cell>3.8</cell><cell>3.7</cell><cell>76</cell><cell>19</cell><cell>370</cell></row><row><cell/><cell cols="2">University</cell><cell/><cell>3.8</cell><cell>3.7</cell><cell>79.99</cell><cell>18</cell><cell>384</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head/><label/><figDesc>Table 3 according to the Alexa.com listing on August 29, 2015, and</figDesc><table><row><cell/><cell/><cell/><cell/><cell>459,176</cell></row><row><cell/><cell/><cell/><cell/><cell>348,378</cell></row><row><cell>10</cell><cell>American University of Madaba</cell><cell>http://aum.edu.jo/</cell><cell>714</cell><cell>827,896</cell></row><row><cell/><cell/><cell/><cell>1,133</cell><cell>780,344</cell></row><row><cell>11</cell><cell>Al Al-Bayt University</cell><cell>http://www.aabu.edu.jo/</cell><cell>728</cell><cell>464,828</cell></row><row><cell/><cell/><cell/><cell>898</cell><cell>310,516</cell></row><row><cell>12</cell><cell>Applied Science University</cell><cell>http://www.asu.edu.jo/</cell><cell>852</cell><cell>917,195</cell></row><row><cell/><cell/><cell/><cell>1,580</cell><cell>906,741</cell></row><row><cell>13</cell><cell>German Jordanian University</cell><cell>http://www.gju.edu.jo/</cell><cell>858</cell><cell>623,257</cell></row><row><cell/><cell/><cell/><cell>324</cell><cell>290,566</cell></row><row><cell>14</cell><cell>Middle East University Jordan</cell><cell>http://www.meu.edu.jo/</cell><cell>1,275</cell><cell>518,792</cell></row><row><cell/><cell/><cell/><cell>2,915</cell><cell>388,290</cell></row><row><cell>15</cell><cell>University of Petra</cell><cell>http://www.uop.edu.jo/</cell><cell>1,401</cell><cell>232,296</cell></row><row><cell/><cell/><cell/><cell>361</cell><cell>163,460</cell></row><row><cell>16</cell><cell>World Islamic Sciences and Education University</cell><cell>http://www.wise.edu.jo/</cell><cell>1,417</cell><cell>583,174</cell></row><row><cell/><cell/><cell/><cell>996</cell><cell>572,980</cell></row><row><cell>17</cell><cell>Philadelphia University at Jordan</cell><cell>http://www.philadelphia.edu.jo/</cell><cell>1,825</cell><cell>228,685</cell></row><row><cell/><cell/><cell/><cell>1,297</cell><cell>213,420</cell></row><row><cell>18</cell><cell>Amman Arab University</cell><cell>http://www.aau.edu.jo/</cell><cell>1,950</cell><cell>1,903,311</cell></row><row><cell/><cell/><cell/><cell>1,535</cell><cell>1,351,504</cell></row><row><cell>19</cell><cell>Al Zaytoonah University</cell><cell>http://www.zuj.edu.jo/</cell><cell>2,102</cell><cell>743,265</cell></row><row><cell/><cell/><cell/><cell>666</cell><cell>434,676</cell></row><row><cell>20</cell><cell>Jerash Private University</cell><cell>http://www.jpu.edu.jo/</cell><cell>2,471</cell><cell>1,875,779</cell></row><row><cell/><cell/><cell/><cell>1,442</cell><cell>963,169</cell></row><row><cell>21</cell><cell>Al Isra Private University Amman</cell><cell>http://www.iu.edu.jo/</cell><cell>2,511</cell><cell>1,388,837</cell></row><row><cell/><cell/><cell/><cell>1,655</cell><cell>934,296</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 5</head><label>5</label><figDesc>Summary of Webometrics Rankings of Jordanian universities(August 29, 2015 and March 1, 2016)    </figDesc><table><row><cell>#</cell><cell>University name</cell><cell>World ranking</cell><cell>Continental ranking</cell><cell>Country rank</cell><cell>Presence</cell><cell>Impact rank</cell><cell cols="2">Openness Excellence</cell></row><row><cell>1</cell><cell>University of Jordan</cell><cell>1,620</cell><cell>14</cell><cell>1</cell><cell>896</cell><cell>1,334</cell><cell>99,999</cell><cell>1,270</cell></row><row><cell/><cell/><cell>1,010</cell><cell>7</cell><cell>1</cell><cell>536</cell><cell>1,662</cell><cell>309</cell><cell>1,276</cell></row><row><cell>2</cell><cell>Jordan University of Science and Technology</cell><cell>1,979</cell><cell>21</cell><cell>2</cell><cell>3,957</cell><cell>5,506</cell><cell>2,269</cell><cell>1,433</cell></row><row><cell/><cell/><cell>1,907</cell><cell>23</cell><cell>2</cell><cell>3,726</cell><cell>5,161</cell><cell>2,111</cell><cell>1,439</cell></row><row><cell>3</cell><cell>Yarmouk University</cell><cell>2,075</cell><cell>26</cell><cell>3</cell><cell>1,256</cell><cell>5,501</cell><cell>1,814</cell><cell>1,878</cell></row><row><cell/><cell/><cell>1,969</cell><cell>25</cell><cell>3</cell><cell>841</cell><cell>4,901</cell><cell>1,779</cell><cell>1,882</cell></row><row><cell>4</cell><cell>Hashemite University</cell><cell>2,460</cell><cell>44</cell><cell>4</cell><cell>6,293</cell><cell>6,830</cell><cell>3,269</cell><cell>1,616</cell></row><row><cell/><cell/><cell>2,292</cell><cell>38</cell><cell>5</cell><cell>6,004</cell><cell>6,320</cell><cell>3,005</cell><cell>1,622</cell></row><row><cell>5</cell><cell>Al Balqa Applied University</cell><cell>3,058</cell><cell>66</cell><cell>5</cell><cell>7,418</cell><cell>7,952</cell><cell>5,226</cell><cell>2,133</cell></row><row><cell/><cell/><cell>2,742</cell><cell>57</cell><cell>6</cell><cell>4,327</cell><cell>7,604</cell><cell>4,837</cell><cell>2,138</cell></row><row><cell>6</cell><cell>Philadelphia University at Jordan</cell><cell>3,060</cell><cell>67</cell><cell>6</cell><cell>1,282</cell><cell>2,282</cell><cell>99,999</cell><cell>3,093</cell></row><row><cell/><cell/><cell>2,056</cell><cell>28</cell><cell>4</cell><cell>794</cell><cell>2,248</cell><cell>1,202</cell><cell>3,092</cell></row><row><cell>7</cell><cell>Princess Sumaya University for Technology</cell><cell>3,201</cell><cell>75</cell><cell>7</cell><cell>4,686</cell><cell>3,848</cell><cell>9,315</cell><cell>3,482</cell></row><row><cell/><cell/><cell>3,295</cell><cell>80</cell><cell>8</cell><cell>5,271</cell><cell>4,287</cell><cell>9,959</cell><cell>3,481</cell></row><row><cell>8</cell><cell>Al Al-Bayt University</cell><cell>3,363</cell><cell>82</cell><cell>8</cell><cell>3,391</cell><cell>8,918</cell><cell>3,385</cell><cell>2,717</cell></row><row><cell/><cell/><cell>3,119</cell><cell>71</cell><cell>7</cell><cell>3,061</cell><cell>8,491</cell><cell>3,425</cell><cell>2,717</cell></row><row><cell>9</cell><cell>Mutah University</cell><cell>3,740</cell><cell>96</cell><cell>9</cell><cell>9,534</cell><cell>8,806</cell><cell>6,626</cell><cell>2,554</cell></row><row><cell/><cell/><cell>3,381</cell><cell>87</cell><cell>9</cell><cell>9,941</cell><cell>8,252</cell><cell>5,256</cell><cell>2,554</cell></row><row><cell cols="2">10 University of Petra</cell><cell>4,317</cell><cell>110</cell><cell>10</cell><cell>6,951</cell><cell>3,314</cell><cell>1,177</cell><cell>5,490</cell></row><row><cell/><cell/><cell>4,018</cell><cell>104</cell><cell>10</cell><cell>5,019</cell><cell>3,225</cell><cell>1,053</cell><cell>5,484</cell></row><row><cell cols="2">11 Middle East University Jordan</cell><cell>4,372</cell><cell>111</cell><cell>11</cell><cell>10,694</cell><cell>4,746</cell><cell>4,782</cell><cell>4,318</cell></row><row><cell/><cell/><cell>4,645</cell><cell>121</cell><cell>13</cell><cell>10,261</cell><cell>6,042</cell><cell>4,683</cell><cell>4,315</cell></row><row><cell cols="2">12 Applied Science University</cell><cell>4,496</cell><cell>117</cell><cell>12</cell><cell>6,864</cell><cell>9,926</cell><cell>8,728</cell><cell>2,983</cell></row><row><cell/><cell/><cell>4,045</cell><cell>106</cell><cell>11</cell><cell>6,448</cell><cell>9,554</cell><cell>8,413</cell><cell>2,982</cell></row><row><cell cols="2">13 German Jordanian University</cell><cell>4,970</cell><cell>126</cell><cell>13</cell><cell>12,659</cell><cell>8,022</cell><cell>6,109</cell><cell>3,656</cell></row><row><cell/><cell/><cell>4,530</cell><cell>117</cell><cell>12</cell><cell>12,400</cell><cell>7,506</cell><cell>6,149</cell><cell>3,654</cell></row><row><cell cols="2">14 Al Hussein bin Talal University</cell><cell>5,417</cell><cell>140</cell><cell>14</cell><cell>11,605</cell><cell>11,362</cell><cell>9,872</cell><cell>2,881</cell></row><row><cell/><cell/><cell>4,832</cell><cell>128</cell><cell>15</cell><cell>11,180</cell><cell>11,101</cell><cell>9,093</cell><cell>2,881</cell></row><row><cell cols="2">15 Al Zaytoonah University</cell><cell>5,887</cell><cell>151</cell><cell>15</cell><cell>6,921</cell><cell>13,938</cell><cell>4,499</cell><cell>3,048</cell></row><row><cell/><cell/><cell>5,573</cell><cell>144</cell><cell>16</cell><cell>6,985</cell><cell>14,089</cell><cell>4,227</cell><cell>3,047</cell></row><row><cell cols="2">16 Tafila Technical University</cell><cell>7,609</cell><cell>179</cell><cell>16</cell><cell>14,143</cell><cell>13,297</cell><cell>15,085</cell><cell>2,983</cell></row><row><cell/><cell/><cell>7,191</cell><cell>166</cell><cell>17</cell><cell>15,022</cell><cell>12,866</cell><cell>15,866</cell><cell>2,982</cell></row><row><cell cols="2">17 Al Ahliyya Amman University</cell><cell>7,963</cell><cell>186</cell><cell>17</cell><cell>710</cell><cell>13,122</cell><cell>7,160</cell><cell>4,569</cell></row><row><cell/><cell/><cell>4,806</cell><cell>127</cell><cell>14</cell><cell>363</cell><cell>8,024</cell><cell>6,171</cell><cell>4,565</cell></row><row><cell cols="2">18 Zarqa University</cell><cell>8,344</cell><cell>195</cell><cell>18</cell><cell>9,531</cell><cell>15,450</cell><cell>8,350</cell><cell>3,364</cell></row><row><cell/><cell/><cell>7,449</cell><cell>174</cell><cell>18</cell><cell>9,813</cell><cell>15,015</cell><cell>5,995</cell><cell>3,363</cell></row><row><cell cols="2">19 Arab Academy for Banking and Financial</cell><cell>9,945</cell><cell>234</cell><cell>19</cell><cell>13,847</cell><cell>11,911</cell><cell>11,115</cell><cell>4,569</cell></row><row><cell/><cell>Sciences</cell><cell>9,851</cell><cell>225</cell><cell>19</cell><cell>14,231</cell><cell>11,972</cell><cell>11,482</cell><cell>4,565</cell></row><row><cell cols="2">20 Amman Arab University</cell><cell>11,567</cell><cell>272</cell><cell>20</cell><cell>11,226</cell><cell>14,165</cell><cell>16,600</cell><cell>4,318</cell></row><row><cell/><cell/><cell>10,627</cell><cell>239</cell><cell>20</cell><cell>11,462</cell><cell>13,850</cell><cell>13,839</cell><cell>4,315</cell></row><row><cell cols="2">21 Jerash Private University</cell><cell>11,928</cell><cell>281</cell><cell>21</cell><cell>18,240</cell><cell>15,432</cell><cell>16,277</cell><cell>3,750</cell></row><row><cell/><cell/><cell>11,824</cell><cell>260</cell><cell>21</cell><cell>18,696</cell><cell>15,417</cell><cell>16,200</cell><cell>3,746</cell></row><row><cell cols="2">22 American University of Madaba</cell><cell>12,315</cell><cell>292</cell><cell>22</cell><cell>852</cell><cell>16,566</cell><cell>13,656</cell><cell>4,898</cell></row><row><cell/><cell/><cell>12,585</cell><cell>278</cell><cell>23</cell><cell>867</cell><cell>16,682</cell><cell>13,669</cell><cell>4,892</cell></row><row><cell cols="2">23 World Islamic Sciences and Education</cell><cell>12,327</cell><cell>293</cell><cell>23</cell><cell>4,621</cell><cell>15,239</cell><cell>18,271</cell><cell>4,569</cell></row><row><cell/><cell>University</cell><cell>12,367</cell><cell>274</cell><cell>22</cell><cell>5,772</cell><cell>15,494</cell><cell>17,386</cell><cell>4,565</cell></row><row><cell cols="2">24 Irbid National University</cell><cell>16,823</cell><cell>512</cell><cell>27</cell><cell>18,722</cell><cell>14,397</cell><cell>20,114</cell><cell>5,490</cell></row><row><cell/><cell/><cell>15,744</cell><cell>423</cell><cell>26</cell><cell>16,668</cell><cell>14,418</cell><cell>18,653</cell><cell>5,484</cell></row><row><cell cols="2">25 Al Isra Private University Amman</cell><cell>17,214</cell><cell>529</cell><cell>28</cell><cell>11,947</cell><cell>18,863</cell><cell>11,070</cell><cell>5,490</cell></row><row><cell/><cell/><cell>17,409</cell><cell>493</cell><cell>29</cell><cell>11,194</cell><cell>18,866</cell><cell>12,023</cell><cell>5,484</cell></row><row><cell cols="2">26 Jadara University</cell><cell>18,969</cell><cell>658</cell><cell>32</cell><cell>13,899</cell><cell>21,657</cell><cell>13,947</cell><cell>4,569</cell></row><row><cell/><cell/><cell>13,753</cell><cell>330</cell><cell>24</cell><cell>16,552</cell><cell>16,359</cell><cell>12,477</cell><cell>4,565</cell></row><row><cell cols="2">27 Ajloun National University</cell><cell>19,176</cell><cell>670</cell><cell>34</cell><cell>15,725</cell><cell>20,304</cell><cell>12,576</cell><cell>5,490</cell></row><row><cell/><cell/><cell>17,591</cell><cell>502</cell><cell>30</cell><cell>15,383</cell><cell>18,583</cell><cell>11,779</cell><cell>5,484</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 6</head><label>6</label><figDesc>presents a summary of all ranks already presented in Tables 1, 2, 3, and 5; these ranks are used in this study to determine whether any correlation exists between two variables (ranks). Correlation coefficients help in obtaining precise measurements about the strengths, magnitudes, and directions of the relationship between any two of these ranks under study. Spearman's rank correlation is used to determine the relationship between two ranked variables understudy. Some values presented in Table6are ignored during the computations of correlation coefficients. IBM SPSS version 17 is used in this study to compute the Kendall's tau_b correlation coefficients. Table 1 shows that the WAVE tool failed on March 1, 2016, to evaluate 10 out of the 27 Jordanian university websites. Therefore, the results of Wave tool on March 1, 2016, are not included in the computation of their rank correlations with the rank of other metrics. The ranked-based correlation analysis is used to discover the concordance of 18 metrics. The 18 metrics include the 8 metrics presented in table 1 for the date August 28, 2015. The other ten metrics represent measurements conducted on August 28, 2015, and March 1, 2016, therefore, each of the cells of the following metrics has two measurements on different dates: first three metrics presented in Table 2, first metric presented in Table</figDesc><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5"><head>Table 6</head><label>6</label><figDesc>Summary of web accessibility, web traffic, and university ranks First, the H 0 (null) and H 1 (alternative) hypotheses of AccessMonitor index score (WCAG 1.0) should be defined.H 0 No difference exists between the ranks of private and public AccessMonitor index scores (WCAG 1.0).</figDesc><table><row><cell>I</cell><cell>University name</cell><cell>WAVE's errors sum</cell><cell>WCAG 1.0</cell><cell>AccessMonitor</cell><cell>WCAG 2.0</cell><cell>AccessMonitor</cell><cell>WCAG 2.0</cell><cell>EIII Score</cell><cell>Alexa rank</cell><cell>Webometrics</cell><cell>rank</cell></row><row><cell>1</cell><cell>Ajloun National University</cell><cell>9</cell><cell cols="2">12</cell><cell>9</cell><cell/><cell cols="2">10</cell><cell>NA</cell><cell cols="2">27</cell></row><row><cell>2</cell><cell>Al Ahliyya Amman University</cell><cell>24</cell><cell cols="2">18</cell><cell cols="2">19</cell><cell cols="2">22</cell><cell>8</cell><cell cols="2">17</cell></row><row><cell>3</cell><cell>Al Al-Bayt University</cell><cell>10</cell><cell cols="2">24</cell><cell cols="2">25</cell><cell cols="2">12</cell><cell>11</cell><cell>8</cell><cell/></row><row><cell>4</cell><cell>Al Balqa Applied University</cell><cell>21</cell><cell cols="2">22</cell><cell cols="2">23</cell><cell cols="2">20</cell><cell>5</cell><cell>5</cell><cell/></row><row><cell>5</cell><cell>Al Hussein bin Talal University</cell><cell>4</cell><cell>4</cell><cell/><cell cols="2">11</cell><cell>9</cell><cell/><cell>22</cell><cell cols="2">14</cell></row><row><cell>6</cell><cell>Al Isra Private University Amman</cell><cell>NA</cell><cell>1</cell><cell/><cell>6</cell><cell/><cell cols="2">NA</cell><cell>21</cell><cell cols="2">25</cell></row><row><cell>7</cell><cell>Al Zaytoonah University</cell><cell>16</cell><cell>9</cell><cell/><cell cols="2">14</cell><cell cols="2">NA</cell><cell>19</cell><cell cols="2">15</cell></row><row><cell>8</cell><cell>American University of Madaba</cell><cell>1</cell><cell>5</cell><cell/><cell>2</cell><cell/><cell cols="2">19</cell><cell>10</cell><cell cols="2">22</cell></row><row><cell>9</cell><cell>Amman Arab University</cell><cell>5</cell><cell cols="2">17</cell><cell cols="2">20</cell><cell cols="2">14</cell><cell>18</cell><cell cols="2">20</cell></row><row><cell>10</cell><cell>Applied Science University</cell><cell>13</cell><cell cols="2">23</cell><cell cols="2">27</cell><cell cols="2">21</cell><cell>12</cell><cell cols="2">12</cell></row><row><cell>11</cell><cell>Arab Academy for Banking and Financial Sciences</cell><cell>7</cell><cell>7</cell><cell/><cell>4</cell><cell/><cell cols="2">NA</cell><cell>NA</cell><cell cols="2">19</cell></row><row><cell>12</cell><cell>German Jordanian University</cell><cell>15</cell><cell>8</cell><cell/><cell>7</cell><cell/><cell>5</cell><cell/><cell>13</cell><cell cols="2">13</cell></row><row><cell>13</cell><cell>Hashemite University</cell><cell>18</cell><cell cols="2">27</cell><cell cols="2">26</cell><cell cols="2">23</cell><cell>3</cell><cell>4</cell><cell/></row><row><cell>14</cell><cell>Irbid National University</cell><cell>20</cell><cell>6</cell><cell/><cell>3</cell><cell/><cell cols="2">17</cell><cell>23</cell><cell cols="2">24</cell></row><row><cell>15</cell><cell>Jadara University</cell><cell>NA</cell><cell>3</cell><cell/><cell cols="2">10</cell><cell cols="2">NA</cell><cell>NA</cell><cell cols="2">26</cell></row><row><cell>16</cell><cell>Jerash Private University</cell><cell>11</cell><cell cols="2">19</cell><cell cols="2">21</cell><cell cols="2">16</cell><cell>20</cell><cell cols="2">21</cell></row><row><cell>17</cell><cell>Jordan University of Science and Technology</cell><cell>3</cell><cell cols="2">13</cell><cell cols="2">18</cell><cell>8</cell><cell/><cell>2</cell><cell>2</cell><cell/></row><row><cell>18</cell><cell>Middle East University Jordan</cell><cell>14</cell><cell cols="2">14</cell><cell>8</cell><cell/><cell>2</cell><cell/><cell>14</cell><cell cols="2">11</cell></row><row><cell>19</cell><cell>Mutah University</cell><cell>6</cell><cell cols="2">15</cell><cell cols="2">12</cell><cell>1</cell><cell/><cell>6</cell><cell>9</cell><cell/></row><row><cell>20</cell><cell>Philadelphia University at Jordan</cell><cell>22</cell><cell cols="2">20</cell><cell cols="2">15</cell><cell>3</cell><cell/><cell>17</cell><cell>6</cell><cell/></row><row><cell>21</cell><cell>Princess Sumaya University for Technology</cell><cell>23</cell><cell>2</cell><cell/><cell>1</cell><cell/><cell>7</cell><cell/><cell>9</cell><cell>7</cell><cell/></row><row><cell>22</cell><cell>Tafila Technical University</cell><cell>12</cell><cell cols="2">21</cell><cell cols="2">22</cell><cell cols="2">15</cell><cell>NA</cell><cell cols="2">16</cell></row><row><cell>23</cell><cell>University of Jordan</cell><cell>8</cell><cell cols="2">11</cell><cell cols="2">16</cell><cell>6</cell><cell/><cell>1</cell><cell>1</cell><cell/></row><row><cell>24</cell><cell>University of Petra</cell><cell>17</cell><cell cols="2">16</cell><cell cols="2">13</cell><cell cols="2">11</cell><cell>15</cell><cell cols="2">10</cell></row><row><cell>25</cell><cell>World Islamic Sciences and Education University</cell><cell>19</cell><cell cols="2">25</cell><cell cols="2">17</cell><cell cols="2">13</cell><cell>16</cell><cell cols="2">23</cell></row><row><cell>26</cell><cell>Yarmouk University</cell><cell>2</cell><cell cols="2">10</cell><cell>5</cell><cell/><cell>4</cell><cell/><cell>4</cell><cell>3</cell><cell/></row><row><cell>27</cell><cell>Zarqa University</cell><cell>25</cell><cell cols="2">26</cell><cell cols="2">24</cell><cell cols="2">18</cell><cell>7</cell><cell cols="2">18</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_6"><head>Table 8</head><label>8</label><figDesc>Summary of accessibility metrics</figDesc><table><row><cell>I</cell><cell>University name</cell><cell>University type</cell><cell>AccessMonitor index score WCAG 1.0</cell><cell>AccessMonitor index score WCAG 2.0</cell><cell>EIII score WCAG 2.0</cell></row><row><cell>1</cell><cell>Ajloun National University</cell><cell>Private</cell><cell>4.7</cell><cell>4.6</cell><cell>84</cell></row><row><cell>2</cell><cell>Al Ahliyya Amman University</cell><cell>Private</cell><cell>3.7</cell><cell>3.7</cell><cell>65</cell></row><row><cell>3</cell><cell>Al Isra Private University Amman</cell><cell>Private</cell><cell>7.5</cell><cell>5.5</cell><cell>Down and</cell></row><row><cell/><cell/><cell/><cell/><cell/><cell>problem</cell></row><row><cell>4</cell><cell>Al Zaytoonah University</cell><cell>Private</cell><cell>5.4</cell><cell>4.2</cell><cell>Problem</cell></row><row><cell>9</cell><cell>American University of Madaba</cell><cell>Private</cell><cell>5.8</cell><cell>6.1</cell><cell>73</cell></row><row><cell>6</cell><cell>Amman Arab University</cell><cell>Private</cell><cell>3.8</cell><cell>3.7</cell><cell>76</cell></row><row><cell>7</cell><cell>Applied Science University</cell><cell>Private</cell><cell>2.8</cell><cell>2.8</cell><cell>68</cell></row><row><cell>8</cell><cell>Arab Academy for Banking and Financial Sciences</cell><cell>Private</cell><cell>5.8</cell><cell>6.1</cell><cell>Problem</cell></row><row><cell>9</cell><cell>Irbid National University</cell><cell>Private</cell><cell>5.8</cell><cell>6.1</cell><cell>75</cell></row><row><cell>10</cell><cell>Jadara University</cell><cell>Private</cell><cell>6.4</cell><cell>4.6</cell><cell>Problem</cell></row><row><cell>11</cell><cell>Jerash Private University</cell><cell>Private</cell><cell>3.7</cell><cell>3.7</cell><cell>75</cell></row><row><cell>12</cell><cell>Middle East University Jordan</cell><cell>Private</cell><cell>4.1</cell><cell>5.1</cell><cell>96</cell></row><row><cell>13</cell><cell>Philadelphia University at Jordan</cell><cell>Private</cell><cell>3.5</cell><cell>4.1</cell><cell>95</cell></row><row><cell>14</cell><cell>University of Petra</cell><cell>Private</cell><cell>3.8</cell><cell>4.2</cell><cell>83</cell></row><row><cell>15</cell><cell>Zarqa University</cell><cell>Private</cell><cell>2.3</cell><cell>3.2</cell><cell>74</cell></row><row><cell>16</cell><cell>Princess Sumaya University for Technology</cell><cell>Private non-profit</cell><cell>6.8</cell><cell>6.1</cell><cell>87</cell></row><row><cell/><cell/><cell>university</cell><cell/><cell/><cell/></row><row><cell>17</cell><cell>Al Al-Bayt University</cell><cell>Public</cell><cell>2.7</cell><cell>3.2</cell><cell>82</cell></row><row><cell>18</cell><cell>Al Balqa Applied University</cell><cell>Public</cell><cell>2.9</cell><cell>3.2</cell><cell>69</cell></row><row><cell>19</cell><cell>Al Hussein bin Talal University</cell><cell>Public</cell><cell>6.1</cell><cell>4.5</cell><cell>84</cell></row><row><cell>20</cell><cell>German Jordanian University</cell><cell>Public</cell><cell>5.6</cell><cell>5.4</cell><cell>92</cell></row><row><cell>21</cell><cell>Hashemite University</cell><cell>Public</cell><cell>2.2</cell><cell>3</cell><cell>60</cell></row><row><cell>22</cell><cell>Jordan University of Science and Technology</cell><cell>Public</cell><cell>4.5</cell><cell>3.8</cell><cell>85</cell></row><row><cell>23</cell><cell>Mutah University</cell><cell>Public</cell><cell>3.8</cell><cell>4.3</cell><cell>100</cell></row><row><cell>24</cell><cell>Tafila Technical University</cell><cell>Public</cell><cell>3</cell><cell>3.7</cell><cell>75.3</cell></row><row><cell>25</cell><cell>University of Jordan</cell><cell>Public</cell><cell>4.7</cell><cell>3.9</cell><cell>87</cell></row><row><cell>26</cell><cell>World Islamic Sciences and Education University</cell><cell>Public</cell><cell>2.5</cell><cell>3.9</cell><cell>82</cell></row><row><cell>27</cell><cell>Yarmouk University</cell><cell>Public</cell><cell>4.9</cell><cell>5.9</cell><cell>92</cell></row></table></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>This research is funded by the <rs type="funder">Deanship of Research at Zarqa University/Jordan</rs>.</p></div>
+			</div>
+			<div type="funding">
+<div><p>received his PhD in Mathematics from the <rs type="funder">University of Lodz/Poland</rs> (2001), Master's <rs type="grantName">degree in Computer Science</rs> from the <rs type="funder">University of Baghdad/Iraq</rs> (1989)</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_q2P9vAb">
+					<orgName type="grant-name">degree in Computer Science</orgName>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>March 1, 2016. Alexa.com fails to identify the rank of four Jordanian universities on August 29, 2015: Ajloun National University, Arab Academy for Banking and Financial Sciences, Jadara University, and Tafila Technical University; nevertheless, the rank of each of these websites is determined globally, as shown in Table <ref type="table">3</ref>. Also, Alexa.com fails to identify the rank of three Jordanian universities on March 1, 2016: Irbid National University, Ajloun National University, and Arab Academy for Banking and Financial Sciences; nevertheless, the rank of each of these websites is determined globally on that date.</p><p>A list of the top 500 websites in Jordan was obtained from Alexa.com on <ref type="bibr">August 29, 2015, and</ref>    The only comprehensive university rankings that include all Jordanian universities is webometrics ranking of world universities published by Cybermetrics Lab and is thus used in this study. Table <ref type="table">5</ref> shows the university rankings-related information collected from webometrics ranking of world universities. Jordanian universities are ranked in Table <ref type="table">5</ref>   </p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">A New Web Assessment Index: Spanish Universities Analysis</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Buenadicha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chamorro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">J</forename><surname>Miranda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">R</forename><surname>Gonzalez</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/10662240110396469</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Internet Research: Electronic Networking and Applications Policy</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="226" to="234"/>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Web Accessibility Trends in University Libraries and library Schools</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Comeaux</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Schmetzke</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/07378830710840437</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Library Hi Tech</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="457" to="477"/>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Accessibility of Academic Library Websites in North America Current Status and Trends (2002-2012</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Comeaux</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Schmetzke</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/07378831311303903</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Library Hi Tech</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="8" to="33"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">A hybrid approach for the personalisation of cloud-based e-governance services</title>
+		<author>
+			<persName><forename type="first">Q</forename><forename type="middle">N T</forename><surname>Do</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">K</forename><surname>Hussain</surname></persName>
+		</author>
+		<idno type="DOI">10.1504/IJHPCN.2013.056537</idno>
+		<ptr target="http://doi.org/10.1504/IJHPCN.2013.056537"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of High Performance Computing and Networking</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="205" to="214"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Arab Universities on the Web: A Webometric Study</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Elgohary</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/02640470810879518</idno>
+	</analytic>
+	<monogr>
+		<title level="j">The Electronic Library</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="374" to="386"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Accessibility of Portuguese Public Universities' Sites</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Espadinha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Pereira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">M</forename><surname>Da Silva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Lopes</surname></persName>
+		</author>
+		<idno type="DOI">10.3109/09638288.2010.498554</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Disability and Rehabilitation</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="475" to="485"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">An evaluation of web accessibility metrics based on their attributes</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Freire</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">P M</forename><surname>Fortes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A S</forename><surname>Turine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M B</forename><surname>Paiva</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 26th Annual ACM International Conference on Design of Communication</title>
+		<meeting>the 26th Annual ACM International Conference on Design of Communication<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+			<biblScope unit="page" from="73" to="80"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Quantitative evaluation of commercial websites: an empirical study of Spanish firms</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">J M</forename><surname>Gonzalez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M B</forename><surname>Palacios</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijinfomgt.2004.12.007</idno>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Information Management</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="313" to="328"/>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Accessibility of Internet Websites through time</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hackett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Parmanto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zeng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Sixth International ACM Conference on Computers and Accessibility</title>
+		<meeting>the Sixth International ACM Conference on Computers and Accessibility<address><addrLine>Atlanta, GA, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>ACM Press</publisher>
+			<date type="published" when="2004">2004</date>
+			<biblScope unit="page" from="32" to="39"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Accessibility as an integral factor in e-government website evaluation: the case of Dubai e-government</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Kamoun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Almourad</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/ITP-07-2013-0130</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Information Technology &amp; People</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="208" to="228"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">A web accessibility report card for top international university websites</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Kane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Shulman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Shockley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Ladner</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/1243441.1243472</idno>
+		<ptr target="http://dx.doi.org/10.1145/1243441.1243472"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the W4A Communication paper</title>
+		<meeting>the W4A Communication paper<address><addrLine>Banff, Canada</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Banking websites in India: an accessibility evaluation</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kaur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dani</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s40012-014-0040-x</idno>
+	</analytic>
+	<monogr>
+		<title level="j">CSI Transactions on ICT</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="23" to="34"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Wired but not connected: accessibility of academic library home pages</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Lilly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Van Fleet</surname></persName>
+		</author>
+		<idno type="DOI">10.1300/J120v32n67_02</idno>
+	</analytic>
+	<monogr>
+		<title level="j">The Reference Librarian</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="issue">67-68</biblScope>
+			<biblScope unit="page" from="5" to="28"/>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Macroscopic characterisations of web accessibility</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lopes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Carriço</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/13614568.2010.534185</idno>
+	</analytic>
+	<monogr>
+		<title level="j">New Review of Hypermedia and Multimedia</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="221" to="243"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Web not for all: a large scale study of web accessibility</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lopes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Gomes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Carriço</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/1805986.1806001</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the International Cross Disciplinary Conference on Web Accessibility (W4A) (W4A '10)</title>
+		<meeting>the International Cross Disciplinary Conference on Web Accessibility (W4A) (W4A '10)<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2010">2010</date>
+			<biblScope unit="page">4</biblScope>
+		</imprint>
+	</monogr>
+	<note>Article 10</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Overlapping factors in search engine optimization and web accessibility</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Moreno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Martinez</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/OIR-04-2012-0063</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Online Information Review</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="564" to="580"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Exploiting model profiles in requirements verification of cloud systems</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Moscato</surname></persName>
+		</author>
+		<idno type="DOI">10.1504/IJHPCN.2015.071258</idno>
+		<ptr target="http://doi.org/10.1504/IJHPCN.2015.071258"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of High Performance Computing and Networking</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="259" to="274"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Leveraging many simple statistical models to adaptively monitor software systems</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Munawar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A S</forename><surname>Ward</surname></persName>
+		</author>
+		<idno type="DOI">10.1504/IJHPCN.2011.038708</idno>
+		<ptr target="http://doi.org/10.1504/IJHPCN.2011.038708"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of High Performance Computing and Networking</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="29" to="39"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">The relationship between accessibility and usability of websites</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Petrie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Kheir</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/1240624.1240688</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Empirical Studies of Web Interaction</title>
+		<meeting>the Empirical Studies of Web Interaction<address><addrLine>San Jose, CA, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2007-04-28">2007. April 28-May 3</date>
+			<biblScope unit="page" from="397" to="406"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Web Accessibility at University Libraries and Library Schools</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Al-Kabi Schmetzke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename></persName>
+		</author>
+		<idno type="DOI">10.1108/07378830110384584</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Library Hi Tech</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="35" to="49"/>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Barriers to use: usability and content accessibility on the web's most popular sites</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sullivan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Matson</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/355460.355549</idno>
+		<ptr target="https://en.wikipedia.org/wiki/List_of_Arab_countries_by_population"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Conference on Universal Usability CUU '00</title>
+		<editor>
+			<persName><forename type="first">John</forename><surname>Thomas</surname></persName>
+		</editor>
+		<meeting>the Conference on Universal Usability CUU '00<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2000-02-16">2000. 16 February 2016</date>
+			<biblScope unit="page" from="139" to="144"/>
+		</imprint>
+	</monogr>
+	<note>Wikipedia (2016) List of Arab Countries by Population</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<title level="m" type="main">Evaluation and Enhancement of Web Content Accessibility for Persons with Disabilities</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zeng</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+		<respStmt>
+			<orgName>University of Pittsburgh</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">PhD thesis</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Aspect-Based Sentiment Analysis With Heterogeneous Graph Neural Network</title>
+				<funder ref="#_gKWzJKX">
+					<orgName type="full">Ministry of Education-China Mobile Communication Corporation</orgName>
+					<orgName type="abbreviated">CMCC</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Project of China Knowledge Centre for Engineering Science and Technology</orgName>
+				</funder>
+				<funder ref="#_fb4TARX #_FBuu5Kt #_FHMZWN6 #_W5HCtMj #_WmU6wBY">
+					<orgName type="full">National Natural Science Foundation of China</orgName>
+				</funder>
+				<funder ref="#_sXe3JR7">
+					<orgName type="full">Natural Science Basic Research Plan in Shaanxi Province of China</orgName>
+				</funder>
+				<funder ref="#_TpwNm3V">
+					<orgName type="full">Innovation Research Team of Ministry of Education</orgName>
+				</funder>
+				<funder ref="#_Fe5AGfX">
+					<orgName type="full">Project of Chinese Academy of Engineering</orgName>
+				</funder>
+				<funder ref="#_p2Np8Hc">
+					<orgName type="full">National Key Research and Development Program of China</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Institute of Electrical and Electronics Engineers (IEEE)</publisher>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2023-02">2023-02</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Wenbin</forename><surname>An</surname></persName>
+							<email>wenbinan@stu.xjtu.edu.cn</email>
+							<idno type="ORCID">0000-0003-0062-7201</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Feng</forename><surname>Tian</surname></persName>
+							<idno type="ORCID">0000-0001-7888-0587</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Ping</forename><surname>Chen</surname></persName>
+							<email>ping.chen@umb.edu</email>
+							<idno type="ORCID">0000-0003-3789-7686</idno>
+						</author>
+						<author>
+							<persName><roleName>Member, IEEE</roleName><forename type="first">Qinghua</forename><surname>Zheng</surname></persName>
+							<email>qhzheng@mail.xjtu.edu.cn</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">School of Automation Science and Engineering</orgName>
+								<orgName type="institution">Xi'an Jiaotong University</orgName>
+								<address>
+									<postCode>710049</postCode>
+									<settlement>Xi'an</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Engineering</orgName>
+								<orgName type="institution">University of Massa- chusetts</orgName>
+								<address>
+									<postCode>02125</postCode>
+									<settlement>Boston</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Xi'an Jiaotong University</orgName>
+								<address>
+									<postCode>710049</postCode>
+									<settlement>Xi'an</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Aspect-Based Sentiment Analysis With Heterogeneous Graph Neural Network</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">IEEE Transactions on Computational Social Systems</title>
+						<title level="j" type="abbrev">IEEE Trans. Comput. Soc. Syst.</title>
+						<idno type="eISSN">2373-7476</idno>
+						<imprint>
+							<publisher>Institute of Electrical and Electronics Engineers (IEEE)</publisher>
+							<biblScope unit="volume">10</biblScope>
+							<biblScope unit="issue">1</biblScope>
+							<biblScope unit="page" from="403" to="412"/>
+							<date type="published" when="2023-02"/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D2A9DF57A1C86E5383CBC06D68B8C7A8</idno>
+					<idno type="DOI">10.1109/tcss.2022.3148866</idno>
+					<note type="submission">received 1 June 2021; revised 24 October 2021; accepted 23 January 2022. Date of publication 23 February 2022; date of current version 31 January 2023.</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-02T20:34+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>sentiment analysis (ABSA)</term>
+					<term>aspect-category sentiment analysis (ACSA)</term>
+					<term>heterogeneous graph neural network (GNN)</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Aspect-based sentiment analysis aims to predict sentiment polarities of given aspects in text. Most current approaches employ attention-based neural methods to capture semantic relationships between aspects and words in one sentence. However, these methods ignore the fact that sentences with the same aspect and sentiment polarity often share the structure and semantic information in a domain, which leads to lower model performance. To mitigate this problem, we propose a heterogeneous aspect graph neural network (HAGNN) to learn the structure and semantic knowledge from intersentence relationships. Our model is a heterogeneous graph neural network since it contains three different kinds of nodes: word nodes, aspect nodes, and sentence nodes. These nodes can pass structure and semantic information between each other and update their embeddings to improve the performance of our model. To the best of our knowledge, we are the first to use a heterogeneous graph to capture relationships between sentences and aspects. The experimental results on five public datasets show the effectiveness of our model outperforming some state-of-the-art models.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Index Terms-Aspect-based</head></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p>example, in the sentence "while the restaurant was large and a bit noisy, the drinks were fantastic," ACSA will predict the sentiment polarity for the aspect-category ambience even though it does not appear in the text. This characteristic can easily lead to wrong sentiment predictions because of the diverse expressions toward the same aspect category.</p><p>To extract semantic relationships between sentences and concerned aspect categories, most current efforts used neural networks with attention mechanism to guide models to focus on tokens related to the concerned aspect categories <ref type="bibr" target="#b3">[4]</ref>- <ref type="bibr" target="#b5">[6]</ref>. The advantage of these models was that they can extract aspect-related information from a sentence to generate aspect embeddings and apply an attention mechanism to get the final sentiment polarity based on the sentence and aspect embeddings. However, these models generated aspect and sentence embeddings based on only one sentence and ignored interactions between sentences, which may lose information from intersentence relationships, especially for sentences with the same aspect category and sentiment polarity.</p><p>Two types of pattern knowledge can be learned from the interactions between sentences and aspect categories: structure patterns and semantic patterns, which are learned from similar sentence structures and diverse semantic expressions between sentences with the same aspect category and sentiment polarity. First, sentences with the same aspect category and sentiment polarity sometimes share similar structures (e.g., similar sentence structures or word usage). For example, in Table <ref type="table" target="#tab_0">I</ref>, sentences S1 and S2 mention the same aspect categories with the same sentiment polarities, and their sentence structures are similar, so they can learn structure-level knowledge from each other to strengthen their own features. Second, sentences with the same aspect category and sentiment polarity sometimes use different semantic expressions toward the same aspect category (e.g., specific or general and high level or low level) even though their sentence structures are similar. For example, in Table <ref type="table" target="#tab_0">I</ref>, sentences S3 and S4 mention the same aspect category with the same sentiment polarity, and their sentence structures are similar, but their expressions are in different semantic levels (the former is general and the latter is specific), and knowledge learned from diverse semantic expressions can improve the generalizability of our model. Even though there are many methods proposed to extract structure and semantic information from one individual sentence, how to gather structure and semantic information from multiple related sentences to improve model performance is yet to be explored.</p><p>To mitigate this gap, we propose a heterogeneous aspect graph neural network (HAGNN), where structure and semantic One high-level diagram of HAGNN is shown in Fig. <ref type="figure" target="#fig_0">1</ref>.</p><p>The word nodes act as the additional intermediary, which can pass information between sentences according to word co-occurrence. The aspect nodes can aggregate different semantic-level information from sentences with the same aspect category and sentiment polarity. The sentence nodes can get structure information from other similar sentences through the word and aspect nodes. With information passing through the graph, these node embeddings will be iteratively updated with information from other related nodes. Also, the final representations of sentence nodes and aspect nodes will be used to predict the sentiment polarities on given aspect categories.</p><p>The main contributions of our work can be summarized as follows.</p><p>1) We study the insight that sentences with the same aspect category and sentiment polarity can share similar sentence structures and have various semantic expressions, where common structure and semantic information can be used to improve the model performance. 2) We propose an HAGNN for ACSA, which can pass structure and semantic information between related sentences and aspect categories through HAGNN by updating node embeddings. To the best of our knowledge, we are the first one to use a heterogeneous graph to capture relationships between sentences and aspect categories for ACSA. 3) Our model outperforms the best compared models by 1.25% of average accuracy and 1.16% of average macro-F1 on five public datasets, which demonstrates the effectiveness of our model.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. RELATED WORK</head><p>ACSA aims at predicting sentiment polarities of a sentence toward predefined aspect categories. With the development of deep learning, significant progress has been made in the area of ACSA. Most of the current models are based on the attention mechanism or gating mechanism, which can guide these models to focus on the aspect categories to be analyzed.</p><p>In terms of neural network topology, current methods can be mainly divided into four types: recurrent neural network (RNN)-, convolutional neural network (CNN)-, graph neural network (GNN)-and bidirectional encoder representations from transformers (BERT)-based. For RNN-based models, Wang et al. <ref type="bibr" target="#b4">[5]</ref> first used attention-based long shortterm memory (LSTM) networks to generate aspect-specific embeddings and got the final representations by concatenating sentence embeddings and aspect embeddings. Furthermore, Aydin and Güngör <ref type="bibr" target="#b6">[7]</ref> combined recurrent and recursive neural models to perform ABSA. For CNN-based models, Xue and Li <ref type="bibr" target="#b3">[4]</ref> used CNNs as feature extractors and used gating units to control the information flow, and since these components can be easily parallelized during training, the model was more efficient. For GNN-based models, Li et al. <ref type="bibr" target="#b7">[8]</ref> proposed a sentence constituent-aware network (SCAN) for ACSA, SCAN contained two graph attention networks (GATs), and an interactive loss function that can perform aspect-category detection task and ACSA task jointly. Tang et al. <ref type="bibr" target="#b8">[9]</ref> implemented a dependency graph enhanced dual-transformer network for ACSA, and graph convolutional networks based on semantic dependency tree were used in the model. Wang et al. <ref type="bibr" target="#b9">[10]</ref> proposed a relational GAT to encode dependency parse tree structure for sentiment predictions. To tackle the problem of relevant syntactical constraints and long-range word dependencies, Zhang et al. <ref type="bibr" target="#b5">[6]</ref> built a graph convolutional network based on the dependency tree of a sentence and outperformed a range of models. Liu et al. <ref type="bibr" target="#b10">[11]</ref> proposed a dynamic heterogeneous graph to jointly model the opinion aspects and their sentiment polarities. To represent heterogeneous relations between different events, Zheng et al. <ref type="bibr" target="#b11">[12]</ref> introduced a heterogeneous-event graph network. Furthermore, Xu et al. <ref type="bibr" target="#b12">[13]</ref> defined sentence and aspect nodes to learn the sentence and aspect representations separately with a heterogeneous graph convolutional network. For BERT-based models, Sun et al. <ref type="bibr" target="#b13">[14]</ref> fine-tuned the BERT model and achieved the state-of-the-art results. There are also some other methods. For example, Jiang et al. <ref type="bibr" target="#b14">[15]</ref> proposed a capsule-guided routing mechanism, in which the prior knowledge about sentiment categories is stored in the capsules. He et al. <ref type="bibr" target="#b15">[16]</ref> proposed an interactive multitask learning network to perform ACSA with aspect-category detection simultaneously to fully exploit the joint information.</p><p>However, existing models just exploited and learned information from one sentence and ignored structure and semantic interactions between sentences, which may lose information. As mentioned in Section I, sentences with the same aspect category and sentiment polarity can have similar structures, and structure similarity information can be shared between sentences to strengthen their features and improve the representation capacity of our model. Meanwhile, there are diverse semantic expressions toward the same aspect category, and semantic diversity information can be used to update representations of aspect categories to improve the generalizability of our model. Thus, how to extract and take advantage of structure and semantic information from related sentences is the main innovation and research contribution of our work.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. MODEL</head><p>The task of ACSA can be formulated as follows. Given a sentence S = {w 1 , w 2 , . . . , w n }, where w i is the ith word in S, and the aspect categories mentioned in the sentence</p><formula xml:id="formula_0">C S = {C S 1 , C S 2 , . . . , C S K },</formula><p>where C S k is a predefined aspect category, a model should predict sentiment polarities toward the aspect categories C S , P = {P S 1 , P S 2 , . . . , P S K }, where P S k ∈ {Positive, Neutral, Negative}.</p><p>To better exploit the structure and semantic relationships between sentences, we propose an HAGNN to pass structure and semantic information between sentences. There are three kinds of nodes in our model: word nodes, sentence nodes, and aspect nodes. Sentence nodes connect with word nodes according to word occurrence and connect with aspect nodes based on aspect categories and sentiment polarities. Word nodes play as intermediary between sentence nodes, sentence nodes can aggregate structure information from other sentence nodes through word and aspect nodes, and aspect nodes can learn diverse semantic expressions from different sentence nodes, which can improve the generalizability of our model. After structure and semantic information passing through HAGNN, representations of sentence nodes and aspect nodes will be used to predict sentiment polarities.</p><p>To learn more fine-grained aspect representations, we split one aspect node into M nodes in our model, where M is the number of sentiment polarities, and the aspect node V km a means the kth aspect category with the mth sentiment polarity. In this way, we can learn more fine-grained aspect representations with specific sentiment information than traditional methods that all sentiment polarities share the same representations. When predicting, sentence nodes will compute similarities with aspect nodes and decide the final sentiment polarity toward the given aspect category.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Heterogeneous Graph for ACSA</head><p>The heterogeneous graph in our model can be formulated as G = {V w , V s , V a , E ws , E sa }, where V w , V s , and V a denote the word nodes, sentence nodes, and aspect nodes, respectively; E ws indicates the edges between word nodes and sentence nodes; and E sa are the edges between sentence nodes and aspect nodes.</p><p>Fig. <ref type="figure" target="#fig_1">2</ref> shows the overall architecture of our model. The model mainly consists of three layers: embedding layer, graph attention layer, and predicting layer. The embedding layer initializes embeddings of nodes and edges in the graph; the graph attention layer updates the representations of nodes via GAT <ref type="bibr" target="#b16">[17]</ref> and the predicting layer predicts sentiment polarities using the final representations of sentence and aspect nodes. The details of these three layers will be introduced in the rest of this section.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Embedding Layer</head><p>In the embedding layer, we initialize the embedding of nodes and edges in the graph. To be more specific, we initialize word nodes with pretrained word embeddings X w ∈ R n * d w , where d w is the dimension of word embeddings. As for sentence nodes, we first convert a sentence s into concatenation of word embeddings. Then, we feed them into a CNN <ref type="bibr" target="#b17">[18]</ref> layer with different kernel sizes and an LSTM layer <ref type="bibr" target="#b18">[19]</ref> to extract local and global information of sentences, and the final representations of sentence nodes are X s ∈ R m * d s , where d s is the dimension of sentence embeddings. The aspect nodes are initialized with one-hot vectors and then fed into a linear layer to get representations X a ∈ R k * d a , where d a is the dimension of the aspect embeddings.</p><p>Since the same word occurring at different positions of a sentence may represent different sentiment polarities, we initialize edges E ws between word and sentence nodes with position embeddings, following the position encoding approach in transformer <ref type="bibr" target="#b19">[20]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Graph Attention Layer</head><p>Given the initialized aspect graph G = {V w , V s , V a , E ws , E sa }, we enhance GAT <ref type="bibr" target="#b16">[17]</ref> with extra edge information. This is because there are multiple aspect categories in one sentence, but not all the aspect information in this sentence is beneficial to other sentences, so we use the attention mechanism to control the information flow so that only useful information can be passed between sentences. The graph contains m +n+k nodes, where m, n, and k represent the number of word nodes, sentence nodes, and aspect nodes, respectively.</p><p>As mentioned in Section I, structure patterns and semantic patterns can be learned from interactions between sentences and aspect categories. When updating, sentence nodes can learn structure-level knowledge from other similar sentence nodes through word and aspect nodes, which can strengthen features of sentences to improve the representation capacity of our model. The aspect nodes can learn knowledge of semantic diversity from sentence nodes, which can improve the generalizability of our model.</p><p>We use h i and N i to represent the hidden state of node i and its neighbors, respectively. The GAT layer updates the node's hidden states through a multihead attention mechanism. Also, new representation h g i of node i is computed by</p><formula xml:id="formula_1">h g i = N n=1 σ ⎛ ⎝ j ∈N i α i j n W n h j ⎞ ⎠<label>(1)</label></formula><formula xml:id="formula_2">α i j n = exp f W a n W k n h i ; W v n h j l∈N i exp f W a n W k n h i ; W v n h l (2)</formula><p>where | | is the concatenation operation over vectors and α i j n represents the attention score between nodes i and j in the nth attention head. W n , W a n , W k n , and W v n represent the learnable weights in the nth attention head. σ (•) is a nonlinear function and f (•) is the LeakyReLU function <ref type="bibr" target="#b20">[21]</ref>.</p><p>To add position information of edges between word nodes and sentence nodes, we modify the traditional GAT layer by adding edge information e i j , which denotes the edge embeddings between nodes i and j. Also, (2) is converted into</p><formula xml:id="formula_3">α i j n = exp f W a n W k n h i ; W v n h j ; e i j l∈N i exp f W a n W k n h i ; W v n h l ; e il . (<label>3</label></formula><formula xml:id="formula_4">)</formula><p>Given the node representations at the tth iteration H t c and their neighbors' representations H t g , (1) can be simplified as</p><formula xml:id="formula_5">H t+1 c = GAT H t c , H t g . (<label>4</label></formula><formula xml:id="formula_6">)</formula><p>We use H t w , H t s , and H t a to represent representations of word nodes, sentence nodes, and aspect nodes at the tth iteration, and we initialize them as: H 0 w = X w , H 0 s = X s , and H 0 a = X a . Then, we update their representations using information from their neighbors. To improve the model performance, we also add a positionwise feedforward layer (FFN) with a residual connection after the GAT layer just as <ref type="bibr" target="#b21">[22]</ref>. At the (t + 1)th iteration, updating rules for three kinds of nodes can be represented as</p><formula xml:id="formula_7">U t+1 w = GAT H t w , H t s (<label>5</label></formula><formula xml:id="formula_8">)</formula><formula xml:id="formula_9">H t+1 w = FFN H t w + U t+1 w (6) U t+1 a = GAT H t a , H t s (<label>7</label></formula><formula xml:id="formula_10">)</formula><formula xml:id="formula_11">H t+1 a = FFN H t a + U t+1 a (<label>8</label></formula><formula xml:id="formula_12">)</formula><formula xml:id="formula_13">U t+1 s = GAT H t s , H t w + GAT H t s , H t a (<label>9</label></formula><formula xml:id="formula_14">)</formula><formula xml:id="formula_15">H t+1 s = FFN H t s + U t+1 s . (<label>10</label></formula><formula xml:id="formula_16">)</formula><p>After some iterations, sentence nodes will aggregate information from not only word nodes and aspect nodes but also other similar sentence nodes through word and aspect nodes, and thus, representations of sentence nodes and aspect nodes with structure and semantic information can be better represented and used to predict sentiment polarities. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>D. Predicting Layer</head><p>In the predicting layer, we use the final representations of sentence nodes and aspect nodes from the graph to predict probability distributions of the sentiment polarities. Given the representation of sentence i, V i S , and the representations of aspect j with sentiment k, V jk A , predicting operation can be formulated as</p><formula xml:id="formula_17">V j A = V j 1 A V j 2 A • • • V j M A (11) ŷ j i = softmax W a V i S V j A + b a (<label>12</label></formula><formula xml:id="formula_18">)</formula><p>where ŷ j i ∈ R M and M is the number of sentiment polarities, while W a and b a are learnable weights and bias, respectively. Also, the model is trained by minimizing the cross-entropy loss between the ground truth y j i and the output of predicting layer</p><formula xml:id="formula_19">ŷ j i L = - i j y j i ŷ j i . (<label>13</label></formula><formula xml:id="formula_20">)</formula><p>The algorithm of our model is shown in Algorithm 1.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. EXPERIMENTS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Datasets and Experiment Settings</head><p>To evaluate the effectiveness of our model, we conduct experiments on five public datasets. Rest2014 is a restaurant review dataset from SemEval 2014 Task 4 <ref type="bibr" target="#b0">[1]</ref>. Following <ref type="bibr" target="#b3">[4]</ref>, RestLarge merged the restaurant reviews from SemEval 2014 Task 4 <ref type="bibr" target="#b0">[1]</ref>, SemEval2015 Task 12 <ref type="bibr" target="#b1">[2]</ref>, and SemEval-2016 Task 5 <ref type="bibr" target="#b2">[3]</ref>, and incompatibilities of data are fixed during merging and data with conflict labels are removed from datasets. However, most of the sentences in Rest2014 and RestLarge contain only one aspect category, so the ACSA task degrades to a sentence-level sentiment analysis task. To measure the ability of our model to detect different sentiment polarities in one sentence toward different aspect categories, we construct the datasets Rest2014-hard and RestLarge-hard following <ref type="bibr" target="#b3">[4]</ref>, where one sentence contains at least two aspect categories with different sentiment polarities. MAMS is a dataset released in <ref type="bibr" target="#b14">[15]</ref> and all sentences in MAMS contain at least two aspect categories with different sentiment polarities. MAMS-small is a much more difficult dataset, which is tested on the same testing set as MAMS but with less training data. Statistics of these five datasets can be found in Table <ref type="table" target="#tab_1">II</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Compared Methods</head><p>To evaluate the performance of our model, we compare it with the following models, which can be divided into three </p><formula xml:id="formula_21">H t w = F F N(U t-1 w + U t w ) 10: U t a = G AT (H t-1 a , H t-1 s )</formula><p>11:</p><formula xml:id="formula_22">H t a = F F N(H t-1 a + U t a ) 12: U t s = G AT (H t-1 s , H t-1 w ) + G AT (H t-1 s , H t-1 a )</formula><p>13: // Equation <ref type="formula">11</ref>23:</p><formula xml:id="formula_23">H t s = F F N(H t</formula><formula xml:id="formula_24">V j A = concat (V j A , V jk A ) 24:</formula><p>end for 25:</p><p>// Equation <ref type="formula" target="#formula_17">12</ref>26:</p><formula xml:id="formula_25">ŷ j i = so f tmax(W a V i S V j A + b a ) 27:</formula><p>Output( ŷ j i ) 28: end for 29: end for groups: general sentiment analysis models, ABSA models, and BERT-based models.</p><p>1) General Sentiment Analysis Models: TextCNN <ref type="bibr" target="#b22">[23]</ref> is a sentence-level sentiment analysis method using CNN with different kernel sizes, and it can provide a strong baseline for ACSA.</p><p>LSTM <ref type="bibr" target="#b18">[19]</ref> is a widely used model in NLP, it performs well in sentence-level sentiment analysis, and various models are based on the LSTM architecture.</p><p>BiLSTM + AT <ref type="bibr" target="#b23">[24]</ref> is an LSTM-based model with bidirectional architecture and attention mechanism.</p><p>2) ABSA Models: AT-LSTM <ref type="bibr" target="#b4">[5]</ref> is an attention-based LSTM model for the ACSA task, which can capture relationships between sentences and given aspect categories. ATAE-LSTM <ref type="bibr" target="#b4">[5]</ref> takes the aspect information into account and appends it to the input sentence embeddings, and the attention mechanism is also used in ATAE-LSTM.</p><p>GCAE <ref type="bibr" target="#b3">[4]</ref> is a CNN-based model for ACSA task with gating mechanisms. Since the model can be easily parallelized, it is efficient and effective.</p><p>CapsNet <ref type="bibr" target="#b14">[15]</ref> is an aspect-level sentiment analysis method with capsule layers and performs well on many datasets.</p><p>M-AT-LSTM <ref type="bibr" target="#b24">[25]</ref> performs the aspect-category detection task and the ACSA task simultaneously and performs well in some datasets.</p><p>As-capsule <ref type="bibr" target="#b25">[26]</ref> uses the AS-Capsules to solve the aspect-level sentiment analysis task.</p><p>3) BERT-Based Models: BERT <ref type="bibr" target="#b26">[27]</ref>, BERT-QA-B <ref type="bibr" target="#b13">[14]</ref>, BERT-pair <ref type="bibr" target="#b26">[27]</ref>, and SCAN-BERT <ref type="bibr" target="#b7">[8]</ref> are BERT-based models and achieve the best performance on some datasets <ref type="bibr" target="#b7">[8]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Implementation Details</head><p>We provide two kinds of HAGNN called HAGNN-GloVe and HAGNN-BERT, where their difference lies in the way to initialize sentence nodes: HAGNN-GloVe uses LSTM and CNN to extract sentence representations with GloVe vectors as inputs and HAGNN-BERT use a BERT-based model <ref type="bibr" target="#b26">[27]</ref> to extract sentence representations. The reason we provide these two variants lies in two aspects. First, some previous works, such as AT-LSTM and GCAE, did not have the BERT version, so we use HAGNN-GloVe to make a fair comparison. Second, BERT is a huge model, which may cost a lot of time and hardware resources to train and deploy, so we provide a more lightweight version HAGNN-GloVe.</p><p>For HAGNN-GloVe, we initialize word nodes with pretrained 300-D GloVe vectors <ref type="bibr" target="#b27">[28]</ref> and initialize aspect nodes with one-hot vectors, and we initialize sentence nodes by concatenating the outputs of a two-layer bidirectional LSTM and a CNN model using GloVe vectors as inputs, the hidden size of LSTM is set to 128, the filter sizes of CNN are set to {2, 3, 4}, and the number of channels for CNN is set to 500. For HAGNN-BERT, we initialize word nodes with pretrained 300-D GloVe vectors <ref type="bibr" target="#b27">[28]</ref> and initialize aspect nodes with one-hot vectors, and we initialize sentence nodes with a BERT-based model implemented by PyTorch and adopt its suggested hyperparameters. It should be noted that we just use BERT to initialize sentence nodes and do not update BERT while training. For both HAGNN-GloVe and HAGNN-BERT, edges between word and sentence nodes are initialized with position encoding following <ref type="bibr" target="#b28">[29]</ref>. The learning rate is set to 0.001 and the dropout rate is set to 0.5. The number of training epochs is set to 200. We assume that the testing set is not available during training, so we use GAT in our model in an inductive-learning way. We run all methods five times and use average results on testing sets as the final results.</p><p>For compared models, inputs for non-BERT models are initialized with pretrained 300-D GloVe vectors. The filter sizes of TextCNN are set to {2, 3, 4} and the number of channels is set to 256. The hidden size of LSTM and BiLSTM + AT is set to 128 and the number of LSTM layers is set to 2. The dropout rate is set to 0.5 and the number of training epochs is set to 100. For BERT, we use a BERT-based model implemented by PyTorch and adopt its suggested hyperparameters. For rest of the models which are designed for the ACSA task, we follow the parameter settings in their original papers and refer to the implementation in <ref type="bibr" target="#b29">[30]</ref>. All models are optimized by Adam <ref type="bibr" target="#b30">[31]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>D. Results and Analysis</head><p>Table <ref type="table" target="#tab_4">III</ref> shows the accuracy and macroaveraged F1 score of our model and other compared models on the five public datasets. From the results, we can draw the following insights.</p><p>TextCNN, LSTM, BiLSTM + AT, and BERT perform well on the Rest2014 and RestLarge datasets but perform poorly on the other three datasets, and this is because most of the instances in Rest2014 and RestLarge datasets contain only one aspect category, so the ACSA task degrades to the sentence-level sentiment analysis task. The poor performance of these models on the other three datasets indicates that they learned little about aspect-level sentiment analysis. It also indicates that using Rest2014 and RestLarge datasets to evaluate models over the ACSA task is not close to real-world scenarios.</p><p>Other aspect-level models, AT-LSTM, ATAE-LSTM, GCAE, CapsNet, BERT-QA-B, and SCAN-BERT, also perform well on Rest2014 and RestLarge datasets and get a little improvement than the above traditional models on the Rest2014-Hard, RestLarge-Hard, and MAMS datasets. This is because they utilize the given aspect information and guide the models to attend the given aspect categories using an attention mechanism. However, they just extract information from one sentence and ignore structure and semantic interactions between sentences, which makes their improvements on the other three datasets not evident.</p><p>Our model achieves the best accuracy and macro-F1 on the RestLarge, Rest2014-Hard, RestLarge-Hard, and MAMS datasets, which indicates that our model can better handle the hard instances that have different sentiment polarities toward different aspect categories.</p><p>We contribute the reason for better performance to the following four points. First, we consider structure information between similar sentences that have the same aspect categories and sentiment polarities, and information sharing between them strengthens the performance of our model. Second, we consider diverse semantic information in different sentences, even though they have the same aspect categories and sentiment polarities. Fine-grained aspect nodes can learn this diversity and improve the generalizability of our model. We put these aspect nodes into the graph, and they can be updated with sentence nodes simultaneously, and interactions between sentences and aspect categories are more direct. Third, considering the fact that one sentence may contain many aspect categories but not all aspect information is useful to other sentences, we use a graph attention layer to control the information flow between sentences so that only related information can be passed to other sentences. Finally, considering the fact that the same word occurring at different positions of a sentence may represent different sentiment polarities, we use position embedding in our graph to better handle relationships between words and sentences.</p><p>V. DISCUSSION</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Ablation Study</head><p>To better investigate the impact of different components in our model, we conduct an ablation study on the most broadly used dataset Rest2014-hard.</p><p>The results are shown in Table <ref type="table" target="#tab_6">IV</ref>. We observe that removing word nodes or position information of edges between word and sentence nodes leads to drop on accuracy, which means that both word nodes and position information are important for the sentence nodes. The removal of sentence updating between sentence nodes also leads to worse accuracy, and we can conclude that information sharing between sentences is effective in our model. Furthermore, the removal of aspect nodes can lead to drop on accuracy, which indicates that fine-grained aspect nodes can learn semantic diversity knowledge between sentences and improve the generalizability of our model. Finally, the removal of attention mechanism in the graph leads to the largest performance drop, which shows that the attention mechanism can control the information flow between sentence nodes so that only related information can be passed to other sentence nodes.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Effect of GAT Layers</head><p>As a different number of GAT layers mean different receptive fields of our model, we investigate the effect of the GAT layer number L on the final performance of HAGNN. We test the value of L in set {0, 1, 2, 3, 4, 5, 6} and report the  corresponding accuracy and macroaveraged F1 score on the Rest2014-hard dataset with HAGNN-GloVe. The results are shown in Fig. <ref type="figure" target="#fig_2">3</ref>. We can observe that when L is 0, HAGNN gets bad performance on both accuracy and macroaveraged F1 score because there is no information passing in the graph. When L is 1, aspect nodes can get semantic diversity information from sentence nodes through the graph, which is the reason  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Transductive and Inductive Learning</head><p>To investigate the influence of transductive learning and inductive learning on HAGNN, we conduct experiments on the Rest2014-hard dataset and RestLarge-hard dataset with HAGNN-BERT. For inductive learning, we do not add sentences in the testing set into our graph, and for transductive learning, we add sentences in the testing set into our graph as sentence nodes and link them with word nodes according to sentence-word co-occurrence. The results are shown in Table <ref type="table" target="#tab_6">V</ref>. The results of transductive learning are much better than those of inductive learning, which is consistent with the general conclusion <ref type="bibr" target="#b31">[32]</ref>. Also, the reason for this phenomenon is inductive learning needs models to generalize from the training set to the testing set. Even though transductive learning gets the better performance, it needs testing data while training and cannot generalize to novel samples, which is usually not in line with actual requirements, so we follow the inductive-learning way in this article.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>D. Model Complexity</head><p>To </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>E. Visualization</head><p>To better understand how HAGNN works, we illustrate the sentence embeddings and aspect embeddings to investigate how they interact with each other. We project the final representations of sentence nodes and aspect nodes in the graph to the 8-D vectors through t-SNE. After normalization, we plot the weights of sentence embeddings and aspect embeddings in Fig. <ref type="figure" target="#fig_3">4</ref>. From the figure, we can see that S1 and A1 get the maximum at the dimension 2 and get the second maximum at the dimension 3, so the attention score between them can be great enough to help our model to make right predictions. For S2 and A2, both of them achieve the maximum at the dimension 5 and achieve the second maximum at the dimension 2, so our model can easily make right predictions according to the attention score between them.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>VI. CONCLUSION</head><p>In this article, we propose an HAGNN for ACSA. HAGNN can learn two types of pattern knowledge from interactions between sentences and aspect categories: structure patterns and semantic patterns, which enables structure similarity information to flow between sentence nodes with the same aspect categories and sentiment polarities and improve the performance of our model. Semantic diversity information can flow between sentence nodes and aspect nodes, which can improve the generalizability of our model. We train our model to learn representations of sentence nodes and aspect nodes simultaneously to maximize the final attention score between them. The results of experiments on five public datasets clearly show the effectiveness of our model.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. High-level diagram of our heterogeneous graph for ACSA. S1, S2, S3, and S4 are sentences in TableI, and senti represents the sentiment polarity toward an aspect category.</figDesc><graphic coords="2,330.95,259.61,212.78,170.18" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2 .</head><label>2</label><figDesc>Fig.2. Overall architecture of our HAGNN. The model consists of three layers. 1: embedding layer. 2: graph attention layer. 3: predicting layer. Also, there are three kinds of nodes: word nodes, sentence nodes, and aspect nodes, and two kinds of edges: word-sentence edges and sentence-aspect edges in the graph. The final representations of sentence nodes and aspect nodes will be used to predict sentiment polarities.</figDesc><graphic coords="4,78.95,58.25,453.62,226.94" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 3 .</head><label>3</label><figDesc>Fig. 3. Effect of the different number of GAT layers on the Rest2014-hard dataset with HAGNN-GloVe. Accuracy and macroaveraged F1 score over five runs are reported.</figDesc><graphic coords="7,336.76,448.20,201.30,154.30" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 4 .</head><label>4</label><figDesc>Fig. 4. Visualization of sentence embeddings and aspect embeddings on the Rest2014-hard dataset. The first line refers to sentence embeddings and the second line refers to aspect embeddings. D1-D8 refer to different dimensions of embeddings.</figDesc><graphic coords="8,50.51,58.97,510.33,170.30" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head/><label/><figDesc>analyze the model complexity, training efficiency, and inference efficiency of HAGNN, we conduct experiments on the Rest2014-hard dataset with HAGNN-BERT. From a theoretical view, the complexity of HAGNN is as same as GAT since we do not update BERT during training. Thus, the model complexity of HAGNN is O(|V |F 2 +|E|F), where |V |, |E|, and F represent the number of nodes, the number of edges, and input feature dimensions, respectively. Taking the Rest2014-hard dataset as an example, the statics of constructed graph of our model is shown in Table VI. The number of word nodes and the number of edges can be reduced by increasing the threshold of minimum number of word appearing in sentences. From an experimental view, we conduct experiments to analyze both training efficiency and inference efficiency of HAGNN compared with BERT. The training time for one epoch and the inference time for the entire testing set are reported in Table VII based on the average time of 50 experiments. All experiments are performed on the same hardware platform. From the table, we can see that the training efficiency of our model is higher than that of BERT since HAGNN-BERT just uses BERT to initialize sentence nodes and does not update BERT during training. The inference efficiency of our model is close to BERT since both two models need to perform feedforward propagation while inference. Furthermore, if our model performs in a transductive-learning way, the inference time of HAGNN can decrease to 0.0003 s since we have already performed feedforward propagation on the testing set during training.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>TABLE I TWO</head><label>I</label><figDesc>EXAMPLES OF RESTAURANT REVIEWS THAT HAVE THE SAME ASPECT CATEGORY AND SENTIMENT POLARITY. THE FIRST EXAMPLE SHOWS SIMILAR STRUCTURE-LEVEL EXPRESSIONS OF SENTENCES. THE SECOND EXAMPLE SHOWS DIFFERENT SEMANTIC-LEVEL EXPRESSIONS OF SENTENCES information can flow between sentences and aspect categories through the graph. HAGNN contains three kinds of nodes named word nodes, sentence nodes, and aspect nodes.</figDesc><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>TABLE II STATISTICS</head><label>II</label><figDesc>OF THE DATASETS FOR THE ACSA TASK</figDesc><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Algorithm 1</head><label>1</label><figDesc>Heterogeneous GAT for ACSA Input: Initialized aspect graph G = {V w , V s , V a , E ws , E sa }, number of iterations T, predefined aspect categories C S mentioned in the sentence, predefined sentiment polarities P.</figDesc><table><row><cell cols="2">Output: The sentiment probability distribution</cell><cell>ŷ j i of the sen-</cell></row><row><cell cols="2">tence i towards the aspect category j</cell></row><row><cell cols="3">1: // Initialization with embedding layer in Section III-B;</cell></row><row><cell cols="2">2: H 0 w = X w ; // Initialize word embeddings 3: H 0 s = X s ; // Initialize sentence embeddings 4: H 0 a = X a ; // Initialize aspect embeddings</cell></row><row><cell cols="3">5: // Update through GAT (Equation 4) iteratively</cell></row><row><cell>6: for t = 1, . . ., T do</cell><cell/></row><row><cell>7: // Equation 5 -10</cell><cell/></row><row><cell>8: U t w = G AT (H t-1 w , H t-1 s</cell><cell>)</cell></row><row><cell>9:</cell><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>TABLE III MODEL</head><label>III</label><figDesc>COMPARISON RESULTS (%) ON TESTING SETS. AVERAGE ACCURACY AND MACRO-F1 SCORE OVER FIVE RUNS ARE REPORTED. THE BEST SCORES ARE MARKED IN BOLD. P -VALUES BETWEEN HAGNN AND COMPARED METHODS ARE ALL LESS THAN 0.05, WHICH MEANS THAT THE PERFORMANCE IMPROVEMENT OF HAGNN OVER COMPARED METHODS IS SIGNIFICANT</figDesc><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_6"><head>TABLE V COMPARISON</head><label>V</label><figDesc/><table><row><cell>RESULTS (%) BETWEEN TRANSDUCTIVE LEARNING</cell></row><row><cell>AND INDUCTIVE LEARNING WITH HAGNN-BERT</cell></row><row><cell>for better performance of HAGNN. HAGNN achieves the best</cell></row><row><cell>performance when L is 2, and this is because sentence nodes</cell></row><row><cell>can get structure similarity information from other sentence</cell></row><row><cell>nodes with the same aspect categories and sentiment polarities</cell></row><row><cell>through aspect nodes by two hops. Meanwhile, aspect nodes</cell></row><row><cell>can get diverse semantic information from sentence nodes. The</cell></row><row><cell>above results indicate that HAGNN can learn the structure and</cell></row><row><cell>semantic patterns between sentences through the graph and</cell></row><row><cell>improve the performance of our model. When L increases,</cell></row><row><cell>the performance of HAGNN drops heavily, and we think that</cell></row><row><cell>this is because sentence nodes and aspect nodes get much</cell></row><row><cell>noise from other unrelated sentence nodes by more than two</cell></row><row><cell>hops.</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_7"><head>TABLE VI STATICS</head><label>VI</label><figDesc>OF THE CONSTRUCTED GRAPH ON THE REST2014-HARD DATASET. |V w |, |V s |, |V a |, |V |, |E|, AND F REFER TO THE NUMBER OF WORD NODES, NUMBER OF SENTENCE NODES, NUMBER OF ASPECT NODES, TOTAL NUMBER OF NODES, NUMBER OF EDGES, AND INPUT FEATURE DIMENSIONS, RESPECTIVELY TABLE VII TRAINING TIME (SECOND) OF EACH EPOCH AND INFERENCE TIME (SECOND) ON THE ENTIRE TESTING SET FOR DIFFERENT MODELS</figDesc><table/></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>Authorized licensed use limited to: The Open University. Downloaded on October 01,2025 at 22:28:56 UTC from IEEE Xplore. Restrictions apply.</p></note>
+		</body>
+		<back>
+
+			<div type="funding">
+<div><p>This work was supported in part by the <rs type="funder">National Key Research and Development Program of China</rs> under Grant <rs type="grantNumber">2020AAA0108800</rs>; in part by the <rs type="funder">National Natural Science Foundation of China</rs> under Grant <rs type="grantNumber">62137002</rs>, Grant <rs type="grantNumber">61721002</rs>, Grant <rs type="grantNumber">61937001</rs>, Grant <rs type="grantNumber">61877048</rs>, and Grant <rs type="grantNumber">62177038</rs>; in part by the <rs type="funder">Innovation Research Team of Ministry of Education</rs> under Grant <rs type="grantNumber">IRT_17R86</rs>; in part by the <rs type="funder">Project of China Knowledge Centre for Engineering Science and Technology</rs>; in part by the <rs type="funder">Natural Science Basic Research Plan in Shaanxi Province of China</rs> under Grant <rs type="grantNumber">2020JM-070</rs>; and in part by the <rs type="funder">Ministry of Education-China Mobile Communication Corporation (MoE-CMCC)</rs> "<rs type="projectName">Artificial Intelligence</rs>" Project under Grant <rs type="grantNumber">MCM20190701</rs>; in part by the <rs type="funder">Project of Chinese Academy of Engineering</rs> (The <rs type="projectName">Online and Offline Mixed Educational Service System for "The Belt and Road" Training in MOOC China</rs>).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_p2Np8Hc">
+					<idno type="grant-number">2020AAA0108800</idno>
+				</org>
+				<org type="funding" xml:id="_fb4TARX">
+					<idno type="grant-number">62137002</idno>
+				</org>
+				<org type="funding" xml:id="_FBuu5Kt">
+					<idno type="grant-number">61721002</idno>
+				</org>
+				<org type="funding" xml:id="_FHMZWN6">
+					<idno type="grant-number">61937001</idno>
+				</org>
+				<org type="funding" xml:id="_W5HCtMj">
+					<idno type="grant-number">61877048</idno>
+				</org>
+				<org type="funding" xml:id="_WmU6wBY">
+					<idno type="grant-number">62177038</idno>
+				</org>
+				<org type="funding" xml:id="_TpwNm3V">
+					<idno type="grant-number">IRT_17R86</idno>
+				</org>
+				<org type="funding" xml:id="_sXe3JR7">
+					<idno type="grant-number">2020JM-070</idno>
+				</org>
+				<org type="funded-project" xml:id="_gKWzJKX">
+					<idno type="grant-number">MCM20190701</idno>
+					<orgName type="project" subtype="full">Artificial Intelligence</orgName>
+				</org>
+				<org type="funded-project" xml:id="_Fe5AGfX">
+					<orgName type="project" subtype="full">Online and Offline Mixed Educational Service System for "The Belt and Road" Training in MOOC China</orgName>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Wenbin An received the B.S. degree in information engineering from Northwestern Polytechnical University, Xi'an, China, in 2020. He is currently pursuing the Ph.D. degree with the School of Automation Science and Engineering, Xi'an Jiaotong University, Xi'an.</p><p>His research interests include natural language processing and transfer learning. </p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">SemEval-2014 task 4: Aspect based sentiment analysis</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pontiki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Galanis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Pavlopoulos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Papageorgiou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Androutsopoulos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Manandhar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 8th Int. Workshop Semantic Eval. (SemEval)</title>
+		<meeting>8th Int. Workshop Semantic Eval. (SemEval)</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="27" to="35"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">SemEval-2015 Task 12: Aspect based sentiment analysis</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pontiki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Galanis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Papageorgiou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Manandhar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 9th Int. Workshop Semantic Eval. (SemEval)</title>
+		<meeting>9th Int. Workshop Semantic Eval. (SemEval)<address><addrLine>Denver, CO, USA</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2015-06">Jun. 2015</date>
+			<biblScope unit="page" from="486" to="495"/>
+		</imprint>
+	</monogr>
+	<note>Androutsopoulos</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Semeval-2016 task 5: Aspect based sentiment analysis</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pontiki</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Int. Workshop Semantic Eval</title>
+		<meeting>Int. Workshop Semantic Eval</meeting>
+		<imprint>
+			<date type="published" when="2016-06">Jun. 2016</date>
+			<biblScope unit="page" from="19" to="30"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Aspect based sentiment analysis with gated convolutional networks</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Xue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 56th Annu. Meeting Assoc. Comput. Linguistics (ACL)</title>
+		<meeting>56th Annu. Meeting Assoc. Comput. Linguistics (ACL)</meeting>
+		<imprint>
+			<date type="published" when="2018-07">Jul. 2018</date>
+			<biblScope unit="page" from="2514" to="2523"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Attention-based LSTM for aspect-level sentiment classification</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Conf. Empirical Methods Natural Lang. Process</title>
+		<meeting>Conf. Empirical Methods Natural Lang. ess</meeting>
+		<imprint>
+			<date type="published" when="2016-11">Nov. 2016</date>
+			<biblScope unit="page" from="606" to="615"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Aspect-based sentiment classification with aspect-specific graph convolutional networks</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Song</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Conf. Empirical Methods Natural Lang. Process. 9th Int. Joint Conf. Natural Lang. Process. (EMNLP-IJCNLP)</title>
+		<meeting>Conf. Empirical Methods Natural Lang. ess. 9th Int. Joint Conf. Natural Lang. ess. (EMNLP-IJCNLP)</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="4567" to="4577"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Combination of recursive and recurrent neural networks for aspect-based sentiment analysis using inter-aspect relations</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Aydin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Gungor</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="77820" to="77832"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Sentence constituent-aware aspectcategory sentiment analysis with graph attention networks</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-H</forename><surname>Zhong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Natural Language Processing and Chinese Computing</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="volume">12430</biblScope>
+			<biblScope unit="page" from="815" to="827"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Dependency graph enhanced dual-transformer structure for aspect-based sentiment classification</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Zhou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 58th Annu. Meeting Assoc. Comput. Linguistics</title>
+		<meeting>58th Annu. Meeting Assoc. Comput. Linguistics</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="6578" to="6588"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Relational graph attention network for aspect-based sentiment analysis</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Quan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 58th Annu. Meeting Assoc. Comput. Linguistics</title>
+		<meeting>58th Annu. Meeting Assoc. Comput. Linguistics</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="3229" to="3238"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title level="m" type="main">Jointly modeling aspect and sentiment with dynamic heterogeneous graph neural networks</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Su</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Sun</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2004.06427</idno>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Heterogeneous graph neural networks to predict what happen next</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 28th Int. Conf. Comput. Linguistics</title>
+		<meeting>28th Int. Conf. Comput. Linguistics</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="328" to="338"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Aspect-specific heterogeneous graph convolutional network for aspect-based sentiment classification</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="139346" to="139355"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<title level="m" type="main">Utilizing BERT for aspectbased sentiment analysis via constructing auxiliary sentence</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Qiu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1903.09588</idno>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">A challenge dataset and effective models for aspect-based sentiment analysis</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Ao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Conf. Empirical Methods Natural Lang. Process. 9th Int. Joint Conf. Natural Lang. Process. (EMNLP-IJCNLP)</title>
+		<meeting>Conf. Empirical Methods Natural Lang. ess. 9th Int. Joint Conf. Natural Lang. ess. (EMNLP-IJCNLP)</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="6280" to="6285"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">An interactive multitask learning network for end-to-end aspect-based sentiment analysis</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">S</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">T</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dahlmeier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 57th Annu. Meeting Assoc. Comput. Linguistics</title>
+		<meeting>57th Annu. Meeting Assoc. Comput. Linguistics</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="504" to="515"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<author>
+			<persName><forename type="first">P</forename><surname>Veličković</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Cucurull</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Casanova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Romero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Liò</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1710.10903</idno>
+		<title level="m">Graph attention networks</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Gradient-based learning applied to document recognition</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lecun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bottou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Haffner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. IEEE</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="2278" to="2324"/>
+			<date type="published" when="1998-11">Nov. 1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Long short-term memory</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hochreiter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schmidhuber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="1735" to="1780"/>
+			<date type="published" when="1997-11">Nov. 1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Attention is all you need</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vaswani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Adv. Neural Inf. Process. Syst</title>
+		<meeting>Adv. Neural Inf. ess. Syst</meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="5998" to="6008"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<title level="m" type="main">Empirical evaluation of rectified activations in convolutional network</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1505.00853</idno>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Heterogeneous graph neural networks for extractive document summarization</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Qiu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Huang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 58th Annu. Meeting Assoc. Comput. Linguistics</title>
+		<meeting>58th Annu. Meeting Assoc. Comput. Linguistics</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="6209" to="6219"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Convolutional neural networks for sentence classification</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kim</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Conf. Empirical Methods Natural Lang. Process. (EMNLP)</title>
+		<meeting>Conf. Empirical Methods Natural Lang. ess. (EMNLP)</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="1746" to="1751"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Attentionbased bidirectional long short-term memory networks for relation classification</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Qi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Xu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. ACL</title>
+		<meeting>ACL<address><addrLine>Berlin, Germany</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2016-08">Aug. 2016</date>
+			<biblScope unit="page" from="207" to="212"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<title level="m" type="main">CAN: Constrained attention networks for multi-aspect sentiment analysis</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1812.10735</idno>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Aspect-level sentiment analysis using AS-capsules</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. World Wide Web Conf. (WWW)</title>
+		<meeting>World Wide Web Conf. (WWW)</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="2033" to="2044"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<title level="m" type="main">BERT: Pre-training of deep bidirectional transformers for language understanding</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Devlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-W</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Toutanova</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1810.04805</idno>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">GloVe: Global vectors for word representation</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Pennington</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Conf. Empirical Methods Natural Lang. Process</title>
+		<meeting>Conf. Empirical Methods Natural Lang. ess<address><addrLine>Doha, Qatar</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2014-10">Oct. 2014</date>
+			<biblScope unit="page" from="1532" to="1543"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Attention is all you need</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vaswani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Adv. Neural Inf. Process. Syst</title>
+		<meeting>Adv. Neural Inf. ess. Syst</meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="5998" to="6008"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Deep learning for aspect-level sentiment classification: Survey, vision, and challenges</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">X</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><forename type="middle">V</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>He</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="78454" to="78483"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<title level="m" type="main">Adam: A method for stochastic optimization</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Kingma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ba</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1412.6980</idno>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">A comparative study of inductive and transductive learning with feedforward neural networks</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bianchini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Belahcen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Scarselli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Conf. Italian Assoc. Artif. Intell</title>
+		<meeting>Conf. Italian Assoc. Artif. Intell<address><addrLine>Cham, Switzerland</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="283" to="293"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

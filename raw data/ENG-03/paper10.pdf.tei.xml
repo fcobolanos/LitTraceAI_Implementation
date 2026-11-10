@@ -1,0 +1,1670 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Monitoring Horizontal and Vertical Components of SAMARCO Mine Dikes Deformations by DInSAR-SBAS Using TerraSAR-X and Sentinel-1 Data</title>
+				<funder>
+					<orgName type="full">Instituto Nacional de Pesquisas Espaciais</orgName>
+					<orgName type="abbreviated">INPE</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">VISIONA TECNOLOGIA ESPACIAL S.A</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Agência Espacial Brasileira</orgName>
+					<orgName type="abbreviated">AEB</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">AIRBUS DEFENCE</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2022-11-10">10 November 2022</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Fábio</forename><forename type="middle">F</forename><surname>Gama</surname></persName>
+							<idno type="ORCID">0000-0002-4585-5067</idno>
+							<affiliation key="aff0">
+								<orgName type="institution">National Institute for Space Research (INPE)</orgName>
+								<address>
+									<addrLine>São José dos Campos</addrLine>
+									<postCode>12227-010</postCode>
+									<settlement>São Paulo</settlement>
+									<country key="BR">Brazil</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alessio</forename><surname>Cantone</surname></persName>
+							<idno type="ORCID">0000-0002-4585-5067</idno>
+							<affiliation key="aff1">
+								<orgName type="institution">Sarmap S.A</orgName>
+								<address>
+									<addrLine>Via Stazione 52</addrLine>
+									<postCode>6987</postCode>
+									<settlement>Caslano</settlement>
+									<country key="CH">Switzerland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">José</forename><forename type="middle">C</forename><surname>Mura</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">National Institute for Space Research (INPE)</orgName>
+								<address>
+									<addrLine>São José dos Campos</addrLine>
+									<postCode>12227-010</postCode>
+									<settlement>São Paulo</settlement>
+									<country key="BR">Brazil</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Monitoring Horizontal and Vertical Components of SAMARCO Mine Dikes Deformations by DInSAR-SBAS Using TerraSAR-X and Sentinel-1 Data</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2022-11-10">10 November 2022</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">960D414BDD4F4BD6D854CB6294BC91C0</idno>
+					<idno type="DOI">10.3390/mining2040040</idno>
+					<note type="submission">Received: 19 August 2022 Accepted: 31 October 2022</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-09-01T12:23+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>A-DINSAR</term>
+					<term>SBAS</term>
+					<term>SAMARCO</term>
+					<term>dikes</term>
+					<term>tailings dam</term>
+					<term>Sentinel-1</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>This article presents an investigation of ground movement measurements based on a combination of TerraSAR-X and Sentinel-1 data, in opposite tracks, aiming to detect ground deformation of the remaining dikes of Germano mine, after the Fundão dam collapse. The differential interferometry technique SBAS (Small Baseline Subset) was applied to obtain the deformation of the surface in different Line of Sight (LoS), in order to carry out the vector decomposition and generate the deformation measurements in the vertical and horizontal directions. A set of 37 single-look complex (SLC) images of TerraSAR-X (TSX), acquired during the period from 19 February 2016 to 15 May 2017, and 37 SLC images of Sentinel-1, acquired from 8 February 2016 to 15 May 2017, were used to perform this investigation. For the TerraSAR-X interferometric processing, a coherence threshold of 40%, 4 looks in range and 2 looks in azimuth, 1200 m of atmospheric filter, and 10 % of max normal baseline of the critical were used. For the Sentinel-1 interferometric processing a coherence threshold of 26%, 8 looks in range and 2 looks in azimuth, 1200 m of atmospheric filter, and 20% of the of max normal baseline of the critical were used. For both sensors a digital elevation model generated by Pleiades 1-A was used for removing the topographic phase component. The final results were consistent with the topographic in situ measurements, providing key information to make crucial decisions regarding risks, or even mitigation, repairs or emergency response, as well as for a better understanding of the on-going instability phenomena affecting the dikes and dams.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>Currently, mining is one of the main economic activities in Brazil, which produces and exports more than 50 types of minerals. Among these, iron ore is the most prominent in the country, with Brazil being the second largest exporter of iron ore in the world market in 2020, producing 400 million metric tons of iron ore.</p><p>In turn, the activities of an iron mining company can be basically divided into the mining process, the extraction of iron ore from its place of origin, and the ore beneficiation process, which is characterized by chemical and physical operations aimed at ore treatment so that it achieves the desired commercial characteristics. Both process-es, however, generate unwanted waste.</p><p>During the mining process, materials that do not possess the desired physico-chemical characteristics are called sterile. Tailings result from processing, since the final product obtained represents only a portion of all the material extracted, and this is stored in tailings dams as the final destination of these residues.</p><p>According to the Brazilian National Mining Agency (ANM), there were 769 tailings dams identified in Brazil at the beginning of 2019, with an accumulation of 3.5 billion m 3 of mining waste, and 84 tailing dams were raised using the upstream method <ref type="bibr" target="#b0">[1]</ref>. This method is the cheapest but the least resilient of all construction types, due to the fact that water is the primary instability agent <ref type="bibr" target="#b1">[2]</ref>.</p><p>The most frequent causes of failures are overtopping and overflows, slope foundation problems including slope settlement and instability, internal erosion and infiltration, the materials used in construction and inadequate maintenance <ref type="bibr" target="#b2">[3]</ref>. Slope failures occur in a wide range of conditions and environments and the precursor signs before a failure may not be evident.</p><p>Different procedures for monitoring tailings dams' stability have been applied using different geotechnical instruments such as total station, piezometers, strain gauges, shape array accelerometers, inclinometers, water level indicators, and ground radars, etc. <ref type="bibr" target="#b3">[4]</ref>, providing real-time data from fast movements (mm/day to a few tens of cm/day) to very slow movements (mm/month to mm/year). Despite the accuracy and reliability of the data provided by these instruments, many precursor signals of the failures cannot be detected due to several factors, such as field measurements restricted to points or sectors of the structure, field work that can be expensive and time consuming, adverse weather conditions, accessibility restrictions, inadequate instrument field of view, and economic restrictions, etc. With the advent of differential interferometric synthetic aperture radar (A-DInSAR) technologies <ref type="bibr" target="#b4">[5]</ref>, it was possible to perform surface displacement measurements with data from radar satellites, with individual measurements' precision better than 5 mm depending on the radar system, without field work or ground equipment, providing a dense measurement grid and synoptic view of the area of interest <ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref>. Many studies have obtained relevant results using the A-DInSAR to monitor the displacement of open pit mines <ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref><ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref><ref type="bibr" target="#b21">[22]</ref><ref type="bibr" target="#b22">[23]</ref> as well as underground mines <ref type="bibr" target="#b23">[24]</ref><ref type="bibr" target="#b24">[25]</ref><ref type="bibr" target="#b25">[26]</ref><ref type="bibr" target="#b26">[27]</ref><ref type="bibr" target="#b27">[28]</ref><ref type="bibr" target="#b28">[29]</ref><ref type="bibr" target="#b29">[30]</ref><ref type="bibr" target="#b30">[31]</ref>.</p><p>Near Mariana city, in Minas Gerais State (southeast of Brazil) there is an iron mine complex called Germano, in which, on the afternoon of 5 November 2015, one tailings dam (Fundão dam) collapsed, and 32.6 million cubic meters of mining waste material spilled from the dam and caused the Bento Rodrigues village to be totally flooded by mudslides, with human losses and great environmental impact <ref type="bibr" target="#b2">[3]</ref>.</p><p>The most likely cause of Fundão dam collapse was due to liquefaction of the sandy tailings of the base of the dam, impairing its mechanical strength <ref type="bibr" target="#b2">[3]</ref>. A set chain of events and conditions related to the dam construction and operations caused the collapse, such as: the original starter dike became damaged due to the increased saturation, the slimes were deposited in areas not planned, the dam rose over the slimes due to the structural problems with a concrete pipe, and a series of three small seismic shocks that happened 90 min before the collapse <ref type="bibr" target="#b31">[32]</ref>. After the dam col-lapse, the mudflow reached the Gualaxo and Doce River, and traversed 600 km before spilling into the Atlantic Ocean on the north coast of Espírito Santo state, causing huge environmental damage due to the mud plume's effects on marine life <ref type="bibr" target="#b32">[33,</ref><ref type="bibr" target="#b33">34]</ref>. Germano iron mining complex is owned and operated by SAMARCO Mineração S.A., that is a joint venture between and the Brazilian Vale S.A. and the Australian-British BHP Billiton Brazil Ltd.</p><p>Some studies using different DInSAR techniques were carried out with the objective of detecting the stability of the dam of the Germano iron mining complex, using data from TerraSAR or Sentinel-1 <ref type="bibr" target="#b13">[14,</ref><ref type="bibr" target="#b16">17,</ref><ref type="bibr" target="#b17">18,</ref><ref type="bibr" target="#b19">20]</ref> satellites. The results of the measurements were obtained in the line of sight (LoS) of the satellite, which allowed for estimating for the estimation of the vertical deformation projected in the LoS, but the deformations in the horizontal direction could not be estimated with the data in a single view.</p><p>The use of radar data on opposing acquisition geometries (ascending and descending orbits) can provide more accurate measurements of vertical and horizontal displacements, using data from the same satellite for this procedure. In turn, the possibility of combining interferometric data from different sensors to perform the vertical and horizontal vector decomposition is feasible, since open access data can be used to compose both geometries. With the open access availability of data from the Sentinel-1 SAR mission, with systematic and regular survey, and its ability to perform interferometric processing <ref type="bibr" target="#b34">[35]</ref><ref type="bibr" target="#b35">[36]</ref><ref type="bibr" target="#b36">[37]</ref><ref type="bibr" target="#b37">[38]</ref><ref type="bibr" target="#b38">[39]</ref>, it is interesting as a complementary source with other radar satellites such as Cosmo-Skymed and TerraSAR, etc.</p><p>In this work, the results and the evaluation of the combination of TerraSAR-X and Sentinel-1 data are presented and discussed, in opposite tracks, aiming to detect horizontal and vertical components of the ground deformation of the remaining dikes of the Germano mine, after the Fundão dam collapse, as a novelty. The SBAS technique (small baseline subset) was used to obtain the deformation of the surface in different LoS, in order to carry out the vector decomposition and generate the deformation measurements in the vertical and horizontal directions.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Materials and Methods</head><p>In this section, we describe the test site and the methodological approach used in this paper. This approach consists of SBAS processing and validation.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.">Study Area</head><p>Our experiment was performed in the Germano Iron Complex, which is located in the southern border of the São Francisco Craton, easternmost portion of the Iron Quadrangle (Quadrilátero Ferrífero-QF). This area is characterized by hilly to mountainous reliefs, diversified vegetation cover, intense anthropogenic activity (rural and urban) and mineral exploration by open pit iron mines, some already in the process of deactivation. The QF is located in the southern portion of the São Francisco Craton <ref type="bibr" target="#b39">[40]</ref>. This geotectonic unit comprises a cratonic core stabilized in the Lower Proterozoic. Folding bands, generated in the Brasiliano cycle, limit and define the current contour of the São Francisco Craton. The QF constitutes part of the craton basement and can be characterized as follows: Metamorphic complexes; Archean volcano-sedimentary sequences of the "greenstone belt" type encompassed in the Rio das Velhas Supergroup; and platform sedimentary covers of Paleoproterozoic ages represented by the Minas Supergroup and Itacolomi Group <ref type="bibr" target="#b40">[41]</ref>.</p><p>Currently, the Germano Iron Complex is explored by the Brazilian SAMARCO Mineração S.A., with open pit mines, waste piles, industrial plants, pipelines, and tailings dams. The first tailings dam was Germano, which was installed in 1976 using the upstream method of construction with the implantation of a start dike with 70 m height. Upstream tailings dams are built progressively "upstream" of the starter dam by incorporating tailings materials into the dam for support through the controlled deposition. While using tailings materials to build the dam reduces construction costs, upstream tailings dams are more susceptible to cracking, liquefaction and erosion. This type of construction tends to be less stable than other dam design in the occurrence of seismic events, because tailings materials may liquefy and lose their strength.</p><p>This iron mining complex is an important iron producer in Brazil, and it was composed of two huge tailings dams (Germano and Fundão) as well as the auxiliary dikes (Sela, Tulipa, Baia 3, Selinha). On the afternoon of 5 November 2015, the Fundão tailings dam collapsed, which contained around 55 million cubic meters of tailings materials. Due to this, 32.6 million cubic meters of tailings spilled from the dam and reached the Bento Rodrigues village, 2.5 km away, which was completely flooded and destroyed by the mudslides <ref type="bibr" target="#b41">[42]</ref>. In addition, the mud waves eroded the base of the Germano dam, as well as causing damage to the Sela, Tulipa, and Selinha dikes. Figure <ref type="figure" target="#fig_0">1</ref> shows the Germano mining complex after the collapse of Fundão dam, with the highlighted mining structures, which were monitored by A-DInSAR technique. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.">Methodological Approach</head><p>The A-DInSAR analysis was carried out using the SBAS technique <ref type="bibr" target="#b6">[7]</ref> using SARSCAPE software version 5.4.1. The differential interferometric phase is the result of the contribution of five phase components related to: topography, displacement, atmosphere, orbit error, and noise <ref type="bibr">[43]</ref>. The topographic phase can be partially re-moved using a known digital elevation model (DEM), and the others phase components (atmosphere, orbit error, and noise) can be estimated and removed by proper image stack processing, leaving the phase component referring to the displacement. The phase components of the differential phase can be represented by:</p><formula xml:id="formula_0">∅ ∆ ( , ) = ∅ ( , ) + ∅ ( , ) + ∅ ( , ) + ∅ ( , ) + ∅ ( , ),<label>(1)</label></formula><p>where x and r are the azimuth and slant range coordinates, ∅ is the phase shift due to the displacement of the pixel in LoS direction, ∅ is the topographic phase error, ∅ is the atmospheric phase delay, ∅ is the residual phase due to orbit errors and ∅ is due to the phase noise.</p><p>In our experiment, the digital elevation model (DEM) used was generated using the rational polynomial coefficients (RPC) model available on the PCI Geomatica OrthoEngine software Version 2018 (PCI Geomatics, Markham, ON, Canada) making full use of the auxiliary parameters of the Pleiades 1-A images acquired on 19 June 2016. This DEM was provided by VISIONA Space Technology Company, with 1 m of spatial resolution, based on triplet of stereoscopic images with spatial resolution of 0.5 m. The methodology used of this procedure is presented in Ostrowski and Cheng <ref type="bibr" target="#b42">[44]</ref>.</p><p>The SBAS approach work with interferograms produced by data pairs characterized by small orbital separation (normal baseline) and small temporal separation (temporal baseline) to limit the spatial and temporal decorrelation effects. The multi-referenced dif- </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.">Methodological Approach</head><p>The A-DInSAR analysis was carried out using the SBAS technique <ref type="bibr" target="#b6">[7]</ref> using SARSCAPE software version 5.4.1. The differential interferometric phase is the result of the contribution of five phase components related to: topography, displacement, atmosphere, orbit error, and noise <ref type="bibr">[43]</ref>. The topographic phase can be partially re-moved using a known digital elevation model (DEM), and the others phase components (atmosphere, orbit error, and noise) can be estimated and removed by proper image stack processing, leaving the phase component referring to the displacement. The phase components of the differential phase can be represented by:</p><formula xml:id="formula_1">∅ ∆t(x,r) = ∅ disp(x,r) + ∅ top(x,r) + ∅ atm(x,r) + ∅ orb(x,r) + ∅ n(x,r),<label>(1)</label></formula><p>where x and r are the azimuth and slant range coordinates, ∅ disp is the phase shift due to the displacement of the pixel in LoS direction, ∅ top is the topographic phase error, ∅ atm is the atmospheric phase delay, ∅ orb is the residual phase due to orbit errors and ∅ n is due to the phase noise.</p><p>In our experiment, the digital elevation model (DEM) used was generated using the rational polynomial coefficients (RPC) model available on the PCI Geomatica OrthoEngine software Version 2018 (PCI Geomatics, Markham, ON, Canada) making full use of the auxiliary parameters of the Pleiades 1-A images acquired on 19 June 2016. This DEM was provided by VISIONA Space Technology Company, with 1 m of spatial resolution, based on triplet of stereoscopic images with spatial resolution of 0.5 m. The methodology used of this procedure is presented in Ostrowski and Cheng <ref type="bibr" target="#b42">[44]</ref>.</p><p>The SBAS approach work with interferograms produced by data pairs characterized by small orbital separation (normal baseline) and small temporal separation (temporal baseline) to limit the spatial and temporal decorrelation effects. The multi-referenced differential interferograms, generated according to the small baseline constraint, are spatially filtered (multi-look) to improve the phase quality to make the process of phase unwrapping easier. The algorithm uses a singular value decomposition (SVD) technique for the inversion to retrieve the average surface deformation velocity and residual topography (First Inversion) and the temporal evolution of surface deformations (Second Inversion) of distributed targets. The availability of a high number of valid interferograms (at least 20) is the basis for the reliability of the estimated products. Figure <ref type="figure" target="#fig_2">2</ref> shows the flow chart of the processing SBAS with TerraSAR-X data and Sentinel-1 data.</p><p>PEER <ref type="bibr">REVIEW 5</ref> filtered (multi-look) to improve the phase quality to make the process of phase unwrapping easier. The algorithm uses a singular value decomposition (SVD) technique for the inversion to retrieve the average surface deformation velocity and residual topography (First Inversion) and the temporal evolution of surface deformations (Second Inversion) of distributed targets. The availability of a high number of valid interferograms (at least 20) is the basis for the reliability of the estimated products. Figure <ref type="figure" target="#fig_2">2</ref> shows the flow chart of the processing SBAS with TerraSAR-X data and Sentinel-1 data. The DInSAR data are able to measure variations only in the range direction along the satellite line of sight (LoS). In order to obtain the true displacement component, it is necessary to combine two or more interferometric data stacks acquired over the same area from different geometries. Applying this approach makes it possible to estimate the vertical and horizontal components of the true displacement (def), based on the LoS displacement values (defLoS) and incident angles of both acquisitions for each pixel (Figure <ref type="figure" target="#fig_5">3a</ref>) <ref type="bibr" target="#b43">[45,</ref><ref type="bibr" target="#b44">46]</ref>. As the satellites move in near polar orbits and the angles of the North-South axis are relatively small, less than 12 degrees, this makes DInSAR too insensitive for measuring components in the North-South direction (Figure <ref type="figure" target="#fig_5">3b</ref>), meaning that only deformations in the East-West direction and vertical are feasible. The DInSAR data are able to measure variations only in the range direction along the satellite line of sight (LoS). In order to obtain the true displacement component, it is necessary to combine two or more interferometric data stacks acquired over the same area from different geometries. Applying this approach makes it possible to estimate the vertical and horizontal components of the true displacement (def ), based on the LoS displacement values (defLoS) and incident angles of both acquisitions for each pixel (Figure <ref type="figure" target="#fig_5">3a</ref>) <ref type="bibr" target="#b43">[45,</ref><ref type="bibr" target="#b44">46]</ref>. As the satellites move in near polar orbits and the angles of the North-South axis are relatively small, less than 12 degrees, this makes DInSAR too insensitive for measuring components in the North-South direction (Figure <ref type="figure" target="#fig_5">3b</ref>), meaning that only deformations in the East-West direction and vertical are feasible.</p><p>The TerraSAR (X-band) and Sentinel-1 (C-band) data were used to measure the displacements along the line of sight (LoS) of the Germano mining structures for a period of 16 months in opposite orbits in order for it to be possible to carry out vector decomposition.</p><p>A total of 37 single-look complex (SLC) images from Sentinel-1B (S1B) were used, at IW mode, VV polarization, descending orbits, 41.23 • incidence angle, 12-day revisit, looking azimuth ~280 degrees (Figure <ref type="figure" target="#fig_8">4b</ref>), over a monitoring period from 8 February 2016 to 15 May 2017. Currently, Sentinel-1 imaging is performed systematically in dual mode, with VV and VH polarizations, VV polarization was chosen because VH polarization would have a lower signal level and would be more related to the volume of vegetation.</p><p>tical and horizontal components of the true displacement (def), based on the LoS displacement values (defLoS) and incident angles of both acquisitions for each pixel (Figure <ref type="figure" target="#fig_5">3a</ref>) <ref type="bibr" target="#b43">[45,</ref><ref type="bibr" target="#b44">46]</ref>. As the satellites move in near polar orbits and the angles of the North-South axis are relatively small, less than 12 degrees, this makes DInSAR too insensitive for measuring components in the North-South direction (Figure <ref type="figure" target="#fig_5">3b</ref>), meaning that only deformations in the East-West direction and vertical are feasible. The TerraSAR (X-band) and Sentinel-1 (C-band) data were used to measure the displacements along the line of sight (LoS) of the Germano mining structures for a period of 16 months in opposite orbits in order for it to be possible to carry out vector decomposition.</p><p>A total of 37 single-look complex (SLC) images from Sentinel-1B (S1B) were used, at IW mode, VV polarization, descending orbits, 41.23° incidence angle, 12-day revisit, looking azimuth ~280 degrees (Figure <ref type="figure" target="#fig_8">4b</ref>), over a monitoring period from 8 February 2016 to 15 May 2017. Currently, Sentinel-1 imaging is performed systematically in dual mode, with VV and VH polarizations, VV polarization was chosen because VH polarization would have a lower signal level and would be more related to the volume of vegetation.  For the ascending orbits, 37 TerraSAR-X (TSX) images were used for the period of 19 February 2016 to 15 May 2017. These images were acquired in StripMap mode, looking azimuth ~80 degrees (Figure <ref type="figure" target="#fig_8">4b</ref>), revisiting time of 11 days, pixel spacing of 1.91 m × 0.91 m (azimuth and range), incidence angle of 35.22°, and covering 30 × 60 km. Figure <ref type="figure" target="#fig_8">4a</ref> shows the acquisition schedule of TSX and S1B data, as well as the topographic surveying carried out in two different periods in the test site.</p><p>To evaluate the SBAS results, topographic survey (TS) data in situ were used, acquired by a robotic station Leica TM50 (0.6 mm + 1.0 ppm of nominal accuracy) and reflective prisms. Eight prisms installed in different regions, called: ST-1, ST-11, ST-12, ST-13, SL-2, SL-7, 24ZI402 and 24ZI408, installed on the dikes and dam, were chosen to validate the SBAS results. The TS data were carried out and provided by the geotechnical team of SAMARCO Company.</p><p>Taking into account that the prisms to total station distances were around 800 m, and For the ascending orbits, 37 TerraSAR-X (TSX) images were used for the period of 19 February 2016 to 15 May 2017. These images were acquired in StripMap mode, looking azimuth ~80 degrees (Figure <ref type="figure" target="#fig_8">4b</ref>), revisiting time of 11 days, pixel spacing of 1.91 m × 0.91 m (azimuth and range), incidence angle of 35.22 • , and covering 30 × 60 km. Figure <ref type="figure" target="#fig_8">4a</ref> shows the acquisition schedule of TSX and S1B data, as well as the topographic surveying carried out in two different periods in the test site.</p><p>To evaluate the SBAS results, topographic survey (TS) data in situ were used, acquired by a robotic station Leica TM50 (0.6 mm + 1.0 ppm of nominal accuracy) and reflective prisms. Eight prisms installed in different regions, called: ST-1, ST-11, ST-12, ST-13, SL-2, SL-7, 24ZI402 and 24ZI408, installed on the dikes and dam, were chosen to validate the SBAS results. The TS data were carried out and provided by the geotechnical team of SAMARCO Company.</p><p>Taking into account that the prisms to total station distances were around 800 m, and the angular errors of the prisms and station were 2.5 s, the nominal TS measurements error was ±8 mm. Since, in theory, the zero reading can present the same nominal error, the established limit of two times the nominal error (accumulated error totalizing 16 mm) was considered as the safety limit for the detection of movements, according to the geotechnical team of the SAMARCO Company.</p><p>The TS measurement provided vertical and horizontal values of deformation in different time periods when compared to the TSX and S1B acquisitions. Figure <ref type="figure" target="#fig_8">4a</ref> illustrates the different time set of the data, and Figure <ref type="figure" target="#fig_8">4b</ref> shows an example of a prism installed in the study area.</p><p>For statistical analysis, the Wilcoxon test was performed to verify whether 2D decomposed DInSAR results had similar values to the geotechnical measurements. Wilcoxon is, essentially, a statistical nonparametric test that compares two paired groups and calculates the difference between each set of pairs. This procedure verifies whether two data populations have the same median value and, therefore, can be considered statistically similar. Therefore, if the measurement showed similarity, the SBAS 2D decomposed data may be presumed to be representative of the surface displacement expressed by prism values. This non-parametric statistical test was chosen considering the lack of knowledge of the data distribution and small number of samples.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.">SBAS Analysis</head><p>The TerraSAR-X interferograms were obtained by using a complex multi-look operation with four looks in range and two looks azimuth, normal baseline restriction up to 10% of the critical baseline (6067.34 m) and maximum temporal baseline of 85 days to ensure high interferometric coherence. SBAS processing was performed with a coherence threshold of 0.40, unwrapping using minimum cost flow (MCF) algorithm, and low pass filter (1200 m) for the atmospheric phase removal. The 191 interferograms resulting of the temporal baseline restriction are illustrated in Figure <ref type="figure" target="#fig_10">5a</ref> (solid lines). During SBAS processing, 19 interferograms were removed from the 191 generated to achieve better coherence values and lower phase unwrapping errors.</p><p>Mining 2022, 2, FOR PEER <ref type="bibr">REVIEW 7</ref> statistically similar. Therefore, if the measurement showed similarity, the SBAS 2D decomposed data may be presumed to be representative of the surface displacement expressed by prism values. This non-parametric statistical test was chosen considering the lack of knowledge of the data distribution and small number of samples.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.">SBAS Analysis</head><p>The TerraSAR-X interferograms were obtained by using a complex multi-look operation with four looks in range and two looks azimuth, normal baseline restriction up to 10% of the critical baseline (6067.34 m) and maximum temporal baseline of 85 days to ensure high interferometric coherence. SBAS processing was performed with a coherence threshold of 0. For the SBAS processing of TSX and S1B data, the same distributed ground control points (GCPs) in areas considered stable were used, assuming zero-deformation reference for the refinement/re-flattening of the interferometric phase to perform the second inversion processing. For the refinement and First Inversion processing, 26 distributed GCPs were used, while for the Second Inversion processing, a group of 15 closed GCPs were used, in order to mitigate some linear trends after the first inversion.</p><p>For the Sentinel-1 processing data, the maximum normal baseline was 20% of the For the SBAS processing of TSX and S1B data, the same distributed ground control points (GCPs) in areas considered stable were used, assuming zero-deformation reference for the refinement/re-flattening of the interferometric phase to perform the second inversion processing. For the refinement and First Inversion processing, 26 distributed GCPs were used, while for the Second Inversion processing, a group of 15 closed GCPs were used, in order to mitigate some linear trends after the first inversion.</p><p>For the Sentinel-1 processing data, the maximum normal baseline was 20% of the critical one, and the temporal baseline maximum was 20 days. The multi-looking was performed with eight looks for the range and two for azimuth, the atmospheric low pass filter was 1200 m, and the coherence threshold was 0.26. The 263 interferograms which resulted from the temporal baseline restriction are illustrated in Figure <ref type="figure" target="#fig_10">5b</ref> (solid lines). During SBAS processing, 263 interferograms were generated, and 44 of them were removed to have better coherence values and lower phase unwrapping errors. The DEM generated by Pleiades data was used for both TSX and S1 processing. Table <ref type="table" target="#tab_0">1</ref> shows the acquisition dates of the Reference and Secondary Sentinel-1 data, perpendicular baseline (Bperp) and time interval relative to the Reference image, the Table <ref type="table" target="#tab_1">2</ref> shows the same information related to the TerraSAR-X data. The processing constraints for both sensors, such as number of looks, atmospheric filter and coherence threshold, were defined after many tests in order to mitigate the phase unwrapping errors. The displacement rate in the study area can be expressed through the velocity deformation map in LoS (Figure <ref type="figure" target="#fig_11">6</ref>) computed with millimetric precision. Positive values correspond to surface motion toward the satellite, negative values correspond to ground motion away from the satellite (red colors), the result is on the Worldview color composite background image. Figure <ref type="figure" target="#fig_11">6</ref> shows the velocity displacement maps of TSX data (Figure <ref type="figure" target="#fig_12">6a</ref>) and S1 data (Figure <ref type="figure" target="#fig_12">6b</ref>). correspond to surface motion toward the satellite, negative values correspond to ground motion away from the satellite (red colors), the result is on the Worldview color composite background image. Figure <ref type="figure" target="#fig_11">6</ref> shows the velocity displacement maps of TSX data (Figure <ref type="figure" target="#fig_12">6a</ref>) and S1 data (Figure <ref type="figure" target="#fig_12">6b</ref>). The velocity deformation map (mm/y) of TSX data showed a superior number of measured points (MP) (Figure <ref type="figure" target="#fig_12">6a</ref>) (2436 MP/km 2 ) compared to the velocity deformation map of Sentinel-1 (Figure <ref type="figure" target="#fig_12">6b</ref>) (319 MP/km 2 ). A great part of the study area was stable during the time span of both results showing similar stability behavior of the dikes (greenish colors). A noticeable subsidence was detected by both satellites over the tailings inside of the Baia 3 dike area, with the displacement rate up to -150 mm/year (reddish regions), as well as along the access road on top of Auxiliary Dike 2.</p><p>Using the LoS results obtained with the TSX data (ascending orbit) and the S1 satellite (descending orbit), the vector decomposition in the vertical direction as well as in the East-West direction were calculated. The displacement in the vertical direction presented values close to 0 mm on top of the dikes (greenish colors), and close to -80 mm in the tailings inside the Baia 3 dike and the auxiliary dike (reddish regions). The vector decomposition was performed by SARSCAPE software, which considered the MPs closer to the two views to perform the calculations, in this way, the final density of MPs was similar to The velocity deformation map (mm/y) of TSX data showed a superior number of measured points (MP) (Figure <ref type="figure" target="#fig_12">6a</ref>) (2436 MP/km 2 ) compared to the velocity deformation map of Sentinel-1 (Figure <ref type="figure" target="#fig_12">6b</ref>) (319 MP/km 2 ). A great part of the study area was stable during the time span of both results showing similar stability behavior of the dikes (greenish colors). A noticeable subsidence was detected by both satellites over the tailings inside of the Baia 3 dike area, with the displacement rate up to -150 mm/year (reddish regions), as well as along the access road on top of Auxiliary Dike 2.</p><p>Using the LoS results obtained with the TSX data (ascending orbit) and the S1 satellite (descending orbit), the vector decomposition in the vertical direction as well as in the East-West direction were calculated. The displacement in the vertical direction presented values close to 0 mm on top of the dikes (greenish colors), and close to -80 mm in the tailings inside the Baia 3 dike and the auxiliary dike (reddish regions). The vector decomposition was performed by SARSCAPE software, which considered the MPs closer to the two views to perform the calculations, in this way, the final density of MPs was similar to that of the S1B map. Figure <ref type="figure" target="#fig_13">7</ref> presents the vertical and horizontal displacement maps of the study area obtained by vector decomposition. The topographic survey (TS) values of vertical and horizontal directions, located on the Selinha dike (SL2, SL7), Sela-Tulipa dikes (ST1, ST11, ST12, ST13), and Germano main dam (24ZI402 and 24ZI408), and the corresponding MPs decomposed, in vertical and horizontal directions (vertical and horizontal) based on the S1 and TSX data, can be seen in the plots of Figures <ref type="figure" target="#fig_16">8</ref> and<ref type="figure" target="#fig_17">9</ref>. Additionally, the MPs of S1 and TSX in LoS were projected to the vertical and horizontal directions based on Equations ( <ref type="formula" target="#formula_3">2</ref>) and ( <ref type="formula" target="#formula_2">3</ref>), according to Figure 3a <ref type="bibr" target="#b45">[47]</ref>, these final values are described as S1-Proj and TSX-Proj in Figures <ref type="figure" target="#fig_16">8</ref> and<ref type="figure" target="#fig_17">9</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>𝑣 = 𝑑𝑒𝑓𝐿𝑜𝑆. cos 𝜃</head><p>(2)</p><formula xml:id="formula_2">ℎ = 𝑑𝑒𝑓𝐿𝑜𝑆. sin 𝜃<label>(3)</label></formula><p>where: v = vertical projection, defLoS = deformation value in the line of sight (LoS), θi = incident angle.</p><p>The horizontal MP values of the horizontal ground deformation of the prisms locations showed a tendency of deformation of the prisms SL-2, ST-11, ST-12 and ST13 in the East direction (positive values), which the same behavior was noticed of the TS values (Figure <ref type="figure" target="#fig_15">8</ref>). The MP values decomposed in the horizontal direction showed a better similarity with the TS horizontal values of the prisms ST-11 and ST-12. The topographic survey (TS) values of vertical and horizontal directions, located on the Selinha dike (SL2, SL7), Sela-Tulipa dikes (ST1, ST11, ST12, ST13), and Germano main dam (24ZI402 and 24ZI408), and the corresponding MPs decomposed, in vertical and horizontal directions (vertical and horizontal) based on the S1 and TSX data, can be seen in the plots of Figures <ref type="figure" target="#fig_16">8</ref> and<ref type="figure" target="#fig_17">9</ref>. Additionally, the MPs of S1 and TSX in LoS were projected to the vertical and horizontal directions based on Equations ( <ref type="formula" target="#formula_3">2</ref>) and ( <ref type="formula" target="#formula_2">3</ref>), according to Figure 3a <ref type="bibr" target="#b45">[47]</ref>, these final values are described as S1-Proj and TSX-Proj in Figures <ref type="figure" target="#fig_16">8</ref> and<ref type="figure" target="#fig_17">9</ref>.</p><formula xml:id="formula_3">v = de f LoS. cos θ i<label>(2)</label></formula><formula xml:id="formula_4">h = de f LoS. sin θ i<label>(3)</label></formula><p>where: v = vertical projection, defLoS = deformation value in the line of sight (LoS),</p><formula xml:id="formula_5">θ i = incident angle.</formula><p>The horizontal MP values of the horizontal ground deformation of the prisms locations showed a tendency of deformation of the prisms SL-2, ST-11, ST-12 and ST13 in the East direction (positive values), which the same behavior was noticed of the TS values (Figure <ref type="figure" target="#fig_15">8</ref>). The MP values decomposed in the horizontal direction showed a better similarity with the TS horizontal values of the prisms ST-11 and ST-12. Analyzing the results of the TSX-Proj in the horizontal direction for the prisms SL-2, 24ZI402 and 24ZI408 (Figure <ref type="figure" target="#fig_15">8</ref>), it is observed that the MPs' values did not show good conformity with the TS measurements. In turn, the MPs' values obtained by the S1-Proj and the horizontal decomposition were closer to the TS data, indicating the dike's displacement to the East, as observed by in situ survey data.</p><p>Figure <ref type="figure" target="#fig_17">9</ref> shows the obtained vertical MPs' values, corresponding to the crest of the Selinha and Sela-Tulipa dikes, as well as 24ZI402 and 24ZI408 prisms related to the buttress of Germano Dam. In the position of the SL-2 prism (Selinha dike), the TS indicated of subsidence process confirmed by DInSAR results (decomposed and projected). In turn, all cases on the crest of the Sela-Tulipa dikes, the vertical MPs' values did not extrapolate the nominal TS measurements error limit (±8 mm) (Figure <ref type="figure" target="#fig_17">9</ref>), and thus were considered without the tendency for subsidence or uplift based on this criterion of stability acceptance limit. In SL-7 prism position, the topographic survey (TS) indicated stability in the vertical and horizontal directions, with greater variance in the horizontal direction. The vertical MPs values obtained by S1-Proj, TSX-Proj and decomposed showed similar results for ST-1, ST11, ST12, ST13, SL-2 and SL7 prisms, with SL-2 presenting a slight tendency to subsidence.</p><p>In turn, at 24ZI402 prism position (Germano main dam), the vertical topographic data showed great variability, exceeding the nominal topographic measurements error Analyzing the results of the TSX-Proj in the horizontal direction for the prisms SL-2, 24ZI402 and 24ZI408 (Figure <ref type="figure" target="#fig_15">8</ref>), it is observed that the MPs' values did not show good conformity with the TS measurements. In turn, the MPs' values obtained by the S1-Proj and the horizontal decomposition were closer to the TS data, indicating the dike's displacement to the East, as observed by in situ survey data.</p><p>Figure <ref type="figure" target="#fig_17">9</ref> shows the obtained vertical MPs' values, corresponding to the crest of the Selinha and Sela-Tulipa dikes, as well as 24ZI402 and 24ZI408 prisms related to the buttress of Germano Dam. In the position of the SL-2 prism (Selinha dike), the TS indicated of subsidence process confirmed by DInSAR results (decomposed and projected).</p><p>In turn, all cases on the crest of the Sela-Tulipa dikes, the vertical MPs' values did not extrapolate the nominal TS measurements error limit (±8 mm) (Figure <ref type="figure" target="#fig_17">9</ref>), and thus were considered without the tendency for subsidence or uplift based on this criterion of stability acceptance limit. In SL-7 prism position, the topographic survey (TS) indicated stability in the vertical and horizontal directions, with greater variance in the horizontal direction.</p><p>The vertical MPs values obtained by S1-Proj, TSX-Proj and decomposed showed similar results for ST-1, ST11, ST12, ST13, SL-2 and SL7 prisms, with SL-2 presenting a slight tendency to subsidence.</p><p>In turn, at 24ZI402 prism position (Germano main dam), the vertical topographic data showed great variability, exceeding the nominal topographic measurements error limit of +/-8mm. The vertical TSX-Proj MPs showed greater variability and did not agree with the topographic data, while the S1-Proj and vertical decomposition were closer to the topographic data, but not exceeding the error limit.</p><p>The vertical TS of 24ZI408 prism (Germano main dam) also showed variability exceeding the nominal topographic measurements error limit of +/-8mm in four cases. The S1-Proj MPs showed the highest values of surface deformation and uplift. The TSX-Proj MPs showed values close to the topographic data in some cases, but with a great variability. The decomposed vertical values showed a better stability in comparison to the topographic survey during the historical series.</p><p>Comparing the mean value of the vertical topographic measurements and the MPs TSX-Proj, S1-Proj and vertical decomposition for each prism, it appears that the mean value of the TSX-Proj (-0.369) was the closest to the TS value (0.408). Analyzing the value of difference between the MPs and the TS reference, it is observed that the vertical decomposed data were the ones that presented the smallest differences between the values (-0.040), and whose mean value was the lowest of the MPs (Table <ref type="table" target="#tab_2">3</ref>). For the horizontal measurements, it is verified that the mean value of the topographic survey was very low (-0.097), and the horizontal MP TSX-Proj (0.148) was the lower case of radar monitoring. The MPs mean value of the Horizontal Decomposed did not show a value close to the TS (0.610), but this behavior was better than S1-Proj (-0.787). Table <ref type="table" target="#tab_3">4</ref> shows the comparison of mean values of horizontal deformation obtained by the Horizontal Decomposed and TSX and S1 projected. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.">Statistic Test</head><p>Wilcoxon test for paired data was carried out for the statistical validation using Statistica v 8.0 software (StatSoft. Inc, Tulsa, OK, USA), in attempt to validate MPS from the decomposition of SBAS measurements with the in situ topographic measurements, represented by eight total stations/prisms measurements (Prism Id). This nonparametric statistical test was chosen due to the small number of samples and the lack of knowledge of the data distribution. Table <ref type="table" target="#tab_4">5</ref> shows the Wilcoxon results for the decomposed SBAS data (vertical and horizontal decomposition) and the in situ horizontal and vertical deformations, which showed a similarity with the decomposed results and the topographic surveying for all cases analyzed, for 5% significance level. Analyzing the results of the Wilcoxon statistical test for the vertical projected results obtained TSX-Proj, in 50% of the cases (SL-2, ST1, 24ZI402, 24ZI408) the test indicated similarity with the TS data, considering a significance level of 5% (Table <ref type="table" target="#tab_5">6</ref>). For the results projected in the horizontal direction, the TSX-Proj data presented a better result, with 75% of the cases displaying a similarity with TS (SL-7, ST1, ST11, ST12, ST131 and 24ZI402). For the vertical results of S1-Proj, in 75% of the cases (SL-2, ST1, ST11, ST12, ST13, and 24ZI402), the Wilcoxon test indicated some similarity with the TS data, considering a significance level of 5%. For the results projected in the horizontal direction, the S1-Proj data showed a similarity with TS in 75% of the cases (SL-2, ST1, ST11, ST12, ST13, and 24ZI408) (Table <ref type="table" target="#tab_6">7</ref>). </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Discussion</head><p>According to statistical validation, the horizontal and vertical measurement points obtained by the vertical and horizontal decomposition provided data compatible with the topographic surveying in situ, and thus can be considered as accurate. Other authors achieved similar success combining different satellite operating data acquired in opposite orbits with the same operating band <ref type="bibr" target="#b45">[47]</ref><ref type="bibr" target="#b46">[48]</ref><ref type="bibr" target="#b47">[49]</ref> and with different bands <ref type="bibr" target="#b44">[46]</ref>.</p><p>In turn, the projected vertical TSX data did not demonstrate a good agreement with the field data of the prisms by the statistical test for most cases, while the projected vertical data S1 obtained a greater degree of acceptance.</p><p>For measurements in the horizontal direction, both the projected results of the TSX and S1 showed agreement with the field data, except for two cases, although, all results indicated a similar movement to the East as detected by topographic surveying, mainly for the cases ST-11, SL-2. This deformation in the East direction probably occurred due to the fact that the Germano reservoir was full of tailings, causing pressure on the dikes, while the opposite side was empty after the Fundão dam rupture, thus favoring deformations in this direction. Figure <ref type="figure" target="#fig_1">10a</ref> shows the view of the East edge of Tulipa dike, and the Germano reservoir on the opposite side. Figure <ref type="figure" target="#fig_1">10b</ref> shows the location and direction from which the photograph was taken, as well as the locations of the prisms ST-11 and ST-12.</p><p>standard deviation values of the topographic survey and the DInSAR results.</p><p>In order to analyze the temporal changes and the pluviometry influence, the multitemporal coherence was carried out <ref type="bibr" target="#b48">[50,</ref><ref type="bibr" target="#b49">51]</ref>, and the prism locations' values were compared to the local pluviometry. For the Sentinel case, it was noticed that the rainy season affected the coherence behavior (Figure <ref type="figure" target="#fig_19">11</ref>), decreasing its values, while in the drought season the coherence values were more stable with higher values. For the TerraSAR-X case, the behavior of the coherence against the rainfall data was similar, but with a stronger effect for the coherence values during the longer periods of higher rainfall values (Figure <ref type="figure" target="#fig_21">12</ref>), causing a significant decrease in coherence. During the dry season, the coherence showed higher values. The difference in resolution and the wavelength between the sensors is likely to be the reason for the more sensitive TerraSAR-X data with the pluviometry. For the TerraSAR-X case, the behavior of the coherence against the rainfall data was similar, but with a stronger effect for the coherence values during the longer periods of higher rainfall values (Figure <ref type="figure" target="#fig_21">12</ref>), causing a significant decrease in coherence. During the dry season, the coherence showed higher values. The difference in resolution and the wavelength between the sensors is likely to be the reason for the more sensitive TerraSAR-X data with the pluviometry.</p><p>, FOR PEER REVIEW 17 The vertical deformations detected on the auxiliary dikes may be due to the geomechanical differences between the dikes and dams, associated with the machine traffic on their structure and their continuous maintenance.</p><p>Surface vertical displacements were detected on the reservoir of Baia 3, which reached accumulated values up to -80 mm due to the tailings settlement (Figure <ref type="figure" target="#fig_14">7a</ref>), since there was no deposition of waste material in the reservoir after the Fundão dam rupture, no horizontal movements were observed inside the Baia 3 reservoir (Figure <ref type="figure" target="#fig_14">7b</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">Conclusions</head><p>The results obtained with the vector decomposition in the vertical and horizontal directions (East-West) based on the LoS measurements from different sensors were similar The vertical deformations detected on the auxiliary dikes may be due to the geomechanical differences between the dikes and dams, associated with the machine traffic on their structure and their continuous maintenance.</p><p>Surface vertical displacements were detected on the reservoir of Baia 3, which reached accumulated values up to -80 mm due to the tailings settlement (Figure <ref type="figure" target="#fig_14">7a</ref>), since there was no deposition of waste material in the reservoir after the Fundão dam rupture, no horizontal movements were observed inside the Baia 3 reservoir (Figure <ref type="figure" target="#fig_14">7b</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">Conclusions</head><p>The results obtained with the vector decomposition in the vertical and horizontal directions (East-West) based on the LoS measurements from different sensors were similar to the topographic data collected in the field. Due to the satellite acquisition geometry, horizontal deformations in the North-South direction cannot be measured with sufficient accuracy because it not perceptible.</p><p>The density of MPs using Sentinel-1 data was lower than using TerraSAR-X data, but it was still possible to obtain coherent measurements in the dikes and dam, which allowed us to perform vector decomposition and estimate the vertical and horizontal deformations.</p><p>It should be noted that the Sentinel-1 satellite coverage of the Brazilian territory usually occurs in the ascending or descending orbit, and thus does not have the possibility of a historical series of opposite sight to develop the technique of this article, meaning that the combination of the use of data from another sensor allows its execution. In turn, the measurements projected provide interesting measurements, which, according to the criteria of Samarco's geotechnical team, met the acceptance interval; despite the theory that the measurements projected are more accurate when the ground deformations occur only in the vertical direction.</p><p>Finally, due to the large number of tailings dams in different regions of Brazil, unmonitored or with deficient monitoring systems, there is a significant demand for information on deformations mainly related to the tailings dams due to legal obligations, safety, and environmental monitoring, etc. The use of the A-DInSAR technique using opposite tracks data proved to be an effective tool for providing key information to help make crucial decisions regarding risks, or even mitigation, repairs or emergency response in circumstances that can lead to loss of life and damages to infrastructure and the environment.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Germano iron complex location in Mariana/MG; the background image was obtained from Google Earth.</figDesc><graphic coords="4,38.58,262.96,509.78,172.06" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Germano iron complex location in Mariana/MG; the background image was obtained from Google Earth.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Data processing flow chart.</figDesc><graphic coords="5,72.02,249.75,450.72,135.86" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Data processing flow chart.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. (a) Vertical and horizontal displacement obtained by 2D decomposition of the ascending and descending data (East-West direction), (b) imaging trajectory geometries (North-South direction).</figDesc><graphic coords="6,339.73,98.67,178.79,232.19" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. (a) Vertical and horizontal displacement obtained by 2D decomposition of the ascending and descending data (East-West direction), (b) imaging trajectory geometries (North-South direction).</figDesc><graphic coords="6,69.21,407.71,260.77,183.02" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. (a) Plot of acquisition of TSX and S1B images and topographic surveying with prisms; (b) Example of prism used on the topographic surveying.</figDesc><graphic coords="6,341.86,404.41,183.55,188.30" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. (a) Plot of acquisition of TSX and S1B images and topographic surveying with prisms; (b) Example of prism used on the topographic surveying.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Interferometric pairs selected (solid blue lines): (a) TSX pairs, (b) S1B pairs. Yellow dot means reference image.</figDesc><graphic coords="7,297.79,518.32,257.76,176.04" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Interferometric pairs selected (solid blue lines): (a) TSX pairs, (b) S1B pairs. Yellow dot means reference image.</figDesc><graphic coords="7,41.29,521.32,246.78,170.04" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. Velocity displacement map in LoS: (a) TSX data, (b) S1B data. The orange triangles represent the position of the prims used for the topographic surveying.</figDesc><graphic coords="9,54.28,373.34,237.72,225.24" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. Velocity displacement map in LoS: (a) TSX data, (b) S1B data. The orange triangles represent the position of the prims used for the topographic surveying.</figDesc><graphic coords="9,302.80,373.34,238.20,222.60" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_13"><head>Figure 7 .</head><label>7</label><figDesc>Figure 7. Maps of displacement: (a) Vertical, (b) Horizontal.</figDesc><graphic coords="10,49.30,179.80,240.90,229.92" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_14"><head>Figure 7 .</head><label>7</label><figDesc>Figure 7. Maps of displacement: (a) Vertical, (b) Horizontal.</figDesc><graphic coords="10,301.60,179.14,244.68,231.18" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_15"><head>Figure 8 .</head><label>8</label><figDesc>Figure 8. Horizontal ground deformation of the prisms locations (MP projected and MP decomposed) and TS (horizontal topographic measurements): ST-1; ST-11; ST-12; ST-13, SL-2; SL-7; 24ZI402; 24ZI408.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_16"><head>Figure 8 .</head><label>8</label><figDesc>Figure 8. Horizontal ground deformation of the prisms locations (MP projected and MP decomposed) and TS (horizontal topographic measurements): ST-1; ST-11; ST-12; ST-13, SL-2; SL-7; 24ZI402; 24ZI408.</figDesc><graphic coords="11,55.55,99.75,488.10,517.98" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_17"><head>Figure 9 .</head><label>9</label><figDesc>Figure 9. Vertical ground deformation of the prisms locations (MP projected and MP decomposed) and TS (vertical topographic measurements): ST-1; ST-11; ST-12; ST-13, SL-2; SL-7; 24ZI402; 24ZI408.</figDesc><graphic coords="12,73.42,97.58,449.34,491.94" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_18"><head>Figure 9 .</head><label>9</label><figDesc>Figure 9. Vertical ground deformation of the prisms locations (MP projected and MP decomposed) and TS (vertical topographic measurements): ST-1; ST-11; ST-12; ST-13, SL-2; SL-7; 24ZI402; 24ZI408.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_19"><head>Figure 11 .</head><label>11</label><figDesc>Figure 11. Multitemporal S1 coherence and local pluviometry.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_20"><head>Figure 11 .</head><label>11</label><figDesc>Figure 11. Multitemporal S1 coherence and local pluviometry.</figDesc><graphic coords="17,69.66,96.29,458.86,225.43" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_21"><head>Figure 12 .</head><label>12</label><figDesc>Figure 12. Multitemporal TSX coherence and local pluviometry.</figDesc><graphic coords="17,90.56,438.96,419.10,211.53" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_22"><head>Figure 12 .</head><label>12</label><figDesc>Figure 12. Multitemporal TSX coherence and local pluviometry.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head/><label/><figDesc/><graphic coords="16,55.14,99.73,309.61,232.24" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 .</head><label>1</label><figDesc>The acquisition dates of the Reference and Secondary S1B images, perpendicular baseline (Bperp) and time interval relative to the Reference image.</figDesc><table><row><cell>Pair</cell><cell>Reference *</cell><cell>Secondary *</cell><cell>Bperp (m)</cell><cell>Pair</cell><cell>Reference *</cell><cell>Secondary *</cell><cell>Bperp (m)</cell></row><row><cell>1</cell><cell>20,160,725</cell><cell>20,160,208</cell><cell>77.19</cell><cell>19</cell><cell>20,160,725</cell><cell>20,161,011</cell><cell>86.51</cell></row><row><cell>2</cell><cell>20,160,725</cell><cell>20,160,220</cell><cell>109.29</cell><cell>20</cell><cell>20,160,725</cell><cell>20,161,023</cell><cell>156.47</cell></row><row><cell>3</cell><cell>20,160,725</cell><cell>20,160,303</cell><cell>150.44</cell><cell>21</cell><cell>20,160,725</cell><cell>20,161,104</cell><cell>126.05</cell></row><row><cell>4</cell><cell>20,160,725</cell><cell>20,160,327</cell><cell>152.91</cell><cell>22</cell><cell>20,160,725</cell><cell>20,161,116</cell><cell>146.96</cell></row><row><cell>5</cell><cell>20,160,725</cell><cell>20,160,408</cell><cell>155.02</cell><cell>23</cell><cell>20,160,725</cell><cell>20,161,128</cell><cell>58.46</cell></row><row><cell>6</cell><cell>20,160,725</cell><cell>20,160,420</cell><cell>88.95</cell><cell>24</cell><cell>20,160,725</cell><cell>20,161,210</cell><cell>53.81</cell></row><row><cell>7</cell><cell>20,160,725</cell><cell>20,160,502</cell><cell>122.83</cell><cell>25</cell><cell>20,160,725</cell><cell>20,161,222</cell><cell>110.06</cell></row><row><cell>8</cell><cell>20,160,725</cell><cell>20,160,514</cell><cell>156.84</cell><cell>26</cell><cell>20,160,725</cell><cell>20,170,103</cell><cell>143.79</cell></row><row><cell>9</cell><cell>20,160,725</cell><cell>20,160,526</cell><cell>85.11</cell><cell>27</cell><cell>20,160,725</cell><cell>20,170,115</cell><cell>135.87</cell></row><row><cell/><cell>20,160,725</cell><cell>20,160,607</cell><cell>93.29</cell><cell>28</cell><cell>20,160,725</cell><cell>20,170,127</cell><cell>132.80</cell></row><row><cell/><cell>20,160,725</cell><cell>20,160,701</cell><cell>153.12</cell><cell>29</cell><cell>20,160,725</cell><cell>20,170,208</cell><cell>91.44</cell></row><row><cell/><cell>20,160,725</cell><cell>20,160,713</cell><cell>86.20</cell><cell>30</cell><cell>20,160,725</cell><cell>20,170,220</cell><cell>54.12</cell></row><row><cell/><cell>20,160,725</cell><cell>20,160,806</cell><cell>112.95</cell><cell>31</cell><cell>20,160,725</cell><cell>20,170,304</cell><cell>127.22</cell></row><row><cell/><cell>20,160,725</cell><cell>20,160,818</cell><cell>132.12</cell><cell>32</cell><cell>20,160,725</cell><cell>20,170,316</cell><cell>57.73</cell></row><row><cell/><cell>20,160,725</cell><cell>20,160,830</cell><cell>97.26</cell><cell>33</cell><cell>20,160,725</cell><cell>20,170,328</cell><cell>136.14</cell></row><row><cell/><cell>20,160,725</cell><cell>20,160,911</cell><cell>36.88</cell><cell>34</cell><cell>20,160,725</cell><cell>20,170,409</cell><cell>95.16</cell></row><row><cell/><cell>20,160,725</cell><cell>20,160,923</cell><cell>141.71</cell><cell>35</cell><cell>20,160,725</cell><cell>20,170,503</cell><cell>143.40</cell></row><row><cell/><cell>20,160,725</cell><cell>20,160,929</cell><cell>171.88</cell><cell>36</cell><cell>20,160,725</cell><cell>20,170,515</cell><cell>177.83</cell></row></table><note><p>Obs: * yyyymmdd, Critical baseline = 5951.63 m.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2 .</head><label>2</label><figDesc>The acquisition dates of the Reference and Secondary TSX images, perpendicular baseline (Bperp) and time interval relative to the Reference image.</figDesc><table><row><cell>Pair</cell><cell>Reference *</cell><cell>Secondary</cell><cell>Bperp (m)</cell><cell>Pair</cell><cell>Reference *</cell><cell>Secondary</cell><cell>Bperp (m)</cell></row><row><cell>1</cell><cell>20,161,223</cell><cell>20,160,208</cell><cell>206.97</cell><cell>19</cell><cell>20,161,223</cell><cell>20,161,018</cell><cell>25.95</cell></row><row><cell>2</cell><cell>20,161,223</cell><cell>20,160,219</cell><cell>-90.453</cell><cell>20</cell><cell>20,161,223</cell><cell>20,161,029</cell><cell>-136.30</cell></row><row><cell>3</cell><cell>20,161,223</cell><cell>20,160,301</cell><cell>-270.61</cell><cell>21</cell><cell>20,161,223</cell><cell>20,161,120</cell><cell>-36.22</cell></row><row><cell>4</cell><cell>20,161,223</cell><cell>20,160,312</cell><cell>-80.17</cell><cell>22</cell><cell>20,161,223</cell><cell>20,161,201</cell><cell>-59.65</cell></row><row><cell>5</cell><cell>20,161,223</cell><cell>20,160,323</cell><cell>-352.08</cell><cell>23</cell><cell>20,161,223</cell><cell>20,161,212</cell><cell>36.05</cell></row><row><cell>6</cell><cell>20,161,223</cell><cell>20,160,403</cell><cell>-206.97</cell><cell>24</cell><cell>20,161,223</cell><cell>20,161,223</cell><cell>-218.95</cell></row><row><cell>7</cell><cell>20,161,223</cell><cell>20,160,414</cell><cell>-225.40</cell><cell>25</cell><cell>20,161,223</cell><cell>20,170,103</cell><cell>-108.69</cell></row><row><cell>8</cell><cell>20,161,223</cell><cell>20,160,517</cell><cell>-331.95</cell><cell>26</cell><cell>20,161,223</cell><cell>20,170,114</cell><cell>29.08</cell></row><row><cell>9</cell><cell>20,161,223</cell><cell>20,160,528</cell><cell>-349.37</cell><cell>27</cell><cell>20,161,223</cell><cell>20,170,125</cell><cell>-297.55</cell></row><row><cell/><cell>20,161,223</cell><cell>20,160,608</cell><cell>-54.813</cell><cell>28</cell><cell>20,161,223</cell><cell>20,170,216</cell><cell>340.65</cell></row><row><cell/><cell>20,161,223</cell><cell>20,160,619</cell><cell>-261.25</cell><cell>29</cell><cell>20,161,223</cell><cell>20,170,227</cell><cell>134.90</cell></row><row><cell/><cell>20,161,223</cell><cell>20,160,630</cell><cell>-329.68</cell><cell>30</cell><cell>20,161,223</cell><cell>20,170,310</cell><cell>207.28</cell></row><row><cell/><cell>20,161,223</cell><cell>20,160,711</cell><cell>-158.70</cell><cell>31</cell><cell>20,161,223</cell><cell>20,170,321</cell><cell>250.29</cell></row><row><cell/><cell>20,161,223</cell><cell>20,160,722</cell><cell>-175.93</cell><cell>32</cell><cell>20,161,223</cell><cell>20,170,401</cell><cell>178.15</cell></row><row><cell/><cell>20,161,223</cell><cell>20,160,813</cell><cell>-57.70</cell><cell>33</cell><cell>20,161,223</cell><cell>20,170,412</cell><cell>80.78</cell></row><row><cell/><cell>20,161,223</cell><cell>20,160,904</cell><cell>-87.70</cell><cell>34</cell><cell>20,161,223</cell><cell>20,170,423</cell><cell>16.22</cell></row><row><cell/><cell>20,161,223</cell><cell>20,160,915</cell><cell>-41.05</cell><cell>35</cell><cell>20,161,223</cell><cell>20,170,504</cell><cell>-25.74</cell></row><row><cell/><cell>20,161,223</cell><cell>20,160,926</cell><cell>-55.45</cell><cell>36</cell><cell>20,161,223</cell><cell>20,170,515</cell><cell>115.67</cell></row></table><note><p>Obs: * yyyymmdd, Critical baseline = 6067.76 m. Mining 2022, 2, FOR PEER REVIEW 9</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 3 .</head><label>3</label><figDesc>Comparison of values of vertical displacement.</figDesc><table><row><cell/><cell>SL-2</cell><cell>SL-7</cell><cell>ST1</cell><cell>ST11</cell><cell>ST12</cell><cell>ST13</cell><cell>24ZI402</cell><cell>24ZI408</cell><cell>Mean</cell><cell>SD</cell></row><row><cell>TS (vertical) *</cell><cell>-0.650</cell><cell>0.377</cell><cell>0.031</cell><cell>0.103</cell><cell>-0.197</cell><cell>-0.083</cell><cell>4.221</cell><cell>-0.536</cell><cell>0.408</cell><cell>0.959</cell></row><row><cell>Vertical decomp *</cell><cell>-1.36</cell><cell>-0.179</cell><cell>0.124</cell><cell>0.028</cell><cell>-0.197</cell><cell>-0.011</cell><cell>4.717</cell><cell>-0.176</cell><cell>0.368</cell><cell>1.005</cell></row><row><cell>Vertical decomp-TS *</cell><cell>-0.712</cell><cell>-0.556</cell><cell>0.093</cell><cell>-0.075</cell><cell>0.000</cell><cell>0.072</cell><cell>0.496</cell><cell>0.360</cell><cell>-0.040</cell><cell>0.047</cell></row><row><cell>TSX-Proj *</cell><cell>-1.309</cell><cell>-0.561</cell><cell>-0.257</cell><cell>-1.608</cell><cell>-1.347</cell><cell>-0.713</cell><cell>1.832</cell><cell>1.014</cell><cell>-0.369</cell><cell>1.498</cell></row><row><cell>TSX-Proj-TS *</cell><cell>-0.659</cell><cell>-0.938</cell><cell>-0.288</cell><cell>-1.711</cell><cell>-1.150</cell><cell>-0.630</cell><cell>-2.389</cell><cell>1.550</cell><cell>-0.777</cell><cell>0.539</cell></row><row><cell>S1-Proj *</cell><cell>-1.075</cell><cell>-0.522</cell><cell>-0.217</cell><cell>-0.415</cell><cell>-0.415</cell><cell>-0.189</cell><cell>5.755</cell><cell>5.721</cell><cell>1.080</cell><cell>0.746</cell></row><row><cell>S1-Proj-TS *</cell><cell>-0.425</cell><cell>-0.899</cell><cell>-0.248</cell><cell>-0.518</cell><cell>-0.218</cell><cell>-0.106</cell><cell>1.534</cell><cell>6.257</cell><cell>0.672</cell><cell>-0.213</cell></row></table><note><p>* milimeters (mm); TS: Topographic Survey; SD: Standart Deviation Mean value.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 4 .</head><label>4</label><figDesc>Comparison of values of horizontal displacement.</figDesc><table><row><cell/><cell>SL-2</cell><cell>SL-7</cell><cell>ST1</cell><cell>ST11</cell><cell>ST12</cell><cell>ST13</cell><cell>24ZI402</cell><cell>24ZI408</cell><cell>Mean</cell><cell>SD</cell></row><row><cell>TS (horizontal) *</cell><cell>4.044</cell><cell>0.407</cell><cell>-0.109</cell><cell>1.897</cell><cell>0.613</cell><cell>0.153</cell><cell>-1.704</cell><cell>-6.079</cell><cell>-0.097</cell><cell>1.833</cell></row><row><cell>Horizontal decomp *</cell><cell>4.534</cell><cell>0.999</cell><cell>0.474</cell><cell>2.297</cell><cell>1.558</cell><cell>1.531</cell><cell>-1.380</cell><cell>-5.135</cell><cell>0.610</cell><cell>1.455</cell></row><row><cell>Horizontal decomp-TS *</cell><cell>-0.490</cell><cell>-0.592</cell><cell>-0.583</cell><cell>-0.400</cell><cell>-0.945</cell><cell>-1.378</cell><cell>-0.324</cell><cell>-0.944</cell><cell cols="2">-0.707 -0.377</cell></row><row><cell>TSX-Proj *</cell><cell>0.926</cell><cell>0.299</cell><cell>0.153</cell><cell>1.136</cell><cell>0.951</cell><cell>0.504</cell><cell>-2.066</cell><cell>-0.719</cell><cell>0.148</cell><cell>1.222</cell></row><row><cell>TSX-Proj-TS *</cell><cell>3.118</cell><cell>0.108</cell><cell>-0.262</cell><cell>0.761</cell><cell>-0.338</cell><cell>-0.351</cell><cell>0.362</cell><cell>-5.360</cell><cell cols="2">-0.245 -0.611</cell></row><row><cell>S1-Proj *</cell><cell>4.292</cell><cell>-1.861</cell><cell>1.191</cell><cell>0.430</cell><cell>0.365</cell><cell>0.053</cell><cell>-5.044</cell><cell>-5.721</cell><cell>-0.787</cell><cell>0.908</cell></row><row><cell>S1-Proj-TS *</cell><cell>-0.248</cell><cell>2.268</cell><cell>-1.300</cell><cell>1.467</cell><cell>0.248</cell><cell>0.100</cell><cell>3.340</cell><cell>-0.358</cell><cell>0.690</cell><cell>-0.924</cell></row><row><cell/><cell/><cell cols="7">* milimeters (mm); TS: Topographic Survey; SD: Standart Deviation Mean value.</cell><cell/><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 5 .</head><label>5</label><figDesc>Wilcoxon statistic test of the vertical and horizontal decomposed data.</figDesc><table><row><cell/><cell/><cell/><cell>Vertical Decomposition</cell><cell/><cell cols="3">Horizontal Decomposition</cell></row><row><cell>Prism Id</cell><cell>N (Cases)</cell><cell>T (W Test)</cell><cell>p-Value</cell><cell>µ 1 = µ 2</cell><cell>T (W Test)</cell><cell>p-Value</cell><cell>µ 1 = µ 2</cell></row><row><cell>SL-2</cell><cell>18</cell><cell>44</cell><cell>0.071</cell><cell>Ok</cell><cell>85</cell><cell>0.982</cell><cell>Ok</cell></row><row><cell>SL-7</cell><cell>18</cell><cell>41</cell><cell>0.053</cell><cell>Ok</cell><cell>42</cell><cell>0.058</cell><cell>Ok</cell></row><row><cell>ST1</cell><cell>18</cell><cell>75.5</cell><cell>0.663</cell><cell>Ok</cell><cell>44</cell><cell>0.071</cell><cell>Ok</cell></row><row><cell>ST11</cell><cell>18</cell><cell>81</cell><cell>0.844</cell><cell>Ok</cell><cell>43</cell><cell>0.064</cell><cell>Ok</cell></row><row><cell>ST12</cell><cell>18</cell><cell>77</cell><cell>0.711</cell><cell>Ok</cell><cell>41</cell><cell>0.053</cell><cell>Ok</cell></row><row><cell>ST13</cell><cell>18</cell><cell>74</cell><cell>0.615</cell><cell>Ok</cell><cell>47</cell><cell>0.093</cell><cell>Ok</cell></row><row><cell>24ZI402</cell><cell>27</cell><cell>165</cell><cell>0.564</cell><cell>Ok</cell><cell>176</cell><cell>0.755</cell><cell>Ok</cell></row><row><cell>24ZI408</cell><cell>27</cell><cell>169</cell><cell>0.630</cell><cell>Ok</cell><cell>114</cell><cell>0.072</cell><cell>Ok</cell></row></table><note><p>Significance level: p &lt; 0.05; number of cases: N; Wilcoxon test: T; median of a group of data: µ.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5"><head>Table 6 .</head><label>6</label><figDesc>Wilcoxon statistic test of the vertical and horizontal TSX-Proj.</figDesc><table><row><cell/><cell/><cell/><cell>Vertical Direction</cell><cell/><cell/><cell>Horizontal Direction</cell><cell/></row><row><cell>Prism Id</cell><cell>N (Cases)</cell><cell>T (W Test)</cell><cell>p-Value</cell><cell>µ 1 = µ 2</cell><cell>T (W Test)</cell><cell>p-Value</cell><cell>µ 1 = µ 2</cell></row><row><cell>SL-2</cell><cell/><cell>12</cell><cell>0.213</cell><cell>Ok</cell><cell>1</cell><cell>0.011</cell><cell>Not Ok</cell></row><row><cell>SL-7</cell><cell/><cell>5</cell><cell>0.038</cell><cell>Not Ok</cell><cell>21</cell><cell>0.859</cell><cell>Ok</cell></row><row><cell>ST1</cell><cell/><cell>7</cell><cell>0.066</cell><cell>Ok</cell><cell>12</cell><cell>0.213</cell><cell>Ok</cell></row><row><cell>ST11</cell><cell/><cell>1</cell><cell>0.011</cell><cell>Not Ok</cell><cell>10</cell><cell>0.138</cell><cell>Ok</cell></row><row><cell>ST12</cell><cell/><cell>2</cell><cell>0.015</cell><cell>Not Ok</cell><cell>19</cell><cell>0.678</cell><cell>Ok</cell></row><row><cell>ST13</cell><cell/><cell>5</cell><cell>0.038</cell><cell>Not Ok</cell><cell>15</cell><cell>0.374</cell><cell>Ok</cell></row><row><cell>24ZI402</cell><cell>14</cell><cell>34</cell><cell>0.245</cell><cell>Ok</cell><cell>47</cell><cell>0.729</cell><cell>Ok</cell></row><row><cell>24ZI408</cell><cell>14</cell><cell>36</cell><cell>0.300</cell><cell>Ok</cell><cell>10</cell><cell>0.008</cell><cell>Not Ok</cell></row><row><cell/><cell/><cell cols="5">Significance level: p &lt; 0.05; number of cases: N; Wilcoxon test: T; median of a group of data: µ.</cell><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_6"><head>Table 7 .</head><label>7</label><figDesc>Wilcoxon statistic test of the vertical and horizontal S1-Proj.</figDesc><table><row><cell/><cell/><cell/><cell>Vertical Direction</cell><cell/><cell/><cell>Horizontal Direction</cell><cell/></row><row><cell>Prism Id</cell><cell>N (Cases)</cell><cell>T (W Test)</cell><cell>p-Value</cell><cell>µ 1 = µ 2</cell><cell>T (W Test)</cell><cell>p-Value</cell><cell>µ 1 = µ 2</cell></row><row><cell>SL-2</cell><cell/><cell>9</cell><cell>0.109</cell><cell>Ok</cell><cell>21</cell><cell>0.858</cell><cell>Ok</cell></row><row><cell>SL-7</cell><cell/><cell>2</cell><cell>0.015</cell><cell>Not Ok</cell><cell>2</cell><cell>0.015</cell><cell>Not Ok</cell></row><row><cell>ST1</cell><cell/><cell>10</cell><cell>0.139</cell><cell>Ok</cell><cell>13</cell><cell>0.260</cell><cell>Ok</cell></row><row><cell>ST11</cell><cell/><cell>9</cell><cell>0.139</cell><cell>Ok</cell><cell>8</cell><cell>0.085</cell><cell>Ok</cell></row><row><cell>ST12</cell><cell/><cell>14</cell><cell>0.314</cell><cell>Ok</cell><cell>18</cell><cell>0.594</cell><cell>Ok</cell></row><row><cell>ST13</cell><cell/><cell>19</cell><cell>0.678</cell><cell>Ok</cell><cell>21</cell><cell>0.859</cell><cell>Ok</cell></row><row><cell>24ZI402</cell><cell>14</cell><cell>23</cell><cell>0.064</cell><cell>Ok</cell><cell>1</cell><cell>0.001</cell><cell>Not Ok</cell></row><row><cell>24ZI408</cell><cell>14</cell><cell>1</cell><cell>0.001</cell><cell>Not Ok</cell><cell>38</cell><cell>0.363</cell><cell>Ok</cell></row></table><note><p>Significance level: p &lt; 0.05; number of cases: N; Wilcoxon test: T; median of a group of data: µ.</p></note></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments:</head><p>The authors are grateful for the support of <rs type="funder">VISIONA TECNOLOGIA ESPACIAL S.A</rs>. and <rs type="funder">AIRBUS DEFENCE</rs> &amp; SPACE companies by providing the TerraSAR-X and Pleiades images for this research, and the <rs type="institution">SAMARCO Mineração S.A</rs>. for providing the topographic data and supporting the field campaign.</p></div>
+			</div>
+			<div type="funding">
+<div><p>Funding: This research was funded by <rs type="funder">Agência Espacial Brasileira (AEB)</rs> and <rs type="funder">Instituto Nacional de Pesquisas Espaciais (INPE)</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data Availability Statement:</head><p>The Sentinel-1 data was available by the ESA Hub, and the TerraSAR-X data was provided the VISIONA TECNOLOGIA ESPACIAL S.A. and AIRBUS DEFENCE &amp; SPACE companies.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>the fact that the Germano reservoir was full of tailings, causing pressure on the dikes, while the opposite side was empty after the Fundão dam rupture, thus favoring deformations in this direction. Figure <ref type="figure">10a</ref> shows the view of the East edge of Tulipa dike, and the Germano reservoir on the opposite side. Figure <ref type="figure">10b</ref> shows the location and direction from which the photograph was taken, as well as the locations of the prisms ST-11 and ST-12. It was noticed that the values of the topographic surveying results were very noisy for the prisms 24ZI402 and 24ZI408 (Figures <ref type="figure">8</ref> and<ref type="figure">9</ref>). In both of these prisms, the mean value of the vertical and horizontal decomposed MPs' measurements followed the TS measurements in great parts of the time series, while the TSX projections did not match with the TS values' intervals. The S1 projected values overestimated the deformation in the vertical direction (Figure <ref type="figure">9</ref>).</p><p>It is important to emphasize that not all of the MPs' (projected and decomposed) values obtained exceeded the nominal TS measurements error (±8 mm), reaching the expectations of the geotechnical team of the SAMARCO Company.</p><p>The standard deviation values for the vertical decomposition measures showed similar values to the topographic survey. The standard deviation for the TSX-projected measurements was about 64% higher, for the S1-projected vertical measurements the values were lower than the topographic survey.</p><p>Analyzing the standard deviation mean values for the decomposed horizontal measurements, the decomposed horizontal, TSX-Proj and S1-proj values were better than those of the topographic survey, due to the multi-looking processing. It is important to point out that the period of November 2016 to February 2017 was in the rainy season in the study region, which reached an accumulated rainfall of 280 mm, which increased the standard deviation values of the topographic survey and the DInSAR results.</p><p>In order to analyze the temporal changes and the pluviometry influence, the multitemporal coherence was carried out <ref type="bibr" target="#b48">[50,</ref><ref type="bibr" target="#b49">51]</ref>, and the prism locations' values were compared to the local pluviometry. For the Sentinel case, it was noticed that the rainy season affected the coherence behavior (Figure <ref type="figure">11</ref>), decreasing its values, while in the drought season the coherence values were more stable with higher values.</p><p>Author Contributions: F.F.G. and A.C. were in charge of SAR processing; F.F.G., A.C. and J.C.M. carried out the analysis of results and wrote the manuscript. All authors have read and agreed to the published version of the manuscript.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conflicts of Interest:</head><p>The authors declare no conflict of interest. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Abbreviations</head></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<author>
+			<persName><surname>Anm</surname></persName>
+		</author>
+		<ptr target="http://www.anm.gov.br/assuntos/barragens/pasta-classificacao-de-barragens-demineracao/plano-de-seguranca-de-barragens"/>
+		<title level="m">Tailings Dam Classification and Safety Plan</title>
+		<imprint>
+			<date type="published" when="2019-06-09">2019. 9 June 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Mine Tailings Dams: Characteristics, Failure, Environmental Impacts, and Remediation</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kossoff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">E</forename><surname>Dubbin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Alfredsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Edwards</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Macklin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Hudson-Edwards</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.apgeochem.2014.09.010</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Geochem</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page" from="229" to="245"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title level="m" type="main">Tailings Dam Review Panel: Report on the Immediate Causes of the Failure of the Fundão Dam</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Morgenstern</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">G</forename><surname>Vick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">B</forename><surname>Viotti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">D</forename><surname>Watts</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Fundão</surname></persName>
+		</author>
+		<ptr target="https://pedlowski.files.wordpress.com/2016/08/fundao-finalreport.pdf"/>
+		<imprint>
+			<date type="published" when="2016-08-02">2016. 2 August 2022</date>
+			<biblScope unit="page">76</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Use of InSAR for Monitoring of Mining Deformations</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jaroz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wanke</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Fringe Workshop 2003</title>
+		<meeting>the Fringe Workshop 2003<address><addrLine>Frascati, Italy</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2003-12-05">1-5 December 2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Land Deformation Monitoring Using SAR Interferometry: State-of-the-art</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Crosetto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Crispa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Biescas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Monserrat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Agudo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Fernandes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Photogramm. Fernerkund. Geoinf</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="497" to="510"/>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Permanent scatterers in SAR interferometry</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ferretti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Prati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Rocca</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/36.898661</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="8" to="20"/>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">A new algorithm for surface deformation monitoring based on small baseline differential SAR interferograms</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Berardino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Fornaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Sansosti</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TGRS.2002.803792</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="2375" to="2383"/>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Mapping surface deformation in open pit iron mines of Carajás Province (Amazon Region) using an integrated SAR analysis</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Paradella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ferretti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Mura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Colombo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">F</forename><surname>Gama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tamburini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Santos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Novalli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Galo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">O</forename><surname>Camargo</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.enggeo.2015.04.015</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Eng. Geol</title>
+		<imprint>
+			<biblScope unit="volume">193</biblScope>
+			<biblScope unit="page" from="61" to="78"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Mapping ground movements in open pit mining areas using differential SAR interferometry</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Herrera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Tomás</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Vicente</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Lopez-Sanchez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Mallorquí</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mulas</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijrmms.2010.07.006</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Rock Mech. Min. Sci</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page" from="1114" to="1125"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Combination of Conventional and Advanced A-DInSAR to Monitor Very Fast Mining Subsidence with TerraSAR-X Data: Bytom City (Poland)</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Przyłucka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Herrera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Graniczny</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Colombo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Béjar-Pizarro</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/rs70505300</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="5300" to="5328"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Monitoring active open-pit mine stability in the Rhenish coalfields of Germany using a coherence-based SBAS method</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Motagh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zhand</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jag.2020.102217</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Appl. Earth Obs. Geoinf</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="page">102217</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note>CrossRef</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Detection and monitoring of surface motions in active mine in the Amazon region, using persistent scatterer interferometry with TerraSAR-X satellite Data</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Hartwig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Paradella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Mura</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/rs5094719</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="4719" to="4734"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Applying persistent scatterer interferometry for surface displacement mapping in the Azul open pit manganese mine (Amazon region) with TerraSAR-X data</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Pinto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Paradella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Mura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">F</forename><surname>Gama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Santos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">G</forename><surname>Silva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Hartwig</surname></persName>
+		</author>
+		<idno type="DOI">10.1117/1.JRS.9.095978</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="95978" to="95996"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Monitoring of Non Linear Ground Movement in an Open Pit Iron Mine Based on an Integration of Advanced DInSAR Techniques Using TerraSAR-X Data</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Mura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Paradella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">F</forename><surname>Gama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">G</forename><surname>Silva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Galo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Camargo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Silva</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/rs8050409</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">409</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Monitoring of ground movement in open pit iron mines of Carajás Province (Amazon region) based on A-DInSAR techniques using TerraSAR-X data</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">G</forename><surname>Silva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Mura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Paradella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">F</forename><surname>Gama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">A</forename><surname>Temporin</surname></persName>
+		</author>
+		<idno type="DOI">10.1117/1.JRS.11.026027</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">26027</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>CrossRef</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Monitoring subsidence of open pit iron mines at Carajás Province based on SBAS interferometric technique using TerraSAR-X data</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">F</forename><surname>Gama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Cantone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Mura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Pasquali</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Paradella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Santos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">G</forename><surname>Silva</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.rsase.2017.09.001</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens. Appl. Soc. Environ</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="199" to="211"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Monitoring the vulnerability of the dam and dikes in Germano iron mining after the collapse of the tailings dam of Fundão (Mariana-MG, Brazil) using DInSAR techniques with TerraSAR-X data</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Mura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">F</forename><surname>Gama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Paradella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Negrão</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Carneiro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Oliveira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">S</forename><surname>Brandão</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/rs10101507</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">1507</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Advanced DInSAR analysis on dam stability monitoring: A case study in the Germano mining complex (Mariana, Brazil) with SBAS and PSI techniques</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">F</forename><surname>Gama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Paradella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Mura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Oliveira</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.rsase.2019.100267</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens. Appl. Soc. Environ</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page">100267</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note>CrossRef</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Deformations Prior to the Brumadinho Dam Collapse Revealed by Sentinel-1 InSAR Data Using SBAS and PSI Techniques</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">F</forename><surname>Gama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Mura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Paradella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Oliveira</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/rs12213664</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">3664</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Ground displacements revealed by A-DInSAR analysis in the Germano iron mining complex before and after the Fundão Dam collapse using Sentinel-1 data</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Mura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">F</forename><surname>Gama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Paradella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Oliveira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">G</forename><surname>Rodrigues</surname></persName>
+		</author>
+		<idno type="DOI">10.1117/1.JRS.15.034513</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="36513" to="36519"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Sentinel-1 A-DInSAR Approaches to Map and Monitor Ground Displacements</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Krishnakumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Qiu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Monserrat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Barra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>López-Vinielles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Reyes-Carmona</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cuevas-González</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Palamà</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Crippa</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/rs13061120</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page">1120</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Investigation on mining subsidence over Appin-West Cliff Colliery using time-series SAR interferometry</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">H M</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/01431161.2017.1407501</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="1528" to="1547"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Monitoring mining induced subsidence by integrating differential radar interferometry and persistent scatterer techniques</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Pawluszek-Filipiak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Borkowski</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/22797254.2020.1759455</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Eur. J. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="18" to="30"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Detection of mining related ground instabilities using the Permanent Scatterers technique: A case study in the east of France</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Colesanti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Mouelic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bennani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Raucoules</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Carnec</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ferretti</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/0143116042000274069</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="201" to="207"/>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">InSAR analyses of terrain deformation near the Wieliczka Salt Mine</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Perski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Hanssen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Wojcik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wojciechowski</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.enggeo.2009.02.014</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Poland. Eng. Geol</title>
+		<imprint>
+			<biblScope unit="volume">106</biblScope>
+			<biblScope unit="page" from="58" to="67"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Monitoring residual mining subsidence of Nord/Pas-de-Calais coal basin from differential and Persistent Scatterer Interferometry (Northern France)</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Guéguen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Deffontaines</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Fruneau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Al Heib</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Michele</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Raucoules</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Guise</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Planchenault</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jappgeo.2009.02.008</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Geophys</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="page" from="24" to="34"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Mapping accumulated mine subsidence using small stack of SAR differential interferograms in the Southern coalfield of New South Wales, Australia</title>
+		<author>
+			<persName><forename type="first">A.-H</forename><forename type="middle">M</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-C</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Rizos</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.enggeo.2010.07.004</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Eng. Geol</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<biblScope unit="page" from="1" to="15"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Subsidence monitoring in coal area using time-series InSAR combining persistent scatterers and distributed scatterers</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Fu</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jag.2015.02.007</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Appl. Earth Obs. Geoinf</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="49" to="55"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Nonuniform ground motion monitoring with TerraSAR-X persitent scatterer interferometry</title>
+		<author>
+			<persName><forename type="first">U</forename><surname>Wegmüller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Walter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Spreckels</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">L</forename><surname>Werner</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TGRS.2009.2030792</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page" from="895" to="904"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Monitoring of slow ground deformation by ERS radar interferometry on Vauvert salt mine (France)</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Raucoles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Maisons</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Carnec</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Le Mouelic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>King</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hosford</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.rse.2003.09.005</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens. Environ</title>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+			<biblScope unit="page" from="468" to="478"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Satellite observation of coal mining subsidence by persistent scatterer analysis</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C</forename><surname>Jung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-W</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-S</forename><surname>Jung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Min</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-S</forename><surname>Won</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.enggeo.2007.02.007</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Eng. Geol</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="page" from="1" to="13"/>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">The tailings dam failure of 5 November 2015 in SE Brazil and its preceding seismic sequence</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Agurto-Detzel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bianchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Assumpção</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schimmel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Collaço</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ciardelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Barbosa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Calhau</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/2016GL069257</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Geophys. Res. Lett</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="page" from="4929" to="4936"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Mud tsunami wreaks ecological havoc in Brazil</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Escobar</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.350.6265.1138</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">350</biblScope>
+			<biblScope unit="page" from="1138" to="1139"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Brazil's worst mining disaster: Corporations must be compelled to pay the actual environmental costs</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">C</forename><surname>Garcia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Ribeiro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">O</forename><surname>Roque</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Ochoa-Quintero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">F</forename><surname>Laurance</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/eap.1461</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Ecol Appl</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="5" to="9"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Deformation Monitoring using Sentinel-1 SAR Data</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Devanthéry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Crosetto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Monserrat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cuervas-Gonzales</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Crippa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2nd International Electronic Conference on Remote Sensing (SCIforum)</title>
+		<meeting>the 2nd International Electronic Conference on Remote Sensing (SCIforum)<address><addrLine>Basel, Switzerland</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2018-04-05">22 March-5 April 2018</date>
+			<biblScope unit="volume">2</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Sentinel-1 SAR Interferometry for Surface Deformation Monitoring in Low-Land Permafrost Areas</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Strozzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Antonova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Günther</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Mätzler</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Gonçalo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Vieira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Wegmüller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Westermann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bartsch</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/rs10091360</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">1360</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">The Maoxian landslide as seen from space: Detecting precursors of failure with Sentinel-1 data</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Intrieri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Raspini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Fumagalli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Conte</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Farina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Allievi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ferretti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Casagli</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10346-017-0915-7</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Landslides</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="123" to="133"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Mapping Vulnerable Urban Areas Affected by Slow-Moving Landslides Using Sentinel-1 InSAR Data</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Béjar-Pizarro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Notti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Mateos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ezquerro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Centolanza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Herrera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Bru</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sanabria</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Solari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Javier Duro</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/rs9090876</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">876</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Continental Scale SBAS-DInSAR Processing for the Generation of Sentinel-1 Deformation Time Series within a Cloud Computing Environment: Achieved Results and Lessons Learned</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lanari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bonano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Buonanno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Casu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>De Luca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fusco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Manunta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Manzo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Onorato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Zeni</surname></persName>
+		</author>
+		<idno type="DOI">10.5194/egusphere-egu2020-17944</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the EGU General Assembly 2020</title>
+		<meeting>the EGU General Assembly 2020<address><addrLine>Online</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2020-05">May 2020</date>
+			<biblScope unit="page" from="4" to="8"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">O Craton do São Francisco</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">F M A</forename><surname>Almeida</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Rev. Bras. Geoc</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="349" to="364"/>
+			<date type="published" when="1977">1977</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<monogr>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">V N</forename><surname>Dorr</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ii</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Physiographic</surname></persName>
+		</author>
+		<title level="m">Stratigraphic and Structural Development of the Quadrilátero Ferrífero</title>
+		<meeting><address><addrLine>Washington, DC, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>United States Government Publishing Office</publisher>
+			<date type="published" when="1969">1969</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<monogr>
+		<title level="m" type="main">Análise dos Gatilhos de Liquefação Dinâmica e Modelagem Numérica da Barragem do Germano</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">M</forename><surname>Castilho</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<pubPlace>Ouro Preto, Brazil</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>Geotechnical Engineering, Federal University of Ouro Preto</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">Master's Thesis</note>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">DEM Extraction from Stereo SAR Satellite Imagery</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Ostrowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Cheng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the IGARSS'2000: Proceedings of the International Geoscience and Remote Sensing Symposium</title>
+		<meeting>the IGARSS'2000: the International Geoscience and Remote Sensing Symposium<address><addrLine>Honolulu, Hawaii; New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2000-07-28">25-28 July 2000. 2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<monogr>
+		<title level="m" type="main">Satellite InSAR Data: Reservoir from Space</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ferretti</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<publisher>EAGE Publications</publisher>
+			<pubPlace>Bunnik, The Netherlands</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">The 2015-2016 Ground Displacements of the Shanghai Coastal Area Inferred from a Combined COSMO-SkyMed/Sentinel-1 DInSAR Analysis</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pepe</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/rs9111194</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">1194</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Quantitative Assessment of Vertical and Horizontal Deformations Derived by 3D and 2D Decompositions of InSAR Line-of-Sight Measurements to Supplement Industry Surveillance Programs in the Tengiz Oilfield (Kazakhstan)</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Bayramov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Buchroithner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhuniskenov</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/rs13132579</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page">2579</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Extracting Vertical Displacement Rates in Shanghai (China) with Multi-Platform SAR Images</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Dai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Singleton</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/rs70809542</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="9542" to="9562"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Estimating horizontal and vertical movements due to underground mining using ALOS PALSAR</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.enggeo.2012.06.003</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Eng. Geol</title>
+		<imprint>
+			<biblScope unit="volume">143</biblScope>
+			<biblScope unit="page" from="18" to="27"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Multitemporal InSAR Coherence Analysis and Methods for Sand Mitigation</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Manzoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Molinari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Monti-Guarnieri</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/rs13071362</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page">1362</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Multitemporal SAR Coherence Analysis: Lava Flow Monitoring Case Study</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Boccardo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Gentile</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Giulio-Tonolo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Grandoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vassileva</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/IGARSS.2015.7326370</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2015 IEEE International Geoscience and Remote Sensing Symposium (IGARSS)</title>
+		<meeting>the 2015 IEEE International Geoscience and Remote Sensing Symposium (IGARSS)<address><addrLine>Milan, Italy</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2015-07">July 2015</date>
+			<biblScope unit="page" from="26" to="31"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

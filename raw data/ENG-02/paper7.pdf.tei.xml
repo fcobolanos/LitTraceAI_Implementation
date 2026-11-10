@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Simulation of an off-grid solar system to provide reliable energy access to the Island Community of Bellavista in Ecuador</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Fernando</forename><surname>Amoroso</surname></persName>
+							<email>famoroso@espol.edu.ec</email>
+							<affiliation key="aff0">
+								<orgName type="department">Escuela Superior Politécnica del Litoral</orgName>
+								<orgName type="institution">ESPOL Polytechnic University</orgName>
+								<address>
+									<settlement>ESPOL</settlement>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Centro de Energías Renovables y Alternativas</orgName>
+								<orgName type="department" key="dep2">Facultad de Ingeniería en Mecánica y Ciencias de la Producción</orgName>
+								<orgName type="department" key="dep3">FIMCP</orgName>
+								<orgName type="laboratory">CERA</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rubén</forename><surname>Hidalgo-León</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Escuela Superior Politécnica del Litoral</orgName>
+								<orgName type="institution">ESPOL Polytechnic University</orgName>
+								<address>
+									<settlement>ESPOL</settlement>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Centro de Energías Renovables y Alternativas</orgName>
+								<orgName type="department" key="dep2">Facultad de Ingeniería en Mecánica y Ciencias de la Producción</orgName>
+								<orgName type="department" key="dep3">FIMCP</orgName>
+								<orgName type="laboratory">CERA</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jaqueline</forename><surname>Litardo</surname></persName>
+							<email>jlitardo@espol.edu.ec</email>
+							<affiliation key="aff0">
+								<orgName type="department">Escuela Superior Politécnica del Litoral</orgName>
+								<orgName type="institution">ESPOL Polytechnic University</orgName>
+								<address>
+									<settlement>ESPOL</settlement>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Centro de Energías Renovables y Alternativas</orgName>
+								<orgName type="department" key="dep2">Facultad de Ingeniería en Mecánica y Ciencias de la Producción</orgName>
+								<orgName type="department" key="dep3">FIMCP</orgName>
+								<orgName type="laboratory">CERA</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Javier</forename><surname>Urquizo</surname></persName>
+							<email>jurquizo@villanova.edu</email>
+							<affiliation key="aff3">
+								<orgName type="department">Electric and Computer Engineering Department</orgName>
+								<orgName type="institution">Villanova University</orgName>
+								<address>
+									<settlement>Villanova</settlement>
+									<region>PA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Viviana</forename><surname>Villavicencio</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">Electric and Computer Engineering Department</orgName>
+								<orgName type="institution">Villanova University</orgName>
+								<address>
+									<settlement>Villanova</settlement>
+									<region>PA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Miguel</forename><surname>Torres</surname></persName>
+							<email>mitorres@espol.edu.ec</email>
+							<affiliation key="aff2">
+								<orgName type="department">Facultad de Ingeniería en Electricidad y Computación</orgName>
+								<orgName type="institution">FIEC Campus</orgName>
+								<address>
+									<addrLine>Gustavo Galindo km 30.5 Vía Perimetral</addrLine>
+									<postBox>P.O. Box 09-01</postBox>
+									<postCode>-5863</postCode>
+									<settlement>Guayaquil</settlement>
+									<country key="EC">Ecuador</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pritpal</forename><surname>Singh</surname></persName>
+							<email>pritpal.singh@villanova.edu</email>
+							<affiliation key="aff3">
+								<orgName type="department">Electric and Computer Engineering Department</orgName>
+								<orgName type="institution">Villanova University</orgName>
+								<address>
+									<settlement>Villanova</settlement>
+									<region>PA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Guillermo</forename><surname>Soriano</surname></persName>
+							<email>gsorian@espol.edu.ec</email>
+							<affiliation key="aff0">
+								<orgName type="department">Escuela Superior Politécnica del Litoral</orgName>
+								<orgName type="institution">ESPOL Polytechnic University</orgName>
+								<address>
+									<settlement>ESPOL</settlement>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Centro de Energías Renovables y Alternativas</orgName>
+								<orgName type="department" key="dep2">Facultad de Ingeniería en Mecánica y Ciencias de la Producción</orgName>
+								<orgName type="department" key="dep3">FIMCP</orgName>
+								<orgName type="laboratory">CERA</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Simulation of an off-grid solar system to provide reliable energy access to the Island Community of Bellavista in Ecuador</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F40500948244E507BB5567B47B62388D</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-01T12:02+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Reliable energy access</term>
+					<term>solar power system</term>
+					<term>HOMER Pro</term>
+					<term>diesel generator</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>This paper shows the design considerations of an offgrid solar power system working independently with an existing diesel generator to supply energy for lighting circuits and some low-power appliances installed in the Bellavista community. The main purpose of this design is to take advantage of the available infrastructure in the community to reduce initial investment costs while ensuring reliable energy access for the community. In addition, this system may be used as a starting point to build upon for future sustainable energy projects. The community is currently being powered through a diesel generator operating for 5 hours every day during the evening when the period of higher demand occurs. However, the community requires access to reliable energy access throughout the day to improve their quality of life. For the generator's analysis, we adapted its load profile from available data of previous studies carried out in the community. We used the HOMER Pro renewable energy software for the simulation and the Meteonorm 7.3 database to obtain the site's weather data file. The results show the sizing of the solar power system, its annual electricity production, and other indicators obtained from its operation. We also show the system's initial capital costs and the Net Present Cost, taking into account the existing equipment in the community. Besides, we estimate the annual electricity production of the generator, its amount of fuel used, its operating costs, and a baseline for greenhouse gas emissions produced in a year according to the actual operating conditions.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>According to the International Energy Agency (IEA), about 89% of the world's rural population had access to electricity in 2018, and it is expected that it continues to increase by about 4% more in the next decade <ref type="bibr" target="#b0">[1]</ref>. This trend is similar in Central and South America, and by 2030, the projections of IEA indicate that almost 99% of the population would have access to electricity -about 2% more than in 2018. These trends show the committed efforts of the scientific community, governmental, and non-governmental entities to provide universal access to affordable, reliable, sustainable, and modern energy, as set by the targets from the United Nation's Sustainable Development Goals (SDG) 7 <ref type="bibr" target="#b1">[2]</ref>.</p><p>Several projects have been implemented in South America to supply the electricity needs of rural communities <ref type="bibr" target="#b3">[3]</ref>- <ref type="bibr" target="#b5">[5]</ref>. Most of the solutions are based on renewable energy systems, which are previously modeled using simulation tools to assess their feasibility and the initial investment costs <ref type="bibr" target="#b6">[6]</ref>- <ref type="bibr" target="#b10">[10]</ref>. Doctors and Kelman <ref type="bibr" target="#b11">[11]</ref> used the HOMER Pro software to evaluate hybrid and solar power systems as alternatives to improve the electrification of the community of Porto Walter in the state of Acre, Brazil. Through this analysis, the authors determined the most energy-efficient and cost-effective system which was the solar photovoltaic alternative provided a lower Levelized Cost of Energy (LCOE) than the hybrid alternative. Similarly, Mamaghani et al. <ref type="bibr" target="#b12">[12]</ref> compared the techno-economic viability of seven different renewable energy systems for rural electrification in Colombia through HOMER Pro simulations. The findings of this research show that the diesel-renewable configurations produced a very low carbon footprint and the high potential of the proposed hybrid combinations to cover the load demand of the studied communities.</p><p>A common problem affecting rural communities is the use of inefficient diesel generators, which provide a few hours of electricity supply and produce significant greenhouse gas (GHG) emissions. This is one of the issues that Ecuadorian rural communities face. Nevertheless, the research community's continued efforts have provided access to sustainable energy to remote communities in Ecuador. Urquizo et al. <ref type="bibr" target="#b13">[13]</ref> presented an example of this through the rehabilitation of 20 solar home systems in the community of Cerrito de los Morreños, located in the Gulf of Guayaquil.</p><p>This paper presents the simulation of an off-grid solar power system using the HOMER Pro software. Bellavista, a community located on an island in the Gulf of Guayaquil, was selected as a case study for this paper. This system was designed to supply electricity to the lighting circuits and some low-power appliances (TVs, cell chargers, and DVD players) in the whole community, which works independently from the existing diesel generator in this site. The lighting circuits fed by the solar power system would work in parallel to the generator's lighting circuits. The main purpose of this design is to take advantage of the available infrastructure in the community to reduce initial investment costs while ensuring reliable energy access for the community. The availability of solar panels, a diesel generator, as well as a functioning distribution grid may reduce the initial investment costs for the system. The simulations and analyses are made for the first year of operation of the solar power system, therefore replacement costs of the equipment are not considered. Also, we estimate the annual electricity production of the generator, its amount of fuel used, and its greenhouse gas emissions produced in a year according to the actual operating conditions. This generator works 5 hours each day during the evening, which feeds the home appliances with higher power consumption and existing lighting circuits.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. METHODOLOGY</head><p>The methodology of this study has been divided into different subsections to provide a clear description of the methodological sequence. It should be mentioned that sections II-D and II-E are the information required for the simulation of the scenario in Figure <ref type="figure" target="#fig_1">2a</ref>. Likewise, sections II-F and II-G are the information required for the simulation of the scenario in Figure <ref type="figure" target="#fig_1">2b</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Background of Bellavista Community</head><p>Bellavista is an island community located in the Province of Guayas, Ecuador. This community is located in the Gulf of Guayaquil approximately 28 miles from the city of Guayaquil (see Figure <ref type="figure" target="#fig_0">1</ref>), which is the most important port city of the country. The community has a population of 136 people, which includes 22 homes, a community center, a church, and a school without access to the national electricity grid <ref type="bibr" target="#b14">[14]</ref>. The community has a diesel generator that works 5 hours per day all year round. The power of this generator is 45 kW and its hours of operation are from 18:00 to 23:00. During the rest of the day, the community has no electricity supply.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Climate</head><p>The community of Bellavista, according to the Köppen-Gaiger classification, a climate classification map, is included in the BSh group <ref type="bibr" target="#b15">[15]</ref>. The places in this group are characterized by semi-arid and warm climates. Throughout Ecuador, there are two well-defined seasons, which are wet (January-April) and dry (May-December). The average monthly temperature ranges from 23.5 o C to 26.6 o C, with April being the warmest month. Likewise, the annual average humidity is 70%. The wind speeds in the area are very low, reaching an annual average value of 2 m/s. Also, the average annual global insolation is approximately 4.5 kWh/m 2 . The meteorological data for this location were obtained from <ref type="bibr">[16] [17]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Description of the parameters for the simulations</head><p>The goal of this simulation is to provide the sizing of the components for the solar system as well as a baseline analysis of GHG emissions from the existing generator in the community to provide reliable energy access to the community. The proposed scenario is to have the solar system supply the power for lighting and low-powered appliances during the day and have the diesel generator supply power for the rest of high-powered devices (refrigerators, washing machines, irons, and others) during its hours of operation, which initially are proposed to be the same as they currently are. A description of the proposed operation to be simulated in HOMER Pro for these independent power systems is provided in Figures <ref type="figure" target="#fig_1">2a</ref> and<ref type="figure" target="#fig_1">2b</ref>. The load for a typical home in the community consists of lighting which is comprised mainly of Compact Fluorescent Light (CFL) bulbs, and appliances such as television, washing machine, cellphones. At least half of the homes also have a radio, DVD player, and a refrigerator. For design purposes, each home would have an electrical load and electricity consumption according to Table <ref type="table">I</ref>. Each LED bulb circuit would work in parallel to the existing lighting circuits in each of the homes. This paper considers the analysis for the 22 inhabited homes for the system as this information was readily available from previous assessments in the community. Taking into consideration the 22 homes, the daily electricity consumption for the entire community is 13.88 kWh/day, whose distribution can be seen in Figure <ref type="figure" target="#fig_2">3</ref>. It should be mentioned that this distribution is referential. Likewise, the peak power reached was 2.69 kW with an average power of 0.58 kW. As can be seen, this load profile is only for when the solar power system is in operation. The annual load profile of the whole community entered in the HOMER Pro was built taking into consideration a random daily variation of ±10% with an average daily electricity consumption of 13.88 kWh for the whole year.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>E. Off-grid solar power system: Components</head><p>The selection of the components for the solar system was based on the availability of components on the community. Ten years ago the community received 22 Solar Home Systems (SHS) from an international non-governmental organization (NGO). Nowadays those SHS are no longer operational due to issues with maintenance of their batteries, as explored in <ref type="bibr" target="#b13">[13]</ref>. However, the solar panels are still working and can be reallocated to a centralized system. For design purposes it is assumed that the community will donate their solar panels to connect them in a centralized system for the benefit of the community.</p><p>1) Solar power panels: The panel selected for the simulation has an efficiency of 15% in standard conditions, it is mono-crystalline and it has a lifetime of 15 years. The costs shown in Table <ref type="table">II</ref>, which are input requirements for the analysis on HOMER pro, are based on referential monocrystalline solar panels of similar peak power that are locally available. In the simulator, the temperature effects on the power and the nominal operating cell temperature in the solar panel were taken into consideration. These values are -0.450 %/ o C and 46 o C, respectively. Similarly, the derating factor is 98%, where 2% represents the losses such as dust on the surface of the panels, wiring, shading, and others. The nominal panel voltage is 17.3V with an operating current of 8.96A. The stacking of 4 panels makes it suitable for use with systems of 48V.</p><p>2) Battery energy storage system: In the present work, we take into account the stationary 2V -1990 Ah OPzS Solar batteries, due to their higher capacity and lifespan. The batteries have a capital cost of USD $842 per unit with a maximum depth of discharge of 20%, and the replacement costs are not considered. Similarly, we do not consider the operation and maintenance costs for this first year. The specifications of the battery to be used can be found in Table <ref type="table" target="#tab_2">III</ref>. According to the number of panels obtained in the simulation and their array type, the characteristics and costs of the solar charge controller will be established.</p><p>3) DC/AC power converter: The costs of the equipment used for optimization in the HOMER Pro can be seen in the Table <ref type="table" target="#tab_4">IV</ref>. This equipment has an operating voltage of 48 V and an efficiency of 96% <ref type="bibr" target="#b19">[19]</ref>. Its lifespan is 15 years for which replacement costs are not considered. It has a low failure rate so it has no operation and maintenance costs.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>F. Diesel generator: Load profiles for homes</head><p>The existing electrical load to be supplied by the generator in the community is summarized in Table <ref type="table" target="#tab_4">V</ref>. It was constructed from the information obtained in <ref type="bibr" target="#b14">[14]</ref>. It should be specified that the generator would continue to work for 5 hours from 18:00 every day of the year for the proposed system. The daily electricity consumption of the 22 homes is 30.45 kWh/day, whose distribution can be seen in Figure <ref type="figure" target="#fig_3">4</ref>. Likewise, the peak power reached was 12.92 kW with an average power of 1.28 kW. The construction of the annual load profile follows the same methodology as the one mentioned in Section II-D.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>G. Diesel generator: Characteristics of the fuel and generator</head><p>The present information is valid for the simulations taking as reference Figure <ref type="figure" target="#fig_1">2b</ref>. The fuel used by the generator is diesel, and its properties were extracted from fuel quality research (Table <ref type="table" target="#tab_4">VI</ref>) <ref type="bibr" target="#b20">[20]</ref>. Since the analysis is performed for one year, fuel price inflation is not considered. The information from the generator will only be used to estimate GHG emissions. The existing generator in the community has an output power of 45 kW. The fuel consumption curve in Figure <ref type="figure" target="#fig_4">5a</ref> relates the working power to the amount of fuel per hour. This allows us to determine the efficiency curve of the generator (Figure <ref type="figure" target="#fig_4">5b</ref>). These curves were obtained from the manufacturer data sheet. <ref type="bibr" target="#b21">[21]</ref>. For the system costs, the estimated capital cost of the generator is considered to be USD$0, because this machine is already deployed in the community. The replacement costs are not considered because the analysis is considered for a single year. Besides, the cost of operation and maintenance (O&amp;M) per hour considered is USD$0.45.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. RESULTS</head><p>This section shows the results of the two simulated power systems in HOMER Pro established in Section II-C. The first part is based on the simulations in Figure <ref type="figure" target="#fig_1">2a</ref> and the second part in Figure <ref type="figure" target="#fig_1">2b</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Off-grid solar power system</head><p>The simulations carried out are based on Figure <ref type="figure" target="#fig_1">2a</ref> taking into consideration the information of sections II-D and II-E. According to the optimization analysis developed in HOMER Pro, the solar system was sized to a 4.96 kWp solar array. Each panel is 0.155 kW, so we have an array of 4 panels in series and 8 strings in parallel (32 panels) to work with an operating voltage of 48V. During a visit in January 2019, a group of IEEE volunteers tested the solar panels in the community, and 19 were found to be in operating conditions.</p><p>With this arrangement and with the short circuit current of the selected panel (9.18A), we obtained an approximate current of 79A. This value should be increased by an additional 25% as a safety factor. So, we need a solar charge controller that supports at least 99A and it is suitable for the operating voltage of the system.</p><p>The solar power delivered by the system can be seen in Figure <ref type="figure">6</ref>. The annual electricity production of the system reached 6.5 MWh/yr. Likewise, the electrical load consumed 5.11 MWh/yr. Only, 1.90 kWh/yr was the unmet electric load with excess electricity of 0.7 MWh/yr. Solar power panels operated for 4406 hours/yr with a maximum power of 3.82 kW and an average output of 0.74 kW. The average amount of energy supplied daily was 17.8 kWh/day. Fig. <ref type="figure">6</ref>. Monthly electric production of solar power system With the selected batteries, the system autonomy reaches 145 hours. The energy input of the batteries was 3.098 MWh/yr and the output was 2.64 MWh/yr. The losses reached by the storage system were 0.47 MWh/yr. According to the optimization made in HOMER Pro, the number of batteries is 24, which are connected in series. Each battery is 2V, so the operating voltage of the system is 48V.</p><p>The power converter had a minimum capacity of 4.13kW with an average output of 0.583 kW and a maximum output of 2.69 kW. The operation hours of this equipment during the year were 3650. Likewise, its input power was 5.3 MWh/yr and the output power was 5.11 MWh/yr, where a 96% efficiency of the equipment is clearly indicated. A summary of the energy produced and consumed for all of the components is shown in Fig. <ref type="figure" target="#fig_5">7</ref>.</p><p>The capital costs of the components can be seen in Table <ref type="table" target="#tab_7">VII</ref>. The estimated costs of these components come from the Ecuadorian market. Here, we are also considering the cost of 13 additional solar power panels of the 32 needed for the system, because in the community there are 19 panels in useful conditions. In "Others" we considered the costs of the solar charge controller <ref type="bibr" target="#b22">[22]</ref> and the shipping/assembly of the components. The total cost of USD$33758 represents the Net Present Cost (NPC) of the solar power system because the system is being analyzed in its first year of operation.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Diesel generator</head><p>In this section, the simulations are based on the Figure <ref type="figure" target="#fig_1">2b</ref>, taking into consideration the information of sections II-F and   II-G. As mentioned in the previous sections, the community has had a diesel generator for several years, which was donated by an Ecuadorian government entity. The diesel generator supplied 11.24 MW/yr, which represents 100% of the community's electrical load within its operating hours. The monthly power delivered by the generator can be seen in Figure <ref type="figure" target="#fig_6">8</ref>. The hours of operation of the generator were 1825 with 365 starts during one year of operation. The mean electrical output power was 6.16 kW with a minimum of 3.87 kW and a maximum of 12.9 kW.</p><p>The total annual diesel consumption was 3953 liters with a daily average of 10.8 L/day and per hour of 0.451 L/hr. Also, the monthly average diesel consumption was 329 L/month. The total cost of fuel during the year of the generator's operation was USD$1023.03. The NPC for the operation of the generator in one year was USD$1799. It is because the generator exists in the community and only the costs of O&amp;M (USD$775.63) and fuel (USD$1023.03) are taken into account. Finally, the calculation of the pollutant gases, emitted by the generator from the information in Table <ref type="table" target="#tab_4">VI</ref>, can be seen in Table <ref type="table" target="#tab_7">VIII</ref>. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. CONCLUSIONS</head><p>This paper shows the design considerations of an off-grid solar power system that supplies energy to an electrical load consisting of lighting circuits and some existing low-power appliances in all the homes in the Bellavista community. The design of the system considers the operation of the existing diesel generator to improve energy access to the community, taking into consideration a low initial investment cost.</p><p>The availability of electricity for lighting would be of great help to the inhabitants of this community as they are fishermen and they start their work very early in the morning. Also, artificial lighting could help to improve the visual comfort level of the people so they could improve the development of other activities such as reading and domestic chores, during the daytime.</p><p>Sizing of system components resulted in values suitable for a 48 V system. We obtained 24 batteries and 32 solar panels, which indicates that the inputs entered into the simulator are consistent according to the assumptions initially established.</p><p>The combustion that takes place in the diesel generator produces large amounts of GHGs. It can directly affect the inhabitants' health as well as the biodiversity and seawater bodies. This situation could have a negative impact on the main economic activity of the inhabitants of this community, which is fishing and crustacean gathering.</p><p>This work provides a baseline for GHG emissions from the generator which may be reduced in the future as a greater renewable energy penetration.</p><p>Prior to the implementation of the system, community engagement must be prioritized in order for the community to have ownership of the project. This will allow the project to be sustained in time as the community becomes more involved in the implementation and maintenance of the system. Training would also be required for the maintenance of the different components as well as to keep the community educated on the scalability of solar systems and managing expectations for increasing the load of the system.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. Geographic location of the community of Bellavista</figDesc><graphic coords="2,66.49,500.08,216.00,165.05" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 2. Power Systems to be simulated in HOMER Pro a) off-grid solar power system, b) diesel generator</figDesc><graphic coords="2,322.31,485.74,230.40,190.50" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 3 .</head><label>3</label><figDesc>Fig. 3. Daily electricity consumption of 22 homes for electrical load estimation for the solar power system</figDesc><graphic coords="3,52.09,420.38,244.80,94.51" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 4 .</head><label>4</label><figDesc>Fig. 4. Daily electricity consumption of 22 homes for electrical load estimation for the diesel generator</figDesc><graphic coords="4,52.09,337.36,244.81,94.42" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 5 .</head><label>5</label><figDesc>Fig. 5. Characteristics of the diesel generator obtained by HOMER Pro a) Fuel consumption b) Efficiency</figDesc><graphic coords="4,358.31,98.40,158.40,307.05" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 7 .</head><label>7</label><figDesc>Fig. 7. Summary of the energy produced and consumed for all of the components.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Fig. 8 .</head><label>8</label><figDesc>Fig. 8. Monthly electric production of diesel generator</figDesc><graphic coords="5,329.51,427.01,216.00,130.73" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>TABLE III SPECIFICATIONS</head><label>III</label><figDesc>OF 1990 AH SOLAR OPZS BATTERY,<ref type="bibr" target="#b18">[18]</ref> </figDesc><table><row><cell>Nominal voltage (V)</cell><cell>Maximum charge current (A)</cell><cell>Maximum discharge current (A)</cell><cell>Performance HOMER pro (kWh)</cell><cell>No. of batteries in series</cell></row><row><cell>2</cell><cell>203</cell><cell>8900</cell><cell>7300</cell><cell>24</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>TABLE V CHARACTERISTICS</head><label>V</label><figDesc>OF THE DAILY ELECTRIC LOAD BY ALL HOMES</figDesc><table><row><cell>Appliance</cell><cell>Power (kW)</cell><cell>Qty. for all homes</cell><cell>Hours of operation</cell><cell>Energy (kWh)</cell></row><row><cell>Computer</cell><cell>0.065</cell><cell>1</cell><cell>3</cell><cell>0.195</cell></row><row><cell>Saving bulb (3 units)</cell><cell>0.075</cell><cell>22</cell><cell>5</cell><cell>8.250</cell></row><row><cell>Washing machine</cell><cell>0.400</cell><cell>18</cell><cell>1</cell><cell>7.200</cell></row><row><cell>Cell charger</cell><cell>0.015</cell><cell>15</cell><cell>1</cell><cell>0.225</cell></row><row><cell>Iron</cell><cell>1.200</cell><cell>1</cell><cell>1</cell><cell>1.200</cell></row><row><cell>Refrigerator</cell><cell>0.065</cell><cell>8</cell><cell>5</cell><cell>2.600</cell></row><row><cell>TV</cell><cell>0.095</cell><cell>22</cell><cell>5</cell><cell>10.450</cell></row><row><cell>DVD player</cell><cell>0.010</cell><cell>11</cell><cell>3</cell><cell>0.330</cell></row><row><cell/><cell/><cell/><cell>Total (kWh/day)</cell><cell>30.45</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_7"><head>TABLE VII CAPITAL</head><label>VII</label><figDesc>COSTS OF COMPONENTS OF SOLAR POWER SYSTEM</figDesc><table><row><cell>Components</cell><cell>Unit cost (USD$)</cell><cell>Quantity</cell><cell>Total cost (USD$)</cell></row><row><cell>Solar power panel</cell><cell>150</cell><cell>13  *</cell><cell>1950</cell></row><row><cell>Battery</cell><cell>842</cell><cell>24</cell><cell>20208</cell></row><row><cell>Power inverter</cell><cell>3080</cell><cell>1</cell><cell>3080</cell></row><row><cell>Others</cell><cell>8520</cell><cell>1</cell><cell>8520</cell></row><row><cell/><cell/><cell>Total (USD$)</cell><cell>33758</cell></row><row><cell/><cell/><cell/><cell/></row></table><note><p>* During a visit in Jan/2019, 19 solar panels were tested.</p></note></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>Authorized licensed use limited to: ESCUELA POLITECNICA DEL LITORAL (ESPOL). Downloaded on August 22,2025 at 20:02:01 UTC from IEEE Xplore. Restrictions apply.</p></note>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">SDG7: Data and Projections</title>
+		<author>
+			<orgName type="collaboration">IEA</orgName>
+		</author>
+		<ptr target="https://www.iea.org/reports/sdg7-data-and-projections"/>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<pubPlace>Paris</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m">Sustainable Development Goals: 7</title>
+		<imprint>
+			<publisher>United Nations</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<ptr target="https://www.un.org/sustainabledevelopment/energy/"/>
+		<title level="m">Affordable and Clean Energy</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Electrification in noninterconnected areas</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bueno-López</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Garzón Lemos</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Technology and Society Magazine</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="73" to="79"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Assessing the Impact of Offgrid Solar Electrification in Rural Peru</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Hopps</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Roth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal for Service Learning in Engineering, Humanitarian Engineering and Social Entrepreneurship</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="61" to="79"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Optimization of a hybrid energy system for an isolated community in Brazil</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">T</forename><surname>Sepulveda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Martinez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Renew. Energy Res. IJRER</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1476" to="1481"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Formative evaluation of sustainability in rural electrification programs from a management perspective: A case study from Venezuela</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>López-González</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Domenech</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ferrer-Martí</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Renewable and Sustainable Energy Reviews</title>
+		<imprint>
+			<biblScope unit="volume">95</biblScope>
+			<biblScope unit="page" from="95" to="109"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Renewable microgrid projects for autonomous small-scale electrification in Andean countries</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>López-González</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Domenech</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Gómez-Hernández</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ferrer-Martí</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Renewable and Sustainable Energy Reviews</title>
+		<imprint>
+			<biblScope unit="volume">79</biblScope>
+			<biblScope unit="page" from="1255" to="1265"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Techno-economic feasibility analysis of photovoltaic systems in remote areas for indigenous communities in the Colombian Guajira</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vides-Prado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">O</forename><surname>Camargo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Vides-Prado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Orozco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Chenlo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Candelo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">B</forename><surname>Sarmiento</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Renewable and Sustainable Energy Reviews</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page" from="4245" to="4255"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Analysis of hybrid solar/wind/diesel renewable energy system for off-grid rural electrification</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Barzola</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Espinoza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Cabrera</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Renew. Energy Res</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1146" to="1152"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Microgrid design for remote location in chile using a scenario-based methodology</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Hidalgo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Jacome</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Urquizo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Soriano</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">14th LACCEI International Multi-Conference for Engineering, Education, and Technology</title>
+		<imprint>
+			<publisher>Engineering Innovations for Global Sustainability</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="20" to="22"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Sustainable and Economic Alternative for the Electric Supply of Isolated Communities in the Brazilian Off-Grid Systems</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Doctors</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kelman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Power and Energy Engineering</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">09</biblScope>
+			<biblScope unit="page">145</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Techno-economic feasibility of photovoltaic, wind, diesel and hybrid electrification systems for off-grid rural electrification in Colombia</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">H</forename><surname>Mamaghani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A A</forename><surname>Escandon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Najafi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Shirazi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Rinaldi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Renewable Energy</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page" from="293" to="305"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Rehabilitation of Solar Home Systems and Sustainable Development for an Island Community in Ecuador</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Urquizo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Hidalgo-León</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Villavicencio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Soriano</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2019 IEEE Global Humanitarian Technology Conference (GHTC)</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="1" to="8"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<title level="m" type="main">Diseño del sistema de energización autónomo de la isla bellavista localizada en el golfo de guayaquil</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Panchana Malavé</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Valverde Rea</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<publisher>Espol</publisher>
+		</imprint>
+	</monogr>
+	<note type="report_type">B.S. thesis</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Peel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">L</forename><surname>Finlayson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Mcmahon</surname></persName>
+		</author>
+		<title level="m">Updated world map of the köppen-geiger climate classification</title>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<title level="m" type="main">Weather data report for the Bellavista community</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Meteonorm</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<pubPlace>Guayaquil, Tech. Rep.</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>ESPOL</orgName>
+		</respStmt>
+	</monogr>
+	<note>7.3</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<title level="m" type="main">Mapa Solar del Ecuador</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Vaca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Ordóñez</surname></persName>
+		</author>
+		<ptr target="https://www.researchgate.net/publication/338843581"/>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<publisher>Scinergy, Tech. Rep</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<ptr target="http://www2.exide.com/Media/files/Downloads/IndustEuro/ClassicSolar.pdf"/>
+		<title level="m">Industrial Batteries / Network Power</title>
+		<imprint/>
+		<respStmt>
+			<orgName>Power GNB Industrial</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<monogr>
+		<ptr target="https://www.victronenergy.com.es/upload/documents/Datasheet-Quattro-3-10kVA-120V-ES.pdf"/>
+		<title level="m">Inversores / Cargadores</title>
+		<imprint/>
+		<respStmt>
+			<orgName>Victron Energy</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<title level="m" type="main">Composición elemental de mezclas biodiésel-diésel y análisis de sus emisiones de combustión</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Medina Romo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Viteri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">Salazar</forename><surname>Moya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">L</forename><surname>Reyes</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Chávez</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<ptr target="http://www.sivasa-ec.com/fichas/812.pdf"/>
+		<title level="m">Grupo electrogeno MP-45</title>
+		<imprint/>
+	</monogr>
+	<note>Sivasa-ec</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<author>
+			<persName><forename type="first">Steca</forename><surname>Power</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tarom</forename></persName>
+		</author>
+		<ptr target="https://www.steca.com/index.php?Steca-Power-Tarom-en#productproperty"/>
+		<title level="m">Technical data</title>
+		<imprint/>
+	</monogr>
+	<note>Online</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

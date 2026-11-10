@@ -1,0 +1,1478 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Optimal Design of Hybrid Microgrid in Isolated Communities of Ecuador</title>
+				<funder>
+					<orgName type="full">CERA</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">ESPOL</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Journal of Modern Power Systems and Clean Energy</publisher>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2024-02-29">February 29, 2024</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Luis</forename><surname>A. Pesantes</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Ruben</forename><surname>Hidalgo-Leon</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>Member, IEEE</roleName><forename type="first">Johnny</forename><surname>Rengifo</surname></persName>
+							<email>johnny.rengifo@usm.cl</email>
+						</author>
+						<author>
+							<persName><roleName>Member, IEEE</roleName><forename type="first">Miguel</forename><surname>Torres</surname></persName>
+							<email>mitorres@espol.edu.ec</email>
+						</author>
+						<author>
+							<persName><roleName>Member, IEEE</roleName><forename type="first">Jorge</forename><surname>Aragundi</surname></persName>
+							<email>jaragund@espol.edu.ec</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jose</forename><surname>Cordova-Garcia</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Luis</forename><surname>F. Ugarte</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Facultad de Ingeniería en Electricidad y Computación of Escuela Superior Politécnica del Litoral (ES- POL</orgName>
+								<orgName type="institution">) University</orgName>
+								<address>
+									<settlement>Guayaquil</settlement>
+									<country key="EC">Ecuador</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Electrical Engineering</orgName>
+								<orgName type="institution">Universidad Técni- ca Federico Santa María</orgName>
+								<address>
+									<settlement>Santiago</settlement>
+									<country key="CL">Chile</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Optimal Design of Hybrid Microgrid in Isolated Communities of Ecuador</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Journal of Modern Power Systems and Clean Energy</title>
+						<idno type="ISSN">2196-5625</idno>
+						<imprint>
+							<publisher>Journal of Modern Power Systems and Clean Energy</publisher>
+							<biblScope unit="volume">12</biblScope>
+							<biblScope unit="issue">2</biblScope>
+							<biblScope unit="page" from="488" to="499"/>
+							<date type="published" when="2024-02-29">February 29, 2024</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">ED2F4A3190E393E7D4CC2375F03EF83D</idno>
+					<idno type="DOI">10.35833/mpce.2023.000733</idno>
+					<note type="submission">Manuscript received: September 30, 2023; revised: January 5, 2024; accepted: February 29, 2024.</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-01T12:01+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Battery energy storage system (BESS)</term>
+					<term>isolated community</term>
+					<term>microgrid</term>
+					<term>renewable energy</term>
+					<term>optimization</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>In rural territories, the communities use energy sources based on fossil fuels to supply themselves with electricity, which may address two main problems: greenhouse gas emissions and high fuel prices. Hence, there is an opportunity to include renewable resources in the energy mix. This paper develops an optimization model to determine the optimal sizing, the total annual investment cost in renewable generation, and other operating costs of the components of a hybrid microgrid. By running a k-means clustering algorithm on a meteorological dataset of the community under study, the hourly representative values become input parameters in the proposed optimization model. The method for the optimal design of hybrid microgrid is analyzed in six operating scenarios considering: ① 24-hour continuous power supply; ② load shedding percentage; ③ diesel power generator (genset) curtailment; ④ the worst meteorological conditions; ⑤ the use of renewable energy sources including battery energy storage systems (BESSs)； and ⑥ the use of genset. A mathematical programming language (AMPL) tool is used to find solutions of the proposed optimization model. Results show that the total costs of microgrid in the scenarios that cover 100% of the load demand (without considering the scenario with 100% renewables) increase by over 16% compared with the scenario with genset operation limitation. For the designs with power supply restrictions, the total cost of microgrid in the scenario with load shedding is reduced by over 27% compared with that without load shedding.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>A CCESS to essential resources for daily activities is a re- curring issue in some isolated communities in developing countries. Electricity is crucial as it provides access to schooling and technology, and it is closely linked to other primary necessities such as water. The national government unilaterally specified the selling price of fuels in Ecuador through a price-fixing system, which lacked the flexibility to adapt to active changes in the global market. The new reality underwent a significant modification from 2020, when the selling price of oil-derived fuels such as diesel began to reflect the fluctuations resulting from international supply and demand imbalances. This transition has directly impacted isolated communities in Ecuador that rely on fossil fuels for local energy generation <ref type="bibr" target="#b0">[1]</ref>.</p><p>In this context, hybrid microgrids appear as an alternative to stimulate the incorporation of renewable resources and reduce fossil fuel consumption in isolated communities, with better environmental performances <ref type="bibr" target="#b1">[2]</ref>. Several optimization algorithms have been proposed for the design of hybrid microgrids, including linear programming and mixed-integer linear programming algorithms <ref type="bibr" target="#b2">[3]</ref> - <ref type="bibr" target="#b4">[5]</ref>, particle swarm optimization (PSO) based algorithm <ref type="bibr" target="#b5">[6]</ref>- <ref type="bibr" target="#b8">[9]</ref>, iterative Gauss-Seidel algorithm <ref type="bibr" target="#b9">[10]</ref>, hybrid optimization of multiple energy resources (HOMER) <ref type="bibr" target="#b10">[11]</ref> - <ref type="bibr" target="#b20">[21]</ref>, stochastic optimization algorithm <ref type="bibr" target="#b21">[22]</ref>, <ref type="bibr" target="#b22">[23]</ref>, and evolutionary algorithm <ref type="bibr" target="#b23">[24]</ref>- <ref type="bibr" target="#b29">[30]</ref>. These algorithms use different objective functions to utilize renewable resources as much as possible. For this purpose, it is possible to minimize functions like the power produced by diesel generator (genset) in a defined time interval <ref type="bibr" target="#b2">[3]</ref>, <ref type="bibr" target="#b25">[26]</ref>, the total investment and operating cost <ref type="bibr" target="#b7">[8]</ref> - <ref type="bibr" target="#b9">[10]</ref>, <ref type="bibr" target="#b16">[17]</ref> - <ref type="bibr" target="#b19">[20]</ref>, <ref type="bibr" target="#b22">[23]</ref>, <ref type="bibr" target="#b30">[31]</ref>, <ref type="bibr" target="#b31">[32]</ref>, the levelized cost of electricity, greenhouse gas emissions <ref type="bibr" target="#b4">[5]</ref>, <ref type="bibr" target="#b29">[30]</ref>, and the probability of power outage <ref type="bibr" target="#b6">[7]</ref>. As shown in Table <ref type="table" target="#tab_0">I</ref>, the current trend is using financial indicators as a decision-making criterion for the design of microgrid, while the technical requirements are incorporated through optimization constraints.</p><p>One of the main constraints of the problem must ensure the balance between the power produced by different sources and the system demand. Then, the optimization constraints manage the state of charge (SOC) of the battery energy storage systems (BESSs) and the fossil generators dispatch.</p><p>On the other hand, the generation capacity of renewable energy sources strongly relies on resource availability according to geographical and meteorological conditions. Solar radiation or wind speed data vary greatly depending on the season or time period.</p><p>The forecast problem of solar radiation and wind speed has become increasingly important over the last decade <ref type="bibr" target="#b35">[36]</ref>. In broad terms, the forecast methods are classified into physical, empirical, statistical, and machine-learning ones <ref type="bibr" target="#b36">[37]</ref>, <ref type="bibr" target="#b37">[38]</ref>. The physical and empirical methods use ground or satellite measurements to compute complex or simplified models that estimate short-term data. The statistical and machinelearning methods rely on the length and quality of the historical data <ref type="bibr" target="#b38">[39]</ref>. The clustering method looks to cluster days with similar behaviors, and each cluster is represented by a representative day <ref type="bibr" target="#b39">[40]</ref>. Hence, large datasets are studied using a reduced group of data. A comparison between a hybrid classification method based on k-means clustering and an autoregressive neural network model is discussed by <ref type="bibr" target="#b40">[41]</ref>. The abilities of these methods to identify data clusters with similar characteristics used in the reconstruction of solar irradiance time series are demonstrated.</p><p>Furthermore, <ref type="bibr" target="#b41">[42]</ref> conducts a comprehensive comparison of six clustering methods for the detection of patterns in solar irradiance. The results demonstrate the effectiveness of both conventional and unconventional methods in clustering historical data series. Another relevant study in <ref type="bibr" target="#b42">[43]</ref> compares different classification methods to assess their robustness. This study utilizes the clearness index (CI) and variability index (VI) to identify various characteristics of solar irradiance time series, such as clarity and cloudiness. The results demonstrate the validity of classification methods in planning studies, although they are sensitive to data quality, especially in detailed analyses. An additional application of these classification methods is addressed by <ref type="bibr" target="#b43">[44]</ref> and a detailed review of methods for predicting solar irradiance and power is presented in <ref type="bibr" target="#b35">[36]</ref>. It is identified that hybrid classification methods offer outstanding performance in estimating renewable resources. k-means clustering is highlighted as one of the methods yielding satisfactory results in multiple case studies.</p><p>This paper proposes a method for the optimal design of hybrid microgrids to fulfill energy needs in isolated communities such as Cerrito de Los Morreños Island in Ecuador. This method integrates renewable and conventional energy sources alongside machine-learning algorithms for selecting representative values of meteorological parameters, particularly air temperature and solar irradiance. The clustering analysis introduces a factor related to renewable generation into the optimization model. This process represents a tangible solution that is applicable and replicable in isolated communities and shares characteristics similar to the case study conducted in this paper. On-site data on consumption and installed equipment are collected through an information survey to improve the accuracy of design outcomes. This process involves manual collection. The collected information can be used in future research and enhances the strength and utility of the proposed method. The obtained hybrid microgrid is rigorously examined under six operating scenarios to provide a comprehensive assessment. These scenarios encompass: ① 24-hour continuous power supply; ② load shedding percentage; ③ diesel generator (genset) curtailment; ④ the worst meteorological conditions; ⑤ the use of renewable energy sources including BESSs; and ⑥ the use of genset. The optimization model is proposed and addressed using a mathematical programming language (AMPL) tool, and the results highlight significant findings.</p><p>The remainder of this paper is structured as follows. Section II describes the method for the optimal design of hybrid microgrid, highlighting the importance of the BESS for isolated communities in the optimization model. In Section III, the results of the optimal design for hybrid microgrid is assessed in different operating scenarios. Finally, the discussion and conclusion are drawn in Sections IV and V, respectively. The method for the optimal design of hybrid microgrid is summarized in Fig. <ref type="figure" target="#fig_0">1</ref>. The proposed method begins with an information search relating to the electrical load of the community, as well as obtaining its meteorological parameters of the community from the site. The latter allows the possible microgrid designs for the community according to the existing renewable resources. This kind of data is fed into the kmeans clustering algorithm, which is solved by MATLAB, to obtain hourly representative values for each meteorological parameter, and then a factor related to renewable generation is obtained. Finally, all the parameters obtained are input to the proposed optimization model.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Case Study</head><p>The hybrid microgrid is located in the Cerrito de los Morreños community, which is in the Gulf of Guayaquil, Guayas Province in Ecuador, with coordinates at latitude 2°28'25.0" S and longitude 79°54'28.2" W, as shown in Appendix A Fig. <ref type="figure" target="#fig_0">A1</ref>. This community has a permanent population of about 800 inhabitants, which rises to 1000 on holidays. The buildings in this community consist of 96 residential houses, one church, and one school. One of the main problems for the inhabitants is the lack of power supply, as there is no main grid nearby. Currently, a 185 kVA genset supplies electricity to the entire community from 18: 00 to midnight, which consumes about 20 gallons of diesel per day.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Estimation of Electrical Load</head><p>Although this community does not have a continuous power supply, each home has all types of electrical appliances that work as soon as the generator is started. Currently, the frequency of use of electrical appliances in each household is directly dependent on the operating time of the genset, which is only six hours per day. The daily and annual load profiles are constructed considering a 24-hour power supply from the microgrid. The operating time of each appliance in a new scenario of electricity availability is surveyed on each household in this community.</p><p>The design of the hybrid microgrid depends mainly on the electrical load. The baseline data for adequately constructing the load profile are based on classifying the appliances (loads) into two groups considering the duration of power consumption during their operation. Then, from a survey performed on each dwelling, the appliances are classified as follows.</p><p>1) Group 1: appliances with intermittent power consumption, which operate with on/off cycles, such as refrigerators, freezers, and washing machines.</p><p>2) Group 2: appliances with continuous power consumption during their operation, such as television (TV) sets, lamps, and computers.</p><p>After classification, we summarize the electrical load information in Cerrito de los Morreños community, which is identified from surveys conducted on inhabitants in November 2022, as shown in Table <ref type="table" target="#tab_1">II</ref>. The residential sector shows a higher concentration of appliances, i. e., this is the sector with the highest power consumption.</p><p>Figure <ref type="figure">2</ref> shows the estimated hourly load profile on a typical day in Cerrito de los Morreños community. It can be observed from Fig. <ref type="figure">2</ref> that this typical day has a maximum peak power of 53.95 kW around 18:00. The estimated annual power consumption is 94559.00 kWh. A load growth rate of 1% per year is considered with a planning horizon of 15 years for the project <ref type="bibr" target="#b44">[45]</ref>, i.e., the maximum peak power on a typical day can reach 65.16 kW after 15 years.  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Renewable Resource Analysis Using k-means Clustering Algorithm</head><p>The lack of weather stations in Cerrito de los Morreños community is a drawback for designing a hybrid microgrid. Given this, the proper selection of representative values of each meteorological parameter is fundamental for solving optimization models related to cost minimization in microgrids. The inadequate selection of these values can make the best solution of the optimization model with over-sizing components and therefore higher life cycle cost of the hybrid microgrid. The solar irradiance and air temperature for this community are obtained from NASA meteorological datasets <ref type="bibr" target="#b45">[46]</ref> for three years, from 1 January 2018 to 31 December 2020.</p><p>Figure <ref type="figure" target="#fig_2">3</ref> shows the meteorological data of solar irradiance and air temperature for the year 2020, where only the solar irradiance during daylight hours is considered. In 2020-2022, the average daily solar irradiance is around 4.75 kWh/m 2 , and the minimum and maximum air temperatures are 26.4 ℃ and 36.83 ℃ , respectively. The months with high average solar irradiance are July to November. This community has high solar potential for photovoltaic (PV) generation, while other resources such as wind energy are unsuitable for exploitation due to low wind speeds, as confirmed by local inhabitants.  In this study, the k-means clustering algorithm is applied to obtain hourly representative values of meteorological parameters for each month. Figure <ref type="figure">4</ref> shows the steps of kmeans clustering algorithm and how its results are used for the proposed optimization model. This algorithm can work with datasets and has efficient implementations with low computational complexity <ref type="bibr" target="#b46">[47]</ref>. The k-means clustering algorithm divides the data points of a variable into k groups and assigns the data points to a cluster to minimize the sum of the squared distances between the data points and their corresponding cluster centroid <ref type="bibr" target="#b47">[48]</ref>.</p><p>The k-means clustering algorithm works iteratively and stops when there are no changes <ref type="bibr" target="#b48">[49]</ref>. It should be noted that the centroid is a representative value of the grouped data points. The practical value lies in dealling with the stochastic nature of the meteorological data and converting them into deterministic ones. With the historical data, two hourly representative values per day are obtained for each meteorological parameter. With the obtained data, a factor depending on hourly representative values for PV generation is created and included in the proposd optimization model as a technical variable for sizing the hybrid microgrid.</p><p>The Elbow statistical method is used to determine the optimal number of clusters, i.e., k, since the number k can be selected intuitively in the k-means clustering algorithm. The Elbow statistical method is based on the sum of the squared distances between the data points and their corresponding cluster centroid <ref type="bibr" target="#b49">[50]</ref>. The inertia measures the clustering degree of a dataset using the k-means clustering algorithm. Figure <ref type="figure">5</ref> plots the innertia versus the number of clusters k for hourly solar irradiance and air temperature data in January. According to Fig. <ref type="figure">5</ref>, when k = 2, the slope of the curve has a sudden change, so the optimal number of k is chosen as 2.</p><p>In this paper, the Elbow statistical method and k-means clustering algorithm are implemented using MATLAB <ref type="bibr" target="#b50">[51]</ref>.</p><p>Figure <ref type="figure">6</ref> shows the results of the k-means clustering algorithm using a meteorological dataset in January. This dataset has a total of 2232 data points in two clusters for two kinds of independent parameters, i. e., hourly air temperature and solar irradiance from 2018 to 2020. This procedure is applied for each month over a period of three years.</p><p>Figures <ref type="figure">7</ref> and<ref type="figure" target="#fig_5">8</ref> show hourly representative values of solar irradiance and air temperature for each month, respectively. Both solar irradiance and air temperature have a hourly representative value during 06:00-08:00 and 16:00-18:00 and another during 08: 00-16: 00. For example, the representative value of solar irradiance at 17:00 in March is 106.84 W/m 2 . With all the representative values, we create the hourly profile of each meteorological parameter in a year, which will be used in the proposed optimization model.   </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>D. Factor Depending on Hourly Representative Values for PV Generation</head><p>To address the worst meteorological conditions, the proposed optimization model incorporates a key factor depending on hourly representative values for PV generation. This factor is derived from analyzing the historical data of meteorological parameters, including temperature, humidity, pressure, wind, precipitation, cloud cover, etc., over the past three years in the target community. Among these, the temperature is prioritized for the sizing of PV systems due to its significant impact on the energy production model of the PV source.</p><p>In this research, we focus on air temperature and solar irradiance as critical meteorological parameters because they play a vital role in influencing the performance and efficiency of renewable energy technologies. Moreover, both air temperature and solar irradiance are integral to the sizing calculations of hybrid microgrids. The k-means clustering algorithm applied to these meteorological parameters is used to obtain normalized daily statistical information and is employed to formulate the temperature equation on the PV panels and determine the total power output of PV panels. The total power output is calculated as a function of the system size on a representative day.</p><p>The temperature on the PV panels T PVt is given by (1) <ref type="bibr" target="#b6">[7]</ref>, which considers hourly representative values of the solar irradiance and air temperature.</p><formula xml:id="formula_0">T PVt = T HRVt + NOCT -20 800 G HRVt t = 1224 (<label>1</label></formula><formula xml:id="formula_1">)</formula><p>where t is the index of hours; T HRVt is the hourly representative value of air temperature at time t; NOCT is the temperature of PV panels under standard test conditions (STC); and G HRVt is the hourly representative value of solar irradiance at time t. Therefore, the total power output of PV panels considering the hourly representative values is given by:</p><formula xml:id="formula_2">P PVoutput = P STC G HRVt 1000 é ë ê ê ê ê ù û ú ú ú ú 1 + α 100 (T PVt -25)<label>(2)</label></formula><p>where P STC is the nominal power of the PV panel under STC; and α is the temperature coefficient.</p><p>From ( <ref type="formula" target="#formula_0">1</ref>) and ( <ref type="formula" target="#formula_2">2</ref>), the factor depends on hourly representative values for PV generation is given by (3). This factor is a non-dimensional number and one of the input variables of the proposed optimization model.</p><formula xml:id="formula_3">F GR t = P PVoutput P STC (3)</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>E. Proposed Optimization Model</head><p>The hybrid microgrid supplying power to the Cerritos de los Morreños community consists of a genset, BESSs, PV panels, and a power inverter. In this subsection, we show the mathematical formulation of the proposed optimization model to minimize the annual total investment cost of a microgrid, including the O&amp;M cost of a genset in the community. Given this, the result reveals the optimal sizing of the microgrid. The linear optimization method is used to solve the proposed optimization model, which is mainly based on the fact that the decision variables are continuous and the objective function about these decision variables is linear <ref type="bibr" target="#b51">[52]</ref>. The AMPL tool is used to find the solution of the proposed optimization model using the CPLEX solver, which is based on primal-dual simplex algorithms <ref type="bibr" target="#b52">[53]</ref>. This tool is an algebraic modeling language for linear or non-linear problems with continuous and discrete variables <ref type="bibr" target="#b53">[54]</ref>.</p><p>To minimize the annual total investment cost of the microgrid, the objective function is defined based on the linear cost functions of each component:</p><formula xml:id="formula_4">min Ct = 365 ( ∑ t = 1 24 δC OT P T t ) + 365 ( ∑ t = 1 24 δC CC P D t X t ) + F (4) F = C IGR P ˉGR + C IT P ˉT + C IPA P ˉAE + C IEA E ˉAE (<label>5</label></formula><formula xml:id="formula_5">)</formula><p>where δ is a conversion unit equal to 1 hour; C OT is the rate for the sale of electricity from genset to microgrid; P T t is the power delivered from the genset to the microgrid at time t; C CC is the unit cost of load shedding; P D t is the load demand at time t; X t is the load shedding percentage at time t; C IGR is the investment cost of PV panels; P ˉGR is the total power output of PV panels; C IT is the investment cost in a genset whose maximum power output is equal to or less than the existing genset in the community; P ˉT is the maximum capacity of genset; C IPA is the cost of charging or discharging power from the BESS to the microgrid; P ˉAE is the maximum charging or discharging power of the BESS; C IEA is the unit cost for energy storage of the BESS; and E ˉAE is the maximum storage capacity of the BESS.</p><p>The first term of (4) describes the operation cost of the genset per year; the second term of (4) refers to the penalty due to the load shedding of the microgrid per year; and the last term F contains the sizing variables of microgrid, which is composed of four terms: ① C IGR P ˉGR , which represents the cost of using power from the PV system; ② C IT P ˉT, which represents the cost of using power from the genset; ③ C IPA P ˉAE , which represents the cost of using power from the BESS; and ④ C IEA E ˉAE , which represents the cost of energy storage of the BESS.</p><p>The constraints for the objective function are given as follows.</p><p>1) Active power balance Equation ( <ref type="formula" target="#formula_6">6</ref>) is the constraint related to active power balance, i. e., the power produced by the microgrid is equal to the power consumed by the community including the charging and discharging power of BESS.</p><formula xml:id="formula_6">F GR t P ˉGR + P T t = P D t ( 1 -X t ) + P AEiny t -P AEext t (<label>6</label></formula><formula xml:id="formula_7">)</formula><p>where P AEiny t is the discharging power delivered from the BESS to the microgrid at time t; and P AEext t is the charging power from the microgrid to the BESS at time t.</p><p>2) Genset capacity Formula <ref type="bibr" target="#b6">(7)</ref> shows that P T t must be less than or equal to the maximum capacity of genset P ˉT and higher than zero.</p><formula xml:id="formula_8">0 £ P T t £ P ˉT<label>(7)</label></formula><p>3) Active power injection capacity Formula (8) shows the range of active power that can be delivered from the BESS to the microgrid.</p><formula xml:id="formula_9">0 £ P AEiny t £ P ˉAE<label>(8)</label></formula><p>4) Active power extraction capacity Formula (9) represents the range of active power that can be delivered from the microgrid to the BESS.</p><formula xml:id="formula_10">0 £ P AEext t £ P ˉAE (9)</formula><p>5) Hourly energy balance Equation <ref type="bibr" target="#b9">(10)</ref> represents the hourly energy balance when t &gt; 1, indicating the energy stored in the BESS at time t is equal to that at time t -1 plus the energy transferred at time t.</p><formula xml:id="formula_11">E AE t = E AE t -1 + µ δP AEext t - δP AEiny t α -βE AE t t &gt; 1 (<label>10</label></formula><formula xml:id="formula_12">)</formula><p>where µ is the BESS efficiency; and β is the self-discharging rate of BESS. 6) Initial energy balance when t = 1 Equation ( <ref type="formula">11</ref>) represents the initial energy balance when t = 1, indicating the energy storage in the BESS when t = 1 is equal to the initial energy E AE 0 plus the energy transferred when t = 1.</p><formula xml:id="formula_13">E AE t = E AE 0 + µ δP AEext t - δP AEiny t α -βE AE t t = 1 (11)</formula><p>7) Storage capacity of BESS Formula (12) limits the storage capacity of BESS in the range of [</p><formula xml:id="formula_14">0, E ˉAE ]. 0 £ E AE t £ E ˉAE<label>(12)</label></formula><p>8) Load shedding percentage Formula (13) defines the range of load shedding percentage.</p><p>0 £ X t £ 1 (13) 9) Sizing of renewable energy source Formula ( <ref type="formula" target="#formula_15">14</ref>) establishes the sizing boundaries of the renewable energy source (PV system).</p><formula xml:id="formula_15">0 £ P ˉGR £ - IP GR (<label>14</label></formula><formula xml:id="formula_16">)</formula><p>where -IP GR is the maximum power output of PV panels. 10) Sizing of genset Formula (15) establishes the boundaries for the sizing of genset.</p><formula xml:id="formula_17">0 £ P ˉT £ - IP T (<label>15</label></formula><formula xml:id="formula_18">)</formula><p>where -IP T is the maximum power generation of genset. 11) Power transfer capacity Formula ( <ref type="formula">16</ref>) indicates that the charging or discharging power of the BESS must be higher or equal to zero.</p><formula xml:id="formula_19">P ˉAE ³ 0 (16)</formula><p>12) Sizing of BESS Formula (17) indicates the maximum storage capacity of the BESS should be larger than 0.</p><formula xml:id="formula_20">E ˉAE ³ 0 (<label>17</label></formula><formula xml:id="formula_21">)</formula><p>Figure <ref type="figure">9</ref> categorizes and presents the variables involved in the proposed optimization model, where the sizing variables are the decision variables, which represent the size of each unknown subsystem. And we seek to find an optimal value for the sizing variables.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>F. Input Variables Involved in Proposed Optimization Model</head><p>Table <ref type="table" target="#tab_1">III</ref> summarizes the values of input variables involved in the proposed optimization model. The economic values are based on the Ecuadorian market price in 2022.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. RESULTS OF OPTIMAL DESIGN FOR HYBRID MICROGRID</head><p>The fundamental structure of the current electrical system in Cerritos de los Morreños community is depicted in Fig. <ref type="figure" target="#fig_6">10</ref>, which consists of a genset supplying power to various loads in the community. Initial scenario: the community solely relies on energy generated by the genset without the BESS, which makes the system operate with power available only when the generator is activated, meeting immediate load demands. However, this structure poses significant challenges regarding stability and power quality. The existing genset struggles to meet the load demand, leading to persistent undervoltage issues that   swiftly damage connected appliances. A comprehensive survey reveals that almost every household has at least one appliance that is damaged due to the substandard quality of power supply. Common household appliances like washing machines, refrigerators, and TVs are frequently affected. This predicament is compounded by the limited financial resources of local inhabitants. Using the cost data outlined in Table <ref type="table" target="#tab_1">III</ref> and the conditions delineated for the genset of the case study in Section II-A, the financial situation of the cur-rent electrical system is accessed and the total cost of maintaining the current system amounts to $92440.80. The situation requires urgent attention due to the adverse impact on both the stability of the electrical system and the financial strain on the local inhabitants.</p><p>The hybrid microgrid is designed in six operating scenarios, where certain conditions such as 24-hour continuous power supply and load shedding percentage are considered, as shown in Table <ref type="table" target="#tab_6">IV</ref>.</p><p>The description of scenarios 1-6 is as follows. 1) Scenario 1: the microgrid does not supply electricity during the day. Given this, a load shedding percentage is introduced to the proposed optimization model, which specifies both the time of the day and the optimal percentage of the load for implementing electricity shortage measures. In addition, the genset can run at any time of the day.</p><p>2) Scenario 2: the microgrid does not consider a load shedding percentage, i.e., the microgrid and genset must cover the load demand in the community.</p><p>3) Scenario 3: the microgrid has priority in the power supply to take full advantage of solar energy. Given this, the genset must be turned off from 09:00 to 16:00, considering the load shedding percentage.</p><p>4) Scenario 4: the community has a 24-hour continuous power supply considering the genset curtailment from 09: 00 to 16:00. This scenario does not consider load shedding per-centage.</p><p>5) Scenario 5: the sizing of microgrid does not consider the worst meteorological conditions of the site, i.e., the factor depending on hourly representive values for PV generation in June, which has the lowest solar inrradiation, is not taken into account. This condition guarantees that the outcomes remain impartial, preventing any favorable bias introduced by PV generation to the genset. Given this, we process all the monthly representative values to obtain an optimal value of the whole set, which is input to the proposed optimization model. 6) Scenario 6: the load demand in the community is wholly covered with renewable energy source during the day, considering the factor depending on houly representative values for PV generation in June.</p><p>Table <ref type="table" target="#tab_6">V</ref> presents the total cost of the microgrid and other parameters in each scenario.</p><p>The load demand in Scenario 1 is almost entirely covered by the genset, although there is also a small contribution from the BESS. This scenario prioritizes an economic generation source to supply power because the genset has no operating restrictions. Given this, the optimization solution indicates that the total power output of PV panels -P GR should be 0 kW because of its high cost of power generation. In addition, the maximum power output of the genset -P T is estimated to be 32.4 kW, and the maximum storage capacity of the BESS -E AE is estimated to be 4.73 kWh. Between the genset and BESS, the proposed optimization model finds an opti-  Note: the symbol "Y" represents that the corresponding condition is considered; and the symbol "N" represents that the corresponding condition is not considered. mal dispatch of power consumption through load shedding so that the grid can continue to supply power to consumers. Load shedding indicates scheduled power outages during specific hours of the day. Figure <ref type="figure" target="#fig_8">11</ref> shows the percentage of loads with power supply in Scenario 1. As can be observed from Fig. <ref type="figure" target="#fig_8">11</ref>, the load shedding is performed during 07: 00-10: 00 and 18: 00-19: 00. The first interval coincids with the peak demand hours, which obtains a load shedding percentage of 16%. The second interval indicates a load shedding of 35%, i.e., the microgrid can only supply 65% of the total load demand in the community. The cost of load shedding in the community is 7215.04 $/year, and the total cost of the microgrid (including sizing and O&amp;M costs) is 77426.70 $/ year. Economically, the total cost of microgrid is the the most optimal one among all the scenarios; however, the intermittency in the power supply and the CO 2 emissions produced by the genset can directly affect the quality of life of the inhabitants in the community. In addition, this intermittency can shorten the useful life of household appliances. Given this, the total cost of microgrid could not offset the negative economic and environmental impacts on the community.</p><p>The total cost of microgrid in Scenario 2 increases by 2.5% compared with that in Scenario 1. This cost difference is insignificant considering the scale of economic investment in developing a microgrid. This scenario guarantees the 24hour continuous power supply. In addition, -E AE has a significant increase of 395% compared with that in Scenario 1. The cost of load shedding is 0. Therefore, although the cost of BESS is higher, the total cost of the microgrid in Scenario 2 does not increase significantly compared with that in Scenario 1. In terms of the power supply quality, this scenario is favorable due to the continuous power supply. However, from an environmental perspective, Scenario 2 is still unfavorable due to increased use of genset and CO 2 emissions.</p><p>The result in Scenario 3 changes drastically when the genset operating restriction during peak solar irradiance hours (09:00-16:00) is introduced. Scenario 3 prioritizes the use of solar energy. In this scenario, -P GR is 65.16 kW, which corresponds to the sizing boundaries of the PV system suggested in the mathematical model considering the maximum peak demand during the 15 years of the project. The genset does not change significantly in -P T compared with Scenarios 1 and 2. However, the maximum discharging power of the BESS to load -P AE has a reduction of almost 10 kW compared with that in Scenario 2. This is because the PV panels provide power supply to the load, thus reducing the discharging processes of BESS hour by hour. In addition, the considerable increasement in -E AE is due to the increased penetration of PV panels and BESS. Load shedding has a significant reduction. For example, from 13: 00 to 18: 00, a load shedding percentage of 10% is conducted, i.e., the microgrid can supply 90% of the total load demand in the community. During other hours, the load shedding percentage does not exceed 1%. This configuration could supply more than 99% of the total load demand in the community. However, despite the short duration and low intensity of the power outages, they are still a nuisance to users. Given this, we consider Scenarios 4-6 without load ledding, i.e., the 24-hour continuous power supply is enabled.</p><p>The total cost of microgrid in Scenario 4 is $99992.20. In terms of power usage and quality, there is a notable difference from Scenarios 1-3 without any load shedding. The value of -P T does not change considerably compared with that in Scenario 3, but the values of -P AE and -E AE increase, which are expected because the load demand must be covered during 24 hours of a day even at low solar irradiance and night time. In Scenario 5, the proposed optimization model does not consider the representative values of the worst meteorological conditions with the lowest solar irradiance in June. However, other values considered are above the average for the community, so this does not bring an impossible result. In Scenario 5, the total cost of microgrid has a 8% reduction compared with that in Scenario 4. The size of PV panel does not change, but the value of -P T changes slightly because the microgrid can provide a larger power supply to the load. The effect of considering a higher solar energy is reflected in the increased parameters of the BESS. Finally, Scenario 6 is 100% renewable, i.e., the power supply from the genset is not considered. In this scenario, the total cost of microgrid is $265169.00 due to the considerable increase in the cost of BESS. Compared with Scenario 4, the total cost of microgrid increases by more than 160% by substituting the genset with renewables energy sources. It is demonstrated that the BESS may considerably raise the total cost of a microgrid in 100% renewable scenarios.</p><p>Table <ref type="table" target="#tab_7">VI</ref> shows the investment costs of the renewable energy sources in each scenario, which are calculated based on the maximum supply power of the PV system, genset, and BESS. The sizing results of renewable energy sources show a similar trend to the results obtained in Table <ref type="table" target="#tab_6">V</ref>. The numbers of PV panels and BESSs in Scenarios 1 and 2 are the minimal because the load demand is fully covered by the genset. Scenarios 3-5 have similar capacities of BESS and thus, the investment costs of BESS vary slightly. Likewise, the installed capacity of PV system, i.e., the numbers of PV panels, in Scenarios 3-5 are the same, so are the investment costs. Scenario 6 is the most expensive among all scenarios, where the investment cost of the BESS accounts for almost 48% of the total sizing cost of microgrid, as shown in Table VI. In addition, the number of PV panels in this scenario increases four times compared with those in Scenarios 3-5.</p><p>The approach to the proposed optimization model focuses on finding the optimal combination of the different generation sources; therefore, elements related to the network topology are not considered in the proposed optimization model. Figure <ref type="figure" target="#fig_0">12</ref> illustrates the proposed electrical system in Cerrito de los Morreños community. Each scenario allows a feasible operation in this isolated community, prioritizing different aspects according to the operation needs.</p><p>Figure <ref type="figure" target="#fig_2">13</ref> compares the growth percentage for the total cost of microgrid in Scenarios 1-6 with initial scenario.</p><p>The result in each scenario is optimal under its own operating conditions depending on the requirements and prioritization of users. For example, the total cost of microgrid in Scenario 1 reduces by -16.24% compared with the initial scenario. However, other aspects of this scenario must be considered. Among the initial scenario and Scenarios 1-6, the optimal design of microgrid that could be implemented in the community is Scenario 3, where, although there are some restrictions during peak demand hours, consumers have a 24-hour continuous power supply in a day, with a correct dispatch and prioritization of essential sources.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. DISCUSSION</head><p>This paper presents the optimal design of a microgrid in six scenarios, considering a combination of sources such as PV panels, BESS, and genset. To analyze these scenarios, we consider the k-means clustering algorithm for the treatment of meteorological datasets for the sizing and optimization of the microgrid in each scenario. The inadequate selection of these values can make the best solution of the optimization model with over-sizing components and therefore higher life cycle cost of the hybrid microgrid.</p><p>The obtained hybrid microgrid is rigorously examined under six operating scenarios considering: ① continuous power supply; ② load shedding percentage; ③ genset curtailment; ④ the worst meteorological conditions; ⑤ the use of renewable energy sources including BESSs; and ⑥ the use of genset. The results obtained in each scenario include the optimal sizing, the total annual investment cost in renewable generation, and other operating costs of the components of a microgrid. The analysis of results is the product of estimating the electrical load of the site under study, using techniques for better estimating meteorological parameters, and sizing/optimizing a microgrid. The importance of including the components of the microgrid according to operating conditions for cost minimization is demonstrated while satisfying the load demand of the community. Scenarios 1 and 3 consider load shedding but they do not have significant cost reductions compared with those that supply electricity 24 hours per day (except for the 100% renewable scenario). Besides, Scenario 3 has a higher cost than Scenario 1 due to the increase in the storage capacity of BESS and the installed capacity of PV system. It should be noted that the genset operating restriction means that genset does not operate during solar irradiance hours. Scenario 2 does not consider load shedding, i.e., the community has a 24-hour continuous power supply. However, the operation of genset without restriction reduce the costs of microgrid without considering the environmental impact. Given this, the total cost of microgrid in Scenario 2 slightly increases compared with that in Scenario 1. Among these scenarios, Scenario 1 is the most economically feasible option, but environmentally, this scenario would affect the life quality of the inhabitants in this community.</p><p>In scenarios that prioritize PV generation (Scenarios 3-5) with a genset restriction, the variation in the total cost of the microgrid is slight among these scenarios that consider the worst meteorological conditions. However, Scenario 5 shows a lower cost than Scenarios 3 and 4 because we consider the hourly representative values of meteorological parameters. However, as mentioned above, Scenario 3 considers load shedding, so Scenario 4 is a feasible option for developing a hybrid microgrid, considering the worst meteorological con-  dition. Finally, Scenario 6 has the highest total microgrid cost among all the scenarios. This 100% renewable scenario satisfies 24-hour continuous power supply without any environmental impact on the inhabitants.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>V. CONCLUSION</head><p>To address the power supply problems in isolated communities in Ecuador, a comprehensive analysis of the optimal design for hybrid microgrids is conducted in various scenarios. To analyze these scenarios, the k-means clustering algorithm is used for the meteorological datasets for the sizing and optimization of the microgrid. The integration of renewable energy sources, energy storage systems, and the consideration of meteorological factors are crucial aspects. The economic feasibility of different scenarios is evaluated, emphasizing the need to balance cost minimization and environmental sustainability. In summary, this paper provides valuable insights for the optimization of microgrid to improve the power supply quality in isolated communities, with a clear awareness of both economic and environmental considerations. For future work, we will incorporate the analysis of excess electricity in the daytime into the optimization model. Likewise, CO 2 emissions from the genset will also be determined. </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .</head><label>1</label><figDesc>Fig.1. Summary of method for optimal design of hybrid microgrid.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head/><label/><figDesc>. Mar. Apr. May Jun. Jul. Aug. Sept. Oct. Nov. Dec. Time (a) Jan. Feb. Mar. Apr. May Jun. Jul. Aug. Sept. Oct. Nov. Dec.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 3 .</head><label>3</label><figDesc>Fig. 3. Meteorological data of solar irradiance and air temperature for year 2020. (a) Solar irradiance. (b) Air temperature.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 2 .Fig. 4 .</head><label>24</label><figDesc>Fig. 2. Estimated hourly load profile on a typical day in Cerrito de los Morreños community.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 5 .Fig. 6 .</head><label>56</label><figDesc>Fig. 5. Innertia versus number of clusters k for hourly solar irradiance and air temperature data in January.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 8 .</head><label>8</label><figDesc>Fig.8. Hourly representative values of air temperature for each month.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Fig. 10 .</head><label>10</label><figDesc>Fig. 10. Fundamental structure of current electrical system in Cerrito de los Morreños community.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Fig. 11 .</head><label>11</label><figDesc>Fig. 11. Percentage of loads with power supply in Scenario 1.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Fig. 12 .Fig. 13 .</head><label>1213</label><figDesc>Fig. 12. Proposed electrical system in Cerrito de los Morreños community.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>Fig</head><label/><figDesc>Fig. A1. Google Earth view of Cerrito de los Morreños community.</figDesc><graphic coords="11,66.76,364.26,214.03,196.04" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>TABLE I SUMMARY</head><label>I</label><figDesc>OF OPTIMAL DESIGN METHODS FOR HYBRID MICROGRID IN ISOLATED LOCATIONS REPORTED</figDesc><table><row><cell cols="2">II. OPTIMAL DESIGN OF HYBRID MICROGRID</cell><cell/></row><row><cell>Location</cell><cell>Objective function</cell><cell>Optimization algorithm</cell></row><row><cell>Somalia, USA</cell><cell>Energy produced with fossil fuels and investment cost</cell><cell>Linear programming and mixed-integer programming</cell></row><row><cell>Small tropical island</cell><cell>Annual cost including initial investment, operation and maintenance (O&amp;M), and power shortage penalty</cell><cell>PSO</cell></row><row><cell>Iran</cell><cell>Total life cost</cell><cell>Chaotic search, harmony search, and simulated annealing</cell></row><row><cell>Kenya</cell><cell>Net present cost as a weighted sum of capital expenditure (CAPEX) and operational expenditure (OPEX)</cell><cell>PSO</cell></row><row><cell>Saudi Arabia</cell><cell>Annual system cost and probability of power outage</cell><cell>Supply-demand based optimization</cell></row><row><cell>Japan</cell><cell>Total cost over the microgrid lifetime</cell><cell>PSO</cell></row><row><cell>Russia</cell><cell>Net present cost</cell><cell>Iterative Gauss-Seidel</cell></row><row><cell>Philippines</cell><cell>Levelized cost of electricity, probability of power outage, and greenhouse gas emissions</cell><cell>Multi-objective PSO</cell></row><row><cell>USA, Malaysia, Bangladesh, India, Namibia, Spain, and Pakistan</cell><cell>Net present cost</cell><cell>HOMER Pro software</cell></row><row><cell>Algeria</cell><cell>Cost of energy and probability of power outage</cell><cell>Multi-objective slap swarm algorithm</cell></row><row><cell>USA</cell><cell>Cost per kWh</cell><cell>Nonlinear reduced gradient method</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>TABLE II ELECTRICAL</head><label>II</label><figDesc>LOAD INFORMATION IN CERRITO DE LOS MORREÑOS COMMUNITY</figDesc><table><row><cell>Load sector</cell><cell>Appliance</cell><cell>Quantity</cell><cell>Power (kW)</cell></row><row><cell/><cell>Refrigerator</cell><cell>24</cell><cell>2.96</cell></row><row><cell/><cell>Freezer</cell><cell>37</cell><cell>4.33</cell></row><row><cell/><cell>Washing machine</cell><cell>42</cell><cell>16.86</cell></row><row><cell/><cell>TV</cell><cell>77</cell><cell>8.78</cell></row><row><cell/><cell>Blender</cell><cell>33</cell><cell>14.67</cell></row><row><cell>Residential</cell><cell>Iron</cell><cell>26</cell><cell>27.80</cell></row><row><cell/><cell>Toaster</cell><cell>9</cell><cell>6.22</cell></row><row><cell/><cell>Computer</cell><cell>15</cell><cell>12.26</cell></row><row><cell/><cell>Lamps</cell><cell>388</cell><cell>7.73</cell></row><row><cell/><cell>Cell-phone</cell><cell>164</cell><cell>2.69</cell></row><row><cell/><cell>Others</cell><cell/><cell>4.95</cell></row><row><cell/><cell>Lamps</cell><cell>9</cell><cell>0.18</cell></row><row><cell>Church</cell><cell>Speakers</cell><cell>3</cell><cell>3.30</cell></row><row><cell/><cell>Fans</cell><cell>2</cell><cell>0.16</cell></row><row><cell/><cell>Fluorescent</cell><cell>17</cell><cell>0.68</cell></row><row><cell/><cell>LED lamps</cell><cell>14</cell><cell>0.14</cell></row><row><cell>School</cell><cell>TV</cell><cell>2</cell><cell>0.06</cell></row><row><cell/><cell>Computers</cell><cell>20</cell><cell>3.60</cell></row><row><cell/><cell>Speakers</cell><cell>2</cell><cell>1.20</cell></row><row><cell>Street lighting</cell><cell>Lighting</cell><cell>3</cell><cell>3.30</cell></row></table><note><p>Note: the item "Others" in the residential sector corresponds to other types of appliances that are not widely used and/or are very rare in the dwellings such as printers and sewing machines.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head/><label/><figDesc>Fig. 7. Hourly representative values of solar irradiance for each month.</figDesc><table><row><cell/><cell>600</cell><cell cols="4">06:00-08:00 and 16:00-18:00 08:00-16:00</cell><cell cols="2">524.01</cell><cell/><cell/><cell/><cell/></row><row><cell>) Solar irradiatnce (W/m 2</cell><cell>100 200 300 400 500</cell><cell cols="11">122.53 105.96 100.01 104.04 123.06 134.38 129.33 126.31 120.48 471.50 452.80 462.78 418.54 386.34 380.34 474.84 487.96 438.21 449.12 450.52 117.28 108.62 106.84</cell></row><row><cell/><cell>0</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell/><cell/><cell>Jan.</cell><cell>Feb.</cell><cell>Mar.</cell><cell/><cell>Apr.</cell><cell>May</cell><cell>Jun.</cell><cell>Jul.</cell><cell>Aug.</cell><cell>Sept.</cell><cell>Oct.</cell><cell>Nov.</cell><cell>Dec.</cell></row><row><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell cols="2">Time</cell><cell/><cell/></row><row><cell/><cell/><cell>31.53</cell><cell>30.27</cell><cell/><cell cols="2">31.03</cell><cell>31.08</cell><cell>31.99</cell><cell>31.91</cell><cell>31.92</cell><cell>31.58</cell><cell>30.96</cell><cell>30.59</cell><cell>30.98</cell></row><row><cell/><cell/><cell/><cell/><cell>29.26</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell/><cell/><cell>26.31</cell><cell>26.22</cell><cell>25.76</cell><cell cols="2">26.43</cell><cell>26.32</cell><cell>25.71</cell><cell>25.10</cell><cell>24.88</cell><cell>24.87</cell><cell>24.81</cell><cell>25.12</cell><cell>25.80</cell></row><row><cell/><cell/><cell>Jan.</cell><cell>Feb.</cell><cell>Mar.</cell><cell cols="2">Apr.</cell><cell>May</cell><cell>Jun.</cell><cell>Jul.</cell><cell>Aug.</cell><cell>Sept.</cell><cell>Oct.</cell><cell>Nov.</cell><cell>Dec.</cell></row><row><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell cols="2">Time</cell><cell/><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head/><label/><figDesc>PV panels:CI GR , IP GR , F t GR Genset: C IT , C OT , IP T BESS: C IPA , C IEA , E AE , α, β</figDesc><table><row><cell>Parameters</cell><cell/><cell/></row><row><cell>0</cell><cell/><cell>Sizing variables</cell></row><row><cell>Electrical load: P t D , C CC</cell><cell>Proposed</cell><cell>Renewable source: P GR</cell></row><row><cell>State variables</cell><cell>optimization model</cell><cell>Genset: P T</cell></row><row><cell>Genset: P t T</cell><cell/><cell>BESS: P AE , E AE</cell></row><row><cell>BESS: E t AE , P t AEiny , P t AEext</cell><cell/><cell/></row><row><cell>Electrical load: 1X t</cell><cell/><cell/></row><row><cell cols="3">Fig. 9. Variables involved in proposed optimization model.</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_6"><head>TABLE V TOTAL</head><label>V</label><figDesc>COST OF MICROGRID AND OTHER PARAMETERS IN EACH SCENARIO</figDesc><table><row><cell>Scenario No.</cell><cell>-P</cell><cell>GR (kW)</cell><cell>-P</cell><cell>T (kW)</cell><cell>-P</cell><cell>AE (kW)</cell><cell>-E</cell><cell>AE (kWh)</cell><cell>Operation cost of genset ($/year)</cell><cell>Cost of load shedding ($/year)</cell><cell>Total cost of microgrid ($/year)</cell></row><row><cell>1</cell><cell/><cell>0</cell><cell/><cell>32.40</cell><cell/><cell>2.56</cell><cell/><cell>4.73</cell><cell>36461.2</cell><cell>7215.04</cell><cell>77426.7</cell></row><row><cell>2</cell><cell/><cell>0</cell><cell/><cell>31.70</cell><cell/><cell>22.25</cell><cell/><cell>23.42</cell><cell>38686.9</cell><cell>0</cell><cell>79338.4</cell></row><row><cell>3</cell><cell/><cell>65.16</cell><cell/><cell>29.79</cell><cell/><cell>12.34</cell><cell/><cell>60.47</cell><cell>20505.3</cell><cell>3897.96</cell><cell>98794.2</cell></row><row><cell>4</cell><cell/><cell>65.16</cell><cell/><cell>29.93</cell><cell/><cell>17.59</cell><cell/><cell>74.06</cell><cell>21731.2</cell><cell>0</cell><cell>99992.2</cell></row><row><cell>5</cell><cell/><cell>65.16</cell><cell/><cell>27.00</cell><cell/><cell>19.47</cell><cell/><cell>59.75</cell><cell>19560.2</cell><cell>0</cell><cell>92440.4</cell></row><row><cell>6</cell><cell cols="2">279.20</cell><cell/><cell>0</cell><cell/><cell>92.50</cell><cell/><cell>591.89</cell><cell>0</cell><cell>0</cell><cell>265169.0</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_7"><head>TABLE VI INVESTMENT</head><label>VI</label><figDesc>COST OF RENEWABLE ENERGY SOURCES IN EACH SCENARIO Scenario</figDesc><table/></figure>
+		</body>
+		<back>
+
+			<div type="funding">
+<div><p>Research Group, and <rs type="funder">CERA</rs> from <rs type="funder">ESPOL</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Impact of the reduction of diesel fuel subsidy in the design of an off-grid hybrid power system: a case study of the bellavista community in Ecuador</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Hidalgo-Leon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Amoroso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Litardo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energies</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page">1730</biblScope>
+			<date type="published" when="2021-03">Mar. 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">A comprehensive review of microgrid control mechanism and impact assessment for hybrid renewable energy integration</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Bihari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">K</forename><surname>Sadhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sarita</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="88942" to="88958"/>
+			<date type="published" when="2021-06">Jun. 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Optimization models for islanded micro-grids: a comparative analysis between linear programming and mixed integer programming</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dolara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Grimaccia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Magistrati</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energies</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">241</biblScope>
+			<date type="published" when="2017-02">Feb. 2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Optimal sizing of PV and battery-based energy storage in an off-grid nanogrid supplying batteries to a battery swapping station</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ban</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shahidehpour</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Modern Power Systems and Clean Energy</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="309" to="320"/>
+			<date type="published" when="2019-03">Mar. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Security-constrained design of isolated multi-energy microgrids</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mashayekh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Stadler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Cardoso</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Power Systems</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="2452" to="2462"/>
+			<date type="published" when="2018-05">May 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Sizing optimization for island microgrid with pumped storage system considering demand response</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Jing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Hu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Modern Power Systems and Clean Energy</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="791" to="801"/>
+			<date type="published" when="2018-07">Jul. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Optimization of hybrid renewable energy microgrid for rural agricultural area in southern Philippines</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Tarife</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Nakanishi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energies</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page">2251</biblScope>
+			<date type="published" when="2022-03">Mar. 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Optimal design of isolated mini-grids with deterministic methods: matching predictive operating strategies with low computational requirements</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Micangeli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Fioriti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Cherubini</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energies</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">16</biblScope>
+			<biblScope unit="page">4214</biblScope>
+			<date type="published" when="2020-08">Aug. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Load management and optimal sizing of special-purpose microgrids using two stage PSO-fuzzy based hybrid approach</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Azeem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ahmad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energies</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">17</biblScope>
+			<biblScope unit="page">6465</biblScope>
+			<date type="published" when="2022-09">Sept. 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Optimizing the size of autonomous hybrid microgrids with regard to load shifting</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Lavrik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhukovskiy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Tcvetkov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energies</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">16</biblScope>
+			<biblScope unit="page">5059</biblScope>
+			<date type="published" when="2021-08">Aug. 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Co-optimization scheme for distributed energy resource planning in community microgrids</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yuan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Illindala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Khalsa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Sustainable Energy</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1351" to="1360"/>
+			<date type="published" when="2017-10">Oct. 2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Microgrid based hybrid energy co-operative for grid-isolated remote rural village power supply for east coast zone of India</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Parida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Choudhury</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Chatterjee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Sustainable Energy</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1375" to="1383"/>
+			<date type="published" when="2018-07">Jul. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Optimal energy management and techno-economic analysis in microgrid with hybrid renewable energy sources</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">V V S N</forename><surname>Murty</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kumar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Modern Power Systems and Clean Energy</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="929" to="940"/>
+			<date type="published" when="2020-09">Sept. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Performance analysis of hybrid PV/diesel/battery system using HOMER: a case study Sabah, Malaysia</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Halabi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mekhilef</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Olatomiwa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energy Conversion and Management</title>
+		<imprint>
+			<biblScope unit="volume">144</biblScope>
+			<biblScope unit="page" from="322" to="339"/>
+			<date type="published" when="2017-07">Jul. 2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Size optimization and sensitivity analysis of hybrid wind/PV micro-grids -a case study for Bangladesh</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nurunnabi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">K</forename><surname>Roy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Hossain</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="150120" to="150140"/>
+			<date type="published" when="2019-10">Oct. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Optimization, design, and feasibility analysis of a grid-integrated hybrid AC/DC microgrid system for rural electrification</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">C</forename><surname>Alluraiah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Vijayapriya</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="67013" to="67029"/>
+			<date type="published" when="2023-06">Jun. 2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Economic integration of renewable and conventional power sources -a case study</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M A</forename><surname>Awan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Y</forename><surname>Javed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">B</forename><surname>Asghar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energies</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page">2141</biblScope>
+			<date type="published" when="2022-03">Mar. 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Technoeconomic feasibility of off-grid renewable energy electrification schemes: a case study of an informal settlement in Namibia</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Amupolo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nambundunga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S P</forename><surname>Chowdhury</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energies</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page">4235</biblScope>
+			<date type="published" when="2022-06">Jun. 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Sizing of an island standalone hybrid system considering economic and environmental parameters: a case study</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Chowdhury</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hasan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Chowdhury</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energies</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">16</biblScope>
+			<biblScope unit="page">5940</biblScope>
+			<date type="published" when="2022-08">Aug. 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Component sizing of an isolated networked hybrid microgrid based on operating reserve analysis</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Salehi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Martínez-García</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Velasco-Quesada</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energies</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">17</biblScope>
+			<biblScope unit="page">6259</biblScope>
+			<date type="published" when="2022-08">Aug. 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Investigating the optimal DOD and battery technology for hybrid energy generation models in cement industry using HOMER Pro</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Basheer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Qaisar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Waqar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="81331" to="81347"/>
+			<date type="published" when="2023-07">Jul. 2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Optimal planning and multi-criteria decision making for effective design and performance of hybrid microgrid integrated with energy management strategy</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Yang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sustainable Energy Technologies and Assessments</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="page">103074</biblScope>
+			<date type="published" when="2023-03">Mar. 2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Stochastic optimization of renewablebased microgrid operation incorporating battery operating cost</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Crow</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Power Systems</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="2289" to="2296"/>
+			<date type="published" when="2016-05">May 2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">A multi-energy multi-microgrid system planning model for decarbonisation and decontamination of isolated systems</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Carvallo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Jalil-Vega</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Moreno</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Applied Energy</title>
+		<imprint>
+			<biblScope unit="volume">343</biblScope>
+			<biblScope unit="page">121143</biblScope>
+			<date type="published" when="2023-08">Aug. 2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Multi-objective optimization and the effect of the economic factors on the design of the microgrid hybrid system</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kharrich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">H</forename><surname>Mohammed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Alshammari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sustainable Cities and Society</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page">102646</biblScope>
+			<date type="published" when="2021-02">Feb. 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">A memory-based genetic algorithm for optimization of power generation in a microgrid</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Askarzadeh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Sustainable Energy</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1081" to="1089"/>
+			<date type="published" when="2018-07">Jul. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Recent approach based social spider optimizer for optimal sizing of hybrid PV/wind/battery/diesel integrated microgrid in Aljouf region</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fathy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kaaniche</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Alanazi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="57630" to="57645"/>
+			<date type="published" when="2020-03">Mar. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Techno-economic analysis of a grid-connected PV/battery system using the teachinglearning-based optimization algorithm</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Ashtiani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Toopshekan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">R</forename><surname>Astaraei</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Solar Energy</title>
+		<imprint>
+			<biblScope unit="volume">203</biblScope>
+			<biblScope unit="page" from="69" to="82"/>
+			<date type="published" when="2020-06">Jun. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Techno-economic optimization of grid-connected solar-wind-pumped storage hybrid energy system using improved search space reduction algorithm</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bhimaraju</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mahesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">N</forename><surname>Joshi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Energy Storage</title>
+		<imprint>
+			<biblScope unit="volume">52</biblScope>
+			<biblScope unit="page">104778</biblScope>
+			<date type="published" when="2022-08">Aug. 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Multiobjective optimization of a hybrid PV/wind/battery/diesel generator system integrated in microgrid: a case study in Djelfa, Algeria</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Belboul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Toual</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kouzou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energies</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page">3579</biblScope>
+			<date type="published" when="2022-05">May 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Sizing a stand-alone solarwind-hydrogen energy system using weather forecasting and a hybrid search optimization algorithm</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Maleki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Rosen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energy Conversion and Management</title>
+		<imprint>
+			<biblScope unit="volume">180</biblScope>
+			<biblScope unit="page" from="609" to="621"/>
+			<date type="published" when="2019-01">Jan. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Advances in energy hybridization for resilient supply: a sustainable approach to the growing world demand</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Al-Rubaye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H S</forename><surname>Zangana</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energies</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">16</biblScope>
+			<biblScope unit="page">5903</biblScope>
+			<date type="published" when="2022-08">Aug. 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Optimal sizing of autonomous hybrid energy system using supply-demand-based optimization algorithm</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">A</forename><surname>Alturki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Al-Shamma'a</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">M H</forename><surname>Farh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Energy Research</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="605" to="625"/>
+			<date type="published" when="2021-01">Jan. 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Optimal design of a stand-alone residential hybrid microgrid system for enhancing renewable energy deployment in Japan</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yoshida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Farzaneh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energies</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page">1737</biblScope>
+			<date type="published" when="2020-04">Apr. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Feasibility study and deployment of solar photovoltaic system to enhance energy economics of King Abdullah campus, University of Azad Jammu and Kashmir Muzaffarabad, AJK Pakistan</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Iqbal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">U</forename><surname>Jan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Anis-Ur-Rehman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="5440" to="5455"/>
+			<date type="published" when="2022-01">Jan. 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Classification and summarization of solar irradiance and power forecasting methods: a thorough review</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Cao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">CSEE Journal of Power and Energy Systems</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="978" to="995"/>
+			<date type="published" when="2023-05">May 2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Machine learning methods for solar radiation forecasting: a review</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Voyant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Notton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kalogirou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Renewable Energy</title>
+		<imprint>
+			<biblScope unit="volume">105</biblScope>
+			<biblScope unit="page" from="569" to="582"/>
+			<date type="published" when="2017-05">May 2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">A review on global solar radiation prediction with machine learning models in a comprehensive perspective</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energy Conversion and Management</title>
+		<imprint>
+			<biblScope unit="volume">235</biblScope>
+			<biblScope unit="page">113960</biblScope>
+			<date type="published" when="2021-05">May 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">A review and evaluation of the state-of-the-art in PV solar power forecasting: techniques and optimization</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ahmed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Sreeram</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Mishra</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Renewable and Sustainable Energy Reviews</title>
+		<imprint>
+			<biblScope unit="volume">124</biblScope>
+			<biblScope unit="page">109792</biblScope>
+			<date type="published" when="2020-05">May 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">On the design of renewable-based utility plants using time series clustering</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">I</forename><surname>Pérez-Uresti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Lima</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Martín</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Computers &amp; Chemical Engineering</title>
+		<imprint>
+			<biblScope unit="volume">170</biblScope>
+			<biblScope unit="page">108124</biblScope>
+			<date type="published" when="2023-02">Feb. 2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Forecasting hourly global solar radiation using hybrid k-means and nonlinear autoregressive neural network models</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Benmouiza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Cheknane</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energy Conversion and Management</title>
+		<imprint>
+			<biblScope unit="volume">75</biblScope>
+			<biblScope unit="page" from="561" to="569"/>
+			<date type="published" when="2013-11">Nov. 2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Photovoltaic power pattern clustering based on conventional and swarm clustering methods</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Munshi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">A R I</forename><surname>Mohamed</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Solar Energy</title>
+		<imprint>
+			<biblScope unit="volume">124</biblScope>
+			<biblScope unit="page" from="39" to="56"/>
+			<date type="published" when="2016-02">Feb. 2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Comparing various solar irradiance categorization methods -a critique on robustness</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Hartmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Renewable Energy</title>
+		<imprint>
+			<biblScope unit="volume">154</biblScope>
+			<biblScope unit="page" from="661" to="671"/>
+			<date type="published" when="2020-07">Jul. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Economic optimization for configuration and sizing of micro integrated energy systems</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Deng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Modern Power Systems and Clean Energy</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="330" to="341"/>
+			<date type="published" when="2018-03">Mar. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Feasibility study for off-grid hybrid power systems considering an energy efficiency initiative for an island in Ecuador</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Hidalgo-Leon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Amoroso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Urquizo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energies</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page">1776</biblScope>
+			<date type="published" when="2022-02">Feb. 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<monogr>
+		<ptr target="https://power.larc.nasa.gov"/>
+		<title level="m">The power project</title>
+		<imprint>
+			<date type="published" when="2023-01">2023, Jan.</date>
+		</imprint>
+		<respStmt>
+			<orgName>NASA</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Data-driven optimal power flow: a physics-informed machine learning approach</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Lei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Power Systems</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="346" to="354"/>
+			<date type="published" when="2021-01">Jan. 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">A machine learningbased approach for mapping leachate contamination using geoelectri-cal methods</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Piegari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>De Donno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Melegari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Waste Management</title>
+		<imprint>
+			<biblScope unit="volume">157</biblScope>
+			<biblScope unit="page" from="121" to="129"/>
+			<date type="published" when="2023-02">Feb. 2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Urban heat island intensity and buildings' energy needs in Duran, Ecuador: simulation studies and proposal of mitigation strategies</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Litardo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Palme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Borbor-Cordova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sustainable Cities and Society</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page">102387</biblScope>
+			<date type="published" when="2020-11">Nov. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Assessing credit risk of commercial customers using hybrid machine learning algorithms</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Machado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Karray</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Expert Systems with Applications</title>
+		<imprint>
+			<biblScope unit="volume">200</biblScope>
+			<biblScope unit="page">116889</biblScope>
+			<date type="published" when="2022-08">Aug. 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<monogr>
+		<title level="m" type="main">Math Graphics Programming</title>
+		<author>
+			<persName><surname>Matlab</surname></persName>
+		</author>
+		<ptr target="https://www.mathworks.com/products/matlab.html"/>
+		<imprint>
+			<date type="published" when="2023-06">2023, Jun.</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<monogr>
+		<author>
+			<persName><forename type="first">R</forename><surname>Sioshansi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Conejo</surname></persName>
+		</author>
+		<title level="m">Optimization in Engineering: Models and Algorithms</title>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<monogr>
+		<title level="m" type="main">CPLEX IBM ILOG CPLEX Solver</title>
+		<author>
+			<persName><surname>Ampl</surname></persName>
+		</author>
+		<ptr target="https://documentation.aimms.com"/>
+		<imprint>
+			<date type="published" when="2023-06">2023, Jun.</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Parampl: a simple tool for parallel and distributed execution of AMPL programs</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Olszak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Karbowski</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="49282" to="49291"/>
+			<date type="published" when="2018-09">Sept. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><surname>Luis</surname></persName>
+		</author>
+		<title level="m">His research interests include artificial intelligence in power systems, renewable energy, and microgrids</title>
+		<meeting><address><addrLine>Guayaquil, Ecuador</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2022">2022. 2024</date>
+		</imprint>
+		<respStmt>
+			<orgName>Superior Politécnica del Litoral (ESPOL) University ; ESPOL University</orgName>
+		</respStmt>
+	</monogr>
+	<note>Pesantes received the B. Sc. degree in electrical engineering from Escuela</note>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<monogr>
+		<author>
+			<persName><forename type="first">Ruben</forename><surname>Hidalgo-León Received The</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename></persName>
+		</author>
+		<title level="m">Sc. degree in electrical engineering from Escuela Superior Politécnica del Litoral</title>
+		<meeting><address><addrLine>Ecuador; Santiago, Chile; Guayaquil, Ecuador</addrLine></address></meeting>
+		<imprint>
+			<publisher>Guayaquil</publisher>
+			<date type="published" when="2007">2007. 2017</date>
+		</imprint>
+		<respStmt>
+			<orgName>ESPOL) University ; engineering from University of Chile</orgName>
+		</respStmt>
+	</monogr>
+	<note>and the M.Sc. degree in electrical. He is currently a Lecturer at ESPOL University and Researcher in Center for Renewable and Alternative Energy. His research interests include microgrids, energy harvesting, and solar photovaltic (PV) systems</note>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<monogr>
+		<author>
+			<persName><forename type="first">Johnny</forename><surname>Rengifo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Sc</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sc</surname></persName>
+		</author>
+		<title level="m">degrees in electrical engineering from the Universidad Simón Bolívar, Caracas, Bolivarian Republic of Venezuela, in 2008 and 2013</title>
+		<meeting><address><addrLine>Caracas, Venezuela; Santiago, Chile</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note>His research interests include electric machines, power electronics, drives, renewable energies, and microgrids</note>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<monogr>
+		<title level="m">Miguel Torres received the Graduate and Master degrees from Escuela Superior</title>
+		<meeting><address><addrLine>Guayaquil, Ecuador; Campinas, Brazil</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2010">2010 and 2014. 2019</date>
+		</imprint>
+		<respStmt>
+			<orgName>Politécnica del Litoral (ESPOL) University ; University of Campinas (UNICAMP)</orgName>
+		</respStmt>
+	</monogr>
+	<note>respectively, and the Ph. D. degree from the. all in electrical engineering. He has been with ESPOL University since 2019, where he is currently a Professor. His research interests include voltage stability, power system operation and security, load flow methods, smart grids, energy efficiency, and transmission and distribution systems</note>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<monogr>
+		<title level="m" type="main">Sc. degree in electrical engineering from Escuela Superior Politécnica del Litoral</title>
+		<author>
+			<persName><forename type="first">Jorge</forename><surname>Aragundi</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1996">1996. 2000. 2022</date>
+			<pubPlace>Guayaquil, Ecuador; Campinas, Brazil; Campinas, Brazil</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>ESPOL) University ; Universidade Estadual de Campinas</orgName>
+		</respStmt>
+	</monogr>
+	<note>the M.Sc. degree in electrical engineering from Escola Federal de Engenharia de Itajuba. the Ph.D. degree from the</note>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<monogr>
+		<author>
+			<persName><forename type="first">José</forename><surname>Cordova-Garcia Received The</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S D</forename><surname>Ph</surname></persName>
+		</author>
+		<title level="m">degrees in electrical engineering from the State University of New York at Stony Brook</title>
+		<meeting><address><addrLine>New York, USA; Guayaquil, Ecuador</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2012">2012 and 2017</date>
+		</imprint>
+		<respStmt>
+			<orgName>(ESPOL) University ; At ESPOL University</orgName>
+		</respStmt>
+	</monogr>
+	<note>respectively. In 2018, he joined the Faculty of Escuela Superior Politécnica del Litoral. he leads a campus-wide initiative towards implementing a data-driven energy management system. He also serves as the Director of the Telematics program as well as the Professional Data Science Masters. His current research interests include event detection, handling missing data, networked control, and machine learning applications for power systems</note>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<monogr>
+		<author>
+			<persName><forename type="first">F</forename><surname>Luis</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ugarte</surname></persName>
+		</author>
+		<title level="m">Sc. degree in electrical engineering from the Escuela Superior Politécnica del Litoral</title>
+		<meeting><address><addrLine>Guayaquil, Ecuador; Campinas, Brazil</addrLine></address></meeting>
+		<imprint>
+			<publisher>M.Sc. and Ph</publisher>
+			<date type="published" when="2014">2014. 2018 and 2024</date>
+		</imprint>
+		<respStmt>
+			<orgName>ESPOL) University ; He is Research Professor at ESPOL University</orgName>
+		</respStmt>
+	</monogr>
+	<note>.D. degrees in electrical engineering from the State University of Campinas. respectively. His research interests include electrical mobility, power system analysis, and sustainability energy</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

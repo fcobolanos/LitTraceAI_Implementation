@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Graph Neural Network Framework for Sentiment Analysis Using Syntactic Feature</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Linxiao</forename><surname>Wu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Guiran</forename><surname>Liu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yuanshuai</forename><surname>Luo</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Rui</forename><surname>Wang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Binrong</forename><surname>Zhu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Qian</forename><surname>Yu</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Columbia University New York</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">San Francisco State University</orgName>
+								<address>
+									<settlement>San Francisco</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Southwest Jiaotong University</orgName>
+								<address>
+									<settlement>Chengdu</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Carnegie Mellon University</orgName>
+								<address>
+									<settlement>Pittsburgh</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">San Francisco State University</orgName>
+								<address>
+									<settlement>San Francisco</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Trine University</orgName>
+								<address>
+									<settlement>Detroit</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Graph Neural Network Framework for Sentiment Analysis Using Syntactic Feature</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B61148450E0402149511BBFA0C204D1F</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-02T20:31+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Graph neural network</term>
+					<term>sentiment analysis</term>
+					<term>syntactic analysis tree I</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Amidst the swift evolution of social media platforms and e-commerce ecosystems, the domain of opinion mining has surged as a pivotal area of exploration within natural language processing. A specialized segment within this field focuses on extracting nuanced evaluations tied to particular elements within textual contexts. This research advances a composite framework that amalgamates the positional cues of topical descriptors. The proposed system converts syntactic structures into a matrix format, leveraging convolutions and attention mechanisms within a graph to distill salient characteristics. Incorporating the positional relevance of descriptors relative to lexical items enhances the sequential integrity of the input. Trials have substantiated that this integrated graph-centric scheme markedly elevates the efficacy of evaluative categorization, showcasing preeminence across a spectrum of established reference datasets.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>INTRODUCTION</head><p>With the accelerating proliferation of social media networks and e-commerce platforms, discerning public sentiment has emerged as a critical focus within the realm of computational linguistics <ref type="bibr" target="#b0">[1]</ref>. A specialized subset of this domain involves pinpointing the nuanced sentiments associated with specific topics within text segments, encompassing sentiments ranging from favorable to unfavorable or neutral stances <ref type="bibr" target="#b1">[2]</ref>. Practical instances of this methodology are prevalent in analytics on medical dignosis <ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref>, and insights derived from financial stakeholders' communications <ref type="bibr" target="#b5">[6]</ref>. This targeted sentiment extraction holds substantial academic and commercial significance <ref type="bibr" target="#b6">[7]</ref>.</p><p>The deployment of deep learning paradigms has catalyzed advancements in this niche <ref type="bibr" target="#b7">[8]</ref>. Traditionally, addressing this challenge involved transforming textual inputs into lowerdimensional vectors via embedding models before feeding them into neural architectures for training. However, this direct approach often overlooks the influence of word sequence on the model's efficacy. Moreover, incorporating syntactic-level information could enhance the model's discernment of sentiment toward specific topics. Utilizing the hierarchical structure of sentences, as depicted in syntactic parse trees, can bolster the extraction of meaningful syntactic features. Grounded in these considerations, this study employs graph neural networks to address these issues, contributing to the field in three primary ways.</p><p>(1) An integrated graph neural network framework that incorporates the positional context of focal terms is introduced. The structural relationships within the input text are mapped into a matrix form, facilitating feature extraction through the application of graph-based convolution and attention mechanisms.</p><p>(2) To maintain the sequential arrangement of lexical units within the input, the relative proximity of focal terms is utilized as a positional attribute, ensuring that the inherent order is preserved as a feature.</p><p>(3) Ultimately, these feature vectors are channeled into a retrieval-oriented attention component, aiding a SoftMax classifier in deriving the conclusive classification outcome. Evaluations conducted on three canonical datasets affirm the model's validity and underscore the significance of each component in addressing the challenges posed by text sequence processing and the utilization of graph neural networks in achieving superior results.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. RELATED WORK</head><p>The domain of sentiment analysis, particularly using deep learning and syntactic features, has been significantly advanced by various methodologies and models in recent years. These developments are essential for the understanding of how the intersection of graph neural networks (GNNs) and sentiment analysis can lead to more precise and contextually aware results.</p><p>Recent work on text classification using GNNs, such as Gao et al.'s <ref type="bibr" target="#b8">[9]</ref>, showcases the effectiveness of graph-based models in capturing syntactic dependencies, which is crucial in sentiment analysis where sentence structure plays a key role. Their study introduces a text classification optimization algorithm based on GNNs, which aligns with the proposed approach of syntactic feature integration in sentiment analysis.</p><p>Additionally, Yang et al. <ref type="bibr" target="#b9">[10]</ref> explored emotional analysis using large language models, which are inherently designed to handle nuanced language processing tasks. This paper, while focusing on emotional analysis, contributes significantly to understanding how deep learning techniques can be harnessed for sentiment extraction, a close cousin to opinion mining, by leveraging advanced language models. Embedding techniques such as those in Cheng et al.'s <ref type="bibr" target="#b10">[11]</ref> work, which involves ELMo word embeddings and multimodal transformers, further push the boundaries of sentiment analysis. Their research emphasizes the need for robust contextual embedding models that capture syntactic and semantic features, resonating with the need for high-dimensional feature representation in the proposed GNN framework.</p><p>In terms of optimization strategies, Ma et al. <ref type="bibr" target="#b11">[12]</ref> delved into gradient descent optimization, which is vital for training deep neural networks, including GNNs. The methods discussed provide a solid foundation for improving model training in complex neural network architectures such as the one proposed in this research. Furthermore, Wang et al. <ref type="bibr" target="#b12">[13]</ref> have contributed to the understanding of syntactic feature extraction with their research on enhancing convolutional neural networks using numerical difference methods. Their approach is highly relevant to improving the efficiency of GNNs in dealing with syntactic structure extraction, a key focus of this study. Several studies, though not directly focused on sentiment analysis, offer crucial insights into deep learning and graph-based techniques. For instance, Yang et al. <ref type="bibr" target="#b13">[14]</ref> presented advancements in dynamic hypergraph prediction, which shares conceptual similarities with the graph-based approach for modeling relationships between syntactic elements in text. Likewise, Gu et al. <ref type="bibr" target="#b14">[15]</ref> researched spatio-temporal aggregation in graph models, which informs the methodology of integrating temporal and positional features within GNN frameworks for sentiment analysis.</p><p>Finally, recent studies on named entity recognition <ref type="bibr" target="#b15">[16]</ref>and risk assessment in financial markets <ref type="bibr" target="#b16">[17]</ref> also illustrate the broad applicability of deep learning and graph-based methods in diverse fields. These works underscore the versatility of GNNs and their potential for cross-domain adaptation, strengthening the argument for their use in sentiment analysis.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. METHOD</head><p>Using graph neural networks (GNNs) for modeling often relies on a single-layered approach, which may limit the exploration of the intricate relationships between focal terms and their surrounding context <ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref><ref type="bibr" target="#b19">[20]</ref>. This method can miss out on capturing the syntactic constraints inherent in sentences. Additionally, simply applying a model to the sentence without considering the positional information can lead to misinterpretation, as it might rely on irrelevant context for sentiment determination. For example, attention-based models are prone to highlighting words that are not necessarily relevant to the sentiment being analyzed, thereby missing key syntactic dependencies. Moreover, from observations in aspect-based sentiment analysis datasets, it becomes evident that context words located nearer to the focal term within a sentence tend to carry more weight in determining sentiment than those positioned further away. This phenomenon is clearly demonstrated in Figure <ref type="figure">1</ref>, showing the importance of proximity in sentiment classification.</p><p>To address these limitations, a more sophisticated approach is required that not only takes into account the syntactic structure and positional information but also leverages the strengths of GNNs to accurately capture the nuanced interactions between different parts of the sentence. This ensures that the model can effectively distinguish between relevant and irrelevant context, thereby improving the accuracy of sentiment analysis.</p><p>Figure <ref type="figure">1</ref> Parsing tree First, a syntactic parser is employed to transform the given sentence into a syntactic parse tree. This tree is subsequently translated into an adjacency matrix, which serves as the foundation for constructing various types of graph neural networks. These networks are designed to extract the syntactic dependency information among the context words comprehensively.</p><p>Secondly, to emphasize the positional sequence of context words relative to the focal terms within the sentence, a method based on the relative distance to these focal terms is developed. This relative distance is incorporated as positional sequence information. The positional sequence information is then combined with the sentence context and embedded as the input feature vector for the model. Following this, a BiLSTM-Attention layer processes the input to generate a hidden vector representation of the text. Finally, this hidden vector representation, along with the output features from the graph neural network component, is fed into an Attention Weight module. This module assigns attention weights to the context words, aiding in the final classification outcome through a SoftMax classifier. The architecture of this network is illustrated in Figure <ref type="figure" target="#fig_0">2</ref>. The graph attention network (GAT) consists of multiple layers designed to aggregate the weights of neighboring nodes effectively <ref type="bibr" target="#b20">[21]</ref>. This process starts by incorporating updates from the syntactic parse tree nodes into a single-layer GAT, where each node's update is computed as follows: is obtained. After the nodes are updated, the resulting vectors are utilized to derive the vectors of neighboring nodes with varying contribution weights. Graph convolutional neural networks (GCN) excel in handling graph data rich in dependencies. By aggregating the obtained hidden vectors through GCN, the system can effectively refine the scope of aggregation around focal terms and sentiment-expressing words, making the combination more efficient. The process of aggregating and updating the nodes can be described as follows:</p><formula xml:id="formula_0">) ( Re )) ( Re exp( )) ( Re exp( )) , (<label>(</label></formula><formula xml:id="formula_1">g i N j W ij i N j j ij ij g i g i j h a LU</formula><formula xml:id="formula_2">) ( Re ) ( l N j a i l ij i b h W A LU h i + =  </formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. EXPERIMENT</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Experimental setup</head><p>In our experimental framework, we have systematically configured all parameters to ensure robustness and replicability. We initiate by employing pre-trained GloVe embeddings for initializing word vectors, ensuring that both context and aspect words have an embedding dimensionality of 300. Position vectors are distinctly configured with a dimensionality of 100. The weight matrix for the final fully connected layer is initialized at random, adhering to a normal distribution characterized by a mean of 0 and a standard deviation of 1. For the optimization process, the Adam optimizer is selected for its efficiency in handling sparse gradients on noisy problems <ref type="bibr" target="#b21">[22]</ref>. We set the initial learning rate at 0.001, coupled with an L2 regularization parameter finely tuned to 0.00001. This configuration is designed to balance learning efficiency with the need to prevent overfitting, thus enhancing the model's performance on unseen data. This methodical setup forms the backbone of our experimental architecture, aiming to foster reproducibility and reliability in our results.</p><p>To assess the model's performance, we utilize two primary evaluation metrics: accuracy (Acc) and macro F1 score. These criteria provide a comprehensive measure of the model's effectiveness across different aspects of the classification task. The accuracy metric evaluates the proportion of correctly classified instances, whereas the macro F1 score offers a balanced view of precision and recall, averaged across all classes. This setup ensures a thorough and balanced evaluation of the model's capabilities.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Datasets</head><p>Three separate datasets were employed in the experiments, and the results validated the effectiveness of the proposed HM-GNN model. The datasets included the Laptop and Restaurant categories from the SemEval2014 competition, as well as a Twitter dataset from ACL2014. To maintain consistency, instances with conflicting sentiment polarity labels were excluded from the SemEval2014 datasets. Each dataset consisted of sentences, the specific aspect terms within them, and the corresponding sentiment polarities for those terms. These datasets were processed using the Linked Data approach, which integrates multiple data formats, a method essential for academic research <ref type="bibr" target="#b22">[23]</ref>. This structured technique enhances data cross-referencing, promoting interoperability among different datasets. Such capabilities are particularly advantageous in fields like machine learning and artificial intelligence, where the quality of data is critical for effective model training and ensuring accurate results.</p><p>The experimental setup involved analyzing the textual content, identifying the focal aspects within each sentence, and assessing the sentiment polarity related to these aspects. By removing examples with inconsistent sentiment labels, the datasets were refined to provide a clearer basis for evaluating the model's performance. This methodology was pivotal in structuring the datasets to rigorously evaluate the model's effectiveness in accurately classifying sentiment polarities. By meticulously preparing the data, we ensured that each dataset was optimally configured for comprehensive testing, thereby facilitating a thorough assessment of the model's performance in different scenarios. This structured approach not only enhances the reliability of the results but also provides a solid foundation for comparing the predictive capabilities of the model under controlled conditions. Through this rigorous preparation, we aim to demonstrate the robustness and precision of the model in discerning various sentiment polarities across diverse textual datasets.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Experimental Results</head><p>To thoroughly evaluate the performance of the HM-GNN model, we engaged in a detailed comparative analysis against a diverse array of baseline models. This lineup included some well-known models, representing distinct methodologies within the field. By incorporating such a wide spectrum of approaches, our analysis provided a robust benchmark for assessing the HM-GNN model's capabilities. This comprehensive evaluation strategy allowed us to discern the strengths and weaknesses of HM-GNN in contrast to established methods, thereby offering insights into its comparative effectiveness and potential areas for further enhancement. This benchmarking is crucial for validating the novel contributions of the HM-GNN model and establishing its practical utility in sentiment analysis tasks.</p><p>The evaluation aimed to highlight the strengths and weaknesses of HM-GNN relative to these established models. By comparing the results, we were able to determine how effectively the HM-GNN model performs in terms of accuracy and efficiency, offering insights into its potential advantages and areas for improvement. This comparative study ensured a thorough understanding of the model's performance across different methodologies.  In order to further and more intuitively show the superiority of our algorithm, we draw a bar chart based on the Twitter dataset, as shown in Figure <ref type="figure">3</ref> Figure <ref type="figure">3</ref> Twitter dataset results in bar chart As can be seen intuitively from Figure <ref type="figure">3</ref>, whether it is the F1 value or the ACC value, our results are better than the previous algorithm performance and have reached the state of the art.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>V. CONCLUSION</head><p>This paper introduces a novel hybrid graph neural network model that leverages the syntactic structure of input sentences. The syntactic parse tree is transformed into an adjacency matrix, which serves as the basis for feature extraction using a combination of graph convolutional neural networks (GCNs) and graph attention networks (GANs). To maintain the sequential information of words within the input, the model incorporates the relative distance from aspect words as a positional feature.</p><p>The feature vectors derived from this process are then passed through a retrieval-style attention module, enabling a SoftMax classifier to produce the final classification outcome. Validation conducted on three established datasets not only underscores the logical design of the model but also highlights the impact of each component in addressing the complexities of text sequence processing and the benefits of using graph neural networks.</p><p>The experimental results demonstrate that the proposed hybrid model surpasses several existing baseline models in terms of accuracy and F1 score, thereby confirming its effectiveness and superiority in the domain of sentiment analysis. This comprehensive evaluation provides evidence of the model's robust performance and its potential for advancing the field.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 2</head><label>2</label><figDesc>Figure 2 network architecture</figDesc><graphic coords="3,54.00,38.85,225.05,156.15" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 1</head><label>1</label><figDesc>Model experimental results in Twitter dataset</figDesc><table><row><cell>Model</cell><cell>Acc</cell><cell>F1</cell></row><row><cell>LSTM</cell><cell>65.51</cell><cell>66.11</cell></row><row><cell>TD-LSTM</cell><cell>66.32</cell><cell>66.56</cell></row><row><cell>TNet-LF</cell><cell>67.78</cell><cell>67.63</cell></row><row><cell>AEN</cell><cell>68.29</cell><cell>68.42</cell></row><row><cell>ASGCN</cell><cell>70.13</cell><cell>69.23</cell></row><row><cell>DGEDRT</cell><cell>71.33</cell><cell>70.99</cell></row><row><cell>RPAEN</cell><cell>72.47</cell><cell>71.65</cell></row><row><cell>BATX</cell><cell>73.97</cell><cell>71.73</cell></row><row><cell>Ours</cell><cell>74.36</cell><cell>72.79</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 2</head><label>2</label><figDesc>Model experimental results in Laptop dataset</figDesc><table><row><cell>Model</cell><cell>Acc</cell><cell>F1</cell></row><row><cell>LSTM</cell><cell>66.58</cell><cell>60.11</cell></row><row><cell>TD-LSTM</cell><cell>70.97</cell><cell>63.71</cell></row><row><cell>TNet-LF</cell><cell>71.46</cell><cell>64.56</cell></row><row><cell>AEN</cell><cell>73.23</cell><cell>65.23</cell></row><row><cell>ASGCN</cell><cell>75.42</cell><cell>66.73</cell></row><row><cell>DGEDRT</cell><cell>76.06</cell><cell>67.49</cell></row><row><cell>RPAEN</cell><cell>76.12</cell><cell>70.32</cell></row><row><cell>BATX</cell><cell>76.38</cell><cell>71.56</cell></row><row><cell>Ours</cell><cell>77.43</cell><cell>73.44</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 3</head><label>3</label><figDesc>Model experimental results in Restaurant dataset</figDesc><table><row><cell>Model</cell><cell>Acc</cell><cell>F1</cell></row><row><cell>LSTM</cell><cell>74.35</cell><cell>63.08</cell></row></table></figure>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">SE4SA: a deep syntactical contextualized text representation learning approach for sentiment analysis</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Vo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Intelligent &amp; Fuzzy Systems</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="7527" to="7546"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Survey on aspect-level sentiment analysis</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Schouten</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Frasincar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Knowledge and Data Engineering</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="813" to="830"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title level="m" type="main">A comparative study of generative adversarial networks for image recognition algorithms based on deep learning and traditional methods</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Cang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2408.03568</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<title level="m" type="main">Research on Adverse Drug Reaction Prediction Model Combining Knowledge Graph Embedding and Deep Learning</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Dang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Xiao</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2407.16715</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<title level="m" type="main">Applying Conditional Generative Adversarial Networks for Imaging Diagnosis</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yuan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Gu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2408.02074</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Exploring Anomaly Detection and Risk Assessment in Financial Markets Using Deep Neural Networks</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Qin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Innovative Research in Computer Science &amp; Technology</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="92" to="98"/>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Feature Extraction and Model Optimization of Deep Learning in Stock Market Prediction</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sun</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Computer Technology and Software</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Enhanced Unsupervised Image Registration via Dense U-Net and Channel Attention</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Computer Science and Software Applications</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="8" to="15"/>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<title level="m" type="main">Text classification optimization algorithm based on graph neural network</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Xia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2408.15257</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Advancing Emotional Analysis with Large Language Models</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Qin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Hu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Computer Science and Software Applications</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="8" to="15"/>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title level="m" type="main">Algorithm Research of ELMo Word Embedding and Deep Learning Multimodal Transformer in Image Description</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2408.06357</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<title level="m" type="main">Enhancing Deep Learning with Optimized Gradient Descent: Bridging Numerical Methods and Neural Network Training</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Sang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Huang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2409.04707</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<title level="m" type="main">Enhancing Convolutional Neural Networks with Higher-Order Numerical Difference Methods</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2409.04977</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<title level="m" type="main">Dynamic Hypergraph-Enhanced Prediction of Sequential Medical Visits</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2408.07084</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Adaptive Spatio-Temporal Aggregation for Temporal Dynamic Graph-Based Fraud Risk Detection</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sui</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Computer Technology and Software</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Named Entity Recognition: A Comparative Study of Advanced Pre-trained Model</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Cang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Sun</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Computer Technology and Software</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Hybrid LSTM-GARCH Framework for Financial Market Volatility Risk Prediction</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Computer Science and Software Applications</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="22" to="29"/>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Unveiling patterns: A study on semisupervised classification of strip surface defects</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="119933" to="119946"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Ndc-scene: Boost monocular 3D semantic scene completion in normalized device coordinates space</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Ouyang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Li</forename><forename type="middle">H</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2023 IEEE/CVF International Conference on Computer Vision (ICCV)</title>
+		<meeting>the 2023 IEEE/CVF International Conference on Computer Vision (ICCV)</meeting>
+		<imprint>
+			<date type="published" when="2023-10">Oct. 2023</date>
+			<biblScope unit="page" from="9421" to="9431"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Survival prediction across diverse cancer types using neural networks</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2024 7th International Conference on Machine Vision and Applications</title>
+		<meeting>the 2024 7th International Conference on Machine Vision and Applications</meeting>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+			<biblScope unit="page" from="134" to="138"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Application of semi-supervised learning in image classification: Research on fusion of labeled and unlabeled data</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Kou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yang</forename><forename type="middle">Z</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<title level="m" type="main">Adaptive Friction in Deep Learning: Enhancing Optimizers with Sigmoid and Tanh Function</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Qin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Tan</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2408.11839</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Investigation of Creating Accessibility Linked Data Based on Publicly Available Accessibility Datasets</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2023 13th International Conference on Communication and Network Security</title>
+		<meeting>the 2023 13th International Conference on Communication and Network Security</meeting>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+			<biblScope unit="page" from="77" to="81"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

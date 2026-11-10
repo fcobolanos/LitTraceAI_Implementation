@@ -1,0 +1,3335 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Research hypothesis generation over scientific knowledge graphs</title>
+				<funder ref="#_yTwNPzg">
+					<orgName type="full">unknown</orgName>
+				</funder>
+				<funder ref="#_QFCDu5B #_Z9bGgaN">
+					<orgName type="full">Italian Ministry of University and Research</orgName>
+					<orgName type="abbreviated">MUR</orgName>
+				</funder>
+				<funder ref="#_Ps2KC3M">
+					<orgName type="full">European Union -NextGenerationEU</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Elsevier BV</publisher>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2025-04">8 March 2025 0950</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Agustín</forename><surname>Borrego</surname></persName>
+							<email>borrego@us.es</email>
+							<idno type="ORCID">0000-0003-3750-8484</idno>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Seville</orgName>
+								<address>
+									<settlement>Seville</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Danilo</forename><surname>Dessì</surname></persName>
+							<email>ddessi@sharjah.ac.ae</email>
+							<idno type="ORCID">0000-0003-3843-3285</idno>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Department of Computer Science</orgName>
+								<orgName type="department" key="dep2">College of Computing and Informatics</orgName>
+								<orgName type="institution">University of Sharjah</orgName>
+								<address>
+									<settlement>Sharjah</settlement>
+									<country key="AE">United Arab Emirates</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Daniel</forename><surname>Ayala</surname></persName>
+							<email>dayala1@us.es</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Seville</orgName>
+								<address>
+									<settlement>Seville</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Inma</forename><surname>Hernández</surname></persName>
+							<email>inmahernandez@us.es</email>
+							<idno type="ORCID">0000-0001-8920-6635</idno>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Seville</orgName>
+								<address>
+									<settlement>Seville</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Francesco</forename><surname>Osborne</surname></persName>
+							<email>francesco.osborne@open.ac.uk</email>
+							<idno type="ORCID">0000-0001-6557-3131</idno>
+							<affiliation key="aff2">
+								<orgName type="department">Knowledge Media Institute</orgName>
+								<orgName type="institution">The Open University</orgName>
+								<address>
+									<settlement>Milton Keynes</settlement>
+									<country key="GB">United Kingdom</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Business and Law</orgName>
+								<orgName type="institution">University of Milano Bicocca</orgName>
+								<address>
+									<settlement>Milan</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Diego</forename><surname>Reforgiato Recupero</surname></persName>
+							<idno type="ORCID">0000-0001-8646-6183</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Davide</forename><surname>Buscaldi</surname></persName>
+							<email>davide.buscaldi@lipn.univ-paris13.fr</email>
+							<idno type="ORCID">0000-0003-1112-3789</idno>
+							<affiliation key="aff5">
+								<orgName type="laboratory">Laboratoire d'Informatique de Paris Nord</orgName>
+								<orgName type="institution">Sorbonne Paris Nord University</orgName>
+								<address>
+									<settlement>Paris</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">David</forename><surname>Ruiz</surname></persName>
+							<email>druiz@us.es</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Seville</orgName>
+								<address>
+									<settlement>Seville</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Enrico</forename><surname>Motta</surname></persName>
+							<email>enrico.motta@open.ac.uk</email>
+							<idno type="ORCID">0000-0003-0015-1952</idno>
+							<affiliation key="aff2">
+								<orgName type="department">Knowledge Media Institute</orgName>
+								<orgName type="institution">The Open University</orgName>
+								<address>
+									<settlement>Milton Keynes</settlement>
+									<country key="GB">United Kingdom</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Research hypothesis generation over scientific knowledge graphs</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Knowledge-Based Systems</title>
+						<title level="j" type="abbrev">Knowledge-Based Systems</title>
+						<idno type="ISSN">0950-7051</idno>
+						<imprint>
+							<publisher>Elsevier BV</publisher>
+							<biblScope unit="volume">315</biblScope>
+							<biblScope unit="page">113280</biblScope>
+							<date type="published" when="2025-04">8 March 2025 0950</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8EDBA742FFD7BF8BD8AF2392C604E3C1</idno>
+					<idno type="DOI">10.1016/j.knosys.2025.113280</idno>
+					<note type="submission">Received 25 August 2023; Received in revised form 25 November 2024; Accepted 26 February 2025</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-06T18:17+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>Hypothesis generation Knowledge graphs Link prediction Scholarly domain Scientific facts Artificial Intelligence</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Generating research hypotheses is a crucial step in scientific investigation that involves the creation of precise, verifiable, and logically valid statements that can be empirically examined. Therefore, many efforts have been made to automate or assist this process through the use of various Artificial Intelligence solutions. However, most existing methods are tailored to very specific domains, particularly within the biomedical field. There have been recent attempts to formalize hypothesis generation as a link prediction task over knowledge graphs. This solution is potentially domain-independent and applicable across diverse disciplines. Nevertheless, current approaches for link prediction, which typically rely on embedding models or path-based methods, have shown limited success in accurately predicting new hypotheses. To address these limitations, this paper introduces ResearchLink, an innovative and domain-independent methodology for hypothesis generation over knowledge graphs. ResearchLink combines path-based features and knowledge graph embeddings with text embeddings, capturing the semantic context of entities within a given corpus, and integrates additional information from bibliometric databases to improve research collaboration predictions. To conduct a rigorous evaluation of ResearchLink, we constructed CSKG-600, a new dataset for hypothesis generation, consisting of 600 statements that were manually labeled by domain experts. ResearchLink achieved outstanding performance (78.7% P@20), significantly outperforming alternative approaches such as TransH (71.8%), TransD (71.7%), and RotatE (70.7%).</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>Research hypothesis generation is a fundamental process in scientific inquiry that involves the formulation of specific, testable, and logically sound hypotheses that can be subjected to empirical testing. Therefore, many efforts have been made to automate or assist this process through the use of various Artificial Intelligence (AI) solutions. Indeed, the automatic generation of research hypotheses represents one of the most intriguing tasks in the field of AI as it encompasses both a creative aspect, wherein computers attempt to emulate the intuition of human researchers, and a predictive component, where they strive to anticipate future developments within a specific domain <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref>. Furthermore, integrating AI-powered hypothesis generation into scientific practices can have a transformative impact, allowing scientists example, the triple &lt;deep_learning, uses, electricity&gt;, although true, does not represent a meaningful research hypothesis worth exploring. It is simply a piece of information absent from our current representation. Furthermore, predicting future links may necessitate incorporating data beyond the KG, such as the occurrences of relevant entities in bibliometric databases and their semantic meanings inferred from the scientific literature.</p><p>To address these issues, we introduce ResearchLink, an innovative and domain-independent methodology for hypothesis generation over KGs. ResearchLink combines path-based features and KGEs with text embeddings, which capture the semantic context of an entity within a given corpus, and additional information about the occurrences of relevant entities in the literature. It is adaptable to any domain that provides a KG of relevant entities.</p><p>To enable rigorous evaluation, we have developed CSKG-600, a new dataset for research hypothesis generation. Since ResearchLink is designed for generating hypotheses rather than identifying missing facts, it cannot be assessed using standard KG completion benchmarks such as FB15k and WN18RR. CSKG-600 contains 600 hypotheses derived from the Computer Science Knowledge Graph (CS-KG) <ref type="foot" target="#foot_0">1</ref>  <ref type="bibr" target="#b10">[11]</ref> that were manually reviewed by three senior research scientists. CS-KG is an open large-scale knowledge graph comprising over 41M statements about 10M entities extracted automatically from 6.7M scientific articles. ResearchLink achieves remarkable performance without using any domain-specific features and outperforms several alternative approaches.</p><p>In summary, the main contributions of this paper are the following:</p><p>• We propose ResearchLink, a domain-independent methodology for research hypothesis generation over knowledge graphs. • We release a new dataset for hypothesis generation: CSKG-600, including 600 manually annotated triples. • We report an evaluation comparing ResearchLink against several alternative methods and analyze the impact of the novel features proposed in this paper on its overall performance. • We make available the full source code of ResearchLink at <ref type="url" target="https://github.com/dayala1/ResearchLink">https: //github.com/dayala1/ResearchLink</ref> so that it can be easily reused in other fields.</p><p>The remainder of this paper is organized as follows. Section 2 discusses the related work. Section 3 describes ResearchLink in detail. Section 4 reports the evaluation. Section 5 discuss the limitations of the proposed approach. Finally, Section 6 concludes the paper and presents future directions of research.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Related work</head><p>Automated hypothesis generation has been extensively researched in the past decades, especially in the biomedical field <ref type="bibr" target="#b33">[34]</ref>. In the following subsection, we will summarize related work on literaturebased discovery (Section 2.1), knowledge graph-based discovery (Section 2.2), and LLM-based discovery (Section 2.3). Finally, in Section 2.4 we will present an overview of the key contributions to automated hypothesis generation and discuss the research gap that we aim to address in this paper.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.">Literature-based discovery</head><p>Hypothesis generation can be seen as a special application of Literature-based discovery (LBD), which involves the inference of previously unseen knowledge from the automated or semi-automated analysis of large text corpora from research articles <ref type="bibr" target="#b33">[34]</ref><ref type="bibr" target="#b34">[35]</ref><ref type="bibr" target="#b35">[36]</ref>. Most current systems focus on inferring a single type of relation between a pair of medical terms, e.g., the relation between genes and the biological functions that they regulate, or the relation between diseases and drugs that could help cure them (also known as drug discovery <ref type="bibr" target="#b36">[37]</ref><ref type="bibr" target="#b37">[38]</ref><ref type="bibr" target="#b38">[39]</ref>). For that matter, different text mining and NLP techniques have been used in the past, such as graph diffusion <ref type="bibr" target="#b7">[8,</ref><ref type="bibr" target="#b39">40]</ref>, probabilistic search <ref type="bibr" target="#b6">[7]</ref>, or NLP semantic analysis <ref type="bibr" target="#b40">[41,</ref><ref type="bibr" target="#b41">42]</ref>. A primary limitation of these methodologies is their predominant focus on biomedical <ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b39">40]</ref> or chemical <ref type="bibr" target="#b41">[42]</ref> data. While there are emerging attempts to adapt these techniques to other research domains, such endeavors are still in an early stage <ref type="bibr" target="#b40">[41]</ref>. Some recent initiatives have sought to adapt LBD beyond the biomedical domain, specifically for the recommendation of scientific papers to researchers <ref type="bibr" target="#b42">[43]</ref>. Notably, this differs from automated hypothesis generation, as its primary focus is to connect researchers with potentially relevant articles.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.">Knowledge graph embeddings</head><p>The automatic generation of research hypotheses can be addressed by identifying new semantic connections between concepts in the scientific domain, such as techniques or tasks. These concepts and relationships can be represented as nodes and edges in a knowledge graph.</p><p>Recent years have witnessed the rise of several knowledge graphs for capturing scholarly metadata such as authors, venues, citations, and research topics (e.g., AIDA <ref type="bibr" target="#b43">[44]</ref>, AMiner <ref type="bibr" target="#b44">[45]</ref>, Scholarly-data.org <ref type="bibr" target="#b45">[46]</ref>, OpenCitations <ref type="bibr" target="#b46">[47]</ref>, CORE <ref type="bibr" target="#b47">[48]</ref>). An increasing number of knowledge graphs focus specifically on describing specific scientific entities and their relationships (AI-KG <ref type="bibr" target="#b13">[14]</ref>, CS-KG <ref type="bibr" target="#b10">[11]</ref>, ORKG <ref type="bibr" target="#b14">[15]</ref>, UMLS <ref type="bibr" target="#b48">[49]</ref>, TKG <ref type="bibr" target="#b16">[17]</ref>, or Nanopublications <ref type="bibr" target="#b49">[50]</ref>). Once scholarly information is organized into a knowledge graph, the task of inferring a new hypothesis can be framed as a link prediction problem, a subject for which numerous solutions exist in the literature. Early approaches to link prediction concentrated on analyzing multihop paths within graphs, serving as a means to identify potential direct relations between entities. These proposals rely on different strategies to traverse the graph, namely: random walks <ref type="bibr" target="#b54">[55]</ref><ref type="bibr" target="#b55">[56]</ref><ref type="bibr" target="#b56">[57]</ref>, deterministic graph iteration <ref type="bibr" target="#b30">[31,</ref><ref type="bibr" target="#b31">32]</ref>, or reinforcement learning <ref type="bibr" target="#b57">[58]</ref><ref type="bibr" target="#b58">[59]</ref><ref type="bibr" target="#b59">[60]</ref><ref type="bibr" target="#b60">[61]</ref>. Random walk-based approaches, despite being able to traverse the graph more efficiently, are prone to leave behind potentially relevant paths, which makes them less appealing in the hypothesis generation scenario. Some of the previous authors introduced embedding models in their techniques, in order to improve their performance <ref type="bibr" target="#b31">[32,</ref><ref type="bibr" target="#b56">57,</ref><ref type="bibr" target="#b61">62,</ref><ref type="bibr" target="#b62">63]</ref>. Actually, recent trends in link prediction have centered on KG embedding models <ref type="bibr" target="#b24">[25,</ref><ref type="bibr" target="#b25">26,</ref><ref type="bibr" target="#b63">64,</ref><ref type="bibr" target="#b64">65]</ref>. These models generate embedded representations of KG entities and relations by executing various transformations within an embedding space <ref type="bibr" target="#b65">[66]</ref><ref type="bibr" target="#b66">[67]</ref><ref type="bibr" target="#b67">[68]</ref><ref type="bibr" target="#b68">[69]</ref><ref type="bibr" target="#b69">[70]</ref><ref type="bibr" target="#b70">[71]</ref><ref type="bibr" target="#b71">[72]</ref>. The generated embedding space is then utilized to assess the plausibility of a potential relationship between two entities. This is based on the assumption that entities intended to have a specific connection should exhibit closer proximity within the embedding space. As an example, the use of the ComplEx embedding model has recently been used for assessing research hypotheses, yielding promising results <ref type="bibr" target="#b2">[3]</ref>.</p><p>Entities and relationships within the research field exhibit distinct characteristics, including specialized technical terminology and unique syntax. This has motivated the development of different types of KG embeddings based on word embeddings (such as Word2Vec <ref type="bibr" target="#b72">[73]</ref> or BERT <ref type="bibr" target="#b73">[74]</ref>). Based on these representations, some proposals have been able to infer relations between concepts using embeddings that capture the semantic static association between nodes in the KG <ref type="bibr" target="#b50">[51]</ref>, or the dynamic evolution of these associations <ref type="bibr" target="#b51">[52]</ref>. These proposals are only able to infer generic unnamed relations, whose nature has to be subsequently determined by human experts. Additionally, the topology of these graphs has some unique features, which have been addressed by a number of proposals of specific KG embeddings <ref type="bibr" target="#b20">[21,</ref><ref type="bibr" target="#b74">[75]</ref><ref type="bibr" target="#b75">[76]</ref><ref type="bibr" target="#b76">[77]</ref><ref type="bibr" target="#b77">[78]</ref><ref type="bibr" target="#b78">[79]</ref>. However, the application of these embeddings to hypothesis generation has not yet proved to provide sufficiently good performance.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3.">Large Language Models</head><p>Large Language Models (LLMs) are having a transformative impact on a wide range of AI applications in research. These include identifying relevant papers <ref type="bibr" target="#b79">[80]</ref><ref type="bibr" target="#b80">[81]</ref><ref type="bibr" target="#b81">[82]</ref>, assisting or even automating the creation of literature reviews <ref type="bibr" target="#b82">[83]</ref>, enhancing academic writing and referencing <ref type="bibr" target="#b83">[84,</ref><ref type="bibr" target="#b84">85]</ref>, developing specialized conversational agents <ref type="bibr" target="#b85">[86,</ref><ref type="bibr" target="#b86">87]</ref>, and much more. This growing impact has motivated researchers to explore the potential of LLMs for generating research hypotheses. However, this remains an open area of investigation, requiring further validation and refinement. Some preliminary experiments have been conducted to generate research hypotheses using the well-known GPT-4 model in the materials chemistry domain <ref type="bibr" target="#b52">[53]</ref>, and in the pharmaceutical domain <ref type="bibr" target="#b53">[54]</ref>. The main conclusion is that, while the model can generate several new hypotheses by combination or hybridization of existing research works, a significant amount of these hypotheses is easily discardable as nonsense, being the constant corrective feedback from the human expert necessary to guide the conversation toward a reasonable and interesting hypothesis. Also, the significantly high energy consumption of this kind of systems is highlighted as another main challenge for future research.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.4.">Overview and limitations</head><p>In Table <ref type="table" target="#tab_0">1</ref>, we summarize the main proposals for automated hypothesis generation. The majority of previous approaches have dealt with the generation hypothesis as a LBD problem, analyzing large corpora of academical articles and applying different NLP and text mining techniques to infer the hypotheses. The main limitation of these proposals is that they are domain-centric, and therefore not suitable for their application in other scientific domains. KG embeddings-based models offer a more easily generalizable approach. However, while there exist a large number of proposals for KG-based link prediction, these approaches primarily focus on retrospective prediction. In other words, they infer missing links that should exist in the KG because they reflect accurate information within the current state of the subject area. Consequently, these models struggle to achieve comparable effectiveness when predicting future occurrences, which often require supplementary information. Finally, LLMs have shown promise in fields such as supporting literature reviews <ref type="bibr" target="#b82">[83]</ref> and hold potential as technologies for research hypothesis generation <ref type="bibr" target="#b52">[53,</ref><ref type="bibr" target="#b53">54]</ref>. However, we are still in the early stages of exploring their capabilities in this area. Current versions still suffer from hallucinations, necessitating constant human supervision, which makes them less appealing for automated hypothesis generation.</p><p>ResearchLink fills a significant research gap by framing hypothesis generation as link prediction while incorporating a set of features that overcome the typical limitations of link prediction approaches in this domain. This is done by combining a deterministic pathbased approach that leverages the structural features of the graph with state-of-the-art KG and word embeddings and additional information reflecting the frequency of relevant entities in the literature. The resulting approach is thus applicable across a variety of diverse domains and relations. Our experimental results reveal that the full version of ResearchLink, which includes this novel combination of features, outperforms traditional approaches for link prediction and KG completion.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Methodology</head><p>This paper introduces ResearchLink, a new domain-independent hypothesis generation methodology. ResearchLink takes in input a KG that describes the relations between research entities and returns a set of novel triples, establishing new connections between previously unrelated entities, that can be interpreted as plausible research hypotheses. Some examples of these KGs are CS-KG <ref type="bibr" target="#b10">[11]</ref>, ORKG <ref type="bibr" target="#b14">[15]</ref>, Nanopublications <ref type="bibr" target="#b17">[18]</ref>, and UMLS <ref type="bibr" target="#b15">[16]</ref>.</p><p>The input KG contains a set of statements in the form of &lt;subject, predicate, object&gt;, connecting two entities (subject and object) through a relationship <ref type="bibr" target="#b9">[10]</ref>. They can be any type of research element, such as methods, tasks, or materials. Relationships describe the connections, e.g., a task can be addressed using a certain method, or a given method can be employed to process a specific material. KGs are structured based on a domain ontology, which formally defines entity types and relations while supporting reasoning processes <ref type="bibr" target="#b87">[88]</ref>. The ontology also defines the domain and range of relationships, ensuring that only specific types of entities can serve as the subject and object of a triple when a given relationship is used. For instance, in an ontology designed for a medical database, the relation ''has symptom'' might have a domain of ''Diseases'' and a range of ''Symptoms''. This means that only entities classified as diseases can be the subject of a triple whose predicate is ''has symptom''.</p><p>Formally, the problem we aim to solve is: given a KG consisting of a set 𝑇 of triples ⟨𝑠, 𝑝, 𝑜⟩, where 𝑠 and 𝑜 are research entities and 𝑟 a relationship between them, we want to create a model 𝑓 (𝑇 ) → 𝐻 that, given a collection of triples belonging to 𝑇 and, optionally, additional information from external sources, it generates a set of triples 𝐻 where 𝑇 ∩ 𝐻 = ∅ and ⟨𝑠, 𝑝 ′ , 𝑜⟩ ∈ 𝐻 is a plausible research hypothesis.</p><p>It is important to note that, as discussed in the introduction, 𝑝 ′ does not correspond to a classic link prediction task. This is because research hypotheses are not merely missing facts; they possess very specific characteristics. In particular, the new link between 𝑠 and 𝑜 must suggest a novel and plausible piece of knowledge that warrants empirical testing by a human researcher. To evaluate this in Section 4.2, we introduce a gold standard based on manual annotations from senior researchers.</p><p>ResearchLink aims to recognize sound hypotheses by integrating a variety of features, including path-based metrics, KGEs, text embeddings, and additional information about the occurrences of relevant entities. Fig. <ref type="figure" target="#fig_0">1</ref> shows the architecture of ResearchLink. It includes four main stages. First, we generate a number of candidate hypotheses that connect previously unrelated entities. Next, we prune this set by ranking the candidate hypotheses using SciCheck <ref type="bibr" target="#b61">[62]</ref>, a path-based link prediction technique. We then produce for each hypothesis a richer representation that includes a diverse set of features reflecting both the occurrence of the entities in the articles and their semantic context. Finally, we apply a supervised model on this representation for ranking the remaining hypotheses.</p><p>Algorithm 1 contains a description of ResearchLink as pseudocode. In the following, we will describe in detail each step.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.">Candidate Hypotheses Generation</head><p>The initial step involves generating a number of new relationships between existing entities, that constitute the set of candidate research hypotheses. This set subsequently undergoes a process of cleaning, refinement, and ranking. This candidate set should be sufficiently expansive to encompass a broad range of potentially interesting triples, yet remain computationally manageable <ref type="bibr" target="#b88">[89]</ref>.</p><p>To generate an initial set of candidate hypotheses from a KG, the following steps are undertaken. First, we identify the top 𝑁 entities based on their frequency in triples. This approach guarantees that each generated triple contains at least one highly-connected entity, ensuring richer informational context in subsequent steps. We then retrieve the type of each of the selected entities from KG's ontology. For example, the entity random forest is a Method, sentiment analysis is a Task, Wikipedia is a Material, etc. This informs which relations can be employed to pair them, given that each relation has specific domain and range type constraints in the ontology. For instance, given the entity Wikipedia which is of type Material, it cannot appear as the subject of triples using relationships built on top of active verbs such as use, solve, and acquire.</p><p>Finally, for each entity selected in the first step, the set of all triples that respect the ontology constraints is generated. These triples have the form (𝑒, 𝑟, 𝑡), where 𝑒 is one of the top 𝑁 entities, 𝑟 is one of the possible relations in the KG which have the type of 𝑒 in their domain and 𝑡 is one of the top 𝑁 entities whose type is in the range of 𝑟. Any generated triple already present in the KG is discarded. Consequently, for each entity 𝑒 selected in the first step, the maximum amount of triples that are generated is:</p><formula xml:id="formula_0">∑ 𝑟∈𝑟 𝑒 𝑡 𝑟</formula><p>where 𝑟 𝑒 is the set of relations that allow the type of 𝑒 in their domain, and 𝑡 𝑟 is the set of entities whose types are deemed by the KG's ontology to be admissible in the range of 𝑟.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.">Candidate Pruning with SciCheck</head><p>Most of the previously generated candidates are not particularly promising, as they link entities without substantial affinity. Consequently, it is desirable to prune this set before engaging in more computationally intensive operations. We perform this pruning by ranking the best candidates with SciCheck <ref type="bibr" target="#b61">[62]</ref>, a path-based link prediction approach specifically tailored for scientific knowledge graphs. SciCheck evaluates the potential validity of triples, offering a confidence score based on both context-based and embedding-based features. In particular, SciCheck processes an entire KG composed of triples and generates a neural-based classifier for each relation in the KG. For a given relation 𝑟, SciCheck creates a model 𝑓 𝑟 ∶ (ℎ, 𝑟, 𝑡) → 𝑠, which assigns a confidence score 𝑠 between 0 and 1 to any given triple ⟨ℎ, 𝑟, 𝑡⟩, addressing the binary classification task of determining whether the triple is correct. To input data into the model, triples are transformed into numerical vector representations using specialized features and contextual embedding representations. Detailed insights about the features used are available in <ref type="bibr" target="#b61">[62]</ref>. It should be noted that SciCheck must be first trained on a substantial portion of the KG. For instance, when training on the full CS-KG, the KG used in the evaluation, we consider all statements extracted from at least three papers, which yields a sizable set of about 1M triples.</p><p>To apply SciCheck on the set of candidate triples, we perform the following steps. First, we train SciCheck on the entire input knowledge graph. SciCheck requires this training process to learn what constitutes plausible knowledge in the context of the KG. SciCheck also autonomously produces negative triples for the training by corrupting triples from the KG, i.e., switching the subject or object of a triple with a different entity. As the candidate hypotheses do not exist in the KG, SciCheck possesses no prior knowledge about them.</p><p>Following its training, SciCheck establishes a classification model for each KG relation. This is aimed at ensuring nuanced classification, as varied information might be optimal for different relations <ref type="bibr" target="#b30">[31]</ref>. Candidate hypotheses are grouped by their relation and submitted to the appropriate model. Each hypothesis is then assigned a confidence value within the range [0, 1]. Hypotheses with confidence values below a predefined threshold (set at 0.5 in our current configuration) are discarded. The threshold was empirically determined based on insights from <ref type="bibr" target="#b61">[62]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.">Hypotheses conversion into feature vectors</head><p>To evaluate the candidate hypotheses using a supervised classification model, we produce a detailed vector representation for each, derived from a range of diverse features.</p><p>More in detail, for an input triple ⟨𝑠, 𝑝, 𝑜⟩, the specific features employed in this process include:</p><p>• Feature f 1 : SciCheck confidence score for the triple. The outcome of applying SciCheck to the triple, as outlined in the previous section, is retained and utilized as a classification feature. This value is a decimal number within the range of [0.5, 1.0]. Therefore, 𝑓 1 can be defined as:</p><formula xml:id="formula_1">𝑓 1 = SciCheck(𝑠, 𝑝, 𝑜)<label>(1)</label></formula><p>• Feature f 2 : Degree of the two entities within the KG. This feature assesses the connectivity of the two entities in the input triple, serving as an indicator of their prominence. It is encoded as two integer values, representing the number of edges of the KG connected to the subject and object entities, respectively. More formally, let 𝑑𝑒𝑔(𝑒) denote the degree of entity 𝑒. Then, 𝑓 2 can be defined as:</p><formula xml:id="formula_2">𝑓 2 = (deg(𝑠), deg(𝑜))<label>(2)</label></formula><p>• Feature f 3 : Number of occurrences of the two entities in scientific abstracts. This feature quantifies the prevalence of the subject and object within the scientific literature. It is computed by performing text matching against a collection of research paper abstracts to determine the absolute frequency of each entity, which is defined as the total number of times the entity appears in the abstracts. This feature is encoded as three integer numbers: one for the subject, one for the object, and one for their harmonic mean.</p><p>More formally, let freq abs (𝑒) denote the frequency of entity 𝑒 in scientific abstracts. Then, 𝑓 3 can be expressed as: </p><formula xml:id="formula_3">𝑓 3 = (</formula><formula xml:id="formula_4">𝑓 4 = freq joint (𝑠, 𝑜)<label>(4)</label></formula><p>• Feature f 5 : Minimum embedding cosine distance between the triple and all the other triples in the KG. This feature assesses the novelty level of a triple by comparing it to the existing knowledge in the input KG. This assessment holds significance as it can highlight scenarios where a closely related concept already exists, potentially indicating limited novelty. To compute this feature, all triples are converted into sentences by concatenating their subject, predicate, and object with spaces as separators.</p><p>Then, the MiniLM <ref type="bibr" target="#b89">[90]</ref> embedding model is applied to these sentences, generating a numerical vector representation for each entity based on the text's semantics. These vectors are used to identify the triple in the KG that has the highest cosine similarity (i.e., the lowest cosine distance) to the triple under evaluation. The resulting value is thus a decimal number between 0 and 1. For instance, if this feature is computed for the triple &lt;machine learning, applied to, plane trajectory prediction&gt; and the graph contains a highly similar triple &lt;machine learning, applied to, satellite orbit prediction&gt;, the cosine distance will be relatively low, indicating the presence of research closely related to the evaluated triple. More formally, let MiniLM(sentence) denote the MiniLM embedding of a sentence, concat(𝑥, 𝑦, 𝑧) represents the string concatenation of the three entities 𝑥, 𝑦 and 𝑧 resulting in the string ''x 𝑦 z'', and let cos(𝑥, 𝑦) denote the cosine distance between vectors 𝑥 and 𝑦. Then, 𝑓 5 can be expressed as:</p><formula xml:id="formula_5">𝑓 5 = min ∀(𝑠 ′ ,𝑝 ′ ,𝑜 ′ )∈KG cos(MiniLM(concat(𝑠, 𝑝, 𝑜)), MiniLM(concat(𝑠 ′ , 𝑝 ′ , 𝑜 ′ )))<label>(5)</label></formula><p>• Feature f 6 : Minimum embedding Euclidean distance between the triple and all the other triples in the KG. This feature also evaluates the novelty of a triple, but it uses Euclidean distance instead of the cosine distance. Unlike cosine similarity, which measures the alignment or angular similarity between embeddings, Euclidean distance considers the absolute differences in embedding magnitudes. This approach can capture nuances that cosine similarity might overlook, such as disparities in the embedding space caused by variations in the semantic intensity or specificity of the triples. For instance, if two triples share a similar direction in the embedding space but differ significantly in their distances from the origin, the Euclidean distance will better capture this difference. A smaller Euclidean distance indicates a closer semantic relationship, while a larger distance suggests greater novelty. This feature is also computed using the MiniLM model. Therefore, 𝑓 6 can be expressed as:</p><formula xml:id="formula_6">𝑓 6 = min ∀(𝑠 ′ ,𝑝 ′ ,𝑜 ′ )∈KG ‖MiniLM(concat(𝑠, 𝑝, 𝑜)) -MiniLM(concat(𝑠 ′ , 𝑝 ′ , 𝑜 ′ ))‖<label>(6)</label></formula><p>• Feature f 7 : Graph embedding similarity between the two entities. This feature quantifies the semantic similarity between two entities by calculating the cosine similarity of their graph embeddings. The embeddings are generated by using TransH <ref type="bibr" target="#b90">[91]</ref>, a well-known general-purpose KG embedding model. Graph embeddings provide a numerical representation of the elements within a graph, typically including nodes and, in many cases, their relationships <ref type="bibr" target="#b24">[25]</ref>. These embeddings are generated by training a neural network to optimize an objective function that captures the structural properties of the graph, often by minimizing the distance between selected representations. This process encodes meaningful information about the graph's structure and relationships into a compact, continuous vector space. The embeddings associated with each node are expected to reflect their structural properties, capture their semantics, and support various machine learning tasks. For instance, if two nodes share connections with several common nodes in the graph, their embeddings are likely to be close in the vector space. Let TransH(𝑒) denote the TransH embedding of entity 𝑒. Then, 𝑓 7 can be represented as:</p><formula xml:id="formula_7">𝑓 7 = cos(TransH(𝑠), TransH(𝑜))<label>(7)</label></formula><p>• Feature f 8 : Word embedding similarity between the two entities. This feature measures the similarity between the text representations of the subject and object. It is calculated as the cosine similarity of the word embeddings for the two entities, generated using the MiniLM model. The resulting value is a decimal ranging from 0 to 1. Therefore, 𝑓 8 can be expressed as:</p><formula xml:id="formula_8">𝑓 8 = cos(MiniLM(𝑠), MiniLM(𝑜))<label>(8)</label></formula><p>In conclusion, since features 𝑓 2 and 𝑓 3 produce two values each (one for the subject and another for the object), each triple is represented by a feature vector of 10 values.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4.">Hypothesis classification</head><p>ResearchLink applies a set of random forest classification models to the representation of the candidate hypotheses in order to assess which one is valid.</p><p>Each hypothesis deemed valid through classification is also associated to the confidence values derived from the classifier. This allows ResearchLink to provide a ranked list of the generated hypotheses. This aids researchers that have then to manually inspect and interpret the hypotheses, enabling them to promptly identify the more plausible ones.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Evaluation</head><p>This section presents the evaluation of ResearchLink compared to alternative approaches, along with an ablation study analyzing the benefits provided by the features discussed in Section 3.3.</p><p>It is important to note that ResearchLink is designed for hypothesis generation rather than KG completion. Consequently, it cannot be evaluated using standard KG completion datasets (e.g., FB15k, WN18RR) as they primarily focus on missing facts, many of which are trivial and not suitable as hypotheses. Moreover, they lack essential features required for ResearchLink, such as collections of scientific abstracts containing relevant entities. Therefore, to conduct a rigorous evaluation of ResearchLink, we constructed CSKG-600, a new dataset for research hypothesis generation derived from the Computer Science Knowledge Graph.</p><p>We acknowledge that this evaluation is limited to a single scientific domain; however, this restriction is due to the substantial complexity and data requirements involved in creating a benchmark for hypothesis generation that covers all eight feature types examined in this study. Specifically, this process requires a comprehensive knowledge graph of research entities linked by relationships that could support hypothesis generation, an associated bibliographic dataset to assess entity frequencies and the manual annotation of potential research hypotheses by multiple senior researchers. CS-KG enables this approach by offering a wealth of entities, relationships, and pertinent bibliographic data. In the following, we first describe the use case based on CS-KG that we adopted for evaluating our methodology. We then describe the generation of CSKG-600 and discuss the experimental design. Finally, we report the performance of the various techniques.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1.">Use case: CS-KG</head><p>The Computer Science Knowledge Graph (CS-KG) <ref type="bibr" target="#b10">[11,</ref><ref type="bibr" target="#b91">92]</ref> is an open, large-scale, automatically built knowledge graph describing 41M statements related to the Computer Science domain. It has been generated using the titles and abstracts of more than 6.7M research papers about Computer Science ranging from the year 2010 to the first semester of the year 2021, using the Microsoft Academic Graph<ref type="foot" target="#foot_2">foot_2</ref> as a data source. CS-KG includes more than 10M research entities that can belong to 5 different classes (cskg-ont:Material, cskg-ont:Task, cskgont:Method, cskg-ont:Metric, cskg-ont:OtherEntity) described by 179 relations such as cskg-ont:usesMethod, cskg-ont:includesMaterial, skos:broader, etc. CS-KG statements describe the relationship that stands between two entities based on the content of scientific abstracts as a piece of information. For instance, a triple &lt;cskg:generative_model, us-esMethod, cskg:generative_adversarial_network&gt; from the papers <ref type="bibr" target="#b92">[93,</ref><ref type="bibr" target="#b93">94]</ref> describes the fact that there exist generative models that use generative adversarial networks. The reader can find details about CS-KG content and its ontology online. <ref type="foot" target="#foot_3">3</ref></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2.">Gold standard generation</head><p>In order to evaluate our approach, we constructed CSKG-600, <ref type="foot" target="#foot_4">4</ref> a gold standard of 600 human-labeled research hypotheses. We generated these hypotheses starting from a version of CS-KG containing only data up to 2017. This enabled us to emulate the hypothesis generation process as it would have been conducted in 2017, and then validate the accuracy of the hypotheses by assessing if they were verified in the following years <ref type="bibr">(2018)</ref><ref type="bibr">(2019)</ref><ref type="bibr">(2020)</ref><ref type="bibr">(2021)</ref><ref type="bibr">(2022)</ref><ref type="bibr">(2023)</ref>. If a triple is not present in this set, it could be due to its absence in the literature sample used to create CS-KG or because the KG generation method failed to extract it. Therefore, any additional triple can be considered novel within the context of the KG, which is a necessary (but not sufficient) condition for a valid hypothesis.</p><p>We generated an initial set of novel triples by following the methodology for producing candidate hypotheses described in Sections 3.1 and 3.2. We first materialized the Cartesian combination of all possible entities for each of the three most frequent relations in CS-KG: usesMethod, usesTask, and usesMaterial. We then discarded the triples that were invalid according to the ontology of CS-KG <ref type="foot" target="#foot_5">5</ref> or that were already in the KG. Next, we used SciCheck <ref type="bibr" target="#b61">[62]</ref> to prune these candidate hypotheses by computing a confidence score for each of them. This was done by training SciCheck using only triples introduced in CS-KG before 2017, so as to not bias the classifier with the most recent scientific knowledge. Finally, SciCheck was used to evaluate the generated triples, and those with a confidence value below 0.5 were discarded.</p><p>To reduce the number of hypotheses manually assessed by human evaluators, we then selected a subset of 20 popular entities from CS-KG, covering a variety of different topics in Computer Science, e.g., autonomous_vehicle, sentiment_analysis, wearable_technology, face_recognition, deep_learning, game_theory. For each of them, we generated 30 hypotheses. Specifically, we generated ten hypotheses for each of the three adopted relations. This process resulted in a set of 600 candidate hypotheses, with 200 hypotheses generated for each of the three relations under analysis.</p><p>The 600 resulting hypotheses were labeled by three senior researchers as either valid or invalid. To ensure objectivity, a hypothesis was deemed valid if sufficiently precise and supported by at least a scientific article published post-2017. The scientists were asked to locate relevant evidence in the literature before assessing each hypothesis. It is crucial to highlight that both the positive and negative examples were drawn from the same pool of candidates, all of whom had high SciCheck scores. As a result, incorporating the SciCheck score as a feature in ResearchLink does not introduce any bias into the evaluation process. This systematic approach to constructing the gold standard ensures that all valid hypotheses are manually verified and supported by recent literature. In contrast, invalid hypotheses, though generated by a link prediction system and therefore realistic, are deemed invalid due to being trivial, too vague, or lacking support in current literature.</p><p>The resulting statement can be readily translated into research hypotheses, as they facilitate the combination of the three primary types of entities in CS-KG (methods, tasks, and materials). The sound hypotheses generally recommend adopting specific methods, tasks, or materials to address particular challenges.</p><p>For example, the triple &lt;deep_learning, usesMethod, ex-tended_kalman_filter&gt; described in a paper from 2019 <ref type="bibr" target="#b94">[95]</ref> proposes incorporating an extended Kalman filter within a deep learning framework. Similarly, the triple &lt;wearable_ technology, us-esTask, emotion_recognition&gt; has been studied in the year 2023 <ref type="bibr" target="#b95">[96]</ref> and suggests integrating emotion recognition techniques within wearable technologies. A third example we would like to mention is &lt;data_compression, usesMethod, gaussian_mixture _model&gt; from the year 2024 <ref type="bibr" target="#b96">[97]</ref> where data quantity minimization is studied for real-time ambulatory and telemedicine systems with limited storage. As previously discussed, negative examples usually refer to trivial ideas that do not contribute to additional knowledge (e.g., &lt;game_theory, usesMaterial, renewable_energy&gt;) or are too vague (e.g., &lt;decision_support_system, usesMaterial, geometry&gt;).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3.">Evaluation setup</head><p>This section outlines the tested methods and the metrics we adopted for their evaluation. We compare ResearchLink to five alternative approaches generally used for link prediction and knowledge graph completion <ref type="bibr" target="#b62">[63]</ref>: 𝑇 𝑟𝑎𝑛𝑠𝐸 <ref type="bibr" target="#b26">[27]</ref>, 𝑇 𝑟𝑎𝑛𝑠𝐻 <ref type="bibr" target="#b27">[28]</ref>, 𝑇 𝑟𝑎𝑛𝑠𝐷 <ref type="bibr" target="#b28">[29]</ref>, 𝑅𝑜𝑡𝑎𝑡𝐸 <ref type="bibr" target="#b29">[30]</ref>, and 𝑅𝐺𝐶𝑁 <ref type="bibr" target="#b32">[33]</ref>. We used the PyKEEN's implementation of these models <ref type="bibr" target="#b97">[98]</ref>.</p><p>We evaluate these methods by assessing their ability to assign a score to each hypothesis in the test set of CSKG-600, reflecting its validity. This evaluation strategy aligns with established methodologies for applying link prediction techniques to the hypothesis generation task <ref type="bibr" target="#b2">[3]</ref>. It is important to highlight that, since all methods are tested on the same set of candidate hypotheses, ResearchLink is exclusively used to evaluate these hypotheses, as described in Sections 3.3 and 3.4 (illustrated by the blue and yellow boxes in Fig. <ref type="figure" target="#fig_0">1</ref>).</p><p>All the methods that required training on a knowledge graph were trained on the version of CS-KG, which contained only information before 2017. Once trained, these methods are capable of scoring any triple whose subject, relation, and object appeared in the training set. Each method was then applied to the entire test set, producing a ranked list of the candidate hypotheses. The performance of the methods was measured using Precision@N over these ranked lists. Precision@N (P@N) is defined as P@N = TP@N 𝑁 , where TP@N represents the number of true positives among the top 𝑁 predictions. It is often employed in information retrieval and ranking problems to gauge the effectiveness of the system in identifying the most relevant items within a specific subset of the total results. For example, if a method produces 7 valid hypotheses in the top 10 positions, its Precision@10 would be 70%. We computed the average P@5, P@10, P@15, and P@20 across the four cross-validation runs. In this domain, we particularly aim to achieve better results for higher values of N, such as P@15 and P@20. These measures are less sensitive to randomness and provide a realistic goal of presenting researchers with 15 to 20 hypotheses, aiming for about 70%-75% to be of good quality. Conversely, P@5 was quite unstable across different experiments, as the position of a single item can significantly affect it. Nonetheless, we still report it for the sake of completeness.</p><p>To assess the contribution of the features discussed in Section 3.3, we also conducted an ablation study by testing 15 versions of Researchlink using various combinations of these features. Specifically, we evaluated four groups of features:</p><p>• SciCheck feature (𝑓 1 in Section 3.3), the confidence score for the candidate hypothesis according to SciCheck <ref type="bibr" target="#b61">[62]</ref>, a path-based link prediction technique specifically designed for scientific KGs. • Frequency features (𝑓 2 , 𝑓 3 , 𝑓 4 ), which evaluate the frequency of the entities in the KG and the literature. • Similarity features (𝑓 5 , 𝑓 6 ), which assess the similarity of the candidate hypothesis with other triples in the KG. • Embedding features (𝑓 7 , 𝑓 8 ), which assess the similarity of the subject and object according to their word and graph embeddings.</p><p>We then run on the gold standard 15 versions of ResearchLink using all possible combinations of these four groups. As for the other methods, all the features were computed on the version of CS-KG that only contained information available before 2017.</p><p>We evaluated all approaches using k-fold cross-validation (𝑘 = 4) over the gold standard defined in Section 4.2. In each of the four iterations, we chose a subset of 5 entities and the corresponding 150 hypotheses. These served as the test set, while the remaining 15 entities associated with 450 hypotheses formed the training set. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.4.">Results</head><p>Table <ref type="table" target="#tab_2">2</ref> presents the results of all experiments. The upper section details the 15 versions of ResearchLink obtained by combining the four groups of features discussed in the previous section. Each column indicates whether a specific feature set was used, with True denoting its inclusion and False indicating its exclusion. For instance, the first row corresponds to the version of ResearchLink that utilizes only the embedding features. The final row represents the full version of ResearchLink that incorporates all features. The lower section of the table reports the performance of the five alternative methods. Fig. <ref type="figure" target="#fig_2">2</ref> provides a summary, comparing the five baselines to the best results achieved by the different versions of ResearchLink for each P@N.</p><p>The version of ResearchLink that utilizes the complete set of features outperformed the five alternative approaches for P@10, P@15, and P@20. Notably, it was able to identify several triples representing significant hypotheses that were then materialized in recent years, such as &lt;face_detection, usesMethod, ensemble_learning&gt; <ref type="bibr" target="#b98">[99]</ref>, &lt;autonomous_vehicle, usesMethod, disturbance_observer&gt; <ref type="bibr" target="#b99">[100]</ref>, or &lt;structural_health_monitoring, usesTask, deep_learning&gt; <ref type="bibr" target="#b100">[101]</ref>. The results for P@5 are more erratic, with TransD and TransH surpassing the full version of Research-Link. However, the overall best method for P@5 is actually a version of ResearchLink that uses only similarity and embedding features.</p><p>It is also beneficial to examine each set of features individually to understand their distinct contributions. Focusing on the first part of Table <ref type="table" target="#tab_2">2</ref>, we can see that each feature group tends to enhance Research-Link's performance. Using all features achieves the best performance for P@20 and P@10. However, other combinations are also effective and may warrant further investigation in future work. Notably, the version excluding the embedding features achieves the same performance as the full feature set for P@10, although with slightly lower performance for P@15 and P@20. The adoption of different embedding techniques may potentially further improve this approach. Similarly, the version excluding the frequency features performs best for P@15, suggesting that in some cases, integrating information about an entity's popularity is less beneficial. This may also be due to using a relatively simple proxy, namely the number of occurrences and co-occurrences of subjects and objects in scientific abstracts. We plan to explore more nuanced metrics, such as normalizing the occurrence number according to the year or the scientific field.</p><p>Finally, Fig. <ref type="figure" target="#fig_2">2</ref> summarizes the results, demonstrating that the general approach presented in this paper, which integrates various features relevant to the specific hypothesis generation task, is clearly superior to alternative methods designed for link prediction and knowledge graph completion. This superiority is particularly evident in the most reliable metrics, such as P@15 and P@20. Table <ref type="table" target="#tab_3">3</ref> reports the performance of ResearchLink on a sample of entities. Generally, the results are satisfactory, with valid hypotheses involving most entities ranked at the top. However, notable performance variations exist between them, implying that specific characteristics of the entities might substantially influence our ability to evaluate relevant research hypotheses. For instance, the system obtains perfect accuracy for the top 5 hypotheses on entities such as 𝑎𝑐𝑡𝑖𝑜𝑛_𝑟𝑒𝑐𝑜𝑔𝑛𝑖𝑡𝑖𝑜𝑛 and 𝑓 𝑎𝑐𝑒_𝑑𝑒𝑡𝑒𝑐𝑡𝑖𝑜𝑛. Conversely, it obtains sub-par results for other ones, such as 𝑚𝑢𝑙𝑡𝑖𝑎𝑔𝑒𝑛𝑡_𝑠𝑦𝑠𝑡𝑒𝑚. A more in-depth investigation of this aspect will necessitate further future work.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">Limitations</head><p>In this section, we briefly discuss the limitations of ResearchLink that need to be addressed in future work. The first limitation concerns the availability of input data. ResearchLink necessitates both a knowledge graph of research entities and an extensive corpus of papers to calculate their frequency in the literature. This information may not be readily obtainable in all fields. However, the rise of the open access movement is leading to a growing availability of scholarly data, resulting in the creation of various repositories that offer both abstracts <ref type="bibr" target="#b101">[102]</ref> and full texts of the articles <ref type="bibr" target="#b46">[47,</ref><ref type="bibr" target="#b47">48]</ref>. Concurrently, several initiatives are engaged in developing new scientific knowledge graphs to support a range of intelligent systems across multiple domains <ref type="bibr" target="#b10">[11,</ref><ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b49">50]</ref>.</p><p>A second limitation arises from the fact that the hypothesis generation process relies solely on existing entities within the knowledge graph. Hypotheses that cannot be represented as their combination remain undiscovered when hypothesis generation is formalized as a link prediction task over a knowledge graph of research concepts. Moreover, ResearchLink may inherently prioritize highly interconnected entities, as they offer a richer representation from which further connections can be derived. This bias could lead to reduced effectiveness in generating hypotheses for less-represented or more isolated ones.</p><p>One more limitation pertains to computational resources. Specifically, some features in ResearchLink demand substantial resources, most notably 𝑓 5 and 𝑓 6 . These features compute embedding similarities and distances across all hypotheses under evaluation and all triples in a KG, resulting in a complexity of 𝑂(𝑛 2 ). In our experiments, we used a cluster of 5 NUCs NUC11PHKi7 each equipped with 32 GB of RAM and a GPU RTX 2060. Future research aims to explore strategies to streamline this computation, for instance, by employing heuristics to reduce the computational load.</p><p>Finally, the inherent complexity of defining a good hypothesis renders the evaluation of a hypothesis generation system a challenging Knowledge-Based Systems 315 (2025) 113280 task. It either demands consensus among researchers on what constitutes a promising research direction, which is difficult to attain, or the capability to predict future outcomes and discern which ideas will eventually materialize, which is unfeasible. In our experiments, we set a cutoff year for the data available to our system, enabling us to formulate hypotheses using historical knowledge and assess them with current information. An alternative strategy might be to create hypotheses in the present and evaluate their validity after a specified number of years have elapsed.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.">Conclusions</head><p>In this paper, we presented ResearchLink, an innovative approach for hypothesis generation that integrates path-based features, knowledge graph embeddings, and text embeddings, while also including additional information about the occurrence of the relevant entities in the literature. This robust combination of features allows ResearchLink to outperform traditional link prediction methods in the context of hypothesis generation. ResearchLink was evaluated using a dataset consisting 600 candidate hypotheses, manually annotated by three senior researchers. It outperformed several alternative methods, especially showing marked improvement over standard link prediction techniques based on graph embeddings and path-based features.</p><p>The main contributions of this paper are as follows: (1) demonstrating that strong performance can be achieved on the challenging task of research hypothesis generation, formalized as a link prediction task over knowledge graphs of research concepts; (2) evaluating the utility of eight distinct feature types that offer valuable guidance for the design of next-generation models; (3) introducing a novel methodology that effectively leverages the rich information derived from these features; and (4) providing a benchmark and a comprehensive codebase that serve as resources to drive innovation toward new state-of-the-art solutions.</p><p>In future work, we plan to expand the size and coverage of the gold standard across multiple scientific domains. Additionally, we will include in our analysis recent link prediction solutions that incorporate large language models <ref type="bibr" target="#b102">[103]</ref>. We also intend to investigate potential biases derived from the knowledge graph, such as reduced predictive performance for underrepresented entities. Finally, we aim to improve our approach by devising strategies to identify novel entities, such as recently introduced methodologies, which could lead to particularly impactful research hypotheses. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>CRediT authorship contribution statement</head><note type="other">Agustín</note></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Declaration of competing interest</head><p>The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. The proposed approach to generate research hypotheses from a scientific KG.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Algorithm 1 Algorithm 1 : 6 : 7 : 8 : 9 : 16 :</head><label>11678916</label><figDesc>Knowledge-Based Systems 315 (2025) 113280 ResearchLink Input: Knowledge Graph (KG), Number of top entities (N), SciCheck threshold (0.5) 2: Output: Classified triples as true or false hypotheses 3: Step 1: Generate Candidate Triples 4: Identify top N entities in KG 5: for each entity 𝑒 𝑖 in top N entities do Retrieve type of 𝑒 𝑖 and possible relations 𝑟 for each relation 𝑟 do Find compatible entities 𝑡 in top N entities for each entity 𝑡 do 10: if (𝑒 𝑖 , 𝑟, 𝑡) ∉ 𝐾𝐺 then 11: Add (𝑒 𝑖 , 𝑟, 𝑡) to candidate triples 12: Step 2: Initial Pruning with SciCheck 17: Train SciCheck on KG and compute confidence scores 𝑐 for candidate triples 18: Prune triples with 𝑐 &lt; 0.5 and keep the rest as pruned triples 19: Step 3: Pre-compute Information for Features 20: Compute necessary pre-information (TransH embeddings, degrees, occurrences, joint occurrences) 21: Step 4: Compute Features 22: for each labeled and pruned triple (𝑠, 𝑝, 𝑜) do 23: Compute features 𝑓 1 , 𝑓 2 , … , 𝑓 8 24: end for 25: Step 5: Train Model for Hypothesis Classification 26: Train model on labeled triples using computed features 27: Step 6: Apply Model for Hypothesis Evaluation 28: for each pruned triple (𝑠, 𝑝, 𝑜) do 29: Apply model to compute classification 30: Label the triple as true or false hypothesis 31: end for</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 2. Results summary of each tested method. ResearchLink (best) denotes the version of ResearchLink that obtained the best results at each metric in the ablation study.</figDesc><graphic coords="8,331.75,61.69,220.86,112.39" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head/><label/><figDesc>Borrego: Writing -review &amp; editing, Writing -original draft, Validation, Software, Methodology, Data curation, Conceptualization. Danilo Dessì: Writing -review &amp; editing, Validation, Software, Methodology, Data curation. Daniel Ayala: Writing -review &amp; editing, Software, Resources. Inma Hernández: Writing -review &amp; editing, Supervision, Methodology, Investigation, Conceptualization. Francesco Osborne: Writing -review &amp; editing, Supervision, Methodology, Investigation, Conceptualization. Diego Reforgiato Recupero: Writing -review &amp; editing, Supervision, Methodology, Investigation, Conceptualization. Davide Buscaldi: Writing -review &amp; editing, Supervision, Methodology, Investigation, Conceptualization. David Ruiz: Supervision, Investigation, Conceptualization. Enrico Motta: Supervision, Investigation, Conceptualization.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1</head><label>1</label><figDesc>Summary of key relevant contributions for automated hypothesis generation.</figDesc><table><row><cell>Year</cell><cell>Reference</cell><cell>Domain</cell><cell>Approach</cell><cell>Technique</cell></row><row><cell>2014</cell><cell>Spangler et al. [40]</cell><cell>Biomedical</cell><cell>LBD</cell><cell>Graph diffusion</cell></row><row><cell>2015</cell><cell>Hristovski et al. [41]</cell><cell>Biomedical</cell><cell>LBD</cell><cell>NLP</cell></row><row><cell>2016</cell><cell>Workman et al. [6]</cell><cell>Biomedical</cell><cell>LBD</cell><cell>Human-assisted graph</cell></row><row><cell/><cell/><cell/><cell/><cell>traversals</cell></row><row><cell>2017</cell><cell>McCusker et al. [7]</cell><cell>Biomedical</cell><cell>LBD</cell><cell>Probabilistic search</cell></row><row><cell>2018</cell><cell>Choi et al. [8]</cell><cell>Biomedical</cell><cell>LBD</cell><cell>Bag of words, Graph diffusion</cell></row><row><cell>2019</cell><cell>Tshitoyan et al. [42]</cell><cell>Chemical</cell><cell>LBD</cell><cell>Word2Vec embeddings</cell></row><row><cell>2020</cell><cell>Akujuobi et al. [51]</cell><cell>Biomedical</cell><cell>KG Embeddings</cell><cell>Node pairs embeddings</cell></row><row><cell>2021</cell><cell>Haan et al. [3]</cell><cell>Social Sciences</cell><cell>KG Embeddings</cell><cell>ComplEx embeddings</cell></row><row><cell>2022</cell><cell>Zhou et al. [52]</cell><cell>Biomedical</cell><cell>KG Embeddings</cell><cell>Temporal node pairs</cell></row><row><cell/><cell/><cell/><cell/><cell>embeddings</cell></row><row><cell>2024</cell><cell>Park et al. [53]</cell><cell>Material sciences</cell><cell>LLM</cell><cell>Human-curated queries to</cell></row><row><cell/><cell/><cell/><cell/><cell>GPT-4</cell></row><row><cell>2024</cell><cell>Elbadawi et al. [54]</cell><cell>Pharmaceutical</cell><cell>LLM</cell><cell>Queries to GPT-4 and DALL-E</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>4 : Number of joint occurrences of the two entities in scientific abstracts.</head><label/><figDesc>This feature measures how often entities have appeared together in scientific literature. It is calculated by counting how many times they appeared in the same abstract. It is encoded as an integer number. Let freq joint (𝑒 1 , 𝑒 2 ) denote the frequency of joint occurrences of entities 𝑒 1 and 𝑒 2 in scientific abstracts. Then, 𝑓 4 can be defined as:</figDesc><table/><note><p><p><p>freq abs (𝑠), freq abs (𝑜), 2 ⋅ freq abs (𝑠) ⋅ freq abs (𝑜) freq abs (𝑠) + freq abs (𝑜) )</p>(3)</p>• Feature f</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 2</head><label>2</label><figDesc>Average Precision@N for all approaches. The best result for each metric is shown in bold.</figDesc><table><row><cell>Scicheck</cell><cell>Frequency</cell><cell>Similarity</cell><cell>Embedding</cell><cell>P@5</cell><cell>P@10</cell><cell>P@15</cell><cell>P@20</cell></row><row><cell>feat.</cell><cell>feat.</cell><cell>feat.</cell><cell>feat.</cell><cell/><cell/><cell/><cell/></row><row><cell/><cell/><cell>False</cell><cell>True</cell><cell>0.80000</cell><cell>0.75000</cell><cell>0.73333</cell><cell>0.73750</cell></row><row><cell>False</cell><cell>False</cell><cell>True</cell><cell>False True</cell><cell>0.65000 0.85000</cell><cell>0.70000 0.72500</cell><cell>0.66667 0.73333</cell><cell>0.68750 0.75000</cell></row><row><cell/><cell>True</cell><cell>False</cell><cell>False True</cell><cell>0.50000 0.80000</cell><cell>0.52500 0.65000</cell><cell>0.60000 0.71667</cell><cell>0.65000 0.72500</cell></row><row><cell/><cell/><cell>True</cell><cell>False True</cell><cell>0.75000 0.75000</cell><cell>0.75000 0.70000</cell><cell>0.76667 0.73333</cell><cell>0.72500 0.73750</cell></row><row><cell/><cell>False</cell><cell>False</cell><cell>False True</cell><cell>0.70000 0.80000</cell><cell>0.70000 0.75000</cell><cell>0.65000 0.73333</cell><cell>0.66250 0.72500</cell></row><row><cell>True</cell><cell/><cell>True</cell><cell>False True</cell><cell>0.70000 0.80000</cell><cell>0.70000 0.77500</cell><cell>0.73333 0.81667</cell><cell>0.71250 0.77500</cell></row><row><cell/><cell>True</cell><cell>False</cell><cell>False True</cell><cell>0.70000 0.70000</cell><cell>0.72500 0.77500</cell><cell>0.70000 0.73333</cell><cell>0.70000 0.73750</cell></row><row><cell/><cell/><cell>True</cell><cell>False True</cell><cell>0.70000 0.75000</cell><cell>0.77500 0.77500</cell><cell>0.78333 0.76667</cell><cell>0.76250 0.78750</cell></row><row><cell>TransE</cell><cell/><cell/><cell/><cell>0.63000</cell><cell>0.63750</cell><cell>0.63500</cell><cell>0.63375</cell></row><row><cell>TransH</cell><cell/><cell/><cell/><cell>0.79000</cell><cell>0.77250</cell><cell>0.73667</cell><cell>0.71125</cell></row><row><cell>TransD</cell><cell/><cell/><cell/><cell>0.80500</cell><cell>0.74250</cell><cell>0.71833</cell><cell>0.71750</cell></row><row><cell>RotatE</cell><cell/><cell/><cell/><cell>0.72500</cell><cell>0.73250</cell><cell>0.71667</cell><cell>0.70750</cell></row><row><cell>RGCN</cell><cell/><cell/><cell/><cell>0.65000</cell><cell>0.65000</cell><cell>0.63333</cell><cell>0.60000</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 3</head><label>3</label><figDesc>Precision@N for the hypotheses generated by 𝑅𝑒𝑠𝑒𝑎𝑟𝑐ℎ𝐿𝑖𝑛𝑘 for a sample of entities.</figDesc><table><row><cell>Entity</cell><cell>P@5</cell><cell>P@10</cell><cell>P@15</cell><cell>P@20</cell></row><row><cell>𝑎𝑐𝑡𝑖𝑜𝑛_𝑟𝑒𝑐𝑜𝑔𝑛𝑖𝑡𝑖𝑜𝑛</cell><cell>1.000</cell><cell>1.000</cell><cell>0.800</cell><cell>0.800</cell></row><row><cell>𝑝𝑎𝑡𝑡𝑒𝑟𝑛_𝑟𝑒𝑐𝑜𝑔𝑛𝑖𝑡𝑖𝑜𝑛</cell><cell>1.000</cell><cell>0.900</cell><cell>0.867</cell><cell>0.850</cell></row><row><cell>𝑖𝑚𝑎𝑔𝑒_𝑎𝑛𝑎𝑙𝑦𝑠𝑖𝑠</cell><cell>1.000</cell><cell>0.900</cell><cell>0.800</cell><cell>0.800</cell></row><row><cell>𝑡𝑟𝑎𝑐𝑘𝑖𝑛𝑔_𝑠𝑦𝑠𝑡𝑒𝑚</cell><cell>1.000</cell><cell>0.900</cell><cell>0.733</cell><cell>0.750</cell></row><row><cell>𝑑𝑒𝑐𝑖𝑠𝑖𝑜𝑛_𝑠𝑢𝑝𝑝𝑜𝑟𝑡_𝑠𝑦𝑠𝑡𝑒𝑚</cell><cell>1.000</cell><cell>0.800</cell><cell>0.800</cell><cell>0.800</cell></row><row><cell>𝑓 𝑎𝑐𝑒_𝑑𝑒𝑡𝑒𝑐𝑡𝑖𝑜𝑛</cell><cell>1.000</cell><cell>0.800</cell><cell>0.600</cell><cell>0.550</cell></row><row><cell>𝑛𝑒𝑢𝑟𝑎𝑙_𝑛𝑒𝑡𝑤𝑜𝑟𝑘</cell><cell>1.000</cell><cell>0.700</cell><cell>0.667</cell><cell>0.600</cell></row><row><cell>𝑑𝑎𝑡𝑎_𝑐𝑜𝑚𝑝𝑟𝑒𝑠𝑠𝑖𝑜𝑛</cell><cell>0.800</cell><cell>0.500</cell><cell>0.533</cell><cell>0.550</cell></row><row><cell>𝑑𝑒𝑒𝑝_𝑙𝑒𝑎𝑟𝑛𝑖𝑛𝑔</cell><cell>0.800</cell><cell>0.800</cell><cell>0.867</cell><cell>0.850</cell></row><row><cell>𝑒𝑣𝑜𝑙𝑢𝑡𝑖𝑜𝑛𝑎𝑟𝑦_𝑎𝑙𝑔𝑜𝑟𝑖𝑡ℎ𝑚</cell><cell>0.800</cell><cell>0.800</cell><cell>0.667</cell><cell>0.500</cell></row><row><cell>𝑤𝑒𝑎𝑟𝑎𝑏𝑙𝑒_𝑡𝑒𝑐ℎ𝑛𝑜𝑙𝑜𝑔𝑦</cell><cell>0.800</cell><cell>0.800</cell><cell>0.600</cell><cell>0.650</cell></row><row><cell>𝑎𝑢𝑡𝑜𝑛𝑜𝑚𝑜𝑢𝑠_𝑣𝑒ℎ𝑖𝑐𝑙𝑒</cell><cell>0.800</cell><cell>0.700</cell><cell>0.733</cell><cell>0.600</cell></row><row><cell>𝑠𝑒𝑛𝑡𝑖𝑚𝑒𝑛𝑡_𝑎𝑛𝑎𝑙𝑦𝑠𝑖𝑠</cell><cell>0.800</cell><cell>0.700</cell><cell>0.667</cell><cell>0.750</cell></row><row><cell>𝑔𝑟𝑎𝑝ℎ𝑖𝑐𝑠_𝑝𝑟𝑜𝑐𝑒𝑠𝑠𝑖𝑛𝑔_𝑢𝑛𝑖𝑡</cell><cell>0.800</cell><cell>0.700</cell><cell>0.600</cell><cell>0.650</cell></row><row><cell>𝑔𝑎𝑚𝑒_𝑡ℎ𝑒𝑜𝑟𝑦</cell><cell>0.400</cell><cell>0.700</cell><cell>0.667</cell><cell>0.550</cell></row><row><cell>𝑚𝑢𝑙𝑡𝑖𝑎𝑔𝑒𝑛𝑡_𝑠𝑦𝑠𝑡𝑒𝑚</cell><cell>0.400</cell><cell>0.400</cell><cell>0.267</cell><cell>0.300</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="1" xml:id="foot_0"><p>CS-KG -http://w3id.org/cskg. Knowledge-Based Systems 315 (2025) 113280</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>Knowledge-Based Systems 315 (2025) 113280</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2" xml:id="foot_2"><p>https://www.microsoft.com/en-us/research/project/microsoft-academicgraph/</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="3" xml:id="foot_3"><p>https://w3id.org/cskg/cskg/documentation.php</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="4" xml:id="foot_4"><p>https://github.com/dayala1/ResearchLink/blob/master/CSKG-600.csv</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="5" xml:id="foot_5"><p>https://scholkg.kmi.open.ac.uk/cskg/ontology.html Knowledge-Based Systems 315 (2025) 113280</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>We acknowledge financial support under the <rs type="programName">National Recovery and Resilience Plan (NRRP)</rs>, Italy, <rs type="programName">Mission 4 Component 2 Investment 1</rs><rs type="grantNumber">.5 -Call</rs> for tender No. 3277 published on December 30, 2021 by the <rs type="funder">Italian Ministry of University and Research (MUR)</rs> funded by the <rs type="funder">European Union -NextGenerationEU</rs>. Project Code <rs type="grantNumber">ECS0000038 -</rs>Project Title <rs type="projectName">eINS Ecosystem of Innovation for Next Generation Sardinia -CUP</rs> <rs type="grantNumber">F53C22000430001-</rs>Grant Assignment Decree No. 1056 adopted on June 23, 2022 by the <rs type="funder">Italian Ministry of University and Research (MUR), Italy</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_yTwNPzg">
+					<orgName type="program" subtype="full">National Recovery and Resilience Plan (NRRP)</orgName>
+				</org>
+				<org type="funding" xml:id="_QFCDu5B">
+					<idno type="grant-number">.5 -Call</idno>
+					<orgName type="program" subtype="full">Mission 4 Component 2 Investment 1</orgName>
+				</org>
+				<org type="funded-project" xml:id="_Ps2KC3M">
+					<idno type="grant-number">ECS0000038 -</idno>
+					<orgName type="project" subtype="full">eINS Ecosystem of Innovation for Next Generation Sardinia -CUP</orgName>
+				</org>
+				<org type="funding" xml:id="_Z9bGgaN">
+					<idno type="grant-number">F53C22000430001-</idno>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data availability</head><p>Data will be made available on request.</p></div>
+			</div>
+
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">AGATHA: automatic graph mining and transformer based hypothesis generation approach</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sybrandt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Tyagin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shtutman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Safro</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3340531.341268</idno>
+		<ptr target="http://dx.doi.org/10.1145/3340531.341268"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 29th ACM International Conference on Information &amp; Knowledge Management</title>
+		<meeting>the 29th ACM International Conference on Information &amp; Knowledge Management</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="2757" to="2764"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Artificial intelligence to win the nobel prize and beyond: Creating the engine for scientific discovery</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kitano</surname></persName>
+		</author>
+		<idno type="DOI">10.1609/aimag.v37i1.2642</idno>
+		<ptr target="http://dx.doi.org/10.1609/aimag.v37i1.2642"/>
+	</analytic>
+	<monogr>
+		<title level="j">AI Mag</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="39" to="49"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Discovering research hypotheses in social science using knowledge graph embeddings</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Haan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Tiddi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Beek</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-030-77385-4_28</idno>
+		<ptr target="http://dx.doi.org/10.1007/978-3-030-77385-4_28"/>
+	</analytic>
+	<monogr>
+		<title level="m">European Semantic Web Conference</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="477" to="494"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Context-driven automatic subgraph creation for literature-based discovery</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Cameron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kavuluru</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Rindflesch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Sheth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Thirunarayan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Bodenreider</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jbi.2015.01.014</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.jbi.2015.01.014"/>
+	</analytic>
+	<monogr>
+		<title level="j">J. Biomed. Informatics</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="141" to="157"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Literature based discovery: models, methods, and trends</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Henry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">T</forename><surname>Mcinnes</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jbi.2017.08.011</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.jbi.2017.08.011"/>
+	</analytic>
+	<monogr>
+		<title level="j">J. Biomed. Informatics</title>
+		<imprint>
+			<biblScope unit="volume">74</biblScope>
+			<biblScope unit="page" from="20" to="32"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Spark, an application based on serendipitous knowledge discovery</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">E</forename><surname>Workman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fiszman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Cairelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Nahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Rindflesch</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jbi.2015.12.014</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.jbi.2015.12.014"/>
+	</analytic>
+	<monogr>
+		<title level="j">J. Biomed. Informatics</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page" from="23" to="37"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Finding melanoma drugs through a probabilistic knowledge graph</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Mccusker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Dumontier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Dordick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">L</forename><surname>Mcguinness</surname></persName>
+		</author>
+		<idno type="DOI">10.7717/peerj-cs.106</idno>
+		<ptr target="http://dx.doi.org/10.7717/peerj-cs.106"/>
+	</analytic>
+	<monogr>
+		<title level="j">PeerJ Comput. Sci</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">106</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Literature-based automated discovery of tumor suppressor p53 phosphorylation and inhibition by NEK2</title>
+		<author>
+			<persName><forename type="first">B.-K</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Dayaram</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Parikh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Wilkins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nagarajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">B</forename><surname>Novikov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Bachman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">Y</forename><surname>Jung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Haas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Labrie</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.1811811115</idno>
+		<ptr target="http://dx.doi.org/10.1073/pnas.1811811115"/>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<biblScope unit="issue">42</biblScope>
+			<biblScope unit="page" from="10666" to="10671"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Redirection: Generating drug repurposing hypotheses using link prediction with DISNET data</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Muñoz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">U</forename><surname>Carro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">P</forename><surname>Santamaría</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">O</forename><surname>Carrasco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Ruiz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">P</forename><surname>Gallardo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rodriguez-Gonzalez</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/CBMS55023.2022.00010</idno>
+		<ptr target="http://dx.doi.org/10.1109/CBMS55023.2022.00010"/>
+	</analytic>
+	<monogr>
+		<title level="m">IEEE 35th International Symposium on Computer-Based Medical Systems, CBMS</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2022">2022. 2022</date>
+			<biblScope unit="page" from="7" to="12"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Knowledge graphs: opportunities and challenges</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Xia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Naseriparsa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10462-022-10397-2</idno>
+		<ptr target="http://dx.doi.org/10.1007/s10462-022-10397-2"/>
+	</analytic>
+	<monogr>
+		<title level="j">Artif. Intell. Rev</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="32"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">CS-kg: A large-scale knowledge graph of research entities and claims in computer science</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dessí</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Reforgiato Recupero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Buscaldi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-031-19433-7_39</idno>
+		<ptr target="http://dx.doi.org/10.1007/978-3-031-19433-7_39"/>
+	</analytic>
+	<monogr>
+		<title level="m">The Semantic Web-ISWC 2022: 21st International Semantic Web Conference, Virtual Event</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2022">October 23-27, 2022. 2022</date>
+			<biblScope unit="page" from="678" to="696"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Knowledge graphs</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hogan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Blomqvist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cochez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Amato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">D</forename><surname>Melo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gutierrez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kirrane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E L</forename><surname>Gayo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Navigli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Neumaier</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3447772</idno>
+		<ptr target="http://dx.doi.org/10.1145/3447772"/>
+	</analytic>
+	<monogr>
+		<title level="j">ACM Comput. Surv</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1" to="37"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">OpenResearch: collaborative management of scholarly communication metadata</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Vahdati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Arndt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Auer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lange</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-319-49004-5_50</idno>
+		<ptr target="http://dx.doi.org/10.1007/978-3-319-49004-5_50"/>
+	</analytic>
+	<monogr>
+		<title level="m">European Knowledge Acquisition Workshop</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="778" to="793"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">AI-KG: an automatically generated knowledge graph of artificial intelligence</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dessì</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Recupero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Buscaldi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sack</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-030-62466-8_9</idno>
+		<ptr target="http://dx.doi.org/10.1007/978-3-030-62466-8_9"/>
+	</analytic>
+	<monogr>
+		<title level="m">ISWC 2020</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="volume">12507</biblScope>
+			<biblScope unit="page" from="127" to="143"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Open research knowledge graph: Next generation infrastructure for semantic scholarly knowledge</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Y</forename><surname>Jaradeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Oelen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">E</forename><surname>Farfar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Prinz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Souza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kismihók</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Stocker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Auer</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3360901.3364435</idno>
+		<ptr target="Knowledge-BasedSystems315"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 10th International Conference on Knowledge Capture</title>
+		<meeting>the 10th International Conference on Knowledge Capture</meeting>
+		<imprint>
+			<date type="published" when="2019">2019. 2025</date>
+			<biblScope unit="page">113280</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">UMLS users and uses: a current overview</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Amos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Anderson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Brody</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ripple</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">L</forename><surname>Humphreys</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/jamia/ocaa084</idno>
+		<ptr target="http://dx.doi.org/10.1093/jamia/ocaa084"/>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Med. Informatics Assoc</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="1606" to="1611"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Representing scientific literature evolution via temporal knowledge graphs</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rossanez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Reis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Da</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Silva</forename><surname>Torres</surname></persName>
+		</author>
+		<ptr target="https://hdl.handle.net/11250/2773742"/>
+	</analytic>
+	<monogr>
+		<title level="m">MEPDaW@ ISWC</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="33" to="42"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">The comparative anatomy of nanopublications and FAIR digital objects</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Schultes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Magagna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kuhn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Suchánek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">B</forename><surname>Da Silva Santos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Mons</surname></persName>
+		</author>
+		<idno type="DOI">10.3897/rio.8.e94150</idno>
+		<ptr target="http://dx.doi.org/10.3897/rio.8.e94150"/>
+	</analytic>
+	<monogr>
+		<title level="j">Res. Ideas Outcomes</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">94150</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><surname>Salatino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Aggarwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mannocci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2409.04432</idno>
+		<title level="m">A survey on knowledge organization systems of research fields: Resources and challenges</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Link prediction techniques, applications, and performance: A survey</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Biswas</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.physa.2020.124289</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.physa.2020.124289"/>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. A</title>
+		<imprint>
+			<biblScope unit="volume">553</biblScope>
+			<biblScope unit="page">124289</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Trans4E: Link prediction on scholarly knowledge graphs</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nayyeri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Cil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Vahdati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rahman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Angioni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Salatino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Recupero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Vassilyeva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neucom.2021.02.100</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.neucom.2021.02.100"/>
+	</analytic>
+	<monogr>
+		<title level="j">Neurocomputing</title>
+		<imprint>
+			<biblScope unit="volume">461</biblScope>
+			<biblScope unit="page" from="530" to="542"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Knowledge graph refinement: A survey of approaches and evaluation methods</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Paulheim</surname></persName>
+		</author>
+		<idno type="DOI">10.3233/SW-160218</idno>
+		<ptr target="http://dx.doi.org/10.3233/SW-160218"/>
+	</analytic>
+	<monogr>
+		<title level="j">Semant. Web</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="489" to="508"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Devlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-W</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">T</forename><surname>Google</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Language</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/N19-1423</idno>
+		<ptr target="http://dx.doi.org/10.18653/v1/N19-1423"/>
+	</analytic>
+	<monogr>
+		<title level="m">Naacl-Hlt 2019</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="4171" to="4186"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Transforming the language of life: transformer neural networks for protein prediction tasks</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Nambiar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Heflin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Maslov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hopkins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ritz</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3388440.3412467</idno>
+		<ptr target="http://dx.doi.org/10.1145/3388440.3412467"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 11th ACM International Conference on Bioinformatics</title>
+		<meeting>the 11th ACM International Conference on Bioinformatics</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="1" to="8"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">A survey on knowledge graph embedding: Approaches, applications and benchmarks</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Dai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">N</forename><surname>Xiong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Guo</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/electronics9050750</idno>
+		<ptr target="http://dx.doi.org/10.3390/electronics9050750"/>
+	</analytic>
+	<monogr>
+		<title level="j">Electronics</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page">750</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Knowledge graph embedding: A survey of approaches and applications</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Guo</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TKDE.2017.2754499</idno>
+		<ptr target="http://dx.doi.org/10.1109/TKDE.2017.2754499"/>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE TKDE</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">OpenKE: An open toolkit for knowledge embedding</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Lv</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/D18-2024</idno>
+		<ptr target="http://dx.doi.org/10.18653/v1/D18-2024"/>
+	</analytic>
+	<monogr>
+		<title level="m">EMNLP</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="139" to="144"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Knowledge graph embedding by translating on hyperplanes</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="DOI">10.1609/aaai.v28i1.8870</idno>
+		<ptr target="http://dx.doi.org/10.1609/aaai.v28i1.8870"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the AAAI Conference on Artificial Intelligence</title>
+		<meeting>the AAAI Conference on Artificial Intelligence</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="volume">28</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Knowledge graph embedding via dynamic mapping matrix</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhao</surname></persName>
+		</author>
+		<idno type="DOI">10.3115/v1/P15-1067</idno>
+		<ptr target="http://dx.doi.org/10.3115/v1/P15-1067"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing</title>
+		<meeting>the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="687" to="696"/>
+		</imprint>
+	</monogr>
+	<note>Long Papers</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<monogr>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z.-H</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-Y</forename><surname>Nie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1902.10197</idno>
+		<title level="m">Rotate: Knowledge graph embedding by relational rotation in complex space</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">CAFE: Knowledge graph completion using neighborhood-aware features</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Borrego</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ayala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Hernández</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Rivero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ruiz</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.engappai.2021.104302</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.engappai.2021.104302"/>
+	</analytic>
+	<monogr>
+		<title level="j">Eng. Appl. Artif. Intell</title>
+		<imprint>
+			<biblScope unit="volume">103</biblScope>
+			<biblScope unit="page">104302</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Path-based attributeaware representation learning for relation prediction</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>-T. Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yang</surname></persName>
+		</author>
+		<idno type="DOI">10.1137/1.9781611975673.72</idno>
+		<ptr target="http://dx.doi.org/10.1137/1.9781611975673.72"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2019 SIAM International Conference on Data Mining</title>
+		<meeting>the 2019 SIAM International Conference on Data Mining</meeting>
+		<imprint>
+			<publisher>SIAM</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="639" to="647"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Modeling relational data with graph convolutional networks</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schlichtkrull</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">N</forename><surname>Kipf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Bloem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Van Den</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Berg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Titov</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Welling</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-319-93417-4_38</idno>
+		<ptr target="http://dx.doi.org/10.1007/978-3-319-93417-4_38"/>
+	</analytic>
+	<monogr>
+		<title level="m">The Semantic Web: 15th International Conference, ESWC 2018</title>
+		<meeting><address><addrLine>Heraklion, Crete, Greece</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2018">June 3-7, 2018. 2018</date>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="593" to="607"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">A systematic review on literaturebased discovery: general overview, methodology, &amp; statistical analysis</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Thilakaratne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Falkner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Atapattu</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3365756</idno>
+		<ptr target="http://dx.doi.org/10.1145/3365756"/>
+	</analytic>
+	<monogr>
+		<title level="j">ACM Comput. Surv</title>
+		<imprint>
+			<biblScope unit="volume">52</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="1" to="34"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Literature based discovery: Models, methods, and trends</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Henry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">T</forename><surname>Mcinnes</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jbi.2017.08.011</idno>
+		<ptr target="https://www.sciencedirect.com/science/article/pii/S1532046417301909"/>
+	</analytic>
+	<monogr>
+		<title level="j">J. Biomed. Informatics</title>
+		<imprint>
+			<biblScope unit="volume">74</biblScope>
+			<biblScope unit="page" from="20" to="32"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Scientific discovery in the age of artificial intelligence</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Fu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Chandak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Van Katwyk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Deac</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">620</biblScope>
+			<biblScope unit="page" from="47" to="60"/>
+			<date type="published" when="2023">7972. 2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Contexts and contradictions: a roadmap for computational drug repurposing with knowledge inference</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">N</forename><surname>Sosa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Altman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brief. Bioinform</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page">268</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Editorial: Emerging areas in literature-based discovery</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Sebastian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Smalheiser</surname></persName>
+		</author>
+		<idno type="DOI">10.3389/frma.2023.1122547</idno>
+		<ptr target="https://www.frontiersin.org/articles/10.3389/frma.2023.1122547"/>
+	</analytic>
+	<monogr>
+		<title level="j">Front. Res. Metrics Anal</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Applying network link prediction in drug discovery: an overview of the literature</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Son</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kim</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/17460441.2023.2267020</idno>
+		<ptr target="http://dx.doi.org/10.1080/17460441.2023.2267020"/>
+	</analytic>
+	<monogr>
+		<title level="j">Expert. Opin. Drug Discov</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="43" to="56"/>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Automated hypothesis generation based on mining scientific literature</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Spangler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Wilkins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Bachman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nagarajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Dayaram</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Haas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Regenbogen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Pickering</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Comer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Myers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Stanoi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Kato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Lelescu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Labrie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Parikh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Lisewski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Donehower</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Lichtarge</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/2623330.2623667</idno>
+		<ptr target="http://dx.doi.org/10.1145/2623330.2623667"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 20th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, KDD '14</title>
+		<meeting>the 20th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, KDD '14</meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="1877" to="1886"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Semantics-based cross-domain collaboration recommendation in the life sciences: Preliminary results</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hristovski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kastrin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Rindflesch</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2015 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining</title>
+		<meeting>the 2015 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining</meeting>
+		<imprint>
+			<date type="published" when="2015">2015. 2015</date>
+			<biblScope unit="page" from="805" to="806"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Unsupervised word embeddings capture latent knowledge from materials science literature</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Tshitoyan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dagdelen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Weston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dunn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Rong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Kononova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Persson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ceder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jain</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">571</biblScope>
+			<biblScope unit="issue">7763</biblScope>
+			<biblScope unit="page" from="95" to="98"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Scholarly recommendation systems: a literature survey</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">G</forename><surname>Patra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Yaseen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Sabharwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Roberts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wu</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10115-023-01901-x</idno>
+		<ptr target="http://dx.doi.org/10.1007/s10115-023-01901-x"/>
+	</analytic>
+	<monogr>
+		<title level="j">Knowl. Inf. Syst</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="46"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">AIDA: A knowledge graph about research dynamics in academia and industry</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Angioni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Salatino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Recupero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+		<idno type="DOI">10.1162/qss_a_00162</idno>
+		<ptr target="http://dx.doi.org/10.1162/qss_a_00162"/>
+	</analytic>
+	<monogr>
+		<title level="j">Quant. Sci. Stud</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1356" to="1398"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Name disambiguation in aminer: Clustering, maintenance, and human in the loop</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tang</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3219819.3219859</idno>
+		<ptr target="http://dx.doi.org/10.1145/3219819.3219859"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining</title>
+		<meeting>the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="1002" to="1011"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Nuzzolese</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Gentile</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Presutti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gangemi</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-319-46547-0_16</idno>
+		<ptr target="http://dx.doi.org/10.1007/978-3-319-46547-0_16"/>
+		<title level="m">Conference linked data: the ScholarlyData project</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="150" to="158"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">One year of the opencitations corpus</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Peroni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Shotton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Vitali</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-319-68204-4_19</idno>
+		<ptr target="http://dx.doi.org/10.1007/978-3-319-68204-4_19"/>
+	</analytic>
+	<monogr>
+		<title level="m">International Semantic Web Conference</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="184" to="192"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">CORE: three access levels to underpin open access</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Knoth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename></persName>
+		</author>
+		<idno type="DOI">10.1045/november2012-knoth</idno>
+		<ptr target="http://dx.doi.org/10.1045/november2012-knoth"/>
+	</analytic>
+	<monogr>
+		<title level="j">D-Lib Mag</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">11/12</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">The unified medical language system (UMLS): integrating biomedical terminology</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Bodenreider</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/nar/gkh061</idno>
+		<ptr target="http://dx.doi.org/10.1093/nar/gkh061"/>
+	</analytic>
+	<monogr>
+		<title level="j">Nucleic Acids Res</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="issue">suppl_1</biblScope>
+			<biblScope unit="page" from="267" to="D270"/>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">The anatomy of a nanopublication</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Groth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gibson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Velterop</surname></persName>
+		</author>
+		<idno type="DOI">10.3233/ISU-2010-0613</idno>
+		<ptr target="http://dx.doi.org/10.3233/ISU-2010-0613"/>
+	</analytic>
+	<monogr>
+		<title level="j">Inf. Serv. Use</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">1-2</biblScope>
+			<biblScope unit="page" from="51" to="56"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">T-pair: Temporal nodepair embedding for automatic biomedical hypothesis generation</title>
+		<author>
+			<persName><forename type="first">U</forename><surname>Akujuobi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Spranger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Palaniappan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TKDE.2020.3017687</idno>
+		<ptr target="http://dx.doi.org/10.1109/TKDE.2020.3017687"/>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Knowl. Data Eng</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="2988" to="3001"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Learning temporal difference embeddings for biomedical hypothesis generation</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Du</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/bioinformatics/btac660</idno>
+		<ptr target="http://dx.doi.org/10.1093/bioinformatics/btac660"/>
+	</analytic>
+	<monogr>
+		<title level="j">Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="issue">23</biblScope>
+			<biblScope unit="page" from="5253" to="5261"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Can ChatGPT be used to generate scientific hypotheses?</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">J</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kaplan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C.-W</forename><surname>Hsu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jmat.2023.08.007</idno>
+		<ptr target="https://www.sciencedirect.com/science/article/pii/S2352847823001557"/>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="578" to="584"/>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">The role of artificial intelligence in generating original scientific research</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Elbadawi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">W</forename><surname>Basit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Gaisford</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Pharm</title>
+		<imprint>
+			<biblScope unit="volume">652</biblScope>
+			<biblScope unit="page">123741</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Relational retrieval using a combination of pathconstrained random walks</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Lao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">W</forename><surname>Cohen</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10994-010-5205-8</idno>
+		<ptr target="http://dx.doi.org/10.1007/s10994-010-5205-8"/>
+	</analytic>
+	<monogr>
+		<title level="j">Mach. Learn</title>
+		<imprint>
+			<biblScope unit="volume">81</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="53" to="67"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Efficient and expressive knowledge base completion using subgraph feature extraction</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gardner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mitchell</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/D15-1173</idno>
+		<ptr target="http://dx.doi.org/10.18653/v1/D15-1173"/>
+	</analytic>
+	<monogr>
+		<title level="m">EMNLP, The Association for Computational Linguistics</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="1488" to="1498"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Context-aware path ranking for knowledge base completion</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mazumder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Liu</surname></persName>
+		</author>
+		<idno type="DOI">10.24963/ijcai.2017/166</idno>
+		<ptr target="http://dx.doi.org/10.24963/ijcai.2017/166"/>
+	</analytic>
+	<monogr>
+		<title level="m">IJCAI</title>
+		<imprint>
+			<publisher>AAAI Press</publisher>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="1195" to="1201"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Deeppath: A reinforcement learning method for knowledge graph reasoning</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Xiong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hoang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/D17-1060</idno>
+		<ptr target="http://dx.doi.org/10.18653/v1/D17-1060"/>
+	</analytic>
+	<monogr>
+		<title level="m">EMNLP</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="564" to="573"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<monogr>
+		<author>
+			<persName><forename type="first">R</forename><surname>Das</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dhuliawala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zaheer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Vilnis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Durugkar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Krishnamurthy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Smola</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mccallum</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1711.05851</idno>
+		<title level="m">Go for a walk and arrive at the answer: Reasoning over paths in knowledge bases using reinforcement learning</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Dapath: Distance-aware knowledge graph reasoning based on deep reinforcement learning</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Tiwari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">M</forename><surname>Pandey</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neunet.2020.11.012</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.neunet.2020.11.012"/>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Netw</title>
+		<imprint>
+			<biblScope unit="volume">135</biblScope>
+			<biblScope unit="page" from="1" to="12"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Rlpath: a knowledge graph link prediction method using reinforcement learning based attentive relation path searching and representation learning</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Qian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10489-021-02672-0</idno>
+		<ptr target="http://dx.doi.org/10.1007/s10489-021-02672-0"/>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Intell</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="12"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Completing scientific facts in knowledge graphs of research concepts</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Borrego</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dessì</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Hernández</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Reforgiato Recupero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ruiz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Buscaldi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/ACCESS.2022.3220241</idno>
+		<ptr target="Knowledge-BasedSystems315"/>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">113280</biblScope>
+			<date type="published" when="2022">2022. 2025</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Entity alignment based on relational semantics augmentation for multilingual knowledge graphs</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">U</forename><surname>Akhtar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ahmed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Huang</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.knosys.2022.109494</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.knosys.2022.109494"/>
+	</analytic>
+	<monogr>
+		<title level="j">Knowl.-Based Syst</title>
+		<imprint>
+			<biblScope unit="volume">252</biblScope>
+			<biblScope unit="page">109494</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">Deep embeddings and graph neural networks: using context to improve domain-independent predictions</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Sola</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ayala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Hernández</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ruiz</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10489-023-04685-3</idno>
+		<ptr target="http://dx.doi.org/10.1007/s10489-023-04685-3"/>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Intell</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">A type-augmented knowledge graph embedding framework for knowledge graph completion</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yang</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41598-023-38857-5</idno>
+		<ptr target="http://dx.doi.org/10.1038/s41598-023-38857-5"/>
+	</analytic>
+	<monogr>
+		<title level="j">Sci. Rep</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">12364</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">Translating embeddings for modeling multi-relational data</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bordes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Usunier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>García-Durán</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Weston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Yakhnenko</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">NIPS</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="2787" to="2795"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">RotatE: Knowledge graph embedding by relational rotation in complex space</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z.-H</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-Y</forename><surname>Nie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ICLR</title>
+		<imprint>
+			<biblScope unit="page" from="271" to="280"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">Complex embeddings for simple link prediction</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Trouillon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Welbl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Riedel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">É</forename><surname>Gaussier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Bouchard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ICML</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page" from="2071" to="2080"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">Simple embedding for link prediction in knowledge graphs</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Kazemi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Poole</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title level="a" type="main">Learning entity and relation embeddings for knowledge graph completion</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhu</surname></persName>
+		</author>
+		<idno type="DOI">10.1609/aaai.v29i1.9491</idno>
+		<ptr target="http://dx.doi.org/10.1609/aaai.v29i1.9491"/>
+	</analytic>
+	<monogr>
+		<title level="j">AAAI</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title level="a" type="main">Analogical inference for multi-relational embeddings</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ICML</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="volume">70</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<title level="a" type="main">Reasoning with neural tensor networks for knowledge base completion</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in NIPS</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="926" to="934"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<analytic>
+		<title level="a" type="main">Distributed representations of words and phrases and their compositionality</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mikolov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Corrado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dean</surname></persName>
+		</author>
+		<ptr target="http://dl.acm.org/citation.cfm?id=2999792.2999959"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 26th International Conference on Neural Information Processing Systems</title>
+		<meeting>the 26th International Conference on Neural Information Processing Systems</meeting>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="3111" to="3119"/>
+		</imprint>
+	</monogr>
+	<note>NIPS '13</note>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<monogr>
+		<title level="m" type="main">RoBERTa: A robustly optimized BERT pretraining approach</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Goyal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Joshi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Levy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lewis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zettlemoyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Stoyanov</surname></persName>
+		</author>
+		<idno>CoRR abs/1907.11692</idno>
+		<ptr target="http://arxiv.org/abs/1907.11692"/>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<analytic>
+		<title level="a" type="main">Embedding-based recommendations on scholarly knowledge graphs</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nayyeri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Vahdati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Yazdi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lehmann</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-030-49461-2_15</idno>
+		<ptr target="http://dx.doi.org/10.1007/978-3-030-49461-2_15"/>
+	</analytic>
+	<monogr>
+		<title level="m">European Semantic Web Conference</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="255" to="270"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b75">
+	<analytic>
+		<title level="a" type="main">Link prediction of weighted triples for knowledge graph completion within the scholarly domain</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nayyeri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Cil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Vahdati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kravchenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Angioni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Salatino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Recupero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lehmann</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/ACCESS.2021.3105183</idno>
+		<ptr target="http://dx.doi.org/10.1109/ACCESS.2021.3105183"/>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="116002" to="116014"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b76">
+	<analytic>
+		<title level="a" type="main">Understood in translation: Transformers for domain understanding</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Christofidellis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Manica</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Georgopoulos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Vandierendonck</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2021 Workshop on Scientific Document Understanding</title>
+		<meeting><address><addrLine>SDU</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b77">
+	<analytic>
+		<title level="a" type="main">Multilingual knowledge graph embeddings for cross-lingual knowledge alignment</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zaniolo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Twenty-Sixth International Joint Conference on Artificial Intelligence, International Joint Conferences on Artificial Intelligence Organization</title>
+		<meeting>the Twenty-Sixth International Joint Conference on Artificial Intelligence, International Joint Conferences on Artificial Intelligence Organization</meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b78">
+	<analytic>
+		<title level="a" type="main">Bootstrapping entity alignment with knowledge graph embedding</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Qu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">IJCAI</title>
+		<imprint>
+			<date type="published" when="2018">2018. 2018</date>
+			<biblScope unit="volume">18</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b79">
+	<analytic>
+		<title level="a" type="main">Building a PubMed knowledge graph</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jeong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Rousseau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">I</forename><surname>Torvik</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sci. Data</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">205</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b80">
+	<analytic>
+		<title level="a" type="main">A comparative analysis of knowledge injection strategies for large language models in the scholarly domain</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Cadeddu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chessa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">De</forename><surname>Leo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Fenu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Recupero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Salatino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Secchi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Eng. Appl. Artif. Intell</title>
+		<imprint>
+			<biblScope unit="volume">133</biblScope>
+			<biblScope unit="page">108166</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b81">
+	<analytic>
+		<title level="a" type="main">A systematic review: machine learning based recommendation systems for e-learning</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Khanal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Prasad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Alsadoon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Maag</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Educ. Inf. Technol</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="2635" to="2664"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b82">
+	<analytic>
+		<title level="a" type="main">Artificial intelligence for literature reviews: Opportunities and challenges</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Bolanos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Salatino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Artif. Intell. Rev</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="issue">259</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b83">
+	<analytic>
+		<title level="a" type="main">Citation prediction by leveraging transformers and natural language processing heuristics</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Buscaldi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dessí</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Murgia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Recupero</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Inf. Process. Manage</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">103583</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b84">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Brody</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Scite</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Med. Libr. Association: JMLA</title>
+		<imprint>
+			<biblScope unit="volume">109</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page">707</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b85">
+	<analytic>
+		<title level="a" type="main">Integrating conversational agents and knowledge graphs within the scholarly domain</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Meloni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Angioni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Salatino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Recupero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="22468" to="22489"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b86">
+	<analytic>
+		<title level="a" type="main">Conversational agents in healthcare: a systematic review</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Laranjo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Dunn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">L</forename><surname>Tong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">B</forename><surname>Kocaballi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bashir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Surian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Gallego</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Magrabi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Y</forename><surname>Lau</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Med. Informatics Assoc</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="1248" to="1258"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b87">
+	<analytic>
+		<title level="a" type="main">A review of the semantic web field</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hitzler</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3397512</idno>
+		<ptr target="http://dx.doi.org/10.1145/3397512"/>
+	</analytic>
+	<monogr>
+		<title level="j">Commun. ACM</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="76" to="83"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b88">
+	<analytic>
+		<title level="a" type="main">Generating rules to filter candidate triples for their correctness checking by knowledge graph completion techniques</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Borrego</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ayala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Hernández</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Rivero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ruiz</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3360901.3364418</idno>
+		<ptr target="http://dx.doi.org/10.1145/3360901.3364418"/>
+	</analytic>
+	<monogr>
+		<title level="m">K-CAP</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="115" to="122"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b89">
+	<monogr>
+		<title level="m" type="main">MiniLM: Deep selfattention distillation for task-agnostic compression of pre-trained transformers</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Bao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zhou</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<publisher>NeurIPS</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b90">
+	<analytic>
+		<title level="a" type="main">Knowledge graph and text jointly embedding</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="DOI">10.3115/v1/D14-1167</idno>
+		<ptr target="http://dx.doi.org/10.3115/v1/D14-1167"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing, EMNLP</title>
+		<meeting>the 2014 Conference on Empirical Methods in Natural Language Processing, EMNLP</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="1591" to="1601"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b91">
+	<analytic>
+		<title level="a" type="main">SCICERO: A deep learning and NLP approach for generating scientific knowledge graphs in the computer science domain</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dessí</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Recupero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Buscaldi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.knosys.2022.109945</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.knosys.2022.109945"/>
+	</analytic>
+	<monogr>
+		<title level="j">Knowl.-Based Syst</title>
+		<imprint>
+			<biblScope unit="volume">258</biblScope>
+			<biblScope unit="page">109945</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b92">
+	<analytic>
+		<title level="a" type="main">Evolutionary generative adversarial networks</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Tao</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TEVC.2019.2895748</idno>
+		<ptr target="http://dx.doi.org/10.1109/TEVC.2019.2895748"/>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Evol. Comput</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="921" to="934"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b93">
+	<analytic>
+		<title level="a" type="main">A novel collaborative filtering framework based on variational self-attention GAN</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Dong</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/GLOBECOM42002.2020.9322300</idno>
+		<ptr target="http://dx.doi.org/10.1109/GLOBECOM42002.2020.9322300"/>
+	</analytic>
+	<monogr>
+		<title level="m">GLOBECOM 2020-2020 IEEE Global Communications Conference</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="1" to="6"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b94">
+	<analytic>
+		<title level="a" type="main">Evolutionary deep learning with extended Kalman filter for effective prediction modeling and efficient data assimilation</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">Y</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rahman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Civ. Eng</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">4019014</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b95">
+	<analytic>
+		<title level="a" type="main">Smart scarf: An IOT-based solution for emotion recognition</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Almukadi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Eng. Technol. Appl. Sci. Res</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="10870" to="10874"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b96">
+	<analytic>
+		<title level="a" type="main">A novel approach of Gaussian mixture model-based data compression of ECG and PPG signals for various cardiovascular diseases</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">R</forename><surname>Sahoo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bhowmick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Mandal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">K</forename><surname>Kundu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biomed. Signal Process. Control</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page">106581</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b97">
+	<analytic>
+		<title level="a" type="main">PyKEEN 1.0: a python library for training and evaluating knowledge graph embeddings</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ali</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Berrendorf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">T</forename><surname>Hoyt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Vermue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sharifzadeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Tresp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lehmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mach. Learn. Res</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">82</biblScope>
+			<biblScope unit="page" from="1" to="6"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b98">
+	<analytic>
+		<title level="a" type="main">Virtual facial expression recognition using deep CNN with ensemble learning</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">R R</forename><surname>Chirra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Uyyala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">K K</forename><surname>Kolli</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s12652-020-02866-3</idno>
+		<ptr target="http://dx.doi.org/10.1007/s12652-020-02866-3"/>
+	</analytic>
+	<monogr>
+		<title level="j">J. Ambient. Intell. Humaniz. Comput</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="10581" to="10599"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b99">
+	<analytic>
+		<title level="a" type="main">Trajectory tracking of autonomous vehicle: A differential flatness approach with disturbance-observer-based control</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Sun</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TIV.2022.3186280</idno>
+		<ptr target="http://dx.doi.org/10.1109/TIV.2022.3186280"/>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Intell. Veh</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="1368" to="1379"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b100">
+	<analytic>
+		<title level="a" type="main">A review on deep learning-based structural health monitoring of civil infrastructures</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Jin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yun</surname></persName>
+		</author>
+		<idno type="DOI">10.12989/sss.2019.24.5.567</idno>
+		<ptr target="http://dx.doi.org/10.12989/sss.2019.24.5.567"/>
+	</analytic>
+	<monogr>
+		<title level="j">Smart Struct. Syst</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="567" to="585"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b101">
+	<monogr>
+		<author>
+			<persName><forename type="first">J</forename><surname>Priem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Piwowar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Orr</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2205.01833</idno>
+		<title level="m">OpenAlex: A fully-open index of scholarly works, authors, venues, institutions, and concepts</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b102">
+	<monogr>
+		<author>
+			<persName><forename type="first">D</forename><surname>Shu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2403.07311</idno>
+		<title level="m">Knowledge graph large language model (KG-LLM) for link prediction</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

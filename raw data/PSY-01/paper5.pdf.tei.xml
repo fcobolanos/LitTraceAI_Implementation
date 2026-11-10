@@ -1,0 +1,1480 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Integrating Artificial Intelligence in Primary Mathematics Education: Investigating Internal and External Influences on Teacher Adoption</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2024-10-24">24 October 2024</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Mao</forename><surname>Li</surname></persName>
+							<email>mao.li@monash.edu</email>
+							<idno type="ORCID">0000-0001-6512-319X</idno>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">School of Curriculum, Teaching and Inclusion</orgName>
+								<orgName type="department" key="dep2">Faculty of Education</orgName>
+								<orgName type="institution">Monash University</orgName>
+								<address>
+									<settlement>Melbourne</settlement>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Integrating Artificial Intelligence in Primary Mathematics Education: Investigating Internal and External Influences on Teacher Adoption</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2024-10-24">24 October 2024</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">3BF0C33DE74229E0D7F497EC06B29B5B</idno>
+					<idno type="DOI">10.1007/s10763-024-10515-w</idno>
+					<note type="submission">Received: 24 January 2024 / Accepted: 14 October 2024 /</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-08-27T15:08+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Artificial intelligence</term>
+					<term>Primary mathematics education</term>
+					<term>Teacher attitudes</term>
+					<term>TPACK</term>
+					<term>Educational environment</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>This study presents an in-depth analysis of the factors influencing the adoption and utilisation of Artificial Intelligence (AI) in primary mathematics education. Employing a quantitative research design, the study integrates the Technology Acceptance Model (TAM) and Technological Pedagogical and Content Knowledge (TPACK) with empirical data collected from primary mathematics teachers in China. The analysis utilises Partial Least Squares Structural Equation Modelling (PLS-SEM) to explore the relationships among key constructs, including teacher attitudes, contextual factors, educational challenges, and parental and community involvement. The findings reveal that teacher attitudes play a critical role in AI adoption. The study extends existing literature by focusing on AI in primary mathematics education, highlighting the need for targeted professional development initiatives to foster positive attitudes and enhance teacher proficiency in AI technologies. Additionally, the research underscores the significance of TPACK in its critical role in equipping teachers with the knowledge required for effectively integrating AI into mathematics education. Moreover, the study explores the complex dynamics of contextual factors and educational challenges in AI integration, emphasising the need for systemic approaches that include policy changes and institutional support. The nuanced influence of TPACK on AI utilisation, particularly through indirect pathways, and the role of parental and community involvement are also examined, offering new insights into the multifaceted nature of technology adoption in educational settings. It contributes valuable insights to the academic discourse on technology integration in education and offers practical implications for educators, policymakers, and stakeholders.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p>The post-pandemic era marks a crucial phase for integrating technology, notably Artificial Intelligence (AI), into global educational systems <ref type="bibr" target="#b21">(Hofer et al., 2021)</ref>. The shift to remote and hybrid learning models during the global health crisis underscored the essential role of digital technologies in education. AI has significantly advanced teaching and learning practices, offering tools that can analyse student engagement, performance, and preferences to enhance personalized learning <ref type="bibr" target="#b25">(Kim &amp; Lee, 2023)</ref>. In primary mathematics, AI tutoring systems are particularly valuable for identifying misconceptions and providing immediate feedback, thus aiding students' learning progression <ref type="bibr" target="#b9">(Dermeval et al., 2017)</ref>. Intelligent tutoring systems now play a key role in personalizing learning paths, predicting outcomes, and recommending resources in mathematics education <ref type="bibr" target="#b40">(Shin, 2022)</ref>. For instance, AI helps teachers by identifying struggling students and offering tailored support <ref type="bibr" target="#b38">(Qiu et al., 2023)</ref>. Consequently, the post-pandemic era has expedited AI's integration into education, transforming its role from a mere technological addition to a fundamental partner in the educational process.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>AI in Chinese Primary Mathematics Education</head><p>In China, the application of AI in primary education is becoming increasingly widespread <ref type="bibr" target="#b26">(Knox, 2020;</ref><ref type="bibr" target="#b51">Yang, 2019)</ref>. AI tools such as Baidu's Ernie Bot (文心一言), Alibaba Cloud's Qwen (通义千问), and Khan Academy (可汗学院) are used in primary mathematics education. These AI tools leverage powerful natural language processing and machine learning technologies to interact intelligently with teachers and students and solve mathematical problems <ref type="bibr" target="#b52">(Yi et al., 2024)</ref>. For example, generative AI (e.g., Ernie Bot and ChatGPT) is used to provide personalized learning experiences by analysing students' performance data and tailoring educational content to meet individual needs <ref type="bibr" target="#b53">(Yoon et al., 2024)</ref>. In a typical classroom, mathematics teachers can use Ernie Bot to assign customized mathematics exercises based on each student's learning pace and proficiency level. Additionally, the adaptive learning system, such as Khan Academy, offers intelligent tutoring by providing stepby-step solutions and explanations for mathematical problems <ref type="bibr" target="#b40">(Shin, 2022)</ref>. This personalized guidance enhances students' understanding of complex concepts and allows teachers to focus on providing more targeted support <ref type="bibr" target="#b52">(Yi et al., 2024)</ref>.</p><p>In this study, AI tools in primary mathematics education are defined as the use of intelligent systems and technologies to enhance teaching and learning processes, such as generative AI tools like Ernie Bot and ChatGPT, and adaptive learning systems like Khan Academy. This includes the use of AI tools for personalized learning, intelligent tutoring, virtual experiments, and real-time assessment and feedback. The focus is on how AI tools can support and improve the educational experiences of primary school students in mathematics, leveraging its capabilities to provide tailored, interactive, and effective learning solutions.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Problem Statement</head><p>Despite AI's clear advantages and transformative potential, its integration into classroom practice is still in the early stages of primary mathematics education, particularly within the context of China's education system <ref type="bibr" target="#b51">(Yang, 2019)</ref>. Teachers face internal barriers such as varying levels of Technological Pedagogical Content Knowledge (TPACK) and negative attitudes towards technology adoption. These challenges are further exacerbated by contextual factors (CF), including significant disparities in school infrastructure, limited access to technology, inconsistent institutional policies, variable levels of administrative support, and inadequate resources, particularly in rural or underserved communities, potentially affecting the quality and confidence of math teachers compared to their urban counterparts <ref type="bibr" target="#b1">(Bakker et al., 2021;</ref><ref type="bibr" target="#b54">Zhao, 2024)</ref>. For example, rural schools often lack sufficient funding to provide the necessary training and support for teachers, which hinders their ability to effectively use digital technologies and integrate them into their teaching practices <ref type="bibr" target="#b50">(Wu et al., 2022)</ref>.</p><p>Moreover, educational challenges (EC), such as aligning AI technologies with existing curricula and providing extensive teacher training, further complicate AI integration. Indeed, effective integration requires that AI tools be carefully matched with learning objectives and assessment practices <ref type="bibr" target="#b49">(Whitney-Smith, 2023)</ref>. To achieve this, teachers need substantial support to comprehend and implement AIbased instruction effectively <ref type="bibr" target="#b43">(Sperling et al., 2022)</ref>. This support includes professional development opportunities and resources that help educators integrate AI into their teaching strategies. In China's highly structured educational system, rigid curriculum standards and traditional assessment methods can impede the adoption of innovative technology-driven teaching methods.</p><p>Furthermore, in the post-pandemic era, parental and community involvement (PCI) has become increasingly important for the successful integration of AI in primary mathematics education. The COVID-19 pandemic has highlighted the vital role that parents and communities play in supporting remote and technologyenhanced learning environments, making their engagement crucial for the effective adoption and utilization of AI technologies in the classroom. Parental attitudes towards technology and their ability to support their children's learning at home can significantly complement or contrast with classroom use of AI <ref type="bibr" target="#b4">(Chen, 2015)</ref>. Community engagement and support for educational innovation can drive the adoption of digital technologies <ref type="bibr" target="#b44">(Tay et al., 2021)</ref>. Conversely, a lack of parental and community support can hinder the implementation and sustainability of AI initiatives. In China, varying levels of parental and community engagement in different regions lead to inconsistent support for AI integration, further complicating efforts to implement these technologies effectively.</p><p>Given these multifaceted challenges, this study aims to investigate how internal factors (mathematics teachers' attitudes and TPACK) and external factors (CF, EC, and PCI) influence the adoption of AI in primary mathematics education within the Chinese context. Understanding the relationship between these factors can help develop strategies and interventions that support teachers in effectively utilizing AI tools, thereby enriching student learning experiences in primary mathematics education. To achieve this, a critical research question is formulated to guide the investigation.</p><p>• How do internal factors such as teacher attitudes and TPACK, and external factors including CF, EC, and PCI, influence the adoption of AI in primary mathematics education?</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Literature Review</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>TPACK and TAM in Primary Mathematics Education</head><p>In the current education domain, the frameworks of TPACK and Technology Acceptance Model (TAM) emerge as critical lenses for understanding the complex integration of digital technology in mathematics education <ref type="bibr" target="#b23">(Joo et al., 2018;</ref><ref type="bibr" target="#b34">Mailizar et al., 2021)</ref>. TPACK, originally conceptualised based on <ref type="bibr" target="#b42">Shulman's (1986)</ref> Pedagogical Content Knowledge theory, underscores the importance of understanding technology, pedagogy, and content individually and their intricate interactions <ref type="bibr" target="#b35">(Mishra &amp; Koehler, 2006)</ref>. By contrast, the TAM focuses on the individual's perception of technology's usefulness and ease of use as determinants of technology adoption <ref type="bibr" target="#b6">(Davis, 1989)</ref>. In mathematics education, TPACK and TAM offer comprehensive perspectives for examining technology integration in mathematics education <ref type="bibr" target="#b34">(Mailizar et al., 2021)</ref>.</p><p>The TPACK framework has dramatically influenced the integration of digital technology in mathematics education <ref type="bibr" target="#b27">(Koh, 2018;</ref><ref type="bibr" target="#b29">Kurt &amp; Çakıroğlu, 2023)</ref>. This framework emphasises integrating technological knowledge with pedagogical and content knowledge, leading to more effective teaching strategies <ref type="bibr" target="#b35">(Mishra &amp; Koehler, 2006;</ref><ref type="bibr" target="#b36">Mishra et al., 2023)</ref>. In primary mathematics education, the TPACK framework frequently finds application in five key areas: curriculum planning, assessment formulation, gauging instructors' proficiency in incorporating digital tools, appraising teacher educational initiatives, and providing direction for the design of professional advancement programs <ref type="bibr" target="#b33">(Li et al., 2024)</ref>. For instance, <ref type="bibr" target="#b22">Ibili et al. (2019)</ref> explored how mathematics teachers applied TPACK principles to integrate technology in teaching geometry. In their study, graphing software allowed students to interactively manipulate shapes and measure angles, thus providing an engaging and enriched learning experience <ref type="bibr" target="#b22">(Ibili et al., 2019)</ref>. This demonstrates that applying the TPACK framework allows educators to investigate and reflect on their practice, fostering a deeper integration of technology that enhances pedagogical approaches and facilitates a better understanding of mathematical concepts among primary students <ref type="bibr" target="#b28">(Koh et al., 2016)</ref>. The TPACK framework is highly relevant for this study as it provides a comprehensive approach to evaluating and improving teachers' ability to integrate AI in their mathematics teaching practices.</p><p>TAM primarily focuses on two pivotal factors: perceived ease of use (PEoU) and perceived usefulness (PU) <ref type="bibr" target="#b6">(Davis, 1989;</ref><ref type="bibr" target="#b7">Davis et al., 1989)</ref>. These elements significantly influence teachers' decisions to incorporate digital tools into their teaching practice and their attitudes toward integrating digital technologies <ref type="bibr" target="#b11">(Eickelmann &amp; Vennemann, 2017;</ref><ref type="bibr" target="#b16">Gurer, 2021)</ref>. For example, <ref type="bibr" target="#b45">Teo (2011)</ref> used the TAM to examine how five key factors (PU, PEoU, subjective norms, facilitating conditions, and attitudes) affect teachers' intention to adopt technology. The study concluded that PU and PEoU were the most significant predictors of teachers' positive attitudes towards integrating technology into their teaching practices <ref type="bibr" target="#b45">(Teo, 2011)</ref>. Indeed, many researchers have found that PEoU and PU are two significant predictors of measuring teachers' attitudes towards technology utilisation <ref type="bibr" target="#b16">(Gurer, 2021;</ref><ref type="bibr" target="#b22">Ibili et al., 2019;</ref><ref type="bibr" target="#b34">Mailizar et al., 2021;</ref><ref type="bibr" target="#b46">Teo et al., 2008)</ref>. TAM is highly relevant to this study as it provides a robust framework for understanding the factors that influence teachers' attitudes and intentions towards adopting AI tools in primary mathematics education, complementing the insights gained from the TPACK framework.</p><p>The combination of TPACK and TAM frameworks provides a holistic approach to understanding the integration of digital technology in mathematics education <ref type="bibr" target="#b23">(Joo et al., 2018;</ref><ref type="bibr" target="#b34">Mailizar et al., 2021)</ref>. TPACK offers a comprehensive view of how technological, pedagogical, and content knowledge interact to facilitate effective teaching practices <ref type="bibr" target="#b36">(Mishra et al., 2023)</ref>. At the same time, TAM complements this by focusing on teachers' attitudes and perceptions toward adopting AI tools <ref type="bibr" target="#b24">(Khong et al., 2023)</ref>. By integrating these frameworks, this study examines how the knowledge dimensions (TPACK) and the attitudinal dimensions (TAM) influence AI integration in primary mathematics education. Specifically, these two theories enable the researcher to explore how teachers' proficiency in integrating technology with pedagogy and content knowledge, combined with their perceptions of technology's usefulness and ease of use, collectively impact their adoption of AI tools in the classroom. This complementary relationship enables a nuanced analysis of the factors that support or hinder the adoption of AI tools in primary mathematics education.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>External Factors in AI Integration for Primary Mathematics Education</head><p>Previous research has emphasized that CF, including resource availability, institutional support <ref type="bibr" target="#b48">(Vongkulluksn et al., 2018)</ref>, educational policy <ref type="bibr" target="#b27">(Koh, 2018)</ref>, and cultural attitudes towards technology <ref type="bibr" target="#b12">(Ertmer &amp; Ottenbreit-Leftwich, 2010)</ref>, play a crucial role in the integration of digital tools in education <ref type="bibr" target="#b20">(Hew &amp; Brush, 2007)</ref>. These studies have extensively examined these factors, highlighting their crucial role in determining the success of technology integration efforts. For example, a study by <ref type="bibr" target="#b47">Tondeur et al. (2017)</ref> demonstrated that schools with robust technological infrastructure and administrative encouragement were more adept at incorporating digital technology into their curriculum. Conversely, schools with limited resources or insufficient administrative backing often struggle to implement such technologies effectively, highlighting the disparity in technological integration across different educational settings. Indeed, understanding contextual factors is crucial for this study as they play a pivotal role in the adoption and effective utilization of AI tools in primary mathematics education.</p><p>Previous research has also emphasized the importance of EC in the integration of digital tools in education. EC includes factors such as the rigid nature of curriculum standards, school norms, and traditional assessment methods, all of which can influence the adoption of innovative, technology-driven teaching methods <ref type="bibr" target="#b13">(Ertmer et al., 2012)</ref>. For example, <ref type="bibr" target="#b37">Pellegrino and Quellmalz (2010)</ref> discussed the relationship between high-stakes assessments and technology integration, advocating for the use of technological means to improve the fairness and accuracy of assessments. Also, <ref type="bibr" target="#b5">Chou et al. (2024)</ref> found that the collaboration between colleagues, the competent leadership, and the school's innovation concept plays a critical role in adopting AI tools among tertiary teachers. However, effectively leveraging AI for this purpose remains a significant challenge for mathematics educators during the post-pandemic era. Therefore, it is essential for this study to understand these EC, as they are pivotal in shaping the effective adoption of AI tools in primary mathematics education.</p><p>PCI is another critical factor influencing the successful implementation of AI in education. The attitudes and support of parents and the wider community towards technology use in schools play a significant role <ref type="bibr" target="#b30">(Lawrence &amp; Fakuade, 2021)</ref>. A research study by del <ref type="bibr" target="#b8">Olmo-Muñoz et al. (2023)</ref> found that positive community and parental attitudes towards technology significantly influenced the effectiveness of technology integration in classrooms during the COVID-19 pandemic. They believe that communities and parents have a positive attitude toward technology, and teachers may be more inclined to adopt and accept new technologies, such as AI, thus promoting the effectiveness of technology integration in the classroom (del <ref type="bibr" target="#b8">Olmo-Muñoz et al., 2023)</ref>. Communities and parents that embrace technological advancements in education can create an environment more conducive to adopting digital technologies such as AI, thereby facilitating a more enriched learning experience for students in primary mathematics <ref type="bibr" target="#b30">(Lawrence &amp; Fakuade, 2021)</ref>. Recognizing the importance of PCI highlights the necessity of external support in enhancing the adoption and effective utilization of AI tools in primary mathematics education, ensuring a collaborative effort between educators, parents, and the community.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Research Gaps</head><p>The discussion above underscores the complexity of factors impacting the adoption of AI in primary mathematics education. Although internal factors like TPACK and attitudes are vital, external factors such as CF, EC, and PCI are equally influential. It is crucial to address these aspects to understand the challenges and opportunities in utilizing AI in primary mathematics education. However, current research often overlooks the interaction of factors like TPACK, teacher attitudes, CF, EC, and PCI. This gap is particularly pronounced in primary mathematics education, where effective AI integration depends on teacher proficiency, resource availability, and broader societal factors. The post-pandemic educational landscape has introduced new complexities and accelerated changes in teaching and learning, further emphasizing the need for research into the effective integration of AI in mathematics education. To address this, the study proposes 11 hypotheses exploring the individual effects of internal and external factors on AI utilization in primary mathematics education (See Table <ref type="table" target="#tab_0">1</ref>; Fig. <ref type="figure" target="#fig_1">1</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Hypotheses</head><p>H1: Attitude positively influences AIU. H2: TCK_TPK has a positive effect on AIU. H3: TCK_TPK positively influences Attitude. H4: TCK_TPK has a positive effect on TPACK.  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Method</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Research Design</head><p>This study employs a quantitative research design to explore the intricate relationships among seven key factors: AIU, TCK_TPK, TPACK, EC, CF, Attitude, and PCI. To achieve this, a specific instrument, the Scale of Mathematics Teachers' Technology Integration (SMTTI), was designed for this research <ref type="bibr" target="#b32">(Li, 2024)</ref>.</p><p>The SMTTI, a seven-factor, 5-point Likert scale (31 questions) questionnaire (see Table <ref type="table">3</ref>), draws from the scales developed by <ref type="bibr" target="#b39">Schmidt et al. (2009)</ref>, <ref type="bibr" target="#b3">Chai et al. (2013), and</ref><ref type="bibr" target="#b31">Li (2023)</ref>, providing a solid foundation for understanding the multifaceted nature of technology integration in educational contexts. The seven factors included in the questionnaire are derived from key constructs identified in previous research and have been tailored to align with the specific nuances of AI in Chinese primary mathematics education. The rationale for designing the SMTTI stems from the need to comprehensively assess the complex interactions between AIU and various factors, including TCK_TPK, TPACK, EC, CF, Attitude, and PCI. By capturing data on these factors, the SMTTI allows for a nuanced understanding of how different elements interact to influence the adoption and effectiveness of AI tools in primary mathematics education.</p><p>The quantitative approach adopted in this study enables data collection that can be rigorously analyzed using statistical techniques to unveil patterns and potential relationships <ref type="bibr" target="#b2">(Bryman, 2016)</ref>. Partial Least Squares Structural Equation Modelling (PLS-SEM) was employed because of its suitability in handling complex models with multiple constructs and indicators, especially when the goal is prediction and theory development rather than theory testing <ref type="bibr" target="#b17">(Hair et al., 2011)</ref>. PLS-SEM is particularly useful for exploratory research, where the aim is to maximize the explained variance of dependent constructs and assess the predictive capabilities of the model. PLS-SEM is a reasonable choice for this study due to its ability to handle small to medium sample sizes, its robustness in the face of non-normal data distributions, and its flexibility in modeling complex relationships <ref type="bibr" target="#b19">(Henseler et al., 2015)</ref>. This approach enables a detailed examination of the direct, indirect, and total effects among the constructs, providing a comprehensive understanding of the factors influencing the utilization of AI tools in primary mathematics education.</p><p>Through this rigorous methodology, the study aims to contribute empirical evidence to the growing body of knowledge regarding the factors that influence the utilization of AI tools in the educational sector, focusing on primary mathematics education.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Participants</head><p>This study surveyed primary mathematics teachers in southwest China (Chongqing) using random sampling, and a total of 498 teachers completed the questionnaire. As shown in Table <ref type="table">2</ref>, the sample predominantly consisted of female teachers (80.3%), which reflects the general trend in China's primary education sector. Most teachers had more than six years of experience, with a significant portion (44%) having over 15 years of experience. The majority of participants held bachelor's degrees (74.9%), indicating a relatively high level of formal education among the sample. In this sample, primary mathematics teachers are specialized in teaching mathematics, come from urban schools, and do not undertake other subject teaching responsibilities. These schools generally have well-developed information technology infrastructures. The sample includes teachers evenly distributed across all six grades of primary education (13.3% in Grade 1, 17.3% in Grade 2, 21.5% in Grade 3, 16.1% in Grade 4, 16.9% in Grade 5, and 15.1% in Grade 6). This sample provides a comprehensive view of the challenges and opportunities in primary mathematics education at different grade levels in this region of China. This demographic data provides a broad understanding of the participant's background, which is relevant for analyzing AI integration in primary mathematics education.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Instrument</head><p>To address the research questions, the SMTTI was specifically designed, developed, and validated for this study as detailed in the publication <ref type="bibr" target="#b32">(Li, 2024)</ref>. The SMTTI was used to investigate the interrelationships among seven key constructs: Attitude, AIU, CF, TCK_TPK, TPACK, EC, and PCI. Below is Table <ref type="table">3</ref> summarizing the seven constructs, the number of items for each, and examples of corresponding items.</p><p>The scale developed for this study exhibits strong reliability and validity, as evidenced by its fit indices, Composite Reliability (CR), and Average Variance Extracted (AVE) values <ref type="bibr" target="#b32">(Li, 2024)</ref>. These psychometric properties make the SMTTI an effective tool for exploring the complex relationships between these factors in primary mathematics education.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data Collection</head><p>The data collection for this study involved primary mathematics teachers across Chinese schools, conducted in collaboration with Chongqing Jiulongpo District Teacher Education College. Using Qualtrics, the survey was distributed via WeChat, ensuring easy access and a broad participant reach. The educational institution's network was instrumental in survey dissemination. Participant confidentiality and anonymity were strictly maintained to ensure ethical compliance. In addition to the SMTTI scale, the survey included demographic questions and an informed consent form outlining the study's purpose and ethical considerations <ref type="bibr" target="#b2">(Bryman, 2016)</ref>. Conducted over a month, participants were regularly reminded to ensure comprehensive data collection. A digital poster with a QR code for the survey effectively communicated the study's objectives and participation procedures. This method secured a response rate of 49.8% (498 responses out of 1000 surveys distributed), while upholding ethical research standards. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data Analysis</head><p>In this study, using SmartPLS 4 software to investigate the relationships among the seven factors, PLS-SEM analysis was employed. Additionally, PLS-SEM is particularly suitable for research where the primary aim is to explore and confirm potential theoretical relationships, making it ideal for this study's objectives <ref type="bibr" target="#b17">(Hair et al., 2011)</ref>. The data analysis comprised two main stages: the measurement and structural models.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Measurement Model</head><p>The measurement model's validity was assessed through several criteria. Factor loadings were evaluated to determine the individual items' contributions to their respective constructs, following the recommended threshold of around 0.70, as suggested by <ref type="bibr" target="#b18">Hair et al. (2018)</ref>, indicating satisfactory loadings. Construct reliability was examined using Cronbach's alpha, CR, and rho_A values, with values above 0.70 considered satisfactory according to <ref type="bibr" target="#b10">(Dijkstra &amp; Henseler, 2015;</ref><ref type="bibr" target="#b18">Hair et al., 2018)</ref>. This ensured the reliability of the constructs within the model. Additionally, to assess the measurement model's validity, AVE values of constructs were calculated. An AVE value above 0.50, as noted by <ref type="bibr" target="#b18">Hair et al. (2018)</ref>, indicates that more than half of the variance of the indicators is accounted for by the latent variable, signifying adequate convergent validity. Multicollinearity was also examined among the indicators using Variance Inflation Factor (VIF) values. According to <ref type="bibr" target="#b18">Hair et al. (2018)</ref>, VIF values close to but below five indicate an absence of multicollinearity concerns. Furthermore, discriminant validity was assessed using the <ref type="bibr" target="#b14">Fornell and Larcker (1981)</ref> criterion, comparing the square roots of the AVE values for each construct against the shared correlations with other constructs.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Structural Model</head><p>The explanatory power was evaluated using R 2 values for the structural model for the outcome variables. Following <ref type="bibr" target="#b18">Hair et al. (2018)</ref>, R 2 values of 0.25, 0.50, and 0.75 indicated weak, moderate, and substantial explanatory power, respectively. The relationships between structures were examined using a bootstrapping method with 5000 sub-samples, as a 0.05 significance level. In addition to the blindfolding method for assessing predictive relevance, the study incorporated the analysis of f 2 values to provide a more comprehensive evaluation of the model's explanatory power.</p><p>According to <ref type="bibr" target="#b41">Shmueli et al. (2016)</ref>, Q 2 values indicate the model's predictive strength, with thresholds of 0.25 and 0.50 signifying medium and large explanatory power, respectively. However, it is essential to note that f 2 values, which measure the effect size of a predictor variable on a dependent variable, are also crucial in determining the overall validity and impact of the model. By incorporating both Q 2 and f 2 metrics, the study aimed to holistically evaluate the model's effectiveness in predicting the relationships among key constructs. In summary, the data analysis using PLS-SEM provided a comprehensive evaluation of the measurement and structural models, ensuring the reliability, validity, and predictive power of the study's findings in exploring the relationships among the seven key factors in AI utilisation in primary mathematics education.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Findings</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Validity and Reliability Assessment</head><p>The measurement model assessment for this study demonstrates robust psychometric properties across all examined constructs (See Table <ref type="table" target="#tab_3">4</ref>). Specifically, the constructs AIU, Attitude, CF, EC, PCI, TCK_TPK, and TPACK showed strong factor loadings, ranging from 0.862 to 0.952, as detailed in Fig. <ref type="figure">2</ref>. These high loadings indicate substantial contributions from individual items to their respective constructs, affirming the appropriateness of the measurement items. Regarding multicollinearity, all constructs' VIF values were within acceptable ranges, varying between 2.463 Additionally, all constructs' AVE values surpassed the recommended cutoff of 0.50, with a range from 0.779 to 0.89, signifying sound convergent validity. This indicates that a significant proportion of the variance in the indicators is effectively captured by the latent constructs. As seen in Table <ref type="table" target="#tab_4">5</ref>, the discriminant validity assessment further strengthens the model's validity. The square roots of the AVE for each construct (AIU, Attitude, CF, EC, PCI, TCK_TPK, TPACK) consistently exceeded their correlations with other constructs. This confirms strong discriminant validity, ensuring each construct uniquely captures its domain. Therefore, the measurement model assessment underscores that all constructs in this study exhibit strong reliability and validity. The factor loadings, VIF values, reliability coefficients, and AVE values affirm that the model is robust and aptly suited for examining the relationships among the constructs related to the utilisation of AI tools in primary mathematics education. The constructs are reliable, valid, distinct, and well-defined, making the model suitable for exploring the nuanced dynamics of AI integration in educational settings.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Structural Model Analysis</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Influence of External Factors on AIU</head><p>Based on Table <ref type="table" target="#tab_5">6</ref>, the study can draw several conclusions about the relationships and predictive capabilities within the studied model. Firstly, the direct effect of attitude on AIU is significant (β = 0.304, p &lt; 0.001) with a small effect size ( f 2 = 0.079). While the effect size is relatively small, it still indicates that attitude has a meaningful direct influence on AIU. In contrast, CF exerts both a significant direct (β = 0.181, p = 0.002) and indirect effect on AIU (β = 0.118, p &lt; 0.001), culminating in a total effect of 0.298 and a small effect size ( f 2 = 0.034). This suggests that CF influences AIU both directly and through other constructs. CF's impact on EC is marked by a strong direct effect (β = 0.657, p &lt; 0.001) with a large effect size ( f 2 = 0.761), indicating CF as a potent predictor of EC. Simi- larly, a significant direct effect of EC on AIU (β = 0.179, p &lt; 0.001) is noted, though with a smaller effect size ( f 2 = 0.039). The direct effect of PCI on AIU is not significant (β = 0.088, p = 0.06), but its indirect effect is substantial (β = 0.196, p &lt; 0.001), leading to a total effect of 0.283, albeit with a minimal overall impact ( f 2 = 0.009). A significant direct effect (β = 0.656, p &lt; 0.001) with a large effect size ( f 2 = 0.754) indicates that PCI is a strong predictor of CF. These findings underscore the multifaceted influence of external factors on AIU in primary mathematics education. CF, including resource availability, institutional support, and cultural attitudes towards technology, are crucial in shaping the educational environment and influencing both the direct and indirect utilisation of AI tools. CF significantly enhances EC, highlighting the importance of robust support systems and infrastructures in facilitating technology integration. The non-significant direct effect of PCI on AIU, contrasted with its significant indirect effect, suggests that parental and community involvement primarily operates through other mediating variables, such as CF. This underscores the importance of a supportive community environment that indirectly influences AI integration by fostering favourable contextual conditions. These results indicate that the broader educational context and community support play a vital role in successfully adopting and utilising AI tools in primary mathematics education. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Influence of Internal Factors on AIU</head><p>The analysis underscores the significance of TCK_TPK in influencing various constructs within the model. Notably, TCK_TPK demonstrates significant effects on Attitude and TPACK, with the most pronounced total effect observed on Attitude ( = 0.636, p &lt; 0.001) and the largest effect size on TPACK ( f 2 = 0.66). This large effect size emphasizes the crucial role of TCK_TPK in shaping TPACK, reflecting a substantial and practical influence on how teachers integrate technology into their pedagogical practices. Even smaller effects ( f 2 = 0.129) in the model can offer meaningful insights, as they suggest incremental yet significant influences on teacher attitudes and technology adoption. However, when considering TPACK's relationship with other constructs, it presents a different dynamic. While TPACK strongly influences Attitude ( = 0.528, p &lt; 0.001) with a substantial effect size ( f 2 = 0.393), its direct effect on AIU is not statistically significant ( = 0.095, p = 0.069). It is associated with a relatively small effect size ( f 2 = 0.01). This indicates that while TPACK is a critical factor in determining attitude, its direct impact on AIU is minimal, suggesting the potential existence of mediating factors or indirect pathways in the model that need further exploration.</p><p>These findings reveal the complexity of internal factors affecting AIU in primary mathematics education. The significant influence of TCK_TPK on both Attitude and TPACK highlights the importance of teachers' technological and pedagogical content knowledge in shaping their perceptions and overall teaching capabilities. The strong impact of TCK_TPK on TPACK further emphasizes the need for comprehensive professional development programs that enhance teachers' integrated knowledge bases, which are crucial for effective technology integration. However, the minimal direct impact of TPACK on AIU suggests that having a robust knowledge base alone is not sufficient for the effective utilization of AI tools. This finding implies that other mediating factors, such as teachers' attitudes and possibly external support mechanisms, play a critical role in translating TPACK into practical AIU. Therefore, while a good response to TPACK questions is essential for fostering positive attitudes towards technology, additional support and resources are necessary to bridge the gap between knowledge and actual AI use in the classroom.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Explanatory and Predictive Power of the Model</head><p>Regarding the model's explanatory and predictive power (See Table <ref type="table" target="#tab_6">7</ref>), AIU stands out with a moderate proportion of variance explained ( R 2 = 0.642) and a large pre- dictive relevance ( Q 2 = 0.534). This indicates the model's effectiveness in explaining and predicting AIU. For Attitude, CF, EC, and TPACK, the model demonstrates a moderate level of explained variance (moderate R 2 values) and varying levels of pre- dictive relevance. Attitude shows a large predictive relevance ( Q 2 = 0.505), suggest- ing the model's strong predictive capability for this construct. CF, EC, and TPACK, with medium predictive relevance ( Q 2 values of 0.353, 0.34, and 0.312, respectively), indicate a reasonable ability to predict these constructs, albeit not as robustly as AIU or Attitude. Therefore, the model provides insight into the direct, indirect, and total effects among various constructs and their predictive relevance. The findings indicate nuanced relationships and varying degrees of influence, which are crucial for understanding the dynamics within the model.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Summary of Hypotheses Testing</head><p>The results in Table <ref type="table" target="#tab_7">8</ref> present a comprehensive overview of the tested hypotheses in the study. It is observed that most of the hypotheses were accepted, indicating significant relationships as proposed in the model. Specifically, attitude, TCK_TPK, CF, and EC are found to have a positive and significant influence on AIU, underlining their critical roles in the context of AI adoption and application. TCK_TPK also positively affects attitude and TPACK, suggesting its multifaceted influence within the model.</p><p>However, two hypotheses were rejected: H5, where TPACK's direct influence on AIU was non-significant, and H10, where PCI did not demonstrate a direct significant effect on AIU. These rejections highlight complex dynamics in the model, primarily pointing towards potential indirect pathways and the need for further  investigation into the mediated effects within the system. These findings indicate that while TPACK significantly influences attitude, its direct effect on AIU is minimal, suggesting other mediating factors may play a crucial role. Similarly, the nonsignificant direct impact of PCI on AIU, despite its significant indirect effect, points to the importance of contextual factors in mediating this relationship. These nuances underscore the complexity of integrating AI into primary mathematics education. These findings are relevant to China's primary education system. The educational landscape in China is characterized by rigorous curriculum standards, high-stakes assessments, and a diverse range of technological infrastructure across urban and rural areas. The significant influence of CF and EC on AIU highlights the necessity for adequate resources, institutional support, and alignment of AI tools with curricular goals. The indirect influence of PCI on AIU suggests that community and parental support, while crucial, must be coupled with robust institutional frameworks to facilitate effective AI integration. This underscores the need for comprehensive strategies that address both the internal factors of primary mathematics teachers (through TCK_TPK, TPACK, and attitude) and the broader educational ecosystem (through CF, EC, and PCI).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Hypothesis</head><p>Given the rapid advancements in AI and its potential to transform educational practices, these insights are crucial for policymakers, educators, and stakeholders aiming to enhance the adoption and effectiveness of AI in primary mathematics education. This is especially pertinent in the post-pandemic era, where the reliance on digital tools and remote learning solutions has accelerated, making the integration of AI in primary mathematics education more relevant than ever.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Influence of Internal Factors on AIU in Primary Mathematics Education</head><p>This study offers a comprehensive exploration of internal factors influencing the utilisation of AI in primary mathematics education, with a specific focus on teacher attitudes, TCK_TPK, and TPACK. The significance of these factors is underscored by integrating theoretical frameworks with empirical findings, providing a nuanced understanding of AI integration within educational contexts.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Teacher Attitudes and AI Adoption</head><p>This study underscores the pivotal role of teacher attitudes in the successful adoption of AI technologies in primary mathematics education, as demonstrated by H1. This critical psychological aspect suggests that teachers' beliefs and perceptions significantly shape their intentions to embrace and effectively implement AI tools such as Ernie Bot, Qwen, and Khan Academy in their classrooms, especially in the post-pandemic era where digital tools have become increasingly integral to education. The significant effect of teacher attitudes on AIU reinforces the importance of fostering positive attitudes among educators. This aligns with the postulations of the TAM <ref type="bibr">(Davis,1989)</ref>, which highlights the significant influence of PEoU and PU on technology adoption. Positive teacher attitudes towards AI technologies directly correlate with their PEoU and PU, thereby promoting integration <ref type="bibr" target="#b0">(Almogren et al., 2024)</ref>. Additionally, the findings are consistent with the emphasis on attitudes in technology integration as suggested by <ref type="bibr" target="#b22">Ibili et al. (2019)</ref> and <ref type="bibr" target="#b45">Teo (2011)</ref>. Both studies found that positive teacher attitudes are crucial for effectively incorporating new technology into teaching practices, reinforcing the importance of fostering such attitudes for successful AI adoption in primary mathematics education.</p><p>Unlike previous studies, this research specifically focuses on AI in primary mathematics education, an area that has been less explored. For instance, <ref type="bibr" target="#b22">Ibili et al. (2019)</ref> focused on augmented reality tutoring systems, and Teo (2011) examined general technologies. In contrast, this study delves into language processing and machine learning AI tools, highlighting the unique challenges and opportunities in integrating these advanced technologies into primary mathematics classrooms. The importance of fostering positive attitudes towards AI among educators is underscored, emphasising the need for targeted professional development initiatives. Such initiatives are crucial in AI tools adoption, as they enhance receptivity and proficiency among primary mathematics teachers, especially in the post-pandemic era where the reliance on digital tools has accelerated.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Teachers' TPACK and AI Adoption</head><p>This study reveals that TCK_TPK significantly impacts Attitude, TPACK, and AIU, as evidenced by H2, H3, and H4. This indicates that teachers' TPACK is crucial for the successful adoption and application of AI technologies in primary mathematics education. This finding aligns with prior research emphasizing the importance of TPACK for effective technology integration. For instance, <ref type="bibr" target="#b36">Mishra et al. (2023)</ref> highlighted the necessity of TPACK for blending AI tools with pedagogy and content, while <ref type="bibr" target="#b24">Khong et al. (2023)</ref> demonstrated similar effects of TCK and TPK on enhancing teachers' attitudes and instructional practices. This study extends these conclusions by showing the direct and indirect effects of TCK_TPK on AIU, further validating the critical role of comprehensive professional development programs in supporting technology integration. However, this study diverges from previous findings by showing that TCK_TPK's direct impact on AIU is minimal, despite its significant influence on AIU. This contrasts with research by <ref type="bibr" target="#b28">Koh et al. (2016)</ref> and <ref type="bibr" target="#b34">Mailizar et al. (2021)</ref>, which found direct relationships between TPACK and technology integration success. The discrepancy can be attributed to the unique challenges posed by AI technologies, which require more than just a solid knowledge base for effective utilization.</p><p>In the post-pandemic era, the rapid shift to digital tools has accentuated the need for additional support mechanisms <ref type="bibr" target="#b15">(Fortus et al., 2023)</ref>. This study suggests that while TPACK is essential for fostering positive attitudes towards AI, other factors such as teachers' attitudes and external support possibly play critical roles in translating TPACK into practical AIU. The findings imply that comprehensive professional development programs should not only enhance TPACK but also address these additional factors to bridge the gap between knowledge and application. This is one of the core arguments of this study, highlighting the multifaceted support required for effective AI integration in education. Indeed, the finding that TPACK's direct influence on AIU was non-significant (H5), further supports this argument. This indicates the presence of complex dynamics within the model, pointing to potential indirect pathways and the need for further investigation into mediated effects.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Influence of External Factors on AIU in Primary Mathematics Education</head><p>This study reveals that CF and EC significantly impact AIU based on the findings of Hypotheses H7 and H9. This finding echoes the multifaceted nature of technology adoption, emphasizing the crucial role of education resources <ref type="bibr" target="#b20">(Hew &amp; Brush, 2007)</ref>, institutional support <ref type="bibr" target="#b48">(Vongkulluksn et al., 2018)</ref>, curriculum alignment <ref type="bibr" target="#b27">(Koh, 2018)</ref>, school norms, and traditional assessment methods <ref type="bibr" target="#b13">(Ertmer et al., 2012)</ref> in integrating digital technology in primary mathematics education, as extensively examined in previous research. For instance, <ref type="bibr" target="#b47">Tondeur et al. (2017)</ref> demonstrated that schools with robust technological infrastructure and administrative encouragement were more adept at incorporating digital technology into their curriculum. Conversely, schools with limited resources or insufficient administrative backing often struggle to implement such technologies effectively.</p><p>However, this study adds a new dimension by incorporating the role of PCI. This study found that PCI did not have a significant direct impact on AIU (H10). However, it did have a substantial indirect effect, indicating a more complex interplay where PCI affects AIU through its influence on contextual factors. This finding challenges the direct impact often assumed in the literature (del <ref type="bibr" target="#b8">Olmo-Muñoz et al., 2023;</ref><ref type="bibr" target="#b30">Lawrence &amp; Fakuade, 2021)</ref>. Simultaneously, this finding highlights that strengthening community ties and involving parents and community members in schools' AI integration activities and discussions is essential. This shift from mere information dissemination to active engagement fosters a supportive environment conducive to effectively integrating AI in primary mathematics classrooms. These findings underscore the necessity of addressing both CF and EC while also engaging the broader community to create an environment that supports the successful integration of AI in primary mathematics education.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Implications</head><p>The findings of this study offer four implications for the integration of AI technologies in primary mathematics education. First, the significant influence of teacher attitudes on AIU underscores the importance of fostering positive attitudes towards AI among educators. This can be achieved through targeted professional development initiatives that not only enhance teachers' TPACK but also address psychological barriers to technology adoption. For instance, workshops and training programs should be designed to boost teachers' confidence in using AI tools such as Ernie Bot, Qwen, and Khan Academy, demonstrating their practical benefits and ease of use. By enhancing teachers' PEoU and PU of AI tools, these initiatives can promote a more receptive attitude towards AI integration. Second, the minimal direct impact of TPACK on AIU, despite its significant indirect effects through attitudes and other mediating factors, highlights the need for comprehensive support systems. Educational institutions should provide ongoing technical and pedagogical support to help teachers translate their TPACK into practical classroom applications. This could include access to AI experts, peer collaboration opportunities, and continuous professional development to keep teachers updated on the latest AI advancements and best practices for their integration in teaching.</p><p>Third, the significant roles of CF and EC in AIU suggest that policy changes, resource allocation, and institutional support are crucial for effective AI integration. Schools need robust technological infrastructure and administrative support to facilitate the adoption of AI tools. Policymakers should prioritize investments in digital infrastructure, particularly in underserved areas, to ensure equitable access to AI technologies. Additionally, aligning AI integration with curriculum standards and assessment practices can help mitigate the challenges posed by traditional pedagogical approaches and rigid curriculum structures.</p><p>Finally, the indirect influence of PCI on AIU highlights the importance of engaging parents and community members in AI integration efforts. Schools should foster strong community ties and involve parents in AI-related discussions and activities. This could be achieved through informational sessions, workshops, and collaborative projects that demonstrate the value of AI in enhancing educational outcomes. By creating a supportive community environment, schools can enhance the effectiveness of AI integration in primary mathematics education.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Limitations and Future Study</head><p>This study's focus on primary mathematics teachers in a single region of China limits its generalizability to other areas or educational levels. The cross-sectional design, capturing data at a single point in time, restricts the ability to establish causal relationships or observe temporal changes in AI integration. Additionally, reliance on self-reported data introduces the potential for biases, such as social desirability bias. These factors collectively limit the study's external validity and the robustness of its conclusions.</p><p>To address these limitations, future research should diversify its sample across various regions and educational stages to enhance the generalizability of the findings. Conducting longitudinal studies could provide valuable insights into the progression of AI integration in education and track changes in teacher attitudes and practices over time. Utilizing objective measures or observational data could help validate the findings and reduce the biases inherent in self-reported data. Further studies should consider replicating this research in varied cultural and educational contexts to enhance external validity and clarify the universality of the findings. Qualitative methods, such as interviews or focus groups, could deepen the understanding of educators' experiences with AI and provide richer, context-specific insights. Additionally, future research could examine the impact of specific AI tools, curriculum alignment, and the effects of AI on student outcomes. Investigating potential mediating and moderating factors, such as institutional support and community engagement, would offer a more nuanced view of AI integration in education. Addressing these areas would build on this study's findings, enriching the knowledge base on AI in education and guiding practice and policy.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conclusion</head><p>This study comprehensively explores the internal and external factors influencing AI utilization in primary mathematics education in China. The findings highlight the significant impact of teacher attitudes, TCK_TPK, and TPACK on AI adoption, emphasizing the need for fostering positive attitudes and providing targeted professional development. While TPACK is essential, additional support mechanisms are crucial for translating knowledge into practice, especially post-pandemic. External factors, such as CF and EC, also play critical roles, necessitating policy changes, resource allocation, and institutional support. The indirect influence of PCI on CF underscores the importance of engaging parents and communities in AI integration efforts and fostering a supportive environment. The implications include the need for professional development, enhanced support, and strong community engagement to successfully integrate AI in primary mathematics education, benefiting both students and educators.</p><p>In conclusion, this study provides valuable insights into the complexities of AI integration in education, highlighting the interplay of various factors that influence its adoption. The findings offer a foundation for future research and practical strategies to enhance the effective use of AI technologies in educational settings, contributing to the ongoing development of AI-enhanced learning environments.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>H5:</head><label/><figDesc>TPACK positively influences AIU. H6: TPACK has a positive effect on Attitude. H7: CF have a positive effect on AIU. H8: CF positively influence EC. H9: EC positively influence AIU. H10: PCI positively influences AIU. H11: PCI positively influences CF.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 1</head><label>1</label><figDesc>Fig. 1 Path model</figDesc><graphic coords="8,53.67,58.11,332.04,175.80" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head/><label/><figDesc/><graphic coords="13,53.61,208.32,332.16,155.64" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1</head><label>1</label><figDesc>Difinitions of constructs</figDesc><table><row><cell>Construct</cell><cell>Definition</cell></row><row><cell>AI Utilisation (AIU)</cell><cell>Refers to the extent to which primary mathematics</cell></row><row><cell/><cell>teachers incorporate AI tools, such as Ernie Bot, a</cell></row><row><cell/><cell>generative AI model for natural language processing</cell></row><row><cell/><cell>that can assist in interactive learning and automated</cell></row><row><cell/><cell>feedback, and Khan Academy's adaptive learning</cell></row><row><cell/><cell>system, which leverages machine learning algorithms</cell></row><row><cell/><cell>to provide personalized learning experiences and</cell></row><row><cell/><cell>real-time feedback, into their teaching practices to</cell></row><row><cell/><cell>enhance learning outcomes.</cell></row><row><cell>Technological Content Knowledge and</cell><cell>Combines TCK, which is understanding how to use</cell></row><row><cell>Technological Pedagogical Knowledge</cell><cell>specific technologies to support subject-matter learn-</cell></row><row><cell>(TCK_TPK)</cell><cell>ing, and TPK, which is knowledge of how to use</cell></row><row><cell/><cell>technologies to enhance teaching and learning. Based</cell></row><row><cell/><cell>the TPACK theory, this construct's questions include</cell></row><row><cell/><cell>TCK and TPK aspects, investigating how teachers</cell></row><row><cell/><cell>apply technology specifically in content-related con-</cell></row><row><cell/><cell>texts and in broader pedagogical strategies.</cell></row></table><note><p><p><p><p><p><p><p><p>TPACK</p>Unlike TCK_TPK, which focuses specifically on the interplay between technological content knowledge and technological pedagogical knowledge, TPACK represents a comprehensive understanding that integrates technology, pedagogy, and content knowledge. It emphasizes how these three domains work together to create effective teaching strategies that are not only content-specific but also grounded in pedagogical and technological expertise.</p>Attitude</p>Refers to teachers' perceptions and feelings towards using AI tools in their teaching, influenced by the constructs of PEoU and PU from the TAM. These dimensions are crucial for understanding how teachers' attitudes are shaped and their willingness to adopt AI tools.</p>Educational Challenges (EC) Includes rigid curriculum standards, school norms, and traditional assessment methods that can influence the adoption of innovative, technology-driven methods.</p>Contextual Factors (CF)</p>Encompasses elements such as resource availability, institutional support, and cultural attitudes towards technology, significantly impacting technology integration.</p>Parental and Community Involvement (PCI) Refers to the attitudes and support of parents and the wider community towards technology use in schools, playing a significant role in AI implementation.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 4</head><label>4</label><figDesc>Measure modal assessment Path analysis of constructs influencing AIU and 6.976. This suggests minimal concerns regarding multicollinearity, supporting the independence of the constructs in the model. Regarding internal consistency, each construct exhibited strong reliability, with Cronbach's Alpha and rho_a values exceeding the 0.70 threshold and ranging from 0.905 to 0.969. This robust reliability is further reinforced by high CR scores, which ranged from 0.934 to 0.976, ensuring the dependability of the constructs within the model.</figDesc><table><row><cell>Construct</cell><cell>Factor loadings</cell><cell>VIF</cell><cell>Cronbach's alpha</cell><cell>rho_a</cell><cell>CR</cell><cell>AVE</cell></row><row><cell>AIU</cell><cell>0.899-0.929</cell><cell>3.543-4.808</cell><cell>0.953</cell><cell>0.953</cell><cell>0.963</cell><cell>0.840</cell></row><row><cell>Attitude</cell><cell>0.937-0.952</cell><cell>5.308-6.976</cell><cell>0.969</cell><cell>0.969</cell><cell>0.976</cell><cell>0.890</cell></row><row><cell>CF</cell><cell>0.901-0.923</cell><cell>3.479-4.386</cell><cell>0.948</cell><cell>0.948</cell><cell>0.960</cell><cell>0.828</cell></row><row><cell>EC</cell><cell>0.880-0.910</cell><cell>2.586-3.196</cell><cell>0.914</cell><cell>0.916</cell><cell>0.939</cell><cell>0.795</cell></row><row><cell>PCI</cell><cell>0.862-0.898</cell><cell>2.463-3.125</cell><cell>0.905</cell><cell>0.908</cell><cell>0.934</cell><cell>0.779</cell></row><row><cell>TCK_TPK</cell><cell>0.869-0.925</cell><cell>2.553-3.982</cell><cell>0.918</cell><cell>0.921</cell><cell>0.942</cell><cell>0.803</cell></row><row><cell>TPACK</cell><cell>0.872-0.911</cell><cell>2.641-3.181</cell><cell>0.914</cell><cell>0.918</cell><cell>0.939</cell><cell>0.795</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 5</head><label>5</label><figDesc>Discriminant validity</figDesc><table><row><cell/><cell>AIU</cell><cell>Attitude</cell><cell>CF</cell><cell>EC</cell><cell>PCI</cell><cell>TCK_TPK</cell><cell>TPACK</cell></row><row><cell>AIU</cell><cell>0.917</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>Attitude</cell><cell>0.743*</cell><cell>0.943</cell><cell/><cell/><cell/><cell/><cell/></row><row><cell>CF</cell><cell>0.696*</cell><cell>0.735*</cell><cell>0.910</cell><cell/><cell/><cell/><cell/></row><row><cell>EC</cell><cell>0.669*</cell><cell>0.686*</cell><cell>0.657*</cell><cell>0.891</cell><cell/><cell/><cell/></row><row><cell>PCI</cell><cell>0.635*</cell><cell>0.672*</cell><cell>0.656*</cell><cell>0.648*</cell><cell>0.883</cell><cell/><cell/></row><row><cell>TCK_TPK</cell><cell>0.605*</cell><cell>0.636*</cell><cell>0.612*</cell><cell>0.565*</cell><cell>0.579*</cell><cell>0.896</cell><cell/></row><row><cell>TPACK</cell><cell>0.646*</cell><cell>0.719*</cell><cell>0.655*</cell><cell>0.591*</cell><cell>0.599*</cell><cell>0.630*</cell><cell>0.891</cell></row><row><cell cols="5">The bold number = √ AVE(e.g., AIU √ 0.840 ≈ 0.917 ). * p &lt; 0.01</cell><cell/><cell/><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5"><head>Table 6</head><label>6</label><figDesc>Direct, indirect, total effect, and F-square    </figDesc><table><row><cell>Hypotheses</cell><cell>Direct effect</cell><cell/><cell>Indirect effect</cell><cell/><cell>Total effect</cell><cell>f 2</cell></row><row><cell/><cell>T</cell><cell>P</cell><cell>T</cell><cell>P</cell><cell>T</cell><cell>P</cell></row><row><cell>Attitude -&gt; AIU</cell><cell cols="2">0.304 5.350 0.000</cell><cell/><cell/><cell cols="2">0.304 5.350 0.000 0.079</cell></row><row><cell>CF -&gt; AIU</cell><cell cols="6">0.181 3.096 0.002 0.118 3.562 0.000 0.298 5.099 0.000 0.034</cell></row><row><cell>CF -&gt; EC</cell><cell cols="2">0.657 23.906 0.000</cell><cell/><cell/><cell cols="2">0.657 23.906 0.000 0.761</cell></row><row><cell>EC -&gt; AIU</cell><cell cols="2">0.179 3.638 0.000</cell><cell/><cell/><cell cols="2">0.179 3.638 0.000 0.039</cell></row><row><cell>PCI -&gt; AIU</cell><cell cols="6">0.088 1.878 0.060 0.196 4.969 0.000 0.283 6.125 0.000 0.009</cell></row><row><cell>PCI -&gt; CF</cell><cell cols="2">0.656 23.051 0.000</cell><cell/><cell/><cell cols="2">0.656 23.051 0.000 0.754</cell></row><row><cell>TCK_TPK -&gt; AIU</cell><cell cols="6">0.090 2.056 0.040 0.253 6.540 0.000 0.342 7.154 0.000 0.011</cell></row><row><cell cols="7">TCK_TPK -&gt; Attitude 0.303 6.952 0.000 0.333 11.434 0.000 0.636 21.278 0.000 0.129</cell></row><row><cell cols="3">TCK_TPK -&gt; TPACK 0.630 21.644 0.000</cell><cell/><cell/><cell cols="2">0.630 21.644 0.000 0.660</cell></row><row><cell>TPACK -&gt; AIU</cell><cell cols="6">0.095 1.820 0.069 0.160 5.048 0.000 0.255 5.196 0.000 0.010</cell></row><row><cell>TPACK -&gt; Attitude</cell><cell cols="2">0.528 13.057 0.000</cell><cell/><cell/><cell cols="2">0.528 13.057 0.000 0.393</cell></row><row><cell cols="2">means the path coefficients</cell><cell/><cell/><cell/><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_6"><head>Table 7</head><label>7</label><figDesc/><table><row><cell>R-square and Q-square</cell><cell>R 2</cell><cell cols="2">Consideration Q 2</cell><cell>Predictive relevance</cell></row><row><cell>AIU</cell><cell>0.642</cell><cell>Moderate</cell><cell>0.534</cell><cell>large</cell></row><row><cell>Attitude</cell><cell>0.572</cell><cell>Moderate</cell><cell>0.505</cell><cell>large</cell></row><row><cell>CF</cell><cell>0.430</cell><cell>Moderate</cell><cell>0.353</cell><cell>medium</cell></row><row><cell>EC</cell><cell>0.432</cell><cell>Moderate</cell><cell>0.340</cell><cell>medium</cell></row><row><cell>TPACK</cell><cell>0.397</cell><cell>Moderate</cell><cell>0.312</cell><cell>medium</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_7"><head>Table 8</head><label>8</label><figDesc>Hypothesis testing results</figDesc><table/></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><p>Acknowledgements I would like to express my sincere gratitude to <rs type="institution">Monash University</rs> for providing the resources, facilities, and support that made this research possible. I am also thankful for the encouragement and inspiration from the education faculty and staff, particularly Emeritus <rs type="person">Professor Colleen Vale</rs>, <rs type="person">Dr Hazel Tan</rs>, and <rs type="person">Dr Jo Blannin</rs>. Also, I acknowledge that I used a customised version of ChatGPT 4o (Open Al, <ref type="url" target="https://chat">https:// chat</ref>. openai. com/) during the preparation of this manuscript to help me refine my phrasing, polish sentences, and reduce my word count. The output from ChatGPT 4o was then significantly adapted to reflect my own style and voice. I take full responsibility for the final content of the manuscript.</p></div>
+			</div>			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Author Contributions Mao Li independently executed every phase of the study, including its conception, design, materials preparation, data collection, and analysis. Mao Li also authored the initial manuscript draft and refined it to the final version, maintaining the study's integrity throughout the entire research process.</p><p>Funding Open Access funding enabled and organized by CAUL and its Member Institutions. I have no sources of funding to disclose for this research study. I declare that this study, 'Integrating Artificial Intelligence in Primary Mathematics Education: Investigating Internal and External Influences on Teacher Adoption,' has non-financial interests directly or indirectly related to the work submitted for publication Data Availability The datasets generated and analysed during the current study are not publicly available due to privacy and ethical considerations but are available from the corresponding author on reasonable request. Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article's Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article's Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit <ref type="url" target="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/ licenses/by/4.0/</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Declarations</head><p>Publisher's Note Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Exploring factors influencing the acceptance of ChatGPT in higher education: A smart education perspective</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Almogren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M</forename><surname>Al-Rahmi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">A</forename><surname>Dahri</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.heliyon.2024.e31887</idno>
+		<ptr target="https://doi.org/10.1016/j.heliyon.2024.e31887"/>
+	</analytic>
+	<monogr>
+		<title level="j">Heliyon</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page">31887</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Future themes of mathematics education research: An international survey before and during the pandemic</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bakker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zenger</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10649-021-10049-w</idno>
+		<ptr target="https://doi.org/10.1007/s10649-021-10049-w"/>
+	</analytic>
+	<monogr>
+		<title level="j">Educational Studies in Mathematics</title>
+		<imprint>
+			<biblScope unit="volume">107</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="24"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bryman</surname></persName>
+		</author>
+		<title level="m">Social research methods</title>
+		<imprint>
+			<publisher>Oxford University Press</publisher>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>5th ed.</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Exploring Singaporean Chinese language teachers' technological pedagogical content knowledge and its relationship to the teachers' pedagogical beliefs</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Chai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">K</forename><surname>Chin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H L</forename><surname>Koh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">L</forename><surname>Tan</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s40299-013-0071-3</idno>
+		<ptr target="https://doi.org/10.1007/s40299-013-0071-3"/>
+	</analytic>
+	<monogr>
+		<title level="j">The Asia-Pacific Education Researcher</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="657" to="666"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Exploring the digital divide: The use of digital technologies in Ontario public schools</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="DOI">10.21432/T2KP6F</idno>
+		<ptr target="https://doi.org/10.21432/T2KP6F"/>
+	</analytic>
+	<monogr>
+		<title level="j">Canadian Journal of Learning and Technology</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1" to="23"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Teachers' adoption of AI-supported teaching behavior and its influencing factors: Using structural equation modeling</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Chou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Shen</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s40692-024-00332-z</idno>
+		<ptr target="https://doi.org/10.1007/s40692-024-00332-z"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Computers in Education</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Perceived usefulness, perceived ease of use, and user accptance of information technology</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">D</forename><surname>Davis</surname></persName>
+		</author>
+		<idno type="DOI">10.2307/249008</idno>
+		<ptr target="https://doi.org/10.2307/249008"/>
+	</analytic>
+	<monogr>
+		<title level="j">MIS Quarterly</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="319" to="340"/>
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">User acceptance of computer technology: A comparison of two theoretical models</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">D</forename><surname>Davis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">P</forename><surname>Bagozzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">R</forename><surname>Warshaw</surname></persName>
+		</author>
+		<ptr target="http://www.jstor.org/sta-ble/2632151"/>
+	</analytic>
+	<monogr>
+		<title level="j">Management Science</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="982" to="1003"/>
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Intelligent tutoring systems for word problem solving in COVID-19 days: Could they have been (part of) the solution?</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Del Olmo-Muñoz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>González-Calero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">D</forename><surname>Diago</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Arnau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Arevalillo-Herráez</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11858-022-01396-w</idno>
+		<ptr target="https://doi.org/10.1007/s11858-022-01396-w"/>
+	</analytic>
+	<monogr>
+		<title level="j">ZDM -Mathematics Education</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="35" to="48"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Authoring tools for designing intelligent tutoring systems: A systematic review of the literature</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dermeval</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Paiva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">I</forename><surname>Bittencourt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Vassileva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Borges</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s40593-017-0157-9</idno>
+		<ptr target="https://doi.org/10.1007/s40593-017-0157-9"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Artificial Intelligence in Education</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="336" to="384"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Consistent partial least squares path modeling</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">K</forename><surname>Dijkstra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Henseler</surname></persName>
+		</author>
+		<ptr target="https://www.jstor.org/stable/26628355"/>
+	</analytic>
+	<monogr>
+		<title level="j">MIS Quarterly</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="297" to="316"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Teachers' attitudes and beliefs regarding ICT in teaching and learning in European countries</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Eickelmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vennemann</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/1474904117725899</idno>
+		<ptr target="https://doi.org/10.1177/1474904117725899"/>
+	</analytic>
+	<monogr>
+		<title level="j">European Educational Research Journal</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="733" to="761"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Teacher technology change: How knowledge, confidence, beliefs, and culture intersect</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Ertmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T</forename><surname>Ottenbreit-Leftwich</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/15391523.2010.10782551</idno>
+		<ptr target="https://doi.org/10.1080/15391523.2010.10782551"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Research on Technology in Education</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="255" to="284"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Teacher beliefs and technology integration practices: A critical relationship</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Ertmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T</forename><surname>Ottenbreit-Leftwich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Sadik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Sendurur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Sendurur</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.compedu.2012.02.001</idno>
+		<ptr target="https://doi.org/10.1016/j.compedu.2012.02.001"/>
+	</analytic>
+	<monogr>
+		<title level="j">Computers &amp; Education</title>
+		<imprint>
+			<biblScope unit="volume">59</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="423" to="435"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Evaluating structural equation models with unobservable variables and measurement error</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Fornell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">F</forename><surname>Larcker</surname></persName>
+		</author>
+		<idno type="DOI">10.2307/3150979</idno>
+		<ptr target="https://doi.org/10.2307/31509"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Marketing Research</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="39" to="50"/>
+			<date type="published" when="1981">1981</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Shifting from face-to-face instruction to distance learning of science in China and Israel during COVID-19: Students' motivation and teachers' motivational practices</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Fortus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Passentin</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10763-022-10344-9</idno>
+		<ptr target="https://doi.org/10.1007/s10763-022-10344-9"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Science and Mathematics Education</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="2173" to="2183"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Examining technology acceptance of pre-service mathematics teachers in Turkey: A structural equation modeling approach</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Gurer</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10639-021-10493-4</idno>
+		<ptr target="https://doi.org/10.1007/s10639-021-10493-4"/>
+	</analytic>
+	<monogr>
+		<title level="j">Education and Information Technologies</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="4709" to="4729"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">PLS-SEM: Indeed a silver bullet</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Hair</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Ringle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sarstedt</surname></persName>
+		</author>
+		<idno type="DOI">10.2753/MTP1069-6679190202</idno>
+		<ptr target="https://doi.org/10.2753/MTP1069-6679190202"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Marketing Theory and Practice</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="139" to="152"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<title level="m" type="main">Multivariate data analysis</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Hair</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">C</forename><surname>Black</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Babin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Anderson</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<publisher>Cengage Learning EMEA</publisher>
+		</imprint>
+	</monogr>
+	<note>8th ed.</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">A new criterion for assessing discriminant validity in variance-based structural equation modeling</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Henseler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Ringle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sarstedt</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11747-014-0403-8</idno>
+		<ptr target="https://doi.org/10.1007/s11747-014-0403-8"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Academy of Marketing Science</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="115" to="135"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Integrating technology into K-12 teaching and learning: Current knowledge gaps and recommendations for future research</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">F</forename><surname>Hew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Brush</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11423-006-9022-5</idno>
+		<ptr target="https://doi.org/10.1007/s11423-006-9022-5"/>
+	</analytic>
+	<monogr>
+		<title level="j">Educational Technology Research and Development</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="223" to="252"/>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Online teaching and learning in higher education: Lessons learned in crisis situations</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">I</forename><surname>Hofer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Nistor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Scheibenzuber</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.chb.2021.106789</idno>
+		<ptr target="https://doi.org/10.1016/j.chb.2021.106789"/>
+	</analytic>
+	<monogr>
+		<title level="j">Computers in Human Behavior</title>
+		<imprint>
+			<biblScope unit="volume">121</biblScope>
+			<biblScope unit="page">106789</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Applying the technology acceptance model to understand maths teachers' perceptions towards an augmented reality tutoring system</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Ibili</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Resnyansky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Billinghurst</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10639-019-09925-z</idno>
+		<ptr target="https://doi.org/10.1007/s10639-019-09925-z"/>
+	</analytic>
+	<monogr>
+		<title level="j">Education and Information Technologies</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="2653" to="2675"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Factors influencing preservice teachers' intention to use technology: TPACK, teacher self-efficacy, and technology acceptance model</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">J</forename><surname>Joo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Lim</surname></persName>
+		</author>
+		<ptr target="https://www.jstor.org/stable/26458506"/>
+	</analytic>
+	<monogr>
+		<title level="j">Educational Technology &amp; Society</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="48" to="59"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Examining teachers' behavioural intention for online teaching after COVID-19 pandemic: A large-scale survey</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Khong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Celik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">T T</forename><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">T T</forename><surname>Lai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Bui</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10639-022-11417-6</idno>
+		<ptr target="https://doi.org/10.1007/s10639-022-11417-6"/>
+	</analytic>
+	<monogr>
+		<title level="j">Education and Information Technologies</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="5999" to="6026"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Are two heads better than one? The effect of student-AI collaboration on students' learning task performance</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Lee</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11528-022-00788-9</idno>
+		<ptr target="https://doi.org/10.1007/s11528-022-00788-9"/>
+	</analytic>
+	<monogr>
+		<title level="j">TechTrends</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="365" to="375"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Artificial intelligence and education in China</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Knox</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/17439884.2020.1754236</idno>
+		<ptr target="https://doi.org/10.1080/17439884.2020.17542"/>
+	</analytic>
+	<monogr>
+		<title level="j">Learning Media and Technology</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="298" to="311"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Articulating teachers' creation of technological pedagogical mathematical knowledge (TPMK) for supporting mathematical inquiry with authentic problems</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H L</forename><surname>Koh</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10763-018-9914-y</idno>
+		<ptr target="https://doi.org/10.1007/s10763-018-9914-y"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Science and Mathematics Education</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="1195" to="1212"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Teacher professional development for TPACK-21CL: Effects on teacher ICT integration and student outcomes</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H L</forename><surname>Koh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Chai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">Y</forename><surname>Lim</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/0735633116656848</idno>
+		<ptr target="https://doi.org/10.1177/0735633116656848"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Educational Computing Research</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="172" to="196"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Prospective mathematics teachers' TPACK development in graphical data displays: A microteaching lesson study</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kurt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Çakıroğlu</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/0020739x.2023.2246970</idno>
+		<ptr target="https://doi.org/10.1080/0020739x.2023.22469"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Mathematical Education in Science and Technology</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="31"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Parental involvement, learning participation and online learning commitment of adolescent learners during the COVID-19 lockdown</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">C</forename><surname>Lawrence</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">V</forename><surname>Fakuade</surname></persName>
+		</author>
+		<idno type="DOI">10.25304/rlt.v29.2544</idno>
+		<ptr target="https://doi.org/10.25304/rlt.v29.2544"/>
+	</analytic>
+	<monogr>
+		<title level="j">Research in Learning Technology</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page">2544</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Chinese mathematics teachers' TPACK and attitudes toward ICT integration in the post-pandemic era</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.29333/ejmste/13346</idno>
+		<ptr target="https://doi.org/10.29333/ejmste/13346"/>
+	</analytic>
+	<monogr>
+		<title level="j">EURASIA Journal of Mathematics Science and Technology Education</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page">2301</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Assessing Chinese primary mathematics teachers' self-efficacy for technology integration: Development and validation of a multifaceted scale</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/27527263241254496</idno>
+		<ptr target="https://doi.org/10.1177/275272632412544"/>
+	</analytic>
+	<monogr>
+		<title level="j">Asian Journal for Mathematics Education</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="231" to="253"/>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">A systematic review of TPACK research in primary mathematics education</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Vale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Blannin</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s13394-024-00491-3</idno>
+		<ptr target="https://doi.org/10.1007/s13394-024-00491-3"/>
+	</analytic>
+	<monogr>
+		<title level="j">Mathematics Education Research Journal</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Examining the impact of mathematics teachers' TPACK on their acceptance of online professional development</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mailizar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hidayat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Al-Manthari</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/21532974.2021.1934613</idno>
+		<ptr target="https://doi.org/10.1080/21532974.2021.19346"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Digital Learning in Teacher Education</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="196" to="212"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Technological pedagogical content knowledge: A framework for teacher knowledge</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Mishra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Koehler</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/j.1467-9620.2006.00684.x</idno>
+		<ptr target="https://doi.org/10.1111/j.1467-9620.2006.00684.x"/>
+	</analytic>
+	<monogr>
+		<title level="j">Teachers College Record</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="1017" to="1054"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">TPACK in the age of ChatGPT and generative AI</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Mishra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Warr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Islam</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/21532974.2023.2247480</idno>
+		<ptr target="https://doi.org/10.1080/21532974.2023.22474"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Digital Learning in Teacher Education</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="235" to="251"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Perspectives on the integration of technology and assessment</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Pellegrino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Quellmalz</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/15391523.2010.10782565</idno>
+		<ptr target="https://doi.org/10.1080/15391523.2010.10782565"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Research on Technology in Education</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="119" to="134"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Effectiveness of artificial intelligence (AI) in improving pupils' deep learning in primary school mathematics teaching in Fujian province</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Qiu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">A</forename><surname>Ishak</surname></persName>
+		</author>
+		<idno type="DOI">10.1155/2023/9817215</idno>
+		<ptr target="https://doi.org/10.1155/2023/98172"/>
+	</analytic>
+	<monogr>
+		<title level="j">Computational Intelligence and Neuroscience</title>
+		<imprint>
+			<biblScope unit="page">9817215</biblScope>
+			<date type="published" when="2023">2023. 2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Technological pedagogical content knowledge (TPACK): The development and validation of an assessment instrument for preservice teachers</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Schmidt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Baran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Thompson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Mishra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Koehler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">S</forename><surname>Shin</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/15391523.2009.10782544</idno>
+		<ptr target="https://doi.org/10.1080/15391523.2009.10782544"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Research on Technology in Education</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="123" to="149"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Teaching mathematics integrating intelligent tutoring systems: Investigating prospective teachers' concerns and TPACK</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Shin</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10763-021-10221-x</idno>
+		<ptr target="https://doi.org/10.1007/s10763-021-10221-x"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Science and Mathematics Education</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="1659" to="1676"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">The elephant in the room: Predictive performance of PLS models</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Shmueli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Estrada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Chatla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jbusres.2016.03.049</idno>
+		<ptr target="https://doi.org/10.1016/j.jbusres.2016.03.049"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Business Research</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="4552" to="4564"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Those who understand: Knowledge growth in teaching</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">S</forename><surname>Shulman</surname></persName>
+		</author>
+		<idno type="DOI">10.3102/0013189X015002004</idno>
+		<ptr target="https://doi.org/10.3102/0013189X0150020"/>
+	</analytic>
+	<monogr>
+		<title level="j">Educational Researcher</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="4" to="14"/>
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Still w(AI)Ting for the automation of teaching: An exploration of machine learning in Swedish primary education using actor-network theory</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sperling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Stenliden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Nissen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Heintz</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/ejed.12526</idno>
+		<ptr target="https://doi.org/10.1111/ejed.12526"/>
+	</analytic>
+	<monogr>
+		<title level="j">European Journal of Education</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="584" to="600"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Implementation of online home-based learning and students' engagement during the COVID-19 pandemic: A case study of Singapore mathematics teachers</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">Y</forename><surname>Tay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ramachandran</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s40299-021-00572-y</idno>
+		<ptr target="https://doi.org/10.1007/s40299-021-00572-y"/>
+	</analytic>
+	<monogr>
+		<title level="j">The Asia-Pacific Education Researcher</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="299" to="310"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Factors influencing teachers' intention to use technology: Model development and test</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Teo</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.compedu.2011.06.008</idno>
+		<ptr target="https://doi.org/10.1016/j.compedu.2011.06.008"/>
+	</analytic>
+	<monogr>
+		<title level="j">Computers &amp; Education</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="2432" to="2440"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Understanding pre-service teachers' computer attitudes: Applying and extending the technology acceptance model</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Teo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">B</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Chai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Computer Assisted Learning</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="128" to="143"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Understanding the relationship between teachers' pedagogical beliefs and technology use in education: A systematic review of qualitative evidence</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tondeur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Van Braak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Ertmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ottenbreit-Leftwich</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11423-016-9481-2</idno>
+		<ptr target="https://doi.org/10.1007/s11423-016-9481-2"/>
+	</analytic>
+	<monogr>
+		<title level="j">Educational Technology Research and Development</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="555" to="577"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">The role of value on teachers' internalization of external barriers and externalization of personal beliefs for classroom technology integration</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">W</forename><surname>Vongkulluksn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Bowman</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.compedu.2017.11.009</idno>
+		<ptr target="https://doi.org/10.1016/j.compedu.2017.11.009"/>
+	</analytic>
+	<monogr>
+		<title level="j">Computers &amp; Education</title>
+		<imprint>
+			<biblScope unit="volume">118</biblScope>
+			<biblScope unit="page" from="70" to="81"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">The emergence of computational thinking in national mathematics curricula: An Australian example</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Whitney-Smith</surname></persName>
+		</author>
+		<idno type="DOI">10.33902/jpr.202318520</idno>
+		<ptr target="https://doi.org/10.33902/jpr.202318520"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Pedagogical Research</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="41" to="55"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Integrating technology into teaching: Factors influencing rural teachers' innovative behavior</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10639-021-10815-6</idno>
+		<ptr target="https://doi.org/10.1007/s10639-021-10815-6"/>
+	</analytic>
+	<monogr>
+		<title level="j">Education and Information Technologies</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="5325" to="5348"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Accelerated move for AI education in China</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Yang</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/2096531119878590</idno>
+		<ptr target="https://doi.org/10.1177/2096531119878590"/>
+	</analytic>
+	<monogr>
+		<title level="j">ECNU Review of Education</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="347" to="352"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">The effectiveness of AI on K-12 students' mathematics learning: A systematic review and meta-analysis</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Yi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xian</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10763-024-10499-7</idno>
+		<ptr target="https://doi.org/10.1007/s10763-024-10499-7"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Science and Mathematics Education</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Students' use of generative artificial intelligence for proving mathematical statements</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yoon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hwang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">H</forename><surname>Roh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">N</forename><surname>Kwon</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11858-024-01629-0</idno>
+		<ptr target="https://doi.org/10.1007/s11858-024-01629-0"/>
+	</analytic>
+	<monogr>
+		<title level="j">ZDM -Mathematics Education</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">A study of the impact of the new digital divide on the ICT competences of rural and urban secondary school teachers in China</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zhao</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.heliyon.2024.e29186</idno>
+		<ptr target="https://doi.org/10.1016/j.heliyon.2024"/>
+	</analytic>
+	<monogr>
+		<title level="j">Heliyon</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page">29186</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

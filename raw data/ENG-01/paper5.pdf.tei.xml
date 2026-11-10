@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Energy Consumption of a Building by using Long Short-Term Memory Network: A Forecasting Study</title>
+				<funder>
+					<orgName type="full">AUIP "Programa de Movilidad Académica entre Universidades Andaluzas e Iberoamericanas</orgName>
+				</funder>
+				<funder ref="#_EtrJS6Z">
+					<orgName type="full">University of Guayaquil</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Julio</forename><surname>Barzola-Monteses</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Artificial Intelligence and Information Technology research group</orgName>
+								<orgName type="institution">University of Guayaquil</orgName>
+								<address>
+									<settlement>Guayaquil</settlement>
+									<country key="EC">Ecuador</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Department of Computer Science and Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación</orgName>
+								<orgName type="institution">Universidad de Granada</orgName>
+								<address>
+									<settlement>Granada</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mayken</forename><surname>Espinoza-Andaluz</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department" key="dep1">Centro de Energías Renovables y Alternativas</orgName>
+								<orgName type="department" key="dep2">Facultad de Ingeniería Mecánica y Ciencias de la Producción</orgName>
+								<orgName type="institution">Escuela Superior Politécnica del Litoral</orgName>
+								<address>
+									<settlement>Guayaquil</settlement>
+									<country key="EC">Ecuador</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mónica</forename><surname>Mite-León</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">Faculty of Mathematics and Physical Sciences</orgName>
+								<orgName type="institution">University of Guayaquil</orgName>
+								<address>
+									<settlement>Guayaquil</settlement>
+									<country key="EC">Ecuador</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Manuel</forename><surname>Flores-Morán</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">Faculty of Mathematics and Physical Sciences</orgName>
+								<orgName type="institution">University of Guayaquil</orgName>
+								<address>
+									<settlement>Guayaquil</settlement>
+									<country key="EC">Ecuador</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Energy Consumption of a Building by using Long Short-Term Memory Network: A Forecasting Study</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">27BE0EAD649F7F52FBA46114A4E39715</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-09T12:37+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>energy efficiency building</term>
+					<term>electric load time series</term>
+					<term>long short-term memory</term>
+					<term>feed-forward neural networks</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Buildings have a dominant presence in energy consumption for the transition to clean energy. During 2017, construction and operation of buildings worldwide represented more than a third (36%) of final energy used and 40% of the emissions of carbon dioxide. Hence, there is great interest in reducing energy use in this sector, and energy efficiency in buildings to enhance energy performances is a suitable way. In this paper, black-box approaches based on artificial neural networks to predict the electric load of a selected educational building are proposed. The potential and robustness of long short-term memory (LSTM) applied to a dataset with a limited number of days of observations are analyzed. The results in our scenario showed that the LSTM surpasses in accuracy to other techniques such as feed-forward neural networks.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>Energy consumption in buildings represents a dominant role in the transition to clean energy. International Energy Agency report shows increasing trends in energy consumption and energy-related carbon emissions used in the building construction sector. During 2017, buildings worldwide' construction and operation represented more than a third (36%) of the final energy use. The emissions of carbon dioxide (a greenhouse gas) related to the energy used by existing buildings, manufacture of materials, and products for the construction of new buildings accounted for about 40% of the global world emissions in the same year <ref type="bibr" target="#b0">[1]</ref>.</p><p>According to the National Energy Balance 2018, the national consumption in residential, commercial, services, and public administration buildings was approximately 21% of the total consumption in the Ecuadorian case. The primary source of energy used by buildings was electricity, representing 57.6%, i.e., 29.7% residential group and 27.9% for the commercial, services, and public administration group. The demand for total energy in 2018 was 3.8% higher than in 2017. The same behavior has been observed in the historical years, i.e., the demand for energy in Ecuador is increasing annually <ref type="bibr" target="#b1">[2]</ref>.</p><p>Considering the previously mentioned scenario, the Ecuadorian government promotes energy efficiency through a law approved in March 2019. Among the regulated sectors by this law, energy efficiency in buildings (EEB) is considered as part of the regulation <ref type="bibr" target="#b2">[3]</ref>. The EEB is a field of research that has been greatly boosted by interdisciplinary research groups. In Ecuador, some studies have been performed in a selected university administration building <ref type="bibr" target="#b3">[4]</ref>.</p><p>EEB mainly seeks to optimize designs and to enhance energy performances. There is a research field related to building modeling and energy performance prediction. From a research point of view, two approaches are commonly considered: The physical field (white box), oriented to solve equations that simulate the thermal behavior of the building, and the mathematical field (black box), which consists in the implementation of a prediction model based on machine learning techniques <ref type="bibr" target="#b4">[5]</ref>.</p><p>EEB has received massive attention in most countries during the last years. For new buildings, preliminary designs based on zero energy building (ZEB) are required. On the other hand, existing buildings are being modernized and reduce their energy consumption through a sustainable model of building energy efficiency retrofit (BEER) <ref type="bibr" target="#b5">[6]</ref>. Possible solutions for existing buildings include efficient energy management and smart refurbishments. Therefore, an accurate energy prediction is required for optimal decision making <ref type="bibr" target="#b6">[7]</ref>.</p><p>In addition, a bibliographic study about data analysis techniques applied in EEB <ref type="bibr" target="#b7">[8]</ref> shows that in the last ten years, there has been exponential growth in publications of this line of research. Data analysis techniques mostly used are the following: Regression analysis, descriptive statistics, multivariate analysis, computational intelligence, stochastic processes, inferential statistics, and design of experiments.</p><p>In this paper, black-box approaches based on artificial neural network (ANN) to investigate the application of Long Short-Term Memory (LSTM) for energy time series forecasting is applied. The performance of LSTM when there is not a large amount of energy dataset of an educational building is analyzed. For this purpose, contrasts are made with other techniques such as a feed-forward neural network (FNN).</p><p>The rest of the paper is organized as follows. Section II summarizes the related works. In section III, a brief explanation of ANN techniques is presented. Section IV shows the experiment evaluations and discussion of the results. Finally, Section V includes some concluding remarks and directions for future work.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. RELATED WORKS</head><p>ANN rank among the most popular data-driven approaches applied to forecast the building energy consumption <ref type="bibr" target="#b8">[9]</ref>. A comparative analysis of ANN architectures for building energy consumption forecasting is shown in <ref type="bibr" target="#b9">[10]</ref>. It also highlights the importance of accurately forecasting the electrical load of buildings. Experimental results of the cited study indicate that ANN with hyperparameters modified outperforms other forecasting models.</p><p>Some applications of ANN in different types of buildings, according to their use, are found in the literature. A study in <ref type="bibr" target="#b10">[11]</ref> considered office buildings in different climates, and its target is to predict the energy consumption of heating, ventilating, and air conditioning (HVAC) systems. Another case of office buildings in <ref type="bibr" target="#b11">[12]</ref> is presented, in which the total energy consumption of the building is disaggregated in HVAC systems, lights, and electrical sockets. The study presented in <ref type="bibr" target="#b12">[13]</ref> considers an analysis of the building envelope's thermal behavior and other characteristics to predict the energy performance of residential buildings. An energy consumption forecasting tool based on ANN and applied in a public building is detailed in <ref type="bibr" target="#b13">[14]</ref>.</p><p>There are also related works involving LSTM. The study presented in <ref type="bibr" target="#b14">[15]</ref> uses LSTM-based deep recurrent neural network models applied to commercial and residential buildings for predicting electricity consumption. A hybrid model of energy consumption forecasting using LSTM, named eDemand, is used in <ref type="bibr" target="#b15">[16]</ref>. Due to its capacity to learn long-term dependencies, LSTM can be used to predict power consumption and detect anomalies such as theft of electricity <ref type="bibr" target="#b16">[17]</ref>, <ref type="bibr" target="#b17">[18]</ref>.</p><p>In this paper, an extension of previous work is detailed by investigating the potential of LSTM to forecast building energy consumption in an educational building. It is also compared to multilayer perceptron FNN.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. ARTIFICIAL NEURAL NETWORK TECHNIQUES</head><p>ANN is a non-linear computational model inspired by the human brain. In general, the structure of an ANN is made up of three sequential layers: the input layer, the hidden layer, and the output layer. An ANN can have multiple levels of hidden layers. Each layer has several interconnected neurons, and each neuron has an activation function. There are commonly three parameters that define an ANN: i) the interconnection pattern between the neurons of the different layers; ii) the learning process of updating the weights of the interconnections, and iii) the activation function that converts a neuron's weighted input to its output activation <ref type="bibr" target="#b18">[19]</ref>.</p><p>The input layer consists of the regressor variable(s) named features used to estimate the target variable (prediction). The connection between the layers is weighted through the weights found during the neural network's training phase. Many different training methods such as backpropagation, genetic algorithm, Levenberg-Marquardt algorithm are available in the literature. The training goal is to minimize the error between the ANN output and target output, given a set of known inputs and target values <ref type="bibr" target="#b8">[9]</ref>.</p><p>A recurrent neural network (RNN) and Feed-forward neural network (FNN) are considered in this work. Both mentioned networks are examples of ANN.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Feed-forward neural network</head><p>FNN is a type of ANN in which the computations proceed only in the forward direction. FNN is often called multilayer perceptron (MLP) or backpropagation neural network (BPNN). It is essential to notice that the convolutional neural network (CNN) and deep neural network (DNN) are classified as FNN. Fig. <ref type="figure">1</ref> depicts a typical FNN topology.</p><p>During the last years, FNN has achieved updated performance in various supervised or unsupervised machine learning applications. Its success highly depends on the independence assumption among the training and test data <ref type="bibr" target="#b19">[20]</ref>.</p><p>In this study, the performance of RNN-LSTM with a standard one hidden layer FNN-MLP is analyzed.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Recurrent neural network</head><p>A time series is a set of samples taken at regular time intervals. Time series analysis comprises a vast collection of techniques for analyzing historical temporal data to extract meaningful features or characteristics of the data. Time series have two essential characteristics: i) their observations depend on time and, ii) they usually have the characteristic of seasonality and do not fulfill stationarity <ref type="bibr" target="#b20">[21]</ref>, <ref type="bibr" target="#b21">[22]</ref>.</p><p>According to the mentioned features, there would be a particular limitation of using FNN in time series problems. In addition, FNN can only be applied to problems whose inputs and targets are vectors of fixed dimensionality. It is a significant limitation since many important problems are better expressed with sequences (such as time series) whose lengths are not known a-priori <ref type="bibr" target="#b22">[23]</ref>.</p><p>Hence, RNN is the alternative to deal with sequential data or time series. Unlike FNN that only allows signals to travel forward from the input to the output, RNNs allow signals to travel both forward and backward. Therefore, they are more powerful and robust since they have a fully connected structure of neurons with internal memory and cycles that loop back the information of the previous time step into the network, i.e., information sharing between the time steps <ref type="bibr" target="#b15">[16]</ref>.</p><p>However, the backpropagation algorithm is usually used to train a neural network and propagate a feedback signal from the output loss down to earlier layers. If this feedback signal has to be propagated through a deep stack of layers, the signal may become tenuous or even be lost entirely, rendering the network untrainable. This issue is known as the vanishing gradients problem (VGP). This problem occurs over very long sequences (long-term dependencies) in FNN and RNN <ref type="bibr" target="#b23">[24]</ref>. Despite its benefits, RNN suffers from VGP, and therefore it has difficulty in learning long-term dependencies.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Long-Short-Term-Memory model</head><p>LSTMs can learn short-and long-term temporal dependencies in time series data. Hochreiter and Schmidhuber designed this new architecture for RNN based on the concept of "memory blocks or gate units" in each hidden layer. They Fig. <ref type="figure">1</ref>. A typical FNN topology had as main motivation to solve VGP <ref type="bibr" target="#b24">[25]</ref>. Figure <ref type="figure" target="#fig_0">2</ref> shows a schematic diagram of an LSTM unit.</p><p>Gate unit is a linear self-loop memory block that allows gradients to flow through long sequences. The memory block that contains self-connecting memory cells ct can memorize the temporal state, and three gates within the unit can help to control the flow of information inside and outside of the memory block: i) forgetting gate ft, which conditionally decides the information to discard from the block; ii) input gate it, which conditionally decides which values from the input update the memory state; and, iii) output gate ot, which conditionally decides the output based on input and the memory of the block. Therefore, each unit is like a mini-state machine where the units' gates have weights that are learned during the training process <ref type="bibr" target="#b17">[18]</ref>, <ref type="bibr" target="#b25">[26]</ref>.</p><p>Due to its inherent capability in modeling temporal aspects of data, LSTM has been widely employed in machine translation, language modeling, handwriting recognition, image captioning, speech recognition, process prediction, and medical diagnosis <ref type="bibr" target="#b25">[26]</ref>.</p><p>In this work, LSTM for electric load time series forecasting of an educational building is employed. Given an input time series x = {x1, x2, • • • , xT}, the LSTM maps input time series to two output time sequences h = {h1, h2, • • • , hT} and y = {y1, y2, • • • , yT} iteratively by updating the states of memory cells with the following procedure <ref type="bibr" target="#b19">[20]</ref>, <ref type="bibr" target="#b25">[26]</ref>:</p><p>Each gate is a sigmoid unit that change every element in [0, 1], i.e., they use a logistic function defined in eq. ( <ref type="formula" target="#formula_0">1</ref>):</p><formula xml:id="formula_0">= 1 1<label>(1)</label></formula><p>Input gate it controls the input of new information that is going to be stored in the new cell state, which derives the following:</p><formula xml:id="formula_1">= (2)</formula><p>Forgetting gate ft decides what information to throw away from cell state, where:</p><formula xml:id="formula_2">= (3)</formula><p>Output gate ot controls and filters the output information flowing out of the cell, where:</p><formula xml:id="formula_3">= (4)</formula><p>At each time t, the input features are computed by input xt and the previously hidden state ht-1 by using a tanh function, as follows:</p><formula xml:id="formula_4">= (5)</formula><p>The memory cell is updated by moderated input features and the partial forgetting of the last memory cell, which yields:</p><formula xml:id="formula_5">= * * (6)</formula><p>Then, the hidden output state ht is calculated by output gate ot and memory cell ct, as follows:</p><formula xml:id="formula_6">= * tanh (7)</formula><p>Finally, the output of LSTM yt is computed by using the following expression:</p><formula xml:id="formula_7">= (8)</formula><p>In Eqs. ( <ref type="formula">2</ref>)-( <ref type="formula">8</ref>), the matrices wxi, wxf, wxo, and wxc are the appropriate input weighting matrices, while whi, whf, who, and whc are the recurrent weighting matrices; and why represents the hidden output weight matrix. The vectors bi, bf, bo, bc, and by are the corresponding bias vectors.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. EXPERIMENT EVALUATIONS AND DISCUSSION</head><p>In this section, the experiment's setup and results achieved with FNN-MLP and RNN-LSTM models are presented and discussed.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Experiment setup</head><p>Data: An energy dataset with observations of some variables collected from an educational building of the University of Guayaquil is used in the current study. They were collected with high precision equipment: FLUKE 435 II during two days of February 2020, with a frequency of 1/2minute, i.e., the dataset has 5760 measurements.</p><p>ANN has proven to be applicable in time series analysis. Its forecast accuracy depends, among other factors, on the quality and quantity of data that will be used to train and validate the model. Based on bibliographic references, datasets with hundreds of thousands of observations for training and validation of neural networks are commonly used.</p><p>In this paper, the potential of LSTM considering the dataset with two days of measurements is analyzed. The total electric load of the building or total power consumption is considered during the analysis. Figure <ref type="figure">3</ref>  Problem Framing: Our research question in this work is: Given a recent power consumption, what is the expected power consumption for one step ahead? That is, given historical observations (t-1, t-2, … t-n), forecast the value t.</p><p>The data is resampled to 5-minutes observations of power consumption. The 5-minutes resolution data were obtained by averaging the 1/2-minute resolution data (original dataset).</p><p>On the other hand, the dataset is divided into train and test data, considering the proportion of 80% and 20%, respectively.</p><p>Normalization is applied to the data sets, and they are transformed into values between -1 and 1.</p><p>Model Evaluation: As it is known, k-fold crossvalidation does not work for time series data because they ignore its temporal relation. Therefore, a rolling-forecast scenario will be used, also called walk-forward model (WFM) validation. Each time step of the test dataset will be walked one at a time <ref type="bibr" target="#b26">[27]</ref>.</p><p>Performance evaluation: In literature reviews in which model adjustments with energy observations are handled, the Root Mean Squared Error (RMSE) metric is the most used evaluation parameter. Therefore, the RMSE is considered the main metric to select the best architecture with the lowest forecast error. Other supporting metric is the Mean Absolute Error (MAE) <ref type="bibr" target="#b10">[11]</ref>, <ref type="bibr" target="#b15">[16]</ref>, <ref type="bibr" target="#b25">[26]</ref>, <ref type="bibr" target="#b27">[28]</ref> .</p><formula xml:id="formula_8">= 1 -<label>(9)</label></formula><formula xml:id="formula_9">= 1 | -|<label>(10)</label></formula><p>where Ntest is the number of test set samples, yn refers to the real value of the nth forecasting point, and is the corresponding predicted value.</p><p>Experiment models: MLP and LSTM architectures for one-step time series forecasting with one hidden layer have been configured. Table <ref type="table" target="#tab_0">1</ref> shows the variation of hyperparameters used in each of the executed models. Where n_input is the number of prior inputs to use as input for the model, n_nodes is the number of nodes/units used in the hidden layer. n_epochs represent the number of training epochs, n_batch is the number of samples to include in each mini-batch. The activation function to be used in the hidden layer is given by act_hid, and act_out is the activation function used in the output layer.</p><p>Due to the stochastic nature of neural networks, each model is trained and validated ten times, then the mean of the RMSE errors is determined.</p><p>All experiment models were implemented in Python, using the TensorFlow library.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Experiment results with FNN-MLP</head><p>After carried out the experiments and fine-tuning hyperparameters using the train dataset and WFM validation in test dataset, the best topology neural network achieved is as follows: n_input = 1, n_nodes = 1 neuron, n_epochs = 100, n_batch = 6, act_hid = linear and act_out = linear.  Those with the least error in the validated models are the hidden layer with linear, tanh, and relu activation functions. There are seven models out of 10 with a linear activation function.</p><p>In the top 10 FNN-MLP models, RMSE errors range between 8.0322 and 8.3317, i.e., a range of 0.2995 kW. In addition, the following characteristics are observed:</p><p>The n_input values are constants, i.e., The number of nodes is 1, 2, 4, and 12. The epochs' values are 75 and 100. Finally, the common hyperparameters are n_batch = 6 and act_out = linear.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Experiment results with RNN-LSTM</head><p>As in the FNN-MLP, experiments and fine-tuning hyperparameters are carried out. It was found that the best architecture of RNN-LSTM is achieved under the following conditions: n_input = 8, n_nodes = 6 neurons (LSTM units), n_epochs = 300, n_batch = 1, act_hid = tanh and act_out = linear.</p><p>Table <ref type="table" target="#tab_3">3</ref> shows the top 10 RNN-LSTM models based on the RMSE metric.</p><p>Those with the lowest error in the validated models are the hidden layer with 'tanh' activation function.</p><p>In the top 10 RNN-LSTM models, RMSE errors range between 4.7312 and 5.0972, i.e., a range of 0.366 kW. In addition, the following characteristics are observed: The n_input values vary between 6 and 9. There are seven models out of 10 with n_input = 8. The number of nodes varies between 6 and 10. The epochs' values are 100, 200, and 300. Finally, the common hyperparameters are n_batch = 1, act_hid = tanh, and act_out = linear.</p><p>For our case study, LSTMs have a good precision to predict the electrical load of the building. Comparing Tables <ref type="table" target="#tab_2">2</ref> and<ref type="table" target="#tab_3">3</ref>, good learning behavior is evident. This is due to the long-term characteristics already mentioned in Section III.</p><p>As mentioned above in the experiment setup subsection, the results' randomness is manifested due to the stochastic nature of the neural networks. Figure <ref type="figure" target="#fig_1">4</ref> shows the box diagram of the RMSE and MAE errors of total power consumption of the building. The mentioned errors are obtained per each best architecture from 30 repetitions. It is visibly noted that LSTM outperforms FNN.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RMSE:</head><p>On average, the LSTM error is 5.085 kW, with a deviation of 0.625 kW. Moreover, 75% of the experiments (3 of 4 repetitions) fall below the 5.436 kW of electric load. In contrast, MLP error, on average, is 8.079 kW, with a deviation of 0.084 kW. Notice that 75% of the experiments fall below the 8.128 kW of electric load. LSTM error is 1.59 times lower than MLP.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>MAE:</head><p>On average, the LSTM error is 3.714 kW, with a deviation of 0.326 kW. Moreover, 75% of the repetitions fall below the 3.774 kW of electric load. In contrast, MLP error, on average, is 5.184 kW, with a deviation of 0.051 kW. In addition, 75% of the experiments fall below the 5.195 kW of electric load. LSTM error is 1.40 times lower than MLP.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>V. CONCLUSIONS</head><p>In this study, an efficient LSTM is designed to forecast the electric load of a building. Experiments using a dataset of the electric load of an educational building were carried out. Two techniques of artificial neural networks were considered, and models were configured, trained, and validated. RMSE and MAE were used to select the best model for each type of architecture. Despite the limited number of observations in our case study, recurrent neural networks LSTM achieved better error metrics than Feed-Forward neural network techniques.</p><p>In further studies, it is expected to use LSTM in datasets with a more significant number of observations (at least one annual cycle) of the building referred. Moreover, forecasting problems such as indoor-outdoor temperatures, solar power forecasting, or complex demand forecasting using predictive models for energy management and control in buildings will be considered. </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 2. Schematic diagram of a LSTM unit</figDesc><graphic coords="3,102.96,78.72,138.72,151.44" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 4 .</head><label>4</label><figDesc>Fig. 4. Box plot errors of the experiments carried out with FNN and LSTM. a) RMSE and b) MAE. Red line represents the median while the green triangle corresponds to the mean.</figDesc><graphic coords="5,38.40,568.32,243.84,143.52" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>TABLE 1 .</head><label>1</label><figDesc>HYPERPARAMETERS CONSIDERED FOR EXPERIMENT MODEL</figDesc><table><row><cell>Hyperparameter</cell><cell>Values</cell></row><row><cell>n_input</cell><cell>1, 3, 4, 5, 6,7, 8, 9, 12, 24, 36</cell></row><row><cell>n_nodes</cell><cell>1, 2, 4, 6, 7, 8, 9, 10, 12, 16, 24, 28, 32, 36</cell></row><row><cell>n_epochs</cell><cell>50, 75, 100, 150, 200, 400, 500, 1000, 1500, 2000</cell></row><row><cell>n_batch</cell><cell>1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 20, 25</cell></row><row><cell>act_hid</cell><cell>tanh, relu, linear</cell></row><row><cell>act_out</cell><cell>tanh, linear</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2</head><label>2</label><figDesc>shows the top 10 FNN-MLP models based on the RMSE metric.</figDesc><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>TABLE 2 .</head><label>2</label><figDesc>TOP 10 FNN-MLP MODELS</figDesc><table><row><cell>Hyperparameters</cell><cell>RMSE</cell></row><row><cell>[n_input, n_nodes, n_epochs, n_batch, act_hid, act_out]</cell><cell>[kW]</cell></row><row><cell>[1, 1, 100, 6, 'linear', 'linear']</cell><cell>8.0322</cell></row><row><cell>[1, 2, 100, 6, 'linear', 'linear']</cell><cell>8.0712</cell></row><row><cell>[1, 2, 75, 6, 'linear', 'linear']</cell><cell>8.0875</cell></row><row><cell>[1, 1, 75, 6, 'linear', 'linear']</cell><cell>8.1044</cell></row><row><cell>[1, 4, 75, 6, 'linear', 'linear']</cell><cell>8.1773</cell></row><row><cell>[1, 4, 100, 6, 'linear', 'linear']</cell><cell>8.1951</cell></row><row><cell>[1, 4, 100, 6, 'relu', 'linear']</cell><cell>8.2132</cell></row><row><cell>[1, 4, 75, 6, 'tanh', 'linear']</cell><cell>8.2890</cell></row><row><cell>[1, 4, 100, 6, 'tanh', 'linear']</cell><cell>8.3148</cell></row><row><cell>[1, 12, 100, 6, 'linear', 'linear']</cell><cell>8.3317</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>TABLE 3 .</head><label>3</label><figDesc>TOP 10 RNN-LSTM MODELS</figDesc><table><row><cell>Hyperparameters</cell><cell>RMSE</cell></row><row><cell>[n_input, n_nodes, n_epochs, n_batch, act_hid, act_out]</cell><cell>[kW]</cell></row><row><cell>[8, 6, 300, 1, 'tanh', 'linear']</cell><cell>4.7312</cell></row><row><cell>[8, 7, 100, 1, 'tanh', 'linear']</cell><cell>4.8089</cell></row><row><cell>[8, 9, 200, 1, 'tanh', 'linear']</cell><cell>4.8259</cell></row><row><cell>[6, 8, 200, 1, 'tanh', 'linear']</cell><cell>4.8964</cell></row><row><cell>[8, 9, 100, 1, 'tanh', 'linear']</cell><cell>4.8994</cell></row><row><cell>[8, 7, 200, 1, 'tanh', 'linear']</cell><cell>4.9292</cell></row><row><cell>[8, 10, 100, 1, 'tanh', 'linear']</cell><cell>4.9330</cell></row><row><cell>[8, 6, 200, 1, 'tanh', 'linear']</cell><cell>4.9477</cell></row><row><cell>[7, 9, 100, 1, 'tanh', 'linear']</cell><cell>5.0905</cell></row><row><cell>[9, 8, 200, 1, 'tanh', 'linear']</cell><cell>5.0972</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>Authorized licensed use limited to: ESCUELA POLITECNICA DEL LITORAL (ESPOL). Downloaded on January 09,2021 at 23:56:37 UTC from IEEE Xplore. Restrictions apply.</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><p>ACKNOWLEDGMENT J.B.-M. thanks <rs type="funder">AUIP "Programa de Movilidad Académica entre Universidades Andaluzas e Iberoamericanas</rs> 2020"</p></div>
+			</div>
+			<div type="funding">
+<div><p>This work was supported in part by the <rs type="funder">University of Guayaquil</rs> under grant number <rs type="grantNumber">FCI-015-2019</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_EtrJS6Z">
+					<idno type="grant-number">FCI-015-2019</idno>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m">Global Status Report: Towards a zero emission, efficient and resilient buildings and construction sector</title>
+		<imprint>
+			<publisher>International Energy Agency and United Nations Environment Programme</publisher>
+			<date type="published" when="2018">2018. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m" type="main">Balance Energético Nacional 2018</title>
+		<author>
+			<persName><surname>Iige</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<pubPlace>Quito</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title level="m">Asamblea Nacional República del Ecuador, Ley orgánica de eficiencia energética</title>
+		<meeting><address><addrLine>Ecuador</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page">8</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Estimating energy consumption and conservation measures for ESPOL Campus main building model using EnergyPlus</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Litardo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Hidalgo-Leon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Macias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Delgado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Soriano</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2019 IEEE 39th Central America and Panama Convention (CONCAPAN XXXIX)</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="1" to="6"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">State of the art in building modeling and energy performances prediction: A review</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Foucquier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Robert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Suard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Stéphan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jay</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Renew. Sustain. Energy Rev</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="272" to="288"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Using artificial neural networks to assess HVAC related energy saving in retrofitted office buildings</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Deb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Santamouris</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sol. Energy</title>
+		<imprint>
+			<biblScope unit="volume">163</biblScope>
+			<biblScope unit="page" from="32" to="44"/>
+			<date type="published" when="2018">2018. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Machine learning for estimation of building energy consumption and performance: a review</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Seyedzadeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Pour Rahimian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Glesk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Roper</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Vis. Eng</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="20"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Energy efficiency in buildings: analysis of scientific literature and identification of data analysis techniques from a bibliometric study</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">Mariane</forename><surname>Cristino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Faria</forename><surname>Neto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Branco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Costa</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Scientometrics</title>
+		<imprint>
+			<biblScope unit="volume">114</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1275" to="1326"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Forecasting energy use in buildings using artificial neural networks: A review</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Runge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Zmeureanu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energies</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">3254</biblScope>
+			<biblScope unit="page" from="1" to="27"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">A comparative analysis of artificial neural network architectures for building energy consumption forecasting</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Moon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Hwang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Distrib. Sens. Networks</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="1" to="19"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Development of a metamodel to predict cooling energy consumption of HVAC systems in office buildings in different climates</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Nath</forename><surname>Lopes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lamberts</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sustain</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Electricity consumption forecasting in office buildings: An artificial intelligence approach</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jozi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Pinto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Marreiros</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Vale</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Milan PowerTech</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="6"/>
+			<date type="published" when="2019">2019. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Modeling of Energy Efficiency for Residential Buildings Using Artificial Neuronal Networks</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Álvarez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Rabuñal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>García-Vidaurrázaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Alvarellos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pazos</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Civ. Eng</title>
+		<imprint>
+			<biblScope unit="volume">2018</biblScope>
+			<biblScope unit="page" from="1" to="10"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Application of artificial neuron networks as energy consumption forecasting tool in the building of regulatory authority of energy, Athens, Greece</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Katsatos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">P</forename><surname>Moustris</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energy Procedia</title>
+		<imprint>
+			<biblScope unit="volume">157</biblScope>
+			<biblScope unit="page" from="851" to="861"/>
+			<date type="published" when="2018">2019. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Predicting electricity consumption for commercial and residential buildings using deep recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rahman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Srikumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Smith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Energy</title>
+		<imprint>
+			<biblScope unit="volume">212</biblScope>
+			<biblScope unit="page" from="372" to="385"/>
+			<date type="published" when="2017-12">December 2017. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">A hybrid model for building energy consumption forecasting using long short term memory networks</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Somu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">R</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ramamritham</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Energy</title>
+		<imprint>
+			<biblScope unit="volume">261</biblScope>
+			<biblScope unit="page" from="1" to="20"/>
+			<date type="published" when="2020-01">January. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Drift-aware methodology for anomaly detection in smart grid</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Fenza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gallo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Loia</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="9645" to="9657"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Power consumption predicting and anomaly detection based on long short-term memory neural network</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>He</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2019 IEEE 4th International Conference on Cloud Computing and Big Data Analytics (ICCCBDA)</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="487" to="491"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">A review of data-driven building energy consumption prediction studies</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Amasyali</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">M</forename><surname>El-Gohary</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Renew. Sustain. Energy Rev</title>
+		<imprint>
+			<biblScope unit="volume">81</biblScope>
+			<biblScope unit="page" from="1192" to="1205"/>
+			<date type="published" when="2016-01">January 2016. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Electric load forecasting in smart grids using Long-Short-Term-Memory based Recurrent Neural Network</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">51st Annu. Conf. Inf. Sci. Syst. CISS</title>
+		<imprint>
+			<date type="published" when="2017">2017. 2017</date>
+			<biblScope unit="volume">2017</biblScope>
+			<biblScope unit="page" from="1" to="6"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Statistical Model for the Forecast of Hydropower Production in Ecuador</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mite-León</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Barzola-Monteses</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Renew. Energy Res</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="1130" to="1137"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Time Series Analysis for Predicting Hydroelectric Power Production : The Ecuador Case</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Barzola-Monteses</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mite-León</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Espinoza-Andaluz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gómez-Romero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Fajardo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sustain</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">6539</biblScope>
+			<biblScope unit="page" from="1" to="19"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Sequence to sequence learning with neural networks</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><forename type="middle">V</forename><surname>Le</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="3104" to="3112"/>
+		</imprint>
+	</monogr>
+	<note>NIPS 2014)</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<monogr>
+		<author>
+			<persName><forename type="first">F</forename><surname>Chollet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Allaire</surname></persName>
+		</author>
+		<title level="m">Deep Learning with R</title>
+		<meeting><address><addrLine>Shelter Island, NY</addrLine></address></meeting>
+		<imprint>
+			<publisher>Manning Publications Co</publisher>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<title level="m" type="main">Long Short-Term Memory</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hochreiter</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1997">1997</date>
+			<biblScope unit="volume">1780</biblScope>
+			<biblScope unit="page" from="1735" to="1780"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Effective long short-term memory with differential evolution algorithm for electricity price prediction</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energy</title>
+		<imprint>
+			<biblScope unit="volume">162</biblScope>
+			<biblScope unit="page" from="1301" to="1314"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">On the use of cross-validation for time series predictor evaluation</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Bergmeir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Benítez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Inf. Sci. (Ny)</title>
+		<imprint>
+			<biblScope unit="volume">191</biblScope>
+			<biblScope unit="page" from="192" to="213"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Convolutional Neural Networks for Energy Time Series Forecasting</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Koprinska</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2018 International Joint Conference on Neural Networks (IJCNN)</title>
+		<imprint>
+			<date type="published" when="2018-07">2018. 2018-July</date>
+			<biblScope unit="page" from="1" to="8"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

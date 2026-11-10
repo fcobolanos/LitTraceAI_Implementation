@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Geometric morphometric analysis in female freshwater crabs of Sarawak (Borneo) permits addressing taxonomy-related problems</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2019-02-14">14 February 2019</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Jongkar</forename><surname>Grinang</surname></persName>
+							<email>gjongkar@unimas.my</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Biodiversity and Environmental Conservation</orgName>
+								<orgName type="institution">Universiti Malaysia Sarawak</orgName>
+								<address>
+									<addrLine>Kota Samarahan</addrLine>
+									<settlement>Sarawak</settlement>
+									<country key="MY">Malaysia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Indraneil</forename><surname>Das</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Biodiversity and Environmental Conservation</orgName>
+								<orgName type="institution">Universiti Malaysia Sarawak</orgName>
+								<address>
+									<addrLine>Kota Samarahan</addrLine>
+									<settlement>Sarawak</settlement>
+									<country key="MY">Malaysia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Peter</forename><forename type="middle">K L</forename><surname>Ng</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution" key="instit1">Lee Kong Chian Natural History Museum</orgName>
+								<orgName type="institution" key="instit2">National University of Singapore</orgName>
+								<address>
+									<settlement>Singapore</settlement>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Geometric morphometric analysis in female freshwater crabs of Sarawak (Borneo) permits addressing taxonomy-related problems</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2019-02-14">14 February 2019</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">EF31B8CB20B196620A7C136A66115E43</idno>
+					<idno type="DOI">10.7717/peerj.6205</idno>
+					<note type="submission">Submitted 8 June 2018 Accepted 3 December 2018</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-09-08T16:22+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Mathematical Biology</term>
+					<term>Taxonomy Freshwater crab</term>
+					<term>Geometric morphometrics</term>
+					<term>Isolapotamon</term>
+					<term>Taxonomy</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The taxonomy of freshwater crabs requires a paradigm change in methodological approaches, particularly in investigations that use morphological techniques. The traditional morphometric approach (two-dimensional measurements) tends to be inappropriate for the identification of freshwater crabs due to their variable external morphology and lack of gonopods (conventionally used for the identification of male crabs) in females. In this study, we explore the potential use of the geometric morphometric technique for identification of female freshwater crabs, and identify taxonomic key characteristics of species. The shape of the carapace could be a good characteristic for the identification of female crabs, especially when the geometric morphometric technique is used. It was observed that the shape of the carapace has an advantage over the shape of the pleon and chela because its relatively flat orientation allows more consistent and easier data preparation for geometric morphometric analysis. The geometric morphometric technique is inexpensive, relatively less time consuming to employ, and accurate. This technique is convenient when dissection to examine the gonopods is not possible, which can damage the specimen in the case of endangered or rare species. Since the technique was used herein for only two species, more compelling and extensive evidence is needed before the reliability of the method can be proven.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>INTRODUCTION</head><p>Geometric morphometrics is a rapidly evolving technique within the vast field of traditional morphometrics <ref type="bibr" target="#b34">(Rohlf &amp; Marcus, 1993;</ref><ref type="bibr" target="#b18">Marcus &amp; Corti, 1996;</ref><ref type="bibr" target="#b43">Zelditch et al., 2004)</ref>. The technique works on the hypothesis that landmarks on the body of an organism carry unique characteristics of the species <ref type="bibr" target="#b43">(Zelditch et al., 2004)</ref>. The three-dimensional approach is hailed as a revolution in morphometrics for its paradigm shift away from visualizing the results in terms of scatter plots <ref type="bibr" target="#b2">(Adams, Rohlf &amp; Slice, 2004)</ref>. It has been successfully employed to discriminate variation among species and populations in a number of animal groups, including insects <ref type="bibr" target="#b38">(Sadeghi, Adriaens &amp; Dumont, 2009;</ref><ref type="bibr" target="#b41">Tüzün, 2009)</ref>, water mites <ref type="bibr" target="#b3">(Becerra &amp; García-Valdecasas, 2004)</ref>, lizards <ref type="bibr" target="#b12">(Kaliontzopoulu, Carretero &amp; Llorente, 2007)</ref>, marine crabs <ref type="bibr" target="#b35">(Rosenberg, 2002;</ref><ref type="bibr" target="#b36">Rufino, Abelló &amp; Yule, 2004;</ref><ref type="bibr" target="#b16">Ledesma, Van Der Molen &amp; Barón, 2010;</ref><ref type="bibr" target="#b11">Hampton et al., 2014)</ref>, fishes <ref type="bibr" target="#b7">(Chakrabarty et al., 2010)</ref>, and small mammals <ref type="bibr" target="#b17">(Loy, Corti &amp; Marcus, 1993;</ref><ref type="bibr" target="#b1">Abiadh et al., 2010)</ref>.</p><p>Nonetheless, examples of the application of the technique in freshwater crabs are lacking, particularly in south-east Asia. The technique potentially faces challenges from ontogenetic shape changes and character displacement in addition to cryptic speciation.</p><p>One of the major challenges in studying freshwater crabs is their identification, which currently relies mainly on the structure of the male reproductive organs. Female crabs were traditionally not preferred for species description as they lack gonopods. However, no study appeared to investigate taxonomically informative characteristics in female crabs that could be used for species description and identification, useful for species delineation, taxonomy, and identification related to biodiversity inventories and understanding the evolution of secondary sexual dimorphism within lineages. Descriptions of male crabs were traditionally made based on two-dimensional morphological characteristics, particularly the gonopods <ref type="bibr" target="#b21">(Ng, 1988)</ref>. The problem in the identification of female crabs, especially at the species level, thus remains unresolved. The challenges indicate there is need for a new approach. The standard two-dimensional measurements of length and width are rarely sufficient for identification of freshwater crabs because the external morphology of the animal tends to be highly variable <ref type="bibr" target="#b21">(Ng, 1988;</ref><ref type="bibr" target="#b8">Cumberlidge, 1999)</ref>, whereas linear measurements tend to be auto correlated with the size of animals <ref type="bibr" target="#b43">(Zelditch et al., 2004)</ref>.</p><p>The freshwater crabs of Sarawak have been studied since the early 19th century, and are currently represented by 48 species <ref type="bibr" target="#b24">(Ng, Guinot &amp; Davie, 2008)</ref>. A major challenge in the estimation of the total number of freshwater crabs in Sarawak is the limited identification tools available for the fauna. Identification of freshwater crabs in Sarawak primarily follows the dichotomous keys provided by <ref type="bibr" target="#b25">Ng &amp; Tan (1998)</ref> and <ref type="bibr" target="#b22">Ng (2004)</ref> that deal with Malaysian families, genera, and selected species such as Parathelphusa spp. and Isolapotamon spp. The taxonomy of the potamid genus Isolapotamon <ref type="bibr" target="#b5">(Bott, 1968</ref>) is well understood, and seven species are found in Sarawak <ref type="bibr" target="#b5">(Bott, 1968;</ref><ref type="bibr" target="#b27">Ng &amp; Yang, 1986;</ref><ref type="bibr" target="#b20">Ng, 1987;</ref><ref type="bibr" target="#b25">Ng &amp; Tan, 1998)</ref>. The genus is characterized by a broad carapace, the presence of an epibranchial tooth, and the elongated male first gonopods <ref type="bibr" target="#b25">(Ng &amp; Tan, 1998)</ref>. Among the Bornean freshwater crabs, species of Isolapotamon are much easier to distinguish by the unique structure of the male first gonopod <ref type="bibr" target="#b27">(Ng &amp; Yang, 1986;</ref><ref type="bibr" target="#b20">Ng, 1987;</ref><ref type="bibr" target="#b25">Ng &amp; Tan, 1998)</ref>. However, accurate species identification is challenging if the collection includes only females and juvenile males. The present study applies geometric morphometric analysis to identify the best characteristic for the diagnosis of female crabs. It is hypothesized that the structure selected for using geometric morphometric analysis will have taxonomic importance if it: <ref type="bibr" target="#b10">(1)</ref> shows consistency within the female crabs of a particular species; (2) demonstrates consistent variation among the species; and</p><p>(3) is easy to visualize and/or measure <ref type="bibr" target="#b43">(Zelditch et al., 2004)</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>MATERIALS AND METHODS</head><p>Two species of the genus Isolapotamon were selected for geometric morphometric analysis: I. consobrinum (De Man, 1899) and Isolapotamon nimboni <ref type="bibr" target="#b20">Ng, 1987.</ref> The specimens were collected from some major river systems and tributaries in Sarawak (Malaysia), Borneo (Fig. <ref type="figure" target="#fig_0">1</ref>). Research permit No. 349/2012 for this study was granted by Forest Department of Sarawak. A total of 25 males and 14 females of I. consobrinum, and four males and 10 females of I. nimboni were used for geometric morphometric analysis. Crabs were identified following <ref type="bibr" target="#b25">Ng &amp; Tan (1998)</ref> and measured for carapace width and carapace length to the nearest 0.01 mm (Table <ref type="table" target="#tab_0">1</ref>). Three morphological characteristics of the crabs were selected for this analysis: carapace, pleon, and right chela. Because chelipeds of the genus Isolapotamon have always asymmetrical, only specimens with right major chela were used to minimize potential influences on data analysis. Data preparation involved setting up the specimens and taking images of the morphological characteristics of the crabs. The character was placed horizontally on a black cloth with a scale next to it, which is useful for further analysis (Fig. <ref type="figure" target="#fig_1">2</ref>). Digital images of the characters were captured using a Nikon TM D700 DSLR and Tamron TM 90 mm macro lens.</p><p>Data analysis involved generating landmarks and processing the geometry parameters of the images using tpsUtil and tpsDig programs <ref type="bibr" target="#b32">(Rohlf, 2004)</ref>, followed by multivariate analyses such as general Procrustes analysis (GPA) superimposition, principle components analysis (PCA), canonical variate analysis (CVA), and discriminant function analysis (DFA) in the MorphoJ Package <ref type="bibr" target="#b13">(Klingenberg, 2011)</ref>. Landmarks selected for analysis were those considered best representing the morphology useful for diagnosis. Due to the symmetrical of structures, landmarks for the carapace and pleon were recorded on the right side to avoid duplication of equivalent landmarks and statistical problems <ref type="bibr" target="#b43">(Zelditch et al., 2004)</ref>. Landmarks for the pleon were obtained from fourth to sixth somites and the telson. Pleonal somites 1-3 were excluded to avoid the effects of image distortion. A total of 16 landmarks were set for the carapace, seven for the pleon, and 23 for the chela (Fig. <ref type="figure" target="#fig_2">3</ref>). The tpsUtil program was used to build image files of the characters, whereas landmarks on the characters were constructed using the tpsDig program. GPA superimposition was used to extract shape information in the form of coordinates (landmarks) and to remove variation unrelated to the form, such as orientation, rotation, and scale <ref type="bibr" target="#b43">(Zelditch et al., 2004)</ref>. Variations of the coordinates (in the form of covariance) were examined using PCA followed by CVA for simplifying the description of differences between groups. DFA was used to determine whether the groups could be reliably distinguished. Procrustes distances of CVA between groups were tested for significance with the 1,000 permutations procedure.  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RESULTS</head><p>The underlying assumption in geometric morphometric analysis is that the shape variations between sex and species are unrelated to orientation, rotation, and scale during the preparation of the samples. The technique thus allows for acceptance of the hypothesis that characters display consistent shape appearance across female crabs of a particular species, and demonstrates that consistent shape variation across a species must be the best characteristic for species diagnosis of female freshwater crabs.</p><p>Principle components analysis revealed a distinct separation of the shape of the pleon and major chela between male and female crabs of I. nimboni (Figs. <ref type="figure">4</ref> and<ref type="figure">5</ref>). Variations in the shape of the pleon among individual female crabs were also observed, which differentiate the following life-history stages: completely mature, partially mature, and subadult (Fig. <ref type="figure">4</ref>). Alternatively, the age characteristic is insignificant among male crabs regarding the shape of the pleon (Fig. <ref type="figure">4</ref>). Variations in the shape of major chela among different individuals (both males and females) of I. nimboni (Fig. <ref type="figure">5</ref>) were not clearly related to the crab's age, but possibly resulted from the regeneration effects and deformity either due to fights or feeding usages of the chela. Results of PCA are supported by both CVA and DFA, at least for the pleon (Table <ref type="table" target="#tab_1">2</ref>). The Procrustes distance of pleon and major chela between the sexes is 0.097 (p &lt; 0.0001) and 0.080 (p = 0.005), respectively, which provides statistical evidence for the difference in the shape of the two structures between males and females of I. nimboni. Results of Hotelling's T 2 (DFA) indicate that the statistical evidence of differences in the shape of the pleon, as shown by CVA, may have a taxonomic implication, whereas the differences in the shape of major chela could be by chance (Table <ref type="table" target="#tab_1">2</ref>).</p><p>In contrast to the variations observed in the shape of the female pleon and major cheliped, PCA revealed no distinct separation in the shape of the carapace between males and females of I. nimboni (Fig. <ref type="figure">6</ref>). Shape variation of carapace among individual crabs was unclear. Results of PCA are supported by both CVA and DFA (Table <ref type="table" target="#tab_1">2</ref>). The Procrustes distance of carapace between the sexes is 0.023 (p = 0.163), which revealed no statistical evidence for differences in the shape of the carapace between males and females of I. nimboni. Results of Hotelling's T 2 (DFA) indicate no significant differences in carapace shape by CVA and has strong taxonomic implications (Table <ref type="table" target="#tab_1">2</ref>).</p><p>Results of the multivariate analyses clearly show that variation in the shape of the carapace is insignificant and consistent across male and female crabs of I. nimboni. Therefore, the characteristic was selected for distinguishing I. nimboni from I. consobrinum. PCA revealed a distinct separation between the two species as far as the shape of the carapace is concerned (Fig. <ref type="figure">7</ref>). Results of PCA are supported by both CVA and DFA (Table <ref type="table" target="#tab_2">3</ref>). The Procrustes distance of carapace between species is 0.053 (p &lt; 0.0001), which provides statistical evidence for differences in the shape of the carapace between the two species. Results of Hotelling's T 2 (DFA) also support the results of PCA and CVA, which further strengthen the fact that the shape of carapace is taxonomically important (T 2 = 858.32, p &lt; 0.0001) (Table <ref type="table" target="#tab_2">3</ref>). These findings revealed the shape of the carapace to be a better characteristic for the species diagnosis in female freshwater crabs.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>DISCUSSION</head><p>Our findings are in concordance with those studies that also showed significant variations in the shape of carapace, as in the case of 10 species of a marine genus (Uca Leach, 1814) from the Brazil coast <ref type="bibr" target="#b11">(Hampton et al., 2014)</ref> and two species of freshwater crabs  (Zilchiopsis collastinensis; <ref type="bibr">Pretzmann, 1968 and Trichodactylus borellianus;</ref><ref type="bibr" target="#b28">Nobili, 1896)</ref> from the Paraná River of Argentina <ref type="bibr" target="#b40">(Torres, Collins &amp; Girl, 2014)</ref>. Unlike the carapace, the pleon of freshwater crabs shows significant variation in shape during ontogeny. As far as the chela is concerned, regeneration has been proven to affect the size allometry and mean shape of the structure in species of Uca <ref type="bibr" target="#b35">(Rosenberg, 2002)</ref>. The same biological process could be occurring to a lesser degree in freshwater crabs. Therefore, we anticipated that one possible explanation for the result could be the selection of landmarks on the major chela, which was inconsistent due to the variability of the character itself, resulting from regeneration effects and deformity. Other studies have indicated that morphs, growth patterns (i.e., allopatric and sympatric), preservative, and digitizing method (e.g., scanner or camera) could influence the results of geometric morphometric analyses <ref type="bibr" target="#b14">(Klingenberg, Barluenga &amp; Meyer, 2003;</ref><ref type="bibr" target="#b37">Rufino, Abelló &amp; Yule, 2006;</ref><ref type="bibr" target="#b9">Giri &amp; Loy, 2008;</ref><ref type="bibr">Berbel-Filho, Jacobina &amp; Martinez, 2013;</ref><ref type="bibr">Martinez, Berbel-Filho &amp; Jacobina, 2013)</ref>.</p><p>Our study indicates that the advantage of the choice of landmarks on the carapace over those on the pleon and chela is their relatively flat orientation, allowing consistency and ease in data preparation for geometric morphometric analysis. Nevertheless, <ref type="bibr" target="#b23">Ng &amp; Earl of Cranbrook (2014)</ref> demonstrated that morphology of fossilized chela can be used to distinguish the freshwater-dependent families of crabs such as Potamidae, Gecarcinucidae, and Sesarmidae. More importantly, chelipeds often constitute the major proportion of excavated freshwater crab fossils. This is very likely in localized areas where the crab fauna is well known.</p><p>Although the shape of the carapace can be used to statistically distinguish species, a linear two-dimensional measurement of the character cannot be established in the present study. Certainly, the conventional morphometric technique cannot be applied, and the shape analysis by geometric morphometric is proposed. It was noted that geometric morphometric analysis is inexpensive, as all the software used is available as freeware. In addition, the technique is easier and faster than molecular approaches. It is even suitable for amateurs.</p><p>Unstable characters are intrinsically unsuitable for diagnosis. Rather, the main challenge is in the paucity of characters, especially for females. Many characters have been proposed as useful traits for taxon (family, genus, and species) diagnosis, including carapace, third maxilliped with exopod, mandibular palp, male gonopods, thoracic sternites, endophragmal system, and frontal median triangle <ref type="bibr" target="#b21">(Ng, 1988;</ref><ref type="bibr" target="#b8">Cumberlidge, 1999;</ref><ref type="bibr" target="#b26">Ng &amp; Tan, 1999;</ref><ref type="bibr" target="#b39">Sternberg &amp; Cumberlidge, 2003;</ref><ref type="bibr" target="#b42">Yeo &amp; Ng, 2004;</ref><ref type="bibr" target="#b31">Reed &amp; Cumberlidge, 2006;</ref><ref type="bibr" target="#b24">Ng, Guinot &amp; Davie, 2008)</ref>; the variability and instability of some structures remain debated. The instability of characters is more noticeable within the lower taxonomic ranks (i.e., genus and species) and among the taxa from different geographic regions <ref type="bibr" target="#b26">(Ng &amp; Tan, 1999;</ref><ref type="bibr" target="#b6">Brandis, Storch &amp; Türkay, 2000;</ref><ref type="bibr" target="#b42">Yeo &amp; Ng, 2004;</ref><ref type="bibr" target="#b29">Noël &amp; Guinot, 2007)</ref>. Carcinologists are more comfortable with the structure of the male gonopods, which is presumably the most stable and dependable feature for the diagnosis of freshwater crab species <ref type="bibr" target="#b21">(Ng, 1988;</ref><ref type="bibr" target="#b8">Cumberlidge, 1999;</ref><ref type="bibr" target="#b31">Reed &amp; Cumberlidge, 2006)</ref> even though gonopod morphology could be markedly variable, particularly within high-level monophyletic groups <ref type="bibr" target="#b29">(Noël &amp; Guinot, 2007)</ref>. Moreover, new characteristics for species diagnosis of female freshwater crabs have not been reported.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>CONCLUSION</head><p>Considering the challenges in taxonomic and systematic studies of freshwater crabs, our study aims to highlight the difficulties in the current practices of identifying female crabs and provides better characteristics for their diagnosis. Conventional morphometrics (two-dimensional measurement) is fast and inexpensive, but unreliable at the level of accuracy. In contrast, molecular techniques time-consuming and can be expensive. The limitation of these approaches suggests other techniques should be explored. The present study attempts to apply the geometric morphometrics in identifying better characteristics for the diagnosis of female crabs of Sarawak. It is proposed that the shape of the carapace should be a reliable characteristic for the identification of female freshwater crabs using the geometric morphometric technique. The technique is inexpensive and relatively less time consuming, and the accuracy of the results are encouraging. The proposed technique is particularly useful where dissection to examine the gonopods is not feasible, as in the case of live or precious specimens.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1</head><label>1</label><figDesc>Figure 1 Map showing surveyed areas in Sarawak (Malaysia), Borneo between 1800 and 2015. Full-size  DOI: 10.7717/peerj.6205/fig-1</figDesc><graphic coords="3,186.86,87.70,389.08,272.47" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2</head><label>2</label><figDesc>Figure 2 Preparation of images of I. nimboni for geometric morphometric analysis. (A) Male carapace; (B) male pleon; (C) female pleon; (D) male right or major chela. Full-size  DOI: 10.7717/peerj.6205/fig-2</figDesc><graphic coords="4,186.86,184.54,388.97,257.56" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3</head><label>3</label><figDesc>Figure 3 Landmarks on the carapace, pleon, and chela of I. nimboni identified for geometric morphometric analysis Blue dots are coordinates on grids corresponding to landmarks (green dots) on carapace (A, D), pleon (B, E) and chela (C, F). Full-size  DOI: 10.7717/peerj.6205/fig-3</figDesc><graphic coords="5,186.86,87.70,388.69,519.53" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 Figure 5</head><label>45</label><figDesc>Figure 4 Biplot of PCA showing distinct variations in the shape of the male (blue dots) and female (red dots) pleon of I. nimboni. PC1 and PC2 depict 84.4% and 5.99% of variance, respectively. Variations in the shape of the female pleon among different life-history stages: completely mature, bottom right; partially mature, center right; subadult, top right. Full-size  DOI: 10.7717/peerj.6205/fig-4</figDesc><graphic coords="6,186.86,87.70,388.80,156.93" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 6 Figure 7</head><label>67</label><figDesc>Figure 6 PCA showing insignificant variations in the shape of the male carapace (blue dots) and female carapace (red dots) of I. nimboni. PC1 and PC2 depict 29.87% and 25.29% of variance, respectively. Full-size  DOI: 10.7717/peerj.6205/fig-6</figDesc><graphic coords="8,186.86,87.70,300.08,290.72" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1</head><label>1</label><figDesc>Measurements (in mm) of Isolapotamon consobrinum and Isolapotamon nimboni.</figDesc><table><row><cell>Characters</cell><cell cols="2">Isolapotamon consobrinum</cell><cell cols="2">Isolapotamon nimboni</cell></row><row><cell/><cell>Male (n = 25)</cell><cell>Female (n = 14)</cell><cell>Male (n = 4)</cell><cell>Female (n = 10)</cell></row><row><cell>Carapace width</cell><cell>31.3-62.8</cell><cell>23.8-56.5</cell><cell>53.8-58.6</cell><cell>38.5-56.1</cell></row><row><cell>Carapace length</cell><cell>20.3-47.4</cell><cell>11.6-40.9</cell><cell>39.7-42.3</cell><cell>28.7-40.7</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2</head><label>2</label><figDesc>Canonical variate analysis and discriminant function analysis indicating morphological differences in the shape of the pleon and chela between the male and female crabs of Isolapotamon nimboni.</figDesc><table><row><cell>Characters</cell><cell>Canonical variate analysis</cell><cell/><cell cols="2">Discriminant function analysis</cell></row><row><cell/><cell>Procrustes distance</cell><cell>p-Value</cell><cell>Hotelling's T 2</cell><cell>p-Value</cell></row><row><cell>Pleon</cell><cell>0.097</cell><cell>&lt;0.0001</cell><cell>1,250.79</cell><cell>0.008</cell></row><row><cell>Carapace</cell><cell>0.023</cell><cell>0.163</cell><cell>34.36</cell><cell>0.937</cell></row><row><cell>Chela</cell><cell>0.080</cell><cell>0.005</cell><cell>69.54</cell><cell>0.824</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 3</head><label>3</label><figDesc>Canonical variate analysis and discriminant function analysis indicating difference in the shape of the carapace between Isolapotamon nimboni and Isolapotamon consobrinum.</figDesc><table><row><cell>Character</cell><cell>Canonical variate analysis</cell><cell/><cell cols="2">Discriminant function analysis</cell></row><row><cell/><cell>Procrustes distance</cell><cell>p-Value</cell><cell>Hotelling's T 2</cell><cell>p-Value</cell></row><row><cell>Carapace</cell><cell>0.053</cell><cell>&lt;0.0001</cell><cell>858.32</cell><cell>&lt;0.0001</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>Grinang et al. (2019), PeerJ, DOI 10.7717/peerj.6205</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGEMENTS</head><p>We thank the staff of the <rs type="institution">Institute of Biodiversity and Environmental Conservation, Universiti Malaysia Sarawak</rs>, specifically, <rs type="person">Andrew Alek Tuan</rs>, <rs type="person">Gabriel Tonga Noweg</rs>, <rs type="person">Pui Yong Min</rs>, <rs type="person">Rahah bt Mohd Yakup</rs>, and <rs type="person">Mohd Hasri Al-Hafiz b Haba. Felipe Bezerra Ribeiro</rs>, <rs type="person">Fernando Alvarez</rs>, and an anonymous reviewer for their generous and constructive comments on this manuscript.</p></div>
+			</div>
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data Availability</head><p>The following information was supplied regarding data availability:</p><p>Raw data is provided in the Supplemental Files.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ADDITIONAL INFORMATION AND DECLARATIONS Funding</head><p>The work was partially funded by the Mohamed bin Zayed Species Conservation Fund (Project 13054042) L18403I0100 Isolapotamonng, as well as a grant from the Shell Research Chair SRC/06/2010(02). The funds were received during the research period. There was no additional external funding received for this study. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Grant Disclosures</head><p>The following grant information was disclosed by the authors: Mohamed bin Zayed Species Conservation Fund: 13054042.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Competing Interests</head><p>The authors declare that they have no competing interests.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Author Contributions</head><p>Jongkar Grinang conceived and designed the experiments, performed the experiments, analyzed the data, contributed reagents/materials/analysis tools, prepared figures and/or tables, authored or reviewed drafts of the paper, approved the final draft. Indraneil Das authored or reviewed drafts of the paper, approved the final draft, ecological overview. Peter K.L. Ng authored or reviewed drafts of the paper, approved the final draft, taxonomics overview.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Field Study Permissions</head><p>The following information was supplied relating to field study approvals (i.e., approving body and any reference numbers):</p><p>Research Permit was granted by Forest Department of Sarawak (Research permit No. 349/2012).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplemental Information</head><p>Supplemental information for this article can be found online at <ref type="url" target="http://dx.doi.org/10.7717/peerj.6205#supplemental-information">http://dx.doi.org/ 10.7717/peerj.6205#supplemental-information</ref>.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">Isolapotamonng</title>
+		<author>
+			<persName><forename type="first">L</forename></persName>
+		</author>
+		<idno>Chair SRC/06/2010</idno>
+		<imprint>
+			<date>0100</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Shell Research</note>
+	<note>REFERENCES</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Morphometric analysis of six Gerbillus species (Rodentia, Gerbillinae) from Tunisia</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Abiadh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Colangelo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Capanna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lamine-Cheniti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Chetoui</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.crvi.2010.07.003</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Comptes Rendus Biologies</title>
+		<imprint>
+			<biblScope unit="volume">333</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="680" to="687"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Geometric morphometrics: ten years of progress following the 'revolution</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Adams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Rohlf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Slice</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/11250000409356545</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Italian Journal of Zoology</title>
+		<imprint>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="5" to="16"/>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Landmarks superimposition for taxonomic identification</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Becerra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>García-Valdecasas</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/j.1095-8312.2003.00286.x</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Biological Journal of the Linnaean Society</title>
+		<imprint>
+			<biblScope unit="volume">81</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="267" to="274"/>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Preservation effects in geometric morphometric approaches: freezing and alcohol in a freshwater fish</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M</forename><surname>Berbel-Filho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><forename type="middle">P</forename><surname>Jacobina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Martinez</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10228-013-0339-x</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Ichthyological Research</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="268" to="271"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Potamiden aus Süd-Asien (Crustacea, Decapoda)</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Senckenbergiana Biologica</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="page" from="119" to="130"/>
+			<date type="published" when="1968">1968</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Taxonomy and zoogeography of the freshwater crabs of Europe, North Africa, and the Middle East (Crustacea, Decapoda, Potamidae)</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Brandis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Storch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Türkay</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Senckenbergiana Biologica</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page" from="5" to="56"/>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Geometric morphometric uncovers a new species of ponyfish (Teleostei: Leiognathidae: Equulites), with comments on the taxonomic status of Equula berbis Valenciennes</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Chakrabarty</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Nahar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Sparks</surname></persName>
+		</author>
+		<idno type="DOI">10.11646/zootaxa.2427.1.2</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Zootaxa</title>
+		<imprint>
+			<biblScope unit="volume">2427</biblScope>
+			<biblScope unit="page" from="15" to="24"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">The freshwater crabs of West Africa. Family potamonautidae</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Cumberlidge</surname></persName>
+		</author>
+		<idno type="DOI">10.11646/zootaxa.2427.1.2</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Faune et Flore Tropicales</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page">382</biblScope>
+			<date type="published" when="1999">1999</date>
+			<publisher>Institut de Recherche Pour le Développement. IRD ex-ORSTOM</publisher>
+			<pubPlace>Paris</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Size and shape variation of two freshwater crabs in Argentinean Patagonia: the influence of sexual dimorphism, habitat and species interaction</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Giri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Loy</surname></persName>
+		</author>
+		<idno type="DOI">10.1651/07-2824r.1</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Crustacean Biology</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="37" to="45"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Zoological results of the Dutch Scientific Expedition to Central Borneo. The Crustacea. Part II, Brachyura</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>De Man</surname></persName>
+		</author>
+		<idno type="DOI">10.1651/07-2824r.1</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Notes from the Leyden Museum</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="53" to="144"/>
+			<date type="published" when="1899">1899</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Intraspecific variation in carapace morphology among fiddler crabs (genus Uca) from the Atlantic coast of Brazil</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">R</forename><surname>Hampton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Hopkins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Mcnamara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">L</forename><surname>Thurman</surname></persName>
+		</author>
+		<idno type="DOI">10.3354/ab00545</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Aquatic Biology</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="53" to="67"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Multivariate and geometric morphometrics in the analysis of sexual dimorphism variation in Podarcis lizards</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kaliontzopoulu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Carretero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Llorente</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/jmor.10494</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Morphology</title>
+		<imprint>
+			<biblScope unit="volume">268</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="152" to="165"/>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">MorphoJ: an integrated software package for geometric morphometrics</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">P</forename><surname>Klingenberg</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/j.1755-0998.2010.02924.x</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Molecular Ecology Resources</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="353" to="357"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Body shape variation in cichlid fishes of the Amphilophus citrinellus species complex</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">P</forename><surname>Klingenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Barluenga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Meyer</surname></persName>
+		</author>
+		<idno type="DOI">10.1046/j.1095-8312.2003.00246.x</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Biological Journal of Linnaean Society</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="397" to="408"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Crustaceology</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">E</forename><surname>Leach</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Edinburgh Encyclopedia</title>
+		<editor>
+			<persName><forename type="first">D</forename><surname>Brewster</surname></persName>
+		</editor>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="383" to="437"/>
+			<date type="published" when="1814">1814</date>
+			<publisher>William Blackwood</publisher>
+			<pubPlace>Edinburgh</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Sex identification of Carcinus maenas by analysis of carapace geometrical morphometry</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">M</forename><surname>Ledesma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Van Der Molen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Barón</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.seares.2010.01.002</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Sea Research</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="issue">3-4</biblScope>
+			<biblScope unit="page" from="213" to="216"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Landmark data: size and shape analysis in systematics. A case study on old world Talpidae (Mammalia, Insectivora)</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Loy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Corti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">F</forename><surname>Marcus</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Contributions to Morphometrics</title>
+		<editor>
+			<persName><forename type="first">L</forename><forename type="middle">F</forename><surname>Marcus</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">E</forename><surname>Bello</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">A</forename><surname>García-Valdecasas</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Spain</addrLine></address></meeting>
+		<imprint>
+			<publisher>Consejo Superior de Investigaciones Científicas</publisher>
+			<date type="published" when="1993">1993</date>
+			<biblScope unit="page" from="215" to="240"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Overview of the new, or geometric morphometrics</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">F</forename><surname>Marcus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Corti</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Morphometrics</title>
+		<editor>
+			<persName><forename type="first">L</forename><forename type="middle">F</forename><surname>Marcus</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">M</forename><surname>Corti</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">A</forename><surname>Loy</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Gjp</forename><surname>Naylor</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Slice</surname></persName>
+		</editor>
+		<meeting><address><addrLine>New York and London</addrLine></address></meeting>
+		<imprint>
+			<publisher>Plenum Press</publisher>
+			<date type="published" when="1996">1996</date>
+			<biblScope unit="page" from="1" to="14"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Is formalin fixation and ethanol preservation able to influence in geometric morphometric analysis? Fishes as a case study</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Martinez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M</forename><surname>Berbel-Filho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><forename type="middle">P</forename><surname>Jacobina</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s00435-012-0176-x</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Zoomorphology</title>
+		<imprint>
+			<biblScope unit="volume">132</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="87" to="93"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Freshwater crabs of the genus Isolapotamon Bott, 1968 from Sarawak, Borneo (Crustacea, Decapoda, Brachyura, Potamidae)</title>
+		<author>
+			<persName><forename type="first">Pkl</forename><surname>Ng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sarawak Museum Journal</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="issue">58</biblScope>
+			<biblScope unit="page" from="139" to="153"/>
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+	<note>new series</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<author>
+			<persName><forename type="first">Pkl</forename><surname>Ng</surname></persName>
+		</author>
+		<title level="m">The freshwater crabs of Peninsular Malaysia and Singapore</title>
+		<meeting><address><addrLine>Singapore</addrLine></address></meeting>
+		<imprint>
+			<publisher>Shinglee Publishers Pte Ltd</publisher>
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<title level="m" type="main">Freshwater invertebrates of the Malaysian region</title>
+		<author>
+			<persName><forename type="first">Pkl</forename><surname>Ng</surname></persName>
+		</author>
+		<editor>Yule CM, Yong HS</editor>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+			<publisher>Academy of Science Malaysia</publisher>
+			<biblScope unit="page" from="311" to="336"/>
+			<pubPlace>Malaysia</pubPlace>
+		</imprint>
+	</monogr>
+	<note>Crustacea: decapoda, brachyura</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Fossil brachyuran crabs from the Jambusan Caves (Bau, Sarawak), collected</title>
+		<author>
+			<persName><forename type="first">Pkl</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Earl</forename><surname>Of Cranbrook</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 5th Symposium on Mesozoic and Cenozoic Decapod Crustaceans</title>
+		<editor>
+			<persName><forename type="first">Pál</forename><surname>Mihály</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Müller</forename></persName>
+		</editor>
+		<meeting>the 5th Symposium on Mesozoic and Cenozoic Decapod Crustaceans<address><addrLine>Krakow, Poland; Leiden</addrLine></address></meeting>
+		<imprint>
+			<publisher>Scripta Geologica</publisher>
+			<date type="published" when="2013">2014. 2013</date>
+			<biblScope unit="page" from="289" to="307"/>
+		</imprint>
+	</monogr>
+	<note>Naturalis Biodiversity Center</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Systema brachyurorum: Part I. An annotated checklist of extant brachyuran crabs of the world</title>
+		<author>
+			<persName><forename type="first">Pkl</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Guinot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pjf</forename><surname>Davie</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Raffles Bulletin of Zoology</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="1" to="286"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">A revision of the Southeast Asian freshwater crabs of the genus Isolapotamon Bott, 1968 (Crustacea: Decapoda: Brachyura: Potamidae)</title>
+		<author>
+			<persName><forename type="first">Pkl</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Tan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the Biological Society of Washington</title>
+		<imprint>
+			<biblScope unit="volume">111</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="52" to="80"/>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Revision of the Southeast Asian potamid crabs of the genus Malayopotamon Bott, 1968 (Crustacea: Decapoda: Brachyura)</title>
+		<author>
+			<persName><forename type="first">Pkl</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Tan</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/002229399300380</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Natural History</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="207" to="231"/>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">A new freshwater crab of the genus Isolapotamon Bott, 1968 (Decapoda, Brachyura, Potamidae) from Sarawak, Borneo</title>
+		<author>
+			<persName><forename type="first">Pkl</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Yang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Indo-Malayan Zoology</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="15" to="18"/>
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Crostacei decapodi. Viaggio del Dott. A. Borelli nella Republica Argentina e nel Paraguay</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Nobili</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bolletino dei Musei di Zoologia ed Anatomia comparata della R. Università di Torino</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">222</biblScope>
+			<biblScope unit="page" from="1" to="4"/>
+			<date type="published" when="1896">1896</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Non-indigenous freshwater crabs in France: a new occurrence of a potamid near Nice</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">Y</forename><surname>Noël</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Guinot</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Invaders in Inland Water: Profiles, Distribution and Threats</title>
+		<editor>
+			<persName><forename type="first">F</forename><surname>Gherardi</surname></persName>
+		</editor>
+		<meeting><address><addrLine>The Netherlands</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2007">2007</date>
+			<biblScope unit="page" from="77" to="90"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Neue Südamerikanische Süsswasserkrabben der Gattung Pseudothelphusa</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pretzmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Entomologisches Nachrichtenblatt</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="1" to="15"/>
+			<date type="published" when="1968">1968</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Taxonomy and biogeography of the freshwater crabs of Tanzania, East Africa (Brachyura: Potamoidea: Potamonautidae, Platythelphusidae, Deckeniidae)</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Reed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Cumberlidge</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Zootaxa</title>
+		<imprint>
+			<biblScope unit="volume">1262</biblScope>
+			<biblScope unit="page" from="1" to="139"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<monogr>
+		<title level="m" type="main">tpsUtil, file utility program</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">J</forename><surname>Rohlf</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<monogr>
+		<ptr target="http://life.bio.sunysb.edu/morph"/>
+		<title level="m">Department of ecology and evolution</title>
+		<imprint>
+			<publisher>State University of New York at stony brook</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">A revolution in morphometrics</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">J</forename><surname>Rohlf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">F</forename><surname>Marcus</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0169-5347(93)90024-j</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Trends in Ecology and Evolution</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="129" to="132"/>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Fiddler crab claw shape variation: a geometric morphometric analysis across the genus Uca (Crustacea: Brachyura: Ocypodidae)</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Rosenberg</surname></persName>
+		</author>
+		<idno type="DOI">10.1046/j.1095-8312.2002.00012.x</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Biological Journal of Linnaean Society</title>
+		<imprint>
+			<biblScope unit="volume">75</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="147" to="162"/>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Male and female carapace shape differences in Liocarcinus depurator (Decapoda, Brachyura): an application of geometric morphometric analysis to crustaceans</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rufino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Abelló</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">B</forename><surname>Yule</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/11250000409356554</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Italian Journal of Zoology</title>
+		<imprint>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="79" to="83"/>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Geographic and gender shape differences in the carapace of Liocarcinus depurator (Decapoda, Brachyura) using geometric morphometrics and the influence of a digitizing method</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rufino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Abelló</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">B</forename><surname>Yule</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/j.1469-7998.2006.00086.x</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Zoology</title>
+		<imprint>
+			<biblScope unit="volume">269</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="458" to="465"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Geometric morphometric analysis of wing shape variation in ten European population of Calopteryx splendens (Harris, 1782) (Zygoptera: Odonata)</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sadeghi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Adriaens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Dumont</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Odonatologica</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="343" to="360"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Autapomorphies of the endophragmal system in trichodactylid freshwater crabs (Crustacea: Decapoda: Eubrachyura)</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">V</forename><surname>Sternberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Cumberlidge</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/jmor.10072</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Morphology</title>
+		<imprint>
+			<biblScope unit="volume">256</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="23" to="28"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Morphological variation of freshwater crabs Zilchiopsis collastinensis and Trichodactylus borellianus (Decapoda, Trichodactylidae) among localities from the middle Paraná River basin during different hydrological periods</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">V</forename><surname>Torres</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Collins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Girl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ZooKeys</title>
+		<imprint>
+			<biblScope unit="volume">457</biblScope>
+			<biblScope unit="page" from="171" to="186"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Significance of wing morphometry in distinguishing some of the hymenoptera species</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tüzün</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">African Journal of Biotechnology</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">14</biblScope>
+			<biblScope unit="page" from="3353" to="3363"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Recognition of two subfamilies in the Potamidae Ortmann, 1896 (Brachyura, Potamidae) with a note on the genus Potamon Savigny, 1816</title>
+		<author>
+			<persName><forename type="first">Dcj</forename><surname>Yeo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pkl</forename><surname>Ng</surname></persName>
+		</author>
+		<idno type="DOI">10.1163/156854003773123456</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Crustaceana</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="1219" to="1235"/>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<monogr>
+		<title level="m" type="main">Geometric morphometrics for biologists: A primer</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Zelditch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">L</forename><surname>Swiderski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Sheets</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">L</forename><surname>Fink</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+			<publisher>Elsevier Academic Press</publisher>
+			<pubPlace>Amsterdam</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

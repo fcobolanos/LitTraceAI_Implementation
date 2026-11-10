@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Agglomeration effects and informal firms in the internal structure of cities</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Andres</forename><surname>Dominguez</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Economics</orgName>
+								<orgName type="institution">Universidad Sergio Arboleda</orgName>
+								<address>
+									<settlement>Bogota</settlement>
+									<country key="CO">Colombia</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Agglomeration effects and informal firms in the internal structure of cities</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">EA32D34A767E030BE79DC747DAD6EFF8</idno>
+					<idno type="DOI">10.1108/AEA-06-2019-0008</idno>
+					<note type="submission">Received 2 February 2018 Revised 25 February 2019 Accepted 6 May 2019</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-09-02T20:22+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Informality</term>
+					<term>Agglomeration effects</term>
+					<term>Firm location</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Purpose -This paper aims to estimate the effect of agglomeration on the probability of being an informal firm in Cali, Colombia. Informal firms produce legal goods but do not comply with official regulations. This issue is relevant because, similar to other developing countries, the informal sector in Colombia employs more than 50 per cent of the workforce. The results of this study demonstrate that one standard deviation increase in agglomeration reduces by 52 per cent the probability of being informal. Results are consistent with the idea that informal firms benefit less from agglomeration because of legal restrictions that block the relationship with formal firms.</p><p>Design/methodology/approach -The objective of the present paper is to estimate the effect of agglomeration on the probability that a firmgiven a locationchooses to be informal. The authors deal with endogeneity issues by using soil information related to earthquake risk, which reduces the height of buildings and therefore increases the cost of agglomeration. The analysis focuses on Cali, Colombia, where the informal sector employs 60 per cent of the workforce. The registration of economic activities is used as a criterion to identify informal firms, in such a way that the percentage of informal firms is 42 per cent.</p><p>Findings -The authors find that the effect of agglomeration is strongly negative. The probability of being informal diminishes by 52 per cent when agglomeration increases by one standard deviation. Results in this paper shed light on how formal firms tend to be localized in high-density commercial and industrial areas, while informal firms are localized in low-density and peripheral areas where the land for production is cheaper and where they can avoid the control of authorities.</p><p>Originality/value -Theory argues that spatial production externalities and commuting costs are among the main forces that shape the city's internal structure. Externalities include effects that increase firms' production, and therefore workers' income, when the size of the local economy grows. The authors now have strong evidence that firms' productivity is positively related with the volume of nearby employment. Most of the empirical findings concern firms in the formal sector and, accordingly, the literature says little about the effect of agglomeration on informal firms' location. However, this effect is crucial for developing countries where informal work is the main option for less-educated workers facing unemployment.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>Cities can be studied as market responses to production and income opportunities <ref type="bibr" target="#b24">(Mills, 1967)</ref>. Accordingly, the size and growth of urban areas can be interpreted as responses to these opportunities <ref type="bibr">[1]</ref>. Indeed, there is a strong positive relationship between productivity and economic density for different industries and levels of aggregation <ref type="bibr" target="#b9">(Ciccone and Hall, 1996;</ref><ref type="bibr" target="#b8">Ciccone, 2002;</ref><ref type="bibr" target="#b6">Brulhart and Mathys, 2008;</ref><ref type="bibr" target="#b23">Melo and Noland, 2009;</ref><ref type="bibr" target="#b10">Combes et al., 2010;</ref><ref type="bibr" target="#b28">Morikawa, 2011)</ref>.</p><p>Theory argues that spatial production externalities and commuting costs are among the main forces that shape the city's internal structure. Externalities include effects that increase firms' production, and therefore workers' income, when the size of the local economy grows <ref type="bibr">[2]</ref>. We now have strong evidence that firms' productivity is positively related with the volume of nearby employment <ref type="bibr" target="#b31">(Rosenthal and Strange, 2003;</ref><ref type="bibr" target="#b11">Combes and Gobillon, 2015)</ref>. Most of the empirical findings concern firms in the formal sector and accordingly, the literature says little about the effect of agglomeration on informal firms' location <ref type="bibr" target="#b13">(Duranton, 2009)</ref>. However, this effect is crucial for developing countries where informal work is the main option for less-educated workers facing unemployment. Indeed, in several countries, more than 50 per cent of employment is in the informal sector <ref type="bibr" target="#b21">(Maloney, 2004;</ref><ref type="bibr" target="#b30">Perry et al., 2007)</ref>.</p><p>One of the main factors that explain informality is a significant cost related to formalization. A representative entrepreneur evaluates costs and benefits and could find that it is efficient to choose informality. Indeed, the literature points out that high taxes and social security contributions are costly regulations that lead entrepreneurs to not set up formal business and hence to not register their firms (de Soto, 2000; <ref type="bibr" target="#b21">Maloney, 2004)</ref> <ref type="bibr">[3]</ref>. Nevertheless, there is a threshold in the level of the economic activity when the incentives of formalization become more important.</p><p>The informal sector comprises a heterogeneous mixture of self-employed entrepreneurs, small and short-life firms that, although they produce legal goods, do not comply with legal regulations. When firms choose to be informal they do not have access to all markets where property rights are secure and well-defined. When a firm is informal, the owner faces restrictions in the financial system: they cannot make long-time capital investments and cannot use their property as collateral to secure loans <ref type="bibr" target="#b17">(Feige, 1990;</ref><ref type="bibr">de Soto, 2000;</ref><ref type="bibr" target="#b34">Sindzingre, 2006)</ref>. As a result, informal firms have lower productivity levels, lower fixed assets per worker and less access to government services than formal firms <ref type="bibr">(Cárdenas and Mejia, 2007;</ref><ref type="bibr">Santa Maria and Rozo, 2009)</ref>. In addition, they do not comply with labour regulations, may practice smuggling and, frequently, do not carry accounting <ref type="bibr">[4]</ref>.</p><p>We have evidence that formal and informal firms (of similar size and belonging to the same economic sector) display different locational patterns within an urban area <ref type="bibr" target="#b27">(Moreno-Monroy and García, 2015)</ref>. Furthermore, there is evidence (for São Paulo) that informality rates decrease on average 15 per cent faster in areas with new transport infrastructure <ref type="bibr" target="#b26">(Moreno-Monroy and Roman, 2015)</ref> in line with the idea that informality is a choice based on a cost-benefit calculation of the entrepreneur.</p><p>The objective of the present paper is to estimate the effect of agglomeration on the probability that a firmgiven a locationchooses to be informal. We deal with endogeneity issues by using soil information related to earthquake risk, which reduces the height of buildings and therefore increases the cost of agglomeration. The analysis focuses on Cali, in the west of Colombia, where the informal sector employs 60 per cent of the workforce. Using the registration of economic activities as a criterion to identify formal and informal firms <ref type="bibr" target="#b33">(Schneider, 2005)</ref>, we identify informal firms when they are not registered in the Chamber of Commerce, in such a way that the percentage of informal firms is 42 per cent.</p><p>We find that the effect of agglomeration is strongly negative. The probability of being informal diminishes by 52 per cent when agglomeration increases by one standard deviation. Results in this paper shed light on how formal firms tend to be localized in high-AEA 27,80 density commercial and industrial areas, while informal firms are localized in low-density and peripheral areas where the land for production is cheaper and where they can avoid the control of authorities.</p><p>This paper proceeds as follows: Section 1 contains the theoretical framework, Section 2 presents the data and a discussion about the results and Section 3 concludes.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Theoretical framework</head><p>A linear city model where employment clustering is determined by an agglomeration externality was introduced by <ref type="bibr">Fujita and Ogawa (1982)[5]</ref>. An improvement was made by <ref type="bibr" target="#b20">Lucas and Rossi-Hansberg (2002)</ref> where, in a circular city model, firms and workers compete for land at different locations, and the external agglomeration effects lead firms to outbid residential use for land near production centres. The interaction between agglomeration effects and commuting costs is then the main determinant of urban structure: firms have an incentive to be close to each other to obtain benefits from agglomeration, whereas workers prefer proximity to the workplace to minimize commuting costs. Then, market prices (land rents and wages) give firms and households incentives for making land use decisions.</p><p>Workers consume residential land and a good which is produced using labour and land. If productivity increases with employment levels in neighbouring locations, firm production per unit of land at location s, x(s), is expressed as x s ð Þ ¼ A z s g n a , where z s represents the agglomeration effect on production at location s, A is a productivity constant, n is the number of employees and a &lt; 1 <ref type="bibr">[6]</ref>. The profit per unit of land at location s is represented as</p><formula xml:id="formula_0">q s ð Þ ¼ A z s g n a À w s ð Þn.</formula><p>, where w(s) is the wage rate. Firms choose employment n to maximize profits. From the first-order condition we obtain n ¼ n w; z ð Þ and q ¼ q w; z ð Þ. Therefore, given w and z, the business bid rent is determined <ref type="bibr">[7]</ref>. The model implies that land use depends on the difference between bids made by households and firms.</p><p>For simplicity, let us assume that informal and formal firms are identical except that g = 0 for informal firms, because they are not allowed to have formal business contracts. When g = 0 for informal firms, we assume that informal firms cannot benefit from agglomeration effects. These informal firms have the following production function:</p><formula xml:id="formula_1">x s ð Þ ¼ A n a</formula><p>The model predicts then that these firms will be less productive and smaller. Now let us suppose that firms can choose to be formal or informal at a given cost c &gt; 0. Given this assumption, firms will be less likely to choose being informal given higher levels of agglomeration. This happens because informal firms benefit less from positive technological and pecuniary externalities that arise in close spatial proximity due to legal restrictions that block the relationship with formal firms. Formal property allows assets to be identified and linked to other assets in the economy. Then, to benefit from external effects, the owner has incentives to formalize the business. As a result, we will find formal firms located in high density areas meanwhile informal firms will be located in low density areas. Accordingly, we aim to estimate the causal effect of agglomeration on the probability of being informal (controlling for the firm size and the economic sector).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Empirical results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1">Data</head><p>We focus on Cali, which is the third city in terms of population in Colombia. It was founded on 25 July 1536 and is located in the west of Colombia, in the Cauca Valley. The metropolitan area of Cali has a population of about 2,200,000 and a density of 21,295 persons per square Agglomeration effects and informal firms kilometre (in 2005). The city has two natural limits: the limit to the east is the Cauca River and the limit to the west is the Western Mountain Range (Cordillera Occidental) <ref type="bibr">[8]</ref>. The urban area is divided into 338 administrative neighbourhoods with an average of 0.36 km 2 .</p><p>Our main source of information is the Economic Census carried out by the National Institute of Statistics (Departamento Administrativo Nacional de Estadística, DANE). The database contains population data as well as establishment-level information, including employment, economic sector (two-digit level), geographical location and compliance with legal requirements. From now on, we will refer to establishments as firms.</p><p>Information about the compliance of legal requirements enables us to identify informal firms which, although they produce legal goods and services (e.g. bread, shoe repair, groceries shop), do not fully comply with legal regulations <ref type="bibr">[9]</ref>. This means that informal firms are known, but not registered in the Chamber of Commerce (Camara de Comercio de Cali), which certifies firm ownership. These firms evade taxes, have less rigorous bookkeeping, do not contribute to social security and face restrictions to formal financial credit <ref type="bibr">(Cárdenas and Rozo, 2009)[10]</ref>. Furthermore, informal firms are not allowed to have commercial or financial relations with formal or public firms. In Cali, there are 22,208 informal firms, which is about 43 per cent of the 51,457 firms.</p><p>We measure agglomeration, z s , as a weighted average of the number of jobs at locations h, with weights that are a decreasing function of distance between s and h (see also <ref type="bibr">Koster and Rouwendal, 2013)[11]</ref>. To be specific, z s is defined as follows:</p><formula xml:id="formula_2">z s ¼ ð J h e Àd d sh dh (1)</formula><p>where J h denotes the number of jobs at location h, d sh denotes the distance between locations s and h, and d &gt; 0 is a given decay parameter. The external effect is more localized for higher values of d , which implies that the value to a firm of locating near other producers is also higher. Figure <ref type="figure" target="#fig_0">1</ref> shows the weights as a decreasing function of distance, and it depends on the decay parameter d . The horizontal axis measures the distance between locations. For instance, if d = 5, z s will be similar at the number of jobs in the location s; if d = 0,5 then the surrounding areas are very important. Panel (a) in Figure <ref type="figure">2</ref> shows the agglomeration variable for d = 2. We can observe that employment density is high near the city centre; as we move away from the centre we find areas of residential use. Panel (b) shows that the proportion of informal firms is higher in areas away from the city centre; and Panel (c) shows that the east of the city is affected by a liquefaction risk, which is present in areas where the soil is saturated with water and then acts like a liquid when shaken by an earthquake <ref type="bibr">[12]</ref>. From among 338 neighbourhoods, 158 are affected by liquefaction risk in the east of the city, which represents 47 per cent of the neighbourhoods. Table <ref type="table" target="#tab_0">I</ref> presents the descriptive statistics of the main variables by neighbourhood. On average, the share of informal firms in a neighbourhood is 0.42, with a standard deviation of  Notes: 338 neighbourhoods. In levels, the agglomeration variable has a mean equal to 3,648, and the standard deviation is 4,020. We use these data to calculate the effect of a one standard deviation change Agglomeration effects and informal firms 0.31. On average, a firm has five workers and the city has around 727 jobs per neighbourhood, of which 551 are formal jobs and 176 are informal. The area of a neighbourhood is, on average, 360 m 2 . The Central Business District (CBD) is localized in the city centre of Cali, around the Plaza de Caicedo (it is identified by the orange circle in the first map of Figure <ref type="figure" target="#fig_0">1</ref>. It is the neighbourhood with the highest employment density). The average distance between a neighbourhood's centroid and the CBD is approximately 3.8 km, and the average distance between a centroid and the main corridors of the city is 560 m. Next section describes the methodology.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2">Methodology</head><p>We estimate a probit model where the dependent variable, y is , is equal to 1 for an informal firm i in a neighbourhood s, and equal to 0 otherwise. We are interested in the effect of agglomeration z s , hence we assume:</p><formula xml:id="formula_3">Prob y is ¼ 1j x ð Þ¼ U X b ð Þ; (2)</formula><p>where X contains the effect of agglomeration z s and variables which represent firms' characteristics such as industrial sector (two-digit-level ISIC) and the number of workers. Moreover, it includes spatial variables such as distance from the city centre (in discrete categories to capture non-monocentric effects), distance from the main corridors (also in discrete categories), and X and Y coordinates, which are included to control for unobserved factors that smoothly vary over space.</p><p>The agglomeration variable, z s , depends on the value of d , which is unknown <ref type="bibr">[13]</ref>. We have estimated the model for different values of d (from 0.1 to 5). The maximum fit occurs when d is 2 (see Figure <ref type="figure" target="#fig_3">A5</ref> in the Appendix: R 2 and log-pseudo likelihood using different values of d ). We report results using this value, which implies that the agglomeration effect disappears within 2 km [Panel (a) in Figure <ref type="figure">2</ref> shows the geographical distribution of agglomeration and Table <ref type="table" target="#tab_0">I</ref> shows that the logarithm of this variable has a mean of 7.81 with a standard deviation of 0.87; we use values in levels to interpret the effect of the variable on the probability of being informal][14].</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3">Main results</head><p>The estimated marginal effects using information from 51,454 firms are presented in Table <ref type="table" target="#tab_0">II</ref> (standard errors are clustered by neighbourhood). We control for size and industrial sector of the firm (to control the productivity), distance from CBD and distance from main corridors. In the probit estimation the marginal effect of agglomeration is negative (À0.1051), which means that one standard deviation increase in agglomeration reduces the probability of being informal by 7.8 per cent <ref type="bibr">[15]</ref>. The estimated effects of the Probit model are likely to be biased because of the presence of omitted variables which are correlated with agglomeration and the probability of informality <ref type="bibr" target="#b15">(Ellison and Glaeser, 1999;</ref><ref type="bibr" target="#b5">Bayer and Timmins, 2007)</ref>. These omitted variables may be related to the educational level of employees and fixed assets of the firm.</p><p>Using an instrumental variable that is correlated with agglomeration but uncorrelated with any unobserved locational advantage may correct the bias. Geological variables such as soil composition, rock depth, water capacity, soil erodibility and seismic and landslide hazard have been used for coping with endogeneity <ref type="bibr" target="#b32">(Rosenthal and Strange, 2008;</ref><ref type="bibr" target="#b10">Combes et al., 2010;</ref><ref type="bibr" target="#b11">Combes and Gobillon, 2015)</ref>. Characteristics of soil were important to localize original settlements, and agglomeration processes have then developed in those areas. In that case, the instrument is relevant. Our instrument is based on liquefaction risk, which refers to the strength and stiffness of the soil when it is affected in the case of earthquakes. Liquefaction risk is present in areas where the soil is saturated with water and then acts like a liquid when shaken by an earthquake. Earthquake waves cause water pressure to increase in the sediment, so sand grains lose contact with each other and the soil loses its ability to support high buildings. It can be argued that the instrument is exogenous because there is no reason to say that the probability of being informal affects the liquefaction risk of one area.</p><p>Panel (c) in Figure <ref type="figure">2</ref> shows areas with liquefaction risk in Cali. This risk is present in the east of the city because of the Cauca River <ref type="bibr">[16]</ref>. For most neighbourhoods the risk is either zero or one. When a proportion of the neighbourhood is affected we use the share of the area where the risk is present. Clearly, the instrument does not vary randomly over space <ref type="bibr">[17]</ref>. As shown in the estimation IV-probit we also control for firm size and the individual industrial sector and the reduction of the probability of being informal is 52 per cent <ref type="bibr">[18]</ref>. Table AI-col 1 in the Appendix shows the results of the first-stage estimation. The F-statistic for weak instruments is higher than 10, which implies that the instrument has a strong negative effect on agglomeration. We confirm that firm size is negatively related to the probability of being informal, as mentioned in the literature. In our results we obtain that the IV estimated coefficient is more negative than the OLS estimated coefficient. Hence, solving the endogeneity problem, allows to estimate a stronger relationship between agglomeration and informality.</p><p>Table <ref type="table" target="#tab_2">III</ref> shows that when formal agglomeration increases by one standard deviation the probability of being informal diminishes by 9.3 per cent <ref type="bibr">[19]</ref>, according to the probit model and 27.4 per cent <ref type="bibr">[20]</ref> according to the IV-probit model. Table AI-col 2 in the Appendix shows the results of the first-stage estimation. These results allow us to conclude that the urban structure is determined by formal agglomeration and informal firms will occupy spaces that formal firms do not occupy. This means that informal firms have to make decisions in a different set of constraints, including those that link them to the formal sector, and supports the hypothesis that informal firms face restrictions that do not allow them to benefit from agglomeration externalities. These firms are marginalized from accessing the same set of external effects or participating in the same economic transactions as their formal counterparts (Moreno-Monroy, 2012). In short, formalization is fundamental to reap all the benefits associated with property rights.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Agglomeration effects and informal firms</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4">Sensitivity analysis</head><p>We re-estimate the effect of agglomeration on the probability of being informal using different specifications. It is important to bear in mind that we have 338 neighbourhoods. There is extreme variation in the level of agglomeration (in log from 4.3 to 10.3). The result may be sensitive to extreme "outliers". We have estimations of the model excluding 20 neighbourhoods with the lower and higher agglomeration levels (the variation in log is now from 6.4 to 9.2). The results are similar: when the agglomeration variable increases by one standard deviation the probability of being informal diminishes by 7 per cent <ref type="bibr" target="#b0">[21]</ref> in the probit model and 39 per cent <ref type="bibr" target="#b1">[22]</ref> in the IV specification. Table <ref type="table" target="#tab_3">IV</ref> shows descriptive statistics for the agglomeration variable without outliers, and Table V reports the model estimations for probit and IV-probit specification (first stage estimation of the IV model is reported in the Appendix: Table <ref type="table" target="#tab_0">AI</ref></p><formula xml:id="formula_4">-col. 3).</formula><p>The validity of our instrument can be questioned as it is non-random over space. We therefore re-estimate the model for observations within 1 km from the liquefaction limit. The panel (c) in Figure <ref type="figure">2</ref> shows the liquefaction limit as the division between areas affected and not affected for the liquefaction risk. The control of 1 km is in order to include in the regression analysis similar neighbourhoods where the most important difference is the condition of liquefaction risk. The results are shown in Table <ref type="table" target="#tab_3">VI</ref>. The estimated marginal effect from the probit model is À0.1103 and À0.4197 for the IV model. These results are in the same direction compared to marginal effects in Table <ref type="table" target="#tab_0">II</ref>, -0.1051 and -0.6953, respectively (first-stage estimation of the IV model is reported in the Appendix: Table AI-col. 4.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Conclusion</head><p>Literature provides evidence about the relationship between spatial density and aggregate increasing returns. Moreover, the structure of a city is determined by a production externality under which employment at any site is more productive when the employment at neighbouring sites is higher. As profit increases with productivity, firms should locate where their expected profit is highest. Nevertheless, when the property-rights system fails, the market cannot work efficiently, because the owner has de facto rights to their property but does not have a legal enforceable title. The literature does not say too much about the structure of cities where the percentage of the informal sector is significant. In particular, we analyse the case of a Colombian city where 42 per cent of firms are informal. We shed light on how formal firms tend to be localized in high density commercial areas, while informal firms are localized in low density and peripheral areas where the land is cheaper and where they can avoid the control of authorities.</p><p>We aim to estimate the effect of formal agglomeration on the probability of being informal, which could be interpreted as a local share of informal firms. The main result is that when agglomeration increases by one standard deviation the probability of being informal diminishes around 52 per cent. This may happen because informal firms have less opportunity to benefit from agglomeration effects because of legal restrictions that block their relationship with formal firms. The result explains why formal and informal firms display different locational patterns in the urban structure. We conduct an IV analysis to tackle the potential endogeneity problem. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Agglomeration effects and informal firms</head><p>Notes 1. In developing countries, however, migration from rural to urban areas has been associated with push rather than pull factors, because the population is expelled from rural areas rather than attracted to urban areas by the prospects of better living standards <ref type="bibr" target="#b3">(Bairoch, 1988;</ref><ref type="bibr" target="#b4">Barrios et al., 2006)</ref>.</p><p>2. As is well known, the literature focuses on technological spillovers, labour pooling and intermediate input linkages <ref type="bibr" target="#b22">(Marshall, 1890;</ref><ref type="bibr" target="#b16">Ellison et al., 2010)</ref>, and sharing, matching and learning effects, as in <ref type="bibr" target="#b14">Duranton and Puga (2004)</ref>.</p><p>3. There are different perspectives to analysing informality. Dualism assumes that informal firms do not have linkages with formal firms. Structuralism assumes that formal and informal firms are intrinsically linked (formal firms aim to reduce their input costs by promoting informal activities). Legalism focuses on the regulatory environment of the relationship between formal and informal firms <ref type="bibr" target="#b7">(Chen, 2006;</ref><ref type="bibr" target="#b30">Perry et al., 2007</ref>).</p><p>4. For example, around 57 per cent of informal firms in Cali do not carry accounting <ref type="bibr">(Santa Maria and Rozo, 2009)</ref>.</p><p>5. The Alonso-Mills-Muth model has served as the most important base to analyse urban spatial structures but assumes employment clustering in a city centre <ref type="bibr" target="#b2">(Alonso, 1969;</ref><ref type="bibr" target="#b24">Mills, 1967;</ref><ref type="bibr" target="#b29">Muth, 1969)</ref>.</p><p>6. The agglomeration effect, z s , is calculated using the employment at neighbouring locations. The function is assumed linear and decays exponentially at a rate d with the distance from s.</p><p>7. The bid rent is defined as the rent per unit of land that a firm will be willing to pay.</p><p>8. Figure <ref type="figure" target="#fig_0">A1</ref> in the Appendix shows the geographical location of the city. 9. At the moment of collecting information, business owners are informed that if they declare that the business fails to comply with legal regulations, they would not experience any negative legal consequences (the information provided is confidential). Informality is not persecuted, which leads business owners to provide truthful information.</p><p>10. Business informality is closely related to labour informality. Informal workers are characterized by lower levels of education and wages.</p><p>11. <ref type="bibr" target="#b18">Fujita and Ogawa (1982)</ref> define the externality effect as a potential of employment.</p><p>12. Figure <ref type="figure">A2</ref> in the Appendix shows the map for job and population density (per km 2 ) and Figure <ref type="figure">A3</ref> shows cumulative population and employment (formal and informal) as a function of distance from the city centre in kilometres.</p><p>13. The parameter d can be estimated with non-linear regression estimation procedures, but this is cumbersome.</p><p>14. Figure <ref type="figure">A4</ref> in the Appendix shows that the logarithm of agglomeration is approximately normally distributed.</p><p>15. À0.1051 [ln(3648 þ 4020) À ln(3648)] = À0.078. We multiply the change of one standard deviation on agglomeration variable by the estimated marginal effect.</p><p>16. It is one of the main rivers of Colombia measuring some 1,350 km in length. 17. A sensitivity analysis about this fact is performed in section 2.4.   <ref type="bibr">-30,280 -30,260 -30,240 -30,220 -30,200 -30,180 -30,160 -30,140 13.90</ref> 13.95 </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Weights as a function of the decay parameter d</figDesc><graphic coords="4,121.78,431.55,301.15,171.10" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head/><label/><figDesc>Figure 2. (a) Agglomeration, (b) informality share and (c) liquefaction risk</figDesc><graphic coords="5,47.91,201.20,348.72,187.43" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head/><label/><figDesc>Figure A3. Cumulative employment and population</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure A5 .</head><label>A5</label><figDesc>Figure A5. R 2 and log-pseudo likelihood using different values of d</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table I .</head><label>I</label><figDesc>Descriptive statistics</figDesc><table><row><cell>Variable</cell><cell>Mean</cell><cell>SD</cell><cell>Minimum</cell><cell>Maximum</cell></row><row><cell>Local share of informal firms</cell><cell>0.42</cell><cell>0.31</cell><cell>0</cell><cell>1</cell></row><row><cell>ln (Agglomeration, d = 2)</cell><cell>7.81</cell><cell>0.87</cell><cell>4.35</cell><cell>10.30</cell></row><row><cell>Agglomeration, d = 2</cell><cell>3,648</cell><cell>4,020</cell><cell>77</cell><cell>29,804</cell></row><row><cell>ln (Formal agglomeration, d = 2)</cell><cell>7.40</cell><cell>1.03</cell><cell>3.35</cell><cell>10.07</cell></row><row><cell>Formal agglomeration, d = 2</cell><cell>2,749</cell><cell>3,343</cell><cell>29</cell><cell>23,709</cell></row><row><cell>Firm's size</cell><cell>5</cell><cell>35</cell><cell>1</cell><cell>2,415</cell></row><row><cell>Jobs</cell><cell>727</cell><cell>1,417</cell><cell>0</cell><cell>16,087</cell></row><row><cell>Formal jobs</cell><cell>551</cell><cell>1,191</cell><cell>0</cell><cell>13,172</cell></row><row><cell>Informal jobs</cell><cell>176</cell><cell>324</cell><cell>0</cell><cell>3,319</cell></row><row><cell>Job density (per km 2 )</cell><cell>3,109</cell><cell>5,794</cell><cell>0</cell><cell>43,435</cell></row><row><cell>Population</cell><cell>5,972</cell><cell>5,763</cell><cell>0</cell><cell>45,702</cell></row><row><cell>Population density (per km 2 )</cell><cell>21,296</cell><cell>13,022</cell><cell>0</cell><cell>56,716</cell></row><row><cell>Neighbourhood Area (km 2 )</cell><cell>0.36</cell><cell>0.50</cell><cell>0.02</cell><cell>7.84</cell></row><row><cell>Distance from CBD (km)</cell><cell>3.79</cell><cell>2.47</cell><cell>0</cell><cell>16.43</cell></row><row><cell>Distance from main corridors (km)</cell><cell>0.56</cell><cell>0.62</cell><cell>0</cell><cell>6.55</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table III .</head><label>III</label><figDesc/><table><row><cell>AEA</cell><cell/><cell/><cell/><cell/><cell/></row><row><cell>27,80</cell><cell/><cell/><cell/><cell/><cell/></row><row><cell/><cell>Explanatory variable</cell><cell/><cell>Probit</cell><cell/><cell>IV-probit</cell></row><row><cell/><cell>ln (formal agglomeration)</cell><cell/><cell>À0.1174 (0.0185)***</cell><cell/><cell>À0.344 (0.041)***</cell></row><row><cell/><cell>Size of the firm</cell><cell/><cell>(-)</cell><cell/><cell>( -)</cell></row><row><cell/><cell>Industrial sectors (47)</cell><cell/><cell>Yes</cell><cell/><cell>Yes</cell></row><row><cell>Marginal effects on probability of being informal using formal</cell><cell>Distance from CBD Distance from main corridors Number of observations F-statistic (weak instrument)</cell><cell/><cell>Yes Yes 51,454</cell><cell/><cell>Yes Yes 51,454 27.37</cell></row><row><cell>agglomeration as an</cell><cell cols="5">Notes: Marginal effects at the means of the independent variables. Clustered standard errors by</cell></row><row><cell>explanation variable</cell><cell cols="2">neighbourhood in parenthesis; *** p &lt; 0.01</cell><cell/><cell/><cell/></row><row><cell/><cell>Variable</cell><cell>Mean</cell><cell>SD</cell><cell>Minimum</cell><cell>Maximum</cell></row><row><cell>Table IV. Descriptive statistics</cell><cell>ln (Agglomeration, d = 2) Agglomeration, d = 2</cell><cell>7.76 2,892</cell><cell>0.64 1,966</cell><cell>6.41 608</cell><cell>9.23 10,175</cell></row><row><cell>without outliers</cell><cell>Source: Own elaboration</cell><cell/><cell/><cell/><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table V .</head><label>V</label><figDesc/><table><row><cell>Explanatory variable</cell><cell>Probit</cell><cell>IV-probit</cell><cell/></row><row><cell>ln (Agglomeration)</cell><cell>À0.1361 (0.028)***</cell><cell>À0.7564 (0.117)***</cell><cell/></row><row><cell>Size of the firm</cell><cell>(-)</cell><cell>( -)</cell><cell/></row><row><cell>Industrial sectors (47)</cell><cell>Yes</cell><cell>Yes</cell><cell/></row><row><cell>Distance from CBD</cell><cell>Yes</cell><cell>Yes</cell><cell/></row><row><cell>Distance from main corridors</cell><cell>Yes</cell><cell>Yes</cell><cell/></row><row><cell>Number of observations</cell><cell>36,914</cell><cell>36,914</cell><cell/></row><row><cell>F-statistic (weak instrument)</cell><cell/><cell>16.52</cell><cell/></row><row><cell/><cell/><cell/><cell>Marginal effects</cell></row><row><cell/><cell/><cell/><cell>excluding outliers</cell></row><row><cell>Explanatory variable</cell><cell>Probit</cell><cell>IV-probit</cell><cell/></row><row><cell>ln (Agglomeration)</cell><cell>À0.1103 (0.035)***</cell><cell>À0.4197 (0.1419)***</cell><cell/></row><row><cell>Size of the firm</cell><cell>(-)</cell><cell>( -)</cell><cell/></row><row><cell>Industrial sectors (47)</cell><cell>Yes</cell><cell>Yes</cell><cell/></row><row><cell>Distance from CBD</cell><cell>Yes</cell><cell>Yes</cell><cell/></row><row><cell>Distance from main corridors Number of observations F-statistic (weak instrument)</cell><cell>Yes 12,850</cell><cell>Yes 12,850 4.48</cell><cell>Table VI. Marginal effects controlling the</cell></row><row><cell/><cell/><cell/><cell>distance 1 km from</cell></row><row><cell/><cell/><cell/><cell>liquefaction limit</cell></row></table><note><p>Notes: Marginal effects at the means of the independent variables. Clustered standard errors by neighbourhood in parenthesis; *** p &lt; 0.01; ** p &lt; 0.05; * p &lt; 0.10 Notes: Marginal effects at the means of the independent variables. Clustered standard errors by neighbourhood in parenthesis; *** p &lt; 0.01; ** p &lt; 0.05; * p &lt; 0.10</p></note></figure>
+		</body>
+		<back>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Agglomeration effects and informal firms</head><p>Corresponding author Andres Dominguez can be contacted at: jandresdominguezm@gmail.com For instructions on how to order reprints of this article, please visit our website: www.emeraldgrouppublishing.com/licensing/reprints.htm Or contact us for further details: permissions@emeraldinsight.com  </p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">The estimated coefficient is À0.1361</title>
+	</analytic>
+	<monogr>
+		<title level="j">Then</title>
+		<imprint/>
+	</monogr>
+	<note>0.1361 [ln(2892 þ 1966) Àln(2892). À0.07</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">The estimated coefficient is À0.7564</title>
+	</analytic>
+	<monogr>
+		<title level="j">Then</title>
+		<imprint/>
+	</monogr>
+	<note>0.7564 [ln(2892 þ 1966) Àln(2892)] = À0</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<author>
+			<persName><forename type="first">W</forename><surname>Alonso</surname></persName>
+		</author>
+		<ptr target="www.hup.harvard.edu/catalog.php?isbn=9780674730854"/>
+		<title level="m">Location and Land Use: Towards a General Theory of Land Rent</title>
+		<meeting><address><addrLine>Cambridge, MA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Harvard University Press</publisher>
+			<date type="published" when="1969">1969</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<author>
+			<persName><forename type="first">P</forename><surname>Bairoch</surname></persName>
+		</author>
+		<ptr target="www.press.uchicago.edu/ucp/books/book/chicago/C/bo5971175.html"/>
+		<title level="m">Cities and Economic Development: From the Dawn of History to the Present</title>
+		<meeting><address><addrLine>Chicago,</addrLine></address></meeting>
+		<imprint>
+			<publisher>The University of Chicago Press</publisher>
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Climate change and rural-urban migration: the case of sub-Saharan Africa</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Barrios</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bertinelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Strobl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Urban Economics</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="357" to="371"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Estimating equilibrium models of sorting across locations</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Bayer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Timmins</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Economic Journal</title>
+		<imprint>
+			<biblScope unit="volume">117</biblScope>
+			<biblScope unit="issue">518</biblScope>
+			<biblScope unit="page" from="353" to="374"/>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Sectoral agglomeration economies in a panel of European regions</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Brulhart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Mathys</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Regional Science and Urban Economics</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page" from="348" to="362"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Rethinking the informal economy: linkages with the formal economy and the formal regulatory environment</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Linking the Formal and Informal Economy</title>
+		<editor>
+			<persName><forename type="first">Ravi</forename><surname>Basudeb</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Ostrom</forename></persName>
+		</editor>
+		<imprint>
+			<publisher>Oxford University Press</publisher>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Agglomeration effects in Europe</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ciccone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">European Economic Review</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="213" to="227"/>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Productivity and the density of economic activity</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ciccone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Hall</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">American Economic Review</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="54" to="70"/>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Estimating agglomeration effects with history, geology and worker fixed effects</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">P</forename><surname>Combes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Duranton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Gobillon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Roux</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Agglomeration Economies</title>
+		<editor>
+			<persName><forename type="first">E</forename><surname>Glaeser</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Chicago; IL</addrLine></address></meeting>
+		<imprint>
+			<publisher>University of Chicago Press</publisher>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">The empirics of agglomeration economies</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">P</forename><surname>Combes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Gobillon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Handbook of Urban and Regional Economics</title>
+		<editor>
+			<persName><forename type="first">Henderson</forename><surname>Duranton</surname></persName>
+		</editor>
+		<editor>
+			<persName><surname>Strange</surname></persName>
+		</editor>
+		<imprint>
+			<publisher>Elsevier</publisher>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="volume">5</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<author>
+			<persName><forename type="first">H</forename><surname>Desoto</surname></persName>
+		</author>
+		<ptr target="www.amazon.es/Mystery-Capital-Capitalism-Triumphs-Everywhere/dp/0465016154"/>
+		<title level="m">The Mystery of Capital: Why Capitalism Triumphs in the West and Fails Everywhere Else</title>
+		<meeting><address><addrLine>New York, NY, available</addrLine></address></meeting>
+		<imprint>
+			<publisher>Basic Books</publisher>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Are cities engines of growth and prosperity for developing countries?</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Duranton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Urbanization and Growth, The Commission on Growth and Development</title>
+		<editor>
+			<persName><forename type="first">A</forename><surname>Spence</surname></persName>
+		</editor>
+		<editor>
+			<persName><surname>Buckely</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Washington, DC</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Micro-foundations of urban agglomeration economies</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Duranton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Puga</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Handbook of Urban and Regional Economics</title>
+		<editor>
+			<persName><forename type="first">Thisse</forename><surname>Henderson</surname></persName>
+		</editor>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+			<biblScope unit="volume">4</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">The geographic concentration of industry: does natural advantage explain agglomeration?</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ellison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Glaeser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">American Economic Review</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="311" to="316"/>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">What causes industry agglomeration? Evidence from Coagglomeration patterns</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ellison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">L</forename><surname>Glaeser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Kerr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">American Economic Review</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1195" to="1213"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Defining and estimating underground and informal economies: the new institutional economics approach</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Feige</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">World Development</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="989" to="1002"/>
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Multiple equilibria and structural transition of non-monocentric urban configurations</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fujita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ogawa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Regional Science and Urban Economics</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="161" to="196"/>
+			<date type="published" when="1982">1982</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Agglomeration, commuting costs, and the internal structure of cities</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Koster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rouwendal</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Regional Science and Urban Economics</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="352" to="366"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>Agglomeration effects and informal firms</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">On the internal structure of cities</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lucas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Rossi-Hansberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Econometrica</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1445" to="1476"/>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Informality revisited</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Maloney</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">World Development</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="1159" to="1178"/>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><surname>Marshall</surname></persName>
+		</author>
+		<title level="m">Principles of Economics</title>
+		<meeting><address><addrLine>London</addrLine></address></meeting>
+		<imprint>
+			<publisher>Macmillan</publisher>
+			<date type="published" when="1890">1890</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">A meta-analysis of estimates of urban agglomeration economies</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Melo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Noland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Regional Science and Urban Economics</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="332" to="342"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">An aggregative model of resource allocation in a metropolitan area</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Mills</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The American Economic Review</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="197" to="210"/>
+			<date type="published" when="1967">1967</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Critical commentary. Informality in space: understanding agglomeration economies during economic development</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Moreno-Monroy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Urban Studies</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="2019" to="2030"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">The impact of public transport expansions on informality: the case of the São Paulo metropolitan region</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Moreno-Monroy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Roman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ERSA conference papers</title>
+		<imprint>
+			<publisher>European Regional Science Association</publisher>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<title level="m" type="main">Intra-metropolitan agglomeration of formal and informal manufacturing activity: evidence from Cali, Colombia</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Moreno-Monroy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>García</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+		<respStmt>
+			<orgName>Universitat Rovira i Virgili, Department of Economics</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">Working Papers</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Economies of density and productivity in service industries: an analysis of personal service industries based on establishment-level data</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Morikawa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Review of Economics and Statistics</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="179" to="192"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<monogr>
+		<author>
+			<persName><forename type="first">R</forename><surname>Muth</surname></persName>
+		</author>
+		<title level="m">Cities and Housing: The Spatial Pattern of Urban Residential Land Use</title>
+		<meeting><address><addrLine>Chicago and London</addrLine></address></meeting>
+		<imprint>
+			<publisher>University of Chicago Press</publisher>
+			<date type="published" when="1969">1969</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Perry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">F</forename><surname>Maloney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">S</forename><surname>Arias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Fajnzylber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Mason</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Saavedra-Chanduvi</surname></persName>
+		</author>
+		<ptr target="https://openknowledge.worldbank.org/handle/10986/6730"/>
+		<title level="m">Informality: Exit and Exclusion, World Bank, Latin American and Caribbean Studies</title>
+		<meeting><address><addrLine>Washington, DC</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Geography. Industrial organization and agglomeration</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rosenthal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Strange</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Review of Economics and Statistics</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="377" to="393"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">The attenuation of human capital spillovers</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rosenthal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Strange</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Urban Economics</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="373" to="389"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Shadow economies around the world: what do we really know?</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Schneider</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">European Journal of Political Economy</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="598" to="642"/>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">The relevance of the concepts of formality and informality: a theoretical appraisal</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sindzingre</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/0199204764.001.0001/acprof-9780199204762</idno>
+		<ptr target="www.oxfordscholarship.com/view/10.1093/0199204764.001.0001/acprof-9780199204762"/>
+	</analytic>
+	<monogr>
+		<title level="m">Linking the Formal and Informal Economy</title>
+		<editor>
+			<persName><forename type="first">Ravi</forename><surname>Basudeb</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Ostrom</forename></persName>
+		</editor>
+		<imprint>
+			<publisher>Oxford University Press</publisher>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Testing for weak instruments in linear IV regressions</title>
+		<author>
+			<persName><forename type="first">Sock</forename><surname>Yogo</surname></persName>
+		</author>
+		<ptr target="www.cambridge.org/core/books/identification-and-inference-for-econometric-models/76B7B5986247FC8CC13C9"/>
+	</analytic>
+	<monogr>
+		<title level="m">Identification and Inference for Econometric Models: Essays in Honor of Thomas Rothenberg</title>
+		<editor>
+			<persName><forename type="first">Stock</forename><surname>Andrews</surname></persName>
+		</editor>
+		<imprint>
+			<publisher>Cambridge University Press</publisher>
+			<date type="published" when="2005">2005. D8C7E02</date>
+			<biblScope unit="page" from="80" to="108"/>
+		</imprint>
+	</monogr>
+	<note>DCBF Further reading</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Informalidad en Colombia: Nueva evidencia</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cárdenas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Mejía</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="s">Fedesarrollo. Working Papers Series</title>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Informalidad: Teoría e implicaciones de política</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Posada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Mejia</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="s">Borradores de Economía</title>
+		<imprint>
+			<biblScope unit="volume">455</biblScope>
+			<date type="published" when="2007">2007</date>
+			<publisher>Banco de la República</publisher>
+			<pubPlace>Bogotá -Colombia</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Qualitative and quantitative analysis of firm informality in Colombia</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Santa María</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rozo</surname></persName>
+		</author>
+		<ptr target="www.researchgate.net/publication/262449637"/>
+	</analytic>
+	<monogr>
+		<title level="j">Desarrollo y Sociedad</title>
+		<imprint>
+			<biblScope unit="page">80</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>_Qualitative_and_quantitative_analysis_of_firm_informality_in_Colombia AEA 27</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -1,0 +1,1782 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Continued use of retracted papers: Temporal trends in citations and (lack of) awareness of retractions shown in citation contexts in biomedicine</title>
+				<funder ref="#_wEMN6EK">
+					<orgName type="full">unknown</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>MIT Press</publisher>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2021">2021</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Tzu-Kun</forename><surname>Hsiao</surname></persName>
+							<idno type="ORCID">0000-0002-2314-5777</idno>
+							<affiliation key="aff0">
+								<orgName type="department">School of Information Sciences</orgName>
+								<orgName type="institution">University of Illinois at Urbana-Champaign</orgName>
+								<address>
+									<settlement>Champaign</settlement>
+									<region>IL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jodi</forename><surname>Schneider</surname></persName>
+							<idno type="ORCID">0000-0002-5098-5667</idno>
+							<affiliation key="aff0">
+								<orgName type="department">School of Information Sciences</orgName>
+								<orgName type="institution">University of Illinois at Urbana-Champaign</orgName>
+								<address>
+									<settlement>Champaign</settlement>
+									<region>IL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Continued use of retracted papers: Temporal trends in citations and (lack of) awareness of retractions shown in citation contexts in biomedicine</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Quantitative Science Studies</title>
+						<idno type="eISSN">2641-3337</idno>
+						<imprint>
+							<publisher>MIT Press</publisher>
+							<biblScope unit="volume">2</biblScope>
+							<biblScope unit="issue">4</biblScope>
+							<biblScope unit="page" from="1144" to="1169"/>
+							<date type="published" when="2021"/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B659883203B164CDFCA56A2298FA991F</idno>
+					<idno type="DOI">10.1162/qss_a_00155</idno>
+					<note type="submission">Received: 6 April 2021 Accepted: 21 July 2021</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-25T13:48+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>citation analysis</term>
+					<term>citation context analysis</term>
+					<term>intentional postretraction citation</term>
+					<term>postretraction citation PubMed Central Open Access Subset</term>
+					<term>retraction</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>We present the first database-wide study on the citation contexts of retracted papers, which covers 7,813 retracted papers indexed in PubMed, 169,434 citations collected from iCite, and 48,134 citation contexts identified from the XML version of the PubMed Central Open Access Subset. Compared with previous citation studies that focused on comparing citation counts using two time frames (i.e., preretraction and postretraction), our analyses show the longitudinal trends of citations to retracted papers in the past 60 years . Our temporal analyses show that retracted papers continued to be cited, but that old retracted papers stopped being cited as time progressed. Analysis of the text progression of pre-and postretraction citation contexts shows that retraction did not change the way the retracted papers were cited. Furthermore, among the 13,252 postretraction citation contexts, only 722 (5.4%) citation contexts acknowledged the retraction. In these 722 citation contexts, the retracted papers were most commonly cited as related work or as an example of problematic science. Our findings deepen the understanding of why retraction does not stop citation and demonstrate that the vast majority of postretraction citations in biomedicine do not document the retraction.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">INTRODUCTION</head><p>Although retraction is intended to remove published research from the citable literature, retraction does not stop the diffusion of the retracted paper. Empirical studies have shown that papers continue to be cited after being retracted <ref type="bibr" target="#b2">(Bar-Ilan &amp; Halevi, 2017;</ref><ref type="bibr" target="#b6">Bolland, Grey, &amp; Avenell, 2021;</ref><ref type="bibr" target="#b12">Candal-Pedreira, Ruano-Ravina et al., 2020;</ref><ref type="bibr" target="#b15">Dal-Ré &amp; Ayuso, 2020;</ref><ref type="bibr" target="#b39">Mott, Fairhurst, &amp; Torgerson, 2019;</ref><ref type="bibr" target="#b44">Pfeifer &amp; Snodgrass, 1990;</ref><ref type="bibr" target="#b56">Theis-Mahon &amp; Bakker, 2020;</ref><ref type="bibr" target="#b58">van der Vet &amp; Nijveen, 2016)</ref>. For example, Dal-Ré and Ayuso (2020) studied citations to 460 retracted genetics articles and found that 23% of the citations were postretraction citations.</p><p>Although citations to retracted papers have been widely discussed in previous studies, the bulk of studies focused on a small number of retracted papers (e.g., 15 retracted papers in <ref type="bibr" target="#b2">Bar-Ilan and Halevi [2017]</ref>) or a single retracted paper <ref type="bibr" target="#b49">(Schneider, Ye et al., 2020;</ref><ref type="bibr" target="#b52">Suelzer, Deal et al., 2019;</ref><ref type="bibr" target="#b58">van der Vet &amp; Nijveen, 2016)</ref>. Only citation counts and citation networks have been studied at scale. However, many citation studies focused on a particular field (e.g., retracted articles in genetics <ref type="bibr" target="#b15">(Dal-Ré &amp; Ayuso, 2020)</ref>, in dentistry <ref type="bibr" target="#b56">(Theis-Mahon &amp; Bakker, 2020)</ref>, and in engineering <ref type="bibr" target="#b47">(Rubbo, Pilatti, &amp; Picinin, 2019)</ref>). A few analyses on retracted papers in one database or in the intersection of multiple databases reported that retracted papers and their authors' citation counts significantly decreased after the retraction <ref type="bibr" target="#b19">(Dinh, Sarol et al., 2019;</ref><ref type="bibr" target="#b51">Shuai, Rollins et al., 2017)</ref>. However, postretraction citations can persist for more than 10 years <ref type="bibr" target="#b34">(Kim, Yi et al., 2019;</ref><ref type="bibr" target="#b49">Schneider et al., 2020)</ref>, and retracted papers may be deeply embedded in citation networks <ref type="bibr" target="#b13">(Chen, Hu et al., 2013)</ref>. Prior work showed that although retracted papers and their authors were penalized with fewer citations, the retracted papers still circulated in scientific communities.</p><p>Studies of citation counts and citation networks have been limited to showing the existence and quantity of postretraction citations: How retracted papers were cited in the full-text articles was underexplored. Studies that explored full-text articles mainly focused on the acknowledgment of retraction shown in citation contexts <ref type="bibr" target="#b9">(Budd, Coble, &amp; Abritis, 2016;</ref><ref type="bibr" target="#b41">Neale, Dailey, &amp; Abrams, 2010;</ref><ref type="bibr" target="#b45">Piller, 2021;</ref><ref type="bibr" target="#b49">Schneider et al., 2020;</ref><ref type="bibr" target="#b52">Suelzer et al., 2019)</ref> and the tone (positive, negative, and neutral) of each context <ref type="bibr" target="#b2">(Bar-Ilan &amp; Halevi, 2017;</ref><ref type="bibr" target="#b26">Hamilton, 2019;</ref><ref type="bibr" target="#b56">Theis-Mahon &amp; Bakker, 2020;</ref><ref type="bibr" target="#b62">Yang, Qi, &amp; Diao, 2020)</ref>. Furthermore, to the best of our knowledge, <ref type="bibr" target="#b9">Budd et al. (2016)</ref> is the only study covering citation contexts of retracted papers at scale, but they only examined the acknowledgment of retraction shown in citations to 265 papers in MEDLINE retracted between 2001 and 2005.</p><p>Our goal is to deepen the understanding of citations to retracted papers through large-scale analyses of citations and citation contexts. Our citation analyses investigate the temporal trends of citations to PubMed-indexed retracted papers. Compared with previous citation studies that focused on comparing citation counts using two time frames (i.e., preretraction and postretraction), our analyses show the longitudinal trends of citations to retracted papers in the past 60 years . In contrast to previous citation context analyses (which focused on the tones and the number of citation contexts acknowledging retraction), our analyses reveal the locations of the citation contexts mentioning retracted papers in full-text articles, contribute to the understanding of acknowledgment of retraction shown in citation contexts at scale, and indicate the purposes for intentionally citing retracted papers. In particular, we analyze citation contexts extracted from PubMed Central (PMC) open access articles that cited the retracted papers. The present work is the first database-wise study to examine citation contexts of retracted papers without time limitations.</p><p>In this study, we aim to answer the following research questions (RQs): RQ1: How were PubMed-indexed retracted papers cited over time? RQ2: How were papers cited in full-text articles before and after their retractions? RQ3: How many postretraction citations acknowledged the retractions? RQ4: What were the purposes for intentionally citing retracted papers?</p><p>We used two sets of data to answer the RQs. For RQ1, we investigated iCite citations to retracted papers indexed in PubMed. For RQ2, RQ3, and RQ4, we analyzed retracted papers in PubMed and citation contexts extracted from PMC open access articles. Our citation analyses deepen our understanding of the citation patterns of retracted biomedical research papers by tracing citations to retracted papers in the past 60 years. Our investigation of citation contexts to a vast collection of retracted papers reveals the locations where retracted papers were cited in full-text articles before and after their retractions and the purposes for intentionally citing retracted papers.</p><p>In contrast to large-scale studies, citation analyses of retracted papers in a particular field are abundant <ref type="bibr">(Bolboaca , Buhai et al., 2019;</ref><ref type="bibr" target="#b15">Dal-Ré &amp; Ayuso, 2020;</ref><ref type="bibr" target="#b26">Hamilton, 2019;</ref><ref type="bibr" target="#b38">Madhugiri, Nagella, &amp; Uppar, 2021;</ref><ref type="bibr" target="#b42">Pantziarka &amp; Meheus, 2019;</ref><ref type="bibr" target="#b47">Rubbo et al., 2019;</ref><ref type="bibr" target="#b56">Theis-Mahon &amp; Bakker, 2020;</ref><ref type="bibr" target="#b62">Yang et al., 2020)</ref>. For example, <ref type="bibr" target="#b38">Madhugiri et al. (2021)</ref> examined citations to 191 retracted papers in clinical neurosurgery as well as in allied clinical and basic science specialties. They reported that postretraction citations accounted for 50% of all the citations received by the retracted papers <ref type="bibr" target="#b38">(Madhugiri et al., 2021)</ref>. <ref type="bibr" target="#b47">Rubbo et al. (2019)</ref> and Theis-Mahon and Bakker (2020) studied 238 retracted engineering articles and 136 retracted dentistry articles, respectively. Interestingly, they reported similar rates of retracted papers having postretraction citations. In particular, 156 (65.55%) out of the 238 retracted engineering articles and 84 (61.76%) out of the 136 retracted dentistry articles were cited after the retraction. <ref type="bibr" target="#b42">Pantziarka and Meheus (2019)</ref> reported that the retracted oncology papers received 35.1 citations on average. <ref type="bibr" target="#b39">Mott et al. (2019)</ref> studied citations to 387 retracted randomized controlled trials (RCTs). They reported that the retracted RCTs continued to be cited, yet the citations decreased after retraction. Candal-Pedreira et al. ( <ref type="formula">2020</ref>) compared the pre-and postretraction citations to 304 research articles and literature reviews retracted between 2014 and 2016. They reported that a decrease in the number of citations was only observed in retracted papers published in first-quartile journals in Journal Citation Report.</p><p>Another set of citation analyses investigated retracted papers by one or a few authors <ref type="bibr" target="#b6">(Bolland et al., 2021;</ref><ref type="bibr" target="#b25">Hagberg, 2020;</ref><ref type="bibr" target="#b35">Kochan &amp; Budd, 1992)</ref>, or a single retracted paper <ref type="bibr" target="#b49">(Schneider et al., 2020;</ref><ref type="bibr" target="#b52">Suelzer et al., 2019;</ref><ref type="bibr" target="#b58">van der Vet &amp; Nijveen, 2016)</ref>. <ref type="bibr" target="#b6">Bolland et al. (2021)</ref> examined citations to papers by two authors 1 having integrity concerns and reported that 237 (6%) of 3,925 citations were made after the publication of either a retraction notice or an expression of concern. <ref type="bibr" target="#b58">Van der Vet and Nijveen (2016)</ref> visualized the growth of the citation network linking to a retracted paper published in Nature. <ref type="bibr" target="#b49">Schneider et al. (2020)</ref> explored the possible spread of information in a retracted paper through two generations of citations. They examined 35 out of 44 direct postretraction citations describing the retracted paper's methods or results and found 161 second-generation citations citing these 35 papers. Furthermore, in the 161 second-generation citations, 23 citations relied on the information from the retracted paper without directly citing it <ref type="bibr" target="#b49">(Schneider et al., 2020)</ref>. Although both studies are case studies of a single retracted paper, their findings have raised the concern that information in the retracted papers might be disseminated through indirect chains of citations. As addressed in van der Vet and Nijveen (2016), proper citing behavior may amend the spread of retracted results, highlighting the need to study how retracted papers are cited in full-text articles at scale.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.">Citation Contexts Citing Retracted Papers</head><p>Citation context analysis has been used to explore authors' motivations, purposes, and intents for citing papers <ref type="bibr" target="#b33">(Jha, Jbara et al., 2017;</ref><ref type="bibr" target="#b55">Teufel, Siddharthan, &amp; Tidhar, 2006)</ref>. Both the locations of citations in full-text articles and the text surrounding the citations have been studied <ref type="bibr" target="#b4">(Bertin, Atanassova et al., 2016;</ref><ref type="bibr" target="#b18">Ding, Zhang et al., 2014;</ref><ref type="bibr" target="#b54">Tahamtan &amp; Bornmann, 2019)</ref>. For example, <ref type="bibr" target="#b4">Bertin et al. (2016)</ref> reported that the density of citations appearing in full text is related to the citing paper's structure (i.e., the IMRaD sections: introduction, method, result, and discussion). They reported that citations mostly appeared in the introduction and discussion sections. Studies on the text surrounding citations have shed light on the semantics of citations and citation motives. For instance, papers are rarely cited in a negative tone <ref type="bibr" target="#b33">(Jha et al., 2017;</ref><ref type="bibr" target="#b55">Teufel et al., 2006)</ref>. Moreover, citations can be made for various reasons, such as showing related work, use, comparison, and corroboration <ref type="bibr" target="#b24">(Garfield, 1965;</ref><ref type="bibr" target="#b27">Hernández-Alvarez, Soriano, &amp; Martínez-Barco, 2017;</ref><ref type="bibr" target="#b33">Jha et al., 2017;</ref><ref type="bibr" target="#b37">Li, He et al., 2013;</ref><ref type="bibr" target="#b57">Valenzuela, Ha, &amp; Etzioni, 2015)</ref>. <ref type="bibr" target="#b24">Garfield (1965)</ref> first proposed a scheme containing 15 reasons for citing articles. <ref type="bibr" target="#b0">Agarwal, Choubey, and Yu (2010)</ref> classified 1,710 citation contexts in 43 open-access biomedical articles into eight categories: background/perfunctory, contemporary, contrast/ conflict, evaluation, explanation of results, material/method, modality, and similarity/ consistency.</p><p>However, citation contexts citing retracted papers are underexplored. Existing studies have only investigated whether the citation contexts acknowledged the retractions, and not why. For instance, in a case study following a single retracted paper published in Nature, van der Vet and Nijveen (2016) found that, among the 57 citations given after the year of retraction, only two postretraction citations (3.5%) showed awareness of the retraction in the text. Another case study by <ref type="bibr" target="#b49">Schneider et al. (2020)</ref> showed that, in 112 postretraction citations to a retracted paper, only five citations (4.5%) mentioned the retraction. <ref type="bibr" target="#b9">Budd et al. (2016)</ref> examined citations to 265 retracted papers index in MEDLINE using a time window between 2001 and 2005. Only 4.15% (204 out of 4,917 citations) acknowledged the retraction <ref type="bibr" target="#b9">(Budd et al., 2016)</ref>. Table <ref type="table">1</ref> summarizes the percentage and number of citations acknowledging retraction as reported in previous research.</p><p>As observed in the previous studies (Table <ref type="table">1</ref>), papers continued to be cited after being retracted, and the citing papers rarely informed readers about the retractions. Five out of nine previous studies published in the last 5 years <ref type="bibr">(2016)</ref><ref type="bibr">(2017)</ref><ref type="bibr">(2018)</ref><ref type="bibr">(2019)</ref><ref type="bibr">(2020)</ref><ref type="bibr">(2021)</ref> reported fewer than 7% of citations acknowledging retractions <ref type="bibr">(Bolboaca et al., 2019;</ref><ref type="bibr" target="#b9">Budd et al., 2016;</ref><ref type="bibr" target="#b26">Hamilton, 2019;</ref><ref type="bibr" target="#b49">Schneider et al., 2020;</ref><ref type="bibr" target="#b58">van der Vet &amp; Nijveen, 2016)</ref>. Interestingly, studies on infamous, high-profile retracted papers <ref type="bibr" target="#b8">(Bornemann-Cimenti et al., 2016;</ref><ref type="bibr" target="#b45">Piller, 2021;</ref><ref type="bibr" target="#b52">Suelzer et al., 2019)</ref>  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Quantitative Science Studies</head><p>Some studies examined the tone (positive, negative, and neutral) of each citation context <ref type="bibr" target="#b2">(Bar-Ilan &amp; Halevi, 2017;</ref><ref type="bibr" target="#b35">Kochan &amp; Budd, 1992;</ref><ref type="bibr" target="#b56">Theis-Mahon &amp; Bakker, 2020;</ref><ref type="bibr" target="#b62">Yang et al., 2020)</ref>. <ref type="bibr" target="#b2">Bar-Ilan and Halevi (2017)</ref> described how 15 retracted articles were mentioned in 238 citing documents after being retracted. They discovered that the retracted papers were mostly mentioned in a positive tone and that citing papers rarely mentioned that the cited article had been retracted. <ref type="bibr" target="#b62">Yang et al. (2020)</ref> studied 131 postretraction citations to 46 retracted psychology papers and found 119 (90.84%) citations were positive. Theis-Mahon and Bakker (2020) reported that 475 (69.34%) out of the 685 postretraction citations to retracted dentistry papers were positive. <ref type="bibr" target="#b48">Santos-d'Amorim et al. (2021)</ref> investigated 214 postretraction citations to one retracted Covid-19 paper and identified 64 (30%) positive, 81 (38%) negative, and 69 (32%) neutral citations. Studies that more deeply analyzed citation contexts (e.g., beyond the tone) focused only on a single retracted paper and its citations <ref type="bibr" target="#b22">(Fulton, Coates et al., 2015;</ref><ref type="bibr" target="#b49">Schneider et al., 2020;</ref><ref type="bibr" target="#b52">Suelzer et al., 2019;</ref><ref type="bibr" target="#b58">van der Vet &amp; Nijveen, 2016)</ref>. The most finegrained categorization of the citation contexts was proposed by <ref type="bibr" target="#b52">Suelzer et al. (2019)</ref>. They used eight categories (affirmative, assumptive, conceptual, contrastive, methodological, negative, perfunctory, and persuasive) to annotate 1,153 citations to Wakefield's infamous Lancet paper connecting the MMR vaccine to autism <ref type="bibr" target="#b52">(Suelzer et al., 2019)</ref>.</p><p>By contrast, the present work focuses on the temporal trends of citations to retracted papers and examines citation contexts to a vast collection of retracted papers. We analyze how retracted papers in PubMed were cited over time and investigate the appearance of citation contexts mentioning these retracted papers in full-text articles. Different from previous citation studies comparing citation counts using two time frames (i.e., preretraction and postretraction), our citation analyses present the longitudinal trends of citations to retracted papers in the past 60 years . Going beyond the tones of citation contexts, we examine where retracted papers were mentioned in full-text articles and identify the purposes for intentionally citing retracted papers. Our approach of systematically identifying citations acknowledging retraction in PMC open access articles reveals acknowledgment of retraction shown in citation contexts at scale.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">METHODS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.">Data</head><p>The data for this study was collected from various sources. In particular, the retracted papers were collected from PubMed, the citations to the retracted papers were collected from iCite, and the citation contexts were identified from the PMCOA Citation Context Dataset <ref type="bibr">(Hsiao &amp; Torvik, manuscript in preparation)</ref>, which contains citation contexts identified from over two million PMC open access articles. The following sections describe how the retracted papers, citations to retracted papers, and citation contexts of retracted papers were collected. The data set used for this study has been deposited to the Illinois Data Bank <ref type="bibr" target="#b28">(Hsiao &amp; Schneider, 2021)</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.2.">Citations to retracted papers</head><p>Citations to the retracted papers were collected on August 20, 2020. The citation data were collected from iCite<ref type="foot" target="#foot_3">foot_3</ref> , which provides an API for accessing citation data from the NIH Open Citation Collection (NIH-OCC). The NIH-OCC contains citation data from PubMed, PMC, MEDLINE, and CrossRef <ref type="bibr" target="#b31">(Hutchins, Baker et al., 2019)</ref>. We collected 171,537 citations to retracted papers. However, 2,088 citations were from retraction notices (citing 1,970 retracted papers) and 15 citations were problematic because the citing and the cited retracted papers have the same PMID. In the 1,970 retracted papers cited by retraction notices, 1,719 retracted papers had citations from articles other than retraction notices, and 251 retracted papers were only cited by retraction notices. After excluding the 2,088 citations from retraction notices and the 15 problematic citations, 6,704 (85.81%) retracted papers were cited 169,434 times, and 1,109 (14.19%) retracted papers had never been cited.</p><p>Different approaches have been used to identify postretraction citations, such as after 1 month <ref type="bibr" target="#b39">(Mott et al., 2019)</ref>, after 6 months <ref type="bibr" target="#b26">(Hamilton, 2019)</ref>, and after the calendar year of retraction <ref type="bibr" target="#b10">(Budd et al., 2011</ref><ref type="bibr" target="#b9">(Budd et al., , 2016;;</ref><ref type="bibr" target="#b38">Madhugiri et al., 2021;</ref><ref type="bibr" target="#b44">Pfeifer &amp; Snodgrass, 1990</ref>). Here we operationalize a postretraction citation as a citation made after the calendar year of retraction. This follows the most similar studies of retracted papers in PubMed <ref type="bibr" target="#b10">(Budd et al., 2011</ref><ref type="bibr" target="#b9">(Budd et al., , 2016))</ref>, which, like our study in PubMed Central, focused on biomedicine/medicine. Also, we expect this time frame to allow retraction notices to have been apparent to the citing authors at manuscript submission, on average, because previous research has reported mean submission-topublication time as 120 days for biomedical journals published by Nature Publishing Group and 139 days for BioMed Central journals <ref type="bibr" target="#b21">(Dong, Loh, &amp; Mondry, 2006)</ref>. Similarly, medical journals have median submission-to-publication time of 224 days (min 24 days; max 1,034 days) <ref type="bibr">(Sebo, Fournier et al., 2019)</ref>.</p><p>Table <ref type="table" target="#tab_2">2</ref> presents the number of citations to retracted papers made in three intervals: before the year of retraction (preretraction), in the year of retraction, and after the year of retraction (postretraction). As shown in Table <ref type="table" target="#tab_2">2</ref>, 75% of the retracted papers were cited no more than six times after retraction.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.3.">Citation contexts of retracted papers</head><p>We identified citation contexts citing retracted papers using the PMCOA Citation Context Dataset <ref type="bibr">(Hsiao &amp; Torvik, manuscript</ref>   <ref type="bibr">(Hsiao &amp; Torvik, manuscript in preparation)</ref>. The citation contexts were identified leveraging XML tags in the Journal Publishing Tag Set ( JATS), the standardized tagging guideline used by PMC. In particular, &lt;ref&gt; tags and &lt;xref&gt; tags were used to identify the references and the cross-references to the objects within the document, respectively. The appearance of citations in the full-text articles was identified by mapping the IDs associating with the &lt;ref&gt; tags and &lt;xref&gt; tags. For each article, after identifying citations in the document, the article was parsed into sentences. Further details of the method for identifying the citation contexts are described in Hsiao and Torvik (manuscript in preparation).</p><p>In the PMCOA Citation Context Dataset <ref type="bibr">(Hsiao &amp; Torvik, manuscript in preparation)</ref>, each citation context is a sentence (or a text cell in a table) containing at least one citation. For each citation context, the data set has the following information: PMID and PMCID of the citing paper, ID and PMID (if applicable) of the cited paper, the citation context's location (abstract, main text, supporting material, and table/figure caption), the IMRaD section (introduction/ background, method, results, and conclusion/discussion), and text progression. We identified the citation contexts citing retracted papers from the PMCOA Citation Context Dataset by mapping the cited papers' PMIDs to the retracted papers' PMIDs.</p><p>Of the 48,747 citation contexts citing retracted papers, we excluded 612 contexts that were from retraction notices, and one problematic citation context where the citing and cited retracted paper have the same PMID. The remaining 48,134 citation contexts were analyzed. As shown in Table <ref type="table" target="#tab_3">3</ref>, within the 48,134 citation contexts citing retracted papers, 13,252 a Sections for which the IMRaD section types were unidentifiable through the method described in <ref type="bibr" target="#b29">Hsiao and Torvik (2020)</ref>.</p><p>(27.53%) were postretraction citation contexts. In these 13,252 postretraction citation contexts (i.e., citations made after the calendar year of retraction), 2,763 out of 7,813 (35.36%) retracted papers were cited.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.">Evaluating the Citedness of Retracted Papers over Time</head><p>The citation data collected from iCite (as described in Section 3.1.2) were used to evaluated the citedness of retracted papers over time. The retracted papers were categorized into active, inactive, and uncited. We define these terms as follows:</p><p>1. Active: Papers actively receiving citations until a given year or beyond. 2. Inactive: Papers having been cited in the past but no longer being cited in a given year and beyond. 3. Uncited: Papers never having been cited as of a given year.</p><p>For instance, PMCID:2226778 was cited in <ref type="bibr">1991-1993, 1995, 1998, and 2002</ref>. Hence, this paper was active until 2002 and became inactive in 2003 because the last citation appeared in 2002.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.">Identifying Intentional Postretraction Citations</head><p>From the 13,252 postretraction citation contexts described in Section 3.1.3, we identified the postretraction citations that intentionally cited retracted papers, using three rules (Table <ref type="table" target="#tab_4">4</ref>). The first two rules captured possible intentional postretraction citations via cue words that possibly referred to retractions. In particular, the first rule identified whether at least one of the cue words appeared in the citation context. The second rule identified whether at least one of the cue words appeared in the acknowledgment window, which we defined as the five sentences before or after the citation context. The third rule captured the condition when the retracted paper and the retraction notice were cited together. As the cue word approach might falsely capture some citations that did not refer to the retractions, we manually reviewed each identified citation context. Our manual review adjusted for the drawback of using cue words and ensured that each identified citation context was an intentional postretraction citation. Note that a retracted paper may be mentioned multiple times in the citing paper's full text (i.e., having multiple citation contexts in the citing paper). When there are multiple citation contexts, the acknowledgment of retraction may only appear in one of the citation contexts. We counted all the citation contexts in a paper as acknowledging the retraction if at least one did so explicitly. There were 611 postretraction citation contexts explicitly acknowledging the retraction (identified by the rules in Table <ref type="table" target="#tab_4">4</ref>). Using the PMCIDs of the citing papers and the PMIDs of the cited retracted papers of these 611 postretraction citation contexts, we further identified 111 implicit intentional postretraction citation contexts. In sum, we identified 722 intentional postretraction citation contexts in 430 papers.</p><p>Table <ref type="table" target="#tab_5">5</ref> shows the locations of these 722 intentional postretraction citation contexts. Of these, 685 (94.88%) were found in the main text, and 34 (4.71%) were found in tables, table captions, or figure captions. For the citation contexts in the main text, 284 (39.34%) citation contexts did not have IMRaD sections identified. Of the sections where we identified IMRaD section types, the introduction/background sections had the largest share (21.33%) of citation contexts acknowledging retraction, followed by the discussion/conclusion sections (15.24%).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4.">Identifying Purposes for Intentionally Citing Retracted Papers</head><p>To understand citing authors' purposes for intentionally citing retracted papers, we manually inspected the text of each citation context. For each citation context, we first read the citing article's title, the section title for the section in which the citation context appeared, and the paragraph containing the citation context. If the citation purpose could not be discerned even after reading the paragraph, we read the abstract and skim-read the paper to identify the purpose. Furthermore, a decision map (Supplementary material 2) was used to aid in choosing the most appropriate citation purpose.</p><p>For annotating the citation purposes, we created a classification scheme consisting of 11 categories. Table <ref type="table" target="#tab_6">6</ref> presents the description of each category (see Supplementary material 3 for the example of each category). Aside from the citation purposes commonly reported in previous studies (e.g., Related work, Comparison, and Use), we also observed purposes relating to the unique nature of our data set: citations to retracted work. These particular purposes are Republication of retraction, Example of problematic science, and Notify retraction included. 4. RESULTS</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1.">Years between Publication and Retraction</head><p>Figure <ref type="figure" target="#fig_1">1</ref> shows a boxplot of the number of years between publication and retraction arranged by retraction year and publication year (using the data described in Section 3.1.1). Note that 47 of our 7,813 retracted papers lack a retraction year in PubMed 4 , so this figure is built on the 4 These 47 retracted papers can be found in PubMed_retracted_publication_full_v3.tsv (included in our dataset deposit <ref type="bibr" target="#b28">(Hsiao &amp; Schneider, 2021)</ref>) by filtering the retracted_yr column to show the blank values. Authors of the citing paper compared "their" results or methods with the retracted paper. According to the tone, this category is further divided into negative (-), positive (+), and neutral (±). Negative tone refers to the cases that inconsistency, contradiction, or discrepancy is reported in the comparison. Positive tone refers to the cases that consistency is reported in the comparison.</p><p>Neutral tone refers to the cases where consistency between the compared results was unclear.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Correction</head><p>The retracted paper was cited to make a correction.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Example of problematic science</head><p>The retracted paper was cited to provide an example of problematic science. This purpose satisfies one of the following conditions: (a) the retracted paper was cited to provide an example of problematic research (e.g., irreproducible research, unreliable research, research involving scientific misconduct, a flawed study); (b) the retracted paper was cited to provide an example of where peer review failed and problematic science was published; (c) the retracted paper was cited to provide an example showing a problem in scientific research or scholarly communication; or (d) the retracted paper was cited to provide an example of the societal impact of problematic research.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Exclusion rationale</head><p>The retracted paper was cited to explain why it is excluded from use/consideration. Especially found in the context of research synthesis (e.g., review articles and meta-analyses that provide a formal exclusion rationale for papers that are not included.) This purpose can also be found in the literature review section of a research article.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Notify retraction included</head><p>Notify readers that one or more retracted papers were included in a different, previous published review article, guideline, or paper.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Related work</head><p>The retracted paper was cited to show what has been done or found in the past or was cited for one of the following reasons: (a) The retracted paper was once a landmark in the field; (b) the retracted paper was the origin/pioneer of something (e.g., "X first identified/describe Y", "X was identified as a novel …", "X was initially proposed…", or "X was originally…"); and (c) the retracted paper led to an important event in the field, such as Wakefield's paper's influence on the supposed autism-vaccine link and the antivaccine movement.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Republication of retraction</head><p>In the republication of the retracted paper, the authors cited the retracted paper to announce the republication.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Reproduce</head><p>A citation to the retracted paper was made because the citing paper tried to reproduce/repeat the finding or experiment mentioned in the retracted paper.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Subject of study</head><p>Cited retraction is the object of study of a case study about retraction, or is the data used in a study about retraction, scientific misconduct, or peer review. Note that in these studies, retracted papers can be cited in the results.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Use</head><p>Citing paper uses something from the cited retracted paper. This type of citation is often found in the Methods section.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Other</head><p>Those that do not belong to the above categories.</p><p>remaining 7,766 retractions. The first retracted paper (PMID: 13850774) was published in 1959 and was retracted in 1966. Eleven papers were retracted 1 year before their publication year; these papers might have been retracted in the online-first stage. Also, 4,308 (55.47%) papers were retracted within 2 years after publication. Figure <ref type="figure" target="#fig_1">1</ref>(a) shows that for each year after 1986, the distribution of the time period between publication and retraction was right skewed, indicating that the majority of retractions happened within a short time after publication.</p><p>Combining the distribution with the medians, the graph shows that at least 50% of the retractions happened no more than 3 years after publication, regardless of the retraction year. Figure <ref type="figure" target="#fig_1">1</ref>(b) also shows the number of years between publication and retraction but is arranged by publication year. This graph shows that retraction is an ongoing process. In calendar year 2020, at least one paper was retracted from each publication year from 1997-2020. Furthermore, publishers continued to retract papers published a long time ago. For example, in 2020, a 45-year-old paper published in 1975 was retracted. The continued retraction of old publications highlights that papers that are not currently retracted may be retracted in the future. The graph also reveals the right-censored nature of the data set: Retractions typically happen after publication; hence, the more recently a paper was published, the shorter the possible time between publication and retraction.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2.">Temporal Trends of Citations to Retracted Papers</head><p>This section analyzes citations to retracted papers (using the data described in Section 3.1.2). Figure <ref type="figure" target="#fig_2">2</ref> shows the citedness of retracted papers and nonretracted papers over time. To see whether retracted and nonretracted papers show similar trends, we collected nonretracted papers from the August 2020 iCite database snapshot (iCite, <ref type="bibr" target="#b32">Hutchins, &amp; Santangelo, 2020)</ref>. The cohort of nonretracted papers to compare to the retracted papers was selected in two steps: identifying nonretracted papers published in the same years as the retracted papers; and, for each publication year, selecting all nonretracted papers with the same citation counts as the retracted papers published in the same year.</p><p>As shown in Figure <ref type="figure" target="#fig_2">2</ref>(a), the first uncited retracted paper was from 1976. This paper (PMID: 183981) was published in 1976 and retracted in 1977. We observed three phases <ref type="bibr">(1981-1989, 1990-2012, and 2013-2020)</ref> in the growth and decline of active and inactive retracted papers. Since 1981, the proportion of uncited retracted papers gradually increased from 1.67% to 14.23%. In the first phase <ref type="bibr">(1981-1989, to</ref> the left of the first line on Figure <ref type="figure" target="#fig_2">2(a)</ref>), the proportion of active retracted papers decreased from 95% to 79.07%. In the second phase (1990-2012, middle of Figure <ref type="figure" target="#fig_2">2(a)</ref>), the proportion of active retracted papers remained between 79.09% and 86.28%. Since 2013, the proportion of active retracted papers has dramatically decreased from 80.23% to 25.36% (right of Figure <ref type="figure" target="#fig_2">2(a)</ref>). However, up to 2018, more than 50% of the retracted papers were active. Overall, these results show that retracted papers continued to be cited, but that the proportion of active retracted papers has decreased in recent years.</p><p>The decreasing trend in the proportion of active papers was also observed in nonretracted papers (Figure <ref type="figure" target="#fig_2">2(b)</ref>) in the first phase and the third phase. In the first phase <ref type="bibr">(1981)</ref><ref type="bibr">(1982)</ref><ref type="bibr">(1983)</ref><ref type="bibr">(1984)</ref><ref type="bibr">(1985)</ref><ref type="bibr">(1986)</ref><ref type="bibr">(1987)</ref><ref type="bibr">(1988)</ref><ref type="bibr">(1989)</ref>, the proportion of active nonretracted papers dropped from 91.42% to 43.32%. There was also a dramatic decrease of active nonretracted papers in the third phase <ref type="bibr">(2013)</ref><ref type="bibr">(2014)</ref><ref type="bibr">(2015)</ref><ref type="bibr">(2016)</ref><ref type="bibr">(2017)</ref><ref type="bibr">(2018)</ref><ref type="bibr">(2019)</ref><ref type="bibr">(2020)</ref>, where the proportion of active nonretracted papers dropped from 60.28% to 26.49%. Together, the results show that the proportion of active papers has decreased in recent years, whether they were retracted or not.</p><p>The decrease in active retracted papers could be partly explained by the fact that old retractions became inactive as time progressed (see Figure <ref type="figure" target="#fig_3">3</ref>). Another possible effect is that citations take time to accumulate. <ref type="bibr" target="#b40">Nane (2015)</ref> reported that although a paper was most likely to receive its first citation within two years after publication, the longest time window observed between publication and first citation was 13 years. <ref type="bibr" target="#b36">Lachance and Larivière (2014)</ref> mentioned that for medicine and science papers, although most of the citations were received within five years after publication, a paper could be cited 30+ years after publication. Therefore, the growth of uncited and inactive retracted papers observed in the third phase (2013-2020) could be affected by the following reasons: For uncited retracted papers published in recent years, the time window might not have been long enough for receiving their first citations, or for inactive retracted papers published in recent years, there could be a gap between the year of last citation found in our data and future citations. In other words, uncited and inactive retracted papers could become active in the future.</p><p>Figure <ref type="figure" target="#fig_3">3</ref> further shows that older retracted papers stopped being cited as time progressed. In particular, Figure <ref type="figure" target="#fig_3">3</ref> is a visualization over time, showing the share of active retracted papers among the papers retracted in a given year. Note that, in our data set, no paper was retracted in <ref type="bibr">1967</ref><ref type="bibr">, 1969</ref><ref type="bibr">, 1971</ref><ref type="bibr">-1974</ref><ref type="bibr">, 1976</ref><ref type="bibr">, 1978</ref><ref type="bibr">, or 1979. Figure . Figure</ref>  <ref type="figure" target="#fig_3">3</ref> further explains the dramatic decrease in the proportions of active retracted papers in the third phase <ref type="bibr">(2013</ref><ref type="bibr">( -2020, in Figure , in Figure</ref>  <ref type="figure" target="#fig_2">2(a)</ref>). Across all retraction years, the percentage of active retracted papers decreased over time. In particular, in citation year 2013, for the papers retracted before 1995 (except the papers retracted in 1970 and 1988), the shares of active retracted papers were less than or about 50%; notice the blue shading of the area highlighted in the yellow box in Figure <ref type="figure" target="#fig_3">3</ref>, whereas the remainder of the column below it is shaded in reds. Furthermore, in citation year 2018, the shares of active retracted papers were less than or about 50% among the papers retracted before 2014; notice the blue shading of the area highlighted in the green box in Figure <ref type="figure" target="#fig_3">3</ref>, whereas the remainder of the column below it is shaded in reds. This echoes the dramatic decrease of active retracted papers observed in the third phase (2013-2020, in Figure <ref type="figure" target="#fig_2">2(a)</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3.">Characteristics of the Citation Contexts of Retracted Papers</head><p>As addressed in previous studies <ref type="bibr" target="#b4">(Bertin et al., 2016;</ref><ref type="bibr" target="#b20">Dong &amp; Schäfer, 2011)</ref> the location of citation implies the function of a cited work in the citing work. For instance, citations appearing in the introduction section may be cited to provide background knowledge, whereas citations appearing in the discussion/conclusion section may be used for making comparisons or supporting the reported findings. Figure <ref type="figure" target="#fig_4">4</ref> presents the locations of 46,069 citation contexts mentioning retracted papers found in the main text of PMC open access articles (as described in Section 3.1.3). Overall, the preretraction citation contexts and postretraction citation contexts show similar distributions of text progression. However, postretraction citation contexts were slightly more concentrated at the beginning and the end of papers. This implies that most retracted papers were cited for similar purposes both before and after they were retracted: Retraction did not change the way they were cited. The distribution of citation contexts in the IMRaD sections (introduction/background, method, results, and conclusions/discussion) revealed some further insights about how retracted papers were cited. In comparison to Red shades denote that more than 50% of the papers retracted in a given year were active in a given citation year. Blue shades denote that less than 50% of the papers retracted in a given year were active in a given citation year. The grey area is the preretraction phase. The yellow box shows the percentages of papers retracted before 1995 that are active in citation year 2013. The green box shows the percentages of papers retracted before 2014 that are active in citation year 2018. preretraction citations, more postretraction citations were found in the introduction/ background and the discussion/conclusion sections.</p><p>To check whether citation patterns have changed over time, we first grouped citation contexts by age relative to retraction year and then by text progression. The age relative to retraction year is the difference between the citing paper's publication year and the retraction year. For example, if a 2019 paper cited a paper retracted in 2017, the age relative to retraction year is 2. Hence, by definition, the ages relative to retraction of postretraction citations are positive; the ages relative to retraction of preretraction citations are negative; and the age relative to retraction of citations in the same year as the retraction is zero.</p><p>Figure <ref type="figure" target="#fig_5">5</ref> presents the text progression of citation contexts by age relative to retraction year. However, no distinct pattern was found. Citation contexts were mostly concentrated at the beginning of the papers, followed by the end of papers<ref type="foot" target="#foot_6">foot_6</ref> , regardless of the age of citations relative to the retraction year.</p><p>Because a retracted paper can be mentioned multiple times in the full text of the citing paper, we further analyzed the number of mentions and the locations of citation contexts. Note that a paper may cite more than one retracted paper, and a retracted paper may be cited in multiple papers. Furthermore, each cited retracted paper may be mentioned one or multiple times in the citing paper's full text. To capture how each citing paper mentions the cited retracted paper(s) in the full text, we pair citing papers and cited retracted papers as citing-cited pairs (i.e., a pair of a citing paper and a cited retracted paper). We found 30,283 citing-cited pairs in the 46,069 citation contexts mentioning retracted papers found in the main text of PMC open access articles.  <ref type="bibr" target="#b29">(Hsiao &amp; Torvik, 2020)</ref>. IMRaD not identified refers to the sections where the IMRaD section types could not be identified from the section titles. The y-axis scales do not range from 0-100% because each part of the text only has a few citation contexts. For clarity, to show the trends of citation contexts' locations the scales of the y-axes were set from 0-3% for all citation contexts as well as for citation contexts in introduction/background sections and discussion/conclusion sections. For citation contexts in method sections, in result sections, and in sections for which the IMRaD section types were unidentifiable, the scales of the y-axes were set from 0-0.5%.</p><p>In these 30,283 citing-cited pairs, there were 16,895 preretraction pairs (55.79%), 3,983 pairs in the year of retraction (13.15%), and 9,405 postretraction pairs (31.06%). Of the 9,405 postretraction pairs, 422 pairs (4.49%) acknowledged retractions, and 8,983 pairs (95.51%) did not acknowledge retractions. In the following analyses, we omitted the pairs in the year of retraction for two reasons: The cited paper might have not been retracted when the citing author(s) submitted the manuscript; and The time frame might be too short to allow retraction notices to be apparent to the citing authors.</p><p>Table <ref type="table" target="#tab_7">7</ref> shows the locations of retracted papers that are mentioned only once in the full text of the citing papers; 11,889 of the 16,895 preretraction pairs (70.37%) and 7,426 of the 9,405 postretraction pairs (78.96%) appeared only once. In the sections where IMRaD section types were identified, the mentions were mostly found in the introduction/background sections and the discussion/conclusion sections, regardless of preretraction or postretraction.</p><p>As for the retracted papers mentioned multiple times (hereafter referred to as multiple mentions), there were 5,006 preretraction pairs (29.63%) and 1,979 postretraction pairs (21.04%).  Note that for a retracted paper with multiple mentions, all the mentions could appear in the same IMRaD section. As shown in Table <ref type="table" target="#tab_8">8</ref>, most of these multiple mentions were found in only one or two IMRaD sections. Pearson's correlation analysis was performed to understand the relationship between the number of mentions and the number of IMRaD sections where the mentions appeared. For both pre-and postretraction pairs, the number of mentions was weakly correlated with the number of IMRaD sections where the mentions appeared (preretraction pairs: coef = 0.45, p &lt; .001; postretraction pairs (retraction not acknowledged): coef = 0.29, p &lt; .001; postretraction pairs (retraction acknowledged): coef = 0.47, p &lt; .001). In other words, the higher the number of mentions, the more likely the multiple mentions would appear in more IMRaD sections.</p><p>Figure <ref type="figure" target="#fig_6">6</ref> shows the locations of the multiple mentions. Similar patterns were observed in preretraction pairs as well as in postretraction pairs that did not acknowledge the retraction. When the multiple mentions all appeared in one IMRaD section, the section was usually the discussion/conclusion, and second most common was the introduction/background. When  the multiple mentions appeared in more than one IMRaD section, usually the combination was the introduction/background section along with the discussion/conclusion section. These similar patterns show that there was no substantial difference between how the retracted papers were cited before and after the retractions when the retractions were not acknowledged.</p><p>As for postretraction pairs with acknowledgment of retraction, the trends are slightly different. When the multiple mentions appeared in different IMRaD sections, these multiple mentions were most commonly found in both the introduction/background section and the discussion/conclusion section, the same as the preretraction pairs and postretraction pairs without acknowledgment of retraction. However, when the multiple mentions were all in a single IMRaD section, the section was usually the introduction/background, and second most common was the discussion/conclusion section. Despite the slight differences, the postretraction pairs (regardless of whether the retraction was acknowledged or not) were most commonly observed in two sections: introduction/background and discussion/conclusion.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.4.">Intentional Postretraction Citations</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.4.1.">Lack of acknowledgment of retraction shown in the citation contexts</head><p>To understand, at scale, whether postretraction citations acknowledge retractions, we used the methods described in Section 3.3 to identify postretraction citation contexts acknowledging that retracted papers were cited. We identified 722 postretraction citation contexts. Note that the 722 contexts only account for 5.4% of the 13,252 postretraction citation contexts we studied. In other words, an overwhelming majority (94.6%) of the postretraction citation contexts do not show awareness of the retraction when citing retracted papers.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.4.2.">Purposes for intentionally citing retracted papers</head><p>Table <ref type="table" target="#tab_9">9</ref> presents the number of intentional citations we classified with each citation purpose. The annotation was done primarily by the first author. To estimate the intercoder agreement, we randomly sampled 100 citation contexts from the 722 citation contexts and assigned the sampled contexts to a graduate student in scientometrics who was not involved in developing the classification scheme. The Kappa coefficient of the intercoder agreement is .63, showing a fair agreement between the two coders <ref type="bibr" target="#b14">(Cohen, 1960)</ref>. The annotation manual was deposited to the Illinois Data Bank <ref type="bibr" target="#b28">(Hsiao &amp; Schneider, 2021)</ref>, and a confusion matrix of the 100 annotations can be found as Supplementary material 4. Following an initial annotation, we collapsed two categories that were close in purpose because they could not be reliably distinguished. After collapsing the two categories, the main points of confusion were that the second annotator annotated all instances of the first annotator's Notify retraction included as Related work, and interpreted Example of problematic science differently than the first annotator.</p><p>As shown in Table <ref type="table" target="#tab_9">9</ref>, the most prevalent purpose, related work, accounted for 453 (62.74%) of the 722 citation contexts. This provides insight into why retraction did not stop citations: Findings reported in the retracted papers were still regarded as parts of the development of a particular research topic even though some of the retracted papers were mentioned negatively. The following examples illustrate this phenomenon.</p><p>An example of a negative mention (from PMID: 17474991):</p><p>Another trial of a multivitamin and multimineral supplement in healthy elderly subjects reported beneficial effects after one year in six of seven tests [Retraction PMID: 11527656], though these findings have recently been retracted in the light of concerns about the veracity of the data and possible conflicting commercial interest [Retraction notice PMID: 11527656].</p><p>An example of a nonnegative mention (from PMID: 26029167):</p><p>One of the first biomarkers proposed was serum IGF-I. Despite the retraction of one study suggesting that elevated pre-treatment free IGF-I levels were associated with NSCLC patient response to figitumumab ([Retraction PMID: 21102589]), additional evidence supporting these findings has been published. Furthermore, some of the related work citations suggest that sometimes citations to retractions might be inevitable. In these citation contexts, retracted papers were cited because the reported findings caused an important event in the field, or the reported findings were once regarded as landmarks in the field. For example, Andrew Wakefield et al.'s (1998) study (partly retracted in 2004; fully retracted in Lancet (2010)) on the relationship between the MMR vaccine and autism influenced the antivaccine movement. Related work indicates that the retracted paper(s) was cited to provide context about a background event.</p><p>The second most prevalent motive, example of problematic science, shows another reason why retraction did not stop citations: Retracted papers were cited to discuss problems in scientific research or scientific publishing. For instance, retracted papers were cited to provide examples of irreproducible research, scientific misconduct, and fraudulent science. We also observed cases in which retracted papers were cited to demonstrate that peer review could fail due to the fact that problematic research had been published.</p><p>While examining the citation contexts, we observed certain types of purposes in different types of citing articles (see Figure <ref type="figure">7</ref>). We identified the types of articles in two ways. First, we collected the publication types from the metadata in the XML files. Then, we identified a set of <ref type="bibr" target="#b13">Chen et al. (2013)</ref> reported that, for 1,721 retracted papers indexed in WoS, the mean time to retraction was 2.57 years. <ref type="bibr" target="#b3">Bar-Ilan and Halevi (2018)</ref> reported that postretraction citations increased; however, the growth rates of postretraction citations dropped across their three data collection dates. <ref type="bibr" target="#b19">Dinh et al. (2019)</ref> and <ref type="bibr" target="#b39">Mott et al. (2019)</ref> reported that retracted papers' citation counts dropped after the retraction. Our longitudinal analysis on the shares of active retracted papers in each retraction year across the citation years answers RQ1 and provides further insight into the postretraction decrease in citation counts: Old retracted papers have stopped being cited as time progressed.</p><p>To answer RQ2 and RQ3, we analyzed how retracted papers were cited in full-text articles. For RQ2, the similar distributions of text progression of preretraction and postretraction citation contexts imply that the purpose for citing retraction papers did not change much before or after retraction. Interestingly, <ref type="bibr" target="#b7">Bordignon (2020)</ref> reported that retracted/corrected papers did not receive more negative citations than nonretracted/corrected papers. <ref type="bibr" target="#b7">Bordignon's (2020)</ref> finding echoes ours in that retracted papers are not cited differently before and after the retraction. As for RQ3, our textual analysis of the postretraction citation contexts shows that only a limited proportion (5.4%) of postretraction citation contexts acknowledged the retraction. A similar proportion (4.15%) was reported in <ref type="bibr">Budd et al.'s (2016)</ref> study covering citations to papers retracted between 2001-2005. Low proportions of postretraction citations acknowledging the retraction were also reported in some case studies <ref type="bibr" target="#b49">(Schneider et al., 2020;</ref><ref type="bibr" target="#b58">van der Vet &amp; Nijveen, 2016)</ref> and older studies <ref type="bibr" target="#b11">(Budd et al., 1999;</ref><ref type="bibr" target="#b44">Pfeifer &amp; Snodgrass, 1990)</ref>. However, publicity of a retracted paper may influence the proportion of citations acknowledging the retraction. Studies on high-profile retracted papers reported higher proportions of citations acknowledging the retractions <ref type="bibr" target="#b8">(Bornemann-Cimenti et al., 2016;</ref><ref type="bibr" target="#b45">Piller, 2021;</ref><ref type="bibr" target="#b52">Suelzer et al., 2019)</ref>. <ref type="bibr" target="#b52">Suelzer et al. (2019)</ref> studied citations to the Wakefield paper and reported that 71.7% of the citations documented the retraction after the paper was fully retracted in 2010. <ref type="bibr" target="#b8">Bornemann-Cimenti et al. (2016)</ref> reported that 25.8% of 267 citations to 25 retracted papers by Scott S. Reuben documented the retractions. In <ref type="bibr" target="#b45">Piller (2021)</ref>, 47.5% of the citations to two retracted Covid-19 papers documented the retractions. <ref type="bibr" target="#b39">Mott et al. (2019)</ref> also observed the difference between retracted papers with and without public attention. They reported that retracted papers that were part of large-scale retractions that received broad media attention had a larger reduction in postretraction citations than other retracted papers <ref type="bibr" target="#b39">(Mott et al., 2019</ref>).</p><p>To answer RQ4, we analyzed the purposes for intentionally citing retracted papers. Our findings on the 722 citation contexts acknowledging retraction show that retracted papers were intentionally cited for various reasons. Related work was the most common purpose observed. The prevalence of related work partly explains why retraction did not stop citation: Findings reported in retracted papers were still regarded as part of the development of a particular research topic and might be cited to provide background context. Note that we also observed citation purposes indicating that some citations to retracted work might be inevitable, such as exclusion rationale and subject of study. Moreover, the purposes notify retraction included and example of problematic science show that citations to retracted papers can also be used for pointing out problematic science.</p><p>In summary, this study examined the postretraction citations to PubMed-indexed retracted papers. To the best of our knowledge, <ref type="bibr">Budd et al.'s (2016)</ref> study covering 4,917 postretraction citations to 265 papers retracted from 2001-2005 was the most recent study on acknowledgement of retraction at scale in the biomedical field. By contrast, our study is more than twice the scale: Our study covered 13,252 postretraction citation contexts that were from 9,122 citing papers. Our findings update the understanding of postretraction citations to a vast collection of</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Boxplot of time lag between publication and retraction arranged by retraction year and publication year. The box areas show interquartile range (IQR, from 25% to 75%) of the time lag between publication and retraction. The upper whisker of each box is the longest time lag smaller than 1.5 IQR above the 75th percentile; the lower whisker is the shortest time lag greater than 1.5 IQR below the 25th percentile. The grey dotted line in the lower panel shows the maximum possible time lag (i.e., up to 2020, the year of data collection) for papers to be retracted in each publication year.</figDesc><graphic coords="12,113.73,95.64,384.68,435.29" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Distribution of active, inactive, and uncited papers.</figDesc><graphic coords="13,113.73,356.37,384.68,343.33" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. The percentage of active retracted papers with a given retraction year over time. Note that the citation data from 2020 are incomplete because the data were collected in August 2020. The shades denote the percentage of active retracted papers in a given citation year.Red shades denote that more than 50% of the papers retracted in a given year were active in a given citation year. Blue shades denote that less than 50% of the papers retracted in a given year were active in a given citation year. The grey area is the preretraction phase. The yellow box shows the percentages of papers retracted before 1995 that are active in citation year 2013. The green box shows the percentages of papers retracted before 2014 that are active in citation year 2018.</figDesc><graphic coords="15,113.73,95.64,384.68,307.39" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. Locations of citations to retracted papers. Text progression indicates the location of a citation context in the main text on a percentage scale. The IMRaD sections were identified from the section titles<ref type="bibr" target="#b29">(Hsiao &amp; Torvik, 2020)</ref>. IMRaD not identified refers to the sections where the IMRaD section types could not be identified from the section titles. The y-axis scales do not range from 0-100% because each part of the text only has a few citation contexts. For clarity, to show the trends of citation contexts' locations the scales of the y-axes were set from 0-3% for all citation contexts as well as for citation contexts in introduction/background sections and discussion/conclusion sections. For citation contexts in method sections, in result sections, and in sections for which the IMRaD section types were unidentifiable, the scales of the y-axes were set from 0-0.5%.</figDesc><graphic coords="16,113.73,95.64,384.68,191.68" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Distribution of text progression by the age of citation relative to retraction year. Age represents the number of years preceding (negative) or following (positive) retraction. Markers in the cells denote the percentage of citation context in each group of citation contexts having the same age relative to retraction year.</figDesc><graphic coords="17,113.73,95.64,384.68,206.70" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. Location of the retracted papers that were mentioned multiple times.</figDesc><graphic coords="18,113.73,444.81,384.68,254.89" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head/><label/><figDesc/><graphic coords="21,113.73,95.64,384.68,255.86" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head/><label/><figDesc>found higher rates of citations acknowledging retractions.</figDesc><table><row><cell/><cell cols="3">Table 1. Citations acknowledging retraction reported in previous research</cell></row><row><cell>Continued use of retracted papers</cell><cell>% citations acknowledging</cell><cell># citations acknowledging retraction</cell><cell># retracted papers included</cell></row><row><cell>Reference</cell><cell>retraction</cell><cell>in the citations included for analysis</cell><cell>for citation analysis</cell></row><row><cell>Santos-d'Amorim, de Melo,</cell><cell>37.85</cell><cell>81/214 citations</cell><cell>One retracted Covid-19 paper</cell></row><row><cell>and dos Santos (2021)</cell><cell/><cell/><cell/></row><row><cell>Piller (2021)</cell><cell>47.5</cell><cell>95/200 citations</cell><cell>Two retracted Covid-19 papers</cell></row><row><cell>Van der Walt, Willems et al. (2020)</cell><cell>21.05</cell><cell>4/19 sampled citations</cell><cell>33 retracted Covid-19 papers</cell></row><row><cell>Schneider et al. (2020)</cell><cell>4.5</cell><cell>5/112 citations</cell><cell>One retracted paper</cell></row><row><cell>Theis-Mahon and Bakker (2020)</cell><cell>5.4</cell><cell>37/685 citations</cell><cell>81 retracted dentistry papers</cell></row><row><cell>Yang et al. (2020)</cell><cell>16.03</cell><cell>21/131 citations</cell><cell>46 retracted psychological papers</cell></row><row><cell>Bolboaca , Buhai et al. (2019)</cell><cell>1.07</cell><cell>6/559 citations</cell><cell>54 retracted papers reporting a radiology-</cell></row><row><cell/><cell/><cell/><cell>imaging diagnostic method</cell></row><row><cell>Hamilton (2019) Suelzer et al. (2019) Bornemann-Cimenti, Szilagyi, and Sandner-Kiesling (2016) Budd et al. (2016) van der Vet and Nijveen (2016) Budd et al. (2011) Neale et al. (2010) Redman, Yarandi, and Merz (2008) Budd et al. (1999) Kochan and Budd (1992) Pfeifer and Snodgrass (1990)</cell><cell>6.6 38.2 (2005-2010); 71.7 (2011-2018) 25.8 4.15 3.5 b 6 2.8 &lt; 3 in 9/10 papers; 29 in the paper having 96 citations 6.4 (AIM); 7.7 (non-AIM) 5.7 2.9</cell><cell>27/407 citations 123/322 (2005-2010); 360/502 (2011-2018) -/267 citations a 204/4,917 citations 0/37 citations in 2014; 2/57 citations in 2015 14/247 citations in the 2000 sample; 8/144 citations in the 2005 sample 17/603 citations stratified random sampled from 5,393 citations -/225 citations a to 10 papers with high postretraction citation rates (citation per-paper range from 10-96) 19/299 citations from AIM journals; 123/1,594 citations from non-AIM journals 17/298 citations 5/178 citations</cell><cell>47 retracted radiation oncology papers Wakefield's Lancet paper (partly retracted in 2004; fully retracted in 2010) 20 retracted papers by Scott S. Reuben 265 retracted papers in MEDLINE A paper published in Nature and retracted in Feb. 2014. 1,112 retracted papers in PubMed 102 papers affected by scientific misconduct 315 retracted papers in PubMed 235 retracted papers in MEDLINE John Darsee's papers 82 retracted papers identified from journals Downloaded from http://direct.mit.edu/qss/article-pdf/2/4/1144/2007942/qss_a_00155.pdf by guest on 22 October 2025 in Index Medicus</cell></row><row><cell>Quantitative Science Studies</cell><cell/><cell/><cell>1147</cell></row></table><note><p><p>a Number not reported.</p>b Inferred from data: 2/57 citations in 2015.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head/><label/><figDesc>in preparation), which is built from a snapshot of the XML version of PMC open access articles (PubMed Central, n.d.) retrieved in May 2019 3 . The PMCOA Citation Context Dataset contains citation contexts identified from 2,049,871 articles in the XML version of the PMC Open Access Subset</figDesc><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 2 .</head><label>2</label><figDesc>Descriptive statistics of the number of citations</figDesc><table><row><cell/><cell>Preretraction</cell><cell>In retraction year</cell><cell>Postretraction</cell><cell>Total</cell></row><row><cell>#Retracted papers</cell><cell>7,766 a</cell><cell>7,766 a</cell><cell>7,766 a</cell><cell>7,813</cell></row><row><cell>#Citations b</cell><cell/><cell/><cell/><cell/></row><row><cell>Mean</cell><cell>12.86</cell><cell>2.74</cell><cell>6.20</cell><cell>21.69</cell></row><row><cell>SD</cell><cell>40.28</cell><cell>7.23</cell><cell>17.87</cell><cell>55.25</cell></row><row><cell>Q1</cell><cell>0.00</cell><cell>0.00</cell><cell>0.00</cell><cell>2.00</cell></row><row><cell>Q2</cell><cell>1.00</cell><cell>1.00</cell><cell>2.00</cell><cell>7.00</cell></row><row><cell>Q3</cell><cell>10.00</cell><cell>3.00</cell><cell>6.00</cell><cell>21.00</cell></row><row><cell>Max</cell><cell>1440.00</cell><cell>299.00</cell><cell>844.00</cell><cell>2011.00</cell></row></table><note><p><p>a 47 papers lacked retraction year information.</p>b 2,088 citations from retraction notices and 15 problematic citations have been excluded.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 3 .</head><label>3</label><figDesc>Citation contexts of citations to retracted papers</figDesc><table><row><cell/><cell cols="2">Preretraction (%)</cell><cell cols="6">In retraction year (%) Postretraction (%) Missing retraction year (%)</cell></row><row><cell>Total</cell><cell cols="2">28,439 (100.00)</cell><cell>6,412</cell><cell>(100.00)</cell><cell cols="2">13,252 (100.00)</cell><cell>31</cell><cell>(100.00)</cell></row><row><cell>In main text</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>In introduction/background</cell><cell>6,952</cell><cell>(24.45)</cell><cell>1,698</cell><cell>(26.48)</cell><cell>3,947</cell><cell>(29.78)</cell><cell>17</cell><cell>(54.84)</cell></row><row><cell>In methods</cell><cell>2,071</cell><cell>(7.28)</cell><cell>388</cell><cell>(6.05)</cell><cell>679</cell><cell>(5.12)</cell><cell>2</cell><cell>(6.45)</cell></row><row><cell>In results</cell><cell>3,249</cell><cell>(11.42)</cell><cell>708</cell><cell>(11.04)</cell><cell>1,190</cell><cell>(8.98)</cell><cell>1</cell><cell>(3.23)</cell></row><row><cell>In conclusion/discussion</cell><cell>8,089</cell><cell>(28.44)</cell><cell>1,881</cell><cell>(29.34)</cell><cell>4,156</cell><cell>(31.36)</cell><cell>4</cell><cell>(12.90)</cell></row><row><cell>IMRaD not identified a</cell><cell>6,883</cell><cell>(24.20)</cell><cell>1,414</cell><cell>(22.05)</cell><cell>2,764</cell><cell>(20.86)</cell><cell>6</cell><cell>(19.35)</cell></row><row><cell>In abstract</cell><cell>14</cell><cell>(0.05)</cell><cell>4</cell><cell>(0.06)</cell><cell>1</cell><cell>(0.01)</cell><cell>0</cell><cell>(0.00)</cell></row><row><cell>In supporting material</cell><cell>4</cell><cell>(0.01)</cell><cell>6</cell><cell>(0.09)</cell><cell>5</cell><cell>(0.04)</cell><cell>0</cell><cell>(0.00)</cell></row><row><cell cols="2">In tables and table/figure captions 1,177</cell><cell>(4.14)</cell><cell>313</cell><cell>(4.88)</cell><cell>510</cell><cell>(3.85)</cell><cell>1</cell><cell>(3.23)</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 4 .</head><label>4</label><figDesc>Postretraction citation contexts acknowledging the retraction</figDesc><table><row><cell/><cell/><cell># citation</cell><cell># citation contexts</cell><cell/></row><row><cell/><cell/><cell>contexts</cell><cell>acknowledging</cell><cell># false</cell></row><row><cell>Priority</cell><cell>Rule</cell><cell>identified</cell><cell>the retraction</cell><cell>positives*</cell></row><row><cell>1</cell><cell>At least one of the cue words</cell><cell>243</cell><cell>169</cell><cell>74</cell></row><row><cell/><cell>(retract*, withdr*, and error)</cell><cell/><cell/><cell/></row><row><cell/><cell>appears in the citation context</cell><cell/><cell/><cell/></row><row><cell>2</cell><cell>At least one of the cue words</cell><cell>309</cell><cell>283</cell><cell>26</cell></row><row><cell/><cell>(retract*, withdr*) appears in</cell><cell/><cell/><cell/></row><row><cell/><cell>the acknowledgment window</cell><cell/><cell/><cell/></row><row><cell>3</cell><cell>Retraction notice is cited together</cell><cell>159</cell><cell>159</cell><cell>0</cell></row><row><cell/><cell>with the retracted paper in the</cell><cell/><cell/><cell/></row><row><cell/><cell>citing paper's full text</cell><cell/><cell/><cell/></row><row><cell>Total</cell><cell/><cell>711</cell><cell>611</cell><cell>100</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5"><head>Table 5 .</head><label>5</label><figDesc>Locations of postretraction citation contexts</figDesc><table><row><cell># postretraction citation contexts</cell><cell/></row><row><cell>acknowledging retraction</cell><cell>(%)</cell></row></table><note><p>Downloaded from http://direct.mit.edu/qss/article-pdf/2/4/1144/2007942/qss_a_00155.pdf by guest on 22 October 2025</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_6"><head>Table 6 .</head><label>6</label><figDesc>The citation purposes</figDesc><table><row><cell>Purpose</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_7"><head>Table 7 .</head><label>7</label><figDesc>Locations of the retracted papers being mentioned only once in the full text</figDesc><table><row><cell/><cell># Preretraction</cell><cell/><cell># Postretraction pairs</cell><cell/><cell># Postretraction pairs</cell><cell/></row><row><cell>IMRaD</cell><cell>pairs</cell><cell>(%)</cell><cell>(retraction not acknowledged)</cell><cell>(%)</cell><cell>(retraction acknowledged)</cell><cell>(%)</cell></row><row><cell>Introduction/background</cell><cell>3,272</cell><cell>(27.52)</cell><cell>2,359</cell><cell>(33.04)</cell><cell>47</cell><cell>(16.43)</cell></row><row><cell>Methods</cell><cell>690</cell><cell>(5.8)</cell><cell>397</cell><cell>(5.56)</cell><cell>13</cell><cell>(4.55)</cell></row><row><cell>Results</cell><cell>971</cell><cell>(8.17)</cell><cell>490</cell><cell>(6.86)</cell><cell>29</cell><cell>(10.14)</cell></row><row><cell>Discussion/conclusion</cell><cell>3,656</cell><cell>(30.75)</cell><cell>2,349</cell><cell>(32.90)</cell><cell>46</cell><cell>(16.08)</cell></row><row><cell>IMRaD not identified</cell><cell>3,300</cell><cell>(27.76)</cell><cell>1,545</cell><cell>(22.64)</cell><cell>151</cell><cell>(52.80)</cell></row><row><cell>Total</cell><cell>11,889</cell><cell>(100)</cell><cell>7,140</cell><cell>(100)</cell><cell>286</cell><cell>(100)</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_8"><head>Table 8 .</head><label>8</label><figDesc>Number of different IMRaD sections where multiple mentions appeared</figDesc><table><row><cell>#Different</cell><cell># Preretraction</cell><cell/><cell># Postretraction pairs</cell><cell/><cell># Postretraction pairs</cell><cell/></row><row><cell>IMRaD sections</cell><cell>pairs</cell><cell>(%)</cell><cell>(retraction not acknowledged)</cell><cell>(%)</cell><cell>(retraction acknowledged)</cell><cell>(%)</cell></row><row><cell>1</cell><cell>2,225</cell><cell>(44.45)</cell><cell>860</cell><cell>(46.66)</cell><cell>68</cell><cell>(50.00)</cell></row><row><cell>2</cell><cell>2,188</cell><cell>(43.71)</cell><cell>890</cell><cell>(48.29)</cell><cell>57</cell><cell>(41.91)</cell></row><row><cell>3</cell><cell>483</cell><cell>(9.65)</cell><cell>82</cell><cell>(4.45)</cell><cell>10</cell><cell>(7.35)</cell></row><row><cell>4</cell><cell>109</cell><cell>(2.18)</cell><cell>10</cell><cell>(0.54)</cell><cell>1</cell><cell>(0.74)</cell></row><row><cell>5</cell><cell>1</cell><cell>(0.02)</cell><cell>1</cell><cell>(0.05)</cell><cell>0</cell><cell>(0)</cell></row><row><cell>Total</cell><cell>5,006</cell><cell>(100)</cell><cell>1,843</cell><cell>(100)</cell><cell>136</cell><cell>(100)</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_9"><head>Table 9 .</head><label>9</label><figDesc>Distribution of the citation contexts belonging to the purposes</figDesc><table><row><cell>Purpose</cell><cell># citation contexts</cell><cell>(%)</cell></row><row><cell>Related work</cell><cell>453</cell><cell>(62.74)</cell></row><row><cell>Example of problematic science</cell><cell>62</cell><cell>(8.59)</cell></row><row><cell>Reproduce</cell><cell>40</cell><cell>(5.54)</cell></row><row><cell>Exclusion rationale</cell><cell>35</cell><cell>(4.85)</cell></row><row><cell>Subject of study</cell><cell>33</cell><cell>(4.57)</cell></row><row><cell>Comparison a</cell><cell>26</cell><cell>(3.60)</cell></row><row><cell>Notify retraction included</cell><cell>24</cell><cell>(3.32)</cell></row><row><cell>Use</cell><cell>20</cell><cell>(2.77)</cell></row><row><cell>Other</cell><cell>14</cell><cell>(1.94)</cell></row><row><cell>Correction</cell><cell>10</cell><cell>(1.39)</cell></row><row><cell>Republication of retraction</cell><cell>5</cell><cell>(0.69)</cell></row><row><cell>Total</cell><cell>722</cell><cell>(100)</cell></row></table><note><p>a Comparison: 11 (1.52%) were negative (-), 5 (0.69%) were neutral (±), and 10 (1.39%) were positive (+).</p></note></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>Continued use of retracted papersDownloaded from http://direct.mit.edu/qss/article-pdf/2/4/1144/2007942/qss_a_00155.pdf by guest on 22 October 2025</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>Downloaded from http://direct.mit.edu/qss/article-pdf/2/4/1144/2007942/qss_a_00155.pdf by guest on 22 October 2025</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_2"><p>3.1.1. Retracted papers indexed in PubMedRetracted papers in PubMed were searched using the query "retracted publication" [PT] on August 20, 2020. The search yielded 7,813 results, including four retraction notices incorrectly indexed as retracted papers (Supplementary material 1). We corrected our data set to use the retracted papers associated with these four retraction notices, based on their titles and PubMed's retraction in links. Using PubMed's retraction in information, the retraction years of 7,766/7,813 (99.40%) retracted papers were identified.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2" xml:id="foot_3"><p>https://icite.od.nih.gov/api</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="3" xml:id="foot_4"><p>The extraction of citation context is limited to PMC open access articles because this is the largest set of publicly available articles indexed in PubMed with standardized XML format that can be processed systematically.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_5"><p>* Cue words do not always refer to retraction. We manually inspected the identified citation contexts to exclude false positives. Some examples: retract* in neurite retraction; withdr* in withdrawal symptoms; error in error rate.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="5" xml:id="foot_6"><p>Citation contexts are found concentrated at the beginning of papers the most, followed by the end of papers, for nonretracted papers as well<ref type="bibr" target="#b4">(Bertin et al., 2016)</ref>.</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENTS</head><p>We thank <rs type="person">Dr Yuanxi Fu</rs> and <rs type="person">Malik Salami</rs> for helping us annotate the citation motives. Thanks to <rs type="person">Dr Yuanxi Fu</rs> and <rs type="person">Randi Proescholdt</rs> for collaborating on Table <ref type="table">1</ref> for the unpublished RISRS Report, <rs type="person">Jodi Schneider</rs>, <rs type="person">Nathan D. Woods</rs>, <rs type="person">Randi Proescholdt</rs>, <rs type="person">Yuanxi Fu</rs>, and the RISRS Team: "Recommendations from the <rs type="projectName">Reducing the Inadvertent Spread of Retracted Science: Shaping a Research and Implementation Agenda Project" MetaArXiv Preprints July 2021</rs> (<ref type="url" target="https://doi.org/10.31222/osf.io/ms579">https://doi.org /10.31222/osf.io/ms579</ref>). iCite was used for public data.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funded-project" xml:id="_wEMN6EK">
+					<orgName type="project" subtype="full">Reducing the Inadvertent Spread of Retracted Science: Shaping a Research and Implementation Agenda Project" MetaArXiv Preprints July 2021</orgName>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Continued use of retracted papers</head><p>specific article types (Supplementary material 5) and updated the types of articles for the papers that fell into these types based on specific identification rules.</p><p>Figure <ref type="figure">7</ref> presents the most prevalent types of articles and the citation purposes observed in the 722 citation contexts acknowledging the retraction. We found 91.14% (658) of the citation contexts in these four types of articles.</p><p>Different purposes for intentionally citing retracted papers were observed in different types of articles. Related work was the most common purpose observed in research articles and review articles, but not in other types of articles. In systematic reviews and meta-analyses, exclusion rationale was the most common purpose. This type of citation is hard to avoid, because when researchers perform systematic reviews and meta-analyses, they need to perform thorough literature searches, report the search results, and provide explicit reasons for excluding papers from the analysis. In articles about retraction or scientific misconduct, subject of study was the most common purpose. This type of citation is also hard to avoid because retracted papers were the "data" in these articles.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">DISCUSSION AND CONCLUSIONS</head><p>Our findings show that retracted papers in biomedicine were mostly retracted within 3 years after publication and continued to be cited after retraction. Although our findings cannot be projected into the future because journals and authors can reach back in time to retract articles (e.g., PMID:1233443, retracted 45 years after publication), our findings are aligned with those of previous studies. <ref type="bibr" target="#b3">Bar-Ilan and Halevi (2018)</ref> studied 995 retracted papers in ScienceDirect and reported that 75% of the papers were retracted no more than 3 years after publication. retracted papers and provide further information about how retracted papers were cited over time. This is the first large-scale study examining the citation contexts citing retracted papers. Our analysis of the locations of the citation contexts showed no significant difference in how retracted papers were cited in full-text articles before and after their retraction.</p><p>Our analysis of the purposes for intentionally citing retracted papers contributes to a deeper understanding of why retraction has not stopped citations. We are not against citing retracted papers if retracted papers are appropriately cited. The problem is that the vast majority (94.6%) of postretraction citations did not document the retraction. Previous studies <ref type="bibr" target="#b3">(Bar-Ilan &amp; Halevi, 2018;</ref><ref type="bibr" target="#b49">Schneider et al., 2020)</ref> reported that the retraction notice did not always appear when a retracted paper was searched. Often articles are not clearly labelled as retracted: This was the case for two studies of Medline-indexed papers, where 52/233 (22%) retracted papers in one sample <ref type="bibr" target="#b16">(Decullier, Huot et al., 2013)</ref> and 15/123 (12.2%) retracted papers in a second sample (this excluded withdrawn articles) <ref type="bibr" target="#b17">(Decullier &amp; Maisonneuve, 2018)</ref> were not watermarked or clearly labeled. <ref type="bibr" target="#b53">Suelzer, Deal et al. (2021)</ref> investigated how retraction information was displayed on publisher websites and six bibliographic databases (PubMed, Ovid MEDLINE, EBSCO CINAHL, ProQuest PsycINFO, Scopus, and WoS). On publisher websites, 132/150 (88%) retracted papers' PDFs were labeled, and 109/148 (73.6%) retracted papers had links to retraction notices <ref type="bibr" target="#b53">(Suelzer et al., 2021)</ref>. Among the six databases, PubMed and Ovid MEDLINE had the best performance (150/150 (100%) labeled as retracted; 147/150 (98.0%) linked to their retraction notices). EBSCO CINAHL had the worst performance: None of the retracted papers were labeled or linked to their retraction notices <ref type="bibr" target="#b53">(Suelzer et al., 2021)</ref>. This is in contrast to the 2019 guidelines from the Committee on Publication Ethics (COPE) and the International Committee of Medical Journal Editors (ICMJE). Both the 2019 COPE and ICMJE guidelines suggest that retraction notices should be linked to the retracted paper in all online versions (Committee on Publication Ethics, <ref type="bibr" target="#b14">Barbour et al., 2019;</ref><ref type="bibr">International Committee of Medical Journal Editors, 2019)</ref>. However, resources such as Retraction Watch (2018), Zotero (2019), and scite (2020) (both of which use Retraction Watch data as of the current writing) can help authors identify retracted papers. To stop the improper spread of retracted papers, it is crucial for authors to check the retraction status and cite retracted papers carefully. At least, authors should follow guidance on citing retracted papers provided by citation standards. Guidance on citing retracted papers has been provided in popular referencing styles such as APA style (American Psychological Association, 2020), AMA style (AMA Manual of Style Committee, 2020), and NLM style <ref type="bibr" target="#b43">(Patrias, 2007)</ref>. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>COMPETING INTERESTS</head><p>Tzu-Kun Hsiao has no competing interests. Jodi Schneider has been an invited speaker for the publisher organization CrossRef and has received data-in-kind from Retraction Watch and scite.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>FUNDING INFORMATION</head><p>Alfred P. Sloan Foundation G-2020-12623. NIH 5R01LM010817.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>DATA AVAILABILITY</head><p>For the data used for this study, see the Illinois Data Bank: <ref type="url" target="https://doi.org/10.13012/B2IDB-8255619_V2">https://doi.org/10.13012/B2IDB -8255619_V2</ref>. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Continued use of retracted papers</head></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Automatically classifying the role of citations in biomedical articles</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Agarwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Choubey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">AMIA Annual Symposium Proceedings</title>
+		<imprint>
+			<date type="published" when="2010">2010. 2010</date>
+			<biblScope unit="page" from="11" to="15"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Retractions and expressions of concern</title>
+		<idno type="DOI">10.1093/jama/9780190246556.001.0001</idno>
+		<ptr target="https://doi.org/10.1093/jama/9780190246556.001.0001AmericanPsychologicalAssociation"/>
+	</analytic>
+	<monogr>
+		<title level="m">Psychological Association: The official guide to APA style</title>
+		<imprint>
+			<publisher>American Psychological Assocation</publisher>
+			<date type="published" when="2020">2020. 2020</date>
+		</imprint>
+	</monogr>
+	<note>AMA manual of style: A guide for authors and</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Post retraction citations in context: A case study</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bar-Ilan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Halevi</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11192-017-2242-0</idno>
+		<idno type="PMID">29056790</idno>
+		<ptr target="https://doi.org/10.1007/s11192-017-2242-0"/>
+	</analytic>
+	<monogr>
+		<title level="j">Scientometrics</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="547" to="565"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Temporal characteristics of retracted articles</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bar-Ilan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Halevi</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11192-018-2802-y</idno>
+		<ptr target="https://doi.org/10.1007/s11192-018-2802-y"/>
+	</analytic>
+	<monogr>
+		<title level="j">Scientometrics</title>
+		<imprint>
+			<biblScope unit="volume">116</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1771" to="1783"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">The invariant distribution of references in scientific articles</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bertin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Atanassova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Gingras</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Larivière</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/asi.23367</idno>
+		<ptr target="https://doi.org/10.1002/asi.23367"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Association for Information Science and Technology</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="164" to="177"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Post retraction citations among manuscripts reporting a radiology-imaging diagnostic method</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Bolboacă</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D.-V</forename><surname>Buhai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">¸</forename><surname>Aluas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bulboaca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pone.0217918</idno>
+		<idno type="PMID">31194762</idno>
+		<ptr target="https://doi.org/10.1371/journal.pone.0217918"/>
+	</analytic>
+	<monogr>
+		<title level="j">PLOS ONE</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page">217918</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Citation of retracted publications: A challenging problem</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Bolland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Grey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Avenell</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/08989621.2021.1886933</idno>
+		<idno type="PMID">33557605</idno>
+		<ptr target="https://doi.org/10.1080/08989621.2021.1886933"/>
+	</analytic>
+	<monogr>
+		<title level="j">Accountability in Research</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Self-correction of science: A comparative study of negative citations and post-publication peer review</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Bordignon</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11192-020-03536-z</idno>
+		<ptr target="https://doi.org/10.1007/s11192-020-03536-z"/>
+	</analytic>
+	<monogr>
+		<title level="j">Scientometrics</title>
+		<imprint>
+			<biblScope unit="volume">124</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="1225" to="1239"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Perpetuation of retracted publications using the example of the Scott S. Reuben case: Incidences, reasons and possible improvements</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Bornemann-Cimenti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">S</forename><surname>Szilagyi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sandner-Kiesling</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11948-015-9680-y</idno>
+		<idno type="PMID">26150092</idno>
+		<ptr target="https://doi.org/10.1007/s11948-015-9680-y"/>
+	</analytic>
+	<monogr>
+		<title level="j">Science and Engineering Ethics</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1063" to="1072"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">An investigation of retracted articles in the biomedical literature</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Budd</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Coble</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Abritis</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/pra2.2016.14505301055</idno>
+		<ptr target="https://doi.org/10.1002/pra2.2016.14505301055"/>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the Association for Information Science and Technology</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="9"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Retracted publications in biomedicine: Cause for concern</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Budd</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">C</forename><surname>Coble</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Anderson</surname></persName>
+		</author>
+		<ptr target="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC226618/"/>
+	</analytic>
+	<monogr>
+		<title level="m">Association of College and Research Libraries Conference</title>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+			<biblScope unit="page" from="390" to="395"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Effects of article retraction on citation and practice in medicine</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Budd</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sievert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">R</forename><surname>Schultz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Scoville</surname></persName>
+		</author>
+		<idno type="PMID">10550028</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Bulletin of the Medical Library Association</title>
+		<imprint>
+			<biblScope unit="volume">87</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="437" to="443"/>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Does retraction after misconduct have an impact on citations? A pre-post study</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Candal-Pedreira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ruano-Ravina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Fernández</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ramos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Campos-Varela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pérez-Ríos</surname></persName>
+		</author>
+		<idno type="DOI">10.1136/bmjgh-2020-003719</idno>
+		<idno type="PMID">33187964</idno>
+		<ptr target="https://doi.org/10.1136/bmjgh-2020-003719"/>
+	</analytic>
+	<monogr>
+		<title level="j">BMJ Global Health</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page">3719</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">A visual analytic study of retracted articles in scientific literature</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Milbank</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Schultz</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/asi.22755</idno>
+		<ptr target="https://doi.org/10.1002/asi.22755"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the American Society for Information Science and Technology</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="234" to="253"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">A coefficient of agreement for nominal scales</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Barbour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kleinert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Wager</surname></persName>
+		</author>
+		<idno type="DOI">10.24318/cope.2019.1.4</idno>
+		<ptr target="https://doi.org/10.24318/cope.2019.1.4"/>
+	</analytic>
+	<monogr>
+		<title level="j">Educational and Psychological Measurement</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="37" to="46"/>
+			<date type="published" when="1960">1960. 2019</date>
+		</imprint>
+	</monogr>
+	<note>Guidelines for retracting articles. Committee on Publication Ethics</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">For how long and with what relevance do genetics articles retracted due to research misconduct remain active in the scientific literature</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Dal-Ré</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ayuso</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/08989621.2020.1835479</idno>
+		<idno type="PMID">33124464</idno>
+		<ptr target="https://doi.org/10.1080/08989621.2020.1835479"/>
+	</analytic>
+	<monogr>
+		<title level="j">Accountability in Research</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="280" to="296"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Visibility of retractions: A cross-sectional one-year study</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Decullier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Huot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Samson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Maisonneuve</surname></persName>
+		</author>
+		<idno type="DOI">10.1186/1756-0500-6-238</idno>
+		<idno type="PMID">23782596</idno>
+		<ptr target="https://doi.org/10.1186/1756-0500-6-238"/>
+	</analytic>
+	<monogr>
+		<title level="j">BMC Research Notes</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">238</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Correcting the literature: Improvement trends seen in contents of retraction notices</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Decullier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Maisonneuve</surname></persName>
+		</author>
+		<idno type="DOI">10.1186/s13104-018-3576-2</idno>
+		<idno type="PMID">30016985</idno>
+		<ptr target="https://doi.org/10.1186/s13104-018-3576-2"/>
+	</analytic>
+	<monogr>
+		<title level="j">BMC Research Notes</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">490</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Content-based citation analysis: The next generation of citation analysis</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Chambers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhai</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/asi.23256</idno>
+		<ptr target="https://doi.org/10.1002/asi.23256"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Association for Information Science and Technology</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="1820" to="1833"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Systematic examination of pre-and postretraction citations</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Dinh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sarol</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y.-Y</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T.-K</forename><surname>Hsiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Parulian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schneider</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/pra2.35</idno>
+		<ptr target="https://doi.org/10.1002/pra2"/>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the Association for Information Science and Technology</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="390" to="394"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Ensemble-style self-training on citation classification</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Schäfer</surname></persName>
+		</author>
+		<ptr target="https://www.aclweb.org/anthology/I11-1070"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of 5th International Joint Conference on Natural Language Processing</title>
+		<meeting>5th International Joint Conference on Natural Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+			<biblScope unit="page" from="623" to="631"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Publication lag in biomedical journals varies due to the periodical's publishing model</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Loh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mondry</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11192-006-0148-3</idno>
+		<ptr target="https://doi.org/10.1007/s11192-006-0148-3"/>
+	</analytic>
+	<monogr>
+		<title level="j">Scientometrics</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="271" to="286"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<title level="m" type="main">Persistent citation of the only published randomised controlled trial of Omega-3 supplementation in chronic obstructive pulmonary disease six years after its retraction</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Fulton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Coates</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">R C</forename><surname>Howe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Hill</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<idno type="DOI">10.3390/publications6030035</idno>
+		<ptr target="https://doi.org/10.3390/publications6030035"/>
+	</analytic>
+	<monogr>
+		<title level="j">P u b l i c a t i o n s</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">35</biblScope>
+			<date type="published" when="2018">2018</date>
+			<publisher>Publications</publisher>
+		</imprint>
+	</monogr>
+	<note>h t t p s : / / d o i . o r g. Correction published on 27 July 2018</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Can citation indexing be automated? Statistical Association Methods for Mechanized Documentation</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Garfield</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Symposium Proceedings</title>
+		<imprint>
+			<date type="published" when="1965">1965</date>
+			<biblScope unit="volume">269</biblScope>
+			<biblScope unit="page" from="189" to="192"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">The unfortunately long life of some retracted biomedical research publications</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Hagberg</surname></persName>
+		</author>
+		<idno type="DOI">10.1152/japplphysiol.00003.2020</idno>
+		<idno type="PMID">32240014</idno>
+		<ptr target="https://doi.org/10.1152/japplphysiol.00003.2020"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Applied Physiology</title>
+		<imprint>
+			<biblScope unit="volume">128</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="1381" to="1391"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Continued citation of retracted radiation oncology literature-Do we have a problem</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Hamilton</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijrobp.2018.11.014</idno>
+		<idno type="PMID">30465848</idno>
+		<ptr target="https://doi.org/10.1016/j.ijrobp.2018.11.014"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Radiation Oncology, Biology, Physics</title>
+		<imprint>
+			<biblScope unit="volume">103</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="1036" to="1042"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Citation function, polarity and influence classification</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hernández-Alvarez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M G</forename><surname>Soriano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Martínez-Barco</surname></persName>
+		</author>
+		<idno type="DOI">10.1017/S1351324916000346</idno>
+		<ptr target="https://doi.org/10.1017/S1351324916000346"/>
+	</analytic>
+	<monogr>
+		<title level="j">Natural Language Engineering</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="561" to="588"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Dataset for "Continued use of retracted papers: Temporal trends in citations and (lack of ) awareness of retractions shown in citation contexts in biomedicine</title>
+		<author>
+			<persName><forename type="first">T.-K</forename><surname>Hsiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schneider</surname></persName>
+		</author>
+		<idno type="DOI">10.13012/B2IDB-8255619_V2</idno>
+		<ptr target="https://doi.org/10.13012/B2IDB-8255619_V2"/>
+	</analytic>
+	<monogr>
+		<title level="s">Illinois Data Bank</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+	<note>Data set</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Technology footprints in scientific discovery: Citation contexts of paper-to-patent citations</title>
+		<author>
+			<persName><forename type="first">T.-K</forename><surname>Hsiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">I</forename><surname>Torvik</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/pra2.337</idno>
+		<ptr target="https://doi.org/10.1002/pra2.337"/>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the Association for Information Science and Technology</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">337</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">T.-K</forename><surname>Hsiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">I</forename><surname>Torvik</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+	<note>manuscript in preparation. Citation context identified from PubMed Central open access articles: A resource for text mining and citation analysis</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">The NIH open citation collection: A public access, broad coverage resource</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">I</forename><surname>Hutchins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Baker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Davis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Diwersy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Haque</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Santangelo</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pbio.3000385</idno>
+		<idno type="PMID">31600197</idno>
+		<ptr target="https://doi.org/10.1371/journal.pbio.3000385"/>
+	</analytic>
+	<monogr>
+		<title level="j">PLOS Biology</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page">3000385</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<monogr>
+		<title level="m" type="main">iCite Database Snapshot 2020-08</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">I</forename><surname>Hutchins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Santangelo</surname></persName>
+		</author>
+		<idno type="DOI">10.1017/S1351324915000443</idno>
+		<ptr target="https://www.icmje.org/recommendations/"/>
+		<imprint>
+			<date type="published" when="2019">2020. 2019</date>
+			<publisher>of Medical Journal Editors</publisher>
+		</imprint>
+	</monogr>
+	<note>Data set. Recommendations for the conduct, reporting, editing, and publication of scholarly work in medical journals</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">NLP-driven citation analysis for scientometrics</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A.-A</forename><surname>Jbara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Qazvinian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Radev</surname></persName>
+		</author>
+		<idno type="DOI">10.1017/S1351324915000443</idno>
+		<ptr target="https://doi.org/10.1017/S1351324915000443"/>
+	</analytic>
+	<monogr>
+		<title level="j">Natural Language Engineering</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="93" to="130"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">How many retracted articles indexed in KoreaMed were cited 1 year after retraction notification</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">Y</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Yi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-M</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Huh</surname></persName>
+		</author>
+		<idno type="DOI">10.6087/kcse.172</idno>
+		<ptr target="https://doi.org/10.6087/kcse.172"/>
+	</analytic>
+	<monogr>
+		<title level="j">Science Editing</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="122" to="127"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">The persistence of fraud in the literature: The Darsee case</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Kochan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Budd</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/(SICI)1097-4571(199208)43:7&lt;488::AID-ASI3&gt;3.0.CO;2-7</idno>
+		<idno type="PMID">11653988</idno>
+		<ptr target="https://doi.org/10.1002/(SICI)1097-4571(199208)43:7&lt;488::AID-ASI3&gt;3.0"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the American Society for Information Science</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="488" to="493"/>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Retraction-Ileal-lymphoid-nodular hyperplasia, non-specific colitis, and pervasive developmental disorder in children</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lachance</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Larivière</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0140-6736(10)60175-4</idno>
+		<ptr target="https://doi.org/10.1016/S0140-6736(10)60175-4"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Informetrics</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page">445</biblScope>
+			<date type="published" when="2010">2014. 2010. 9713</date>
+		</imprint>
+	</monogr>
+	<note>Lancet</note>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Towards finegrained citation function classification</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Meyers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Grishman</surname></persName>
+		</author>
+		<ptr target="https://www.aclweb.org/anthology/R13-1052"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the International Conference Recent Advances in Natural Language Processing RANLP</title>
+		<meeting>the International Conference Recent Advances in Natural Language Processing RANLP</meeting>
+		<imprint>
+			<date type="published" when="2013">2013. 2013</date>
+			<biblScope unit="page" from="402" to="407"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">An analysis of retractions in neurosurgery and allied clinical and basic science specialties</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">S</forename><surname>Madhugiri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">B</forename><surname>Nagella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Uppar</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s00701-020-04615-z</idno>
+		<idno type="PMID">33064200</idno>
+		<ptr target="https://doi.org/10.1007/s00701-020-04615-z"/>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Neurochirurgica</title>
+		<imprint>
+			<biblScope unit="volume">163</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="19" to="30"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Assessing the impact of retraction on the citation of randomized controlled trial reports: An interrupted time-series analysis</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Fairhurst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Torgerson</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/1355819618797965</idno>
+		<idno type="PMID">30249142</idno>
+		<ptr target="https://doi.org/10.1177/1355819618797965"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Health Services Research &amp; Policy</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="44" to="51"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Time to first citation estimation in the presence of additional information</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Nane</surname></persName>
+		</author>
+		<ptr target="https://www.issi-society.org/proceedings/issi_2015/0249.pdf"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of ISSI 2015 Istanbul</title>
+		<meeting>ISSI 2015 Istanbul</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="249" to="260"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Analysis of citations to biomedical articles affected by scientific misconduct</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Neale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">K</forename><surname>Dailey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Abrams</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11948-009-9151-4</idno>
+		<idno type="PMID">19597966</idno>
+		<ptr target="https://doi.org/10.1007/s11948-009-9151-4"/>
+	</analytic>
+	<monogr>
+		<title level="j">Science and Engineering Ethics</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="251" to="261"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Journal retractions in oncology: A bibliometric study</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Pantziarka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Meheus</surname></persName>
+		</author>
+		<idno type="DOI">10.2217/fon-2019-0233</idno>
+		<idno type="PMID">31659916</idno>
+		<ptr target="https://doi.org/10.2217/fon-2019-0233"/>
+	</analytic>
+	<monogr>
+		<title level="j">Future Oncology</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">31</biblScope>
+			<biblScope unit="page" from="3597" to="3608"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<monogr>
+		<title level="m" type="main">Citing medicine: The NLM style guide for authors</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Patrias</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+			<publisher>National Library of Medicine (US)</publisher>
+		</imprint>
+	</monogr>
+	<note>2nd ed.</note>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">The continued use of retracted, invalid scientific literature</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Pfeifer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">L</forename><surname>Snodgrass</surname></persName>
+		</author>
+		<idno type="DOI">10.1001/jama.1990.03440100140020</idno>
+		<idno type="PMID">2406475</idno>
+		<ptr target="https://doi.org/10.1001/jama.1990.03440100140020"/>
+	</analytic>
+	<monogr>
+		<title level="j">JAMA</title>
+		<imprint>
+			<biblScope unit="volume">263</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="1420" to="1423"/>
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Disgraced COVID-19 studies are still routinely cited</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Piller</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.371.6527.331</idno>
+		<idno type="PMID">33479130</idno>
+		<ptr target="https://www.ncbi.nlm.nih.gov/pmc/tools/openftlist/"/>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">371</biblScope>
+			<biblScope unit="issue">6527</biblScope>
+			<biblScope unit="page" from="331" to="332"/>
+			<date type="published" when="2020">2021. February 26, 2020</date>
+		</imprint>
+	</monogr>
+	<note>Open Access Subset</note>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Empirical developments in retraction</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">K</forename><surname>Redman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">N</forename><surname>Yarandi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Merz</surname></persName>
+		</author>
+		<idno type="DOI">10.1136/jme.2007.023069</idno>
+		<idno type="PMID">18974415</idno>
+		<ptr target="https://retractionwatch.com/retraction-watch-database-user-guide/"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Medical Ethics</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="807" to="809"/>
+			<date type="published" when="2008">2008. 2018</date>
+		</imprint>
+	</monogr>
+	<note>Retraction Watch</note>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Citation of retracted articles in engineering: A study of the Web of Science database</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Rubbo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Pilatti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">T</forename><surname>Picinin</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/10508422.2018.1559064</idno>
+		<ptr target="https://doi.org/10.1080/10508422.2018.1559064"/>
+	</analytic>
+	<monogr>
+		<title level="j">Ethics &amp; Behavior</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="661" to="679"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Retractions and postretraction citations in the COVID-19 infodemic: Is academia spreading misinformation?</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Santos-D'amorim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">R</forename><surname>De Melo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">N M</forename><surname>Santos</surname></persName>
+		</author>
+		<idno type="DOI">10.18617/liinc.v17i1.5593</idno>
+		<ptr target="https://doi.org/10.18617/liinc.v17i1.5593"/>
+	</analytic>
+	<monogr>
+		<title level="j">Liinc Em Revista</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">5593</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Continued postretraction citation of a fraudulent clinical trial report, 11 years after it was retracted for falsifying data</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Hill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Whitehorn</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11192-020-03631-1</idno>
+		<ptr target="https://doi.org/10.1007/s11192-020-03631-1"/>
+	</analytic>
+	<monogr>
+		<title level="j">Scientometrics</title>
+		<imprint>
+			<biblScope unit="volume">125</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="2877" to="2913"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Factors associated with publication speed in general medical journals: A retrospective study of bibliometric data</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Fournier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Ragot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gorioux</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P.-H</forename><surname>Herrmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">R</forename><surname>Maisonneuve</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename></persName>
+		</author>
+		<idno type="DOI">10.1007/s11192-019-03061-8</idno>
+		<ptr target="https://doi.org/10.1007/s11192-019-03061-8"/>
+	</analytic>
+	<monogr>
+		<title level="m">Reference Check: An easy way to check the reliability of your references</title>
+		<imprint>
+			<date type="published" when="2019">2020. 2019</date>
+			<biblScope unit="volume">119</biblScope>
+			<biblScope unit="page" from="1037" to="1058"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">A multidimensional investigation of the effects of publication retraction on scholarly impact</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Shuai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rollins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Moulinier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Custis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Edmunds</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Schilder</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/asi.23826</idno>
+		<ptr target="https://doi.org/10.1002/asi.23826"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Association for Information Science and Technology</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="2225" to="2236"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Assessment of citations of the retracted article by Wakefield et al with fraudulent claims of an association between vaccination and autism</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Suelzer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Deal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Hanus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ruggeri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Sieracki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Witkowski</surname></persName>
+		</author>
+		<idno type="DOI">10.1001/jamanetworkopen.2019.15552</idno>
+		<idno type="PMID">31730183</idno>
+		<ptr target="https://doi.org/10.1001/jamanetworkopen.2019.15552"/>
+	</analytic>
+	<monogr>
+		<title level="j">JAMA Network Open</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page">1915552</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Challenges in identifying the retracted status of an article</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Suelzer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Deal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hanus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">E</forename><surname>Ruggeri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Witkowski</surname></persName>
+		</author>
+		<idno type="DOI">10.1001/jamanetworkopen.2021.15648</idno>
+		<idno type="PMID">34185072</idno>
+		<ptr target="https://doi.org/10.1001/jamanetworkopen.2021.15648"/>
+	</analytic>
+	<monogr>
+		<title level="j">JAMA Network Open</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page">2115648</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">What do citation counts measure? An updated review of studies on citations in scientific documents published between 2006 and 2018</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Tahamtan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bornmann</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11192-019-03243-4</idno>
+		<ptr target="https://doi.org/10.1007/s11192-019-03243-4"/>
+	</analytic>
+	<monogr>
+		<title level="j">Scientometrics</title>
+		<imprint>
+			<biblScope unit="volume">121</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1635" to="1684"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Automatic classification of citation function</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Teufel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Siddharthan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Tidhar</surname></persName>
+		</author>
+		<idno type="DOI">10.3115/1610075.1610091</idno>
+		<ptr target="https://doi.org/10.3115/1610075.1610091"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2006 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2006 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2006">2006</date>
+			<biblScope unit="page" from="103" to="110"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">The continued citation of retracted publications in dentistry</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Theis-Mahon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Bakker</surname></persName>
+		</author>
+		<idno type="DOI">10.5195/jmla.2020.824</idno>
+		<idno type="PMID">32843870</idno>
+		<ptr target="https://doi.org/10.5195/jmla.2020.824"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Medical Library Association</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="389" to="397"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Identifying meaningful citations</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Valenzuela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Ha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Etzioni</surname></persName>
+		</author>
+		<ptr target="https://www.aaai.org/ocs/index.php/WS/AAAIW15/paper/view/10185"/>
+	</analytic>
+	<monogr>
+		<title level="m">Workshops at the Twenty-Ninth AAAI Conference on Artificial Intelligence</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Propagation of errors in citation networks: A study involving the entire citation network of a widely cited paper published in, and later retracted from</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Van Der Vet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Nijveen</surname></persName>
+		</author>
+		<idno type="DOI">10.1186/s41073-016-0008-5</idno>
+		<idno type="PMID">29451542</idno>
+		<ptr target="https://doi.org/10.1186/s41073-016-0008-5"/>
+	</analytic>
+	<monogr>
+		<title level="j">the journal Nature. Research Integrity and Peer Review</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">3</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Retracted Covid-19 papers and the levels of "citation pollution": A preliminary analysis and directions for further research</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Van Der Walt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Willems</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Friderich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hatsu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Krauss</surname></persName>
+		</author>
+		<idno type="DOI">10.21504/RUR.13360484</idno>
+		<ptr target="https://doi.org/10.21504/RUR.13360484"/>
+	</analytic>
+	<monogr>
+		<title level="j">Cahiers de La Documentation -Bladen Voor Documentatie</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="206" to="218"/>
+			<date type="published" when="2020">2020. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Ileal-lymphoid-nodular hyperplasia, non-specific colitis, and pervasive developmental disorder in children</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Wakefield</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Murch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Anthony</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Linnell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Casson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Walker-Smith</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0140-6736(10)60175-4</idno>
+		<ptr target="https://doi.org/10.1016/S0140-6736(10)60175-4"/>
+	</analytic>
+	<monogr>
+		<title level="j">Lancet</title>
+		<imprint>
+			<biblScope unit="volume">351</biblScope>
+			<biblScope unit="page">445</biblScope>
+			<date type="published" when="1998">1998. 9103. 2010. 9713</date>
+		</imprint>
+	</monogr>
+	<note>Lancet</note>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<monogr>
+		<author>
+			<persName><forename type="first">N</forename><surname>Wright</surname></persName>
+		</author>
+		<idno>Dissertation/thesis number 9133185 ProQuest document ID 303941750</idno>
+		<ptr target="https://www.proquest.com/docview/303941750"/>
+		<title level="m">A citation context analysis of retracted scientific articles</title>
+		<imprint>
+			<publisher>Available from ProQuest Dissertations Publishing</publisher>
+			<date type="published" when="1991">1991</date>
+		</imprint>
+		<respStmt>
+			<orgName>University of Maryland at College Park</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Exploring the influence of publication retraction on citations in psychology science</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Qi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Diao</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3383583.3398583</idno>
+		<ptr target="https://www.zotero.org/blog/retracted-item-notifications/"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the ACM/ IEEE Joint Conference on Digital Libraries</title>
+		<meeting>the ACM/ IEEE Joint Conference on Digital Libraries</meeting>
+		<imprint>
+			<date type="published" when="2019">2020. 2020. 2019</date>
+			<biblScope unit="page" from="501" to="502"/>
+		</imprint>
+	</monogr>
+	<note>Retracted item notifications with Retraction Watch integration</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

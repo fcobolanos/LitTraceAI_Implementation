@@ -1,0 +1,1669 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Why do some retracted articles continue to get cited?</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Springer Science and Business Media LLC</publisher>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2024-11-04">4 November 2024</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Marion</forename><surname>Schmidt</surname></persName>
+							<email>schmidt@dzhw.eu</email>
+							<idno type="ORCID">0000-0001-6970-3714</idno>
+							<affiliation key="aff0">
+								<orgName type="department">German Center for Higher Education Research and Science Studies</orgName>
+								<orgName type="institution">DZHW</orgName>
+								<address>
+									<settlement>Berlin</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Why do some retracted articles continue to get cited?</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Scientometrics</title>
+						<title level="j" type="abbrev">Scientometrics</title>
+						<idno type="ISSN">0138-9130</idno>
+						<idno type="eISSN">1588-2861</idno>
+						<imprint>
+							<publisher>Springer Science and Business Media LLC</publisher>
+							<biblScope unit="volume">129</biblScope>
+							<biblScope unit="issue">12</biblScope>
+							<biblScope unit="page" from="7535" to="7563"/>
+							<date type="published" when="2024-11-04">4 November 2024</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">3978D0DD4936CDAD7901E2133DD06C6E</idno>
+					<idno type="DOI">10.1007/s11192-024-05147-4</idno>
+					<note type="submission">Received: 10 August 2023 / Accepted: 22 July 2024 /</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-25T13:48+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Retractions</term>
+					<term>Citation context analysis</term>
+					<term>NLP</term>
+					<term>Knowledge diffusion</term>
+					<term>Metadiscourse</term>
+					<term>Epistemic risk</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Retracted publications can still receive a substantial number of citations after the retraction. Little is known about the causes for this phenomenon and the nature of epistemic risk or harm in these retraction cases. Using this phenomenon also as an example for the broader question of how scholarly communities deal with uncertainty in the reception of publications, this case study aims to assess the epistemic contributions of retracted publications with continuous and decreasing citation impact and to relate these to the epistemic environments of the retracted papers and to reception patterns. Several parsing and natural language processing approaches are used, complemented, and validated by qualitative close reading. Specifically, (i) dissent and support are identified in citing and in cocited publications; (ii) the concept terms of retracted publications are expanded by word embeddings and MeSH terms and traced in citation contexts; and finally (iii) rhetorical functions in citation contexts are identified based on keyword extraction. Empirical support and unresolved disputes are found almost exclusively in cases with continuous citations. Authors emphasize specific informational values in some cases with citations continuing after the retraction, while methodological and more general levels of claims prevail in others. Citations can be meaningfully examined by considering the weighing process between epistemic risks and informational value; persistent citation impact thus doesn't necessarily indicate the perpetuation of epistemic harm.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p>Retractions of scientific publications are often used as indicator of misconduct and sloppy science. Although the number of retractions has increased over the years, their share on the publication body is still quite small. According to COPE <ref type="bibr">(COPE Council, 2019)</ref>, retractions should be made due to data fabrication, data falsification, duplication, plagiarism, honest error, and ethical problems. COPE emphasizes the correction of the knowledge base and the creation of transparency as main function of retractions. A common assumption is that citations should decrease after the retraction. But some papers continue to be cited even after being retracted (cf. Fig. <ref type="figure">1</ref>). It has been suggested that erroneous information can persist in scientific discourse for years (e.g. <ref type="bibr" target="#b21">Houghton, 2022;</ref><ref type="bibr" target="#b59">Yarborough et al., 2019;</ref><ref type="bibr">Harris, 2018, p. 185)</ref>. This is generally seen as a problem and as a symptom of failures in science communication. Especially publications that are retracted for falsification, fabrication or honest error-which are main reasons (see <ref type="bibr" target="#b19">Hesselmann et al., 2017</ref> for an overview)-are believed to hinder and even disrupt science in its core function of knowledge production. The phenomenon seems to become even more puzzling when it comes to postretraction citations and in view of the fact that retractions generally enjoy a high level of support within the scientific community <ref type="bibr" target="#b20">(Hesselmann &amp; Reinhart, 2021)</ref>. Understanding the causes and dynamics of post-retraction citations is thus essential in gauging the extent of epistemic damage.</p><p>Early research <ref type="bibr" target="#b13">(Furman et al., 2012;</ref><ref type="bibr" target="#b31">Lu et al., 2013)</ref> claims that retractions result in substantial citation losses compared to control papers, although the estimates vary: <ref type="bibr" target="#b13">Furman et al. (2012)</ref> estimate 65%, <ref type="bibr" target="#b31">Lu et al. (2013)</ref> 82% after self-reported and 87% after nonself reported retractions. <ref type="bibr" target="#b49">Shuai et al. (2017)</ref> also claim that the citation impact of papers decreases after retraction. In a study focusing on retracted publications that are based on randomized controlled trials, <ref type="bibr" target="#b36">Mott et al. (2019)</ref> estimate that citations decrease by 23% in relation to matched control papers in the first months after retraction. Studies have shed light on various factors influencing post-retraction citations, ranging from the retraction reasons <ref type="bibr" target="#b42">(Redman et al., 2008;</ref><ref type="bibr" target="#b54">Steen, 2011)</ref>, author self-citations <ref type="bibr" target="#b32">(Madlock-Brown &amp; Eichmann, 2015)</ref> to the reputation of the retracted publications <ref type="bibr" target="#b32">(Madlock-Brown &amp; Eichmann, 2015;</ref><ref type="bibr" target="#b52">Sotudeh et al., 2022)</ref>. Madlock-Brown and Eichmann find positive, but small correlations between post-retraction citations and both self-citations and the JIF, and <ref type="bibr" target="#b52">Sotudeh et al. (2022)</ref> claim that the journals' reputation (before retraction) is a strong factor in Fig. <ref type="figure">1</ref> Citation distributions of retracted articles (N = 198, pre-and post-retraction citations &gt; 10 and retracted because of falsification, fabrication or honest error) up to the year 2017. Yearly citation counts are given with retraction year (x = 0) as baseline (e.g., when a publication is retracted five years after publication, a citation is mapped at -2 after three years after publication). Publications that are included in the final sample are marked in blue and solid lines (continuing citations after retraction), red and dot-dashed lines (retraction stifles citations), all others in grey and dashed lines predicting citations. <ref type="bibr" target="#b4">Bornemann-Cimenti et al. (2016)</ref> observe a decrease in citations from articles in top journals and an increase from articles outside the initial research field in a case study.</p><p>The body of literature focusing on the epistemic damage caused by retracted publications is still quite small and not conclusive; various operationalizations have been proposed: <ref type="bibr" target="#b37">Neale et al. (2010)</ref> content-analyze citations to retracted biomedical papers. In a qualitative sub-study for four publications there was little evidence for impact on clinical care. However, <ref type="bibr" target="#b54">Steen (2011)</ref> finds that patients would be exposed to risk. His analysis is based on an estimate of subjects included and patients treated in retracted clinical trials and secondary studies citing them. <ref type="bibr" target="#b55">Stern et al. (2014)</ref> assess funding lost due to retracted publications (RP). <ref type="bibr" target="#b1">Azoulay et al. (2012)</ref> report citation declines of related publications and activity declines in subfields affected by retractions, whereas <ref type="bibr" target="#b49">Shuai et al. (2017)</ref> find that retractions have limited and localized effects on the citation impact of related articles or wider topics. <ref type="bibr" target="#b33">Malkov et al., (2023)</ref> investigate citations to retraction publications in policy literature. Taking a similar perspective, <ref type="bibr" target="#b28">Kataoka et al. (2022)</ref> analyze citations to retracted Randomized Controlled Trials in Systematic Reviews (SR) and Clinical Practical Guidelines (CPG) and find that although there are mentions of the retraction, corrections are almost never made to the cited SRs and CPGs. However, possible updates of SRs were not considered. <ref type="bibr" target="#b12">Fanelli et al. (2022)</ref> assess the effect of 27 retracted papers included in 31 meta-studies and find that retracted studies with data problems overestimate effect sizes, but do not affect the overall results of the meta-studies. <ref type="bibr" target="#b17">Heibi and Peroni (2021)</ref> analyze the content of the citing response to a high-profile retracted paper that falsely claims a link between MMR vaccination and autism (by Wakefield) using topic models and find that this article is increasingly cited in meta-science/science-policy contexts as opposed to its own field. <ref type="bibr" target="#b46">Schneider et al. (2020)</ref> also analyze second-generation citations in a case study of one retracted publication and also check the accessibility of the retraction notice in various databases. Only 4% of directly citing publications mention the retraction. Focusing on the potential stigma associated with retractions, <ref type="bibr" target="#b49">Shuai et al. (2017)</ref> and <ref type="bibr" target="#b35">Mongeon and Larivière (2016)</ref> find that the citation impact of first and co-authors decreases after the retraction, and <ref type="bibr" target="#b24">Hussinger and Pellens (2019)</ref> add, based on a sample of Office of Research Integrity (ORI) findings, that this even extends to prior collaborators not-involved in the misconduct case.</p><p>In order to explore how retracted publications are cited, citations are often studied with small, qualitatively oriented content analyses. The majority of these studies (see <ref type="bibr" target="#b22">Hsiao &amp; Schneider, 2021</ref> for an overview) arrive at relatively low proportions of citations acknowledging the retraction. For example, <ref type="bibr" target="#b5">Budd et al. (1999)</ref> and <ref type="bibr" target="#b37">Neale et al. (2010)</ref> find between 3 and 8% acknowledge the retraction. According to <ref type="bibr" target="#b37">Neale et al. (2010)</ref>, one-third refer to unaffected parts of the article, such as methods and literature sections, and acknowledgment of retractions may increase in specific cases, such as in case of findings by ORI. More recent studies by <ref type="bibr" target="#b3">Bolboacă et al. (2019)</ref> and <ref type="bibr" target="#b2">Bar-Ilan and Halevi (2017)</ref> find around 5% negative citations and less than 2% that explicitly mention the retraction. The latter also suggest that ongoing media attention and public debate around key claims may influence the impact of retracted articles with many post-retraction citations. In a recent study on two retracted papers on Covid, one of them involving a highly publicized claim about an antimalarial drug for Covid, significantly higher acknowledgement rates can be observed (48%, <ref type="bibr" target="#b39">Piller, 2021)</ref>. Besides, another study analyzing the Wakefield paper arrives at 72% citing papers acknowledging the retraction <ref type="bibr" target="#b57">(Suelzer et al., 2019)</ref>.</p><p>To sum up, operationalizing and measuring the epistemic contributions of retracted publications and their traces in scientific discourse pose ongoing challenges. Questions of epistemic damage or consequences were often, if not exclusively, addressed with indirect operationalizations such as the amount of funding or the citation dynamics in sub-areas. Content analytical approaches are mostly restricted to the coding of retraction acknowledgement, with the exception of <ref type="bibr" target="#b22">Hsiao and Schneider (2021)</ref>, who focus on citation purposes.</p><p>This study aims to investigate the factors contributing to the sometimes-persistent citation impact of selected publications retracted due to falsification, fabrication, and error in an explorative manner. The guiding theoretical concept of this work is epistemic risk mitigation, a research strand from social epistemology that draws on the concept of inductive risk originally introduced by philosopher of science Carl <ref type="bibr">Hempel (i.e. Hempel, 1960)</ref>. Inductive risk is defined as the risk of "endorsing a 'fact' whose objective truth value is false" <ref type="bibr" target="#b16">(Harvard &amp; Winsberg, 2021)</ref>. Contemporary approaches extend the concept to nonepistemic risks, e.g. societal consequences of applications of scientific knowledge <ref type="bibr" target="#b7">(Contessa, 2021;</ref><ref type="bibr" target="#b10">Douglas, 2000)</ref>, and also address strategies to mitigate such risks, both at the individual and socialized level <ref type="bibr" target="#b7">(Contessa, 2021;</ref><ref type="bibr" target="#b16">Harvard &amp; Winsberg, 2021)</ref>. An example of a non-epistemic risk is given by Contessa in the hypothesis that glyphosate causes cancer. One form of socialized risk mitigation would be, for example, the definition of epistemic standards by a scientific community. <ref type="bibr" target="#b38">Parascandola (2010)</ref> argues that some degree of risk (or Type I error) is inherent in scientific practice and should be weighed against potential gains, i.e. the informational value or the avoidance of Type II errors. Against this background, both the retraction itself and the reactions of the citing communities can be understood as risk mitigation: By authors, publishers or committees (the retraction) and by citing authors (the much less structured process of individual endorsing or contradicting claims of retracted articles or letting them become obsolete). This theory draws our attention to the question of whether there are factors that reduce the risk or whether certain information values are involved.</p><p>The empirical analysis operationalizes this in three main questions:</p><p>(1) How are RPs' knowledge claims situated in research strands? Are RPs located in dense networks? Is there empirical support or opposition for their claims? Are there changes over time? These questions are dealt with the 'Network Approach' of the first result segment.</p><p>(2) Which knowledge claims of the RPs are the focus of the citations and which not? This is analyzed by way of 'Concept Term Frequencies' in the second result segment. (3) How do the citing authors describe the claims of the RPs? Do the papers that cite the RPs refer to the retraction or express skepticism (or concern or hesitation)? Are there recurring patterns or narratives through which knowledge claims or associated discourses are presented and interpreted in specific ways? These questions are addressed in the third result section ('Metadiscourse').</p><p>The first two main questions deal with a more detailed analysis of epistemic risk, whereas the third explores how the citing authors deal with it and whether there are informational values or incentives. The aim of this work is also to propose methodological approaches for studying uncertainty in scientific communication. This case study combines computational distant reading approaches and a qualitative close reading strategy for an explanation of quantitative citation dynamics: While qualitative analysis of text segments is important to validate and enrich interpretations, the focus is on developing exploratory computational approaches and conceptual perspectives specific to the questions.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Material and methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data and sampling strategy</head><p>This study is based on a corpus of retracted publications (RP) which are linked to retraction notices (RoP). Both retraction notices and RP are published between 1980 and 2013 and indexed in WoS or PubMed <ref type="bibr" target="#b45">(Schmidt, 2018)</ref>. This corpus consists of 3149 retracted publications, for which correct links to retraction notices within Web of Science and this timeframe have been established.<ref type="foot" target="#foot_0">foot_0</ref> Pre-retraction citations include all citing papers published up to the year before the retraction and post-retraction citations include all citing papers published after the year of retraction plus one to account for possible publication delays. This corpus' post-retraction citations reach the size of 30.079 up to the year 2017, and the total number of citations is 89.056 up to 2017. The corpus has a skewed citation distribution and is heterogeneous in terms of reasons for retraction (based on a manual coding of retraction notices), time to retraction, self-citations, and disciplines. Medicine-related subject categories dominate. The final sample of cases is the result of several steps based on the following criteria: (I) Reason for the retraction in order to focus on epistemically risky cases (falsification, fabrication, honest error); a threshold of at least 20 post-and pre-retraction citations in order to pick comparatively more substantial or eminent cases; (II) and as main dimension the distinction between cases in which the citation counts drop massively after retraction and those in which the retraction does not seem to have a strong impact (see the Supplementary Information (1), in the following SI (1), for methodical details). Twelve retracted publications have been sampled, six representing each side of the main dimension. High-profile cases were to be left out because previous research suggests that they are often cited in a meta-science rather than the initial subject context.</p><p>Figure <ref type="figure">1</ref> displays yearly citation counts for all publications that were retracted for fabrication, falsification, and honest error (i.e., failure to reproduce and other data problems), and that received more than 10 pre-and post-retraction citations, i.e. the figure corresponds to step I, but uses a less strict threshold than the final sample strategy. The figure shows that for most papers, citations decline after the retraction (year of retraction is the zero point on the x axis). For some papers that were initially highly cited, this decline is particularly steep. However, there are several, but not many highly cited retracted publications that continue to get cited after retraction. These are arguably the most important for the question of epistemic damage as they have the potential to shape subsequent knowledge building.</p><p>All RPs' citation trails may contain some degree of noise, but the observed patterns suggest more specific factors at play. To capture these (unknown) factors, a contrastive-purposive sampling strategy <ref type="bibr" target="#b58">(Teddlie &amp; Yu, 2008)</ref> was used, i.e. the sampling step II is based on the contrast in the data observable in Fig. <ref type="figure">1</ref>, a common strategy especially in qualitative approaches. The bifurcation between relative continuity 2 and decrease of citations after the retraction is the basis of the two final sampled groups, shown comparatively in Fig. <ref type="figure" target="#fig_0">2</ref>. For further comparison, a similar graph based on the RPs' related publications' citations (c.f. Fig. <ref type="figure">S1</ref> in the SI (1)) displays more balanced distributions and no steep declines.</p><p>The contrastive-purposive sampling strategy thus focuses strongly on cases that have a substantial impact and where the question of epistemic damage is particularly virulent. Results cannot therefore simply be transferred to less cited cases, which, however, also contribute less to the phenomenon.</p><p>The sampling of retracted publications is complemented by a stratified random sampling of post-retraction citations, using publication years as strata (step IV). 25% of postretraction citations (but a minimum of 20 citations) and the same number of pre-retraction citations were selected, leading to a total of 685 citing publications and approximately 950 citation contexts (as some citing publications reference the same article multiple times). Some cases were omitted due to unavailability of full text or e.g., non-English text, and therefore the final pre-and post-retraction samples do not always correspond exactly but approximately to the intended 25%. Tables <ref type="table" target="#tab_0">1</ref> and<ref type="table" target="#tab_1">2</ref> provide an overview of all steps in the sampling process and of the cases in the final sample. More details on all methods can be found in the SI (1).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods</head><p>Three main methods are used in this paper, which are briefly described here and in more detail in SI (1). The triangulation of methods to make the results more robust is particularly important in exploratory research. The first main approach delimits publications closely related to the RP (hereinafter referred to as epistemic environments). By identifying and visualizing relations to similar publications for each RP, as in an egocentric network analysis, the aim is to determine whether the RP is located in a dense network and to what extent the RP's claims are supported or opposed by other publications. To identify closely related publications, co-citation is operationalized in three ways: (i) the standard co-citation method using Salton's cosine to obtain a normalized co-citation strength, where cocitation is operationalized at the publication level, (ii) the number of times another publication is cited together with the RP in a list of references in the text, i.e. co-citation is operationalized on a sub-sentence level. (iii) Based on a semi-automatic, exploratory coding of positive and negative stance in citation contexts, references are extracted from the citing publications that are mentioned as supporting or conflicting with (or ambiguous on)  the retracted article. <ref type="foot" target="#foot_2">3</ref> This operationalization of co-citation is on a semantic level. Thus, the epistemic environment is heuristically formed by publications related to the RP in ways i-iii, applying thresholds for approach i and ii.</p><p>The second main approach focuses on the propositional level. The core claims of the RPs are represented based on an extraction of noun phrases from the RP's abstracts, abstracts of frequently co-cited publications, and, when informative, the retraction notices. Extraction of noun phrases is done with SpaCy's dependency parsing. This vocabulary is expanded using word embeddings (FastText and Word2Vec, based on Python/Gensim) and the MeSH thesaurus to compensate for the fact that claims may be described with terminological variability. Noun phrases are analogously extracted from the citation contexts and are matched in an error-tolerant way to this expanded vocabulary. The resulting terms and phrases are then unified based on heuristic rules and manual inspection. The result is a representation of the epistemically relevant concept terms <ref type="bibr" target="#b50">(Small, 1978)</ref> in citation contexts, i.e. only words and phrases corresponding to the specified input vocabulary are visualized in Fig. <ref type="figure" target="#fig_4">5</ref>. <ref type="foot" target="#foot_3">4</ref>Thirdly, we look for metadiscourse. Metadiscourse can be roughly described as a commentary textual layer related to propositional claims with the aim to guide the reader "through a text so both the text and the writer's stance is understood" <ref type="bibr" target="#b26">(Hyland, 2005)</ref>. Hyland (2017) describes it as the way "[…] writers project themselves into their discourse to signal their understandings of the material". It is analyzed whether the retraction is mentioned (or cited). Furthermore, the parsing approach used for the third type of co-citation analysis has been slightly modified to retrieve direct or subtle mentions of opposition, skepticism, or uncertainty. Another approach, based on keyword extraction, is used to identify typical rhetorical patterns or narratives used by citing authors when discussing the RP's claims, which aim to move the audience towards a particular understanding. For this purpose, citation contexts have undergone keyword extraction (with the tool Wordsmith), a procedure commonly utilized in corpus linguistics. This method identifies terms that occur unusually often in relation to the disciplinary vocabulary and writing style. For this purpose, term frequencies within the analysis corpus are compared to those of larger reference corpora, while taking into account the respective sizes of the corpora. The procedure is based on three statistical tests and terms get accepted if they pass all three tests. Subsequently, candidate keywords have been filtered with several linguistic resources (the subjectivity lexicon of the data suite MPQA,<ref type="foot" target="#foot_4">foot_4</ref> the dictionary FrameNet,<ref type="foot" target="#foot_5">foot_5</ref> discourse verbs based on <ref type="bibr" target="#b25">Hyland (2002)</ref>) to select keywords with cognitive, emotional or discursive content. Table <ref type="table">3</ref> summarizes the used approaches. All approaches are validated and enriched by a qualitative, close reading. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head><p>The presentation of the results follows the structure introduced above.  resulting from the three operationalizations of co-citation, with the different categories arranged horizontally. The publications that have been retrieved based on the parsing and coding of stance in citation contexts are categorized as 'Conflicting', 'Ambiguous' or 'Supporting'. 'Highly co-cited' refers to publications that were found based on their Salton-normalized co-citation strength and 'Orientating reference list (ORL)' refers to publications that were co-cited with the RP several times in list form in citation contexts. A precedence rule 'stance before reference list before normalized co-citation strength' is applied, so that in case of overlapping codes the more important one is chosen, i.e., a related publication that is coded as supporting and is highly co-cited occurs as supporting in the figure (while the strength of the co-citation with the RP can still be read from the y-axis). Publications that are co-cited in lists and highly co-cited are coded as 'ORL'. Each related publication is presented as a horizontal sequence of its annual citation counts.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Network approach: retracted publications' close epistemic environments</head><p>The citation dynamics of these publications are shown over time (x-axis) and in magnitude (the number of yearly citations is symbolized by the size of the bubble). Since the annual citation dynamics are again normalized to the year of retraction of the respective RP, all related publications can be represented by the same time scale on the x-axis, with a dashed vertical line for the respective year of retraction. Figure <ref type="figure" target="#fig_1">3</ref> shows that the first group of RPs generally have more related publications, and, apart from one case, Pushparaj, more explicit discussion. Of course, this could also follow from this group of RPs having a substantial number of post-retraction citations. Related publications often continue to accrue citations over a longer period, indicating an on-going discourse. Some of the conflicting, ambiguous, or supporting publications show rather low co-citation values which means this evidence is not uniformly distributed over the discourse or not relevant to all who cite the RP. <ref type="foot" target="#foot_6">7</ref>Several publications related to Reyes are very highly cited, some of them stemming from the same research group (marked with red color and crosses instead of circles). The retracted publication is thus situated in a high-profile research line. The picture is different in the second group RPs (Fig. <ref type="figure" target="#fig_3">4</ref>), with conflicting evidence in two cases <ref type="bibr">(Haug and Huang)</ref>, and only three instances of support for the six articles together. The claims in these cases appear much less discussed.</p><p>Can the quantitatively observed patterns be qualitatively substantiated? Those citation contexts whose semantic stance led to the annotation of related publications depicted in Figs. <ref type="figure" target="#fig_2">3</ref> and<ref type="figure" target="#fig_3">4</ref> as supporting, conflicting or ambiguous now serve as a foundation for a close reading of the way claims are discussed over time. It is of particular interest what kinds of resources-arguments, replications of findings and the like-are used by citing authors to support or challenge the RP, or whether a community consensus of refuting (or accepting the claim) develops.</p><p>The article by <ref type="bibr" target="#b6">Cho et al. (1998)</ref>, asserts a correlation between stimulation of specific acupoints and activation of specific cortical areas (later termed as acupoint specificity). It was retracted due to the authors' inability to reproduce their findings, the retraction leaves ambiguity about the validity of the claim. Upon close reading, some pre-retraction citation contexts reference other publications that have "similar" effects or activation patterns than the Cho paper with either needle or laser stimulation and different acupoints (citation contents A1-0, A2-0, A28-0, A27-0<ref type="foot" target="#foot_7">foot_7</ref> ), A27-0 mentions "reduplication by others" as support, but also doubt. A post-retraction citation (A15-1) refers to a "common" understanding that vision-related acupoints were represented in the occipital lobes (consistent with the article and not consistent with the retraction), but also mentions "divergent conclusions". After the retraction, studies emerge that are unable to replicate findings (A29-1, A16-1). Two publications (A24-0, A1-0) occur both as supporting the claim and as evidence for replication problems (by A19-1). Core claims thus get challenged over time, but uncertainty remains.</p><p>Conflicting evidence and substantial support occur in the case of <ref type="bibr" target="#b34">Makarova et al., 2001</ref>. The original publication claims ferromagnetism of carbon (C60) at room temperature and attributes this observation to intrinsic defects of the material. The retraction attributes it to contamination but acknowledges conflicting evidence. Two of the RP 's authors declined to sign the retraction with reference to supporting studies. Before the retraction, the claim is stated as being "in agreement", "confirmed", or having been "reproduced by other groups" (E2-0, E3-0, E6-0, similar E22-0, E23-0, support is often described more implicitly in other cases), whereby this empirical confirming evidence comes partly from (not-retracted papers of partly) the same authors and is partly independent. A debate on the origin of ferromagnetism can be observed before the retraction (e.g. E4-0, E20-0), but is more pronounced after the retraction. The original claim of intrinsic defects is picked up by some citing publications, several times defects and contamination are mentioned together. Notably, citing authors state that the subject is still "a matter of debate" (E9-1, E13-1, E25-1, E26-1). Several post-retraction citation contexts show the complexity of the case: It is stated that "the ferromagnetic signal could not be completely attributed to the magnetic impurity", i.e. contamination (E16-1, similarly E9-1). Citing authors discuss theoretical predictions (E1-0, E14-0, E13-1, E15-1, E24-1) and further experimental work (E24-1) pointing to or contradicting the assumption of defects as cause (E11-1).</p><p>The case of <ref type="bibr" target="#b44">Rubio et al. (2005)</ref> is like the Makarova case insofar as an explicit debate and evidence of at least temporary inconclusiveness can be observed. The paper claims that human mesenchymal stem cells (hMSCs) have the potential to a tumorigenic transformation when in long-term in-vitro culture. The retraction-which was not signed by all authors-states that transformation events failed to reproduce, and it suspects cross-contamination. The initial claim is reported to be in line with several other empirical reports of tumorigenicity in MSC (see K22-0, K26-0, K18-1, K1-1, K23-0 for supporting contexts). A temporal model of transformation is suggested (same author group), however, already challenged in another publication (K2-1). Nearly from the start, citation contexts document a controversial study situation (e.g., K19-0, K28-0, K20-0, K4-0, K5-0). In the post-retraction phase, most describe a mixed state of research. In a few cases the Rubio publication is mentioned alongside two or four papers of which another was also retracted (e.g., K24-1, K21-1, K25-1, labeled as 'ambiguous' in Fig. <ref type="figure" target="#fig_1">3</ref>). A reconciliation of the conflicting evidence can be seen in comments on the infrequency of the event (K11-1 and K5-0) and safe maintenance mechanisms (K9-1, K7-0). Similarly, citing authors discuss whether the tissue of MSC origin makes a difference (K5-1, K19-0).</p><p>In the case of <ref type="bibr" target="#b40">Poehlman et al. (1995)</ref>, whose article linking the natural menopause to various physiological changes was retracted because of "false and falsified" data, empirical agreement is reported in several cases (F2-0, F6-0, F12-0, F14-1, F5-1, F8-1, F9-1). Conflicting evidence starts to occur before the retraction, some citing authors discuss methodical issues (F1-0, F3-0, F10-0). The debate centers on whether the changes are predominantly menopause-related or related to age (F2-0, F6-0, F10-0, F13-1), physical activity (F3-0, F10-0) or psychological factors (F4-1). As in the other previous cases, there is no indication that the debate has been unequivocally resolved within the analyzed time frame. <ref type="bibr" target="#b41">Pushparaj et al. (2009)</ref> claim that the cytokine interleukin-33 (IL-33) triggers anaphylactic shock. It has been retracted due to duplicated figures. A citing publication (G6-1) locates the retracted claim among several others on related allergic diseases. Apart from one other citing publication reporting empirical consistency (G5-0), others claim uncertainties and inconsistent findings regarding the exact mechanism (G7-0, G8-1).</p><p>The article of <ref type="bibr" target="#b43">Reyes et al. (2001)</ref>, retracted due to figure duplications, claims that mesenchymal stem cells differentiate into various cells, specifically cells of visceral mesoderm (endothelial cells). One "partially consistent" methodical citation (H4-1) can be observed, an earlier methodical citation is negative (H6-0). In a pre-retraction citing publication (H2-0), several publications are discussed that also report on cells differentiating to endothelial cells, 9 but both the citing and the co-cited publications were co-authored by the head of the RP's author group. In another citation context, differentiation capacity is discussed in a more general sense, referring to many types of cells (H1-0, similarly H3-0). The close reading in this case therefore shows that the specific empirical claim is neither particularly supported nor strongly contested.</p><p>In the case of <ref type="bibr" target="#b23">Huang et al. (2005)</ref>, a publication from the second group, retracted for data falsification, which claims that the Arabidopsis gene FT mRNA induces flowering, one publication is cited in agreement with the claim (D1-1), but citations in the post-retraction period consider the central claim of Huang et al. to be refuted by subsequent experiments (also D1-1, D4-1, and D2-1) or consider it an artefact (D3-1). This relatively clear resolution of the dispute (in D2-1 it is stated that the opposing claim has been experimentally proven) contrasts with the unresolved disputes of the first sample group. Moreover, there are hardly any explicit comments on the other papers in the second sample group.</p><p>Taken together, evidence of wider discourses on the key claims and of (partly independent) empirical support for these claims mainly occurs in four of the six cases of the first group. There are ongoing explicit debates on key claims in the cases of Makarova and Rubio, while the cases of Cho and Poehlman are somewhat less discursive-but competing claims are still discussed in the post-retraction phase. These RPs are to some extent part of regular controversial discourses since their claims are for a certain period underdetermined by existing empirical evidence, that is empirical evidence is at that time not sufficient or unambiguous enough to decide whether a claim is correct or not <ref type="bibr" target="#b53">(Stanford, 2023)</ref>. From our epistemic risk mitigation framework, we can deduce that supporting or equivocal evidence reduces risk as claims are in fact based on several, not only one problematic publication. Nevertheless, it is possible that the claims are actually false. In the third section, we will delve into whether the RPs' informational values contribute to their enduring presence in discourse. The second section further examines what knowledge claims are actually cited and their relation to risk.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Concept term frequencies: which knowledge claims are actually referred to?</head><p>In the following, it is analyzed how concept terms (see <ref type="bibr" target="#b50">Small, 1978)</ref> from the RPs, derived from the language used around the respective in-text citations, are covered by citation discourses.</p><p>Figure <ref type="figure" target="#fig_4">5</ref> displays the normalized frequencies of the 15 most frequent words and phrases in citation contexts of the first group of retracted papers. 10 For each term, the number of unique citing publications in which it appears is counted and shown as percentage in the figure . Since the retractions especially concern empirical findings, core empirical claims are highlighted with stripes.</p><p>The Cho case is noteworthy in that the mainly methodical fMRI claim 11 ranks relatively high, next to general terms. The main empirical claim is named as 'acupoint specificity' in the retraction. In the publication's abstract, it is described as a correlation between 9 Differentiation into visceral mesoderm (endothelial cells) is emphasized as new finding in the abstract. 10 see SI (1) for the respective graphs of the second sample group. 11 also "functional magnetic resonance imaging", "MRI" or "functional MRI", "imaging" alone or, in a few cases, other imaging techniques.</p><p>acupoint stimulation and brain activation.<ref type="foot" target="#foot_8">foot_8</ref> Different terms and phrases are used to refer to this (terminologically still uncodified) concept, but the close reading suggests that when terms "specific..", "corresponding ", and "correlation "occur, they refer to the central concept of acupuncture specificity. <ref type="foot" target="#foot_9">13</ref> However, the latter two are not used frequently enough to be included in the 15 most frequent terms. Only 7 or 26% of the sampled post-retraction citing publications (a little more than the post-retraction bar on "specific/specificity") use any of these expressions (specific.., corresponding, correlation), compared to 46% in the pre-retraction period. An examination of the rest of the post-retraction citations shows that some refer to the concept in a less explicit, paraphrasing way, e.g. "vision-related acupoints activate (…) vision-related areas "(A5-1, A12-1, A9-1, A4-1, A17-1), "local effects on brain function " (A13-1, similar A20-1, A11-1). Citing authors also refer to side or more general aspects of the claim: brain activity signals, effectiveness compared to non-acupoints or sham acupuncture, and involvement of the central nervous system (A6-1, A10-1, A22-1, A23-1).</p><p>In contrast, 48% of post-retraction citing articles mention any kind of imaging; in some case the focus on this topic is nearly exclusive (A8-1, A7-1, A14-1, A3-1). The sentence "existence of acupoints and meridians has been evidenced by <ref type="bibr">[…]</ref> brain activity signals " (A18-1) highlights a specific role of the methodological claim: Imaging techniques are a method, but in this case also imply a factual knowledge claim insofar imaging effects are prove of measurable physiological effects of acupuncture at all. Something similar can be observed in the Reyes case. The main empirical result is the differentiation of mesenchymal stem cells (termed as MPCs) into cells of limb-bud mesoderm and, specifically visceral mesoderm (endothelial cells). The various cell types the MPCs differentiate into are mentioned comparatively rarely in the citation contexts, and moreover less frequently over time. Endothelial cells or visceral mesoderm are explicitly mentioned in 14 from 42 (33%) sampled pre-retraction citing articles, but only in two postretraction articles. A similar but weaker tendency can be observed for the concept MPCs/ MAPCs. While the designation MPC (mesodermal progenitor cells) has been coined by the research group, citing publications mostly refer to MAPC (multipotent adult progenitor cells) when discussing the retracted publication (e.g. H5-1). While 33% of pre-retraction citing publications refer to MAPCs, only 15% of post-retraction publications do.</p><p>The majority of post-retraction citations that do not mention endothelial cells, visceral mesoderm, or MPCs/MAPCs are methodological, referring to protocols and resources for expansion and differentiation of mesenchymal stem cells, rather than the more specific MPC/MAPC. Some claims refer to surface markers (CD44 and others, unified to "CD"), and particularly the differentiation ability. The factual claims thus recede after the retraction.</p><p>The Pushparaj paper claims a link between IL-33 and anaphylactic shock. In addition to those mentioned in the abstract, several other disease/symptom complexes occur ('allergic', 'rheumatoid arthritis', 'asthma'), which could indicate that there might be a wider claim regarding IL-33 and auto-immune diseases.</p><p>Summing up, in at least two cases of the first group, the specific main empirical claims recede, while methodological claims and more generalized takes on the empirical claims play a substantial role. However, in both cases that were analyzed in more detail it can be seen that the methodological claims support the empirical ones but can also be used or referred to on other, i.e., more generalized levels. Furthermore, they have not been explicitly targeted in the retractions. In this sense, they very probably involve less risk than the empirical core claims, while having informational value (the MRI has been praised as </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Metadiscourse: how do the citing authors express stance and their understanding of knowledge claims?</head><p>The findings so far suggest that the epistemic risk of continuous citation impact is actually more nuanced than it appears in the binary decision to retract, in part because there is some empirical support for the original claims or because of the characteristics of the claims taken up. According to the epistemic risk mitigation framework, risks are or could be weighed against incentives in practice. The follow-up question must therefore be whether the citing authors have further reasons or incentives to continue discussing disputed or incriminated claims. Since this question concerns the interests, expectations, and the like of the citing authors rather than the manifest content of the cited and citing publications, the focus is now on how citing authors describe claims.</p><p>Figure <ref type="figure">6</ref> maps the acknowledgement of the retraction and any occurrences of negative or skeptical citations before and after the retraction. The figure is limited to the cases of Rubio and Makarova, as they exhibit the most notable negative citation patterns. It shows on the second axis the proportion of publications in which the retraction is mentioned either in citation contexts or listed in the reference list.</p><p>Results from an algorithmic, cue terms-based search for negative or skeptical expressions are plotted on the third axis. They have been separated manually into the two Fig. <ref type="figure">6</ref> The alluvial plot the relationship between skeptical expressions, mentions of contamination issues, and whether the retraction is mentioned in the text or at least referenced categories 'skepticism' and 'contamination' to represent a semantic difference that becomes visible in the occurrence patterns and close reading: As contamination is the main reason for the retraction in both cases, the mention of contamination problems seems to be more associated with the latter, whereas statements in the citation contexts annotated with 'skepticism' seem more subtle or vague.</p><p>The figure indicates that mentions and citations of the retraction are relatively scarce. However, about 20% <ref type="bibr">(Makarova)</ref> and 24% <ref type="bibr">(Rubio)</ref> of the citing papers show patterns of a skeptical discourse or mention contamination issues. These are in parts independent of mentioning or citing the retraction.   <ref type="foot" target="#foot_10">14</ref> It is sorted by cases and the BIC score as the Wordsmith procedure's main indicator for keyness. A BIC score of more than 10 is suggested to be indicative of a "very strong" keyness. <ref type="foot" target="#foot_11">15</ref> The right-hand column documents the linguistic resource to which a term had been mapped to in order to be included: "Discourse verb" has been categorized as such following the category system of reporting verbs by <ref type="bibr" target="#b25">Hyland (2002)</ref>, "Frame" results from a selection of frames with cognitive, emotional or discoursal character from FrameNet. "Polarity" refers to the Subjectivity Lexicon of MPQA.</p><p>The used procedure does not provide stemming. Therefore, in a second step, absolute numbers were calculated for pre/post-retraction segments separately based on word stems or truncations where appropriate (first to fourth row). The variable row to the left gives these modified words with "*", and the original keywords that have resulted from the procedure in brackets. Since the relatively small sample sizes makes the procedure sensitive to small changes and the filtering is exploratory, figures should be read with caution. <ref type="foot" target="#foot_12">16</ref>Based on the Wordsmith software's Concordancer tool, providing the immediate context of a keyword, a couple of co-occurrence patterns between keywords can be discerned: In the case of Makarova, in 9 of 12 post-retraction contexts terms beginning with "attract*" (first line of Table <ref type="table" target="#tab_3">4</ref>) co-occur with "attention" or "interest" (citation contexts E8-1, E10-1, E14-1, E17-1 till E22-1). These sentences state that carbon-based magnetism would attract (considerable) interest or attention. The term 'recently' ([recent], fifth line) was chosen, although it was not mapped to any of the selected linguistic resources, because it appears remarkedly often and in combination with reporting verbs such as "found" "discovered", "reported", "obtained'. It is likely that "recent(ly)", apart from "discovery", highlights the novelty of the finding. While it is not always straightforward to interpret changes between the pre-and post-retraction segment, both "recent(ly)" and "discover(y)" occur less frequently in the post-retraction segment which is plausible as more time has passed in the meantime. These patterns thus point to the novelty and relevance of Makarova et al.'s findings.</p><p>Examples (1) and (2) illustrate the discourse pattern around novelty and give an indication that it is the assumption of further research and application potential that makes the claim attractive (keywords underlined):</p><p>(1) "In recent years, the intrinsic magnetism induced by native defects in sp-electron systems has attracted increasing attention for potential applications in spintronics, 1 (…)" (E8-1). ( <ref type="formula">2</ref>) "The scientific community became much more aware of the possible existence of roomtemperature carbon-based and metal-free organic ferromagnets since the serendipitous discovery of strong signals in rhombohedral C60 was reported in 2001. 6 While it was retracted in 2006, the article did raise (again) the possibility and expectation of pure carbon-based materials with Curie temperature above room temperature" (E7-1).</p><p>In the case of Rubio, the high keyness values for "concern" and "safety" suggest that this debate is about non-epistemic risks, namely health risks to humans. The following (pre-retraction) citation context illustrates how the (disputed) claim is used as an argument for safety testing.</p><p>(3) "In at least one laboratory, serially passaged ASCs displayed karyotypic abnormalities at a frequency of &gt; 30 and, when implanted into immunodeficient mice, formed tumors at a frequency of 50. 83 These findings indicate that caution should be exercized in the manipulation and culture of the adipose-derived cells. As is discussed below, safety testing for any clinical ASC products will need to include karyotype analysis as well as in vitro and in vivo tumorigenesis assays." (K16-0).</p><p>In example (4), similar to (2), the unresolved status of the debate is explicitly stated:</p><p>(4) "However, notwithstanding studies supporting the possibility of a neoplastic transformation of these cells having been later retracted, 6,7 this topic remains a matter of intense debate and care." (K13-1).</p><p>Work with the Concordancer shows that the term "potential" has two related meanings: differentiation potential and potential/risk of carcinogenic transformation. The term is always used in the second meaning post-retraction (e.g. K17-1, K18-1) and about half in the pre-retraction segment. The terms "extensive" and "exceptional" are often used to describe the rarity of the event of malignant transformation (e.g. "malignant transformation of human MSC is exceptional" K21-1), but also the characteristics of handling procedures: "extensive in-vitro culture" (K17-1) "extensively validated" (K20-1). In this case, the frequency of the word stem 'report' is strikingly higher after the retraction than in the segment before the retraction, which could indicate that the reception of the claim is becoming increasingly uncertain and nuanced over time.</p><p>Makarova's citations are mainly in introductions, which suggests their influence on the research question. Rubio's citations are mostly in main sections (especially in case of reviews) and discussion sections, informing about concerns and apparently serving as an argumentative resource for the authors' choices.</p><p>The occurrence patterns of keywords with emotional, cognitive or discoursal character in other cases seem less specific and pronounced. In the case of Schön and Dwyer, there is some indication of applicability and novelty. In the case of Reyes, the keyword "described" always refers to culturing conditions ("were isolated in the culture medium described by…"), which confirms the methodical strand of the citation discourse observed in the previous segment. "Capable" refers to cells' differentiation capacity.</p><p>Seeing these statements as speech acts can contribute to their understanding. Speech acts <ref type="bibr" target="#b0">(Austin, 2009)</ref> are acts performed through speech, 17 i.e. they are not pure propositional statements, but, in our case, acts of warning, inviting further research, or promising new research and application possibilities. Citing authors alluding to security problems seem to have opted for a cautious attitude towards non-epistemic risk. Authors citing Makarova emphasize the findings' importance and opportunities. Effects of such statements can be indirect, insofar as some publications that discuss controversies and promises or (non-epistemic) warnings signal to other authors that the publications in question are still citable. The article in example (2), which mentions retraction and information value at the same time, was co-cited 11 times by other articles citing the Makarova article, possibly indicating such a process.</p><p>To cross-check the findings, I examined all post-retraction citations of Makarova and Cho that do not cite or mention the retraction, express skepticism, or cite closely related, supporting or contradictory publications. More than 60% of these unclassified or undefined citations in the case of Makarova actually use metadiscourse to mark the importance of the claim, but in a more varied terminology, all fitting into the narrative of an important discovery. In the case of Cho, all of these yet undefined publications do not explicitly describe the acupoint specificity claim, and mostly focus on the methodical imaging claim. These observations suggest that seemingly non-explicit, neutral citations within the first group tend to correspond to the assumption of an informational value-risk mitigation procedure, visible either in meta discourse or in the focus on lower-risk claims.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conclusions</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Summary</head><p>The six cases of the first sample continue to be cited after retraction, but to varying degrees (cf. Fig. <ref type="figure" target="#fig_0">2</ref>): In terms of the absolute numbers of post-retraction citations Rubio and Makarova rank top, followed by Reyes. Cho and Poehlman have the most stable citation curves. Pushparaj's publication is comparably less cited and citations decrease stronger after the retraction than in the other cases of this group. The Poehlman publication is the oldest and it took 8 years to retract it, which might have made the retraction less visible and effective. <ref type="foot" target="#foot_14">18</ref> Notable supporting evidence can be found in four cases, and in the case of Makarova and Rubio in particular there are indications that the publications are part of broader disputes not fully resolved. These two cases also display explicit metadiscourse on potentials and risks.</p><p>The results of a qualitative sub-study by <ref type="bibr" target="#b22">Hsiao and Schneider (2021)</ref> point in a roughly similar direction: They found that the most common citation purpose in articles mentioning a retraction indicates that the results reported in retracted papers are still considered part of the development of a particular research topic.</p><p>References to claims that are not directly affected by the retraction and therefore presumably less risky, such as methodological claims and general consensual claims, are particularly visible in the Cho and Reyes cases, and the latter contexts are free of metadiscourse.</p><p>The following Table <ref type="table">5</ref> gives a summary of the empirical findings:</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conclusions and limitations</head><p>Epistemic harm resulting from retracted publications demands a nuanced approach. In cases of continuous citation dynamics, our evidence shows that the analyzed citation trajectories are less problematic than generally assumed and suggests that citing authors weigh epistemic risk and informational values: Further research and application possibilities in the Makarova case, and (non-epistemic) safety concerns in the Rubio case clearly provide informational values at the time of citing to be balanced with risk. The same is true for methodological or general information. Our observations suggest that such weighing processes play a role if (or as long as) some ambiguity or uncertainty regarding the truth of the claims exist: The citations to the Schön and Dwyer publications display similar metadiscourse as the Makarova case, but less pronounced. However, there is no evidence of broader controversy and support after the retraction in these two cases-in the case of Schoen, news about his fraud spread quickly as this was a large misconduct case involving multiple articles. A methodological result is that in our case metadiscourse patterns were manually observable beyond what is statistically detectable. While the combination of methods produces patterns that fit together and can be interpreted consistently, the approach comes with limitations-results are sensitive to often small numbers. It should generally be noted that retractions are not a stable phenomenon over time, increasing numbers can change the composition of the phenomenon, new dynamics emerge, such as the currently much-discussed paper mills. As shown in previous work <ref type="bibr" target="#b45">(Schmidt, 2018)</ref> in relation to WoS and illustrated in a case study by <ref type="bibr" target="#b46">Schneider et al. (2020)</ref>, not all retracted publications are equally visible in e.g. databases.</p><p>The findings should not be taken to mean that post-retraction citations are always epistemically harmless. On the one hand, the results must be seen against the background that retractions in many cases are successful in curbing citations (cf. Fig. <ref type="figure">1</ref>). On the other hand, as in most qualitative research, the aim of the exploratory approach and purposive sampling strategy is not to draw conclusions about a larger population (i.e. all post-retraction citations). The aim is to show the variability of the phenomenon of citations to publications retracted for fabrication, falsification and honest error. In this sense, we can conclude that the evidence in the analyzed publications speaks for more complex reception processes than often assumed and indicates that the boundary to regular scientific discourse drawn by the retraction is not necessarily so clear in epistemic turns in certain segments. However, the results can or should serve as a starting point for further large-scale quantitative research.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Further research</head><p>First, for corpus delineation of more current data it makes sense to work with the Retraction Watch database, whose coding of the reasons for retraction could also be compared with the one developed for this work. Information such as co-citation strength and epistemic closeness for delineating related publications could also be used in a more large-scale, computational approach. Metadiscourse approaches have already been applied in larger-scale scenarios (cf. <ref type="bibr" target="#b51">Small et al., 2019)</ref>. In our relatively small research setting, the detection and interpretation of relevant differences and changes of concept terms would have been difficult without some understanding of the RPs' epistemic key concepts. However, there have recently been relevant computational research strands in this general direction (e.g. La <ref type="bibr" target="#b30">Quatra et al., 2021)</ref>.</p><p>To conclude, our results challenge the frequently narrow focus on the retracted publications. When conceptualizing and evaluating interventions, transparency should be emphasized over stigma and the autonomy and complexity of the scientific discourse should be respected. In this regard, the format of retraction, which combines very different problems, also appears questionable.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 2</head><label>2</label><figDesc>Fig. 2 Citation distributions of case publications from both sample groups (first = relative continuity, second = decline)</figDesc><graphic coords="6,49.59,57.85,340.20,102.36" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 3 (</head><label>3</label><figDesc>Figure 3 (first sample group with persistent citation dynamics) and Fig. 4 (second sample group with decreasing citation dynamics) visualize for each RP the related publications</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 3</head><label>3</label><figDesc>Fig.3Citation Dynamics of publications co-cited with retracted publications (first sample). Three types of relations are mapped: (i) publications are citing or co-cited and explicitly described in citation contexts in terms of support, ambiguity or conflict (in columns 1, 2 and 5 from left to right); (ii) they are co-cited with the RP in reference lists (column 4); or iii) they are generally highly co-cited with RP (column 3). Related publications' authors who are members of the RP's author group are marked in red and as crosses instead of bubbles</figDesc><graphic coords="12,49.59,57.85,340.20,360.00" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 4</head><label>4</label><figDesc>Fig.4Citation Dynamics of publications co-cited with retracted publications (second sample). Three types of relations are mapped: (i) publications are citing or co-cited and explicitly described in citation contexts in terms of support, ambiguity or conflict (in columns 1, 2 and 5 from left to right); (ii) they are co-cited with the RP in reference lists (column 4); or iii) are generally highly co-cited with RP (column 3). Related publications whose authors are members of the RP's author group are marked in red and as crosses instead of bubbles</figDesc><graphic coords="13,49.59,192.71,340.20,360.00" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 5</head><label>5</label><figDesc>Fig. 5 Rank orders of fifteen most frequent noun phrases in the citing papers of the first sample group (preretraction bar: grey, post-retraction bar: black). The core concepts are indicated with stripes</figDesc><graphic coords="18,49.59,57.85,340.20,426.12" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head/><label/><figDesc/><graphic coords="2,49.59,57.85,340.20,188.04" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head/><label/><figDesc/><graphic coords="19,49.59,57.85,340.20,249.00" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1</head><label>1</label><figDesc>Overview of research setting (I): sampling</figDesc><table><row><cell>Details/tools</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell>Reference corpora: Same doctype</cell><cell>&amp; pubyear, bibliographic</cell><cell>coupling, co-citation; visual</cell><cell>inspection of dynamics</cell><cell/><cell/><cell/><cell/><cell/><cell>R function sample_frac</cell><cell/></row><row><cell>How</cell><cell>Data collection based on</cell><cell>Schmidt (2018); coding of</cell><cell>retraction reasons</cell><cell/><cell/><cell/><cell>Reference corpora to control for</cell><cell>normal obsolescence</cell><cell/><cell/><cell/><cell>Additional criteria: WoS cat-</cell><cell>egories,</cell><cell>time between RP and retraction</cell><cell>notice; manual inspection</cell><cell>25% (but at least 20 in absolute</cell><cell>numbers) of post-retraction</cell><cell>citations, the same number of</cell><cell>pre retraction citations</cell></row><row><cell>Objective/research question</cell><cell>Focus on cases involving</cell><cell>epistemic risk with substantial</cell><cell>citation numbers (at least 20</cell><cell>pre-and 20 post-retraction</cell><cell>citations)</cell><cell/><cell>Contrastive sampling for explo-</cell><cell>ration of underlying factors</cell><cell/><cell/><cell/><cell>Variety within the 12 cases,</cell><cell>focus on cases with citations</cell><cell>not from meta-science contexts</cell><cell/><cell>Resulting corpora not too big for</cell><cell>manual full text retrieval and</cell><cell>qualitative analysis</cell></row><row><cell>What is done</cell><cell>Creation of a sub-corpus of</cell><cell>publications that have been</cell><cell>retracted due to falsification,</cell><cell>fabrication or honest error and</cell><cell>whose citation frequency is</cell><cell>above a threshold</cell><cell>Constitution of a group with</cell><cell>ongoing citations and a group</cell><cell>with citation decline for all</cell><cell>publications resulting from</cell><cell>step I</cell><cell>Usage of additional criteria for</cell><cell>final case selection; known</cell><cell>high profile cases not to be</cell><cell>included</cell><cell>Stratified sampling according</cell><cell>to time</cell></row><row><cell>Method</cell><cell>Sampling (I): Case selection</cell><cell>of RP</cell><cell/><cell/><cell/><cell/><cell>Sampling (II): Case selection</cell><cell>of RP</cell><cell/><cell/><cell/><cell>Sampling (III): Case selection</cell><cell>of RP</cell><cell/><cell/><cell>Sampling (IV): Citing Publica-</cell><cell>tions</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2 Overview</head><label>2</label><figDesc/><table><row><cell>Citation</cell><cell>dynamics</cell><cell>+</cell><cell/><cell/><cell>-</cell><cell/><cell/><cell>-</cell><cell/><cell/><cell>-</cell><cell/><cell/><cell>+</cell><cell/><cell/><cell>+</cell><cell/><cell/><cell>+</cell><cell/><cell/><cell/><cell>+</cell><cell/><cell/><cell>+</cell></row><row><cell>Reason</cell><cell/><cell>Reproducibility</cell><cell>Problem/</cell><cell>Contamination</cell><cell>Reproducibility</cell><cell>Problem/</cell><cell>Contamination</cell><cell>Falsification</cell><cell/><cell/><cell>Falsification</cell><cell/><cell/><cell>Reproducibility</cell><cell>Problem/</cell><cell>Contamination</cell><cell>Fabrication</cell><cell/><cell/><cell>Duplication</cell><cell/><cell/><cell/><cell>Duplication,</cell><cell>Falsification</cell><cell/><cell>Reproducibility</cell><cell>Problem/</cell><cell>Contamination</cell></row><row><cell>Short summary of statement in retraction notice</cell><cell/><cell>Authors reanalyzed their results; main result regarding acupoint specifity</cell><cell>(for analgesic effects) could not be confirmed. Three of eight authors did</cell><cell>not approve of the retraction</cell><cell>Reanalysis by uninvolved scientist revealed that the allegedly computa-</cell><cell>tionally designed activity was actually caused by impurities</cell><cell/><cell>Reanalysis by uninvolved scientist showed that data had been falsified.</cell><cell>Last author did not agree to retraction</cell><cell/><cell>Reanalysis by co-authors after first author left institution showed that data</cell><cell>had been falsified</cell><cell/><cell/><cell/><cell/><cell>Investigation into alleged scientific misconduct resulted in conclusion</cell><cell>that first author had published three articles that contained false and</cell><cell>fabricated data</cell><cell>Duplication of figures from other publications which also have been</cell><cell>retracted or issued with Expression of Concern; overall message of</cell><cell>paper believed to be correct, but findings are no longer considered as</cell><cell>reliable</cell><cell>Duplications and other irregularities in multiple figures</cell><cell/><cell/><cell>Authors have been unable to reproduce some of the reported spontaneous</cell><cell>transformation events and suspect the phenomenon is due to a cross-</cell><cell>contamination artifact. Two of seven authors did not agree</cell></row><row><cell>Retracted publication</cell><cell/><cell>A</cell><cell>Cho et al. (1998)</cell><cell>10.1073/pnas.95.5.2670</cell><cell>B</cell><cell>Dwyer et al. (2003)</cell><cell>10.1126/science.1098432</cell><cell>C</cell><cell>Haug et al., 2003</cell><cell>10.1038/ng1121</cell><cell>D</cell><cell>Huang et al. (2005)</cell><cell>10.1126/science.1117768</cell><cell>E</cell><cell>Makarova et al. (2001)</cell><cell>10.1038/35099527</cell><cell>F</cell><cell>Poehlman (1995)</cell><cell>10.7326/0003-4819-123-9-199,511,010-00005</cell><cell>G</cell><cell>Pushparaj et al. (2009)</cell><cell>10.1073/pnas.0901206106</cell><cell/><cell>H</cell><cell>Reyes et al. (2001)</cell><cell>10.1182/blood.V98.9.2615</cell><cell>K</cell><cell>Rubio et al. (2005)</cell><cell>10.1158/0008-5472.CAN-04-4194</cell></row></table><note><p>of cases; citation dynamics: ' + ' = citation continue also after retraction; '-' = strong decline in citations Key claim of high-temperature ferromagnetism in pure polymerized carbon could not be maintained due to the detection of impurities and other evidence. However, corroborating evidence was also published, and two of nine authors did not agree as they don't see findings totally invalidated</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 4</head><label>4</label><figDesc>Extracted keywords with metadiscoursal character</figDesc><table><row><cell>Keyword</cell><cell cols="3"># Pre # Post % of all words</cell><cell>% of all words</cell><cell>BIC score</cell><cell>Linguistic</cell></row><row><cell>slightly generalized in</cell><cell/><cell/><cell>Pre</cell><cell>Post</cell><cell>extracted</cell><cell>resource used for</cell></row><row><cell>search [as originally</cell><cell/><cell/><cell/><cell/><cell>keyword</cell><cell>filtering</cell></row><row><cell>extracted]</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>Makarova</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>attract* [attracted]</cell><cell>6</cell><cell>12</cell><cell>0.16</cell><cell>0.38</cell><cell>88.09</cell><cell>Discourse verb</cell></row><row><cell>report* [reported]</cell><cell>28</cell><cell>21</cell><cell>0.75</cell><cell>0.66</cell><cell>56.62</cell><cell>Discourse verb</cell></row><row><cell>attention [attention]</cell><cell>5</cell><cell>7</cell><cell>0.13</cell><cell>0.22</cell><cell>36.25</cell><cell>Frame</cell></row><row><cell>recent* [recently]</cell><cell>25</cell><cell>7</cell><cell>0.67</cell><cell>0.22</cell><cell>35.60</cell><cell/></row><row><cell cols="2">discover* [discovery] 10</cell><cell>5</cell><cell>0.27</cell><cell>0.16</cell><cell>20.24</cell><cell>Frame</cell></row><row><cell>considerabl* [consid-</cell><cell>5</cell><cell>4</cell><cell>0.13</cell><cell>0.13</cell><cell>18.23</cell><cell>Frame, Polarity</cell></row><row><cell>erable]</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>interest* [interest]</cell><cell>8</cell><cell>9</cell><cell>0.21</cell><cell>0.28</cell><cell>17.67</cell><cell>Frame, Polarity</cell></row><row><cell>Rubio</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>safe* [safety]</cell><cell>9</cell><cell>11</cell><cell>0.19</cell><cell>0.26</cell><cell>55.43</cell><cell>Frame</cell></row><row><cell>concern, concerns</cell><cell>10</cell><cell>8</cell><cell>0.21</cell><cell>0.19</cell><cell>42.66</cell><cell>Frame, Polarity</cell></row><row><cell>[concern]</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>report* [reported]</cell><cell>19</cell><cell>35</cell><cell>0.4</cell><cell>0.82</cell><cell>41.97</cell><cell>Discourse verb</cell></row><row><cell>potential [potential]</cell><cell>22</cell><cell>15</cell><cell>0.46</cell><cell>0.35</cell><cell>41.35</cell><cell>Frame, Polarity</cell></row><row><cell>however</cell><cell>20</cell><cell>17</cell><cell>0.42</cell><cell>0.40</cell><cell>26.44</cell><cell>Polarity</cell></row><row><cell>exceptional* [excep-</cell><cell>3</cell><cell>2</cell><cell>0.06</cell><cell>0.05</cell><cell>25.11</cell><cell>Polarity</cell></row><row><cell>tional]</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>debate* [debate]</cell><cell>4</cell><cell>2</cell><cell>0.08</cell><cell>0.05</cell><cell>22.91</cell><cell>Frame, Polarity</cell></row><row><cell>extensive* [exten-</cell><cell>9</cell><cell>4</cell><cell>0.19</cell><cell>0.09</cell><cell>12.96</cell><cell>Polarity</cell></row><row><cell>sive]</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>Schön</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>interest* [interest]</cell><cell>4</cell><cell>6</cell><cell>0.53</cell><cell>0.50</cell><cell>24.61</cell><cell>Frame, Polarity</cell></row><row><cell>application* [applica-</cell><cell>3</cell><cell>11</cell><cell>0.40</cell><cell>0.92</cell><cell>19.47</cell><cell>Frame</cell></row><row><cell>tion]</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>Dwyer</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>application* [applica-</cell><cell>6</cell><cell>3</cell><cell>0.33</cell><cell>0.30</cell><cell>19.78</cell><cell>Frame</cell></row><row><cell>tions]</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>novel* [novel]</cell><cell>3</cell><cell>6</cell><cell>0.16</cell><cell>0.60</cell><cell>12.44</cell><cell>Polarity</cell></row><row><cell>Reyes</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell cols="2">describ* [described] 12</cell><cell>6</cell><cell>0.28</cell><cell>0.29</cell><cell>14.72</cell><cell>Discourse verb</cell></row><row><cell>capab* [capable]</cell><cell>5</cell><cell>4</cell><cell>0.14</cell><cell>0.20</cell><cell>12.74</cell><cell>Frame, Polarity</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 4</head><label>4</label><figDesc>presents results of the keyword extraction procedure.</figDesc><table/></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="1" xml:id="foot_0"><p>The search and linking algorithm for the corpus has been processed on a frozen version of the WoS database from April</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2015" xml:id="foot_1"><p>The citation calculations on which the citation threshold in the sample (III) is based originate from a later database version from April 2018. Few later calculations (i.e. co-citations used in the Network Approach) are based on the respective version from April 2020, while the general time window up to 2017 is kept stable. This staggered approach has feasibility reasons on the one hand, but on the other hand, it also has the advantage that the underlying corpus reflects the visibility status of retractions close to the analyzed time period.2  With the meaning that the retraction apparently does not lead to a decline in citation dynamics or that a decline appears slowed down.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="3" xml:id="foot_2"><p>The approach is extended to conflicting and supporting evidence from citing publications in citation contexts.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="4" xml:id="foot_3"><p>This in contrast to a purely inductive approach such as topic modeling, which requires to interpret ambiguous entities afterwards.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="5" xml:id="foot_4"><p>http:// mpqa. cs. pitt. edu, downloaded 2022/06/26.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="6" xml:id="foot_5"><p>https:// frame net. icsi. berke ley. edu/ fndru pal/, downloaded 2019/08/17. FrameNet is based on frame semantics, a linguistic theory that posits that the meaning of words depends on larger mental structures, frames.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="7" xml:id="foot_6"><p>However, single publications are, i.e., meeting abstracts which regularly do not get much cited. The approach also includes citing articles that explicitly state that their findings confirm or contradict the RP.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="8" xml:id="foot_7"><p>The citation contexts referred to are documented in SI (3), self-defined keys are used for better readability. The suffix -0 refers to pre, the suffix -1 to post-retraction citations.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="12" xml:id="foot_8"><p>"correlation between activation of specific areas of brain cortices and corresponding acupoint stimulation"</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="13" xml:id="foot_9"><p>These three terms are used in the following noun phrases: specific acupoints, specific effects, specific areas, specific brain structures, specific brain regions, corresponding cerebral sites, functional correlations, specific activation, specificity, neuronal correlations, specific fmri signal, corresponding areas, corresponding acupuncture stimulation.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="14" xml:id="foot_10"><p>Cases in which extracted keywords map to one of the linguistic resources but are used in a clearly propositional context are left out in the table.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="15" xml:id="foot_11"><p>https:// lexic ally. net/ downl oads/ versi on8/ HTML/ keywo rds_ calcu late_ info. html</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="16" xml:id="foot_12"><p>This holds especially in case of Schön, where two instances of "application" and one of "interest" all appear in one citation context that is almost identically self-plagiarized in another citing article.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="17" xml:id="foot_13"><p>I use a somewhat looser understanding of Austin's concept based on<ref type="bibr" target="#b29">Kemmerling (1997)</ref>. The core meaning of the concept is that actions are performed by the very fact that something is said. Whereas Austin focuses primarily on linguistic conventions (e.g. 'I beg you..') when defining speech acts, it is sufficient for Kemmerling (who refers to Grice's conception of meaning) if the speaker makes it clear that he wants to perform an action, like warning.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="18" xml:id="foot_14"><p>Retraction is indexed in PubMed and WoS, the retracted publication itself is labeled as such in PubMed and on the journal site, but not in WoS.</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><p>Acknowledgements Data access to Web of Science was provided via a license from the <rs type="institution">Competence Center for Bibliometrics</rs> (<ref type="url" target="https://www">https:// www</ref>. bibli ometr ie. info).</p></div>
+			</div>			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplementary Information</head><p>The online version contains supplementary material available at <ref type="url" target="https://doi">https:// doi</ref>. org/ 10. 1007/ s11192-024-05147-4.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Author contributions</head><p>The author confirms sole responsibility for the following: study conception and design, data collection, analysis and interpretation of results, and manuscript preparation.</p><p>Funding Open Access funding enabled and organized by Projekt DEAL. No funding was received for conducting this study.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Declarations</head><p>Conflict of interest The author has no relevant financial or non-financial interests to disclose. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Ethical approval</head></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">How to do things with words: The William James lectures delivered at Harvard University in 1955</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Austin</surname></persName>
+		</author>
+		<editor>J. O. Urmson &amp; M. Sbisà</editor>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+			<publisher>Harvard University Press</publisher>
+			<biblScope unit="volume">2</biblScope>
+		</imprint>
+	</monogr>
+	<note>repr.</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Azoulay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Furman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Krieger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Murray</surname></persName>
+		</author>
+		<idno type="DOI">10.3386/w18499</idno>
+		<ptr target="https://doi.org/10.3386/w18499"/>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<publisher>National Bureau of Economic Research</publisher>
+		</imprint>
+	</monogr>
+	<note>Retractions (w18499; S. w18499</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Post retraction citations in context: A case study</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bar-Ilan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Halevi</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11192-017-2242-0</idno>
+		<ptr target="https://doi.org/10.1007/s11192-017-2242-0"/>
+	</analytic>
+	<monogr>
+		<title level="j">Scientometrics</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="547" to="565"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Post retraction citations among manuscripts reporting a radiology-imaging diagnostic method</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Bolboacă</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D.-V</forename><surname>Buhai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Aluaș</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Bulboacă</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pone.0217918</idno>
+		<ptr target="https://doi.org/10.1371/journal.pone.0217918"/>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS ONE</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page">217918</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Perpetuation of retracted publications using the example of the Scott S. Reuben case: Incidences, reasons and possible improvements</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Bornemann-Cimenti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">S</forename><surname>Szilagyi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sandner-Kiesling</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11948-015-9680-y</idno>
+		<ptr target="https://doi.org/10.1007/s11948-015-9680-y"/>
+	</analytic>
+	<monogr>
+		<title level="j">Science and Engineering Ethics</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1063" to="1072"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Effects of article retraction on citation and practice in medicine</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Budd</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sievert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">R</forename><surname>Schultz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Scoville</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bulletin of the Medical Library Association</title>
+		<imprint>
+			<biblScope unit="volume">87</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="437" to="443"/>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Retracted Article: New findings of the correlation between acupoints and corresponding brain cortices using functional MRI</title>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">H</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">C</forename><surname>Chung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">K</forename><surname>Wong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">I</forename><surname>Min</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.95.5.2670</idno>
+		<ptr target="https://doi.org/10.1073/pnas.95.5.2670"/>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences</title>
+		<imprint>
+			<biblScope unit="volume">95</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="2670" to="2673"/>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">On the mitigation of inductive risk</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Contessa</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s13194-021-00381-6</idno>
+		<ptr target="https://doi.org/10.1007/s13194-021-00381-6"/>
+	</analytic>
+	<monogr>
+		<title level="j">European Journal for Philosophy of Science</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">64</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<title level="m" type="main">COPE Guidelines: Retraction Guidelines</title>
+		<author>
+			<orgName type="collaboration">COPE Council</orgName>
+		</author>
+		<idno type="DOI">10.24318/cope.2019.1.4</idno>
+		<ptr target="https://doi.org/10.24318/cope.2019.1"/>
+		<imprint>
+			<date type="published" when="2019-11">November 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.24318/cope.2019.1.4</idno>
+		<imprint>
+			<biblScope unit="page">4</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Inductive risk and values in science</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Douglas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Philosophy of Science</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="559" to="579"/>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Retracted Article: Computational Design of a Biologically Active Enzyme</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Dwyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">L</forename><surname>Looger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">W</forename><surname>Hellinga</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.1098432</idno>
+		<ptr target="https://doi.org/10.1126/science.10984"/>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">304</biblScope>
+			<biblScope unit="issue">5679</biblScope>
+			<biblScope unit="page" from="1967" to="1971"/>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">What difference might retractions make? An estimate of the potential epistemic cost of retractions on meta-analyses</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Fanelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Moher</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/08989621.2021.1947810</idno>
+		<ptr target="https://doi.org/10.1080/08989621.2021.19478"/>
+	</analytic>
+	<monogr>
+		<title level="j">Accountability in Research</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="442" to="459"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Governing knowledge in the scientific community: Exploring the role of retractions in biomedicine</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Furman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Jensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Murray</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.respol.2011.11.001</idno>
+		<ptr target="https://doi.org/10.1016/j.respol.2011.11.001"/>
+	</analytic>
+	<monogr>
+		<title level="j">Research Policy</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="276" to="290"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Retracted Article: Mutations in CLCN2 encoding a voltage-gated chloride channel are associated with idiopathic generalized epilepsies</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Haug</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Warnstedt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Alekov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sander</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ramírez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Poser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Maljevic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hebeisen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kubisch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rebstock</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Horvath</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hallmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Dullinger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Rau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Haverkamp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Beyenburg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Schulz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Janz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Giese</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Heils</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/ng1121</idno>
+		<ptr target="https://doi.org/10.1038/ng1121"/>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Genetics</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="527" to="532"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<title level="m" type="main">Rigor mortis how sloppy science creates worthless cures, crushes hope, and wastes billions</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Harris</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<author>
+			<persName><forename type="first">S</forename><surname>Harvard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Winsberg</surname></persName>
+		</author>
+		<ptr target="http://philsci-archive.pitt.edu/18576/"/>
+		<title level="m">The epistemic risk in representation</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">A qualitative and quantitative analysis of open citations to retracted articles: The Wakefield 1998 et al.'s case</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Heibi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Peroni</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11192-021-04097-5</idno>
+		<ptr target="https://doi.org/10.1007/s11192-021-04097-5"/>
+	</analytic>
+	<monogr>
+		<title level="j">Scientometrics</title>
+		<imprint>
+			<biblScope unit="volume">126</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="8433" to="8470"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Science and human values</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Hempel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Social control in a free society (S. 39-64</title>
+		<imprint>
+			<publisher>University of Pennsylvania Press</publisher>
+			<date type="published" when="1960">1960</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">The visibility of scientific misconduct: A review of the literature on retracted journal articles</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Hesselmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Graf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schmidt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Reinhart</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/0011392116663807</idno>
+		<ptr target="https://doi.org/10.1177/0011392116663807"/>
+	</analytic>
+	<monogr>
+		<title level="j">Current Sociology</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="814" to="845"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Cycles of invisibility: The limits of transparency in dealing with scientific misconduct</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Hesselmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Reinhart</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/0306312720975201</idno>
+		<ptr target="https://doi.org/10.1177/0306312720975201"/>
+	</analytic>
+	<monogr>
+		<title level="j">Social Studies of Science</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="414" to="438"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Keep calm and carry on: Moral panic, predatory publishers, peer review, and the emperor's new clothes</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Houghton</surname></persName>
+		</author>
+		<idno type="DOI">10.5195/jmla.2022.1441</idno>
+		<ptr target="https://doi.org/10.5195/jmla.2022.1441"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Medical Library Association</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Continued use of retracted papers: Temporal trends in citations and (lack of) awareness of retractions shown in citation contexts in biomedicine</title>
+		<author>
+			<persName><forename type="first">T.-K</forename><surname>Hsiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schneider</surname></persName>
+		</author>
+		<idno type="DOI">10.1162/qss_a_00155</idno>
+		<ptr target="https://doi.org/10.1162/qss_a_00155"/>
+	</analytic>
+	<monogr>
+		<title level="j">Quantitative Science Studies</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1144" to="1169"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Retracted Article: The mRNA of the Arabidopsis Gene FT Moves from Leaf to Shoot Apex and Induces Flowering</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Böhlenius</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Eriksson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Parcy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Nilsson</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.1117768</idno>
+		<ptr target="https://doi.org/10.1126/science.11177"/>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">309</biblScope>
+			<biblScope unit="issue">5741</biblScope>
+			<biblScope unit="page" from="1694" to="1696"/>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Guilt by association: How scientific misconduct harms prior collaborators</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hussinger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pellens</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.respol.2018.01.012</idno>
+		<ptr target="https://doi.org/10.1016/j.respol.2018.01.012"/>
+	</analytic>
+	<monogr>
+		<title level="j">Research Policy</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="516" to="530"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Activity and evaluation: Reporting practices in academic writing</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hyland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Academic discourse</title>
+		<imprint>
+			<publisher>Longman</publisher>
+			<date type="published" when="2002">2002</date>
+			<biblScope unit="page" from="115" to="130"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<title level="m" type="main">Metadiscourse. Exploring interaction in writing</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hyland</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2005">2005</date>
+			<publisher>Continuum</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Metadiscourse: What is it and where is it going</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hyland</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.pragma.2017.03.007</idno>
+		<ptr target="https://doi.org/10.1016/j.pragma.2017.03.007"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Pragmatics</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="page" from="16" to="29"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Retracted randomized controlled trials were cited and not corrected in systematic reviews and clinical practice guidelines</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kataoka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Banno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tsujimoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ariie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Taito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Suzuki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Oide</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Furukawa</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jclinepi.2022.06.015</idno>
+		<ptr target="https://doi.org/10.1016/j.jclinepi.2022.06.015"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Clinical Epidemiology</title>
+		<imprint>
+			<biblScope unit="volume">150</biblScope>
+			<biblScope unit="page" from="90" to="97"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Der bedeutungstheoretisch springende Punkt sprachlicher Verständigung</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kemmerling</surname></persName>
+		</author>
+		<idno type="DOI">10.11588/HEIDOK.00018189</idno>
+		<ptr target="https://doi.org/10.11588/HEIDOK.00018189"/>
+	</analytic>
+	<monogr>
+		<title level="m">Kommunikationsversuche. Theorien der Kommunikation</title>
+		<editor>
+			<persName><forename type="first">G.-L</forename><surname>Lueken</surname></persName>
+		</editor>
+		<imprint>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+		<respStmt>
+			<orgName>Heidelberg University Library</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Leveraging full-text article exploration for citation analysis</title>
+		<author>
+			<persName><forename type="first">La</forename><surname>Quatra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cagliero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Baralis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename></persName>
+		</author>
+		<idno type="DOI">10.1007/s11192-021-04117-4</idno>
+		<ptr target="https://doi.org/10.1007/s11192-021-04117-4"/>
+	</analytic>
+	<monogr>
+		<title level="j">Scientometrics</title>
+		<imprint>
+			<biblScope unit="volume">126</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="8275" to="8293"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">The retraction penalty: Evidence from the web of science</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">F</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">Z</forename><surname>Jin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Uzzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Jones</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Scientific Reports</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">3146</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">The (lack of) impact of retraction on citation networks</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Madlock-Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Eichmann</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11948-014-9532-1</idno>
+		<ptr target="https://doi.org/10.1007/s11948-014-9532-1"/>
+	</analytic>
+	<monogr>
+		<title level="j">Science and Engineering Ethics</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="127" to="137"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">The spread of retracted research into policy literature</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Malkov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Yaqub</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Siepel</surname></persName>
+		</author>
+		<idno type="DOI">10.1162/qss_a_00243</idno>
+		<ptr target="https://doi.org/10.1162/qss_a_00243"/>
+	</analytic>
+	<monogr>
+		<title level="j">Quantitative Science Studies</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="68" to="90"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Retracted Article: Magnetic carbon</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">L</forename><surname>Makarova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Sundqvist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Höhne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Esquinazi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kopelevich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Scharff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">A</forename><surname>Davydov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">S</forename><surname>Kashevarova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Rakhmanina</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/35099527</idno>
+		<ptr target="https://doi.org/10.1038/35099527"/>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">413</biblScope>
+			<biblScope unit="issue">6857</biblScope>
+			<biblScope unit="page" from="716" to="718"/>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Costly collaborations: The impact of scientific fraud on co-authors' careers</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Mongeon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Larivière</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/asi.23421</idno>
+		<ptr target="https://doi.org/10.1002/asi.23421"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Association for Information Science and Technology</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="535" to="542"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Assessing the impact of retraction on the citation of randomized controlled trial reports: An interrupted time-series analysis</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Fairhurst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Torgerson</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/1355819618797965</idno>
+		<ptr target="https://doi.org/10.1177/1355819618797965"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Health Services Research &amp; Policy</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="44" to="51"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Analysis of citations to biomedical articles affected by scientific misconduct</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Neale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">K</forename><surname>Dailey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Abrams</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11948-009-9151-4</idno>
+		<ptr target="https://doi.org/10.1007/s11948-009-9151-4"/>
+	</analytic>
+	<monogr>
+		<title level="j">Science and Engineering Ethics</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="251" to="261"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Epistemic risk: Empirical science and the fear of being wrong</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Parascandola</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/lpr/mgq005</idno>
+		<ptr target="https://doi.org/10.1093/lpr/mgq005"/>
+	</analytic>
+	<monogr>
+		<title level="j">Law, Probability and Risk</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">3-4</biblScope>
+			<biblScope unit="page" from="201" to="214"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Disgraced COVID-19 studies are still routinely cited</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Piller</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.371.6527.331</idno>
+		<ptr target="https://doi.org/10.1126/science.371.6527.331"/>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">371</biblScope>
+			<biblScope unit="issue">6527</biblScope>
+			<biblScope unit="page" from="331" to="332"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Retracted Article: Changes in Energy Balance and Body Composition at Menopause: A Controlled Longitudinal Study</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">T</forename><surname>Poehlman</surname></persName>
+		</author>
+		<idno type="DOI">10.7326/0003-4819-123-9-199511010-00005</idno>
+		<ptr target="https://doi.org/10.7326/0003-4819-123-9-199511010-00005"/>
+	</analytic>
+	<monogr>
+		<title level="j">Annals of Internal Medicine</title>
+		<imprint>
+			<biblScope unit="volume">123</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page">673</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Retracted Article: The cytokine interleukin-33 mediates anaphylactic shock</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">N</forename><surname>Pushparaj</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">K</forename><surname>Tay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">C</forename><surname>H'ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Pitman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mckenzie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">Y</forename><surname>Liew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Melendez</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.0901206106</idno>
+		<ptr target="https://doi.org/10.1073/pnas.0901206106"/>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences</title>
+		<imprint>
+			<biblScope unit="volume">106</biblScope>
+			<biblScope unit="issue">24</biblScope>
+			<biblScope unit="page" from="9773" to="9778"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Empirical developments in retraction</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">K</forename><surname>Redman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">N</forename><surname>Yarandi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Merz</surname></persName>
+		</author>
+		<idno type="DOI">10.1136/jme.2007.023069</idno>
+		<ptr target="https://doi.org/10.1136/jme.2007.023069"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Medical Ethics</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="807" to="809"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Retracted Article: Purification and ex vivo expansion of postnatal human marrow mesodermal progenitor cells</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Reyes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lund</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lenvik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Aguiar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Koodie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Verfaillie</surname></persName>
+		</author>
+		<idno type="DOI">10.1182/blood.V98.9.2615</idno>
+		<ptr target="https://doi.org/10.1182/blood.V98.9.2615"/>
+	</analytic>
+	<monogr>
+		<title level="j">Blood</title>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="2615" to="2625"/>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Retracted Article: Spontaneous Human Adult Stem Cell Transformation</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rubio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Garcia-Castro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Martín</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>De La Fuente</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Cigudosa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Lloyd</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bernad</surname></persName>
+		</author>
+		<idno type="DOI">10.1158/0008-5472.CAN-04-4194</idno>
+		<ptr target="https://doi.org/10.1158/0008-5472.CAN-04-4194"/>
+	</analytic>
+	<monogr>
+		<title level="j">Cancer Research</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="3035" to="3039"/>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">An analysis of the validity of retraction annotation in pubmed and the web of science</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schmidt</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/asi.23913</idno>
+		<ptr target="https://doi.org/10.1002/asi.23913"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Association for Information Science and Technology</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="318" to="328"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Continued post-retraction citation of a fraudulent clinical trial report, 11 years after it was retracted for falsifying data</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Hill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Whitehorn</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11192-020-03631-1</idno>
+		<ptr target="https://doi.org/10.1007/s11192-020-03631-1"/>
+	</analytic>
+	<monogr>
+		<title level="j">Scientometrics</title>
+		<imprint>
+			<biblScope unit="volume">125</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="2877" to="2913"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Retracted Article: Superconductivity in molecular crystals induced by charge injection</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Schön</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ch</forename><surname>Kloc</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Batlogg</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/35021011</idno>
+		<ptr target="https://doi.org/10.1038/35021011"/>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">406</biblScope>
+			<biblScope unit="issue">6797</biblScope>
+			<biblScope unit="page" from="702" to="704"/>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Retracted Article: Hairpin RNAs and Retrotransposon LTRs Effect RNAi and Chromatin-Based Gene Silencing</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Schramke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Allshire</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.1086870</idno>
+		<ptr target="https://doi.org/10.1126/science.10868"/>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">301</biblScope>
+			<biblScope unit="issue">5636</biblScope>
+			<biblScope unit="page" from="1069" to="1074"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">A multidimensional investigation of the effects of publication retraction on scholarly impact</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Shuai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rollins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Moulinier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Custis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Edmunds</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Schilder</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/asi.23826</idno>
+		<ptr target="https://doi.org/10.1002/asi.23826"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Association for Information Science and Technology</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="2225" to="2236"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Cited documents as concept symbols</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">G</forename><surname>Small</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/030631277800800305</idno>
+		<ptr target="https://doi.org/10.1177/030631277800800305"/>
+	</analytic>
+	<monogr>
+		<title level="j">Social Studies of Science</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="327" to="340"/>
+			<date type="published" when="1978">1978</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Citations and certainty: A new interpretation of citation counts</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Small</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">W</forename><surname>Boyack</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Klavans</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11192-019-03016-z</idno>
+		<ptr target="https://doi.org/10.1007/s11192-019-03016-z"/>
+	</analytic>
+	<monogr>
+		<title level="j">Scientometrics</title>
+		<imprint>
+			<biblScope unit="volume">118</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1079" to="1092"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">How do academia and society react to erroneous or deceitful claims? The case of retracted articles' recognition</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sotudeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Barahmand</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yousefi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yaghtin</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/0165551520945853</idno>
+		<ptr target="https://doi.org/10.1177/0165551520945853"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Information Science</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="182" to="198"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Underdetermination of scientific theory</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Stanford</surname></persName>
+		</author>
+		<ptr target="https://plato.stanford.edu/archives/sum2023/entries/scientific-underdetermination/"/>
+	</analytic>
+	<monogr>
+		<title level="m">The Stanford encyclopedia of philosophy</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note>Summer 2023 Edition</note>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Retractions in the medical literature: How many patients are put at risk by flawed research</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename><surname>Steen</surname></persName>
+		</author>
+		<idno type="DOI">10.1136/jme.2011.043133</idno>
+		<ptr target="https://doi.org/10.1136/jme.2011.043133"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Medical Ethics</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="688" to="692"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Financial costs and personal consequences of research misconduct resulting in retracted publications</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Stern</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Casadevall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename><surname>Steen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">C</forename><surname>Fang</surname></persName>
+		</author>
+		<idno type="DOI">10.7554/eLife.02956</idno>
+		<ptr target="https://doi.org/10.7554/eLife.02956"/>
+	</analytic>
+	<monogr>
+		<title level="j">eLife</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">2956</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Retracted Article: DNA Content as a Prognostic Marker in Patients with Oral Leukoplakia</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sudbø</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Kildal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Risberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Koppang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">E</forename><surname>Danielsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Reith</surname></persName>
+		</author>
+		<idno type="DOI">10.1056/NEJM200104263441702</idno>
+		<ptr target="https://doi.org/10.1056/NEJM200104263441702"/>
+	</analytic>
+	<monogr>
+		<title level="j">New England Journal of Medicine</title>
+		<imprint>
+			<biblScope unit="volume">344</biblScope>
+			<biblScope unit="issue">17</biblScope>
+			<biblScope unit="page" from="1270" to="1278"/>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Assessment of citations of the retracted article by wakefield et al with fraudulent claims of an association between vaccination and autism</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Suelzer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Deal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Hanus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ruggeri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Sieracki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Witkowski</surname></persName>
+		</author>
+		<idno type="DOI">10.1001/jamanetworkopen.2019.15552</idno>
+		<ptr target="https://doi.org/10.1001/jamanetworkopen.2019.15552"/>
+	</analytic>
+	<monogr>
+		<title level="j">JAMA Network Open</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page">1915552</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<monogr>
+		<title level="m" type="main">Different sampling techniques for mixed methods studies</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Teddlie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Yu</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+			<publisher>Sage</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Four erroneous beliefs thwarting more trustworthy research</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yarborough</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Nadon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Karlin</surname></persName>
+		</author>
+		<idno type="DOI">10.7554/eLife.45261</idno>
+		<ptr target="https://doi.org/10.7554/eLife.45261"/>
+	</analytic>
+	<monogr>
+		<title level="j">eLife</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">45261</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

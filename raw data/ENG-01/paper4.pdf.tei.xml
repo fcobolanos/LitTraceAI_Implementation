@@ -1,0 +1,3468 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Deep Learning: A Comprehensive Overview on Techniques, Taxonomy, Applications and Research Directions</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Springer Science and Business Media LLC</publisher>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2021-08-18">18 August 2021</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Iqbal</forename><forename type="middle">H</forename><surname>Sarker</surname></persName>
+							<email>msarker@swin.edu.au</email>
+							<idno type="ORCID">0000-0003-1740-5517</idno>
+							<affiliation key="aff0">
+								<orgName type="institution">Swinburne University of Technology</orgName>
+								<address>
+									<postCode>3122</postCode>
+									<settlement>Melbourne</settlement>
+									<region>VIC</region>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Chittagong University of Engineering &amp; Technology</orgName>
+								<address>
+									<postCode>4349</postCode>
+									<settlement>Chittagong</settlement>
+									<country key="BD">Bangladesh</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bhanu</forename><surname>Prakash</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">M</forename><surname>Shivakumar</surname></persName>
+						</author>
+						<title level="a" type="main">Deep Learning: A Comprehensive Overview on Techniques, Taxonomy, Applications and Research Directions</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">SN Computer Science</title>
+						<title level="j" type="abbrev">SN COMPUT. SCI.</title>
+						<idno type="ISSN">2662-995X</idno>
+						<idno type="eISSN">2661-8907</idno>
+						<imprint>
+							<publisher>Springer Science and Business Media LLC</publisher>
+							<biblScope unit="volume">2</biblScope>
+							<biblScope unit="issue">6</biblScope>
+							<date type="published" when="2021-08-18">18 August 2021</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">80F1E8E9AABD9D8A9C0C207B6F270A2E</idno>
+					<idno type="DOI">10.1007/s42979-021-00815-1</idno>
+					<note type="submission">Received: 29 May 2021 / Accepted: 7 August 2021 /</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-09T12:37+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Deep learning</term>
+					<term>Artificial neural network</term>
+					<term>Artificial intelligence</term>
+					<term>Discriminative learning</term>
+					<term>Generative learning</term>
+					<term>Hybrid learning</term>
+					<term>Intelligent systems</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Deep learning (DL), a branch of machine learning (ML) and artificial intelligence (AI) is nowadays considered as a core technology of today's Fourth Industrial Revolution (4IR or Industry 4.0). Due to its learning capabilities from data, DL technology originated from artificial neural network (ANN), has become a hot topic in the context of computing, and is widely applied in various application areas like healthcare, visual recognition, text analytics, cybersecurity, and many more. However, building an appropriate DL model is a challenging task, due to the dynamic nature and variations in real-world problems and data. Moreover, the lack of core understanding turns DL methods into black-box machines that hamper development at the standard level. This article presents a structured and comprehensive view on DL techniques including a taxonomy considering various types of real-world tasks like supervised or unsupervised. In our taxonomy, we take into account deep networks for supervised or discriminative learning, unsupervised or generative learning as well as hybrid learning and relevant others. We also summarize real-world application areas where deep learning techniques can be used. Finally, we point out ten potential aspects for future generation DL modeling with research directions. Overall, this article aims to draw a big picture on DL modeling that can be used as a reference guide for both academia and industry professionals.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p>In the late 1980s, neural networks became a prevalent topic in the area of Machine Learning (ML) as well as Artificial Intelligence (AI), due to the invention of various efficient learning methods and network structures <ref type="bibr" target="#b51">[52]</ref>. Multilayer perceptron networks trained by "Backpropagation" type algorithms, self-organizing maps, and radial basis function networks were such innovative methods <ref type="bibr" target="#b25">[26,</ref><ref type="bibr" target="#b35">36,</ref><ref type="bibr" target="#b36">37]</ref>. While neural networks are successfully used in many applications, the interest in researching this topic decreased later on. After that, in 2006, "Deep Learning" (DL) was introduced by Hinton et al. <ref type="bibr" target="#b40">[41]</ref>, which was based on the concept of artificial neural network (ANN). Deep learning became a prominent topic after that, resulting in a rebirth in neural network research, hence, some times referred to as "newgeneration neural networks". This is because deep networks, when properly trained, have produced significant success in a variety of classification and regression challenges <ref type="bibr" target="#b51">[52]</ref>.</p><p>Nowadays, DL technology is considered as one of the hot topics within the area of machine learning, artificial intelligence as well as data science and analytics, due to its learning capabilities from the given data. Many corporations including Google, Microsoft, Nokia, etc., study it actively as it can provide significant results in different classification and regression problems and datasets <ref type="bibr" target="#b51">[52]</ref>. In terms of working domain, DL is considered as a subset of ML and AI, and thus DL can be seen as an AI function that mimics the human brain's processing of data. The worldwide popularity of "Deep learning" is increasing day by day, which is shown in our earlier paper <ref type="bibr" target="#b95">[96]</ref> based on the historical data collected from Google trends <ref type="bibr" target="#b32">[33]</ref>. Deep learning differs from standard machine learning in terms of efficiency as the volume of data increases, discussed briefly in Section "Why Deep Learning in Today's Research and Applications?". DL technology uses multiple layers to represent the abstractions of data to build computational models. While deep learning takes a long time to train a model due to a large number of parameters, it takes a short amount of time to run during testing as compared to other machine learning algorithms <ref type="bibr">[127]</ref>.</p><p>While today's Fourth Industrial Revolution (4IR or Industry 4.0) is typically focusing on technology-driven "automation, smart and intelligent systems", DL technology, which is originated from ANN, has become one of the core technologies to achieve the goal <ref type="bibr">[103,</ref><ref type="bibr">114]</ref>. A typical neural network is mainly composed of many simple, connected processing elements or processors called neurons, each of which generates a series of real-valued activations for the target outcome. Figure <ref type="figure" target="#fig_0">1</ref> shows a schematic representation of the mathematical model of an artificial neuron, i.e., processing element, highlighting input ( X i ), weight (w), bias (b), sum- mation function ( ∑ ), activation function (f) and corresponding output signal (y). Neural network-based DL technology is now widely applied in many fields and research areas such as healthcare, sentiment analysis, natural language processing, visual recognition, business intelligence, cybersecurity, and many more that have been summarized in the latter part of this paper.</p><p>Although DL models are successfully applied in various application areas, mentioned above, building an appropriate model of deep learning is a challenging task, due to the dynamic nature and variations of real-world problems and data. Moreover, DL models are typically considered as "black-box" machines that hamper the standard development of deep learning research and applications. Thus for clear understanding, in this paper, we present a structured and comprehensive view on DL techniques considering the variations in real-world problems and tasks. To achieve our goal, we briefly discuss various DL techniques and present a taxonomy by taking into account three major categories: (i) deep networks for supervised or discriminative learning that is utilized to provide a discriminative function in supervised deep learning or classification applications; (ii) deep networks for unsupervised or generative learning that are used to characterize the high-order correlation properties or features for pattern analysis or synthesis, thus can be used as preprocessing for the supervised algorithm; and (ii) deep networks for hybrid learning that is an integration of both supervised and unsupervised model and relevant others. We take into account such categories based on the nature and learning capabilities of different DL techniques and how they are used to solve problems in real-world applications <ref type="bibr" target="#b96">[97]</ref>. Moreover, identifying key research issues and prospects including effective data representation, new algorithm design, data-driven hyper-parameter learning, and model optimization, integrating domain knowledge, adapting resource-constrained devices, etc. is one of the key targets of this study, which can lead to "Future Generation DL-Modeling". Thus the goal of this paper is set to assist those in academia and industry as a reference guide, who want to research and develop data-driven smart and intelligent systems based on DL techniques.</p><p>The overall contribution of this paper is summarized as follows:</p><p>-This article focuses on different aspects of deep learning modeling, i.e., the learning capabilities of DL techniques in different dimensions such as supervised or unsupervised tasks, to function in an automated and intelligent manner, which can play as a core technology of today's Fourth Industrial Revolution (Industry 4.0). -We explore a variety of prominent DL techniques and present a taxonomy by taking into account the variations in deep learning tasks and how they are used for different purposes. In our taxonomy, we divide the techniques into three major categories such as deep networks for supervised or discriminative learning, unsupervised or generative learning, as well as deep networks for hybrid learning, and relevant others.</p><p>-We have summarized several potential real-world application areas of deep learning, to assist developers as well as researchers in broadening their perspectives on DL techniques. Different categories of DL techniques highlighted in our taxonomy can be used to solve various issues accordingly. This paper is organized as follows. Section "Why Deep Learning in Today's Research andApplications?" motivates why deep learning is important to build data-driven intelligent systems. In Section" Deep Learning Techniques and Applications", we present our DL taxonomy by taking into account the variations of deep learning tasks and how they are used in solving real-world issues and briefly discuss the techniques with summarizing the potential application areas.</p><p>In Section "Research Directions and Future Aspects", we discuss various research issues of deep learning-based modeling and highlight the promising topics for future research within the scope of our study. Finally, Section "Concluding Remarks" concludes this paper.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Why Deep Learning in Today's Research and Applications?</head><p>The main focus of today's Fourth Industrial Revolution (Industry 4.0) is typically technology-driven automation, smart and intelligent systems, in various application areas including smart healthcare, business intelligence, smart cities, cybersecurity intelligence, and many more <ref type="bibr" target="#b94">[95]</ref>. Deep learning approaches have grown dramatically in terms of performance in a wide range of applications considering security technologies, particularly, as an excellent solution for uncovering complex architecture in high-dimensional data. Thus, DL techniques can play a key role in building intelligent data-driven systems according to today's needs, because of their excellent learning capabilities from historical data. Consequently, DL can change the world as well as humans' everyday life through its automation power and learning from experience. DL technology is therefore relevant to artificial intelligence [103], machine learning <ref type="bibr" target="#b96">[97]</ref> and data science with advanced analytics <ref type="bibr" target="#b94">[95]</ref> that are wellknown areas in computer science, particularly, today's intelligent computing. In the following, we first discuss regarding the position of deep learning in AI, or how DL technology is related to these areas of computing.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>The Position of Deep Learning in AI</head><p>Nowadays, artificial intelligence (AI), machine learning (ML), and deep learning (DL) are three popular terms that are sometimes used interchangeably to describe systems or software that behaves intelligently. In Fig. <ref type="figure" target="#fig_1">2</ref>, we illustrate the position of deep Learning, comparing with machine learning and artificial intelligence. According to Fig. <ref type="figure" target="#fig_1">2</ref>, DL is a part of ML as well as a part of the broad area AI. In general, AI incorporates human behavior and intelligence to machines or systems [103], while ML is the method to learn from data or experience <ref type="bibr" target="#b96">[97]</ref>, which automates analytical model building. DL also represents learning methods from data where the computation is done through multi-layer neural networks and processing. The term "Deep" in the deep learning methodology refers to the concept of multiple levels or stages through which data is processed for building a data-driven model. Thus, DL can be considered as one of the core technology of AI, a frontier for artificial intelligence, which can be used for building intelligent systems and automation. More importantly, it pushes AI to a new level, termed "Smarter AI". As DL are capable of learning from data, there is a strong relation of deep learning with "Data Science" <ref type="bibr" target="#b94">[95]</ref> as well. Typically, data science represents the entire process of finding meaning or insights in data in a particular problem domain, where DL methods can play a key role for advanced analytics and intelligent decision-making <ref type="bibr">[104,</ref><ref type="bibr">106]</ref>. Overall, we can conclude that DL technology is capable to change the current world, particularly, in terms of a powerful computational engine and contribute to technology-driven automation, smart and intelligent systems accordingly, and meets the goal of Industry 4.0.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Understanding Various Forms of Data</head><p>As DL models learn from data, an in-depth understanding and representation of data are important to build a datadriven intelligent system in a particular application area. In the real world, data can be in various forms, which typically can be represented as below for deep learning modeling:</p><p>-Sequential Data Sequential data is any kind of data where the order matters, i,e., a set of sequences. It needs to explicitly account for the sequential nature of input data while building the model. Text streams, audio frag-  The above-discussed data forms are common in the realworld application areas of deep learning. Different categories of DL techniques perform differently depending on the nature and characteristics of data, discussed briefly in Section "Deep Learning Techniques and Applications" with a taxonomy presentation. However, in many real-world application areas, the standard machine learning techniques, particularly, logic-rule or tree-based techniques <ref type="bibr" target="#b92">[93,</ref><ref type="bibr">101]</ref> perform significantly depending on the application nature. Figure <ref type="figure">3</ref> also shows the performance comparison of DL and ML modeling considering the amount of data. In the following, we highlight several cases, where deep learning is useful to solve real-world problems, according to our main focus in this paper.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>DL Properties and Dependencies</head><p>A DL model typically follows the same processing stages as machine learning modeling. In Fig. <ref type="figure">4</ref>, we have shown a deep learning workflow to solve real-world problems, which consists of three processing steps, such as data understanding and preprocessing, DL model building, and training, and validation and interpretation. However, unlike the ML modeling <ref type="bibr" target="#b97">[98,</ref><ref type="bibr">108]</ref>, feature extraction in the DL model is automated rather than manual. K-nearest neighbor, support vector machines, decision tree, random forest, naive Bayes, linear regression, association rules, k-means clustering, are some examples of machine learning techniques that are commonly used in various application areas <ref type="bibr" target="#b96">[97]</ref>. On the other hand, the DL model includes convolution neural network, recurrent neural network, autoencoder, deep belief network, and many more, discussed briefly with their potential application areas in Section 3. In the following, we discuss the key properties and dependencies of DL techniques, that are needed to take into account before started working on DL modeling for real-world applications.</p><p>-Data Dependencies Deep learning is typically dependent on a large amount of data to build a data-driven model for a particular problem domain. The reason is that when the data volume is small, deep learning algorithms often perform poorly <ref type="bibr" target="#b63">[64]</ref>. In such circumstances, however, the performance of the standard machine-learning algorithms will be improved if the specified rules are used <ref type="bibr">[64,</ref>  The most significant distinction between deep learning and regular machine learning is how well it performs when data grows exponentially. An illustration of the performance comparison between DL and standard ML algorithms has been shown in Fig. <ref type="figure">3</ref>, where DL modeling can increase the performance with the amount of data. Thus, DL modeling is extremely useful when dealing with a large amount of data because of its capacity to process vast amounts of features to build an effective data-driven model. In terms of developing and training DL models, it relies on parallelized matrix and tensor operations as well as computing gradients and optimization. Several, DL libraries and resources <ref type="bibr" target="#b29">[30]</ref> such as PyTorch <ref type="bibr" target="#b81">[82]</ref> (with a high-level API called Lightning) and TensorFlow <ref type="bibr" target="#b0">[1]</ref> (which also offers Keras as a high-level API) offers these core utilities including many pre-trained models, as well as many other necessary functions for implementation and DL model building.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Deep Learning Techniques and Applications</head><p>In this section, we go through the various types of deep neural network techniques, which typically consider several layers of information-processing stages in hierarchical structures to learn. A typical deep neural network contains multiple hidden layers including input and output layers.</p><p>Figure <ref type="figure">5</ref> shows a general structure of a deep neural network ( hidden layer = N and N ≥ 2) comparing with a shallow network ( hidden layer = 1 ). We also present our taxonomy on DL techniques based on how they are used to solve various problems, in this section. However, before exploring the details of the DL techniques, it's useful to review various types of learning tasks such as (i) Supervised: a task-driven approach that uses labeled training data, (ii) Unsupervised: a data-driven process that analyzes unlabeled datasets, (iii) Semi-supervised: a hybridization of both the supervised and unsupervised methods, and (iv) Reinforcement: an environment driven approach, discussed briefly in our earlier paper <ref type="bibr" target="#b96">[97]</ref>. Thus, to present our taxonomy, we divide DL techniques broadly into three major categories: (i) deep networks for supervised or discriminative learning; (ii) deep networks for unsupervised or generative learning; and (ii) deep networks for hybrid learning combing both and relevant others, as shown in Fig. <ref type="figure">6</ref>. In the following, we briefly discuss each of these techniques that can be used to solve real-world problems in various application areas according to their learning capabilities.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Deep Networks for Supervised or Discriminative Learning</head><p>This category of DL techniques is utilized to provide a discriminative function in supervised or classification applications. Discriminative deep architectures are typically designed to give discriminative power for pattern classification by describing the posterior distributions of classes conditioned on visible data <ref type="bibr" target="#b20">[21]</ref>. Discriminative architectures mainly include Multi-Layer Perceptron (MLP), Convolutional Neural Networks (CNN or ConvNet), Recurrent Neural Networks (RNN), along with their variants. In the following, we briefly discuss these techniques.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Multi-layer Perceptron (MLP)</head><p>Multi-layer Perceptron (MLP), a supervised learning approach <ref type="bibr" target="#b82">[83]</ref>, is a type of feedforward artificial neural network (ANN). It is also known as the foundation architecture of deep neural networks (DNN) or deep learning. A typical MLP is a fully connected network that consists of an input layer that receives input data, an output layer that makes a decision or prediction about the input signal, and one or more hidden layers between these two that are considered as the network's computational engine <ref type="bibr" target="#b35">[36,</ref><ref type="bibr">103]</ref>. The output of an MLP network is determined using a variety of activation functions, also known as transfer functions, such as ReLU (Rectified Linear Unit), Tanh, Sigmoid, and Softmax <ref type="bibr" target="#b82">[83,</ref><ref type="bibr" target="#b95">96]</ref>. To train MLP employs the most extensively used algorithm "Backpropagation" <ref type="bibr" target="#b35">[36]</ref>, a supervised learning technique, which is also known as the most basic building block of a neural network. During the training process, various optimization approaches such as Stochastic Gradient Descent (SGD), Limited Memory BFGS (L-BFGS), and Adaptive Moment Estimation (Adam) are applied. MLP requires tuning of several hyperparameters such as the number of hidden layers, neurons, and iterations, which could make solving a complicated model computationally expensive. However, through partial fit, MLP offers the advantage of learning non-linear models in real-time or online <ref type="bibr" target="#b82">[83]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Convolutional Neural Network (CNN or ConvNet)</head><p>The Convolutional Neural Network (CNN or ConvNet) <ref type="bibr" target="#b64">[65]</ref> is a popular discriminative deep learning architecture that learns directly from the input without the need for human feature extraction. Figure <ref type="figure">7</ref> shows an example of a CNN including multiple convolutions and pooling layers. As a result, the CNN enhances the design of traditional ANN like regularized MLP networks. Each layer in CNN takes into account optimum parameters for a meaningful output as well as reduces model complexity. CNN also uses a 'dropout' <ref type="bibr" target="#b29">[30]</ref> that can deal with the problem of over-fitting, which may occur in a traditional network. CNNs are specifically intended to deal with a variety of 2D shapes and are thus widely employed in visual recognition, medical image analysis, image segmentation, natural language processing, and many more <ref type="bibr" target="#b64">[65,</ref><ref type="bibr" target="#b95">96]</ref>. The capability of automatically discovering essential features from the input without the need for human intervention makes it more powerful than a traditional network. Several variants of CNN are exist in the area that includes visual geometry group (VGG) <ref type="bibr" target="#b37">[38]</ref>, AlexNet <ref type="bibr" target="#b61">[62]</ref>, Xception <ref type="bibr" target="#b16">[17]</ref>, Inception [116], ResNet <ref type="bibr" target="#b38">[39]</ref>, etc. that can be used in various application domains according to their learning capabilities.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Recurrent Neural Network (RNN) and its Variants</head><p>A Recurrent Neural Network (RNN) is another popular neural network, which employs sequential or time-series data and feeds the output from the previous step as input to the current stage <ref type="bibr" target="#b26">[27,</ref><ref type="bibr" target="#b73">74]</ref>. Like feedforward and CNN, recurrent networks learn from training input, however, distinguish by their "memory", which allows them to impact current input and output through using information from previous inputs. Unlike typical DNN, which assumes that inputs and outputs are independent of one another, the output of RNN is reliant on prior elements within the sequence. However, standard recurrent networks have the issue of vanishing gradients, which makes learning long data sequences challenging. In the following, we discuss several popular variants of the recurrent network that minimizes the issues and perform well in many real-world application domains.</p><p>-Long short-term memory (LSTM) This is a popular form of RNN architecture that uses special units to deal with the vanishing gradient problem, which was introduced by Hochreiter et al. <ref type="bibr" target="#b41">[42]</ref>. A memory cell in an LSTM unit can store data for long periods and the flow of information into and out of the cell is managed by three gates.</p><p>For instance, the 'Forget Gate' determines what information from the previous state cell will be memorized and what information will be removed that is no longer useful, while the 'Input Gate' determines which information should enter the cell state and the 'Output Gate' determines and controls the outputs. As it solves the issues of training a recurrent network, the LSTM network is considered one of the most successful RNN. -Bidirectional RNN/LSTM Bidirectional RNNs connect two hidden layers that run in opposite directions to a single output, allowing them to accept data from both the past and future. Bidirectional RNNs, unlike traditional recurrent networks, are trained to predict both positive and negative time directions at the same time.</p><p>A Bidirectional LSTM, often known as a BiLSTM, is an extension of the standard LSTM that can increase model performance on sequence classification issues <ref type="bibr">[113]</ref>. It is a sequence processing model comprising of two LSTMs: one takes the input forward and the other takes it backward. Bidirectional LSTM in particular is a popular choice in natural language processing tasks. -Gated recurrent units (GRUs) A Gated Recurrent Unit (GRU) is another popular variant of the recurrent network that uses gating methods to control and manage information flow between cells in the neural network, introduced by Cho et al. <ref type="bibr" target="#b15">[16]</ref>. The GRU is like an LSTM, however, has fewer parameters, as it has a reset gate and Fig. <ref type="figure">7</ref> An example of a convolutional neural network (CNN or ConvNet) including multiple convolution and pooling layers an update gate but lacks the output gate, as shown in Fig. <ref type="figure">8</ref>. Thus, the key difference between a GRU and an LSTM is that a GRU has two gates (reset and update gates) whereas an LSTM has three gates (namely input, output and forget gates). The GRU's structure enables it to capture dependencies from large sequences of data in an adaptive manner, without discarding information from earlier parts of the sequence. Thus GRU is a slightly more streamlined variant that often offers comparable performance and is significantly faster to compute <ref type="bibr" target="#b17">[18]</ref>.</p><p>Although GRUs have been shown to exhibit better performance on certain smaller and less frequent datasets <ref type="bibr" target="#b17">[18,</ref><ref type="bibr" target="#b33">34]</ref>, both variants of RNN have proven their effectiveness while producing the outcome.</p><p>Overall, the basic property of a recurrent network is that it has at least one feedback connection, which enables activations to loop. This allows the networks to do temporal processing and sequence learning, such as sequence recognition or reproduction, temporal association or prediction, etc. Following are some popular application areas of recurrent networks such as prediction problems, machine translation, natural language processing, text summarization, speech recognition, and many more.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Deep Networks for Generative or Unsupervised Learning</head><p>This category of DL techniques is typically used to characterize the high-order correlation properties or features for pattern analysis or synthesis, as well as the joint statistical distributions of the visible data and their associated classes <ref type="bibr" target="#b20">[21]</ref>. The key idea of generative deep architectures is that during the learning process, precise supervisory information such as target class labels is not of concern. As a result, the methods under this category are essentially applied for unsupervised learning as the methods are typically used for feature learning or data generating and representation <ref type="bibr" target="#b19">[20,</ref><ref type="bibr" target="#b20">21]</ref>. Thus generative modeling can be used as preprocessing for the supervised learning tasks as well, which ensures the discriminative model accuracy. Commonly used deep neural network techniques for unsupervised or generative learning are Generative Adversarial Network (GAN), Autoencoder (AE), Restricted Boltzmann Machine (RBM), Self-Organizing Map (SOM), and Deep Belief Network (DBN) along with their variants.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Generative Adversarial Network (GAN)</head><p>A Generative Adversarial Network (GAN), designed by Ian Goodfellow <ref type="bibr" target="#b31">[32]</ref>, is a type of neural network architecture for generative modeling to create new plausible samples on demand. It involves automatically discovering and learning regularities or patterns in input data so that the model may be used to generate or output new examples from the original dataset. As shown in Fig. <ref type="figure">9</ref>, GANs are composed of two neural networks, a generator G that creates new data having properties similar to the original data, and a discriminator D that predicts the likelihood of a subsequent sample being drawn from actual data rather than data provided by the generator. Thus in GAN modeling, both the generator and discriminator are trained to compete with each other. While the generator tries to fool and confuse the discriminator by creating more realistic data, the discriminator tries to distinguish the genuine data from the fake data generated by G.</p><p>Generally, GAN network deployment is designed for unsupervised learning tasks, but it has also proven to be a better solution for semi-supervised and reinforcement learning as well depending on the task <ref type="bibr" target="#b2">[3]</ref>. GANs are also used in state-of-the-art transfer learning research to enforce the alignment of the latent feature space <ref type="bibr" target="#b65">[66]</ref>. Inverse models, such as Bidirectional GAN (BiGAN) <ref type="bibr" target="#b24">[25]</ref> can also learn a mapping from data to the latent space, similar to how the standard GAN model learns a mapping from a latent space to the data distribution. The potential application areas of GAN networks are healthcare, image analysis, data augmentation, video generation, voice generation, pandemics, traffic control, cybersecurity, and many more, which are increasing rapidly. Overall, GANs have established themselves as a comprehensive domain of independent data expansion and as a solution to problems requiring a generative solution.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Auto-Encoder (AE) and Its Variants</head><p>An auto-encoder (AE) <ref type="bibr" target="#b30">[31]</ref> is a popular unsupervised learning technique in which neural networks are used to learn representations. Typically, auto-encoders are used to work with high-dimensional data, and dimensionality reduction explains how a set of data is represented. Encoder, code, and decoder are the three parts of an autoencoder. The encoder compresses the input and generates the code, which the decoder subsequently uses to reconstruct the input. The AEs have recently been used to learn generative data models <ref type="bibr" target="#b68">[69]</ref>. The auto-encoder is widely used in many unsupervised learning tasks, e.g., dimensionality reduction, feature extraction, efficient coding, generative modeling, denoising, anomaly or outlier detection, etc. <ref type="bibr" target="#b30">[31,</ref><ref type="bibr">132]</ref>. Principal component analysis (PCA) <ref type="bibr" target="#b98">[99]</ref>, which is also used to reduce the dimensionality of huge data sets, is essentially similar to a single-layered AE with a linear activation function. Regularized autoencoders such as sparse, denoising, and contractive are useful for learning representations for later classification tasks [119], while variational autoencoders can be used as generative models <ref type="bibr" target="#b55">[56]</ref>, discussed below.</p><p>-Sparse Autoencoder (SAE) A sparse autoencoder <ref type="bibr" target="#b72">[73]</ref> has a sparsity penalty on the coding layer as a part of its training requirement. SAEs may have more hidden units than inputs, but only a small number of hidden units are permitted to be active at the same time, resulting in a sparse model. Figure <ref type="figure" target="#fig_5">10</ref> shows a schematic structure of a sparse autoencoder with several active units in the hidden layer. This model is thus obliged to respond to the unique statistical features of the training data following its constraints. -Denoising Autoencoder (DAE) A denoising autoencoder is a variant on the basic autoencoder that attempts to improve representation (to extract useful features) by altering the reconstruction criterion, and thus reduces the risk of learning the identity function <ref type="bibr" target="#b30">[31,</ref><ref type="bibr">119]</ref>. In other words, it receives a corrupted data point as input and is trained to recover the original undistorted input as its output through minimizing the average reconstruction error over the training data, i.e, cleaning the corrupted input, or denoising. Thus, in the context of computing, DAEs can be considered as very powerful filters that can be utilized for automatic pre-processing. A denoising autoencoder, for example, could be used to automatically pre-process an image, thereby boosting its quality for recognition accuracy. -Contractive Autoencoder (CAE) The idea behind a contractive autoencoder, proposed by Rifai et al. <ref type="bibr" target="#b89">[90]</ref>, is to make the autoencoders robust of small changes in the training dataset. In its objective function, a CAE includes an explicit regularizer that forces the model to learn an encoding that is robust to small changes in input values. As a result, the learned representation's sensitivity to the training input is reduced. While DAEs encourage the robustness of reconstruction as discussed above, CAEs encourage the robustness of representation. -Variational Autoencoder (VAE) A variational autoencoder <ref type="bibr" target="#b54">[55]</ref> has a fundamentally unique property that distinguishes it from the classical autoencoder discussed above, which makes this so effective for generative modeling. VAEs, unlike the traditional autoen- coders which map the input onto a latent vector, map the input data into the parameters of a probability distribution, such as the mean and variance of a Gaussian distribution. A VAE assumes that the source data has an underlying probability distribution and then tries to discover the distribution's parameters. Although this approach was initially designed for unsupervised learning, its use has been demonstrated in other domains such as semi-supervised learning [128] and supervised learning <ref type="bibr" target="#b50">[51]</ref>.</p><p>Although, the earlier concept of AE was typically for dimensionality reduction or feature learning mentioned above, recently, AEs have been brought to the forefront of generative modeling, even the generative adversarial network is one of the popular methods in the area. The AEs have been effectively employed in a variety of domains, including healthcare, computer vision, speech recognition, cybersecurity, natural language processing, and many more. Overall, we can conclude that auto-encoder and its variants can play a significant role as unsupervised feature learning with neural network architecture.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Kohonen Map or Self-Organizing Map (SOM)</head><p>A Self-Organizing Map (SOM) or Kohonen Map <ref type="bibr" target="#b58">[59]</ref> is another form of unsupervised learning technique for creating a low-dimensional (usually two-dimensional) representation of a higher-dimensional data set while maintaining the topological structure of the data. SOM is also known as a neural network-based dimensionality reduction algorithm that is commonly used for clustering <ref type="bibr">[118]</ref>. A SOM adapts to the topological form of a dataset by repeatedly moving its neurons closer to the data points, allowing us to visualize enormous datasets and find probable clusters. The first layer of a SOM is the input layer, and the second layer is the output layer or feature map. Unlike other neural networks that use error-correction learning, such as backpropagation with gradient descent <ref type="bibr" target="#b35">[36]</ref>, SOMs employ competitive learning, which uses a neighborhood function to retain the input space's topological features. SOM is widely utilized in a variety of applications, including pattern identification, health or medical diagnosis, anomaly detection, and virus or worm attack detection <ref type="bibr" target="#b59">[60,</ref><ref type="bibr" target="#b86">87]</ref>. The primary benefit of employing a SOM is that this can make high-dimensional data easier to visualize and analyze to understand the patterns. The reduction of dimensionality and grid clustering makes it easy to observe similarities in the data. As a result, SOMs can play a vital role in developing a data-driven effective model for a particular problem domain, depending on the data characteristics.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Restricted Boltzmann Machine (RBM)</head><p>A Restricted Boltzmann Machine (RBM) <ref type="bibr" target="#b74">[75]</ref> is also a generative stochastic neural network capable of learning a probability distribution across its inputs. Boltzmann machines typically consist of visible and hidden nodes and each node is connected to every other node, which helps us understand irregularities by learning how the system works in normal circumstances. RBMs are a subset of Boltzmann machines that have a limit on the number of connections between the visible and hidden layers <ref type="bibr" target="#b76">[77]</ref>. This restriction permits training algorithms like the gradient-based contrastive divergence algorithm to be more efficient than those for Boltzmann machines in general <ref type="bibr" target="#b40">[41]</ref>. RBMs have found applications in dimensionality reduction, classification, regression, collaborative filtering, feature learning, topic modeling, and many others. In the area of deep learning modeling, they can be trained either supervised or unsupervised, depending on the task. Overall, the RBMs can recognize patterns in data automatically and develop probabilistic or stochastic models, which are utilized for feature selection or extraction, as well as forming a deep belief network.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Deep Belief Network (DBN)</head><p>A Deep Belief Network (DBN) <ref type="bibr" target="#b39">[40]</ref> is a multi-layer generative graphical model of stacking several individual unsupervised networks such as AEs or RBMs, that use each network's hidden layer as the input for the next layer, i.e, connected sequentially. Thus, we can divide a DBN into (i) AE-DBN which is known as stacked AE, and (ii) RBM-DBN that is known as stacked RBM, where AE-DBN is composed of autoencoders and RBM-DBN is composed of restricted Boltzmann machines, discussed earlier. The ultimate goal is to develop a faster-unsupervised training technique for each sub-network that depends on contrastive divergence <ref type="bibr" target="#b40">[41]</ref>. DBN can capture a hierarchical representation of input data based on its deep structure. The primary idea behind DBN is to train unsupervised feed-forward neural networks with unlabeled data before fine-tuning the network with labeled input. One of the most important advantages of DBN, as opposed to typical shallow learning networks, is that it permits the detection of deep patterns, which allows for reasoning abilities and the capture of the deep difference between normal and erroneous data <ref type="bibr" target="#b88">[89]</ref>. A continuous DBN is simply an extension of a standard DBN that allows a continuous range of decimals instead of binary data. Overall, the DBN model can play a key role in a wide range of high-dimensional data applications due to its strong feature extraction and classification capabilities and become one of the significant topics in the field of neural networks.</p><p>In summary, the generative learning techniques discussed above typically allow us to generate a new representation SN Computer Science of data through exploratory analysis. As a result, these deep generative networks can be utilized as preprocessing for supervised or discriminative learning tasks, as well as ensuring model accuracy, where unsupervised representation learning can allow for improved classifier generalization.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Deep Networks for Hybrid Learning and Other Approaches</head><p>In addition to the above-discussed deep learning categories, hybrid deep networks and several other approaches such as deep transfer learning (DTL) and deep reinforcement learning (DRL) are popular, which are discussed in the following.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Hybrid Deep Neural Networks</head><p>Generative models are adaptable, with the capacity to learn from both labeled and unlabeled data. Discriminative models, on the other hand, are unable to learn from unlabeled data yet outperform their generative counterparts in supervised tasks. A framework for training both deep generative and discriminative models simultaneously can enjoy the benefits of both models, which motivates hybrid networks.</p><p>Hybrid deep learning models are typically composed of multiple (two or more) deep basic learning models, where the basic model is a discriminative or generative deep learning model discussed earlier. Based on the integration of different basic generative or discriminative models, the below three categories of hybrid deep learning models might be useful for solving real-world problems. These are as follows:</p><p>-Hybrid Model_1 : An integration of different generative or discriminative models to extract more meaningful and robust features. Examples could be CNN+LSTM, AE+GAN, and so on. -Hybrid Model_2 : An integration of generative model followed by a discriminative model. Examples could be DBN+MLP, GAN+CNN, AE+CNN, and so on. -Hybrid Model_3 : An integration of generative or discrim- inative model followed by a non-deep learning classifier.</p><p>Examples could be AE+SVM, CNN+SVM, and so on.</p><p>Thus, in a broad sense, we can conclude that hybrid models can be either classification-focused or non-classification depending on the target use. However, most of the hybrid learning-related studies in the area of deep learning are classification-focused or supervised learning tasks, summarized in Table <ref type="table">1</ref>. The unsupervised generative models with meaningful representations are employed to enhance the discriminative models. The generative models with useful representation can provide more informative and lowdimensional features for discrimination, and they can also enable to enhance the training data quality and quantity, providing additional information for classification.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Deep Transfer Learning (DTL)</head><p>Transfer Learning is a technique for effectively using previously learned model knowledge to solve a new task with minimum training or fine-tuning. In comparison to typical machine learning techniques <ref type="bibr" target="#b96">[97]</ref>, DL takes a large amount of training data. As a result, the need for a substantial volume of labeled data is a significant barrier to address some essential domain-specific tasks, particularly, in the medical sector, where creating large-scale, high-quality annotated medical or health datasets is both difficult and costly. Furthermore, the standard DL model demands a lot of computational resources, such as a GPU-enabled server, even though researchers are working hard to improve it. As a result, Deep Transfer Learning (DTL), a DL-based transfer learning method, might be helpful to address this issue. Transfer learning is a two-stage approach for training a DL model that consists of a pre-training step and a finetuning step in which the model is trained on the target task. Since deep neural networks have gained popularity in a variety of fields, a large number of DTL methods have been presented, making it crucial to categorize and summarize them. Based on the techniques used in the literature, DTL can be classified into four categories <ref type="bibr">[117]</ref>. These are (i) instancesbased deep transfer learning that utilizes instances in source domain by appropriate weight, (ii) mapping-based deep transfer learning that maps instances from two domains into a new data space with better similarity, (iii) network-based deep transfer learning that reuses the partial of network pretrained in the source domain, and (iv) adversarial based deep transfer learning that uses adversarial technology to find transferable features that both suitable for two domains. Due to its high effectiveness and practicality, adversarial-based deep transfer learning has exploded in popularity in recent years. Transfer learning can also be classified into inductive, transductive, and unsupervised transfer learning depending on the circumstances between the source and target domains and activities <ref type="bibr" target="#b80">[81]</ref>. While most current research focuses on supervised learning, how deep neural networks can transfer knowledge in unsupervised or semi-supervised learning may gain further interest in the future. DTL techniques are useful in a variety of fields including natural language processing, sentiment classification, visual recognition, speech recognition, spam filtering, and relevant others.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>SN Computer Science</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Deep Reinforcement Learning (DRL)</head><p>Reinforcement learning takes a different approach to solving the sequential decision-making problem than other approaches we have discussed so far. The concepts of an environment and an agent are often introduced first in reinforcement learning. The agent can perform a series of actions in the environment, each of which has an impact on the environment's state and can result in possible rewards (feedback) -"positive" for good sequences of actions that result in a "good" state, and "negative" for bad sequences of actions that result in a "bad" state. The purpose of reinforcement learning is to learn good action sequences through interaction with the environment, typically referred to as a policy.</p><p>Deep reinforcement learning (DRL or deep RL) <ref type="bibr" target="#b8">[9]</ref> integrates neural networks with a reinforcement learning architecture to allow the agents to learn the appropriate actions in a virtual environment, as shown in Fig. <ref type="figure" target="#fig_1">12</ref>. In the area of reinforcement learning, model-based RL is based on learning a transition model that enables for modeling of the environment without interacting with it directly, whereas model-free RL methods learn directly from interactions with the environment. Q-learning is a popular model-free RL technique for determining the best action-selection policy for any (finite) Markov Decision Process (MDP) <ref type="bibr" target="#b85">[86,</ref><ref type="bibr" target="#b96">97]</ref>. MDP is a mathematical framework for modeling decisions based on state, action, and rewards <ref type="bibr" target="#b85">[86]</ref>. In addition, Deep Q-Networks, Double DQN, Bi-directional Learning, Monte Carlo Control, etc. are used in the area <ref type="bibr" target="#b49">[50,</ref><ref type="bibr" target="#b96">97]</ref>. In DRL methods it incorporates DL models, e.g. Deep Neural Networks (DNN), based on MDP principle <ref type="bibr" target="#b70">[71]</ref>, as policy and/ or value function approximators. CNN for example can be used as a component of RL agents to learn directly from raw, high-dimensional visual inputs. In the real world, DRLbased solutions can be used in several application areas including robotics, video games, natural language processing, computer vision, and relevant others.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Deep Learning Application Summary</head><p>During the past few years, deep learning has been successfully applied to numerous problems in many application areas. These include natural language processing, sentiment analysis, cybersecurity, business, virtual assistants, visual recognition, healthcare, robotics, and many more. In Fig. <ref type="figure" target="#fig_8">13</ref>, we have summarized several potential real-world application areas of deep learning. Various deep learning techniques according to our presented taxonomy in Fig. <ref type="figure">6</ref> that includes discriminative learning, generative learning, as well as hybrid models, discussed earlier, are employed in these application areas. In Table <ref type="table">1</ref>, we have also summarized various deep learning tasks and techniques that are used to solve the relevant tasks in several real-world applications areas. Overall, from Fig. <ref type="figure" target="#fig_8">13</ref> and Table <ref type="table">1</ref>, we can conclude that the future prospects of deep learning modeling in realworld application areas are huge and there are lots of scopes to work. In the next section, we also summarize the research issues in deep learning modeling and point out the potential aspects for future generation DL modeling.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Research Directions and Future Aspects</head><p>While existing methods have established a solid foundation for deep learning systems and research, this section outlines the below ten potential future research directions based on our study.</p><p>-Automation in Data Annotation According to the existing literature, discussed in Section 3, most of the deep learning models are trained through publicly available datasets that are annotated. However, to build a system for a new problem domain or recent data-driven system, raw data from relevant sources are needed to collect. Thus, data annotation, e.g., categorization, tagging, or labeling of a large amount of raw data, is important for building discriminative deep learning models or supervised tasks, which is challenging. A technique with the capability of automatic and dynamic data annotation, rather than manual annotation or hiring annotators, particularly, for large datasets, could be more effective for supervised learning as well as minimizing human effort. Therefore, a more in-depth investigation of data collection and annotation methods, or designing an unsupervised learning-based solution could be one of the primary research directions in the area of deep learning modeling. -Data Preparation for Ensuring Data Quality As discussed earlier throughout the paper, the deep learning algorithms highly impact data quality, and availability for training, and consequently on the resultant model for a particular problem domain. Thus, deep learning models may become worthless or yield decreased accuracy if the data is bad, such as data sparsity, non-representative, poor-quality, ambiguous values, noise, data imbalance, irrelevant features, data inconsistency, insufficient quantity, and so on for training. Consequently, such issues in data can lead to poor processing and inaccurate find-   <ref type="bibr" target="#b12">[13,</ref><ref type="bibr" target="#b79">80]</ref>. Attention mechanism can be implemented based on learning algorithms such as reinforcement learning that is capable of finding the most useful part through a policy search <ref type="bibr">[133,</ref><ref type="bibr">134]</ref>. Similarly, CNN can be integrated with suitable attention mechanisms to form a general classification framework, where CNN can be used as a feature learning tool for capturing features in various levels and ranges. Thus, designing a general deep learning framework considering attention as well as a latent feature for target application domains could be another area to contribute.</p><p>To summarize, deep learning is a fairly open topic to which academics can contribute by developing new methods or improving existing methods to handle the above-mentioned concerns and tackle real-world problems in a variety of application areas. This can also help the researchers conduct a thorough analysis of the application's hidden and unexpected challenges to produce more reliable and realistic outcomes. Overall, we can conclude that addressing the above-mentioned issues and contributing to proposing effective and efficient techniques could lead to "Future Generation DL" modeling as well as more intelligent and automated applications.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Concluding Remarks</head><p>In this article, we have presented a structured and comprehensive view of deep learning technology, which is considered a core part of artificial intelligence as well as data science. It starts with a history of artificial neural networks and SN Computer Science moves to recent deep learning techniques and breakthroughs in different applications. Then, the key algorithms in this area, as well as deep neural network modeling in various dimensions are explored. For this, we have also presented a taxonomy considering the variations of deep learning tasks and how they are used for different purposes. In our comprehensive study, we have taken into account not only the deep networks for supervised or discriminative learning but also the deep networks for unsupervised or generative learning, and hybrid learning that can be used to solve a variety of real-world issues according to the nature of problems. Deep learning, unlike traditional machine learning and data mining algorithms, can produce extremely high-level data representations from enormous amounts of raw data. As a result, it has provided an excellent solution to a variety of real-world problems. A successful deep learning technique must possess the relevant data-driven modeling depending on the characteristics of raw data. The sophisticated learning algorithms then need to be trained through the collected data and knowledge related to the target application before the system can assist with intelligent decision-making. Deep learning has shown to be useful in a wide range of applications and research areas such as healthcare, sentiment analysis, visual recognition, business intelligence, cybersecurity, and many more that are summarized in the paper.</p><p>Finally, we have summarized and discussed the challenges faced and the potential research directions, and future aspects in the area. Although deep learning is considered a black-box solution for many applications due to its poor reasoning and interpretability, addressing the challenges or future aspects that are identified could lead to future generation deep learning modeling and smarter systems. This can also help the researchers for in-depth analysis to produce more reliable and realistic outcomes. Overall, we believe that our study on neural networks and deep learning-based advanced analytics points in a promising path and can be utilized as a reference guide for future research and implementations in relevant application domains by both academic and industry professionals.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1</head><label>1</label><figDesc>Fig. 1 Schematic representation of the mathematical model of an artificial neuron (processing element), highlighting input ( X i ), weight (w), bias (b), summation function ( ∑ ), activation function (f) and output signal (y)</figDesc><graphic coords="2,53.86,496.13,232.44,165.72" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2</head><label>2</label><figDesc>Fig. 2 An illustration of the position of deep learning (DL), comparing with machine learning (ML) and artificial intelligence (AI)</figDesc><graphic coords="3,308.98,57.76,232.44,113.76" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 3 Fig. 4 A</head><label>34</label><figDesc>Fig. 3 An illustration of the performance comparison between deep learning (DL) and other machine learning (ML) algorithms, where DL modeling from large amounts of data can increase the performance</figDesc><graphic coords="4,53.86,318.50,232.44,118.08" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 5 AFig. 6 A</head><label>56</label><figDesc>Fig. 5 A general architecture of a a shallow network with one hidden layer and b a deep neural network with multiple hidden layers</figDesc><graphic coords="6,53.86,57.76,487.56,174.00" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 8 Fig. 9</head><label>89</label><figDesc>Fig. 8 Basic structure of a gated recurrent unit (GRU) cell consisting of reset and update gates</figDesc><graphic coords="8,53.86,57.76,232.44,172.20" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 10</head><label>10</label><figDesc>Fig. 10 Schematic structure of a sparse autoencoder (SAE) with several active units (filled circle) in the hidden layer</figDesc><graphic coords="9,308.98,57.76,232.44,329.04" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head/><label/><figDesc>Figure 11 shows a general structure of the transfer learning process, where knowledge from the pre-trained model is transferred into a new DL model. It's especially popular in deep learning right now since it allows to train deep neural networks with very little data [126].</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Fig. 11 AFig. 12</head><label>1112</label><figDesc>Fig. 11 A general structure of transfer learning process, where knowledge from pre-trained model is transferred into new DL model</figDesc><graphic coords="13,184.25,57.76,360.00,212.04" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Fig. 13</head><label>13</label><figDesc>Fig. 13 Several potential real-world application areas of deep learning</figDesc><graphic coords="14,85.06,57.76,425.16,318.96" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head/><label/><figDesc>ments, video clips, time-series data, are some examples of sequential data. -Image or 2D Data A digital image is made up of a matrix, which is a rectangular array of numbers, symbols, or expressions arranged in rows and columns in a 2D array of numbers. Matrix, pixels, voxels, and bit depth are the four essential characteristics or fundamental parameters of a digital image. -Tabular Data A tabular dataset consists primarily of rows and columns. Thus tabular datasets contain data in a columnar format as in a database table. Each column (field) must have a name and each column may only contain data of the defined type. Overall, it is a logical and systematic arrangement of data in the form of rows and columns that are based on data properties or features. Deep learning models can learn efficiently on tabular data and allow us to build data-driven intelligent systems.</figDesc><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head/><label/><figDesc>, 103] as well as conceptual data model in which semantic information, (i.e., meaningful for a system, rather than merely correlational)<ref type="bibr" target="#b44">[45,</ref> 121, 131]  is included, can play a vital role in the area. Transfer learning could be an effective way to get started on a new challenge with domain knowledge. Moreover, contextual information such as spatial, temporal, social, environmental contexts [92, 104, 108] can also play an important role to incorporate context-aware computing with domain knowledge for smart decision making as well as building adaptive and intelligent context-aware systems. Therefore understanding domain knowledge and effectively incorporating them into the deep learning model could be another research direction. -Designing General Deep Learning Framework for Target Application Domains One promising research direction for deep learning-based solutions is to develop a general framework that can handle data diversity, dimensions, stimulation types, etc. The general framework would require two key capabilities: the attention mechanism that focuses on the most valuable parts of input signals, and the ability to capture latent feature that enables the framework to capture the distinctive and informative features. Attention models have been a popular research topic because of their intuition, versatility, and interpretability, and employed in various application areas like computer vision, natural language processing, text or image classification, sentiment analysis, recommender systems, user profiling, etc</figDesc><table><row><cell>ings, which is a major problem while discovering insights area as well as an important research direction to contrib-</cell><cell>model efficiency. According to our designed taxonomy</cell></row><row><cell>from data. Thus deep learning models also need to adapt ute.</cell><cell>of deep learning techniques, as shown in Fig. 6, genera-</cell></row><row><cell>to such rising issues in data, to capture approximated -Lightweight Deep Learning Modeling for Next-Gener-</cell><cell>tive techniques mainly include GAN, AE, SOM, RBM,</cell></row><row><cell>information from observations. Therefore, effective data ation Smart Devices and Applications: In recent years,</cell><cell>DBN, and their variants. Thus, designing new tech-</cell></row><row><cell>pre-processing techniques are needed to design accord-the Internet of Things (IoT) consisting of billions of</cell><cell>niques or their variants for an effective data modeling</cell></row><row><cell>ing to the nature of the data problem and characteristics, intelligent and communicating things and mobile com-</cell><cell>or representation according to the target real-world</cell></row><row><cell>to handling such emerging challenges, which could be munications technologies have become popular to detect</cell><cell>application could be a novel contribution, which can</cell></row><row><cell>another research direction in the area. and gather human and environmental information (e.g.</cell><cell>also be considered as a major future aspect in the area</cell></row><row><cell>-Black-box Perception and Proper DL/ML Algorithm geo-information, weather data, bio-data, human behav-</cell><cell>of unsupervised or generative learning.</cell></row><row><cell>Selection In general, it's difficult to explain how a deep iors, and so on) for a variety of intelligent services and</cell><cell>-Hybrid/Ensemble Modeling and Uncertainty Handling</cell></row><row><cell>learning result is obtained or how they get the ultimate applications. Every day, these ubiquitous smart things or</cell><cell>According to our designed taxonomy of DL techniques,</cell></row><row><cell>decisions for a particular model. Although DL models devices generate large amounts of data, requiring rapid</cell><cell>as shown in Fig 6, this is considered as another major</cell></row><row><cell>achieve significant performance while learning from data processing on a variety of smart mobile devices</cell><cell>category in deep learning tasks. As hybrid modeling</cell></row><row><cell>large datasets, as discussed in Section 2, this "black-box" [72]. Deep learning technologies can be incorporate to</cell><cell>enjoys the benefits of both generative and discrimina-</cell></row><row><cell>perception of DL modeling typically represents weak discover underlying properties and to effectively han-</cell><cell>tive learning, an effective hybridization can outperform</cell></row><row><cell>statistical interpretability that could be a major issue in dle such large amounts of sensor data for a variety of</cell><cell>others in terms of performance as well as uncertainty</cell></row><row><cell>the area. On the other hand, ML algorithms, particularly, IoT applications including health monitoring and dis-</cell><cell>handling in high-risk applications. In Section 3, we</cell></row><row><cell>rule-based machine learning techniques provide explicit ease analysis, smart cities, traffic flow prediction, and</cell><cell>have summarized various types of hybridization, e.g.,</cell></row><row><cell>logic rules (IF-THEN) for making decisions that are eas-monitoring, smart transportation, manufacture inspec-</cell><cell>AE+CNN/SVM. Since a group of neural networks is</cell></row><row><cell>ier to interpret, update or delete according to the target tion, fault assessment, smart industry or Industry 4.0,</cell><cell>trained with distinct parameters or with separate sub-</cell></row><row><cell>applications [97, 100, 105]. If the wrong learning algo-and many more. Although deep learning techniques</cell><cell>sampling training datasets, hybridization or ensem-</cell></row><row><cell>rithm is chosen, unanticipated results may occur, result-discussed in Section 3 are considered as powerful tools</cell><cell>bles of such techniques, i.e., DL with DL/ML, can</cell></row><row><cell>ing in a loss of effort as well as the model's efficacy and for processing big data, lightweight modeling is impor-</cell><cell>play a key role in the area. Thus designing effective</cell></row><row><cell>accuracy. Thus by taking into account the performance, tant for resource-constrained devices, due to their high</cell><cell>blended discriminative and generative models accord-</cell></row><row><cell>complexity, model accuracy, and applicability, selecting computational cost and considerable memory overhead.</cell><cell>ingly rather than naive method, could be an important</cell></row><row><cell>an appropriate model for the target application is chal-Thus several techniques such as optimization, simplifi-</cell><cell>research opportunity to solve various real-world issues</cell></row><row><cell>lenging, and in-depth analysis is needed for better under-cation, compression, pruning, generalization, important</cell><cell>including semi-supervised learning tasks and model</cell></row><row><cell>standing and decision making. feature extraction, etc. might be helpful in several cases.</cell><cell>uncertainty.</cell></row><row><cell>-Deep Networks for Supervised or Discriminative Learn-Therefore, constructing the lightweight deep learning</cell><cell>-Dynamism in Selecting Threshold/ Hyper-parameters</cell></row><row><cell>ing: According to our designed taxonomy of deep learn-techniques based on a baseline network architecture to</cell><cell>Values, and Network Structures with Computational Effi-</cell></row><row><cell>ing techniques, as shown in Fig. 6, discriminative archi-adapt the DL model for next-generation mobile, IoT, or</cell><cell>ciency In general, the relationship among performance,</cell></row><row><cell>tectures mainly include MLP, CNN, and RNN, along resource-constrained devices and applications, could be</cell><cell>model complexity, and computational requirements is a</cell></row><row><cell>with their variants that are applied widely in various considered as a significant future aspect in the area.</cell><cell>key issue in deep learning modeling and applications. A</cell></row><row><cell>application domains. However, designing new techniques -Incorporating Domain Knowledge into Deep Learn-</cell><cell>combination of algorithmic advancements with improved</cell></row><row><cell>or their variants of such discriminative techniques by tak-ing Modeling Domain knowledge, as opposed to general</cell><cell>accuracy as well as maintaining computational efficiency,</cell></row><row><cell>ing into account model optimization, accuracy, and appli-knowledge or domain-independent knowledge, is knowl-</cell><cell>i.e., achieving the maximum throughput while consum-</cell></row><row><cell>cability, according to the target real-world application edge of a specific, specialized topic or field. For instance,</cell><cell>ing the least amount of resources, without significant</cell></row><row><cell>and the nature of the data, could be a novel contribution, in terms of natural language processing, the properties</cell><cell>information loss, can lead to a breakthrough in the effec-</cell></row><row><cell>which can also be considered as a major future aspect in of the English language typically differ from other lan-</cell><cell>tiveness of deep learning modeling in future real-world</cell></row><row><cell>the area of supervised or discriminative learning. guages like Bengali, Arabic, French, etc. Thus integrating</cell><cell>applications. The concept of incremental approaches or</cell></row><row><cell>-Deep Networks for Unsupervised or Generative Learn-domain-based constraints into the deep learning model</cell><cell>recency-based learning [100] might be effective in sev-</cell></row><row><cell>ing As discussed in Section 3, unsupervised learning or could produce better results for such particular purpose.</cell><cell>eral cases depending on the nature of target applications.</cell></row><row><cell>generative deep learning modeling is one of the major For instance, a task-specific feature extractor considering</cell><cell>Moreover, assuming the network structures with a static</cell></row><row><cell>tasks in the area, as it allows us to characterize the domain knowledge in smart manufacturing for fault diag-</cell><cell>number of nodes and layers, hyper-parameters values or</cell></row><row><cell>high-order correlation properties or features in data, or nosis can resolve the issues in traditional deep-learning-</cell><cell>threshold settings, or selecting them by the trial-and-</cell></row><row><cell>generating a new representation of data through explor-based methods [28]. Similarly, domain knowledge in medi-</cell><cell>error process may not be effective in many cases, as it</cell></row><row><cell>atory analysis. Moreover, unlike supervised learning cal image analysis [58], financial sentiment analysis [49],</cell><cell>can be changed due to the changes in data. Thus, a data-</cell></row><row><cell>[97], it does not require labeled data due to its capa-cybersecurity analytics [94</cell><cell>driven approach to select them dynamically could be</cell></row><row><cell>bility to derive insights directly from the data as well</cell><cell>more effective while building a deep learning model in</cell></row><row><cell>as data-driven decision making. Consequently, it thus</cell><cell>terms of both performance and real-world applicability.</cell></row><row><cell>can be used as preprocessing for supervised learning</cell><cell>Such type of data-driven automation can lead to future</cell></row><row><cell>or discriminative modeling as well as semi-supervised</cell><cell>generation deep learning modeling with additional intel-</cell></row><row><cell>learning tasks, which ensure learning accuracy and</cell><cell>ligence, which could be a significant future aspect in the</cell></row></table></figure>
+		</body>
+		<back>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Declarations</head><p>Conflict of interest The author declares no conflict of interest.</p><p>Publisher's Note Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Tensorflow: a system for large-scale machine learning</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Abadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Barham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Davis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dean</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Devin</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ghemawat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Irving</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Isard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">12th {USENIX} Symposium on operating systems design and implementation ({OSDI} 16)</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="265" to="283"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Energy-net: a deep learning approach for smart energy management in iot-based smart cities</title>
+		<author>
+			<persName><forename type="first">Abdel-Basset M</forename><surname>Hawash</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Chakrabortty</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">K</forename><surname>Ryan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Internet of Things J</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Generative adversarial network: an overview of theory and applications</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aggarwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mittal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Battineni</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int J Inf Manag Data Insights</title>
+		<imprint>
+			<biblScope unit="page">100004</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Deep learning approach combining sparse autoencoder with svm for network intrusion detection</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Al-Qatf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lasheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Al-Habib</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Al</forename><forename type="middle">-</forename><surname>Sabahi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="52843" to="52856"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Deep learning based plant disease detection for smart agriculture</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sheta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2019 IEEE Globecom Workshops (GC Wkshps)</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="1" to="6"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Deep autoencoder based neural networks for coronary heart disease risk prediction</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Amarbayasgalan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">R</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">H</forename><surname>Ryu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Heterogeneous data management, polystores, and analytics for healthcare</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="237" to="248"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Big data based stock trend prediction using deep cnn with reinforcement-lstm model</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Anuradha</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int J Syst Assur Eng Manag</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="11"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Disaster management in smart cities by forecasting traffic plan using deep learning and gpus</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Aqib</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mehmood</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Albeshri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Alzahrani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on smart cities, infrastructure, technologies and applications</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="139" to="154"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Deep reinforcement learning: a brief survey</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Arulkumaran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Deisenroth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Brundage</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Bharath</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Signal Process Mag</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="26" to="38"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Cnn-based transfer learning-bilstm network: a novel approach for covid-19 infection detection</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">F</forename><surname>Aslan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">F</forename><surname>Unlersen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sabanci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Durdu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl Soft Comput</title>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="page">106912</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">A smart agriculture iot system based on deep reinforcement learning</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Bu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Futur Gener Comput Syst</title>
+		<imprint>
+			<biblScope unit="volume">99</biblScope>
+			<biblScope unit="page" from="500" to="507"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">A deep learning-based intelligent medicine recognition system for chronic patients</title>
+		<author>
+			<persName><forename type="first">W-J</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L-B</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C-H</forename><surname>Hsu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C-P</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T-C</forename><surname>Yang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="44441" to="44458"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<title level="m" type="main">An attentive survey of attention models</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Chaudhari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Mithal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Polatkan</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ramanath</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1904.02874</idno>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">On the platform but will they buy? predicting customers' purchase behavior using deep learning</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Chaudhuri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Gupta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vamsi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Bose</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Decis Support Syst</title>
+		<imprint>
+			<biblScope unit="page">113622</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Cyber security in smart cities: a review of deep learning-based applications and case studies</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Wawrzynski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Lv</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sustain Cities Soc</title>
+		<imprint>
+			<biblScope unit="page">102655</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<title level="m" type="main">Learning phrase representations using rnn encoderdecoder for statistical machine translation</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Van</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gulcehre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Bahdanau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Bougares</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Schwenk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1406.1078</idno>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Xception: Deep learning with depthwise separable convolutions</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Chollet</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the IEEE Conference on computer vision and pattern recognition</title>
+		<meeting>the IEEE Conference on computer vision and pattern recognition</meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="1251" to="1258"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<title level="m" type="main">Empirical evaluation of gated recurrent neural networks on sequence modeling</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gulcehre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">H</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1412.3555</idno>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">A gpu deep learning metaheuristic based model for time series forecasting</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">M</forename><surname>Coelho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">N</forename><surname>Coelho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Da Eduardo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Luz</forename><forename type="middle">S</forename><surname>Ochi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">S</forename><surname>Guimarães</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">G</forename><surname>Rios</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl Energy</title>
+		<imprint>
+			<biblScope unit="volume">201</biblScope>
+			<biblScope unit="page" from="412" to="418"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Recommendation system based on deep learning methods: a systematic review and new directions</title>
+		<author>
+			<persName><surname>Da'u A</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Salim</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Artif Intel Rev</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="2709" to="2748"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">A tutorial survey of architectures, algorithms, and applications for deep learning</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Deng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">APSIPA Trans Signal Inf Process</title>
+		<imprint>
+			<biblScope unit="page">3</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Deep learning: methods and applications</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dong</forename><surname>Yu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Found Trends Signal Process</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">3-4</biblScope>
+			<biblScope unit="page" from="197" to="387"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Cnn-based feature cross and classifier for loan default prediction</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jin</forename><forename type="middle">Y</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on image, video processing and artificial intelligence</title>
+		<imprint>
+			<publisher>International Society for Optics and Photonics</publisher>
+			<date type="published" when="2020">2020. 2020</date>
+			<biblScope unit="volume">11584</biblScope>
+			<biblScope unit="page">115841K</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">An intelligent chatbot using deep learning with bidirectional rnn and attention model</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Dhyani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kumar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mater Today Proc</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="817" to="824"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<author>
+			<persName><forename type="first">J</forename><surname>Donahue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Krähenbühl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Darrell</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1605.09782</idno>
+		<title level="m">Adversarial feature learning</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<monogr>
+		<title level="m" type="main">Neural networks and statistical learning</title>
+		<author>
+			<persName><forename type="first">K-L</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mns</forename><surname>Swamy</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<publisher>Springer Science &amp; Business Media</publisher>
+			<pubPlace>Berlin</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">A thorough review on the current advance of neural network structures</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dupond</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu Rev Control</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="200" to="230"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Domain knowledge-based deepbroad learning framework for fault diagnosis</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans Ind Electron</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="3454" to="3464"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Hybrid deeplearning-based anomaly detection scheme for suspicious flow detection in sdn: a social multimedia perspective</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Garg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kaur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jjpc</forename><surname>Rodrigues</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans Multimed</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="566" to="578"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<monogr>
+		<title level="m" type="main">Hands-on machine learning with Scikit-Learn, Keras. In: and TensorFlow: concepts, tools, and techniques to build intelligent systems</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Géron</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<publisher>O'Reilly Media</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<author>
+			<persName><forename type="first">I</forename><surname>Goodfellow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Courville</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+		<title level="m">Deep learning</title>
+		<meeting><address><addrLine>Cambridge</addrLine></address></meeting>
+		<imprint>
+			<publisher>MIT Press</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="volume">1</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Generative adversarial nets</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Goodfellow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Pouget-Abadie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mirza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Warde</forename><forename type="middle">-</forename><surname>Farley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ozair</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Courville</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bengio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in neural information processing systems</title>
+		<imprint>
+			<biblScope unit="page" from="2672" to="2680"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<monogr>
+		<ptr target="https://trends.google.com/trends/"/>
+		<title level="m">Google trends</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Are gru cells more specific and lstm cells more sensitive in motive classification of text?</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Gruber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jockisch</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front Artif Intell</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">40</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Automatic and robust object detection in x-ray baggage inspection using deep convolutional neural networks</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Coatrieux</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans Ind Electron</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<monogr>
+		<title level="m" type="main">Data mining: concepts and techniques</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Pei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kamber</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+			<publisher>Elsevier</publisher>
+			<pubPlace>Amsterdam</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<monogr>
+		<author>
+			<persName><forename type="first">S</forename><surname>Haykin</surname></persName>
+		</author>
+		<title level="m">Neural networks and learning machines</title>
+		<imprint>
+			<publisher>Pearson Education</publisher>
+			<date type="published" when="2010">2010</date>
+			<biblScope unit="volume">3</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Spatial pyramid pooling in deep convolutional networks for visual recognition</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sun</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans Pattern Anal Mach Intell</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="1904" to="1916"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Deep residual learning for image recognition</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sun</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the IEEE Conference on computer vision and pattern recognition</title>
+		<meeting>the IEEE Conference on computer vision and pattern recognition</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="770" to="778"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Deep belief networks</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Scholar pedia</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page">5947</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">A fast learning algorithm for deep belief nets</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Hinton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Osindero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y-W</forename><surname>Teh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="1527" to="1554"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Long short-term memory</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hochreiter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schmidhuber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="1735" to="1780"/>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">A deep cnn-lstm model for particulate matter (pm2. 5) forecasting in smart cities</title>
+		<author>
+			<persName><forename type="first">C-J</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P-H</forename><surname>Kuo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sensors</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<date type="published" when="2018">2018. 2220</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Toward rnn based micro non-verbal behavior generation for virtual listener agents</title>
+		<author>
+			<persName><forename type="first">H-H</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fukuda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Nishida</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on human-computer interaction</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="53" to="63"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Sherlock: a deep learning approach to semantic data type detection</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hulsebos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bakker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Zgraggen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Satyanarayan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kraska</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Demiralp</forename><surname>Ça</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hidalgo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 25th ACM SIGKDD International Conference on knowledge discovery &amp; data mining</title>
+		<meeting>the 25th ACM SIGKDD International Conference on knowledge discovery &amp; data mining</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="1500" to="1508"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Deep learning method for denial of service attack detection based on restricted Boltzmann machine</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Imamverdiyev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Abdullayeva</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Big Data</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="159" to="169"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">A combined deep cnn-lstm network for the detection of novel coronavirus (covid-19) using x-ray images</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Z</forename><surname>Islam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Islam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Asraf</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Inf Med Unlock</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page">100412</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Cnn-based health model for regular health factors analysis in internet-ofmedical things environment</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">N</forename><surname>Ismail</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Hassan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Alsalamah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Fortino</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE. Access</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="52541" to="52549"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Aspect-based financial sentiment analysis using deep learning</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jangid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Singhal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">R</forename><surname>Shah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Zimmermann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Companion Proceedings of the The Web Conference</title>
+		<imprint>
+			<date type="published" when="2018">2018. 2018</date>
+			<biblScope unit="page" from="1961" to="1966"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Reinforcement learning: a survey</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">P</forename><surname>Kaelbling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Littman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">W</forename><surname>Moore</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Artif Intell Res</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="237" to="285"/>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Supervised determined source separation with multichannel variational autoencoder</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kameoka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Inoue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Makino</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="1891" to="1914"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Unsupervised deep learning: a short review</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Karhunen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Raiko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">H</forename><surname>Cho</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in independent component analysis and learning machines</title>
+		<imprint>
+			<biblScope unit="page" from="125" to="142"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Deep belief network based affect recognition from physiological signals</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Kawde</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">K</forename><surname>Verma</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2017 4th IEEE Uttar Pradesh Section International Conference on electrical, computer and electronics (UPCON)</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="587" to="592"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Zero-day malware detection using transferred generative adversarial networks based on deep autoencoders</title>
+		<author>
+			<persName><forename type="first">J-Y</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Seok-Jun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S-B</forename><surname>Cho</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Inf Sci</title>
+		<imprint>
+			<biblScope unit="volume">460</biblScope>
+			<biblScope unit="page" from="83" to="102"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<monogr>
+		<title level="m" type="main">Auto-encoding variational bayes</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Kingma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Welling</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1312.6114</idno>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<monogr>
+		<title level="m" type="main">An introduction to variational autoencoders</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Kingma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Welling</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1906.02691</idno>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Dnnrec: a novel deep learning based hybrid recommender system</title>
+		<author>
+			<persName><forename type="first">Pkr</forename><surname>Kiran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Bhasker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Expert Syst Appl</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Domain-specific cues improve robustness of deep learning-based segmentation of ct volumes</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kloenne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Niehaus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Lampe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Merola</forename><forename type="middle">A</forename><surname>Reinelt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Roeder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Scherf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sci Rep</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="9"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">The self-organizing map</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kohonen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc IEEE</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="1464" to="1480"/>
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Essentials of the self-organizing map</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kohonen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Netw</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page" from="52" to="65"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">A deep learning model for air quality prediction in smart cities</title>
+		<author>
+			<persName><forename type="first">İ</forename><surname>Kök</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">U</forename><surname>Şimşek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Özdemir</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2017 IEEE International Conference on Big Data (Big Data)</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="1983" to="1990"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Imagenet classification with deep convolutional neural networks</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Krizhevsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in neural information processing systems</title>
+		<imprint>
+			<biblScope unit="page" from="1097" to="1105"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<monogr>
+		<title level="m" type="main">Transfer learning for improving speech emotion classification accuracy</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Latif</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Younis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Qadir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Epps</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1801.06353</idno>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">Deep learning</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lecun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">521</biblScope>
+			<biblScope unit="issue">7553</biblScope>
+			<biblScope unit="page" from="436" to="444"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">Gradient-based learning applied to document recognition</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lecun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bottou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Haffner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc IEEE</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="2278" to="2324"/>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<monogr>
+		<title level="m" type="main">Domain adversarial reinforcement learning</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>François-Lavet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Doan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Pineau</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2102.07097</idno>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">Cnn and lstm based facial expression analysis model for a humanoid robot</title>
+		<author>
+			<persName><forename type="first">T-Hs</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P-H</forename><surname>Kuo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T-N</forename><surname>Tsai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P-C</forename><surname>Luan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="93998" to="94011"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">A new deep learning-based food recognition system for dietary assessment on an edge computing service infrastructure</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vokkarane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yunsheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans Serv Comput</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="249" to="261"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+		<respStmt>
+			<orgName>SN Computer Science</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">A survey of deep neural network architectures and their applications</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Zeng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">E</forename><surname>Alsaadi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurocomputing</title>
+		<imprint>
+			<biblScope unit="volume">234</biblScope>
+			<biblScope unit="page" from="11" to="26"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title level="a" type="main">Analysis of computer user behavior, security incidents and fraud using self-organizing maps</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">U</forename><surname>López</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Mateo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Navío-Marco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Martínez-Martínez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gómez-Sanchís</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Vila-Francés</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Serrano-López</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comput Secur</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="page" from="38" to="51"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title level="a" type="main">Application of deep reinforcement learning to intrusion detection for supervised problems</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lopez-Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Carro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sanchez-Esguevillas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Expert Syst Appl</title>
+		<imprint>
+			<biblScope unit="volume">141</biblScope>
+			<biblScope unit="page">112963</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<title level="a" type="main">A survey on deep learning empowered iot applications</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Menglan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="181721" to="181732"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><surname>Makhzani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Frey</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1312.5663</idno>
+		<title level="m">K-sparse autoencoders</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<monogr>
+		<title level="m" type="main">Recurrent neural networks for prediction: learning algorithms, architectures and stability</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Mandic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chambers</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2001">2001</date>
+			<publisher>Wiley</publisher>
+			<pubPlace>Hoboken</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<analytic>
+		<title level="a" type="main">Inductive principles for restricted boltzmann machine learning</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Marlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Swersky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Freitas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Thirteenth International Conference on artificial intelligence and statistics</title>
+		<title level="s">JMLR Workshop and Conference Proceedings</title>
+		<meeting>the Thirteenth International Conference on artificial intelligence and statistics</meeting>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+			<biblScope unit="page" from="509" to="516"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b75">
+	<analytic>
+		<title level="a" type="main">Deep learning-based intelligent face recognition in iot-cloud environment</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Masud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Muhammad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Alhumyani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Alshamrani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Cheikhrouhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ibrahim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Hossain</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comput Commun</title>
+		<imprint>
+			<biblScope unit="volume">152</biblScope>
+			<biblScope unit="page" from="215" to="222"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b76">
+	<analytic>
+		<title level="a" type="main">Learning to represent spatial transformations with factored higher-order boltzmann machines</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Memisevic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="1473" to="1492"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b77">
+	<monogr>
+		<author>
+			<persName><forename type="first">S</forename><surname>Minaee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Azimi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Abdolrashidi</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1904.04206</idno>
+		<title level="m">Deep-sentiment: ment analysis using ensemble of cnn and bi-lstm models</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b78">
+	<analytic>
+		<title level="a" type="main">A reinforcement learning and deep learning based intelligent system for the support of impaired patients in home treatment</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Naeem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Paragliola</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Coronato</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Expert Syst Appl</title>
+		<imprint>
+			<biblScope unit="volume">168</biblScope>
+			<biblScope unit="page">114285</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b79">
+	<analytic>
+		<title level="a" type="main">A review on the attention mechanism of deep learning</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Niu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Zhong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hui</forename><surname>Yu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurocomputing</title>
+		<imprint>
+			<biblScope unit="volume">452</biblScope>
+			<biblScope unit="page" from="48" to="62"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b80">
+	<analytic>
+		<title level="a" type="main">A survey on transfer learning</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Yang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans Knowl Data Eng</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="1345" to="1359"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b81">
+	<analytic>
+		<title level="a" type="main">Pytorch: An imperative style, high-performance deep learning library</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Paszke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Gross</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Massa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Lerer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bradbury</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Chanan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Killeen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Gimelshein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Antiga</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv Neural Inf Process Syst</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="8026" to="8037"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b82">
+	<analytic>
+		<title level="a" type="main">Scikit-learn: machine learning in python</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Pedregosa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Varoquaux</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gramfort</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Michel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Thirion</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Grisel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Blondel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Prettenhofer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Weiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Dubourg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Mach Learn Res</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="2825" to="2830"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b83">
+	<analytic>
+		<title level="a" type="main">Convolutional neural networks for object detection in aerial imagery for disaster response and recovery</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Pi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">D</forename><surname>Nath</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">H</forename><surname>Behzadan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv Eng Inf</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="page">101009</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b84">
+	<analytic>
+		<title level="a" type="main">Predictive analytics for smart parking: A deep learning approach in forecasting of iot data</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Piccialli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Giampaolo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Prezioso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Crisci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Cuomo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACM Trans Internet Technol (TOIT)</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1" to="21"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b85">
+	<monogr>
+		<title level="m" type="main">Markov decision processes: discrete stochastic dynamic programming</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Puterman</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<publisher>Wiley</publisher>
+			<pubPlace>Hoboken</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b86">
+	<analytic>
+		<title level="a" type="main">A survey on the development of self-organizing maps for unsupervised intrusion detection</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Qu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Linru</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Meng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Mingxing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Mu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Editors</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mob Netw Appl</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="22"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b87">
+	<analytic>
+		<title level="a" type="main">The architectural design of smart blind assistant using iot with deep learning paradigm</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">W</forename><surname>Rahman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Tashfia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Islam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Hasan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">I</forename><surname>Sultan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Rahman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Internet of Things</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page">100344</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b88">
+	<analytic>
+		<title level="a" type="main">From traditional to deep learning: fault diagnosis for autonomous vehicles</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Green</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Huang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Learning control</title>
+		<imprint>
+			<publisher>Elsevier</publisher>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="205" to="219"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b89">
+	<analytic>
+		<title level="a" type="main">Contractive auto-encoders: Explicit invariance during feature extraction</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rifai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Vincent</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Muller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Glorot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Icml</title>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b90">
+	<analytic>
+		<title level="a" type="main">A knowledge-based recommendation system that includes sentiment analysis and deep learning</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Rosa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Schwartz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">V</forename><surname>Ruggiero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">Z</forename><surname>Rodríguez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans Ind Inf</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="2124" to="2135"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b91">
+	<analytic>
+		<title level="a" type="main">Context-aware rule learning from smartphone data: survey, challenges and future directions</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Sarker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Big Data</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="25"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b92">
+	<analytic>
+		<title level="a" type="main">A machine learning based robust prediction model for real-life mobile phone data</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Sarker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Internet of Things</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="180" to="193"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b93">
+	<analytic>
+		<title level="a" type="main">Cyberlearning: effectiveness analysis of machine learning security modeling to detect cyber-anomalies and multiattacks</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Sarker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Internet of Things</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">100393</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b94">
+	<analytic>
+		<title level="a" type="main">Data science and analytics: an overview from datadriven smart computing, decision-making and applications perspective</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Sarker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">SN Comput Sci</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b95">
+	<analytic>
+		<title level="a" type="main">Deep cybersecurity: a comprehensive overview from neural network and deep learning perspective</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Sarker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">SN Computer. Science</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1" to="16"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b96">
+	<analytic>
+		<title level="a" type="main">Machine learning: Algorithms, real-world applications and research directions</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Sarker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">SN Computer. Science</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1" to="21"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b97">
+	<analytic>
+		<title level="a" type="main">Intrudtree: a machine learning based cyber security intrusion detection model</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Sarker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">B</forename><surname>Abushark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Alsolami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Khan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Symmetry</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page">754</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b98">
+	<analytic>
+		<title level="a" type="main">Contextpca: Predicting context-aware smartphone apps usage based on machine learning techniques</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Sarker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">B</forename><surname>Abushark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Khan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Symmetry</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page">100</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b99">
+	<analytic>
+		<title level="a" type="main">Recencyminer: mining recencybased personalized behavior from contextual smartphone data</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Sarker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Colman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Han</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Big Data</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">101</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b100">
+	<analytic>
+		<title level="a" type="main">Behavdt: a behavioral decision tree learning to build usercentric context-aware predictive model</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Sarker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Colman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Khan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">B</forename><surname>Abushark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Salah</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mob Netw Appl</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">102</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b101">
+	<analytic>
+		<title level="a" type="main">Individualized timeseries segmentation for mining mobile phone user behavior</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Sarker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Colman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Kabir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Han</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comput J</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">103</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b102">
+	<analytic>
+		<title level="a" type="main">Ai-driven cybersecurity: an overview, security intelligence modeling and research directions</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Sarker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Furhad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Nowrozy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">SN Computer. Science</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">104</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b103">
+	<analytic>
+		<title level="a" type="main">Mobile data science and intelligent apps: concepts, ai-based modeling and research directions</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Sarker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Hoque</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">K</forename><surname>Uddin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mob Netw Appl</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">105</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b104">
+	<analytic>
+		<title level="a" type="main">Abc-ruleminer: User behavioral rulebased machine learning method for context-aware intelligent services</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Sarker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Asm</forename><surname>Kayes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Netw Comput Appl</title>
+		<imprint>
+			<biblScope unit="volume">168</biblScope>
+			<biblScope unit="page">106</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b105">
+	<analytic>
+		<title level="a" type="main">Cybersecurity data science: an overview from machine learning perspective</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Sarker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Asm</forename><surname>Kayes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Badsha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Alqahtani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Watters</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Big data</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">107</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b106">
+	<analytic>
+		<title level="a" type="main">Effectiveness analysis of machine learning classification models for predicting personalized context-aware smartphone usage</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Sarker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Asm</forename><surname>Kayes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Watters</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Big Data</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">108</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b107">
+	<analytic>
+		<title level="a" type="main">Appspred: predicting context-aware smartphone apps using random forest learning</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Sarker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Salah</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Internet of Things</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="100106" to="100109"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b108">
+	<analytic>
+		<title level="a" type="main">Efficient emotion recognition from speech using deep learning on spectrograms</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Satt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rozenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Hoory</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Interspeec</title>
+		<imprint>
+			<biblScope unit="page">110</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b109">
+	<analytic>
+		<title level="a" type="main">Transfer learning for molecular cancer classification using deep neural networks</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">K</forename><surname>Sevakula</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">K</forename><surname>Verma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Cui</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE/ACM Trans Comput Biol Bioinf</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page">111</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b110">
+	<monogr>
+		<author>
+			<persName><forename type="first">Sujay</forename><surname>Narumanchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ananya</forename><surname>Pramod</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kompalli</forename><surname>Shankar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Devashish</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">K</forename></persName>
+		</author>
+		<idno type="arXiv">arXiv:1703.02344</idno>
+		<idno>. 112</idno>
+		<title level="m">Deep learning based large scale visual recommendation and search for e-commerce</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b111">
+	<analytic>
+		<title level="a" type="main">Multi-step short-term power consumption forecasting using multi-channel lstm with time location considering customer behavior</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Shao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Kim</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">113</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b112">
+	<analytic>
+		<title level="a" type="main">The performance of lstm and bilstm in forecasting time series</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Siami-Namini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Tavakoli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Namin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2019 IEEE International Conference on Big Data (Big Data)</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="17" to="115"/>
+		</imprint>
+	</monogr>
+	<note>are we ready? Pol J Manag Stud. 2018</note>
+</biblStruct>
+
+<biblStruct xml:id="b113">
+	<analytic>
+		<title level="a" type="main">Soil monitoring and evaluation system using edl-asqe: enhanced deep learning model for ioi smart agriculture network</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Sumathi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Subramanian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">V</forename><surname>Karthikeyan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Karthik</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int J Commun Syst</title>
+		<imprint>
+			<biblScope unit="page">116</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b114">
+	<analytic>
+		<title level="a" type="main">Going deeper with convolutions</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Szegedy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Jia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Sermanet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Reed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Anguelov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Erhan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vanhoucke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rabinovich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the IEEE Conference on computer vision and pattern recognition</title>
+		<meeting>the IEEE Conference on computer vision and pattern recognition</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page">117</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b115">
+	<analytic>
+		<title level="a" type="main">A survey deep transfer learning</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on artificial neural networks</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">118</biblScope>
+			<biblScope unit="page" from="270" to="279"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b116">
+	<analytic>
+		<title level="a" type="main">Clustering of the self-organizing map</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Vesanto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Alhoniemi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans Neural Netw</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">119</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b117">
+	<analytic>
+		<title level="a" type="main">Stacked denoising autoencoders: Learning useful representations in a deep network with a local denoising criterion</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Vincent</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Larochelle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Lajoie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P-A</forename><surname>Manzagol</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bottou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Mach Learn Res</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page">120</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b118">
+	<analytic>
+		<title level="a" type="main">Tree-structured regional cnn-lstm model for dimensional sentiment analysis</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Liang-Chih</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Robert</forename><surname>Lai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE/ACM Trans Audio Speech Lang Process</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page">121</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b119">
+	<analytic>
+		<title level="a" type="main">Knowledge reasoning with semantic data for real-time data processing in smart factory</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wan</forename><forename type="middle">J</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sensors</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="471" to="122"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b120">
+	<analytic>
+		<title level="a" type="main">Effective android malware detection with a hybrid model based on deep autoencoder and convolutional neural network</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Ambient Intell Humaniz Comput</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page">123</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b121">
+	<analytic>
+		<title level="a" type="main">A realtime collision prediction mechanism with deep learning for intelligent transportation system</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Qiu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Chaoxu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Zhou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans Veh Technol</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page">124</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b122">
+	<analytic>
+		<title level="a" type="main">Attention-based lstm for aspect-level sentiment classification</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2016 Conference on empirical methods in natural language processing</title>
+		<meeting>the 2016 Conference on empirical methods in natural language processing</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page">125</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b123">
+	<analytic>
+		<title level="a" type="main">An optimization method for intrusion detection classification model based on deep belief network</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">126</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b124">
+	<analytic>
+		<title level="a" type="main">A survey of transfer learning</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Weiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Khoshgoftaar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">D</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Big data</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="9" to="127"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b125">
+	<analytic>
+		<title level="a" type="main">Machine learning and deep learning methods for cybersecurity</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Kong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ieee access</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">128</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b126">
+	<analytic>
+		<title level="a" type="main">New attacks on rnn based healthcare learning system and their detections</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Chuah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Thirty-First AAAI Conference on artificial intelligence</title>
+		<imprint>
+			<date type="published" when="2017">2017. 2018</date>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">130</biblScope>
+		</imprint>
+	</monogr>
+	<note>Variational autoencoder for semisupervised text classification</note>
+</biblStruct>
+
+<biblStruct xml:id="b127">
+	<analytic>
+		<title level="a" type="main">Text summarization using unsupervised deep learning</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yousefi-Azar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Hamey</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Expert Syst Appl</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page">131</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b128">
+	<analytic>
+		<title level="a" type="main">A review of deep learning methods for semantic segmentation of remote sensing imagery</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Yuan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Gu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Expert Syst Appl</title>
+		<imprint>
+			<biblScope unit="page" from="114417" to="114132"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b129">
+	<analytic>
+		<title level="a" type="main">A survey of autoencoder-based recommender systems</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jin</forename><forename type="middle">X</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front Comput Sci</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">133</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b130">
+	<monogr>
+		<title level="m" type="main">Multi-modality sensor data classification with selective attention</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Long</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1804.05493</idno>
+		<idno>. 134</idno>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b131">
+	<monogr>
+		<title level="m" type="main">A survey on deep learning based brain computer interface: recent advances and new frontiers</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Monaghan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Mcalpine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1905.04149</idno>
+		<idno>66. 135</idno>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b132">
+	<monogr>
+		<title level="m" type="main">Attention-based lstm with multi-task learning for distant speech recognition</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yan</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<publisher>Interspeech</publisher>
+			<biblScope unit="page" from="3857" to="3861"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

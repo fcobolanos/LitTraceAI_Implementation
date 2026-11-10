@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">On the Use of Anisotropic Covariance Models in Estimating Atmospheric DInSAR Contributions</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Alberto</forename><surname>Refice</surname></persName>
+							<email>refice@ba.issia.cnr.it</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Nazionale delle Ricerche</orgName>
+								<orgName type="department" key="dep2">Istituto di Studi sui Sistemi Intelligenti</orgName>
+								<orgName type="institution">per l'Automazione</orgName>
+								<address>
+									<postCode>70126</postCode>
+									<settlement>Bari</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Antonella</forename><surname>Belmonte</surname></persName>
+							<email>belmonte@ba.issia.cnr.it</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Nazionale delle Ricerche</orgName>
+								<orgName type="department" key="dep2">Istituto di Studi sui Sistemi Intelligenti</orgName>
+								<orgName type="institution">per l'Automazione</orgName>
+								<address>
+									<postCode>70126</postCode>
+									<settlement>Bari</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fabio</forename><surname>Bovenga</surname></persName>
+							<email>bovenga@ba.issia.cnr.it</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Nazionale delle Ricerche</orgName>
+								<orgName type="department" key="dep2">Istituto di Studi sui Sistemi Intelligenti</orgName>
+								<orgName type="institution">per l'Automazione</orgName>
+								<address>
+									<postCode>70126</postCode>
+									<settlement>Bari</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Guido</forename><surname>Pasquariello</surname></persName>
+							<email>pasquariello@ba.issia.cnr</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Nazionale delle Ricerche</orgName>
+								<orgName type="department" key="dep2">Istituto di Studi sui Sistemi Intelligenti</orgName>
+								<orgName type="institution">per l'Automazione</orgName>
+								<address>
+									<postCode>70126</postCode>
+									<settlement>Bari</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">On the Use of Anisotropic Covariance Models in Estimating Atmospheric DInSAR Contributions</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">4081B5AECF1A428D703E22EEEF202866</idno>
+					<idno type="DOI">10.1109/LGRS.2010.2073440</idno>
+					<note type="submission">Manuscript received January 29, 2010; revised June 3, 2010 and July 20, 2010; accepted August 19, 2010. Date of publication October 18, 2010; date of current version February 25, 2011.</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-09-01T12:20+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Atmospheric phase screen (APS) estimation</term>
+					<term>persistent scatterer interferometry (PSI)</term>
+					<term>synthetic aperture radar interferometry</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Stochastic models are often used to describe the spatial structure of atmospheric phase delays in differential interferometric synthetic aperture radar (DInSAR) data. Synthetic aperture radar interferograms often exhibit anisotropic atmospheric signals. In view of this, the use of anisotropic models for atmospheric phase estimation is increasingly advocated. However, anisotropic models lead to increased computational complexity in estimating the correlation function parameters with respect to the isotropic case. Moreover, the performance is degraded when dealing with DInSAR techniques involving only a few sparse points usable for computations, as in the case of persistent scatterer interferometry applications, particularly when this estimation has to be done in an automated way on many interferograms. In the present work, we propose some observations about the actual advantage given by anisotropic modeling of atmospheric phase in the case of sparse-grid point-target DInSAR applications. Through analysis of simulated data, we observe that an improvement in the performances of kriging reconstruction approaches can be obtained only when sufficient sampling densities are available. In critical sampling conditions, automated methods with reasonable computational cost may improve their performance if external information on the atmospheric phase screen field is available.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>S TOCHASTIC modeling of atmospheric phase screen (APS) contributions in synthetic aperture radar (SAR) interferograms is paramount in quantitative applications, such as surface displacement mapping <ref type="bibr" target="#b0">[1]</ref>- <ref type="bibr" target="#b2">[3]</ref>. Interferometric synthetic aperture radar (InSAR) APS maps often show evident spatial anisotropy, so including this feature in APS modeling is considered important <ref type="bibr" target="#b3">[4]</ref>. The concept of anisotropy is usually quantified by meaning that estimates of spatial variance, such as those obtained through the variogram function, exhibit significant differences when estimated along different directions. Extending a given model of spatial variance to a form which includes geometric anisotropy consists basically in adding a pair of parameters to the isotropic model, controlling the amount and direction of the anisotropy.</p><p>Among InSAR applications, that known as persistent scatterer interferometry (PSI) allows high-precision monitoring of temporal displacement trends through analysis of stable targets in a series of SAR interferograms. In PSI, APS contributions are estimated by filtering over selected pixels containing stable radar targets, and then, a regular-grid APS field is interpolated over the entire investigated area, to remove it from the data and allow more PS targets to be recognized. The interpolation is usually best performed through statistically sound methods such as kriging, which benefit from the definition of analytical models for the spatial variance of the field to be interpolated <ref type="bibr" target="#b4">[5]</ref>. Using accurate models to describe spatial variation of APS fields seems thus desirable to improve the performances of PSI systems.</p><p>In this letter, we propose some observations on the real advantages involved in using anisotropic APS models with respect to simpler isotropic models in point-target differential interferometric synthetic aperture radar applications. Performances of an automated kriging reconstruction algorithm on a series of simulated surfaces are evaluated with respect to the covariance model type (isotropic versus anisotropic), as a function of the sampling point density. We show that, for low signal anisotropy and/or low target densities, more complex models may give little or no advantage with respect to simpler ones, unless recurring to advanced parameter fitting methods usually involving high computational loads or external information. This letter is organized as follows. In Section II, the main concepts and terminology connected with the modeling of anisotropy in spatial random fields and their application to APS modeling in SAR interferometry are briefly reviewed. In Section III, the analysis of simulated APS fields is described. Finally, in Section IV, some conclusions are drawn.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. PROBLEM STATEMENT</head><p>For a formal and complete introduction to the spatial correlation of random fields, the reader is referred to texts such as <ref type="bibr" target="#b4">[5]</ref> and <ref type="bibr" target="#b5">[6]</ref>. We consider a regionalized variable z(r) = z(x, y) in R 2 , for which (intrinsic) second-order stationarity can be assumed, so that the variance of increments z(r + h)z(r) is stationary and can be modeled through a variogram function</p><formula xml:id="formula_0">V (h) = 1/2E[z(r) -z(r + h)] 2 , with E[•] indicating expec- tation.</formula><p>If the field satisfies strictly the second-order stationarity assumption, then its auto-covariance function can be also defined as</p><formula xml:id="formula_1">C(h) = E[z(r)z(r + h)] and related to the variogram through C(h) = C(0) -V (h).</formula><p>If the variance of increments depends only on the lag magnitude h, then the variogram function V (h) and, if existing, the covariance function C(h) are said to be spatially isotropic. Otherwise, the model is anisotropic. Here, we consider the simplest form of variogram anisotropy, termed geometric anisotropy, in which one single parameter (the range) is considered to vary with the estimation direction. This is usually sufficient to satisfactorily model the anisotropy in smoothly varying fields such as InSAR atmospheric delay.</p><p>An anisotropic version of a variogram model V can be constructed by allowing for a generic elliptical deformation and rotation of the axes along which h is measured according to</p><formula xml:id="formula_2">V (h) = V (S • R • h)<label>(1)</label></formula><p>where</p><formula xml:id="formula_3">S = √ δ 0 0 1/ √ δ R = cos θ sin θ -sin θ cos θ . (<label>2</label></formula><formula xml:id="formula_4">)</formula><p>The parameters δ and θ quantify the anisotropy of the field, i.e., they model the affine transformation-an axis deformation followed by a rotation-necessary to bring the V variogram to the isotropic form V .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Modeling APS InSAR Signals</head><p>In <ref type="bibr" target="#b0">[1]</ref>, the various atmospheric phase contributions which can be expected in a SAR interferogram are thoroughly described. The most important one for the study of local ground movements is the component due to spatial inhomogeneities in the water-vapor content of the air. Tropospheric water vapor spatial variation can be interpreted in terms of the Kolmogorov turbulence theory. The Matérn variogram model family has been shown to be a viable tool to describe Kolmogorov's turbulence phenomena <ref type="bibr" target="#b6">[7]</ref>. It can be written as <ref type="bibr" target="#b7">[8]</ref> </p><formula xml:id="formula_5">V (h) = N + S • 1 - 2 1-α Γ(α) • 2 √ αh L α • K α 2 √ αh L (<label>3</label></formula><formula xml:id="formula_6">)</formula><p>where K α is the modified Bessel function of the second kind of order α. The model parameters are the nugget N , the sill S, the range L, and the "model index" parameter α. The Matérn function can be thought of as a class of spatial variation models, which includes, for example, the exponential model (for α = 1/2) and the Gaussian (for α → ∞).</p><p>It can be extended to the anisotropic form using ( <ref type="formula" target="#formula_2">1</ref>) and ( <ref type="formula" target="#formula_3">2</ref>), adding δ and θ to the model parameters. As mentioned in the introduction, real APS fields often clearly exhibit anisotropic characteristics, which has led to consider the use of anisotropic variograms as suitable descriptive tools <ref type="bibr" target="#b3">[4]</ref>. As an example, we show in Fig. <ref type="figure" target="#fig_0">1</ref>(a) and (b) two ERS-1/2 satellite tandem differential interferograms. Topographic contributions have been removed using digital elevation data from the SRTM. The SAR data are acquired over a flat region in southern Italy, thus contributions from the stratified component of tropospheric phase delay <ref type="bibr" target="#b0">[1]</ref> are likely to be negligible. The one-day revisit time interval also ensures that displacements between the two acquisitions can be ruled out. It can therefore be assumed that the whole interferometric signal is that due to tropospheric inhomogeneities. Data have been multilooked with a factor of 2 × 10 (range × azimuth), which ensures practically squared pixel dimensions on the ground (∼ 40 × 40 m 2 ), and the differential phase has been unwrapped <ref type="bibr" target="#b8">[9]</ref>.</p><p>In  Two-dimensional variograms are also shown in panels (e) and (f), respectively, obtained from the 2-D version of the classical estimator</p><formula xml:id="formula_7">V (h) = 1 2|N h | N h [z(r ) -z(r)] 2 (4)</formula><p>where r and r are two generic position vectors and N h = {(rr)|(rr) h}, with the sign meaning equality within a certain tolerance, i.e., in practice, distance vectors are binned in discrete intervals. |N h | is the number of elements in N h . Geostatistics prescribes the use of anisotropic models when variograms computed along different directions show significant differences, as is the case of Fig. <ref type="figure" target="#fig_0">1</ref>.</p><p>Estimating parameters for anisotropic versions of a given model involves higher complexity with respect to the isotropic case. For low numbers of available estimation points, this may lead to errors in APS reconstruction, which may partly jeopardize the advantage given by a potentially more flexible description. It seems thus interesting to compare, in limited point sampling conditions, estimation procedures to fit experimental variograms to anisotropic and isotropic model versions.</p><p>In the following, we investigate these points, proposing some observations about the performance of estimation and reconstruction algorithms based on simulations. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. SIMULATION ANALYSIS</head><p>Synthetic random surfaces with prescribed spatial autocovariance function can be generated, for example, through spectral filtering methods, exploiting the Wiener-Khintchine theorem <ref type="bibr" target="#b9">[10]</ref>, as in <ref type="bibr" target="#b10">[11]</ref>. We generated three series of 500 synthetic surfaces of size 100 × 100, obeying the Matérn variogram model, with fixed parameters N , S, L, α, δ, and θ. The first series is isotropic (δ = 1), the second is slightly anisotropic (δ = 2 and random orientations θ uniformly distributed in the interval [-π, π)), and the third is strongly anisotropic (δ = 10 and again random orientation angles). Reconstruction experiments have then been performed systematically on all these synthetic surfaces, starting from limited numbers of surface samples selected at random positions. For each of the simulated surfaces, variogram parameters for the Matérn model have been fitted through weighted nonlinear least squares (WNLS) to experimental variograms obtained from the samples. Then, the surfaces have been reconstructed through universal kriging interpolation, using a moving neighborhood approach with a fixed number of neighbors (a suitable methodology in our uniform sampling conditions <ref type="bibr" target="#b5">[6]</ref>). In the following, we analyze these reconstruction experiments as a function of sampling density, which can have a dramatic effect on the performance of variogram parameter estimation.</p><p>Note that, for ERS sampling conditions at full resolution (single-look images), a density of points of 1% corresponds to about 100 pixels per km 2 . In the case of PSI applications, such a density of PS targets corresponds to conditions typical of urban environments <ref type="bibr" target="#b11">[12]</ref>, whereas for low urbanization areas, much lower values are typically observed <ref type="bibr" target="#b12">[13]</ref>. Higher densities, up to several percents, have been observed on urban areas from higher resolution TerraSAR-X (TSX) <ref type="bibr" target="#b13">[14]</ref> or COSMO/SkyMed (CSK) data; this is a huge increase in ground spatial density, considering that for a full-resolution TSX or CSK stripmap image with ground spacing about 3 × 3 m 2 , 1% sampling corresponds to about 1000 pixels per km 2 .</p><p>Variogram model fitting in general can be a hard problem <ref type="bibr" target="#b7">[8]</ref>. Reliable and convincing estimates of the parameters of an assumed model can be often obtained on real data only through the use of elaborated and costly procedures <ref type="bibr" target="#b3">[4]</ref>. In this letter, we analyze simulated data for which the variogram model is decided a priori. In this case, an automated fitting procedure such as WNLS gives parameters close to the simulated ones, when many points are used for the estimation. To guide the fit, a weighting scheme proportional to the bin population has been used <ref type="bibr" target="#b4">[5]</ref>. It should be noted that, within the specific field of PSI applications, APS raster field modeling and interpolation has to be performed typically for each acquisition of a time series of several tens of images <ref type="bibr" target="#b11">[12]</ref>; recent applications extend the analysis to multiframe data sets easily reaching thousands of images <ref type="bibr" target="#b14">[15]</ref>. Therefore, the emphasis is posed over reconstruc-tion methods which can work in an automated way, with as little operator intervention as possible, to avoid excessive processing times. In this respect, the WNLS fit is a straightforward and common choice <ref type="bibr" target="#b7">[8]</ref>.</p><p>Fig. <ref type="figure" target="#fig_2">2</ref> reports the results of the simulation experiments. The average root-mean squared error (RMSE) of reconstruction, normalized by the surface variances, is plotted for the isotropic, slightly, and strongly anisotropic surfaces data sets, in the left, middle, and right plots, respectively. In each plot, results of the parameter estimation and kriging using both the isotropic and anisotropic variogram models are reported. As expected, all curves show a decreasing trend as the sampling density is increased. From the figure, it can be seen that the RMSE values of the reconstructed surfaces stay slightly lower when adopting isotropic rather than anisotropic models, as long as low anisotropy surfaces are considered (δ = 1 or δ = 2). In the second case, differences tend to fade as sampling density increases. When considering stronger anisotropies, an advantage can be seen in using the anisotropic models. This fades gradually to zero as the point sampling density decreases to about 0.5%.</p><p>In Figs. <ref type="figure" target="#fig_3">3</ref> and<ref type="figure" target="#fig_4">4</ref>, we show two illustrative examples of reconstruction of these simulated surfaces. In the first one (Fig. <ref type="figure" target="#fig_3">3</ref>, original surface simulated with δ = 10), the reconstruction at 5% sampling appears more similar to the original using the (panel h) anisotropic model than the (isotropic) omnidirectional one (panel b); this is confirmed by the normalized RMSE values calculated on the surfaces, 0.53 versus 0.60, respectively. In lower sampling conditions (2% density), the surface reconstructed through the anisotropic model (i) looks similar to the one obtained by using the isotropic model (c), although it is still a better approximation to the original in terms of the normalized RMSE (0.78 versus 0.88). In the second example, which refers to a slightly anisotropic original surface (Fig. <ref type="figure" target="#fig_4">4</ref>, δ = 2), with a 10% sampling rate, the reconstruction appears good with both (panel b) isotropic and (panel h) anisotropic models, which give closely comparable results (normalized RMSE = 0.46 versus 0.44). If sampling is reduced to 3%, instead, the low number of available points causes the anisotropic model to give unreliable results (i), which results in a reconstruction which is slightly worse than that obtained using the isotropic model (c) (RMSE 0.65 versus 0.61). Panels (g), (d-f), and (j-l) in both Figs. <ref type="figure" target="#fig_3">3</ref> and<ref type="figure" target="#fig_4">4</ref> show the isotropic and anisotropic experimental and fitted analytical variograms for the sample simulated surfaces in the two cases. The high sensitivity of the anisotropic models to the point sampling density can be noted, particularly regarding the anisotropy parameters [Fig. <ref type="figure" target="#fig_4">4(l)]</ref>.</p><p>The degradation of model fit parameters as sampling density gets lower can be appreciated by looking at the values in Table <ref type="table" target="#tab_0">I</ref>. Here, the WNLS fit parameters for the surface analyzed in Fig. <ref type="figure" target="#fig_4">4</ref> are shown as the sampling rate   decreases from 100 to 0.5%. The decrease in accuracy, particularly for the anisotropy parameters, and the corresponding increase in normalized RMSE can be noticed. To interpret the preceding results, the following observations can be made.</p><p>1) Estimating the experimental variogram in a 2-D domain to discriminate anisotropy requires more sampling points than using an isotropic model, given a certain lag bin width. Consequently, given a fixed number of sampling points, estimates of model parameters from lower-dimensional models are expected to be more robust than those obtained from higher-dimensional estimates. 2) By construction, the anisotropy parameters δ and θ are better estimated "away from the origin," i.e., from variogram samples with large distance values. The rest of the model parameters, instead, which are the same involved in the isotropic form, have more influence close to the origin <ref type="bibr" target="#b15">[16]</ref>. Consequently, weighting schemes suited for estimating anisotropy parameters should assign significant weights to the samples at large distances and appear less suited to estimate the rest of the parameters, for which more emphasis to the estimates close to the origin should be given. This dichotomy can lead to errors in estimates of either type of parameters regardless of the analytical model adopted.</p><p>In summary, then, the reliability of parameter estimation, which is higher for simpler isotropic models, seems to overcome the advantages given by more flexible anisotropic models, which could in principle describe the data more accurately, in conditions of low anisotropy and/or low sampling point densities. To further illustrate the influence of a priori Fig. <ref type="figure">5</ref>. Effect of a priori information in least squares variogram fit and surface reconstruction. Plots refer to the same surfaces as in the bottom panel of Fig. <ref type="figure" target="#fig_2">2</ref>, reconstructed via isotropic and anisotropic variogram models. Anisotropic model fitting has been performed acting on all the six parameters (dashed line) on only five parameters (with α fixed to its simulated value, dash-dotted line), and on four parameters (with δ and θ fixed, dotted line). information, we performed additional WNLS fitting experiments on the strongly anisotropic simulated surfaces, by keeping some parameters of the Matérn model fixed to their "true" (simulated) value. Fig. <ref type="figure">5</ref> reports RMSE results for the cases in which either α or the anisotropy δ and θ parameters are kept fixed. These are compared to the completely free fit case (all six parameters) and to the isotropic model cases, as in the right panel of Fig. <ref type="figure" target="#fig_2">2</ref>. In the case of known α, there seems to be no significant improvement in the RMSE reconstruction error within the measurement errors. An appreciable improvement is found instead when the anisotropy parameters are known. In this case, performances of anisotropic model kriging become better than those of the isotropic model, for all the simulated point densities with a gain in normalized RMSE of about 0.05.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. CONCLUSION</head><p>Some observations related to the use of anisotropic models for InSAR APS modeling and reconstruction have been proposed, with particular reference to their use in persistent scatterer interferometry applications. We have shown, through simulations, that anisotropic variogram models can better represent the strongly anisotropic APS fields, provided that sufficient densities of sampling points are available. This is hardly the case with medium-resolution sensors such as ERS or ENVISAT, while it may become a viable solution with high-resolution sensors such as TerraSAR-X or COSMO/ SkyMed which promise much higher stable target densities. When dealing with low anisotropies or sampling densities up to a few percent of the available pixels, WNLS fit procedures can perform poorly when used with anisotropic models, due both to the increased size of the parameter state space and the increased computational complexity connected with estimating parameters. Different estimation methods than the WNLS fit, for example, restricted maximum likelihood <ref type="bibr" target="#b16">[17]</ref> or a precursory simulated annealing approach as applied in <ref type="bibr" target="#b3">[4]</ref> could be considered to improve the model parameter estimation procedure, although the much higher computational load makes these solutions less appealing when dealing with large data sets. Reasonable bounds for anisotropy parameter to guide the fitting (derived from a priori information) or external information introduced, e.g., by the output of meteorological models <ref type="bibr" target="#b17">[18]</ref>, could be used to improve the performances of automated APS parameter estimation procedures for sparse-point applications.</p><p>Further promising research could also concern the influence of point clustering and other point-process descriptors on APS reconstruction performances and thus eventually on the entire PSI detection chain.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 ,</head><label>1</label><figDesc>directional variograms, estimated by restricting the classical scalar estimator to discrete direction intervals, as well as omnidirectional variograms are shown in panels (c) and (d), referring to the interferograms in (a) and (b), respectively.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. ERS-1/2 unwrapped tandem differential interferograms and corresponding variograms. (a)-(b) Interferograms acquired on July 23-24, 1995, and March 24-25, 1996, respectively; color is proportional to absolute phase; multilook factor is 2 × 10 (range × azimuth). (c)-(d) Directional variograms of the interferogram in (a)-(b), respectively (reported angles are measured counterclockwise relative to increasing range direction). (e)-(f) Twodimensional variograms of the interferogram in (a) and (b), respectively estimated over pixels with high coherence.</figDesc><graphic coords="2,305.95,70.26,249.96,292.44" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 2. Average RMSE error in the reconstruction of simulated surfaces with Matérn model covariance function. Plots refer to (left) isotropic, (middle) anisotropic, and (right) strongly anisotropic surfaces. RMSE average values are normalized w.r.t. surface variance. Reconstruction through kriging via least squares (LS)-fitted (red curves) anisotropic and (green curves) isotropic variogram models.</figDesc><graphic coords="3,68.23,69.90,451.56,61.80" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 3 .</head><label>3</label><figDesc>Fig. 3. Examples of the reconstruction of simulated strongly anisotropic random surfaces through kriging via isotropic and anisotropic models. (a) Original surface (axis units are in samples; color scale is rad for surfaces, rad 2 for variograms). (b)-(c) Reconstructed surface using an isotropic variogram model from 5% and 2% samples, respectively. (h)-(i) Reconstructed surface using an anisotropic variogram model from 5% and 2% samples, respectively. (g) Isotropic variograms computed over 100%, 5%, and 2% of points; thick lines indicate LS fits. (d)-(j) Two-dimensional experimental variogram and parametric anisotropic fit over 100% points. (e)-(k) Two-dimensional experimental variogram and parametric anisotropic fit over 5% points. (f)-(l) Two-dimensional experimental variogram and parametric anisotropic fit over 2% points.</figDesc><graphic coords="4,66.44,70.46,465.96,147.24" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 4 .</head><label>4</label><figDesc>Fig. 4. Examples of the reconstruction of simulated slightly anisotropic random surfaces through kriging via isotropic and anisotropic models. (a) Original surface (axes as in Fig. 3). (b)-(c) Reconstructed surface using an isotropic variogram model from 10% and 3% samples, respectively. (h)-(i) Reconstructed surface using an anisotropic variogram model from 10% and 3% samples, respectively. (g) Isotropic variograms computed over 100%, 10%, and 3% of points; thick lines indicate LS fits. (d)-(j) Two-dimensional experimental variogram and parametric anisotropic fit over 100% points. (e)-(k) Two-dimensional experimental variogram and parametric anisotropic fit over 10% points. (f)-(l) Two-dimensional experimental variogram and parametric anisotropic fit over 3% points.</figDesc><graphic coords="4,68.44,299.30,461.40,144.12" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>TABLE I ESTIMATED</head><label>I</label><figDesc>MATÉRN PARAMETERS AND NORMALIZED RMSE AT VARIOUS SAMPLING DENSITIES, FOR ONE SIMULATED SURFACE</figDesc><table/></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>Authorized licensed use limited to: ESCUELA POLITECNICA DEL LITORAL (ESPOL). Downloaded on August 19,2025 at 18:10:05 UTC from IEEE Xplore. Restrictions apply.</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENTS</head><p><rs type="institution">ESA</rs> is acknowledged for providing the ERS-1/2 SAR data through CAT-1 Project n. 5367. The authors would also like to thank the anonymous reviewers for their help in improving the quality of this letter.</p></div>
+			</div>			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">F</forename><surname>Hanssen</surname></persName>
+		</author>
+		<title level="m">Radar Interferometry: Data Interpretation and Error Analysis</title>
+		<meeting><address><addrLine>Dordrecht, The Netherlands</addrLine></address></meeting>
+		<imprint>
+			<publisher>Kluwer</publisher>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">High-resolution forecast models of water vapor over mountains: Comparison with MERIS and meteosat data</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Wadge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Holley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">N</forename><surname>James</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Clark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Woodage</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Geosci. Remote Sens. Lett</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="401" to="405"/>
+			<date type="published" when="2007-07">Jul. 2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Atmospheric artifact compensation in ground-based DInSAR applications</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Pipia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Fabregas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aguasca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lopez-Martinez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Geosci. Remote Sens. Lett</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="88" to="92"/>
+			<date type="published" when="2008-01">Jan. 2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Covariance estimation for dInSAR surface-deformation measurements in presence of anisotropic atmospheric noise</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">-G</forename><surname>Knospe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Jónsson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="2057" to="2065"/>
+			<date type="published" when="2010-04">Apr. 2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">A C</forename><surname>Cressie</surname></persName>
+		</author>
+		<title level="m">Statistics for Spatial Data</title>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>Wiley</publisher>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+	<note>Revised Edition</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<monogr>
+		<author>
+			<persName><forename type="first">J.-P</forename><surname>Chilès</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Delfiner</surname></persName>
+		</author>
+		<title level="m">Geostatistics: Modeling Spatial Uncertainty</title>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>Wiley</publisher>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">I</forename><surname>Tatarski</surname></persName>
+		</author>
+		<title level="m">Wave Propagation in a Turbulent Medium</title>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>McGraw-Hill</publisher>
+			<date type="published" when="1961">1961</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">The Matérn function as a general model for soil variograms</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Minasny</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">B</forename><surname>Mcbratney</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Geoderma</title>
+		<imprint>
+			<biblScope unit="volume">128</biblScope>
+			<biblScope unit="issue">3/4</biblScope>
+			<biblScope unit="page" from="192" to="207"/>
+			<date type="published" when="2005-10">Oct. 2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Two-dimensional phase unwrapping with use of statistical models for cost functions in nonlinear optimization</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">W</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Zebker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Opt. Soc. Amer. A, Opt. Image Sci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="338" to="351"/>
+			<date type="published" when="2001-02">Feb. 2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><surname>Papoulis</surname></persName>
+		</author>
+		<title level="m">Probability, Random Variables and Stochastic Processes</title>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>McGraw-Hill</publisher>
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+	<note>3rd ed</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Simulation of rough surfaces with FFT</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Tribol. Int</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="47" to="58"/>
+			<date type="published" when="2000-01">Jan. 2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Permanent scatterers in SAR interferometry</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ferretti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Prati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Rocca</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="8" to="20"/>
+			<date type="published" when="2001-01">Jan. 2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">SPINUA: A flexible processing chain for ERS/ENVISAT long term interferometry</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Bovenga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Refice</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Nutricato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Guerriero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Chiaradia</surname></persName>
+		</author>
+		<idno>ESA SP-572</idno>
+	</analytic>
+	<monogr>
+		<title level="m">presented at the Envisat &amp; ERS Symp</title>
+		<meeting><address><addrLine>Salzburg, Austria</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2004-06-10">Sep. 6-10, 2004</date>
+		</imprint>
+	</monogr>
+	<note>CD-ROM. CD-ROM</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">TerraSAR-X InSAR multi-pass analysis on Venice (Italy)</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">O</forename><surname>Nitti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Nutricato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Bovenga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Refice</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Chiaradia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Guerriero</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. SPIE Eur. Remote Sens</title>
+		<meeting>SPIE Eur. Remote Sens<address><addrLine>Berlin, Germany</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2009-09-03">Aug. 31-Sep. 3, 2009</date>
+			<biblScope unit="page" from="74771" to="74771"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Terrain movements determination on the whole italian territory from ERS/Envisat data by persistent scatterer interferometry: The PST-A/2 project</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Costantini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ferretti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Minati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Colombo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Ciminelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Costabile</surname></persName>
+		</author>
+		<ptr target="http://-earth.esa.int/-workshops/-fringe09"/>
+	</analytic>
+	<monogr>
+		<title level="m">presented at the FRINGE, ESA-ESRIN</title>
+		<meeting><address><addrLine>Frascati, Italy</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2009-12-04">Nov. 30-Dec., 4, 2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Stein</surname></persName>
+		</author>
+		<title level="m">Interpolation of Spatial Data: Some Theory for Kriging</title>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer-Verlag</publisher>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Parametric estimation of covariances of regionalized variables</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">K</forename><surname>Kitanidis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Water Resour. Bull</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="557" to="567"/>
+			<date type="published" when="1987-08">Aug. 1987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Atmospheric water-vapour effects on spaceborne interferometric SAR imaging: Data synergy and comparison with ground-based measurements and meteorological model simulations at urban scale</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Pierdicca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Rocca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Basili</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bonafoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Cimini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ciotti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ferretti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Foster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Marzano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Mattioli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Montopoli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Notarpietro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Padmanabhan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Perissin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Pichelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Reising</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sahoo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Venuti</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. EuCAP</title>
+		<meeting>EuCAP<address><addrLine>Berlin, Germany</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2009">Mar. 23-27, 2009</date>
+			<biblScope unit="page" from="3443" to="3447"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -1,0 +1,1121 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A Heuristic Method to Evaluate Web Accessibility for Users With Low Vision</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Institute of Electrical and Electronics Engineers (IEEE)</publisher>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2019">2019</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Patricia</forename><surname>Acosta-Vargas</surname></persName>
+							<idno type="ORCID">0000-0003-4210-0117</idno>
+							<affiliation key="aff0">
+								<orgName type="department">Intelligent and Interactive Systems Laboratory</orgName>
+								<orgName type="institution">Universidad de Las Américas</orgName>
+								<address>
+									<postCode>170125</postCode>
+									<settlement>Quito</settlement>
+									<country key="EC">Ecuador</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Luis</forename><surname>Antonio Salvador-Ullauri</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Software and Computing Systems</orgName>
+								<orgName type="institution">University of Alicante</orgName>
+								<address>
+									<postCode>03690</postCode>
+									<settlement>Alicante</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sergio</forename><surname>Lujan-Mora</surname></persName>
+						</author>
+						<title level="a" type="main">A Heuristic Method to Evaluate Web Accessibility for Users With Low Vision</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">IEEE Access</title>
+						<title level="j" type="abbrev">IEEE Access</title>
+						<idno type="eISSN">2169-3536</idno>
+						<imprint>
+							<publisher>Institute of Electrical and Electronics Engineers (IEEE)</publisher>
+							<biblScope unit="volume">7</biblScope>
+							<biblScope unit="page" from="125634" to="125648"/>
+							<date type="published" when="2019"/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">07ACBC1A958EF58C6CE131F1A261D1AC</idno>
+					<idno type="DOI">10.1109/access.2019.2939068</idno>
+					<note type="submission">Received July 15, 2019, accepted August 8, 2019, date of publication September 2, 2019, date of current version September 17, 2019.</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-11T13:39+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Accessibility</term>
+					<term>assessment</term>
+					<term>barrier walkthrough</term>
+					<term>evaluation</term>
+					<term>heuristic method</term>
+					<term>low vision</term>
+					<term>website</term>
+					<term>web content accessibility guidelines (WCAG</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Checking the accessibility of a website is a significant challenge for accessibility experts. Users who suffer from age-related changes, such as low vision, poor hearing, and diminishing motor skills, among others, have problems accessing the services offered by the web. Currently, there are qualitative and quantitative methods to check if a website is accessible. Most methods apply automatic tools because they are low cost, but they do not present an ideal solution. Instead, heuristic methods require manual support that will help the expert to assess accessibility by establishing severity ranges. This research used a modification of the Barrier Walkthrough method proposed by Giorgio Brajnik considering the Web Content Accessibility Guidelines 2.1. The modification consisted of including persistence to determine the severity of an accessibility barrier. This method enabled the measurement of the accessibility of websites to test a new heuristic process and to obtain sample data for analysis. The method was applied to 40 websites, including those of 30 universities in Latin America, according to the Webometrics ranking, and 10 websites among the most visited, according to Alexa ranking. With this heuristic method, the evaluators concluded that although a website is in a high-ranking position, this does not imply that it is accessible and inclusive. However, the manual method takes too long, and it is therefore too costly to solve accessibility problems. This research can serve as a starting point for future studies related to web accessibility heuristics.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>The constant technological advances and the accelerating development of the web produce significant effects on the way of life, work, and the ideas of understanding the world on the part of its users. These technologies also affect the traditional processes of information exchange, teaching, learning, social utility to connect people, research, and business, which are profoundly modifying the patterns of behavior, family, and social relationships.</p><p>In 2019, the number of Internet users reached 4.39 billion, with year-on-year growth of 9%, according to the Global Digital report <ref type="bibr" target="#b0">[1]</ref>. According to the Internet Live Stats, 1  there are now more than 1.5 billion websites on the World Wide Web, and it continues to grow at an accelerated pace.</p><p>The associate editor coordinating the review of this article and approving it for publication was Xiaofei Wang. 1 <ref type="url" target="http://www.internetlivestats.com/">http://www.internetlivestats.com/</ref> Furthermore, websites related to social networking, education, government, businesses, and research have a high impact on building social and economic development. Therefore, the information and various communication tools offered through the websites have become the ideal medium to meet various needs, including the exchange of information and dissemination of research among business areas, government, and academia. At an academic level, universities play an essential role in communicating and disseminating the scientific and cultural achievements that give prestige and visibility to research projects. With the evolution of the web, there have been considerable challenges in terms of marketing strategies <ref type="bibr" target="#b1">[2]</ref>, which are used to create collaborative networks in both educational and business areas, for the recruitment of students and professionals to improve the positioning and reputation of institutions that promote knowledge and economic development. According to the parameters indicated, <ref type="bibr" target="#b2">[3]</ref> web accessibility has become a key indicator. Among its main benefits, it allows the inclusion of all types of users, improves access to web content, helps to obtain better results in search engines, and enables the reuse of content in multiple formats or devices. Web accessibility can help to reduce the digital divide, improve efficiency, improve response time, reduce development costs, maintain websites, and demonstrate social responsibility. This research analyzed whether the ranking of universities and most visited websites influences the quality, accessibility, and presence of institutional websites for the transfer of scientific, educational, commercial, and cultural knowledge. The Cybermetrics Laboratory <ref type="bibr" target="#b3">[4]</ref>, which belongs to the Spanish Higher Council for Scientific Research, prepares a web ranking of the universities known as Webometrics every year. The latest edition of this ranking classified more than 28,000 universities around the world according to the presence and impact of their websites. As a case study, the researchers selected 30 universities in Latin America, where there are approximately 3,695 universities ranked, according to the January 2019 Edition 2019.1.2. <ref type="foot" target="#foot_1">2</ref> Additionally, the evaluators included 10 higher-ranked websites, according to Alexa. <ref type="foot" target="#foot_2">3</ref>Alexa Internet, Inc. is a subsidiary of Amazon.com that provides commercial web traffic data and analysis of 30 million websites.</p><p>This research applied the heuristic method to evaluate web accessibility; this method can be applied to any website, and the evaluators included a total of 40 websites in the evaluation. In this research, a critical component was the accessibility of websites. The concept ''accessible'' is associated visually with any improvement in the barriers to access of the websites. A barrier is a condition that represents a problem of accessibility for users to achieve their goals when interacting with the website.</p><p>The term accessibility, when applied to the web, concerns the development of a useful design to facilitate access to a more significant number of users. An accessible web page will enable users with some permanent or temporary disability to receive and understand the content of a website, as well as to be able to navigate everything correctly. According to data from the World Health Organization, it is estimated that 15% of the population, approximately one billion people in the world, live with some kind of physical or mental disability <ref type="bibr" target="#b4">[5]</ref>. In short, web accessibility is crucial <ref type="bibr" target="#b5">[6]</ref> not only because it increases digital equality but also because it provides both better Internet interaction and the benefit of showing content on various electronic devices. Undoubtedly, the main reason to create an accessible website should be to ensure that users with disabilities do not encounter problems using it, but other secondary benefits are also excellent reasons to be more concerned about web accessibility. Web accessibility <ref type="bibr" target="#b6">[7]</ref> analyzes how users perceive, browse, understand, and interact on the web; therefore, it is imperative to consider that the level of accessibility is the fundamental basis for easy access to websites, especially for users with disabilities.</p><p>In this research, a variation was applied between the Barrier Walkthrough (BW) method proposed by Brajnik <ref type="bibr" target="#b7">[8]</ref>- <ref type="bibr" target="#b9">[10]</ref> and Web Content Accessibility Guidelines (WCAG) 2.1 <ref type="bibr" target="#b10">[11]</ref>. This inspection method sought to identify accessibility problems. Hence, it used a barrier, which is a condition that makes it difficult for users to achieve their goals when browsing a website. This method comprised 10 phases:</p><p>(1) select the website, (2) select the type of users, (3) identify user objectives and scenarios, (4) explore mechanisms of interaction, (5) list the barriers according to users, (6) apply the UX Check tool, (7) evaluate the website with the BW, (8) record the data, ( <ref type="formula">9</ref>) analyze the results and (10) suggest recommendations. Applying this method to 40 websites, two accessibility experts participated as evaluators, with a group of five users with low vision. The evaluators identified several violations of the WCAG 2.1 guidelines, such as images without textual alternatives, broken links, and low color contrasts. Therefore, this study suggests the application of a heuristic method considering WCAG 2.1 <ref type="bibr" target="#b10">[11]</ref>.</p><p>The barriers identified during the evaluation phase may cause difficulties in accessing other pages of a website, especially for users with disabilities. For this reason, a study was carried out in this research to identify the primary deficiencies in web accessibility through the application of a heuristic method. This method invites reflection and considers the importance of complying with and applying accessibility standards in the design of websites.</p><p>This preliminary web accessibility research will enable both public and private websites to be adapted to comply with WCAG 2.1 <ref type="bibr" target="#b10">[11]</ref>.</p><p>With this heuristic method, the evaluators concluded that although an institution may be in a high-ranking position, this does not necessarily imply that it has an accessible and inclusive website. This method can be reproduced for other types of disabilities, applying the corresponding barriers. However, the manual method involves much time in the evaluation in regard to finding all types of accessibility problems. This research may serve as a starting point for future studies related to web accessibility heuristics.</p><p>This research is structured as follows: Section I presents the introduction. Section II describes the background and work related to accessibility of selected institutions, web accessibility, and the accessibility barriers. Section III presents the method and case study. Section IV discusses the evidence and the results, and Section V presents conclusions and suggests future work.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. RELATED WORK</head><p>Currently, the exact number of all existing websites is not known. According to the research project of the University of Tilburg, there are at least 4.26 billion pages on the web <ref type="bibr" target="#b11">[12]</ref>. However, this number changes rapidly in real time. While some websites are deleted from the Internet daily, statistics indicate that the number of new websites exceeds the number of deleted websites. Of all the existing websites, not all are accessible. The accessibility of a website refers to whether anyone, regardless of their disability, can access a website without any barrier that could prevent regular use and interaction with the web. To meet this challenge, it is essential to carry out periodic evaluations of the accessibility of a website.</p><p>Moreover, during the evaluation of web accessibility, it is feasible to identify the following barriers: (1) design of websites using asynchronous JavaScript and XML (AJAX), which is a complex set of web technologies used to allow frequent dynamic client-server interactions in web applications without reloading or updating the page. This technique <ref type="bibr" target="#b12">[13]</ref> can generate the problem of incompatibility with browsers. The above represents an accessibility problem for many web users. (2) An image map that uses HTML and XHTML. The image map can generate barriers when relating a list of coordinates and a specific image that are created to hyperlink areas of the image to different destinations. Finally, (3) some frames that are HTML elements that can cause barriers can exist on older websites. When using frames, it is possible to implement the frames module that defines the elements ''&lt;frameset&gt;,'' ''&lt;frame /&gt;'' and ''&lt;noframes&gt;. <ref type="bibr">''</ref> In the literature review, the authors found several website accessibility studies that contributed to this research. A study by Inal et al. <ref type="bibr" target="#b13">[14]</ref> was carried out to explore the relationship between a country's human development index and the level of web accessibility applied to local websites. The results showed that the overall range of the websites of the municipalities that passed all WCAG 2.0 was deficient, and the websites of the municipalities had fewer errors in the countries with the highest human development index.</p><p>Sacramento et al. <ref type="bibr" target="#b14">[15]</ref> argued that the growth of the elderly population poses a significant challenge to older people in the use of web interfaces. The study examined the usability and accessibility of Facebook and its functionalities. As a result, the authors proposed checkpoints to support designers in building more accessible websites.</p><p>Acosta-Vargas et al. <ref type="bibr" target="#b15">[16]</ref> described the web accessibility issues identified on 22 hospital websites according to the Webometrics ranking. In the evaluation process, the WCAG 2.0 and the Website Accessibility Conformance Evaluation Methodology (WCAG-EM) were applied. The results indicated that the websites presented several violations to web accessibility related to accessibility barriers. The study proposed the need to strengthen legislation and implement best practices in web accessibility.</p><p>Ismail and Kuppusamy <ref type="bibr" target="#b16">[17]</ref> presented an exploratory study on the accessibility of the websites of Indian universities. Its case study was applied to the home pages of 302 universities in India under different levels of compliance with the WCAG 2.0 recommendations and used automatic accessibility evaluation tools to obtain accessibility reports for the websites. These reports showed that a few additional improvements were required to make them more accessible in terms of WCAG 2.0. In the evaluation of accessibility, several tools were used, such as AChecker, Webpage Analyzer, and WAVE to analyze classified URLs. The results identified barriers that recur frequently. The accessibility report included manual evaluations.</p><p>Acosta-Vargas et al. <ref type="bibr" target="#b17">[18]</ref> described the barriers of web accessibility identified in 348 websites of Latin American universities according to the Webometrics ranking. In the evaluation, the authors explored various tools such as AChecker and Web Accessibility Checker, AccessMonitor, eXaminator, TAW, and Tenon. Finally, the WAVE tool enabled them to evaluate the websites. The results showed that the universities' websites included in this research violated web accessibility requirements based on WCAG 2.0. The numerous barriers identified about website accessibility indicated that it is necessary to reinforce accessibility policies in each country and to apply guidelines in this area to make websites more inclusive.</p><p>Ismailova and Inal <ref type="bibr" target="#b18">[19]</ref> concluded, having evaluated the websites of major universities in Azerbaijan, Kazakhstan, Kyrgyzstan, and Turkey, that these institutions should devote more effort to making their websites accessible to their users because they failed to comply with WCAG 2.0 standards. The AChecker tool allowed the analysis of compliance with accessibility guidelines to evaluate the websites in Azerbaijan, Kazakhstan, Kyrgyzstan, and Turkey. The results indicated that there were barriers in the level of compliance of level ''A.''</p><p>Another study by Ismailova and Kimsanova <ref type="bibr" target="#b19">[20]</ref> indicated that university websites in the Kyrgyz Republic showed a low level of compliance with WCAG 1.0. EvalAccess 2.0 from the Human-Computer Interaction Laboratory was used in the assessment. Accessibility tests showed that 4.76% of websites had a level of ''AA'', and 11.9% a level of ''AAA.'' However, more than 83% of websites did not exceed Priority 1 control points for accessibility errors. The results indicated that most of the barriers of all tested websites were not technical and were mainly due to human factors related to the development of web applications.</p><p>Patra et al. <ref type="bibr" target="#b20">[21]</ref> indicated that the design of a website is crucial to make it accessible to a more significant number of users. The study applied compliance with WCAG 2.0, providing a quantitative assessment of the accessibility aspects that serve to improve web design, considering the inherent deficiencies of web portals. The methodology examined three different categories of websites to assess accessibility. The accessibility parameters were checked both manually and using some tools. The quantitative results of the evaluation can help web designers to incorporate the features required by the WCAG 2.0 guidelines to make web portals more accessible to various categories of users.</p><p>Kurt <ref type="bibr" target="#b21">[22]</ref> carried out an evaluation study of the level of accessibility of Turkish university websites in 2010. The research, which used a variety of different evaluation techniques, according to the World Wide Web Consortium (W3C), found that none of the home pages reviewed met the minimum web accessibility criteria. In 2015, Kurt conducted a follow-up audit of the homepages of the same universities, using a similar methodological approach. The objective was to determine whether the accessibility of the website had improved during the five-year interim period. The author detailed the results of the second study, which showed that, in general, accessibility levels had slightly reduced accessibility barriers when applying the WCAG 2.0 guidelines. The evaluation used the AChecker, the CSS validation tool, and manual inspection of code sources. The results confirmed that many of the best universities in Turkey still have accessibility problems. The core issues identified both in 2010 and in this research had not significantly changed. A better understanding of the function of the ''ALT'' text is required in order to facilitate accessibility.</p><p>Alahmadi and Drew <ref type="bibr" target="#b22">[23]</ref> stated that educational websites and learning management systems (LMS) are essential for higher education institutions, which is why it is necessary to apply accessibility to their web pages and educational resources. The study analyzed the websites of the institutions that were included in the categories of Oceania and universities. The AChecker tool applied some WCAG 2.0 standards, which permitted the analysis of a sample that included a random selection of universities. In the future, researchers and developers must focus on solutions to solve specific accessibility problems based on student experience when interacting with LMS and web pages.</p><p>Ahmi and Mohamad <ref type="bibr" target="#b23">[24]</ref> studied the accessibility of websites of the Public University of Malaysia. Their article evaluated the accessibility of 20 Malaysian public universities based on the WCAG 2.0 and Section 508 of the United States Rehabilitation Act. AChecker and WAVE tools enabled them to evaluate web accessibility. The results suggested that some steps need to be taken to ensure that university websites are accessible.</p><p>Windriyani et al. <ref type="bibr" target="#b24">[25]</ref> conducted an accessibility assessment using Webometrics criteria and WCAG 2.0 guidelines. The evaluation of the website was carried out in two phases: the technical evaluation was performed with the help of the TAW tool, and a nontechnical assessment was undertaken through direct observation using Webometrics success criteria. The study revealed that the website violated the principles of accessibility.</p><p>Acosta-Vargas et al. <ref type="bibr" target="#b25">[26]</ref> conducted a study to verify compliance with WCAG 2.0. The research consisted of evaluating the accessibility of the contents of 20 university web pages. From the results, they concluded that most of the websites tested did not reach an acceptable level of compliance.</p><p>Kamal et al. <ref type="bibr" target="#b26">[27]</ref> presented a study that evaluated the web accessibility metrics of 36 websites of Jordanian universities and educational institutes. The authors analyzed the level of web accessibility with a series of evaluation tools that were available involving WCAG 1.0 and 2.0. The researchers considered accessibility as one of the primary essential qualities of a website. The results showed a significant number of weaknesses on most university websites that violated accessibility principles.</p><p>Akgul <ref type="bibr" target="#b27">[28]</ref> indicated that universities use websites as the primary medium for the communication of information. Website accessibility remains a significant challenge for both web developers and accessibility researchers. The research aimed to determine whether users with disabilities can even access and use university websites. Most of the websites tested did not reach an acceptable level of compliance. The study applied WCAG 1.0 on 23 websites of Turkish research centers. From the results, the researchers concluded that most of the tested websites had not achieved an acceptable outcome. The authors suggested making web developers aware of human rights violation issues to build accessible websites.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. WEB ACCESSIBILITY</head><p>Accessibility refers to the process of eliminating barriers that prevent communication and interaction between the web and users. Web accessibility <ref type="bibr" target="#b10">[11]</ref> means that users with some disability will be able to use the web. Accessibility refers to the web design that allows these users to perceive, understand, navigate, and interact with the web, in turn, providing content. Web accessibility also benefits other users, including older adults who have seen their skills diminish due to age.</p><p>In June 2018, W3C proposed <ref type="bibr" target="#b10">[11]</ref> its official recommendation known as the WCAG 2.1. The proposal is an evolution of the W3C accessibility guidelines, which include the expansion of mobile devices for users with low vision and cognitive and learning disabilities.</p><p>WCAG 2.1 <ref type="bibr" target="#b6">[7]</ref>, <ref type="bibr" target="#b10">[11]</ref> consists of four principles, 13 guidelines, 78 compliance criteria, plus an indeterminate number of sufficient techniques and advisory techniques. Each of these four principles is detailed below:</p><p>Principle 1: Perceivable -Users must be able to perceive content in a visual, audio, and tactile manner.</p><p>Principle 2: Operable -Users should be able to use and navigate the interface components.</p><p>Principle 3: Understandable -Users must be able to understand both the content and controls of the interface.</p><p>Principle 4: Robust -Users must be able to access content and be able to interpret reliably regardless of the current and future technologies. WCAG 2.1 <ref type="bibr" target="#b10">[11]</ref> proposes success criteria associated with one of the following compliance levels:</p><p>Level ''A'': Minimum level of accessibility. Not reaching this means that a group of users are unable to access the content of the web.</p><p>Level ''AA'': Intermediate level of accessibility. Failing to achieve this means that it is complicated for a group of users to access web content.</p><p>Level ''AAA'': Maximum level. Not reaching this means that a group of users have some difficulty in accessing web content. A website that achieves level ''AAA'' is a website that can be easily accessed by all users <ref type="bibr" target="#b10">[11]</ref>.</p><p>The automatic tools permit the detection of the barriers to web accessibility. Some are components of the browser. Among the best known are AccessMonitor, AChecker, eXaminator, TAW, and WAVE. On the other hand, for web applications that require authentication, the use of those that have a plugin for web browsers is suggested. Automatic tools cannot detect all accessibility barriers <ref type="bibr" target="#b28">[29]</ref>; therefore, to complement this process of evaluation, applying a heuristic method is suggested, which, according to the definition, is based on the use of empirical rules to arrive at a solution. This research applied the BW method <ref type="bibr" target="#b29">[30]</ref>, eliminating the most critical number of barriers for the user. This process can take a long time and be tedious since the accessibility of a website is not always evident for both the users and the web accessibility expert.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. ACCESSIBILITY EVALUATION METHODS</head><p>It is often thought that usability and web accessibility are the same things, but the truth is that they are different. While usability provides different techniques to perform a task effectively only on the web, accessibility refers to universal access to a website regardless of the hardware, software, or network infrastructure available to the user. From the conceptual point of view, usability and accessibility <ref type="bibr" target="#b30">[31]</ref> seek the same objective, that is, ensuring the user can make the best use of the website. AlRoobaea <ref type="bibr" target="#b31">[32]</ref> pointed out that ''a high-quality product'' is one that provides all the main functions of the website in an appropriate format, offering good accessibility and simple design so that users can optimize their learning time and use it satisfactorily. Usability is a subject that has been studied extensively to achieve quality software. It must go hand-in-hand with accessibility in order to be inclusive for all types of users.</p><p>Ferreira et al. <ref type="bibr" target="#b32">[33]</ref> stated that interface designers must analyze whether the requirements meet the needs of users with different characteristics. The authors classified the methods as inspection and observation of use. Evaluation methods that do not require the presence of users are referred to as ''inspection methods or analytical methods.'' The methods performed in the presence of users are referred to as ''methods of observation and testing with users.'' The research considered methods of observation involving users with completely impaired vision. The results contributed to the construction of a protocol with recommendations that help evaluators identify characteristics and problems that could be resolved or minimized in the evaluations.</p><p>Luján-Moras and <ref type="bibr">Masri [34]</ref> proposed some methods of accessibility evaluation, classifying them into two types: one is the qualitative method, related to analytical and empirical methods, and the other is a quantitative method, based on metrics. The authors explained that no technique is enough to guarantee accessibility in its entirety; many studies combine several qualitative and quantitative methods to ensure optimal results. The authors proposed a method of evaluating heuristic accessibility based on qualitative evaluation methods.</p><p>Masri and Mora <ref type="bibr" target="#b34">[35]</ref> proposed an agile accessibility evaluation method based on qualitative and quantitative evaluation methods. It included the web accessibility barrier (WAB) <ref type="bibr" target="#b35">[36]</ref> metric to objectively summarize the results and amplify the use of this method to cover all types of evaluation tasks.</p><p>Mankoff et al. <ref type="bibr" target="#b36">[37]</ref> presented a comparison of different methods to find accessibility problems that affect users with blindness. They focused on useful techniques for web developers. However, the methods did not meet all the accessibility requirements; they had strengths and weaknesses. They suggested reviewing other methods to compare evaluation techniques and expanding the study to include other disabilities.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. HEURISTIC METHOD BASED ON THE BARRIER WALKTHROUGH</head><p>In regard to heuristic methods, this research used the concept proposed by Nielsen and Rolf <ref type="bibr" target="#b37">[38]</ref>, which consists of an inspection method based on the evaluation of an interactive system.</p><p>On the other hand, the heuristic method proposed by Alroobaea et al. <ref type="bibr" target="#b38">[39]</ref> considered the following: (1) accessibility parameters and compatibility of hardware devices, (2) accessibility of contact data for help and technical support, (3) easy access due to its universal design, (4) correct and reliable navigation and addresses, (5) secure identification of links and menus, and (6) support and search functionality.</p><p>Paddison and Englefield <ref type="bibr" target="#b39">[40]</ref> explained that accessibility heuristics have been developed to complement accessibility guidelines. The use of web accessibility heuristics ensures that a greater variety of special needs are considered, from visual disabilities to cognitive disabilities. The results of the studies confirm that heuristics makes it possible to identify areas of a website that have the most significant accessibility problems and that can provide useful information to create a solution.</p><p>Brajnik <ref type="bibr" target="#b40">[41]</ref>, and Brajnik and Englefield <ref type="bibr" target="#b41">[42]</ref> argued that analytical evaluation methods, based on manual heuristic inspection of the code, do not guarantee full accessibility; instead, they depend on the experience of the evaluator and the guidelines adopted.</p><p>Masri and Mora <ref type="bibr" target="#b34">[35]</ref> formulated the view that empirical methods are expensive but offer greater precision because they clearly show the most severe accessibility flaws. The authors suggested that the user test is the most reliable and complete, even though it requires more effort to perform correctly because it is not easy to find users who belong to the appropriate categories and who have the appropriate level of experience in using the requirements.</p><p>Acosta-Vargas et al. <ref type="bibr" target="#b42">[43]</ref> proposed an approach of combined methods with the application of automatic and heuristic tools to make websites more accessible. The study applied the Website Accessibility Conformance Evaluation Methodology (WCAG-EM) 1.0, considered in WCAG 2.0. The authors concluded that websites could achieve an acceptable level of compliance. The research proposed that future work should focus on optimizing the combined approach to help develop more inclusive websites.</p><p>Braga et al. <ref type="bibr" target="#b29">[30]</ref> applied the BW method to improve the automatic evaluation of accessibility in the Bank of Brazil. The research revealed a series of critical barriers that affect the effectiveness, productivity, and satisfaction of elderly users with some disability related to vision, hearing, and motor skills, among other dysfunctions. These limitations represent difficulties in accessing websites. With the proposed method, they identified usability problems related to accessibility for which they offered some recommendations.</p><p>Lunn et al. <ref type="bibr" target="#b43">[44]</ref> suggested that the website evaluation method complies with all accessibility guidelines. It is challenging as different groups of users will have different requirements that can sometimes conflict with each other. The authors applied the BW method to address this problem by applying guidelines to different categories of users.</p><p>Therefore, a heuristic method based on the BW proposed by Brajnik <ref type="bibr" target="#b7">[8]</ref>- <ref type="bibr" target="#b9">[10]</ref> can help complement the evaluation of websites. The heuristic method is an analytical method based on trial-and-error explorations, in which an evaluator considers a predefined number of possible accessibility barriers that are interpreted according to the accessibility principles of WCAG 2.1. The barriers include elements according to the type of user, purpose, the context of use, and website, so that appropriate conclusions can be drawn concerning user effectiveness, productivity, satisfaction, and security <ref type="bibr" target="#b7">[8]</ref>, <ref type="bibr" target="#b8">[9]</ref> with severity scores assigned to each accessibility barrier. In this research, the barriers are described in terms of the following variables:</p><p>1) Effectiveness is represented by the degree of compliance to accurately achieve the objective in a task performed by the user on the web. 2) Productivity is related to the time, effort, and cognitive load required to reach a certain level of effectiveness. 3) Satisfaction represents the user's comfort and acceptability of use and implies giving control to the user as well as to the ability to adapt. 4) Security is represented by the known vulnerability in the evaluated website. Consequently, the barriers were described in terms of performance, such as effectiveness, productivity, satisfaction, and user security. The BW <ref type="bibr" target="#b7">[8]</ref>- <ref type="bibr" target="#b9">[10]</ref>, <ref type="bibr" target="#b41">[42]</ref> proposed by Brajnik is an accessibility inspection technique. The possible barriers were raised previously and are based on interpretations and extensions of accessibility principles that are described according to the category of users, the type of assistive technology used, the impact of users, the characteristics of the pages found, and the effects caused. The method proposes the heuristic walkthroughs of Sears <ref type="bibr" target="#b44">[45]</ref>, considering the context of the use of the website. For the course of the use of the barrier, the context includes specific categories of users.</p><p>In the BW method, the severity of a barrier depends on the characteristics of the user, the activities, and the patterns of each situation, so that conclusions can be reached related to efficiency, productivity, satisfaction, and security to obtain the appropriate severity scores. This method suggests considering two parameters to estimate the severity of a barrier, the impact of the barrier on productivity and user satisfaction, and the persistence with which the barrier appears <ref type="bibr" target="#b9">[10]</ref>. The BW method states that the expert can classify severity on a scale of one (1) to three (3), where <ref type="bibr" target="#b7">[8]</ref>, <ref type="bibr" target="#b41">[42]</ref> a ''minor problem'', the value of one (1), indicates that the user reveals the barrier but there are simple ways to avoid it. This barrier identified by the user affects satisfaction or productivity, but not security and effectiveness. A ''significant problem,'' the value of two (2), refers to when the barrier is detected and strongly affects the execution of the task. In some cases, it is impossible to avoid the barrier, which reduces security or effectiveness. A ''critical problem,'' the value of three (3), refers to when the barrier is so significant that users often give up and do not reach their goals. Therefore, the barrier would have a negative impact that affects the effectiveness and, consequently, productivity, security, and user satisfaction.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. METHOD AND CASE STUDY A. METHOD</head><p>This research applied a variation between the BW method <ref type="bibr" target="#b9">[10]</ref> proposed by Brajnik and WCAG 2.1. The method applies a manual evaluation and falls into the group ''Barrier Screening Tests.'' This technique consists of prioritizing the impacts of the barriers according to the context applied. The method enables identification of the severity of each barrier; this heuristic method seeks to identify accessibility problems.</p><p>In this research to apply the heuristic evaluation method, two evaluators who are experts in web accessibility participated, and the evaluators have collaborated in various studies related to accessibility in web sites and mobile applications. The evaluators have worked in the area since 2015; they have several years of experience in the area, and as a result of their research, they have contributed with more than 30 scientific articles published in conferences and highimpact journals. Currently, the evaluators are part of a multidisciplinary research group and work in research networks with experts in the field. The evaluators continue to research web accessibility metrics and heuristics.</p><p>The first phase consisted of selecting the web pages according to the Webometrics and Alexa rankings. In the second phase, the evaluators defined the type of user related to the type of disability and the type of assistive technology used by the users. The third phase referred to the definition of the objectives and scenarios of the users (with low vision), describing the activity and the induced barrier that hinders the users from performing during their interaction with the web. In the fourth phase, the evaluators explored the mechanisms of interaction between the users and the web. In the fifth phase, it was essential to identify the attributes of the page that represent an obstacle or barrier to the users. In the sixth phase, the evaluators defined the list of barriers according to the type of disability of the users. In the seventh phase, the researchers evaluated each web page with the BW method <ref type="bibr" target="#b41">[42]</ref> proposed by Brajnik and the WCAG 2.1.</p><p>When there was no problem, the assigned value is zero (0), which would indicate that there is no potential barrier to the user or persistence (number of times the barrier is present). This case applies when the barrier is not present, or the persistence value is one (1) or zero (0). With the absence of the barrier, no performance parameters, including effectiveness, productivity, satisfaction, and security, are affected.</p><p>When there was a minor problem, the evaluators assigned the value of one <ref type="bibr" target="#b0">(1)</ref>, which indicates that the user would reveal the barrier. However, there are ways to learn and prevent such a problem because the barrier identified by the user may affect satisfaction or productivity, but not security and effectiveness.</p><p>For a significant problem, the evaluators granted the value of two <ref type="bibr" target="#b1">(2)</ref>; this refers to when the barrier is detected and strongly affects the execution of the task. To overcome the barrier, the user must follow a trial-and-error strategy to support the right action; in some cases, he or she will likely repeat a response several times. In various instances, it is not possible to avoid the barrier, which would reduce security or effectiveness. This process requires excellent knowledge of the subject.</p><p>For critical severity, the evaluators assigned the value of three (3); this refers to when the barrier is so significant that users often surrender and do not reach their goals. This problem can occur after users have spent an inordinate amount of time and effort overcoming the barrier, perhaps with several attempts, and errors are such that there are no alternatives that can be followed to achieve the objectives. Therefore, the barrier would have a negative impact that directly affects the effectiveness and, consequently, also productivity, security, and user satisfaction.</p><p>In the eighth phase, the evaluation data of each web page were recorded, reviewing the respective codes and considering each of the barriers according to the type of disability of the user. In the ninth phase, the results were analyzed by applying descriptive statistics and correlations that allowed interpretation of the variables in this study. In the tenth phase, after identifying possible violations of the web pages of the evaluated site, the evaluators presented suggestions to improve the accessibility of the evaluated site. Finally, the cycle was repeated cyclically from phase two to eliminate the most significant number of identified barriers.</p><p>In this method, the evaluators applied a modification to Brajnik's BW method. The modification consists of modifying some scales. The first one consists of widening the scale to analyze the impact and persistence between the values of zero (0) and three <ref type="bibr" target="#b2">(3)</ref>. Table <ref type="table" target="#tab_0">1</ref> contains the scale and the meaning of the severity with a modification to the BW <ref type="bibr" target="#b7">[8]</ref>- <ref type="bibr" target="#b9">[10]</ref> proposed by <ref type="bibr">Brajnik.</ref> The heuristic method applied is summarized in 10 phases, according to Figure <ref type="figure">1</ref>.</p><p>The evaluators related the WCAG 2.1 principles to the 27 barriers for low vision users, where zero (0) implies that the barrier does not affect the effectiveness, productivity, satisfaction, and security. Therefore, a value of zero (0) assigned means that it is ''null'' severity. The evaluators assigned the value of one (1) for impact or persistence when the barrier does not affect productivity, and satisfaction has a ''minor'' severity. The evaluators assigned the value of two (2) when the barrier cannot be avoided; this implies that productivity and satisfaction are reduced with a ''significant'' severity. Finally, the evaluators assigned the value of three (3), which means ''critical'', when the objective is not achieved.</p><p>A second modification proposed by the evaluators, based on Brajnik's study <ref type="bibr" target="#b8">[9]</ref>, is to consider the number of barriers that are present during the evaluation in order to assign a persistence value. For example, if the number of barriers present in an evaluation is 12, the evaluators assign a persistence of three (3). After modifications to the BW method, the authors summarize the severity values in Table <ref type="table">3</ref> related to the impact with the persistence. Table <ref type="table">3</ref> contains the impact, the persistence, and severity score of barriers with a modification to the method proposed by Brajnik and Lomusci <ref type="bibr" target="#b41">[42]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. CASE STUDY</head><p>The evaluators applied the case study to the home pages of including 30 university websites ranked among the top institutions of higher education in Latin America according to the Webometrics site and to 10 of the most visited websites in the world according to their Alexa ranking.</p><p>This research applied the accessibility barriers for users with low vision; the evaluators defined the heuristics related to the impact and severity that affect a website. The possible barriers were raised previously and are based on interpretations and extensions of accessibility principles proposed in WCAG 2.1 that are described according to the category of users, the type of assistive technology used, the impact of users, the characteristics of the pages found, and the effects caused.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>1) PHASE 1: SELECT THE WEBSITE TO EVALUATE</head><p>In this phase, it was essential to go to www.webometrics.info/es and select the option ''Latin America.'' The researchers then copied the data into a spreadsheet of the top 30 universities of Latin America ranked according to Webometrics. The version corresponds to the January Edition 2019.1.2. Similarly, the evaluators selected the 10 most visited sites according to their Alexa ranking, located at alexa.com/topsites employing the version corresponding to June 2019. Table <ref type="table" target="#tab_1">4</ref> contains the identifier, acronym, and URL.</p><p>In addition, the scope of the web pages to which the evaluation was applied was defined at this stage. The evaluators proceeded to document aspects such as externally developed services, different versions, and language. This research required knowledge of the properties and development process of some parts of the website, so navigation and interaction with it is recommended. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>2) PHASE 2: SELECT THE TYPE OF USERS</head><p>This study involved users with low vision <ref type="bibr" target="#b45">[46]</ref> who are defined as having a condition in which the user's vision could not be corrected with glasses, and this interferes with daily activities such as reading and driving. Low vision is more common among the seniors, but it can occur in users of any age as a result of diseases such as macular degeneration, glaucoma, diabetic retinopathy, or cataracts. Each of these conditions causes different types of issues with a person's vision.</p><p>In this experiment, five users with low vision, whose average age was 40.8 years, used magnifying glasses to read the information presented by each website. The sample was selected according to Jacob Nielsen's arguments, which indicate that five users are enough to test usability <ref type="bibr" target="#b46">[47]</ref>, comprising criteria that the researchers consider appropriate to apply to web accessibility. These users worked with magnifying glasses, sometimes only using the accessibility features by the operating system, such as reduced screen resolution, larger font size, contrast levels, and color polarity. In addition, in this research, the evaluators used the free Magnifixer 6.3 4 software that allows for larger fonts for users with low vision. The basic principle of web accessibility for users with low vision is the concept of ''Perceivable'' because it is not feasible to see the content, as some content cannot be enlarged or does not have enough contrast. The most common technology used by users with low vision is the screen magnifier, a software program that brings a small area of the screen closer to the user to allow users with low vision to see more clearly.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>3) PHASE 3: IDENTIFY USER OBJECTIVES AND SCENARIOS</head><p>In this phase, the evaluators identified the scenarios to navigate and interact on the home page of each selected website and reach the goal. The task was to enter the home page of each website, review the functionality of each of the links and images of the site, and check if there were barriers that hinder accessibility for users with low vision.</p><p>It was also essential to define the level of adequacy (A, AA, AAA) that would be evaluated. In this case, this was applied up to level ''AA.'' However, it is essential to identify accessibility support with a list of web browsers, support products, or other user agents with which accessibility features must be this research, the evaluators used Google Chrome version 73.0.3683.103, Mozilla Firefox version 66.0.3, and Opera version 58.0.3135.132.</p><p>In this study, a barrier for a person with low vision means that they cannot navigate efficaciously from one point to another within the website, meaning that he or she finds it difficult to move directly over the content of a website, due to the difficulty of their visual acuity.</p><p>To use the method proposed in this research, the two evaluators, who are web accessibility experts, identified the scenarios integrated by users with low vision, the assistive technologies used, the objectives, and the possible tasks that users must perform in the experiment. In this phase, it was essential to consider a list of potential barriers for low vision users <ref type="bibr" target="#b40">[41]</ref> (See Table <ref type="table" target="#tab_2">5</ref>). The evaluators proposed this process to achieve the objective, considering efficiency, productivity, security, and user satisfaction. It was vital to identify the degree of severity and the range of persistence of the barrier that represents an obstacle for the user with low vision to reach the objective.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>4) PHASE 4: EXPLORE MECHANISMS OF INTERACTION</head><p>In this phase, the user explored and became familiar with the mechanisms of interaction while navigating the site. Previously, the evaluators provided a guide with instructions for the user to apply to the selected website. The tasks to be performed by the user were: (1) interact with the home page;</p><p>(2) visit the links; (3) apply a screen magnifier; (4) change 4 <ref type="url" target="http://www.blacksunsoftware.com/screenmagnifier.html">http://www.blacksunsoftware.com/screenmagnifier.html</ref>  the zoom to enlarge and reduce the screen, and finally (5) identify the language in the website visited. In this phase, the evaluators identified the functionalities of the website, and the user navigated the site developed with technologies such as HTML, CSS, JavaScript, and WAI-ARIA. Finally, in this phase, whether the content is adjustable with the zoom and the appearance of the website were identified. In addition, the user identified the change in behavior according to the device, the browser used, the context, and the configuration applied.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>5) PHASE 5: LIST THE BARRIERS ACCORDING TO USER</head><p>In this phase, the evaluators listed the barriers for users with low vision and related them to WCAG 2.1. The evaluators selected the barriers applied by the method defined by Brajnik <ref type="bibr" target="#b9">[10]</ref>. Table <ref type="table" target="#tab_2">5</ref> contains 27 barriers for users with low vision, ordered according to the WCAG 2.1 principle and success criteria.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>6) PHASE 6: APPLY THE UX CHECK TOOL</head><p>In this phase, the evaluators applied UX Check,<ref type="foot" target="#foot_7">foot_7</ref> version 1.0.15, with an updated date of June 24, 2018. UX Check is an extension of Chrome that is useful for carrying out heuristic evaluations or evaluations of the accessibility of a website. It can also be used just to take notes on interface. UX Check makes heuristic evaluations quick and easy. The extension shows Nielsen's 10 heuristics in a side panel next to the website. By clicking on an item that does not meet a heuristic, it is possible to add notes, and a screenshot will be saved. Finally, the information that the evaluators organized with UX Check was passed to a word processor that helped in the generation of reports. UX Check allows notes to be written on the elements of the interface of the web that is visited not only regarding the problem found but also the recommendations that are proposed. It associates a heuristic level and a severity level to each note. With the tool, it is possible to customize the list of heuristics for future analysis, automatically associating with each note a screenshot of the page, in which the analyzed element is highlighted.</p><p>With the tool, it is possible to consult the list of notes and generate a report in Microsoft Word. On the other hand, the tool allows the expert to customize the barriers for the group of users determined in phase two. The screenshot in Figure <ref type="figure" target="#fig_2">2</ref> shows an example of an accessibility barrier applied in this case study.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>7) PHASE 7: EVALUATE THE WEBSITE WITH THE BARRIER WALKTHROUGH</head><p>In this phase, the evaluators carried out the following process:</p><p>(1) open browsers; (2) carefully review each barrier; (3) check the HTML code of the pages evaluated; (4) search for the attribute; (5) check if the image is displayed; and (6) check if the ''ALT'' attribute provides the alternative text. Similarly, evaluation experts reviewed the JavaScript code to identify potential problems that make websites less accessible.</p><p>For the analysis of severity, the value of zero (0) is assigned for a null severity, and one (1) is assigned for minor severity. The value of two ( <ref type="formula">2</ref>) is for significant severity; the value of three (3) is assigned to ''critical'' severity.</p><p>When estimating the severity of a barrier, two parameters are required: (1) the impact of the barrier on effectiveness, productivity and (2) the satisfaction of the user performing a task.</p><p>Furthermore, persistence is essential, represented by the number of times the barrier is repeated when analyzing the website. For example, for the barrier ''Rich images that are badly positioned,'' the impact value is three (3), and thus it is apparent that the design of the page is not optimal because there are no visual indications that suggest that there is an outstanding image, which reduces the effectiveness. On the other hand, the barrier is repeated seven <ref type="bibr" target="#b6">(7)</ref> times; then, the persistence corresponds to the value of three (3) (See Table <ref type="table">2</ref>). With the values of three (3) recorded in impact and persistence, the severity is ''critical,'' where the value corresponding to severity is taken from Table <ref type="table">3</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>8) PHASE 8: RECORD THE DATA</head><p>In this phase, the data from each web page analyzed were recorded in a spreadsheet. Table <ref type="table" target="#tab_3">6</ref> contains the barrier, impact, persistence, and severity of the home page of the University of São Paulo USP; an example is shown in Table <ref type="table" target="#tab_3">6</ref>. The recorded data are available in the Mendeley repository <ref type="foot" target="#foot_8">6</ref>so that the evaluation can be replicated. The registration of the data is vital; the data allow evaluators to summarize and organize the information by different categories. In this case, the evaluators present an example of the severities, summarized for each of the web pages evaluated. It should be noted that when evaluating each website, not all the barriers were present, as seen in the summary, and many of those that are not present are recorded in the Null option.</p><p>Table <ref type="table" target="#tab_4">7</ref> shows the summary of 40 home pages evaluated; it contains the acronyms, the severities of null, minor, significant, critical, and the country to which each website corresponds.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>9) PHASE 9: ANALYZE THE RESULTS</head><p>In this ninth phase, the evaluators analyzed the results for each heuristic. First, the data were organized and then grouped by categories to which they were related, and statistics were applied for each one of the categories. In this case, the evaluators analyzed the type of severity of each website that was part of this experiment. In the analysis and results section, the results obtained are discussed in greater detail. Figure <ref type="figure" target="#fig_1">3</ref> shows the relationship between each of the websites and the severities null, minor, significant, and critical in the evaluation. Of the 40 websites evaluated, the evaluators found that two web pages corresponded to Argentina  <ref type="figure" target="#fig_1">3</ref> shows that the website with the highest number of critical severity corresponds to the Universidad de Concepción (UDEC) of Chile with the value of 9 points, followed by UNESP, UBA, UFPR, UNB, UFF, UNIANDES, UNC, PUC-RIO, QQ, and AMAZON with 8 points. Null severity indicates the absence of some barriers in the websites analyzed. The websites with fewer barriers related to critical severity correspond to the Universidad de Puerto Rico (UPR), GOOGLE, BAIDU, and WIKIPEDIA.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>10) PHASE 10: SUGGEST RECOMMENDATIONS</head><p>In this final phase, the evaluators suggest correcting the barriers identified in the analyzed websites. The most severe barriers are related to the primary color, insufficient visual contrast, and too many web links. In this analysis, the evaluators identified problems of barriers related to moving content, poorly positioned vibrant images, images used as titles, and lack of internal web links. Once the experts have identified the barriers, they can suggest changing the design of the page and correcting the false visual clues. Moreover, it is possible to add a link that leads to a page specifically intended to provide a full description of the image content. In this phase, the evaluators suggest reducing the number of web links on the page instead of including web links in a table. The evaluators suggest (1) separating into different groups with page titles ''H2, H3'' so that users can proceed directly to a section of the page, (2) removing background images so that they do not affect the perception of content in the foreground, and (3) testing the contrast tones before implementing the website and having a defined palette for the website design, considering the most appropriate contrasts that help easy visualization for users with low vision.</p><p>Furthermore, the evaluators suggest avoiding the use of frames whenever possible because they tend to confuse the user and make them feel lost. Finally, the evaluators suggest avoiding the use of moving content in order to give the user the flexibility to decide when to move forward. It is vital to add a visible textual description of the destination of each region that can be clicked on and to change the style of representation when the focus is on a minimal region.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. RESULTS ANALYSIS</head><p>In the analysis phase, the following results were obtained. It was observed that the total null severity has a value of 520, which represents 48.1%. The minor severity corresponds to the value of 215, which represents 19.9%. The rate of significant severity is 104, which corresponds to 9.6%; finally, critical severity has a value of 241 and corresponds to 22.3%.</p><p>In this research, it was observed that the pages analyzed with critical severity violate some WCAG 2.1 principles; on the 40 websites evaluated, the experts identified 241 barriers with critical severity, where 58.9% correspond to the ''perceivable'' principle, 40.7% correspond to the ''operable'' principle, and 0.4% to the ''robust'' principle. To analyze critical severity, the evaluators proposed eliminating zero severity because it indicates that these barriers were not present and do not affect the accessibility of the website.</p><p>Figure <ref type="figure" target="#fig_4">4</ref> shows that the minor severity corresponds to 38.4%, the significant severity to 18.6% and the critical severity to 43.0%; this occurs when null severity is removed.</p><p>To analyze the data between the ranking of each website and the severity, the correlation coefficient (1) was applied. The correlation index varies in the interval between -1 and 1; therefore, if R equals 1, it indicates that there is a perfect   positive correlation. If R is greater than 0, there is a positive correlation. If R is equal to zero, there is no linear relationship. If R is equal to -1, there is a negative correlation.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Correl(X</head><formula xml:id="formula_0">, Y ) = (x -x)(y -ȳ) (x -x) 2 (y -ȳ) 2<label>(1)</label></formula><p>In Figure <ref type="figure" target="#fig_5">5</ref>, showing the ranking and null severity, the correlation coefficient is -0.23, which implies that the correlation is negative and weak.</p><p>In Figure <ref type="figure" target="#fig_6">6</ref>, showing the ranking and minor severity, the correlation coefficient is -0.10; this implies that the correlation is negative and weak.</p><p>In Figure <ref type="figure" target="#fig_7">7</ref>, showing the ranking and the significant severity, the correlation coefficient is -0.08; this implies that the correlation is very weak and negative.   When applying the correlations between the website rankings and the severities identified in the sample, the evaluators concluded that (1) Figure <ref type="figure" target="#fig_5">5</ref> and Figure <ref type="figure" target="#fig_6">6</ref>, respectively, show that the correlations in null and minor severity are negative and weak. (2) Figure <ref type="figure" target="#fig_7">7</ref> shows that the correlations between the website rankings and significant severity are very weak and negative. (3) Figure <ref type="figure" target="#fig_8">8</ref> shows that the correlations between the website rankings and critical severity is positive and moderate. (4) Moreover, the websites in the first ranking according to Webometrics and Alexa do not necessarily have accessible and inclusive websites because they do not comply with the accessibility guidelines of the WCAG 2.1.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>V. CONCLUSIONS AND FUTURE WORK</head><p>This heuristic method, combined with BW, can be applied to determine the level of accessibility of any website. One of the advantages of our proposal is to test a new heuristic method with a broader persistence range, which allows evaluators to have a more realistic approximation of the severity of a web accessibility barrier. We suggest replicating this method for users with other types of disabilities, considering the various accessibility barriers. However, the manual method takes too much time and is therefore too costly to solve web accessibility barriers. The evaluators identified some severity barriers, and among them, three stand out. The first barrier with the highest number of critical severity corresponds to the ''color is necessary'' barrier of the ''perceivable'' principle. The misuse of colors presents this barrier and generates an accessibility problem for users with color blindness. Therefore, the evaluators suggest applying tools and techniques to evaluate contrast and use of color on websites. This process is also possible manually, but it requires considerable time and effort. The second barrier corresponds to ''insufficient visual contrast,'' which violates the principle of ''perceivable.'' This barrier can be avoided by (1) deleting background images, and (2) selecting colors that have a high level of brightness contrast and a high level of tone contrast. The third barrier is related to ''too many links,'' which violates the principle of ''operable.'' A website with too many links can be complicated for most users to navigate, so the evaluators suggest (1) reducing the number of links on the page, (2) implementing groups with appropriate tags; for example, using a list instead of including the links in a table, and (3) separating groups with page titles ''H2, H3'' so that users can navigate directly to a section of the page. This research concludes that although a website is in a high position, it is not necessarily an accessible and inclusive website. This method can be replicated for other websites with more types of disabilities, applying the corresponding barriers. However, this method is very long and expensive in regard to finding all accessibility barriers. To achieve a better evaluation of the accessibility of a website, the evaluators suggest combining the use of automatic evaluation tools with heuristic methods. Remember that no tool can replace the evaluation made by an expert in web accessibility. On the other hand, the evaluators suggest that the legislation of each country include policies that contribute to the area of accessibility for the web and mobile applications, taking WCAG 2.1 as a guide. Additionally, it is essential that the training of information technology professionals includes topics related to web accessibility guidelines from an early stage to raise awareness and improve programming attitudes. Future work should continue to seek and improve heuristic methods to analyze the evolution of websites while providing updated classifications that allow the results and reports to be made public. Moreover, as future work, the researchers suggest adapting this method for mobile applications. Ultimately, the evaluators can conclude that no website selected in the sample has reached an acceptable level of accessibility. Therefore, Latin American universities and the most visited websites must make significant efforts to improve accessibility on websites. Finally, the evaluators suggest motivating the strengthening of each country's legislation by including web accessibility policies, as well as applying best practices based on WCAG 2.1 that allow the construction and design of more inclusive and accessible websites for users with disabilities.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>FIGURE 1 .TABLE 2 .</head><label>12</label><figDesc>FIGURE 1. Diagram of evaluation website accessibility with a heuristic method.</figDesc><graphic coords="7,298.68,66.06,238.00,337.30" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>TABLE 3 .</head><label>3</label><figDesc>Data to calculate the severity score of barriers with a modification to the method proposed by Brajnik.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>FIGURE 2 .</head><label>2</label><figDesc>FIGURE 2. Screenshot of UX Check when evaluating accessibility barriers.</figDesc><graphic coords="10,298.68,66.06,238.00,119.30" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>FIGURE 3 .</head><label>3</label><figDesc>FIGURE 3. Websites with analysis of severities.</figDesc><graphic coords="12,50.48,66.06,473.50,339.75" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>FIGURE 4 .</head><label>4</label><figDesc>FIGURE 4. Minor, significant, and critical severity.</figDesc><graphic coords="13,80.92,66.06,151.70,145.49" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>FIGURE 5 .</head><label>5</label><figDesc>FIGURE 5. Ranking vs. null severity.</figDesc><graphic coords="13,76.02,246.74,161.50,111.73" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>FIGURE 6 .</head><label>6</label><figDesc>FIGURE 6. Ranking vs. minor severity.</figDesc><graphic coords="13,52.82,393.66,207.90,115.50" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>FIGURE 7 .</head><label>7</label><figDesc>FIGURE 7. Ranking vs. significant severity.</figDesc><graphic coords="13,307.89,214.14,219.58,112.80" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>FIGURE 8 .</head><label>8</label><figDesc>FIGURE 8. Ranking vs. critical severity.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Figure 8</head><label>8</label><figDesc>Figure8shows the ranking of the position of the website, and the critical severity correlation coefficient is 0.34; this implies that the correlation is positive and moderate.When applying the correlations between the website rankings and the severities identified in the sample, the evaluators concluded that (1) Figure5and Figure6, respectively, show that the correlations in null and minor severity are negative and weak. (2) Figure7shows that the correlations between the website rankings and significant severity are very weak and negative. (3) Figure8shows that the correlations between the website rankings and critical severity is positive and moderate. (4) Moreover, the websites in the first ranking according to Webometrics and Alexa do not necessarily have accessible and inclusive websites because they do not comply with the accessibility guidelines of the WCAG 2.1.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>TABLE 1 .</head><label>1</label><figDesc>Scale and meaning of impact<ref type="bibr" target="#b7">[8]</ref>-<ref type="bibr" target="#b9">[10]</ref>.</figDesc><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>TABLE 4 .</head><label>4</label><figDesc>Websites selected for evaluation.</figDesc><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>TABLE 5 .</head><label>5</label><figDesc>Barrier vs. WCAG 2.1.</figDesc><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>TABLE 6 .</head><label>6</label><figDesc>Evaluation with the barrier walkthrough method for the home page of the University de São Paulo USP.</figDesc><table><row><cell>and represented 5%; 19 corresponded to Brazil with 47.5%.</cell></row><row><cell>Three web pages belonged to Chile with 7.5%; four sites</cell></row><row><cell>corresponded to China and represented 10.0%; three websites</cell></row><row><cell>were from Colombia with 7.5%; two from Mexico with 5.0%;</cell></row><row><cell>one from Puerto Rico with 2.5% and six websites corre-</cell></row><row><cell>sponded to the United States and represented 15.0% of the</cell></row><row><cell>sample. Figure</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>TABLE 7 .</head><label>7</label><figDesc>Summary of the severities of the home pages evaluated.</figDesc><table/></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>This work is licensed under a Creative Commons Attribution 4.0 License. For more information, see http://creativecommons.org/licenses/by/4.0/ VOLUME 7, 2019</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2" xml:id="foot_1"><p>http://www.webometrics.info/en/Latin_America</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="3" xml:id="foot_2"><p>https://www.alexa.com/topsites</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="125636" xml:id="foot_3"><p>  VOLUME 7, 2019   </p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="125638" xml:id="foot_4"><p>  VOLUME 7, 2019   </p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="125640" xml:id="foot_5"><p>  VOLUME 7, 2019   </p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_6"><p>VOLUME 7, 2019   </p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="5" xml:id="foot_7"><p>http://www.uxcheck.co/</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="6" xml:id="foot_8"><p>http://dx.doi.org/10.17632/rktjnnzy48.4 VOLUME</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_9"><p><ref type="bibr" target="#b6">7,</ref> 2019   </p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="125644" xml:id="foot_10"><p>  VOLUME 7, 2019   </p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="125646" xml:id="foot_11"><p>  VOLUME 7, 2019   </p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="125648" xml:id="foot_12"><p>  VOLUME 7, 2019   </p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENT</head><p>The authors would like to thank also thank <rs type="person">Noah Zweig</rs> for the proofreading.</p></div>
+			</div>			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"/>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<ptr target="https://wearesocial.com/blog/2019/01/digital-2019-global-internet-use-accelerates"/>
+		<title level="m">Digital 2019: Global Internet Use Accelerates-We Are Social</title>
+		<imprint>
+			<publisher>We Are Social and Hootsuite</publisher>
+			<date type="published" when="2019-04-18">2019. Apr. 18, 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Social commerce: Foundations, social marketing, and advertising</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Turban</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Outland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>King</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">P</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Turban</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Electronic Commerce</title>
+		<meeting><address><addrLine>Cham, Switzerland</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="285" to="324"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Moving toward a universally accessible Web: Web accessibility and education</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kurt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Assistive Technol</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="199" to="208"/>
+			<date type="published" when="2018-12">Dec. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">A study of Website content in webometrics ranking of world University by using similar Web tool</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Suksida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Santiworarak</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. IEEE 2nd Int. Conf. Signal Image Process. (ICSIP)</title>
+		<meeting>IEEE 2nd Int. Conf. Signal Image ess. (ICSIP)</meeting>
+		<imprint>
+			<date type="published" when="2017-08">Aug. 2017</date>
+			<biblScope unit="page" from="480" to="483"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<author>
+			<persName><surname>Who</surname></persName>
+		</author>
+		<ptr target="https://www.who.int/disabilities/world_report/2011/report/en/"/>
+		<title level="m">World Report on Disability</title>
+		<imprint>
+			<date type="published" when="2019-04-18">2019. Apr. 18, 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Monitoring for accessibility and University Websites: Meeting the needs of people with disabilities</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">I</forename><surname>Solovieva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Bock</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Postsecondary Educ. Disab</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="113" to="127"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<ptr target="https://www.w3.org/WAI/fundamentals/accessibility-intro/"/>
+		<title level="m">Introduction to Web Accessibil-ity|Web Accessibility Initiative (WAI)|W3C</title>
+		<imprint>
+			<publisher>World Wide Web Consortium</publisher>
+			<date type="published" when="2019-04-18">2019. Apr. 18, 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Web accessibility testing: When the method is the culprit</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Brajnik</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Int. Conf. Comput. Handicapped Persons</title>
+		<meeting>Int. Conf. Comput. Handicapped Persons</meeting>
+		<imprint>
+			<date type="published" when="2006">2006</date>
+			<biblScope unit="page" from="156" to="163"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Measuring Web accessibility by estimating severity of barriers</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Brajnik</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Int. Conf. Web Inf. Syst. Eng</title>
+		<meeting>Int. Conf. Web Inf. Syst. Eng</meeting>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+			<biblScope unit="page" from="112" to="121"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<monogr>
+		<title level="m" type="main">Barrier Walkthrough</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Brajnik</surname></persName>
+		</author>
+		<ptr target="https://users.dimi.uniud.it/~giorgio.brajnik/projects/bw/bw.html"/>
+		<imprint>
+			<date type="published" when="2011-05-03">2011. May 3, 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title level="m" type="main">Web Content Accessibility Guidelines (WCAG) 2.1</title>
+		<ptr target="https://www.w3.org/TR/WCAG21/"/>
+		<imprint>
+			<date type="published" when="2018-05-30">2018. May 30, 2019</date>
+			<publisher>World Wide Web Consortium</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<title level="m" type="main">How Many Websites Are There Around the World? Accessed</title>
+		<author>
+			<persName><surname>Mill</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Business</surname></persName>
+		</author>
+		<ptr target="https://www.millforbusiness.com/how-many-websites-are-there/"/>
+		<imprint>
+			<date type="published" when="2019-06-20">2019. Jun. 20, 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<title level="m" type="main">WebAIM: Accessibility of AJAX Applications</title>
+		<author>
+			<persName><surname>Webaim</surname></persName>
+		</author>
+		<ptr target="https://webaim.org/techniques/ajax/"/>
+		<imprint>
+			<date type="published" when="2019-05-23">May 23, 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Effect of human development level of countries on the Web accessibility and quality in use of their municipality websites</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Inal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ismailova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Ambient Intelligence and Humanized Computing</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="11"/>
+			<date type="published" when="2019">2019</date>
+			<publisher>Springer</publisher>
+			<pubPlace>Berlin, Germany</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Accessibility and communicability on Facebook: A case study with Brazilian elderly</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Sacramento</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ferreira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Capra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Garcia</surname></persName>
+		</author>
+		<ptr target="https://firstmonday.org/ojs/index.php/fm/article/view/9338/7715"/>
+	</analytic>
+	<monogr>
+		<title level="j">First Monday</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Framework for accessibility evaluation of hospital Websites</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Acosta-Vargas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Acosta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Luján-Mora</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Int. Conf. eDemocracy eGovernment (ICEDEG)</title>
+		<meeting>Int. Conf. eDemocracy eGovernment (ICEDEG)</meeting>
+		<imprint>
+			<date type="published" when="2018-04">Apr. 2018</date>
+			<biblScope unit="page" from="9" to="15"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Accessibility of Indian universities' homepages: An exploratory study</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ismail</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Kuppusamy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. King Saud Univ.-Comput. Inf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="268" to="278"/>
+			<date type="published" when="2018-04">Apr. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Challenges to assess accessibility in higher education Websites: A comparative study of latin America Universities</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Acosta-Vargas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Acosta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Luján-Mora</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="36500" to="36508"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Accessibility evaluation of top University Websites: A comparative study of Kyrgyzstan, Azerbaijan, Kazakhstan and Turkey</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ismailova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Universal Access Inf. Soc</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="437" to="445"/>
+			<date type="published" when="2018-06">Jun. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Universities of the Kyrgyz Republic on the Web: Accessibility and usability</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ismailova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kimsanova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Universal Access Inf. Soc</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1017" to="1025"/>
+			<date type="published" when="2017-11">Nov. 2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<title level="m" type="main">A quantitative analysis of WCAG 2.0 compliance for some Indian Web portals</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Patra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Dash</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">K</forename><surname>Mishra</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1710.08788</idno>
+		<ptr target="https://arxiv.org/abs/1710.08788"/>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Accessibility of Turkish University Web sites</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kurt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Universal Access Inf. Soc</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="505" to="515"/>
+			<date type="published" when="2017-06">Jun. 2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Accessibility evaluation of top-ranking University Websites in world, Oceania, and Arab categories for home, admission, and course description Webpages</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Alahmadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Drew</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Open, Flexible Distance Learn</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="7" to="24"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Web accessibility of the Malaysian public University Websites</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ahmi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mohamad</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Int. Conf. E-Commerce</title>
+		<meeting>Int. Conf. E-Commerce</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="171" to="177"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Accessibility evaluation using WCAG 2.0 guidelines webometrics based assessment criteria (case study: Sebelas Maret University)</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Windriyani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ferdiana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Najib</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Int. Conf. ICT Smart Soc. (ICISS)</title>
+		<meeting>Int. Conf. ICT Smart Soc. (ICISS)</meeting>
+		<imprint>
+			<date type="published" when="2014-09">Sep. 2014</date>
+			<biblScope unit="page" from="305" to="311"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Evaluation of the Web accessibility of higher-education Websites</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Acosta-Vargas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lujan-Mora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Salvador-Ullauri</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 15th Int. Conf. Inf. Technol. Based Higher Educ. Training (ITHET)</title>
+		<meeting>15th Int. Conf. Inf. Technol. Based Higher Educ. Training (ITHET)</meeting>
+		<imprint>
+			<date type="published" when="2016-09">Sep. 2016</date>
+			<biblScope unit="page" from="1" to="6"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Evaluating Web accessibility metrics for Jordanian universities</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">W</forename><surname>Kamal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">M</forename><surname>Alsmadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Wahsheh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Al-Kabi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Adv. Comput. Sci. Appl</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="113" to="122"/>
+			<date type="published" when="2016-07">Jul. 2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">The most violated WCAG 1.0 guidelines by the developers of University Websites in Turkey</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Akgül</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 12th Iberian Conf. Inf. Syst. Technol. (CISTI)</title>
+		<meeting>12th Iberian Conf. Inf. Syst. Technol. (CISTI)</meeting>
+		<imprint>
+			<date type="published" when="2017-06">Jun. 2017</date>
+			<biblScope unit="page" from="1" to="7"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Benchmarking Web accessibility evaluation tools: Measuring the harm of sole reliance on automated tests</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vigo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Conway</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 10th Int. Cross-Disciplinary Conf. Web Accessibility (W4A)</title>
+		<meeting>10th Int. Cross-Disciplinary Conf. Web Accessibility (W4A)</meeting>
+		<imprint>
+			<date type="published" when="2013-05">May 2013</date>
+			<biblScope unit="page">1</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Applying the barrier walkthrough method: Going beyond the automatic evaluation of accessibility</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Braga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">S</forename><surname>Pereira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B L</forename><surname>Ferreira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Da Silveira</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Procedia Comput. Sci</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="471" to="480"/>
+			<date type="published" when="2014-01">Jan. 2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<title level="m" type="main">Accessibility, Usability, and Inclusion</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">W W</forename><surname>Consortium</surname></persName>
+		</author>
+		<ptr target="https://www.w3.org/WAI/fundamentals/accessibility-usability-inclusion/"/>
+		<imprint>
+			<date type="published" when="2016-07-29">2016. Jul. 29, 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Generating a domain specific checklist through an adaptive framework for evaluating social networking Websites</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Alroobaea</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Al-Badi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Mayhew</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Adv. Comput. Sci. Appl</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="25" to="33"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Protocols for evaluation of site accessibility with the participation of blind users</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B L</forename><surname>Ferreira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Da Silveira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">P</forename><surname>Capra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">O</forename><surname>Ferreira</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Procedia Comput. Sci</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="47" to="55"/>
+			<date type="published" when="2012-01">Jan. 2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Information systems research and exploring social artifacts: Approaches and methodologies</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Luján-Moras</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Masri</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Information Systems Research and Exploring Social Artifacts: Approaches Methodologies</title>
+		<editor>
+			<persName><forename type="first">P</forename><surname>Isaias</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">L</forename><surname>Johnston</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">K</forename><surname>Wolfe</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">N</forename><surname>Newcomer</surname></persName>
+		</editor>
+		<meeting><address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Information Science</publisher>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="314" to="331"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">A combined agile methodology for the evaluation of Web accessibility</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Masri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Mora</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Int. Conf. Interfaces Hum. Comput. Interact. (IHCI)</title>
+		<meeting>Int. Conf. Interfaces Hum. Comput. Interact. (IHCI)</meeting>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+			<biblScope unit="page" from="423" to="428"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Accessibility of Internet Websites through time</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hackett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Parmanto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zeng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACM SIGACCESS Accessibility Comput</title>
+		<imprint>
+			<biblScope unit="issue">77-78</biblScope>
+			<biblScope unit="page" from="32" to="39"/>
+			<date type="published" when="2004-01">2004. Jan. 2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Is your Web page accessible?: A comparative study of methods for assessing Web page accessibility for the blind</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mankoff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Fait</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tran</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Proc. SIGCHI Conf. Hum. Factors Comput. Syst</title>
+		<meeting>SIGCHI Conf. Hum. Factors Comput. Syst</meeting>
+		<imprint>
+			<date type="published" when="2005-04">Apr. 2005</date>
+			<biblScope unit="page" from="41" to="50"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Heuristic evaluation of user interfaces</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Nielsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rolf</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. SIGCHI Conf. Hum. Factors Comput. Syst</title>
+		<meeting>SIGCHI Conf. Hum. Factors Comput. Syst</meeting>
+		<imprint>
+			<date type="published" when="1990-04">Apr. 1990</date>
+			<biblScope unit="page" from="249" to="256"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Generating a domain specific inspection evaluation method through an adaptive framework: A comparative study on educational Websites</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Alroobaea</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Al-Badi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Mayhew</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Hum. Comput. Interact</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">88</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Applying heuristics to accessibility inspections</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Paddison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Englefield</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Interacting Comput</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="507" to="521"/>
+			<date type="published" when="2004-06">Jun. 2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Beyond conformance: The role of accessibility evaluation methods</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Brajnik</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Int. Conf. Web Inf. Syst. Eng</title>
+		<meeting>Int. Conf. Web Inf. Syst. Eng<address><addrLine>Berlin, Germany</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2008">2008</date>
+			<biblScope unit="volume">5176</biblScope>
+			<biblScope unit="page" from="63" to="80"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">SAMBA: A semi-automatic method for measuring barriers of accessibility</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Brajnik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lomuscio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 9th Int. ACM SIGACCESS Conf. Comput. Accessibility (ASSETS)</title>
+		<meeting>9th Int. ACM SIGACCESS Conf. Comput. Accessibility (ASSETS)</meeting>
+		<imprint>
+			<date type="published" when="2007-01">Jan. 2007</date>
+			<biblScope unit="page" from="1" to="8"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Toward a combined method for evaluation of Web accessibility</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Acosta-Vargas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Luján-Mora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Acosta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Salvador-Ullauri</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Intelligent Systems and Computing</title>
+		<meeting><address><addrLine>Switzerland</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">721</biblScope>
+			<biblScope unit="page" from="602" to="613"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Barriers faced by older users on static Web pages criteria used in the barrier walkthrough method</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lunn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yesilada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Harper</surname></persName>
+		</author>
+		<ptr target="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.613.7905"/>
+	</analytic>
+	<monogr>
+		<title level="j">School Comput. Sci</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="38"/>
+			<date type="published" when="2009">2009</date>
+			<pubPlace>Oxford Road, Manchester, U.K.</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Heuristic walkthroughs: Finding the problems without the noise</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sears</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Hum.-Comput. Interact</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="213" to="234"/>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Exploring the Web navigation strategies of people with low vision</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Moreno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Valencia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Pérez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Arrue</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. 19th Int. Conf. Hum. Comput. Interact</title>
+		<meeting>19th Int. Conf. Hum. Comput. Interact</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page">13</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<monogr>
+		<title level="m" type="main">Why You Only Need to Test With 5 Users</title>
+		<author>
+			<persName><forename type="first">Nielsen</forename><surname>Norman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Group</forename></persName>
+		</author>
+		<ptr target="https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/"/>
+		<imprint>
+			<date type="published" when="2019-08-17">Aug. 17, 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

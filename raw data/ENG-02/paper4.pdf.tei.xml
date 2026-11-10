@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Non-Convex AC/DC Static Transmission Expansion Planning Considering Energy Storage Systems and Uncertainty</title>
+				<funder ref="#_fBpRdE9">
+					<orgName type="full">VLIR-UOS, Belgium Short Initiative</orgName>
+				</funder>
+				<funder ref="#_RJPTjgK">
+					<orgName type="full">Ecuador</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>IEEE</publisher>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2024-10-14">2024-10-14</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><roleName>Senior Member, IEEE</roleName><forename type="first">Santiago</forename><forename type="middle">P</forename><surname>Torres</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jorge</forename><forename type="middle">E</forename><surname>Idrovo</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Mateo</forename><forename type="middle">D</forename><surname>Llivisaca</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Edgar</forename><forename type="middle">G</forename><surname>Morquecho</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">José</forename><surname>Jara-Alvear</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Miguel</forename><forename type="middle">A</forename><surname>Torres</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Hakan</forename><surname>Ergun</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>Senior Member, IEEE</roleName><forename type="first">Dirk</forename><surname>Van Hertem</surname></persName>
+						</author>
+						<title level="a" type="main">Non-Convex AC/DC Static Transmission Expansion Planning Considering Energy Storage Systems and Uncertainty</title>
+					</analytic>
+					<monogr>
+						<title level="m">2024 IEEE PES Innovative Smart Grid Technologies Europe (ISGT EUROPE)</title>
+						<imprint>
+							<publisher>IEEE</publisher>
+							<biblScope unit="page" from="1" to="5"/>
+							<date type="published" when="2024-10-14"/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">AD123259CB51C6866485978804E0E041</idno>
+					<idno type="DOI">10.1109/isgteurope62998.2024.10863357</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-01T12:00+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>AC/DC network</term>
+					<term>Energy Storage Systems</term>
+					<term>Heuristics</term>
+					<term>Monte Carlo Simulation</term>
+					<term>Renewable Energy</term>
+					<term>Transmission Expansion Planning</term>
+					<term>Uncertainty</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The integration of non-dispatchable renewable energy sources increases demands for the inclusion of modern technologies, such as High Voltage Direct Current (HVDC) links and Energy Storage Systems (ESS), in the network expansion planning. Also, the current and future power network complexity demands more accurate models to provide more realistic solutions for the transmission expansion planning problem. However, there are no approaches that allow the selection of the proper technology in a unified and accurate TNEP formulation. This article proposes a non-convex formulation to solve the problem, using AC/DC transmission links and ESS. The Iterated Greedy (IG) algorithm is employed as an optimization technique to find good quality solutions. Since uncertainty in load and generation scenarios significantly impacts the Transmission Network Expansion Planning (TNEP), the Monte Carlo Simulation (MCS) technique is used to deal with their stochastic behavior. The advantages of the proposed approach are illustrated using a modified 6-bus Garver test system.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>The Transmission Network Expansion Planning (TNEP) problem aims to determine the least cost set of investments in the transmission infrastructure necessary to meet the balance between demand and generation within a planning horizon. The static TNEP problem considers a single target year, while in the dynamic TNEP problem, the planning horizon is divided into several stages <ref type="bibr" target="#b0">[1]</ref>. Looking several decades ahead, using electricity storage and flexible transmission technologies such as High Voltage Direct Current (HVDC) technology is inevitable in the presence of large shares of renewable generation sources.</p><p>HVDC systems are currently a technically and economically feasible for bulk power transmission over long distances, Santiago P. Torres, Jorge E. Idrovo, Mateo D. Llivisaca, and Edgar G. Morquecho are with the Department of Electrical, Electronics, and Telecommunications Engineering (DEET), University of Cuenca, Cuenca, Ecuador. (e-mail: santiago.torres@ucuenca.edu.ec; jorge.idrovo@ucuenca.edu.ec; mateo.llivisaca@ucuenca.edu.ec; edgar.morquechos@ucuenca.ec; ).</p><p>José Jara-Alvear is with the CIENER Research Group, University of Azuay (UDA), Cuenca, Ecuador. (e-mail: jejara@uazuay.edu.ec).</p><p>Miguel A. Torres is with the Faculty of Electrical and Computer Engineering (FIEC), Escuela Superior Politécnica del Litoral (ESPOL), Guayaquil, Ecuador.</p><p>Hakan Ergun, and Dirk Van Hertem are with the Electa Research Group, Electrical Engineering Department ESAT, KU Leuven, Heverlee, Belgium and EnergyVille, Genk, Belgium. (email: hakan.ergun@esat.kuleuven.be; dirk.vanhertem@esat.kuleuven.be). connection of non-synchronous networks and weak grids, and submarine and underground transmission. Furthermore, it does not present stability problems when transmitting over long distances compared to classical AC transmission. In <ref type="bibr" target="#b1">[2]</ref>, a robust multistage TNEP linear model of hybrid highvoltage AC-DC networks is proposed. A hybrid AC/DC TNEP algorithm using a stochastic simulation method and a mixedinteger linear formulation (MILP) is presented in <ref type="bibr" target="#b2">[3]</ref>.</p><p>Energy storage systems (ESS) are an attractive option to increase the flexibility of electric networks. The energy is stored in case of low electricity prices or excessive generation and is returned into the grid during high prices or low available generation. Most research works using ESS deal with the TNEP using a DC network representation without considering other technologies <ref type="bibr" target="#b3">[4]</ref>, <ref type="bibr" target="#b4">[5]</ref>. Those approaches do not allow the proper cost-effective technologies and topology to be chosen for the transmission system's needs. Also, previous research works use linear optimization models, which provide non-realistic solutions for the current and future electricity networks. In this research work, a more accurate and unified non-convex formulation to solve the TNEP problem, using AC/DC transmission links and ESS, is proposed. The growing integration of renewable energy sources has intensified the unpredictability of the net power injections at individual nodes. Consequently, planning considering uncertainty has garnered renewed attention, aiming to create cost-effective and resilient designs that can accommodate all foreseeable scenarios of net power injections. This paper used the Monte Carlo Simulation (MS) technique to deal with the uncertainty and the IG technique to solve the optimization problem.</p><p>The paper is organized as follows: Section II presents the formulation and mathematical model. The optimization approach based on an iterated greedy algorithm is presented in Section III. In Section IV, results are presented. The conclusions are summarized in Section V.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. FORMULATION</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. AC Power Flow</head><p>The nodal active and reactive power flows in the AC network are represented in (1) -(2) as follows: </p><formula xml:id="formula_0">P (V, θ) = V i • j∈Λ ac V j • (G ij • cos θ ij + B ij • sin θ ij ) (1)</formula><formula xml:id="formula_1">Q(V, θ) = V i • j∈Λ ac V j • (G ij • sin θ ij -B ij • cos θ ij ) (2)</formula><p>where V is the nodal voltage, G is the series conductance, and B is the series susceptance, for i -j branches.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Mathematical formulation (STNEP)</head><p>This section explains the mathematical model and some important aspects related to the formulation. The problem is divided into two sub-problems: i) the master transmission expansion problem and ii) the operational problem (solved by a multiperiod AC/DC-OPF formulation) <ref type="bibr" target="#b5">[6]</ref>. The expansion master problem allows for minimizing the investment and operational costs in the system and it is represented as follows:</p><formula xml:id="formula_2">min v = E[c exp + w]<label>(3)</label></formula><formula xml:id="formula_3">c exp = (k,l)∈Ω (c kl • n kl ) + (i,j)∈Γ (c dc,ij • n dc,ij ) + h∈∆ (cc h ) + y∈Λ T (t=1) (c F,y • n ess,y + c P,y (P t c,y + P t d,y ) + c E,y • e t y ) (4) s.t. 0 ≤ n kl ≤ n kl ; n kl ∈ Z (5) n dc,ij ≤ n dc,ij ≤ n dc,ij ; n dc,ij ∈ Z<label>(6)</label></formula><p>where E represents the expected value associated to the objective function <ref type="bibr" target="#b2">(3)</ref>. c kl , c dc , cc h are the costs of candidate AC lines, DC lines, and converters, respectively. c F , c P , c E are the fixed and power and energy-dependent variable costs of the ESS, respectively. Ω, Γ, ∆, and Λ are the sets of candidate AC circuits, DC circuits, converters, and nodes for ESS, respectively. P t c , P t d , and e t represent the charge and discharge power and the energy stored in time t, respectively. n kl , n dc , n ess are the number of added elements corresponding to the AC circuits, DC circuits, and converters. Equations ( <ref type="formula">5</ref>), ( <ref type="formula" target="#formula_3">6</ref>) represent the limits of AC circuits and DC circuits added with a maximum of five elements used in this paper. For ESS, only one unit is allowed to be added per bus. The scalar w represents simultaneously the load-shedding cost for the operational problem and a penalty strategy for the master objective function. The operational problem allows determining the load shedding for active and reactive power in the topology (7) through a multiperiod AC optimal power flow formulation with operational constraints ( <ref type="formula">8</ref>) -( <ref type="formula">23</ref>). The active and reactive load shedding is modeled by fictitious generators (L P , L Q ), connected to the load nodes, that supply the load when the generation and transmission systems are not able to satisfy the total demand. The purpose of the fictitious generators is to penalize the objective function to discriminate transmission topologies with unattended demand so that the operational optimization problem minimizes the fictitious generation <ref type="bibr" target="#b6">[7]</ref>. The objective function of the operational problem <ref type="bibr" target="#b6">(7)</ref> is presented as follows.</p><formula xml:id="formula_4">min w = (k∈∧∪Γ) (α 1 • L P k ) + (k∈∧) (α 2 • L Qk )<label>(7)</label></formula><p>s.t. AC Lines </p><formula xml:id="formula_5">P (V, θ) t + P t T f -U (P t G ) -P t d + P t c + H(P t D ) -L t P = 0 (8) Q(V, θ) t + Q t T f -U (Q t G ) + H(Q t D ) -L t Q = 0 (9) U (P G ) ≤ U (P t G ) ≤ U (P G )<label>(10)</label></formula><formula xml:id="formula_6">U (Q G ) ≤ U (Q t G ) ≤ U (Q G )<label>(11)</label></formula><formula xml:id="formula_7">L P ≤ L t P ≤ L P<label>(12)</label></formula><formula xml:id="formula_8">L Q ≤ L t Q ≤ L Q (13) S f</formula><formula xml:id="formula_9">I t cv,ac ≤ I cv (27) V cv,h ≤ V t cv,ac,h ≤ V cv,h<label>(26)</label></formula><p>Equations ( <ref type="formula">8</ref>) and ( <ref type="formula">9</ref>) represent active and reactive power balance at each bus, respectively. The power (U) from nondispatchable renewable sources and load fluctuations (H) are stochastic variables handled by probability density functions. Equations ( <ref type="formula" target="#formula_5">10</ref>) and ( <ref type="formula" target="#formula_6">11</ref>) are the active and reactive generation limits, respectively. The limits of active and reactive fictitious generators are represented by ( <ref type="formula" target="#formula_7">12</ref>) - <ref type="bibr" target="#b12">(13)</ref>. For the active power, the limits are fixed on 0 and 1000 MW, while reactive power is not considered in this work. Equations ( <ref type="formula">14</ref>) and (15) are the capacity of each transmission line. The energy stored in the ESS at time t (e t ), depending on the charge and discharge efficiencies (η c , η d ), the current power and the energy stored in the previous period (t -1), is calculated by (16). Equation (17) restricts the charge and discharge power, ie, the unit can either only charge or only discharge at time t. The limits of the ESS power output between 0 and the rated value (P ess ) are represented by ( <ref type="formula">18</ref>) -( <ref type="formula">19</ref>). The elements of vectors P (V, θ) and P (V, θ) appear in (1) - <ref type="bibr" target="#b1">(2)</ref>. The DC equations (20) -(23) depends on the DC voltage and current, number of poles (p = 2 for this work), and the resistance (r dc ). For AC/DC converters, equation (24) represents the balance on the AC and DC sides as a function of equipment, switching, and conduction losses (a cv , b cv , c cv ). Equations ( <ref type="formula">25</ref>)-(26) represent the active and reactive power on the AC side, as a function of the rated power of the converter and the firing angle of the thyristors (ϕ h ). Finally, equations ( <ref type="formula">27</ref>)-( <ref type="formula" target="#formula_10">28</ref>) are the limits of the current and voltage of the converters respectively.</p><p>1) Uncertainty: To deal with the uncertainties due to the use of wind power (U) and load fluctuations (H), the probability density functions (PDF) (29)-(30) are used in ( <ref type="formula">8</ref>)- <ref type="bibr" target="#b8">(9)</ref>.</p><formula xml:id="formula_11">d(p) = 1 B(α, β) • x α-1 (1 -p) β-1 (29) v = k c ( p c ) k-1 • e (-p/c) k (30)</formula><p>For the load model (H), the random data are represented by a beta distribution function (29) that depends on the shape parameters α and β. For the wind power plant, the power generation (U) is modeled by a power output curve <ref type="bibr" target="#b7">[8]</ref>, and the wind speed is modeled by a Weibull function (30), which depends on the scale c and the shape k parameters.</p><p>2) Objective function penalization and load shedding strategy: In this work, the load-shedding concept is used as a penalization strategy to obtain zero load-shedding transmission plans. Reactive load shedding is not considered, and α 2 is set to zero. The load-shedding strategy is thoroughly explained in <ref type="bibr" target="#b6">[7]</ref>.</p><p>3) Energy Storage Systems (ESS): Costs for energy storage systems depend on the power (kW) and energy capacity (kWh) as well as on fixed costs (3) that are independent of the system size. Fixed costs include, for example, control systems, construction management, and permitting. Further information about storage capacity and costs for each system can be found in <ref type="bibr" target="#b8">[9]</ref>, <ref type="bibr" target="#b9">[10]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. ITERATED GREEDY ALGORITHM</head><p>The proposed optimization approach consists of two steps: 1. Initial solution (s): The so-called Forward <ref type="bibr" target="#b10">[11]</ref> heuristic starts from zero added lines. It consists of adding, one by one, all the candidate transmission circuits (l i ) to the system. For each added circuit, an AC optimal power flow ( <ref type="formula">8</ref>) -( <ref type="formula">23</ref>) is performed to verify the feasibility of the current topology, and the resulting w value is passed to (3). This is performed until the first feasible topology (w = 0) is found.</p><p>2. Optimization algorithm: Iterated Greedy (IG) is a metaheuristic that generates a sequence of solutions using two main steps: destruction and (re-)construction. During the destruction step, some solution components are removed from the currently best solution. Then, the Forward algorithm is applied to obtain a new candidate solution. If this new solution is better than the currently best one, the new solution is taken as the new currently best solution. The algorithm stops after m consecutive non-improving iterations and returns the best solution found. In this work, it is set to m = 6. Figure <ref type="figure" target="#fig_0">1</ref> explains the process. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. RESULTS</head><p>The modeling layer JuMP <ref type="bibr" target="#b11">[12]</ref> in Julia <ref type="bibr" target="#b12">[13]</ref> was used to develop the optimization model. The interior point solver Ipopt <ref type="bibr" target="#b13">[14]</ref> was used to solve AC/DC-OPF. In addition, a modified Garver 6-bus test system was used for the TNEP tests. The maximum number of allowed circuits per right of way is five. The maximum number of allowed ESS is one. The results were obtained using Julia parallel processing with 16 processors on an AMD Ryzen 9, 3.40GHz, 64GB RAM PC. The demand and wind generation data are distributed within a ±5% of uncertainty range. Simulations are performed using two scenarios. The first scenario compares the AC/DC base system with and without ESS. Also, a robustness analysis of the optimization algorithm is performed using the scenario with ESS. The second scenario corresponds to the TNEP considering storage and uncertainty using 500 Monte Carlo simulations. Table <ref type="table" target="#tab_2">I</ref> summarizes the characteristics of the modified Garver system. Costs are in units of (USD × 10 6 ).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. AC/DC Garver 6-bus system</head><p>This system has 6 buses with a total power demand of 760 MW and 152 Mvar, 6 transmission lines, and an installed capacity of 1,110 MW. For this system, 1 AC candidate link, 11 DC candidate links, and 6 ESSs candidates (one per bus for this paper) are considered for expansion. In subsection 1, dispatchable generation is considered. In subsection 2, dispatchable generator 1 is replaced by a wind generator described in Table <ref type="table" target="#tab_2">I</ref>.</p><p>1) ESS and algorithm robustness analysis: Table <ref type="table" target="#tab_2">II</ref> shows the solution vectors for scenarios with and without ESS.  When storage systems are considered, the total costs decrease. Variable costs, as shown in Section II, depend on the transferred power and energy stored in the ESS; these costs represent about 15% of the total cost. Therefore, savings can be achieved when storage systems are considered an option for expansion in the TNEP problem. The computing time increases considerably since ESS are considered, and a multiperiod optimal flow calculation is carried out according to the load curve shown in Figure <ref type="figure" target="#fig_1">2</ref>. To show the algorithm's robustness, the scenario considering ESS was selected, where the load and generation vary according to the percentages shown in Table <ref type="table" target="#tab_4">III</ref>. Results prove that  <ref type="table" target="#tab_4">III</ref>. The 100% success in obtaining the same solution demonstrates the algorithm's robustness. Figure <ref type="figure" target="#fig_2">3</ref> shows the convergence of the heuristic algorithm for some trials. It is important to highlight that the final solution has already been obtained from the fourth iteration. The algorithm stops after a few more iterations since there is no improvement in the objective function.</p><p>2) TNEP with uncertainty: When working with uncertainty, each load is considered a variable under a Beta Distribution. Also, the wind speed is considered a stochastic variable with values provided by the Weibull Distribution. Table <ref type="table" target="#tab_5">IV</ref> summarizes the robust plan obtained by performing 500 MCS. Most of the topologies for the robust plan are the same. The variable cost is different due to the uncertainty. The table shows an average value for the costs and computing time.  <ref type="table" target="#tab_5">IV</ref>, is considered a robust plan. This topology is capable of dealing with most uncertain scenarios. The convergence in the scenarios, including uncertainty, is similar to that shown in Figure <ref type="figure" target="#fig_2">3</ref>.</p><p>Finally, Figure <ref type="figure" target="#fig_5">5</ref> summarizes the behavior of the ESS throughout the 24 time periods of the load curve (Figure <ref type="figure" target="#fig_1">2</ref>). ESS delivers energy around the 12th hour when there is peak demand. Then, ESS is charged during low-demand periods to deliver energy around the 20th hour.  The TNEP is a very complex problem, and it must be rethought when new technologies arise. ESS devices can help mitigate operational problems in the electric power system, lowering overall costs. On the other hand, renewable energies are booming and should also be considered in the TNEP problem. However, those technology conditions demand the use of more accurate and unified TNEP formulations, including uncertainty. The proposed model considers AC/DC links, ESS, and uncertainty in load and generation.</p><p>For the analyzed scenarios, results show that ESS can be The proposed approach demonstrated great robustness for a simple test network, although the complexity is still very high due to the multiperiod and uncertainty features. The proposed model can be extended for a multistage TNEP problem, considering contingencies.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. Flow chart of the optimization algorithm</figDesc><graphic coords="3,317.03,50.54,240.94,258.05" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 2. Load curve</figDesc><graphic coords="4,54.02,212.23,240.95,148.82" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 3 .</head><label>3</label><figDesc>Fig. 3. Convergence for Scenarios 1 and 2 with uncertainty</figDesc><graphic coords="4,317.03,50.54,240.94,148.92" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4</head><label>4</label><figDesc>Figure 4 represents the global solutions obtained for the 500 MS. The expected plan, shown in TableIV, is considered a robust plan. This topology is capable of dealing with most uncertain scenarios. The convergence in the scenarios, including uncertainty, is similar to that shown in Figure3.Finally, Figure5summarizes the behavior of the ESS throughout the 24 time periods of the load curve (Figure2). ESS delivers energy around the 12th hour when there is peak demand. Then, ESS is charged during low-demand periods to deliver energy around the 20th hour.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 4 .</head><label>4</label><figDesc>Fig. 4. Solutions obtained with uncertainty</figDesc><graphic coords="5,54.02,193.24,240.95,148.99" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 5 .</head><label>5</label><figDesc>Fig. 5. Storage capacity at each time period</figDesc><graphic coords="5,54.02,547.81,240.94,148.98" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>TABLE I MODIFIED</head><label>I</label><figDesc>GARVER SYSTEM DATA</figDesc><table><row><cell/><cell>Cost Lines</cell><cell/><cell>Gen</cell><cell/></row><row><cell/><cell>Line</cell><cell>Cost</cell><cell>Bus</cell><cell>MW</cell></row><row><cell>AC</cell><cell>5-6</cell><cell>10</cell><cell>1</cell><cell>150</cell></row><row><cell/><cell>2-5</cell><cell>5.3</cell><cell>3</cell><cell>360</cell></row><row><cell/><cell>2-6</cell><cell>5.4</cell><cell>6</cell><cell>600</cell></row><row><cell/><cell>2-6</cell><cell>6.4</cell><cell>Storage</cell><cell/></row><row><cell/><cell>3-6</cell><cell>5.6</cell><cell>Rated Power</cell><cell>50 MW</cell></row><row><cell/><cell>3-6</cell><cell>6.6</cell><cell>Fixed Cost</cell><cell>2</cell></row><row><cell>DC</cell><cell>4-5</cell><cell>5.7</cell><cell>Power Cost ($/kW)</cell><cell>500</cell></row><row><cell/><cell>4-5</cell><cell>6.7</cell><cell>Capacity Cost ($/kWh)</cell><cell>800</cell></row><row><cell/><cell>4-6</cell><cell>5.8</cell><cell>Uncertainty</cell><cell/></row><row><cell/><cell>4-6</cell><cell>6.8</cell><cell>α -β</cell><cell>1 -1</cell></row><row><cell/><cell>5-6</cell><cell>5.9</cell><cell>c -k</cell><cell>11.1m/s -2.16</cell></row><row><cell/><cell>5-6</cell><cell>6.9</cell><cell/><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>TABLE III RESULTS</head><label>III</label><figDesc/><table><row><cell>DC links</cell><cell/></row><row><cell>4 -6</cell><cell>1</cell></row><row><cell>5 -6</cell><cell>1</cell></row><row><cell>ESS (bus)</cell><cell/></row><row><cell>2</cell><cell>1</cell></row><row><cell>Success</cell><cell>100%</cell></row><row><cell>Fixed Cost (USD × 10 6 )</cell><cell>37.2</cell></row><row><cell>Variable Cost (USD × 10 6 )</cell><cell>5.56</cell></row><row><cell>Total Cost (USD × 10 6 )</cell><cell>42.76</cell></row></table><note><p>. 10 TRIALS. AVERAGE VALUES Variation ∆PD(1): 3.1%, ∆PD(2): -3.3%, ∆PD(3): 2.2% ∆PD(4): 2.7%, ∆PD(5): -0.5%; ∆PG(1): -2.6%</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5"><head>TABLE IV TNEP</head><label>IV</label><figDesc>WITH UNCERTAINTY. 500 CASES. Fixed Cost (USD × 10 6 ) 37.2 Variable Cost (USD × 10 6 ) 5.62 Total Cost (USD × 10 6 ) 42.82</figDesc><table><row><cell>Aditional Lines</cell><cell>Robust Plan</cell></row><row><cell>DC links</cell><cell/></row><row><cell>4 -6</cell><cell>1</cell></row><row><cell>5 -6</cell><cell>1</cell></row><row><cell>ESS (bus)</cell><cell/></row><row><cell>2</cell><cell>1</cell></row><row><cell>Time (seg)</cell><cell>297.60 seg</cell></row></table></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>VI. ACKNOWLEDGEMENTS</head><p>This work was supported by <rs type="funder">VLIR-UOS, Belgium Short Initiative</rs> Project <rs type="grantNumber">EC2022SIN342A101</rs>, and <rs type="grantNumber">I+D+I-XVII-2022-69</rs> <rs type="projectName">CEDIA</rs> Project, <rs type="funder">Ecuador</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_fBpRdE9">
+					<idno type="grant-number">EC2022SIN342A101</idno>
+				</org>
+				<org type="funded-project" xml:id="_RJPTjgK">
+					<idno type="grant-number">I+D+I-XVII-2022-69</idno>
+					<orgName type="project" subtype="full">CEDIA</orgName>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Multistage and coordinated planning of the expansion of transmission systems</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Escobar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Gallego</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Romero</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Power Systems</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="735" to="744"/>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Robust transmission expansion planning of ultrahigh-voltage ac-dc hybrid grids</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Industry Applications</title>
+		<imprint>
+			<biblScope unit="volume">58</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="3294" to="3302"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Hybrid ac/dc transmission expansion planning</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Lotfjou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Fu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shahidehpour</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Power Delivery</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1620" to="1628"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Transmission expansion planning considering the deployment of energy storage systems</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2012 IEEE Power and Energy Society General Meeting</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="page" from="1" to="6"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Transmission expansion planning considering energy storage</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Macrae</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ozlen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ernst</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2014 IEEE International Autumn Meeting on Power, Electronics and Computing (ROPEC)</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="1" to="5"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Optimal Power Flow for AC-DC Grids: Formulation, Convex Relaxation, Linear Approximation, and Implementation</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ergun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dave</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Van Hertem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Geth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Power Systems</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="2980" to="2990"/>
+			<date type="published" when="2019-07">July 2019</date>
+		</imprint>
+	</monogr>
+	<note>Conference Name: IEEE Transactions on Power Systems</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Expansion planning for smart transmission grids using AC model and shunt compensation</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Torres</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Castro</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IET Generation, Transmission &amp; Distribution</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="966" to="975"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<idno>SG 10.0-193</idno>
+		<title level="m">DD -Fabricantes y aerogeneradores -Acceso en línea -The Wind Power</title>
+		<imprint>
+			<publisher>Siemens-Gamesa</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Progress in electrical energy storage system: A critical review</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">N</forename><surname>Cong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ding</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Progress in Natural Science</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="291" to="312"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Energy storage for mitigating the variability of renewable electricity sources: An updated review</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Beaudin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zareipour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Schellenberglabe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Rosehart</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energy for Sustainable Development</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="302" to="314"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Seifi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sepasian</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Electric Power System Planning: Issues, Algorithms and Solutions</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="issue">01</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">JuMP 1.0: recent improvements to a modeling language for mathematical optimization</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lubin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Dowson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Garcia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Huchette</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Legat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Vielma</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mathematical Programming Computation</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="581" to="589"/>
+			<date type="published" when="2023-09">Sept. 2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<title level="m" type="main">Julia: A fast dynamic language for technical computing</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bezanson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Karpinski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Shah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Edelman</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="page">9</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">On the implementation of a primal-dual interior point method</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mehrotra</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">SIAM Journal on Optimization</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="575" to="601"/>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

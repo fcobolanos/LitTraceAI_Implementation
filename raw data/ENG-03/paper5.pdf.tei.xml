@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Detection and monitoring of mining-induced subsidence with Gaofen-3 and Sentinel-1A SAR datasets</title>
+				<funder ref="#_U43dyZX">
+					<orgName type="full">National Key Research and Development Program of China</orgName>
+				</funder>
+				<funder ref="#_2UKw6P3">
+					<orgName type="full">National Key R&amp;D Program of China</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2024-04-27">27 Apr 2024.</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yuning</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Geological Engineering and Geomatics</orgName>
+								<orgName type="institution">Chang'an University</orgName>
+								<address>
+									<settlement>Xi'an</settlement>
+									<country>China;</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chaoying</forename><surname>Zhao</surname></persName>
+							<idno type="ORCID">0000-0002-5730-9602</idno>
+							<affiliation key="aff0">
+								<orgName type="department">School of Geological Engineering and Geomatics</orgName>
+								<orgName type="institution">Chang'an University</orgName>
+								<address>
+									<settlement>Xi'an</settlement>
+									<country>China;</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">s Mineral Resources and Geological Engineering</orgName>
+								<orgName type="laboratory">Key Laboratory of Western China'</orgName>
+								<orgName type="institution">Ministry of Education</orgName>
+								<address>
+									<settlement>Xi'an</settlement>
+									<country>China;</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="laboratory">Key Laboratory of Ecological Geology and Disaster Prevention</orgName>
+								<orgName type="institution">Ministry of Natural Resources</orgName>
+								<address>
+									<settlement>Xi'an</settlement>
+									<country>China;</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hengyi</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Geological Engineering and Geomatics</orgName>
+								<orgName type="institution">Chang'an University</orgName>
+								<address>
+									<settlement>Xi'an</settlement>
+									<country>China;</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaosong</forename><surname>Feng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Geological Engineering and Geomatics</orgName>
+								<orgName type="institution">Chang'an University</orgName>
+								<address>
+									<settlement>Xi'an</settlement>
+									<country>China;</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhe</forename><surname>Lu</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Civil-Military Integration and Achievement Promotion</orgName>
+								<orgName type="institution">Shaanxi Provincial Military and Civilian Integration Information Center</orgName>
+								<address>
+									<settlement>Xi'an</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">&amp;</forename><surname>Basit</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Ali</forename><surname>Khan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Basit</forename><forename type="middle">Ali</forename><surname>Khan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Geological Engineering and Geomatics</orgName>
+								<orgName type="institution">Chang'an University</orgName>
+								<address>
+									<settlement>Xi'an</settlement>
+									<country>China;</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Detection and monitoring of mining-induced subsidence with Gaofen-3 and Sentinel-1A SAR datasets</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2024-04-27">27 Apr 2024.</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A93CEECF5CCEE71B8443CB2D3A3BB946</idno>
+					<idno type="DOI">10.1080/2150704X.2024.2346182</idno>
+					<note type="submission">Received 2 November 2023 Accepted 9 April 2024</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-09-01T12:21+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Mining-Induced Subsidence</term>
+					<term>Coherence Gradient Estimation</term>
+					<term>SAR Offset Tracking</term>
+					<term>Stacking-InSAR</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The mining-induced subsidence has caused severe casualties and poses a threat to the safe operation of coal extraction, especially under the roads, buildings and rivers. This alarming situation demands the large-area subsidence detection and the largegradient deformation monitoring to ensure safety. Although the traditional Interferometric Synthetic Aperture Radar (InSAR) technology can monitor surface deformation in high accuracy, unfortunately, it often fails to recover the sufficient deformation when facing the effects of decorrelation and large gradient displacement. Therefore, this study firstly proposes a Stacking-InSAR and coherence gradient fusion method to detect the mining-induced subsidence over large area. Secondly, the robust offset tracking method is applied to retrieve the large-gradient deformation in Buertai mining site. Both Gaofen-3 and Sentinel-1A Synthetic Aperture Radar (SAR) datasets are acquired over the border of Shaanxi and Inner Mongolia, China, for experimental test. The results show that 179 mining-induced subsidence sites are detected with the proposed method, and the complete spatial temporal deformation fields are obtained by both Gaofen-3 and Sentinel-1A offset tracking method with maximum deformation of 3 m in range direction. This study provides a valuable tool for detecting the fine boundary of mining subsidence and recovering the accurate deformation time series.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>The high-intensity and large-scale extraction of coal resources have caused a series of geological disasters, including collapse, landslide and even mining-induced earthquake, which have resulted in great damages to the facilities, numerous casualties and will pose severe threat to the safety of people's lives and properties. For example, on CONTACT Chaoying Zhao cyzhao@chd.edu.cn School of Geological Engineering and Geomatics, Chang'an University, Key Laboratory of Western China's Mineral Resources and Geological Engineering, Ministry of Education, No. 126, Yanta Road, Xi'an 710054, China 22 February 2023, a major large-scale collapse accident occurred at the Xinjing Coal Mine in the Inner Mongolia Autonomous Region, China, resulting in 59 casualties <ref type="bibr" target="#b14">(Wu et al. 2023)</ref>. On 5 June 2009, a landslide occurred in Jiweishan, Chongqing, China, leading to the death of 74 people <ref type="bibr" target="#b17">(Yin et al. 2011;</ref><ref type="bibr" target="#b21">Zhao et al. 2013)</ref>. On 6 August 2007, a large and tragic underground collapse occurred in the Crandall Canyon coal mine in east-central Utah, causing a loss of six miners <ref type="bibr" target="#b7">(Pechmann et al. 2007)</ref>. Therefore, the mining-induced subsidence detection and monitoring are of significant importance for the safe mining operations and the sustainable economic development of mining areas <ref type="bibr" target="#b8">(Qian, Xu, and Wang 2018)</ref>.</p><p>The Synthetic Aperture Radar (SAR) has been widely employed for surface deformation detection and monitoring of various geological hazards with its all-weather, day and night, and high-precision monitoring ability (S. <ref type="bibr" target="#b3">Liu et al. 2015;</ref><ref type="bibr" target="#b20">Q. Zhang, Zhao, and Chen 2022)</ref>. However, mining-induced subsidence is characterized by large gradient, nonlinearity deformation and sudden collapse. The Interferometric Synthetic Aperture Radar (InSAR) technique can hardly monitor the complete deformation field, which results in the low accuracy of subsidence detection and monitoring. Additionally, although SAR offset tracking technique can monitor sub-pixel level deformation in the range and azimuth directions, different types of SAR data are not fully exploited with this method for the accuracy and time series of deformation in terms of numbers and resolution of SAR data.</p><p>The coherence of the interferogram can assess its quality and also reflect the changes in surface materials, which has potential application for the fast surface change identification, target detection, archaeological exploration, etc. <ref type="bibr" target="#b0">(Canisius et al. 2019;</ref><ref type="bibr" target="#b11">Tapete and Cigna 2019;</ref><ref type="bibr" target="#b12">Wang et al. 2020)</ref>. The Stacking-InSAR technology, with its high accuracy of deformation monitoring, can be applied for slow surface deformation identification (X. <ref type="bibr" target="#b4">Liu et al. 2021)</ref>. In this study, mining-induced subsidence will be detected by coherence and Stacking-InSAR interferograms.</p><p>The Gaofen-3 is one of C-band SAR satellites, launched on 10 August 2016 in China. It has the advantages of high resolution of up to 1 m, multiple imaging modes and full polarization, etc., to support the disaster prevention and mitigation, resource exploration, etc. (Q. Zhang 2017). However, due to the low accuracy of SAR orbit and the limited availability of SAR, few studies have reported with Gaofen-3 in surface deformation monitoring, especially for the large gradient mining-induced subsidence case. Therefore, we take Gaofen-3 and Sentinel-1A SAR data to explore their deformation monitoring ability over mining working faces.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Study area and datasets</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.">Study area</head><p>In this study, the mining sites located in the border area of Shaanxi Province and Inner Mongolia Autonomous Region of China is selected, where Gaofen-3 and Sentinel-1A SAR datasets are employed for the detection and monitoring of mining-induced subsidence. Figure <ref type="figure" target="#fig_0">1</ref>(a) illustrates the geographical location of the study area ranging from 39° 0´ N-40° 18´ N to 109° 6´ E-111° 0´ E. The elevation of the region varies from 800 m to 1600 m above sea level, presenting a noticeable high-northwest and low-southeast topography.</p><p>Figure <ref type="figure" target="#fig_0">1</ref>(b) represents the optical image of the study area, which is located in the Ordos Basin, including Maowusu Desert and grasslands, and the geological structure is relatively complex <ref type="bibr" target="#b6">(Ma et al. 2016</ref>). The region is located in an arid and semi-arid zone, experiencing a continental monsoon climate. The precipitation is minimal throughout the year, primarily occurring from July to September, with an annual average rainfall less than 500 mm <ref type="bibr" target="#b10">(Song et al. 2020)</ref>. This region encompasses several major coal mines, such as Buertai, Shangwan, Shigetai and Daliuta. In recent years, the large-scale exploitation of coal resources has caused a series of geological disasters, including surface cracks and subsidence <ref type="bibr" target="#b15">(Yan, Dai, and Chen 2018)</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.">datasets</head><p>To detect and monitor mining-induced subsidence in the study area, we collected two Gaofen-3 SAR data acquired on 2 May 2019 and 16 February 2020, as well as 24 Sentinel-1A SAR data from 1 May 2019 to 25 February 2020. All the datasets of both satellites were acquired from ascending orbits. The incidence angles for Gaofen-3 and Sentinel-1A are 36.4° and 33.7°, respectively, with satellite flight directions of -10.3° and -9.8°, respectively. The main difference between the two datasets is their pixel spacing: the range pixel spacing of Gaofen-3 and Sentinel-1A are 2.25 m and 2.33 m, respectively; while the azimuth pixel spacing of them are 2.67 m and 13.96 m, respectively. The coverages of SAR datasets used in this study are illustrated in Figure <ref type="figure" target="#fig_0">1(a)</ref>. Furthermore, the optical images from Sentinel-2 before and after the monitoring period were collected for the verification of mining-induced subsidence. Lastly, the 30-m resolution Copernicus Digital Elevation Model (DEM) is used for SAR dataset terrain correction and geocoding the results.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Methodology</head><p>This study focuses on the detection of mining-induced subsidence over large area and the monitoring of mining-induced subsidence in specific coal mine operational faces. The </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.">Stacking-InSAR</head><p>The Stacking-InSAR technique is based on the assumption that surface deformations exhibit low-frequency linear changes over time, while atmospheric effects exhibit high-frequency random variations over time. It calculates the surface deformation rate by performing a weighted average of multiple high-quality unwrapped interferograms <ref type="bibr" target="#b13">(Werner et al. 2000)</ref>. This method can empress the random noise of atmospheric delay and DEM error and improve the accuracy of deformation. Therefore, it is widely used in the detection and monitoring of various surface deformations (X. <ref type="bibr" target="#b5">Liu et al. 2018)</ref>. However, due to the rapid and high intensity of underground coal mining, exhibiting large gradients and non-linear deformation can lead to the loss of coherence in the interferometric phases <ref type="bibr" target="#b9">(Shi et al. 2022)</ref>. This means that the phase-based Stacking-InSAR technique may be ineffective for detecting mining-induced subsidence boundaries and may struggle to monitor large gradient deformations. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.">Coherence gradient estimation</head><p>The interferometric coherence map can reflect the variation in backscatter information of the sensed pixels by calculating their coherence coefficient between the two SAR images, which is mostly used to assess the quality of the interferometric phases <ref type="bibr" target="#b2">(Gabriel, Goldstein, and Zebker 1989)</ref>. Since mining-induced subsidence significantly changes the ground surface, which degrades the interferometric coherence obviously. This feature makes it possible to identify the mining-induced subsidence boundary, which has strong supplement for the Stacking-InSAR technique in terms of the detection of mining-induced subsidence boundary. Therefore, we propose a method to detect the mining-induced subsidence boundary based on the coherence gradient map and surface deformation map generated by Stacking-InSAR technique, in which the work flow of the coherence gradient estimation method is given below:</p><p>First, a small spatial temporal baseline is set to generate SAR interferometric pairs, and a suitable window is determined for adaptive filtering to improve the overall image coherence; second, an eight-direction coherence gradient calculation is performed pixel wisely for each coherence map, where eight different coherence gradient maps can be obtained; third, the cumulative coherence gradient maps in eight directions denoted by C 1 to C 8 are generated by stacking coherence gradient maps in the same direction, respectively; fourth, eight cumulative coherence gradient maps are combined through Eq. ( <ref type="formula">1</ref>) and normalized to the appropriate intervals to obtain the initial coherence gradient map. Finally, water bodies such as rivers and lakes are discarded based on SAR intensity, and vegetation changes are excluded from the initial map.</p><p>where C denotes the final coherence gradient. As mining-induced subsidence is often characterized by fast, large gradient and massive migration of surface material, resulting in great changes in coherence in a very short time, the coherence gradient map can be used effectively to identify the boundary of mining-induced subsidence. In addition, the coherent gradient change detection method does not rely on a digital elevation model (DEM), so there are no errors detected resulting from the significant changes on the surface.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.">Robust offset tracking</head><p>The SAR offset tracking is realized by calculating the normalized cross-correlation (NCC) of two SAR images within a certain window size. When the NCC index reaches the maximum, it can obtain the sub-pixel level deformation between two images (Debella-Gilo and Kääb 2011). The accuracy of the offset tracking technique is affected by the window size and image resolution. The traditional SAR offset tracking techniques usually set a fixed window for calculation based on experience (L. <ref type="bibr" target="#b19">Zhang, Ding, and Lu 2011)</ref>. However, the SAR offset tracking technique is more sensitive to the window size in the case of large surface changes. When monitoring targets are covered by excessive vegetation, snow, and ice or experiencing significant gradient deformation, a larger window size can enhance the deformation assessment accuracy. In contrast, when the inter-correlation of targets is high, a smaller window can reflect more details of the deformation <ref type="bibr" target="#b16">(Yin et al. 2022)</ref>. Therefore, this study adopts the robust offset tracking technique to obtain the deformation field of mining-induced subsidence. We set different window sizes at the same pixel for offset tracking estimation, and the median value is output as it can resist the gross errors. In this study, for Gaofen-3 SAR data, we used seven window sizes ranging from 64 × 64 pixels to 256 × 256 pixels with step as 32 pixels, and for Sentinel-1A data, we used three window sizes including 16 × 64 pixels, 32 × 128 pixels, and 64 × 256 pixels.  period. Figure <ref type="figure" target="#fig_3">3(d)</ref> shows four field photos of one typical mining-induced subsidence, with wide cracks occurred at both the centre and the edge of the mining area, which can partially validate the effectiveness of our method. Specially, a total of 222 deformation fields are detected by two techniques.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Results and analyses</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1.">Detection of mining-induced subsidence</head><p>Based on the deformation and optical images, the detected sites are categorized into three types, namely, deformation fields caused by underground mining, deformation fields related to open-pit mining, and surface change related areas, such as mining waste dump sites. An exemplary illustration of three different types of deformation fields by two methods are given in Figure <ref type="figure" target="#fig_4">4</ref>, with the location depicted in Figure <ref type="figure" target="#fig_3">3(c)</ref>. As for the underground mining sites, we detected 67 ones, where Stacking-InSAR technique can map small gradient deformation boundaries, while the coherence gradient can clearly outline large gradient deformation boundaries. As for open pit mining sites, we detected 112 ones, where coherence gradient map is more effective to detect its boundary, because there is a large amount of surface material migration. Lastly, 43 mining waste dump sites were detected by the Stacking-InSAR and coherence gradient technique.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2.">The kinematic process of mining subsidence</head><p>To further explore the kinematic process of mining subsidence, we select Buertai Coal Mine as the test area. The aforementioned robust offset tracking technique was conducted to retrieve the large gradient mining subsidence. Because there were only two Gaofen-3 images archived, we used the offset tracking technique to calculate the deformation field directly. But for Sentinel-1A datasets, it can be used to derive the deformation time series from May 2019 to February 2020 by offset tracking technique and Least Square Method (LSM). In addition, the Gaofen-3 and Sentinel-1A datasets were used for D-InSAR and SBAS-InSAR processing, respectively. Because the azimuth offset results are not sensitive to vertical deformation and cannot provide useful information, this study primarily presents range monitoring results. Figure <ref type="figure" target="#fig_5">5</ref> represents the cumulative deformation maps derived from two datasets, where three distinct working faces in Buertai Coal Mine can be clearly detected.</p><p>In Figure <ref type="figure" target="#fig_5">5</ref>(a-b), the complete large-gradient deformation field of mining-induced subsidence cannot be effectively acquired based on InSAR result. Particularly, Gaofen-3, the long spatial and temporal baseline leads to serious decoherence, totally failed to obtain useful information. The sentinal-1 results can provide surface deformation at the edge of the mining sites, but no deformation can be obtained at the centre of the mining sites. In contrast, in Fig. <ref type="figure" target="#fig_5">5(c-d</ref>), SAR offset tracking method demonstrates the significant advantage in monitoring large-gradient deformation; moreover, their standard deviations from Gaofen-3 and Sentinel-1A are estimated in stable areas (as shown in the ROI area in the revised Figure <ref type="figure" target="#fig_5">5(c</ref>)), which are 0.087 m and 0.095 m, respectively. Furthermore, Gaofen-3 data can obtain more complete deformation field than Sentinel-1A data, because of their higher spatial resolution. In order to analyse the mining-induced subsidence obtained from different datasets, we chose two typical working faces, namely A and B, respectively. We extracted two subsidence profiles along the mining direction PQ and the crossing mining direction MN, and the results are shown in Figure <ref type="figure" target="#fig_6">6 (a-b</ref>). The InSAR technique can accurately monitor small deformations at two edges of the deformation fields, but it suffers from monitoring gaps in the centre of the deformation fields. In contrast, the offset tracking technique can provide complete deformation profiles. Overall, the deformation obtained from Gaofen-3 and Sentinel-1A data is consistent. The Pearson correlation coefficient is 0.98 along the mining direction, and it is 0.96 crossing mining direction. However, at the edges of the subsidence, Gaofen-3 monitoring result is in good agreement with InSAR monitoring result and offers more accurate result compared to Sentinel-1A result.</p><p>In addition, we selected five typical points on two working faces and generated time series plots based on Sentinel-1A time-series SAR offset tracking technique to further explore the kinematic of Buertai coal mining process. The locations of the five typical points are shown in Figure <ref type="figure" target="#fig_5">5(d)</ref>, and the time series results are presented in Fig. <ref type="figure" target="#fig_6">6(c-d</ref>). The time series deformation of five typical points follows a logistic curve, including three mining-induced subsidence phases, namely, slow deformation, rapid subsidence and stabilization, where the rapid subsidence phase is depicted by the vertical dashed line in Fig. <ref type="figure" target="#fig_6">6(c-d</ref>). In working face A, three feature points are distributed along the mining direction. Based on the time of different subsidence stages, it is clear that the working face progresses from A1 to A3, with the maximum deformation over 3 m, located at the centre of the deformation field. In working face B, the maximum deformation of two typical points reached 2.5 m, and the working face advances from B2 to B1. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">Conclusions</head><p>This study utilized Gaofen-3 and Sentinel-1A datasets to detect and monitor the mininginduced subsidence. We propose a method for wide-area mining-induced subsidence detection and boundary identification by combining the coherence gradient map and Stacking-InSAR deformation map. A total of 179 subsidence sites are detected related to coal mining, which indicate that the combination of two techniques can yield complete detection results of mining-induced subsidence. Then, the spatial and temporal characteristics of the deformation field over one typical coal mining site are investigated by combining Gaofen-3 and Sentinel-1A data. The overall deformation results from two datasets are consistent, and the maximum deformation was over 3 m. Besides, Gaofen-3 data can effectively monitor the small deformation in high precision and large-gradient deformation due to their high spatial resolution.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Geographic location of the study area. (a) Topography of the study area and coverage of SAR datasets; (b) optical image of the study area.</figDesc><graphic coords="4,68.03,53.36,357.12,150.00" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Flowchart for detection and monitoring of mining-induced subsidence with Gaofen-3 and Sentinel-1A datasets.</figDesc><graphic coords="5,68.03,53.39,357.12,213.12" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3</head><label>3</label><figDesc>Figure 3 shows the results of mining-induced subsidence based on Sentinel-1A data from May 2019 to February 2020, covering an area of approximately 15,000 km 2 , where Figures. 3(a-b) show the detection results based on the Stacking-InSAR deformation map and the coherence gradient map, respectively. A total of 219 deformation fields are identified based on the Stacking-InSAR deformation map, and 220 deformation fields are identified based on the coherence gradient map. The locations of two results are basically same, but Stacking-InSAR is applicable to detect the boundary of small deformations, while coherent gradient map is suitable to detect large-gradient deformation boundaries. Figure 3(c) shows the distribution of the deformation fields with complete boundaries, which are verified by the optical images before and after the monitoring</figDesc><graphic coords="7,67.97,363.95,357.24,252.36" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. Subsidence distribution map based on Sentinel-1A data. (a) Stacking-InSAR deformation map; (b) coherence gradient map; (c) three kinds of deformation areas; (d) on-site photos.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. Exemplary of subsidence boundary detection with results of (a) Stacking-InSAR, (b) coherence gradient, (c) optical images, for three cases of (i) underground mining site, (ii) open-pit mining site and (iii) mining waste dump site, respectively.</figDesc><graphic coords="8,68.03,53.35,357.12,254.04" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Cumulative deformation maps of Buertai coal mining working faces (a) Gaofen-3 D-InSAR result between 02 May 2019 and 16 February 2020; (b) Sentinel-1A SBAS-InSAR result from 01 May 2019 to 25 February 2020; (c) Gaofen-3 SAR offset tracking result between 02 May 2019 and 16 February 2020; (d) Sentinel-1A SAR offset-tracking result from 01 May 2019 to 25 February 2020.</figDesc><graphic coords="9,68.03,53.38,357.12,251.40" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. (a) Deformation profile along PQ section of the Buertai mining working faces; (b) deformation profile along the MN section of the Buertai mining working faces; (c-d) time series of subsidence at five points of Buertai mining working faces with Sentinel-1A offset tracking (OT in Figure 6(a)) method.</figDesc><graphic coords="10,68.03,53.41,357.12,216.00" type="bitmap"/></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>This study was supported by the <rs type="funder">National Key R&amp;D Program of China</rs> (No.<rs type="grantNumber">2022YFC3004302</rs>).</p></div>
+<div><head>Disclosure statement</head><p>No potential conflict of interest was reported by the author(s).</p></div>
+			</div>
+			<div type="funding">
+<div><head>Funding</head><p>The work was supported by the <rs type="funder">National Key Research and Development Program of China</rs> [<rs type="grantNumber">2022YFC3004302</rs>].</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_2UKw6P3">
+					<idno type="grant-number">2022YFC3004302</idno>
+				</org>
+				<org type="funding" xml:id="_U43dyZX">
+					<idno type="grant-number">2022YFC3004302</idno>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">SAR Backscatter and InSAR Coherence for Monitoring Wetland Extent, Flood Pulse and Vegetation: A Study of the Amazon Lowland</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Canisius</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Brisco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Murnaghan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Van Der Kooij</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Keizer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sensing</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page">720</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Sub-Pixel Precision Image Matching for Measuring Surface Displacements on Mass Movements Using Normalized Cross-Correlation</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Debella-Gilo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kääb</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sensing of Environment</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="130" to="142"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Mapping Small Elevation Changes Over Large Areas: Differential Radar Interferometry</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Gabriel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Goldstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Zebker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Geophysical Research: Solid Earth</title>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="9183" to="9191"/>
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">High-Resolution Remote Sensing Image-Based Extensive Deformation-Induced Landslide Displacement Field Monitoring Method</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Wu</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s40789-015-0087-9</idno>
+		<ptr target="https://doi.org/10.1007/s40789-015-0087-9"/>
+	</analytic>
+	<monogr>
+		<title level="j">The International Journal of Coal Science &amp; Technology</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="170" to="177"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Integration of Sentinel-1 and ALOS/PALSAR-2 SAR Datasets for Mapping Active Landslides Along the Jinsha River Corridor, China</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Liu-Zeng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Liu</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.enggeo.2021.106033</idno>
+		<ptr target="https://doi.org/10.1016/j.enggeo.2021.106033"/>
+	</analytic>
+	<monogr>
+		<title level="j">Engineering Geology</title>
+		<imprint>
+			<biblScope unit="volume">284</biblScope>
+			<biblScope unit="page">106033</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Multi-Temporal Loess Landslide Inventory Mapping with C-, X-And L-Band SAR Datasets-A Case Study of Heifangtai Loess Landslides, China</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Lu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sensing</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page">1756</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Investigation on Mining Subsidence Based on Multi-Temporal InSAR and Time-Series Analysis of the Small Baseline Subset-Case Study of Working Faces 22201-1/2 in Bu'ertai Mine, Shendong Coalfield, China</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sensing</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page">951</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Seismological Report on the 6 Aug 2007 Crandall Canyon Mine Collapse in Utah</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Pechmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">I</forename><surname>Arabasz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Pankow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Burlacu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">K</forename><surname>Mccarter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Seismological Research Letters</title>
+		<imprint>
+			<biblScope unit="volume">79</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="620" to="636"/>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Further on the Sustainable Mining of Coal</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Qian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of China Coal Society</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="13"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>InChinese</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Large-Gradient Interferometric Phase Unwrapping Over Coal Mining Areas Assisted by a 2-D Elliptical Gaussian Function</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Niu</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/LGRS.2022.3223627</idno>
+		<ptr target="https://doi.org/10.1109/LGRS.2022.3223627"/>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Geoscience &amp; Remote Sensing Letters</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="1" to="5"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Potential for Mine Water Disposal in Coal Seam Goaf: Investigation of Storage Coefficients in the Shendong Mining Area</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Fang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jclepro.2019.118646</idno>
+		<ptr target="https://doi.org/10.1016/j.jclepro.2019.118646"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Cleaner Production</title>
+		<imprint>
+			<biblScope unit="volume">244</biblScope>
+			<biblScope unit="page">118646</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">COSMO-Skymed SAR for Detection and Monitoring of Archaeological and Cultural Heritage Sites</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Tapete</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Cigna</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sensing</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page">1326</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Evaluating the Feasibility of Illegal Open-Pit Mining Identification Using Insar Coherence</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Jia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sensing</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">367</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<title level="m" type="main">Gamma SAR and Interferometric Processing Software</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Werner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Wegmüller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Strozzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Wiesmann</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2000">2000</date>
+			<pubPlace>Gothenburg, Sweden</pubPlace>
+		</imprint>
+	</monogr>
+	<note>Paper presented at the Proceedings of the ers-envisat symposium</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Fine Mapping of Surface Deformation in Xinjing Open-Pit Mine, Inner Mongolia Using FS-InSAR Technique</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.13203/j.whugis20230080</idno>
+		<ptr target="https://doi.org/10.13203/j.whugis20230080"/>
+	</analytic>
+	<monogr>
+		<title level="j">Geomatics and Information Science of Wuhan University</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="389" to="399"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Surface Crack and Sand Inrush Disaster Induced by High-Strength Mining: Example from the Shendong Coal Field, China</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Dai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s12303-017-0031-7</idno>
+		<ptr target="https://doi.org/10.1007/s12303-017-0031-7"/>
+	</analytic>
+	<monogr>
+		<title level="j">Geosciences Journal</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="347" to="357"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Multi-Dimensional and Long-Term Time Series Monitoring and Early Warning of Landslide Hazard with Improved Cross-Platform SAR Offset Tracking Method</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Tomás</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science China Technological Sciences</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="1891" to="1912"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Mechanism on Apparent Dip Sliding of Oblique Inclined Bedding Rockslide at Jiweishan, Chongqing, China</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10346-010-0237-5</idno>
+		<ptr target="https://doi.org/10.1007/s10346-010-0237-5"/>
+	</analytic>
+	<monogr>
+		<title level="j">Landslides</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="49" to="65"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">System Design and Key Technologies of the GF-3 Satellite</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="DOI">10.11947/j.AGCS.2017.20170049</idno>
+		<ptr target="https://doi.org/10.11947/j.AGCS.2017.20170049"/>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Geodaetica et Cartographica Sinica</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="269" to="277"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Ground Settlement Monitoring Based on Temporarily Coherent Points Between Two SAR Acquisitions</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Lu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Isprs Journal of Photogrammetry &amp; Remote Sensing</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="146" to="152"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Technical Progress and Development Trend of Geological Hazards Early Identification with Multi-Source Remote Sensing</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Geodaetica et Cartographica Sinica</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page">885</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note>In Chinese</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Pre-, Co-, and Post-Rockslide Analysis with ALOS/PALSAR Imagery: A Case Study of the Jiweishan Rockslide, China</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Natural Hazards and Earth System Sciences</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="2851" to="2861"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

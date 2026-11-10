@@ -1,0 +1,1711 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">CS-KG 2.0: A Large-scale Knowledge Graph of Computer Science</title>
+				<funder ref="#_qFeeYfN">
+					<orgName type="full">unknown</orgName>
+				</funder>
+				<funder ref="#_vz2zSZB">
+					<orgName type="full">European Union -NextGenerationEU</orgName>
+				</funder>
+				<funder ref="#_4bJawt9 #_PdXzmN7">
+					<orgName type="full">Italian Ministry of University and Research</orgName>
+					<orgName type="abbreviated">MUR</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Danilo</forename><surname>Dessí</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Department of computer Science</orgName>
+								<orgName type="department" key="dep2">college of computing and informatics</orgName>
+								<orgName type="institution">University of Sharjah</orgName>
+								<address>
+									<settlement>Sharjah</settlement>
+									<country key="AE">UAe</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Francesco</forename><surname>Osborne</surname></persName>
+							<email>francesco.osborne@open.ac.uk</email>
+							<affiliation key="aff1">
+								<orgName type="institution" key="instit1">Open University</orgName>
+								<orgName type="institution" key="instit2">Knowledge Media institute</orgName>
+								<address>
+									<settlement>Milton Keynes</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Business and Law</orgName>
+								<orgName type="institution">Milano Bicocca University</orgName>
+								<address>
+									<settlement>Milan</settlement>
+									<country key="IT">italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Davide</forename><surname>Buscaldi</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution" key="instit1">Sorbonne Paris nord University</orgName>
+								<orgName type="institution" key="instit2">Laboratoire d'informatique de Paris nord</orgName>
+								<address>
+									<settlement>Paris</settlement>
+									<country key="FR">france</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Diego</forename><forename type="middle">Reforgiato</forename><surname>Recupero</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="department">Mathematics and computer Science Department</orgName>
+								<orgName type="institution">University of cagliari</orgName>
+								<address>
+									<settlement>cagliari</settlement>
+									<country key="IT">italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Enrico</forename><surname>Motta</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution" key="instit1">Open University</orgName>
+								<orgName type="institution" key="instit2">Knowledge Media institute</orgName>
+								<address>
+									<settlement>Milton Keynes</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">CS-KG 2.0: A Large-scale Knowledge Graph of Computer Science</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6A025CFCAF7A4B9DE4F51939088130D3</idno>
+					<note type="submission">Received: 21 May 2024; Accepted: 14 May 2025;</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-06T18:17+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The rapid evolution of AI and the increased accessibility of scientific articles through open access marks a pivotal moment in research. AI-driven tools are reshaping how scientists explore, interpret, and contribute to the body of scientific knowledge, offering unprecedented opportunities. Nonetheless, a significant challenge remains: dealing with the overwhelming number of papers published every year. A promising solution is the use of knowledge graphs, which provide structured, interconnected, and formalized frameworks that improve the capabilities of AI systems to integrate information from the literature. This paper presents the last version of the Computer Science Knowledge Graph (CS-KG 2.0), an extensive knowledge base generated from 15 million research papers. CS-KG 2.0 describes 25 million entities linked by 67 million relationships, offering a nuanced representation of the scientific knowledge within the field of computer science. This innovative resource facilitates new research opportunities in key areas such as analysis and forecasting of research trends, hypothesis generation, smart literature search, automatic production of literature review, and scientific question-answering.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p>We are at a crucial juncture in history, characterized by the rise of groundbreaking artificial intelligence tools for text analysis and the increased accessibility of scientific articles through open access. This progress has the potential to radically transform scientific research and how scientists engage with and contribute to scientific literature. The Artificial Intelligence (AI) community is actively working on sophisticated methods for smart and tailored literature searches <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref> , assisting in or even automating the creation of literature reviews <ref type="bibr" target="#b3">4</ref> , enhancing academic writing and referencing <ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b5">6</ref> , automatically formulating novel hypotheses <ref type="bibr" target="#b6">7,</ref><ref type="bibr" target="#b7">8</ref> , developing specialized conversational agents <ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b9">10</ref> , and much more. Nonetheless, a significant challenge remains: processing the vast quantity of scientific papers, which continues to expand at a rate of approximately 2.5 million new articles each year <ref type="bibr" target="#b10">11</ref> . The large number of research articles, often found in hard-to-parse PDF files or, at best, as unstructured plain text, poses significant challenges for AI technologies <ref type="bibr" target="#b11">12</ref> . This issue limits the effectiveness of existing tools in fully understanding and exploring the literature <ref type="bibr" target="#b12">13</ref> . As a result, current search engines are limited, mainly performing simple searches based on keywords or the semantic similarity of a query with titles and abstracts. Searching and analyzing this extensive body of text is a significant challenge even for advanced systems based on the latest Large Language Models (LLM) <ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref> . For instance, a recent study by Gan et al. <ref type="bibr" target="#b18">19</ref> discusses the limitations of LLMs in their ability to effectively identify and classify software and dataset mentions. Despite their impressive capabilities in natural language processing, these models struggle to achieve the level of accuracy necessary for such tasks, particularly when it comes to meeting the high standards of precision and recall demanded within the scholarly domain. Even the adoption of techniques such as Retrieval-Augmented Generation (RAG) <ref type="bibr" target="#b19">20</ref> does not solve this problem due to the complexity involved in searching and summarizing such an extensive collection of documents. The capability of effectively interpreting and answering natural language questions about a single 15-page paper, a task currently undertaken by several LLM-based services <ref type="bibr" target="#b3">4</ref> , does not extend to understanding the key entities, narratives, and concepts of a research field represented by millions of such papers. This issue is very evident in the computer science domain, where it is notably difficult to navigate and assess the variety of methods and datasets that are continuously produced by the community. For instance, numerous methods that are described as state-of-the-art have reproducibility challenges and, when evaluated by external parties, might not outperform basic techniques <ref type="bibr" target="#b20">21,</ref><ref type="bibr" target="#b21">22</ref> . via a SPARQL endpoint at <ref type="url" target="https://w3id.org/cskg/sparql">https://w3id.org/cskg/sparql</ref>. In all subsequent sections of the paper, we utilize CS-KG as the singular reference for CS-KG <ref type="bibr" target="#b49">50</ref> 2.0.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods</head><p>Knowledge Graph Generation. The resource released in this paper is built using an automatic pipeline named SCICERO presented in Dessí et al. <ref type="bibr" target="#b51">52</ref> Fig. <ref type="figure">1</ref> reports an overview of the architecture. In this section, we briefly describe the main components and provide the scientific rationale behind each. Specifically, the approach is composed of several modules that can be grouped into four categories: i) extraction modules, which parse text from the title and abstract of the research papers, ii) handler modules, which clean and normalize the extracted data, iii) validation modules, which discard noisy elements from the final set of generated triples, and iv) enrichment modules, which add additional contextual information to the extracted statements.</p><p>Extractor Modules. The current version of the SCICERO pipeline uses five extraction modules: DyGIEpp, CSO Classifier, OpenIE, PoS Tagger, and Dependency Module. We describe each of them in the following.</p><p>The DyGIEpp Module leverages the tool described in Wadden et al. <ref type="bibr" target="#b52">53</ref> , which adopts a BERT-based model pre-trained on the SciERC 54 dataset. This module extracts 6 types of entity (i.e., Method, Task, Metric, Material, Other-Scientific-Term, and Generic) and 7 types of relations between entities (i.e., Used-for, Hyponym-Of, Compare, Part-of, Conjunction, Feature-of, Evaluate-for). CS-KG <ref type="bibr" target="#b49">50</ref> does not differentiate between Other-Scientific-Term and Generic and thus, the module merges them in the OtherEntity entity type. DyGIEpp employs a feed-forward neural network to process textual span representations, generating two scores. The first score indicates the likelihood of a given text being a research entity belonging to one of the predefined types. The second score represents the probability of a predefined relationship existing between two identified entities, considering the context in the text. A softmax function is applied to distinguish entity types and relationships. For instance, in the sentence "Training time for large language models is usually lengthy. ", the text span "training time" is recognized as a research entity of type Metric with a softmax value of 0.99, while "large language models" is identified as an entity of type Method with a softmax value of 1.0. The relation Feature-of is identified with a softmax value of 0.54 in the generated triple &lt;training time, Feature-of, large language models&gt;. The relations extracted by DyGIEpp are then transformed into a set of predicates using mapping rules that are publicly available online (<ref type="url" target="https://github.com/danilo-dessi/SKG-pipeline/blob/main/resources/SKG-dygiepp-Mapping.csv">https://github.com/danilo-dessi/SKG-pipeline/blob/main/resources/ SKG-dygiepp-Mapping.csv</ref>). For example, the triple &lt;training time, Feature-of, large language models&gt; is transformed into &lt;large language models, includes, training time&gt;.</p><p>The CSO Classifier Module <ref type="bibr" target="#b35">36</ref> , based on the Computer Science Ontology (CSO) <ref type="bibr" target="#b54">55</ref> , identifies research topics within textual content. Specifically, it evaluates whether a given text span aligns with one of the over 14,000 topics defined in the CSO.</p><p>For this purpose, it leverages two unsupervised components. The syntactic component identifies unigrams, bigrams, and trigrams using a rule-based method and employs the Levenshtein similarity to compare these n-grams with topics in the CSO. The semantic component utilizes a combination of part-of-speech tagging and similarity computed via a Word2Vec model to map a text span with topics in CSO.</p><p>The output of this module is the set of identified entities.</p><p>The OpenIE Module extracts triples using the Stanford Core NLP <ref type="bibr" target="#b55">56</ref> suite and its OpenIE annotator <ref type="bibr" target="#b56">57</ref> . It operates as follows. First, it creates clauses, i.e., groups of words containing a subject-noun and a verb which are identified by traversing the parsing tree of the input text. These clauses are then shortened, creating concise fragments, which are subsequently transformed into triples. Finally, the module selects only triples in which both subjects and objects overlap with the entities identified by the DyGIEpp and CSO classifier modules.</p><p>The PoS Tagger Module is designed for extracting triples and is based on the part of speech component from the Stanford Core NLP suite <ref type="bibr" target="#b55">56</ref> . This module identifies verbs located between pairs of entities that have already been extracted. Subsequently, it forms triples in the form &lt;entity 1 , verb, entity 2 &gt; . To minimize the Fig. <ref type="figure">1</ref> The modules used to create our resource from the SCICERO <ref type="bibr" target="#b51">52</ref> pipeline. inclusion of irrelevant or weakly associated relationships, the module applies a filtering mechanism to exclude entity pairs that are too distant within the text. Specifically, it considers only entity pairs separated by a number of tokens within a predefined window size. This approach effectively reduces the likelihood of capturing noisy or spurious relationships between entities, ensuring a focus on those with meaningful or direct relevance.</p><p>The Dependency Module extracts triples by extending the functionality of the Stanford Core NLP Dependency Parser. It derives meaningful triples by leveraging a set of predefined paths within the dependency trees of a sentence. The module is designed to extract relationships based on twelve paths (<ref type="url" target="https://github.com/danilo-dessi/SKG-pipeline/blob/main/resources/path.txt">https://github.com/ danilo-dessi/SKG-pipeline/blob/main/resources/path.txt</ref>) that were manually designed by analyzing the frequency and quality of generated triples <ref type="bibr" target="#b51">52</ref> . These paths represent specific patterns in the dependency structures of sentences that frequently capture meaningful relationships between entities. To identify these paths, dependency trees from a sample of scientific papers were analyzed, with a focus on paths containing verbs that consistently connect pairs of research entities. The paths were evaluated based on the quality and frequency of the resulting triples, with only those generating over 60% correct triples being retained. This process yielded twelve highly effective paths for capturing high-quality relationships.</p><p>Handler Modules. Entity Cleaner and Validator. This module performs several tasks to filter and improve the quality of the extracted entities: (i) it lemmatizes all entities to map singular and plural forms to the same text representation; (ii) it solves acronyms by leveraging their common placement in brackets near relevant entities; (iii) it discards entities included in a manually curated denylist; and (iv) it identifies and removes generic entities by assessing their information content score, which quantifies the specificity of words based on the WordNet taxonomy (<ref type="url" target="https://wordnet.princeton.edu/">https://wordnet.princeton.edu/</ref>). To ensure essential entities for the domain are retained, the module also utilizes a white list of research entities, derived from the Fields of Study provided by the original source.</p><p>Relationship Integrator. The sets of triples extracted by the DyGIEpp Module, OpenIE Module, PoS Tagger Module, and Dependency Module, namely T Dy , T OIE , T PoS , and T Dep may contain redundant triples that use different predicates to express the same meaning (e.g., includes, embeds, contains). To address this issue, we associate similar verbs with an exemplary predicate. This mapping schema is built by combining relation clustering using the word2vec embedding model <ref type="bibr" target="#b57">58</ref> with the VerbNet (<ref type="url" target="https://verbs.colorado.edu/verbnet/">https://verbs.colorado.edu/verbnet/</ref>) taxonomy as described in Dessí et al. <ref type="bibr" target="#b51">52</ref> VerbNet provides a comprehensive taxonomy of English verbs organized into classes, where verbs within the same class share both syntactic and semantic coherence. It allows the creation of domain-specific taxonomies while maintaining a core representation of verbs based on their semantics in more general contexts. We used it to construct the CS-KG 50 ontology (<ref type="url" target="https://scholkg.kmi.open.ac.uk/cskg/ontology">https://scholkg.kmi.open.ac.uk/cskg/ontology</ref>), which describes a set of 39 predicates mapped to 464 verbs. All relations in the sets T Dy , T OIE , T PoS , and T Dep , are mapped using this schema. For instance, two triples sharing the same entities, such as &lt;a, embeds, b&gt; and &lt;a, contains, b&gt;, are consolidated into a single triple &lt;a, includes, b&gt;, where embeds and contains are mapped to includes. Following the mapping of all relations in the sets T Dy , T OIE , T PoS , and T Dep , the module produces a unique set of triples T.</p><p>Triple Validation Modules. The Ontology Validator Module. This component uses the CS-KG <ref type="bibr" target="#b49">50</ref> ontology to consolidate triples generated by the various tools and discards those that do not adhere to the specified domain and range constraints of the defined object properties. All triples in the set T that are compatible with the CS-KG <ref type="bibr" target="#b49">50</ref> ontology are then represented by RDF statements in accordance with the ontology. The entity types returned by the DyGIEpp tool are aligned with relevant classes in the ontology. Specifically, entities such as methods, tasks, materials, and metrics are mapped to corresponding classes in the ontology (e.g., the type material is mapped to the class cskg-ont:Material), while other scientific terms and generic entity types are mapped to cskg-ont:OtherEntity. The predicates are also mapped to the object properties of the ontology. For example, the triple &lt;cskg:dimensionality_reduction, uses, cskg:similarity_metric&gt;, where cskg:similarity_metric is a cskg-ont:Metric is transformed into &lt;cskg:dimensionality_reduction, cskg-ont:usesMetric, cskg:similarity_metric&gt;. During this phase, triples that do not adhere to the semantics of the ontology are discarded. For instance, the triple &lt;cskg:textbook_dataset, uses, cskg:spatial_prediction&gt;, where cskg:textbook_dataset is a cskg-ont:Material and cskg:spa-tial_prediction is a cskg-ont:Task, is discarded because the class cskg-ont:Material is not in the domain of the property cskg-ont:usesTask. In simpler terms, a material cannot utilize a task according to the CS-KG <ref type="bibr" target="#b49">50</ref> ontology.</p><p>Transformer Validator Module. A triple derived from several articles is generally of reliable quality, given the low likelihood of extracting the same erroneous information from multiple textual sources. Conversely, triples found in only one or a few papers tend to be more prone to noise. To discern between reliable and possibly problematic triples, we introduce the concept of support denoting the number of papers associated with a specific triple. However, discarding all uncertain triples could lead to significant information loss, since many of these triples may still be valid. Consequently, we employ a machine learning classifier to determine which low-supported triples exhibit high-quality characteristics and can thus be integrated into the KG. First, we partition the set of all triples, denoted as T, into two groups: T reliable , which includes triples with a support ≥3, and T uncertain , which includes all other triples. Subsequently, the set T reliable is utilized to fine-tune a SciBERT 59 classifier on a binary classification task. This classifier implements a function θ: &lt;s,p,o&gt; → 0, 1 that when provided with an input triple &lt;s,p,o&gt;, predicts 1 if the triple is accurate and can be included in the KG, and 0 if the triple should be discarded. For the fine-tuning phase, we provide both positive and negative examples to the classifier. Positive triples correspond to the set T reliable whereas negative triples are generated by corrupting each triple t ∈ T reliable with a triple t′ where ′ ∉ t T, i.e., ′ t is not triple that is extracted by our approach. Triples corruption involves replacing either the head or the tail with a randomly chosen entity, resulting in the set of negative triples denoted as T negative . Consequently, the combined set T reliable ∪ T negative is employed to fine-tune the model. The underlying rationale of this methodology is to leverage the classifier's capability to identify high-quality triples within the set T uncertain , aligning with the characteristics of triples in T reliable . The set of triples for which the classifier predicts 1 is denoted as T consistent .</p><p>Finally, the triples in sets T reliable and T consistent , along with all associated information, are converted into RDF statements through reification. Reification is a data modeling solution used to provide additional information regarding specific triples within an RDF graph <ref type="bibr" target="#b59">60</ref> . It is commonly utilized to append metadata to triples, such as sources, confidence levels, and context-related annotations <ref type="bibr" target="#b60">61</ref> . In the CS-KG <ref type="bibr" target="#b49">50</ref> pipeline, reification entails the creation of a new RDF statement for each triple. This statement describes the original triple through the relations rdf:subject, rdf:predicate, and rdf:object. Additional properties are incorporated via different relations. For example, the relation provo:wasDerivedFrom is employed to list the academic papers that were used to generate the triple. The enrichment modules, described in the next subsection, expand this representation by integrating more metadata. An illustration of a fully reified statement is presented in the Data Records Section.</p><p>Enrichment Modules. This section describes the modules utilized to enhance the extracted statements with additional information.</p><p>Context Enrichment Module. This module is designed to materialize additional information that can be inferred from the generated statements. The objective is to analyze each statement to identify the statements and entities that most frequently co-occur with it. This process provides deep insights into the contextual framework within which a statement is situated. The co-occurrences are computed as in the following. First, for each statement s, the module retrieves the list of papers from where it was extracted, let us refer to it as P. Next, for each paper p ∈ P, it extracts all entities and statements linked to p and calculates their respective frequencies of occurrence. For example, if the statement s is extracted from the papers {p 1 , p 2 , p 3 } where p 1 contains the entities {e 1 , e 2 , e 3 }, p 2 contains the entities {e 2 , e 3 , e 4 }, and p 3 contains {e 2 , e 3 , e 5 }, then the statement s is associated to the entities e 2 and e 3 with number of occurrences equal to 3 and to e 1 , e 4 , and e 5 with number of occurrences equal to 1. The same process is applied to compute the co-occurrent statements. This process is applied only to statements that are associated with at least 5 research papers, thus ensuring sufficiently robust association with the literature. The output of the module is a set of contextual entities and statements for each statement.</p><p>Time Enrichment Module. This module is engineered to augment statements and entities with temporal data, derived from the publication years of the source papers from which they are extracted. More specifically, it determines the annual frequency of each entity and statement by quantifying their occurrences in the papers for each respective year. For example, let two statements be s 1 and s 2 describing the triples &lt;s,p,o&gt; and &lt;s,p',o'&gt;, respectively; &lt;s,p,o&gt; appears in the papers p 1 , p 2 , and p 3 while &lt;s,p',o'&gt; appears in p 3 and p 4 . Let us also assume that p  <ref type="bibr" target="#b49">50</ref> is available in Zenodo with reference number 14167682 at <ref type="url" target="https://doi.org/10.5281/zenodo.14167681">https://doi.org/10.5281/ zenodo.14167681</ref>. The current version contains 67M statements describing 24M research entities extracted from 14.5M research publications in computer science in the period 2010-2022. Its data schema is formalized by the CS-KG <ref type="bibr" target="#b49">50</ref> ontology, available at <ref type="url" target="https://scholkg.kmi.open.ac.uk/cskg/ontology">https://scholkg.kmi.open.ac.uk/cskg/ontology</ref>. Detailed documentation is provided at <ref type="url" target="https://w3id.org/cskg">https://w3id.org/cskg</ref>. This OWL ontology is built upon SKOS (<ref type="url" target="http://www.w3.org/2004/02/skos/core#">http://www.w3.org/2004/02/skos/core#</ref>) and PROV-O (<ref type="url" target="http://www.w3.org/ns/prov#">http://www.w3.org/ns/prov#</ref>) vocabularies. It employs <ref type="url" target="https://w3id.org/cskg/ontology#">https://w3id.org/cskg/ontology#</ref> (prefix cskg-ont) and <ref type="url" target="https://w3id.org/cskg/resource/">https://w3id.org/cskg/resource/</ref> (prefix cskg) to denote the schema vocabulary and the instances, respectively. The ontology defines 219 object properties, i.e., relations that can exist between two entities, such as cskg-ont:usesMethod and cskg-ont:solvesTask, among five distinct entity types: cskg-ont:Task, cskg-ont:Method, cskgont:Material, cskg-ont:Metric, and cskg-ont:OtherEntity.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data Records</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>CS-KG. CS-KG</head><p>CS-KG <ref type="bibr" target="#b49">50</ref> is designed to systematically represent information extracted from research publications in the form of structured statements. Each statement within CS-KG <ref type="bibr" target="#b49">50</ref> describes a triple that defines the relationship between two entities as identified within a set of research papers.</p><p>For instance, the triple &lt;internet_of_thing, includesMethod, wireless_protocol&gt; is encapsulated by the following statement: cskg:statement_129110 a cskg-ont:Statement, provo:Entity; rdf:subject cskg:internet_of_thing; rdf:predicate cskg-ont:usesMethod; rdf:object cskg:wireless_protocol; cskg-ont:hasSupport "8"^^rdfs:Literal; provo:wasDerivedFrom cskg:W4200396539, cskg:W3122863749, cskg:W4285125700, cskg:W2734803290, cskg:W2736432465, cskg:W1998514859, cskg:W2527500525, cskg:W3123263801; provo:wasGeneratedBy cskg:dependency_tagger, cskg:dygiepp; cskg-ont:hasTimeObservation cskg:observation_statement_129110_2015, cskg:observation_statement_129110_2016, cskg:observation_statement_129110_2017, cskg:observation_statement_129110_2019, cskg:observation_statement_129110_2021, cskg:observation_statement_129110_2022.</p><p>In the above statement, the reader can observe the following properties:</p><p>• rdf:subject and rdf:object, describing the entities of the triple.</p><p>• rdf:predicate that describes the relationship between subject and object.</p><p>• cskg-ont:hasSupport, which links the statement to the number of papers the triple is extracted from. The support score can be utilized to select subsets of the knowledge graph that are more trustworthy and, therefore, have higher significant evidence. • provo:wasDerivedFrom, which refers to the IDs of research papers from OpenAlex from where the triple is extracted. • provo:wasGeneratedBy, which refers to which modules of the generative pipeline detected the triple.</p><p>• cskg-ont:hasTimeObservation, which links the statement to sub-statements that describe the number of appearances for each year in which the underlying statement is detected. An example of time observation for the year 2021 of the statement above is:</p><p>cskg:observation_statement_129110_2021 a cskg-ont:TimeObservation; cskg-ont:year "2021"^^rdfs:Literal; cskg-ont:frequency "2"^^rdfs:Literal.</p><p>Supplementary to the previously mentioned details, contextual information is incorporated to delineate the co-occurrences of CS-KG <ref type="bibr" target="#b49">50</ref> statements with other entities and statements. Contextual information is generated for statements that are supported by at least 5 papers. To ensure the focus on pertinent contexts, only co-occurrences whose score is equal to or greater than 2 are inferred. For example, the statement above is contextualized with other entities as follows: cskg:statement_129110 cskg-ont:hasContextEntityObservation cskg:entity_ observation_2309882. cskg:statement_129110 cskg-ont:hasContextEntityObservation cskg:entity_ observation_2309883.</p><p>… cskg:statement_129110 cskg-ont:hasContextEntityObservation cskg:entity_ observation_2309890. cskg:statement_129110 cskg-ont:hasContextEntityObservation cskg:entity_ observation_2309891. cskg:statement_129110 cskg-ont:hasContextEntityObservation cskg:entity_ observation_2309892.</p><p>Each observation corresponds to an entity and its co-occurrence with the statement as in the example below: cskg:entity_observation_2309892 a cskg-ont:ContextEntityObservation; cskg-ont:relatedEntity cskg:wireless_technology; cskg-ont:co-occurrence "2"^^rdfs:Literal.</p><p>Furthermore, for each entity, CS-KG <ref type="bibr" target="#b49">50</ref> also provides information about their distribution over the years. For example, for the entity cskg:internet_of_thing, CS-KG 50 contains the following linkages to time observations: cskg:internet_of_thing cskg-ont:hasTimeObservation cskg:entity_ time_observation_17565238. cskg:internet_of_thing cskg-ont:hasTimeObservation cskg:entity_ time_observation_17565239.</p><p>… cskg:internet_of_thing cskg-ont:hasTimeObservation cskg:entity_ time_observation_17565248. cskg:internet_of_thing cskg-ont:hasTimeObservation cskg:entity_ time_observation_17565249. cskg:internet_of_thing cskg-ont:hasTimeObservation cskg:entity_time_ observation_17565250.</p><p>Similarly to the statements, time observations associated with an entity hold information about the year and the number of appearances. For example the time observation cskg:entity_time_observation_17565238 in CS-KG <ref type="bibr" target="#b49">50</ref> is as follows: cskg:entity_time_observation_17565238 a cskg-ont:TimeObservation; cskg-ont:year "2010"^^rdfs:Literal; cskg-ont:frequency "112"^^rdfs:Literal.</p><p>This indicates that the entity cskg:internet_of_thing appeared 112 times in the abstracts of research papers published in 2010.</p><p>Finally, CS-KG <ref type="bibr" target="#b49">50</ref> provides links between its entities and corresponding entities in DBpedia and Wikidata, facilitating the integration of CS-KG <ref type="bibr" target="#b49">50</ref> with some of the largest KGs available. For example the entity cskg:senti-ment_analysis is linked as follows: @prefix dbpedia:<ref type="url" target="http://dbpedia.org/resource/">http://dbpedia.org/resource/</ref>. @prefix wikidata: <ref type="url" target="http://www.wikidata.org/entity/">http://www.wikidata.org/entity/</ref>. cskg:sentiment_analysis owl:sameAs dbpedia:Sentiment_analysis. cskg:sentiment_analysis owl:sameAs wikidata:Q2271421.</p><p>All the information contained in the CS-KG 50 can be accessed through a dedicated SPARQL endpoint at <ref type="url" target="https://w3id.org/cskg/sparql">https://w3id.org/cskg/sparql</ref> or downloaded as a dump. We provide the data in RDF and CSV formats at <ref type="url" target="https://doi.org/10.5281/zenodo.14167681">https:// doi.org/10.5281/zenodo.14167681</ref>.</p><p>The dump contains 3 main directories rdf/, csv/, and benchmark/. The rdf/ and csv/ directories provide the same data in two different formats, each containing the following set of files:</p><p>• The files cskg_data_N.ttl (cskg_data_N.csv), where N denotes the file split number, contain the following properties: the subject, predicate, and object of the triples, their support, the paper from where the triple was derived, the tools used to generate the triple, the time observations, and the triple ID. • The files dbpedia.ttl (dbpedia.csv) and wikidata.ttl (wikidata.csv) map the entities to their corresponding ones in DBpedia and Wikidata. • The file paper_info.ttl (paper_info.csv) includes the ID, year, and DOI (if available) of the research papers.</p><p>• The file entity_type.ttl (entity_type.csv) associate entities to their types.</p><p>• The file cskg_entity_year_distribution.ttl (cskg_entity_year_distribution.csv) contains the yearly distribution of entities. • The files time_cskg_data_N.ttl include the statement time observations for the RDF dump. This same information is included in the files cskg_data_N.csv for the CSV dump. This difference arises from the differences in data formats and reflects the most convenient approach for handling each format. • The files stm_entity_context.ttl (stm_entity_context.csv) and stm_statements_context.ttl (stm_statements_context.csv) contain the contextual information about the entities and statements, respectively. • The files prefix.ttl and cskg_onto_v2.ttl are required to import the RDF dump into SPARQL endpoints and Semantic Web-based tools.</p><p>In addition to CS-KG, we provide three benchmarks for link prediction, available in the directory benchmark: CSKG-2M, CSKG-490K, and CSKG-132K. Each benchmark includes the following files:</p><p>• entities.txt contains the entities and their corresponding IDs within the benchmark.</p><p>• relations.txt includes the relations and their corresponding IDs within the benchmark.</p><p>• triples.txt lists all the triples in the benchmark, encoded using the IDs from entities.txt and relations.txt.</p><p>• train.txt, valid.txt, and test.txt contain subsets of triples extracted from triples.txt that are designated as the training, validation, and test sets, respectively.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>CS-KG Statistics.</head><p>In this section, we explore various analytical views on CS-KG <ref type="bibr" target="#b49">50</ref> to illustrate its scale and versatility.</p><p>Figure <ref type="figure">2</ref> reports the number of entities for each type. Method and OtherEntity are the most frequent types, followed by Task, Material, and Metric.</p><p>Figure <ref type="figure">3</ref> illustrates the distribution of statements based on the 39 main predicates that were used to produce the object properties (plus the skos:broader relation from the DyGIEpp module). The most common predicates are uses, includes, skos:broader, analyses, and produces.</p><p>In Fig. <ref type="figure">4</ref>, we report the distribution of the statements on the 20 most frequent object properties. As earlier noted, these properties are relations that incorporate both the predicates and entity types. This figure demonstrates the variety of statements in the CS-KG <ref type="bibr" target="#b49">50</ref> , showcasing a wide range of diverse predicates.</p><p>Figure <ref type="figure">5</ref> depicts the distribution of CS-KG <ref type="bibr" target="#b49">50</ref> statements across different support levels. The visualization highlights that CS-KG <ref type="bibr" target="#b49">50</ref> offers a substantial number of well-supported statements (support ≥5) and thus can reliably support knowledge-driven applications.</p><p>Finally, Table <ref type="table" target="#tab_0">1</ref> presents a comparison between the latest version of CS-KG <ref type="bibr" target="#b49">50</ref> and its earlier version (CS-KG 1.0), as well as its precursor that is exclusively focused on the domain of artificial intelligence (AI-KG). This Fig. <ref type="figure">2</ref> The distribution of the entities across the classes Method, Task, Material, Metric, and OtherEntity. Fig. <ref type="figure">3</ref> The distribution in logarithmic scale of the relationships over the statements based on their verbs. Fig. <ref type="figure">4</ref> The distribution of the 20 most frequent relationships over the statements based on their verbs and classes. comparison underscores the significant advancements made in CS-KG 50 over CS-KG 1.0, particularly in terms of the completeness of scientific information. Notably, CS-KG <ref type="bibr" target="#b49">50</ref> has seen considerable increases in the number of entities (from 10M to 24.7M), statements (from 41M to 67.5M), covered papers (from 6.7M to 14.5M), and links to external knowledge bases (from 58K to 229K).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Technical Validation</head><p>In this section, we present a formal evaluation of the quality of the extracted triples within CS-KG <ref type="bibr" target="#b49">50</ref> . We also explore the performance of various state-of-the-art algorithms for link prediction on a new benchmark based on CS-KG <ref type="bibr" target="#b49">50</ref> .</p><p>Evaluation of the Triples Quality. We evaluate the quality of the triples in CS-KG <ref type="bibr" target="#b49">50</ref> by manually assessing a subset of 3, 600 triples. For this purpose, we have selected:</p><p>• 900 triples sourced from CS-KG 50 with a support of 3 or more. These triples are considered reliable as they have been identified in at least three distinct research papers. • 900 triples from CS-KG <ref type="bibr" target="#b49">50</ref> with a support lower than 3. These triples feature information that is less common in the literature, which could make them noisier. • 800 triples discarded by the Ontology Validator Module, indicating information that conflicts with the CS-KG <ref type="bibr" target="#b49">50</ref> ontology. • 800 triples discarded by the Transformer Validator Module. These triples include scientific assertions that were deemed potentially inaccurate or not aligned with the high-quality triples utilized to train the model. • 200 triples randomly generated by corrupting triples from CS-KG <ref type="bibr" target="#b49">50</ref> . These triples contain mostly erroneous facts.</p><p>The selection of triples is designed to ensure that either the subject or the object is relevant to one of three specific subfields of computer science: Natural Language Processing, Machine Learning, or Information Retrieval. This is achieved by curating a list of pertinent topics from the Computer Science Ontology. The list of topics for the evaluation is available at <ref type="url" target="https://github.com/danilo-dessi/SKG-pipeline/blob/main/resources/cso_topics.txt">https://github.com/danilo-dessi/SKG-pipeline/blob/main/resources/cso_topics.txt</ref>.</p><p>Next, three senior researchers with strong expertise in the relevant topics have evaluated the 3,600 triples. They have assigned a value of 1 whenever a triple is correct, meaning it is corroborated by the literature, and 0 otherwise. They have been also permitted to use online resources to verify whether a triple aligns with established scientific research. The agreement between annotators, as measured by Fleiss' kappa <ref type="bibr" target="#b61">62</ref> , is 0.61, indicating a moderate level of agreement. We have then created a gold standard based on the majority vote.</p><p>To assess the performance of the information extraction method, we use the resulting gold standard to compare: 1) all extracted triples without any validation (row Extractor &amp; Handler Modules), 2) only the triples Fig. <ref type="figure">5</ref> The distribution in logarithmic scale of the statements with support greater or equal to a threshold x.   4) the final triples produced by the full pipeline, validated by all the validators. We evaluate the quality of the triples using precision, recall, and F-measure. Table <ref type="table" target="#tab_2">2</ref> reports the result of the evaluation. The raw triples (first row), i.e., triples extracted without any further refinement and validation process, exhibit high recall but are quite noisy, as reflected in their low precision (47%). This suggests that while combining multiple tools provides extensive coverage of triples relevant to the computer science domain, it also introduces a considerable amount of incorrect or misleading information. The Ontology Validator Module increases precision by 10% while maintaining good recall. Similarly, the Transformer Validator Module increases precision by about 7%. The final version of the pipeline achieves a precision of 72% and a recall of 79%, resulting in an F-measure of 75%.</p><p>As discussed earlier, the accuracy of the triples is highly dependent on their support, defined by the number of associated papers. For instance, the triples supported by more than five papers yield a precision of 77% while triples with support greater than ten achieve a precision of over 91%. Therefore, studies or tools requiring greater precision can consider subsets of CS-KG <ref type="bibr" target="#b49">50</ref> that contain only triples with high support.</p><p>In summary, the evaluation reveals two primary insights. First, while the extraction method can generate a detailed representation of the field, it may also result in some inaccurate and irrelevant information. Second, the techniques used to validate the data, whether based on their alignment with highly supported triples (as in the Transformer Validator Module) or adherence to domain ontology (as in the Ontology Validator Module), can alleviate this issue and significantly improve the quality of the resulting triples.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Link prediction Benchmark.</head><p>We are also releasing three benchmarks for link prediction based on CS-KG 50 : CSKG-2M, CSKG-490K, and CSKG-132K.</p><p>Link prediction is a widely studied task in machine learning that involves predicting the existence (or likelihood) of (typed) edges in a graph <ref type="bibr" target="#b62">63</ref> . This task gains particular importance in the context of KGs, where it is also known as knowledge graph completion, due to its role in improving data quality by addressing data incompleteness and correcting erroneous relationships <ref type="bibr" target="#b63">64</ref> . The purpose of these benchmarks is twofold: 1) to demonstrate how the triples in the CS-KG <ref type="bibr" target="#b49">50</ref> can serve as a knowledge base for machine learning techniques, and 2) to provide the research community with large-scale resources for evaluating and comparing link prediction approaches. Specifically, the link prediction benchmarks commonly used in the community, such as WN18 <ref type="bibr" target="#b50">51</ref> and FB15k 51 , usually feature tens of thousands of triples. By current standards, these datasets are considered small. The resources we introduce aim to address this limitation by providing a large-scale benchmark.</p><p>The released benchmarks are as follows:</p><p>• CSKG-2M provides more than 2M triples from CS-KG <ref type="bibr" target="#b49">50</ref>  Therefore, CSKG-2M includes both CSKG-490K and CSKG-132K, and CSKG-490K includes CSKG-132K.</p><p>We have assessed on the new benchmarks four of the most prominent state-of-the-art solutions for link prediction: TransR 65 , ComplEx 66 , DistMul <ref type="bibr" target="#b66">67</ref> , and RESCAL <ref type="bibr" target="#b67">68</ref> . Although the research community continuously develops novel approaches for link prediction, these methods remain widely recognized, frequently included in state-of-the-art comparisons, and implemented in several software libraries, making them strong baselines for future research efforts.</p><p>Table <ref type="table" target="#tab_3">3</ref> reports the performance of the four methods both on our benchmarks as well as on two widely recognized benchmarks in the field: FB15k, derived from Freebase, and WN18, derived from WordNet <ref type="bibr" target="#b50">51</ref> . The three benchmarks derived from CS-KG 50 are more challenging than existing benchmarks for two primary reasons. First, they include a wider selection of relations. Second, they offer a substantially larger volume of triples, testing the scalability of link prediction methods. Consequently, these benchmarks offer novel and more demanding resources to advance research in link prediction.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Usage Notes</head><p>Our dataset is provided in Turtle syntax for the RDF format and can be loaded within any triplestore supporting it, such as Openlink Virtuoso, Blazegraph, and GraphDB. We also provide all data in CSV format. Both the Turtle and CSV dumps are available at <ref type="url" target="https://doi.org/10.5281/zenodo.14167681">https://doi.org/10.5281/zenodo.14167681</ref>. Additionally, the resource can be accessed for exploration in a live triplestore available at <ref type="url" target="https://w3id.org/cskg/sparql">https://w3id.org/cskg/sparql</ref>.</p><p>In the following, we showcase a series of exemplary queries that can be run on CS-KG <ref type="bibr" target="#b49">50</ref> . These queries should provide a starting point for facilitating the use of CS-KG <ref type="bibr" target="#b49">50</ref> . It is important to recognize that these examples align with the Competency Questions commonly adopted by the semantic web and knowledge graphs community to evaluate the capabilities of a knowledge base. It is acknowledged that there may be additional use cases not addressed in this section.</p><p>For each sample query, we present the question in natural language and its corresponding SPARQL query. All SPARQL queries are prefaced with a standard header:</p><p>We list the exemplary queries in the following. 1. Retrieve all statements about a specific entity (e.g., Wikipedia) that are supported by at least 10 articles.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Dataset</head><p>LP Method MRR MR Hits@1 Hits@3 Hits@10 7. List the statements with a frequency of at least 100 in the year 2020.</p><p>8. Return the frequency of an entity (e.g., machine learning) over the years. 9. Return the frequency over the years of a statement (e.g., &lt;machine learning, usesMaterial, twitter&gt;).</p><p>10. Given a statement (e.g., &lt;internet_of_things, usesMethod, wireless_protocol&gt;), retrieve the top 20 entities that most frequently co-occur with it.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head/><label/><figDesc>1 and p 3 are published in the year 2015, and p 2 in the year 2017, and p 4 in the year 2018. Then, this module associates s to the frequencies {2015: 2, 2017: 1, 2018: 1}, the frequencies {2015: 2, 2017: 1} to o, and {2015: 1, 2018: 1} to ′ o . Also, it associates {2015: 2, 2017: 1} to &lt;s,p,o&gt;, and {2015: 1, 2018: 1} to &lt;s,p',o'&gt;.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Feature</head><label/><figDesc/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head/><label/><figDesc/><graphic coords="3,155.64,46.50,324.00,161.40" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head/><label/><figDesc/><graphic coords="8,155.64,46.50,228.00,246.84" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head/><label/><figDesc/><graphic coords="8,155.64,340.51,396.00,136.08" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head/><label/><figDesc/><graphic coords="8,155.64,519.02,396.00,161.16" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 .</head><label>1</label><figDesc>Comparison between CS-KG 50 , CS-KG 1.0, and AI-KG graphs. validated by the Ontology Validator Module, 3) only the triples validated by the Transformer Validator Module,</figDesc><table><row><cell>Number of Entities</cell><cell>24.7M</cell><cell>10M</cell><cell>820K</cell></row><row><cell>Number of Statements</cell><cell>67.5M</cell><cell>41M</cell><cell>1.2M</cell></row><row><cell>Number of covered Scientific Papers</cell><cell>14.5M</cell><cell>6.7M</cell><cell>333K</cell></row><row><cell>Number of Ontology Axioms</cell><cell>2,275</cell><cell>2,213</cell><cell>321</cell></row><row><cell>Number of Object Properties</cell><cell>219</cell><cell>179</cell><cell>27</cell></row><row><cell>Links to DBpedia</cell><cell>203K</cell><cell>31K</cell><cell>0</cell></row><row><cell>Links to Wikidata</cell><cell>26K</cell><cell>27K</cell><cell>19K</cell></row><row><cell>Multiple relationships between two Entities</cell><cell>yes</cell><cell>yes</cell><cell>no</cell></row><row><cell>Temporal Information</cell><cell>yes</cell><cell>no</cell><cell>no</cell></row><row><cell>Contextual Information</cell><cell>yes</cell><cell>no</cell><cell>no</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head/><label/><figDesc>with a support ≥3. It contains about 1.5M triples for training, 278K triples for validation, and 465K triples for testing. • CSKG-490K provides more than 490K triples with a support ≥5. It contains about 335K triples for training, 59K triples for validation, and 98K triples for testing. • CSKG-132K provides 132K triples with a support ≥10. It contains about 89K triples for training, 15K triples for validation, and 26K triples for testing.</figDesc><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 2 .</head><label>2</label><figDesc>Evaluation of triple sets generated by pipeline sub-modules.</figDesc><table><row><cell>Pipeline Modules</cell><cell cols="2">Precision Recall</cell><cell>F-measure</cell></row><row><cell>Extractor &amp; Handler Modules</cell><cell>0.47</cell><cell>0.98</cell><cell>0.64</cell></row><row><cell>Extractor &amp; Handler Modules + Ontology Validator</cell><cell>0.57</cell><cell>0.91</cell><cell>0.70</cell></row><row><cell cols="2">Extractor &amp; Handler Modules + Transformer Validator 0.54</cell><cell>0.86</cell><cell>0.66</cell></row><row><cell>Extractor &amp; Handler Modules + Ontology Validator + Transformer Validator (Full method)</cell><cell>0.72</cell><cell>0.79</cell><cell>0.75</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 3 .</head><label>3</label><figDesc>Performance comparison of link prediction methods across the three novel benchmarks and two established benchmarks (FB15k and WN18).</figDesc><table><row><cell>FB15k</cell><cell>TransR</cell><cell>0.670</cell><cell>59.99</cell><cell>0.585</cell><cell>0.728</cell><cell>0.808</cell></row><row><cell>FB15k</cell><cell>DistMul</cell><cell>0.696</cell><cell>61.43</cell><cell>0.586</cell><cell>0.782</cell><cell>0.873</cell></row><row><cell>FB15k</cell><cell>ComplEx</cell><cell>0.757</cell><cell>64.73</cell><cell>0.672</cell><cell>0.826</cell><cell>0.886</cell></row><row><cell>FB15k</cell><cell>RESCAL</cell><cell>0.661</cell><cell>124.5</cell><cell>0.589</cell><cell>0.704</cell><cell>0.787</cell></row><row><cell>WN18</cell><cell>TransR</cell><cell>0.609</cell><cell>432.8</cell><cell>0.452</cell><cell>0.736</cell><cell>0.850</cell></row><row><cell>WN18</cell><cell>DistMul</cell><cell>0.813</cell><cell>419.0</cell><cell>0.702</cell><cell>0.921</cell><cell>0.948</cell></row><row><cell>WN18</cell><cell>ComplEx</cell><cell>0.932</cell><cell>318.2</cell><cell>0.914</cell><cell>0.948</cell><cell>0.959</cell></row><row><cell>WN18</cell><cell>RESCAL</cell><cell>0.848</cell><cell>563.6</cell><cell>0.792</cell><cell>0.898</cell><cell>0.928</cell></row><row><cell>CS-KG-2M</cell><cell>TransR</cell><cell>0.456</cell><cell>150.83</cell><cell>0.391</cell><cell>0.491</cell><cell>0.574</cell></row><row><cell>CS-KG-2M</cell><cell>ComplEx</cell><cell>0.418</cell><cell>223.37</cell><cell>0.361</cell><cell>0.453</cell><cell>0.515</cell></row><row><cell>CS-KG-2M</cell><cell>DistMult</cell><cell>0.421</cell><cell>219.27</cell><cell>0.362</cell><cell>0.457</cell><cell>0.520</cell></row><row><cell>CS-KG-2M</cell><cell>RESCAL</cell><cell>0.375</cell><cell>160.11</cell><cell>0.301</cell><cell>0.412</cell><cell>0.509</cell></row><row><cell>CS-KG-490K</cell><cell>TransR</cell><cell>0.563</cell><cell>120.49</cell><cell>0.488</cell><cell>0.611</cell><cell>0.695</cell></row><row><cell>CS-KG-490K</cell><cell>ComplEx</cell><cell>0.469</cell><cell>133.20</cell><cell>0.389</cell><cell>0.517</cell><cell>0.610</cell></row><row><cell>CS-KG-490K</cell><cell>DistMult</cell><cell>0.470</cell><cell>128.39</cell><cell>0.388</cell><cell>0.520</cell><cell>0.617</cell></row><row><cell>CS-KG-490K</cell><cell>RESCAL</cell><cell>0.448</cell><cell>114.18</cell><cell>0.363</cell><cell>0.493</cell><cell>0.605</cell></row><row><cell>CS-KG-132K</cell><cell>TransR</cell><cell>0.518</cell><cell>123.61</cell><cell>0.425</cell><cell>0.579</cell><cell>0.685</cell></row><row><cell>CS-KG-132K</cell><cell>ComplEx</cell><cell>0.392</cell><cell>138.96</cell><cell>0.290</cell><cell>0.452</cell><cell>0.582</cell></row><row><cell>CS-KG-132K</cell><cell>DistMult</cell><cell>0.404</cell><cell>129.24</cell><cell>0.302</cell><cell>0.462</cell><cell>0.594</cell></row><row><cell>CS-KG-132K</cell><cell>RESCAL</cell><cell>0.385</cell><cell>118.18</cell><cell>0.294</cell><cell>0.431</cell><cell>0.557</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>Scientific Data | (2025) 12:964 | https://doi.org/10.1038/s41597-025-05200-8</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>We acknowledge financial support under the <rs type="programName">National Recovery and Resilience Plan (NRRP)</rs>, <rs type="programName">Mission 4 Component 2 Investment 1</rs><rs type="grantNumber">.5 -Call</rs> for tender No.3277 published on December 30, 2021 by the <rs type="funder">Italian Ministry of University and Research (MUR)</rs> funded by the <rs type="funder">European Union -NextGenerationEU</rs>. Project Code <rs type="grantNumber">ECS0000038 -</rs>Project Title <rs type="projectName">eINS Ecosystem of Innovation for Next Generation Sardinia -CUP</rs> <rs type="grantNumber">F53C22000430001-</rs>Grant Assignment Decree No. 1056 adopted on June 23, 2022 by the <rs type="funder">Italian Ministry of University and Research (MUR)</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_qFeeYfN">
+					<orgName type="program" subtype="full">National Recovery and Resilience Plan (NRRP)</orgName>
+				</org>
+				<org type="funding" xml:id="_4bJawt9">
+					<idno type="grant-number">.5 -Call</idno>
+					<orgName type="program" subtype="full">Mission 4 Component 2 Investment 1</orgName>
+				</org>
+				<org type="funded-project" xml:id="_vz2zSZB">
+					<idno type="grant-number">ECS0000038 -</idno>
+					<orgName type="project" subtype="full">eINS Ecosystem of Innovation for Next Generation Sardinia -CUP</orgName>
+				</org>
+				<org type="funding" xml:id="_PdXzmN7">
+					<idno type="grant-number">F53C22000430001-</idno>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Code availability</head><p>The codebase and the documentation of the pipeline used to generate CS-KG 50 can be found at: <ref type="url" target="https://github.com/danilo-dessi/SKG-pipeline-cskg-plus">https://github. com/danilo-dessi/SKG-pipeline-cskg-plus</ref>. All the information about the graph can also be found on a dedicated website <ref type="url" target="https://w3id.org/cskg">https://w3id.org/cskg</ref>.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Author contributions</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Competing interests</head><p>The authors declare no competing interests.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Building a pubmed knowledge graph</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Xu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Scientific data</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">205</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">A comparative analysis of knowledge injection strategies for large language models in the scholarly domain</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Cadeddu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Engineering Applications of Artificial Intelligence</title>
+		<imprint>
+			<biblScope unit="volume">133</biblScope>
+			<biblScope unit="page">108166</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">A systematic review: machine learning based recommendation systems for e-learning</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Khanal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Prasad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Alsadoon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Maag</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Education and Information Technologies</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="2635" to="2664"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Artificial intelligence for literature reviews: Opportunities and challenges</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Bolanos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Salatino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Artificial Intelligence Review</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="page">259</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Citation prediction by leveraging transformers and natural language processing heuristics</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Buscaldi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Information Processing &amp; Management</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page">103583</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Brody</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Scite</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Medical Library Association: JMLA</title>
+		<imprint>
+			<biblScope unit="volume">109</biblScope>
+			<biblScope unit="page">707</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Forecasting the future of artificial intelligence with machine learning-based link prediction in an exponentially growing knowledge network</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Krenn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Machine Intelligence</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="1326" to="1335"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Completing scientific facts in knowledge graphs of research concepts</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Borrego</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="125867" to="125880"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Integrating conversational agents and knowledge graphs within the scholarly domain</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Meloni</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ieee Access</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="22468" to="22489"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Conversational agents in healthcare: a systematic review</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Laranjo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the American Medical Informatics Association</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="1248" to="1258"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Growth rates of modern science: A bibliometric analysis based on the number of publications and cited references</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bornmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mutz</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/asi.23329</idno>
+		<ptr target="https://doi.org/10.1002/asi.23329"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Association for Information Science and Technology</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page" from="2215" to="2222"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Research knowledge graphs in nfdi4ds</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Karmakar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Gesellschaft für Informatik eV</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Towards the semantic formalization of science</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Fathalla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Auer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lange</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3341105.3374132</idno>
+		<ptr target="https://doi.org/10.1145/3341105.3374132"/>
+	</analytic>
+	<monogr>
+		<title level="m">SAC '20: The 35th ACM/SIGAPP Symposium on Applied Computing, online event</title>
+		<editor>
+			<persName><forename type="first">C</forename><surname>Hung</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">T</forename><surname>Cerný</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">D</forename><surname>Shin</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">A</forename><surname>Bechini</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Brno, Czech Republic</addrLine></address></meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2020-04-03">March 30 -April 3, 2020, 2057-2059. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Q</forename><surname>Jiang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.06825</idno>
+		<title level="m">Mistral 7b</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<title level="m" type="main">Llama: Open and efficient foundation language models</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Touvron</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2302.13971</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<author>
+			<persName><forename type="first">W</forename><surname>Huang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2404.14047</idno>
+		<title level="m">How good are low-bit quantized llama3 models? an empirical study</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<author>
+			<persName><forename type="first">G</forename><surname>Team</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2403.08295</idno>
+		<title level="m">Open models based on gemini research and technology</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Openai</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Gpt-4 technical report</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Hidden entity detection from github leveraging large language models</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Gan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Workshop on Deep Learning and Large Language Models for Knowledge Graphs</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Retrieval-augmented generation for knowledge-intensive nlp tasks</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Lewis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="9459" to="9474"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Are we really making much progress? A worrying analysis of recent neural recommendation approaches</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">F</forename><surname>Dacrema</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Cremonesi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Jannach</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3298689.3347058</idno>
+		<ptr target="https://doi.org/10.1145/3298689.3347058"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 13th ACM Conference on Recommender Systems</title>
+		<editor>
+			<persName><forename type="first">T</forename><surname>Bogers</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">A</forename><surname>Said</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">P</forename><surname>Brusilovsky</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">D</forename><surname>Tikk</surname></persName>
+		</editor>
+		<meeting>the 13th ACM Conference on Recommender Systems<address><addrLine>RecSys; Copenhagen, Denmark</addrLine></address></meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2019-09-16">2019. September 16-20, 2019. 2019</date>
+			<biblScope unit="page" from="101" to="109"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">A comprehensive and rigorous framework for reproducible recommender systems evaluation</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">W</forename><surname>Anelli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 44th international ACM SIGIR conference on research and development in information retrieval</title>
+		<meeting>the 44th international ACM SIGIR conference on research and development in information retrieval</meeting>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="2405" to="2414"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Towards a knowledge graph for science</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Auer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 8th international conference on web intelligence, mining and semantics</title>
+		<meeting>the 8th international conference on web intelligence, mining and semantics</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="1" to="6"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Genuine semantic publishing</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kuhn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Dumontier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Data Science</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="139" to="154"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Knowledge graphs: Opportunities and challenges</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Xia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Naseriparsa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Artificial Intelligence Review</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="32"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Knowledge graphs</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hogan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACM Computing Surveys (Csur)</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="1" to="37"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<title level="m" type="main">Web ontology language: Owl. Handbook on ontologies</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Antoniou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">V</forename><surname>Harmelen</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+			<biblScope unit="page" from="91" to="110"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Link prediction techniques, applications, and performance: A survey</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Biswas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physica A: Statistical Mechanics and its Applications</title>
+		<imprint>
+			<biblScope unit="volume">553</biblScope>
+			<biblScope unit="page">124289</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Trans4e: Link prediction on scholarly knowledge graphs</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nayyeri</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neucom.2021.02.100</idno>
+		<ptr target="https://doi.org/10.1016/j.neucom.2021.02.100"/>
+	</analytic>
+	<monogr>
+		<title level="j">Neurocomputing</title>
+		<imprint>
+			<biblScope unit="volume">461</biblScope>
+			<biblScope unit="page" from="530" to="542"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Dbpedia-a large-scale, multilingual knowledge base extracted from wikipedia</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lehmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Semantic web</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="167" to="195"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Semantic web conference ontology-a refactoring solution</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Nuzzolese</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Gentile</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Presutti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gangemi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">European semantic web conference</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="84" to="87"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">A framework for creating knowledge graphs of scientific software metadata</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kelley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Garijo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Quantitative Science Studies</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="1423" to="1446"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">The anatomy of a nanopublication</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Groth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gibson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Velterop</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Information services &amp; use</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="51" to="56"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Decentralized provenance-aware publishing with nanopublications</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kuhn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PeerJ Computer Science</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page">78</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">The spar ontologies</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Peroni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Shotton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The Semantic Web-ISWC 2018: 17th International Semantic Web Conference</title>
+		<title level="s">Proceedings, Part II</title>
+		<meeting><address><addrLine>Monterey, CA, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2018">October 8-12, 2018. 2018</date>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="119" to="136"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Cso classifier 3.0: a scalable unsupervised method for classifying documents in terms of research topics</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Salatino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal on Digital Libraries</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="20"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">A survey on knowledge organization systems of research fields: Resources and challenges</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Salatino</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Quantitative Science Studies</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="37"/>
+			<date type="published" when="2025">2025</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Semopenalex: The scientific landscape in 26 billion rdf triples</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Färber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lamprecht</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Krause</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Aung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Haase</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Semantic Web Conference</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="94" to="112"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Open research knowledge graph: next generation infrastructure for semantic scholarly knowledge</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Y</forename><surname>Jaradeh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 10th International Conference on Knowledge Capture</title>
+		<meeting>the 10th International Conference on Knowledge Capture</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="243" to="246"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Ai-kg: an automatically generated knowledge graph of artificial intelligence</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dessì</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The Semantic Web-ISWC 2020: 19th International Semantic Web Conference</title>
+		<title level="s">Proceedings, Part II</title>
+		<meeting><address><addrLine>Athens, Greece</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2020">November 2-6, 2020. 2020</date>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="127" to="143"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">A large-scale knowledge graph of research entities and claims in computer science</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dessí</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Reforgiato Recupero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Buscaldi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Cs-Kg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Semantic Web Conference</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="678" to="696"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Investigating software usage in the social sciences: A knowledge graph approach</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Schindler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Zapilko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Krüger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">European Semantic Web Conference</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="271" to="286"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">From big scholarly data to solution-oriented knowledge repository</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Saberi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Chang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Frontiers in big Data</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page">38</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Pattern-based acquisition of scientific entities from scholarly article titles</title>
+		<author>
+			<persName><forename type="first">D'</forename><surname>Souza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Auer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Asian Digital Libraries</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="401" to="410"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<monogr>
+		<author>
+			<persName><forename type="first">J</forename><surname>Priem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Piwowar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Orr</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Openalex</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2205.01833</idno>
+		<title level="m">A fully-open index of scholarly works, authors, venues, institutions, and concepts</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Analysing trends in computer science research: A preliminary study using the microsoft academic graph</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Effendy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">H</forename><surname>Yap</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 26th international conference on world wide web companion</title>
+		<meeting>the 26th international conference on world wide web companion</meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="1245" to="1250"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Generating knowledge graphs by employing natural language processing and machine learning techniques within the scholarly domain</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dessì</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Recupero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Buscaldi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Future Generation Computer Systems</title>
+		<imprint>
+			<biblScope unit="volume">116</biblScope>
+			<biblScope unit="page" from="253" to="264"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Scientometrics for success and influence in the microsoft academic graph</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Panagopoulos</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Complex Networks and Their Applications VIII: Volume 2 Proceedings of the Eighth International Conference on Complex Networks and Their Applications COMPLEX NETWORKS</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2019">2019. 2020</date>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="1007" to="1017"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Towards transdisciplinary impact of scientific publications: A longitudinal, comprehensive, and large-scale analysis on microsoft academic graph</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Information Processing &amp; Management</title>
+		<imprint>
+			<biblScope unit="volume">59</biblScope>
+			<biblScope unit="page">102859</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dessì</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Recupero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Buscaldi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+		<idno type="DOI">10.5281/zenodo.14167682</idno>
+		<ptr target="https://doi.org/10.5281/zenodo.14167682"/>
+	</analytic>
+	<monogr>
+		<title level="m">Cs-kg 2-0</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Translating embeddings for modeling multi-relational data</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bordes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Usunier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Garcia-Duran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Weston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Yakhnenko</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in neural information processing systems</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">A deep learning and NLP approach for generating scientific knowledge graphs in the computer science domain</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dessì</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Recupero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Buscaldi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Scicero</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Knowl. Based Syst</title>
+		<imprint>
+			<biblScope unit="volume">258</biblScope>
+			<biblScope unit="page">109945</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Entity, relation, and event extraction with contextualized span representations</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wadden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Wennberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Luan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hajishirzi</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/V1/D19-1585</idno>
+		<ptr target="https://doi.org/10.18653/V1/D19-1585"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing, EMNLP-IJCNLP 2019</title>
+		<editor>
+			<persName><forename type="first">K</forename><surname>Inui</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">J</forename><surname>Jiang</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">V</forename><surname>Ng</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">X</forename><surname>Wan</surname></persName>
+		</editor>
+		<meeting>the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing, EMNLP-IJCNLP 2019<address><addrLine>Hong Kong, China</addrLine></address></meeting>
+		<imprint>
+			<publisher>Computational Linguistics</publisher>
+			<date type="published" when="2019">November 3-7, 2019. 2019</date>
+			<biblScope unit="page" from="5783" to="5788"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Multi-Task Identification of Entities, Relations, and Coreference for Scientific Knowledge Graph Construction</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Luan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ostendorf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hajishirzi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2018 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="3219" to="3232"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">The computer science ontology: a large-scale taxonomy of research areas</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Salatino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Thanapalasingam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mannocci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Motta</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The Semantic Web-ISWC 2018: 17th International Semantic Web Conference</title>
+		<title level="s">Proceedings, Part II</title>
+		<meeting><address><addrLine>Monterey, CA, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2018">October 8-12, 2018. 2018</date>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="187" to="205"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">The stanford corenlp natural language processing toolkit</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of 52nd annual meeting of the association for computational linguistics: system demonstrations</title>
+		<meeting>52nd annual meeting of the association for computational linguistics: system demonstrations</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="55" to="60"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Leveraging linguistic structure for open domain information extraction</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Angeli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J J</forename><surname>Premkumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing</title>
+		<meeting>the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="344" to="354"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<monogr>
+		<title level="m" type="main">Efficient estimation of word representations in vector space</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mikolov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Corrado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dean</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1301.3781</idno>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">SciBERT: A Pretrained Language Model for Scientific Text</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Beltagy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Lo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Cohan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)</title>
+		<meeting>the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="3615" to="3620"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Benchmarking rdf metadata representations: Reification, singleton property and rdf</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Orlandi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Graux</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>O'sullivan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2021 IEEE 15th International Conference on Semantic Computing (ICSC)</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="233" to="240"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<monogr>
+		<title level="m" type="main">Reifying rdf: What works well with wikidata? SSWS@ ISWC</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hernández</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hogan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Krötzsch</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="volume">1457</biblScope>
+			<biblScope unit="page" from="32" to="47"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Large sample variance of kappa in the case of different sets of raters</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Fleiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Nee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Landis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychological bulletin</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="page">974</biblScope>
+			<date type="published" when="1979">1979</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">A review of relational machine learning for knowledge graphs</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nickel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Murphy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Tresp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Gabrilovich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the IEEE</title>
+		<meeting>the IEEE</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="page" from="11" to="33"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<monogr>
+		<author>
+			<persName><forename type="first">L</forename><surname>Getoor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Taskar</surname></persName>
+		</author>
+		<title level="m">Introduction to statistical relational learning</title>
+		<imprint>
+			<publisher>MIT press</publisher>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">Learning entity and relation embeddings for knowledge graph completion</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhu</surname></persName>
+		</author>
+		<idno type="DOI">10.1609/AAAI.V29I1.9491</idno>
+		<ptr target="https://doi.org/10.1609/AAAI.V29I1.9491"/>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Twenty-Ninth AAAI Conference on Artificial Intelligence</title>
+		<editor>
+			<persName><forename type="first">B</forename><surname>Bonet</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">S</forename><surname>Koenig</surname></persName>
+		</editor>
+		<meeting>the Twenty-Ninth AAAI Conference on Artificial Intelligence<address><addrLine>Austin, Texas, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>AAAI Press</publisher>
+			<date type="published" when="2015">January 25-30, 2015. 2015</date>
+			<biblScope unit="page" from="2181" to="2187"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">Complex embeddings for simple link prediction</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Trouillon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Welbl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Riedel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">É</forename><surname>Gaussier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Bouchard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 33nd International Conference on Machine Learning, ICML 2016</title>
+		<editor>
+			<persName><forename type="first">M</forename><surname>Balcan</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">K</forename><forename type="middle">Q</forename><surname>Weinberger</surname></persName>
+		</editor>
+		<meeting>the 33nd International Conference on Machine Learning, ICML 2016<address><addrLine>New York City, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2016">June 19-24, 2016. 2016</date>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page" from="2071" to="2080"/>
+		</imprint>
+	</monogr>
+	<note>JMLR Workshop and Conference Proceedings</note>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">Embedding entities and relations for learning and inference in knowledge bases</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yih</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Deng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">3rd International Conference on Learning Representations, ICLR 2015</title>
+		<title level="s">Conference Track Proceedings</title>
+		<editor>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Y</forename><surname>Lecun</surname></persName>
+		</editor>
+		<meeting><address><addrLine>San Diego, CA, USA</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2015">May 7-9, 2015. 2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">A three-way model for collective learning on multi-relational data</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nickel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Tresp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kriegel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 28th International Conference on Machine Learning, ICML 2011</title>
+		<editor>
+			<persName><forename type="first">L</forename><surname>Getoor</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">T</forename><surname>Scheffer</surname></persName>
+		</editor>
+		<meeting>the 28th International Conference on Machine Learning, ICML 2011<address><addrLine>Bellevue, Washington, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Omnipress</publisher>
+			<date type="published" when="2011-07-02">June 28 -July 2, 2011. 2011</date>
+			<biblScope unit="page" from="809" to="816"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

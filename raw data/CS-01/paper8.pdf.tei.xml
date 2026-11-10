@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Aspect-based Sentiment Classification with Aspect-specific Graph Convolutional Networks</title>
+				<funder ref="#_6cwgtva #_YCrkPg3">
+					<orgName type="full">Natural Science Foundation of China</orgName>
+				</funder>
+				<funder ref="#_Cju3ajZ">
+					<orgName type="full">Major Project of Zhejiang Lab</orgName>
+				</funder>
+				<funder ref="#_CuMsVY7">
+					<orgName type="full">European Unions</orgName>
+				</funder>
+				<funder ref="#_VSYz6s4">
+					<orgName type="full">National Key Research and Development Program of China</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Chen</forename><surname>Zhang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Qiuchi</forename><surname>Li</surname></persName>
+							<email>qiuchili@dei.unipd.it</email>
+						</author>
+						<author>
+							<persName><forename type="first">Dawei</forename><surname>Song</surname></persName>
+							<email>dwsong@bit.edu.cn</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Beijing Institute of Technology</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Padua</orgName>
+								<address>
+									<settlement>Padua</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Beijing Institute of Technology</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Aspect-based Sentiment Classification with Aspect-specific Graph Convolutional Networks</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">DFC54D65B206F3C248DB42B4D2CE4BDB</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-02T20:35+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Due to their inherent capability in semantic alignment of aspects and their context words, attention mechanism and Convolutional Neural Networks (CNNs) are widely applied for aspect-based sentiment classification. However, these models lack a mechanism to account for relevant syntactical constraints and long-range word dependencies, and hence may mistakenly recognize syntactically irrelevant contextual words as clues for judging aspect sentiment. To tackle this problem, we propose to build a Graph Convolutional Network (GCN) over the dependency tree of a sentence to exploit syntactical information and word dependencies. Based on it, a novel aspectspecific sentiment classification framework is raised. Experiments on three benchmarking collections illustrate that our proposed model has comparable effectiveness to a range of state-of-the-art models 1 , and further demonstrate that both syntactical information and long-range word dependencies are properly captured by the graph convolution structure.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">Introduction</head><p>Aspect-based (also known as aspect-level) sentiment classification aims at identifying the sentiment polarities of aspects explicitly given in sentences. For example, in a comment about a laptop saying "From the speed to the multi-touch gestures this operating system beats Windows easily.", the sentiment polarities for two aspects operating system and Windows are positive and negative, respectively. Generally, this task is formulated as predicting the polarity of a provided (sentence, aspect) pair.</p><p>Given the inefficiency of manual feature refinement <ref type="bibr" target="#b7">(Jiang et al., 2011)</ref>, early works of aspect-based sentiment classification are mainly based on neural network methods <ref type="bibr" target="#b3">(Dong et al., 2014;</ref><ref type="bibr" target="#b26">Vo and Zhang, 2015)</ref>. Ever since <ref type="bibr">Tang et al. (2016a)</ref> pointed out the challenge of modelling semantic relatedness between context words and aspects, attention mechanism coupled with Recurrent Neural Networks (RNNs) <ref type="bibr" target="#b0">(Bahdanau et al., 2014;</ref><ref type="bibr" target="#b15">Luong et al., 2015;</ref><ref type="bibr" target="#b28">Xu et al., 2015)</ref> starts to play a critical role in more recent models <ref type="bibr" target="#b27">(Wang et al., 2016;</ref><ref type="bibr">Tang et al., 2016b;</ref><ref type="bibr" target="#b30">Yang et al., 2017;</ref><ref type="bibr" target="#b14">Liu and Zhang, 2017;</ref><ref type="bibr" target="#b16">Ma et al., 2017;</ref><ref type="bibr" target="#b6">Huang et al., 2018)</ref>.</p><p>While attention-based models are promising, they are insufficient to capture syntactical dependencies between context words and the aspect within a sentence. Consequently, the current attention mechanism may lead to a given aspect mistakenly attending to syntactically unrelated context words as descriptors (Limitation 1). Look at a concrete example "Its size is ideal and the weight is acceptable.". Attention-based models often identify acceptable as a descriptor of the aspect size, which is in fact not the case. In order to address the issue, <ref type="bibr" target="#b5">He et al. (2018)</ref> imposed some syntactical constraints on attention weights, but the effect of syntactical structure was not fully exploited.</p><p>In addition to the attention-based models, Convolutional Neural Networks (CNNs) <ref type="bibr" target="#b29">(Xue and Li, 2018;</ref><ref type="bibr" target="#b13">Li et al., 2018)</ref> have been employed to discover descriptive multi-word phrases for an aspect, based on the finding <ref type="bibr" target="#b4">(Fan et al., 2018)</ref> that the sentiment of an aspect is usually determined by key phrases instead of individual words. Nevertheless, the CNN-based models can only perceive multi-word features as consecutive words with the convolution operations over word sequences, but are inadequate to determine sentiments depicted by multiple words that are not next to each other (Limitation 2). In the sentence "The staff should be a bit more friendly" with staff as the aspect, a CNN-based model may make an incorrect prediction by detecting more friendly as the descriptive phrase, disregarding the impact of should be which is two words away but reverses the sentiment.</p><p>In this paper, we aim to tackle the two limitations identified above by using Graph Convolutional Networks (GCNs) <ref type="bibr" target="#b10">(Kipf and Welling, 2017)</ref>. GCN has a multi-layer architecture, with each layer encoding and updating the representation of nodes in the graph using features of immediate neighbors. Through referring to syntactical dependency trees, a GCN is potentially capable of drawing syntactically relevant words to the target aspect, and exploiting long-range multi-word relations and syntactical information with GCN layers. GCNs have been deployed on document-word relationships <ref type="bibr" target="#b31">(Yao et al., 2018)</ref> and tree structures <ref type="bibr" target="#b17">(Marcheggiani and Titov, 2017;</ref><ref type="bibr" target="#b32">Zhang et al., 2018)</ref>, but how they can be effectively used in aspect-based sentiment classification is yet to be explored.</p><p>To fill the gap, this paper proposes an Aspectspecific Graph Convolutional Network (ASGCN), which, to the best of our knowledge, is the first GCN-based model for aspect-based sentiment classification. ASGCN starts with a bidirectional Long Short-Term Memory network (LSTM) layer to capture contextual information regarding word orders. In order to obtain aspect-specific features, a multi-layered graph convolution structure is implemented on top of the LSTM output, followed by a masking mechanism that filters out nonaspect words and keeps solely high-level aspectspecific features. The aspect-specific features are fed back to the LSTM output for retrieving informative features with respect to the aspect, which are then used to predict aspect-based sentiment.</p><p>Experiments on three benchmarking datasets show that ASGCN effectively addresses both limitations of the current aspect-based sentiment classification approaches, and outperforms a range of state-of-the-art models.</p><p>Our contributions are as follows:</p><p>• We propose to exploit syntactical dependency structures within a sentence and resolve the long-range multi-word dependency issue for aspect-based sentiment classification.</p><p>• We posit that Graph Convolutional Network (GCN) is suitable for our purpose, and pro- pose a novel Aspect-specific GCN model. To our best knowledge, this is the first investigation in this direction.</p><p>• Extensive experiment results verify the importance of leveraging syntactical information and long-range word dependencies, and demonstrate the effectiveness of our model in capturing and exploiting them in aspectbased sentiment classification.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2">Graph Convolutional Networks</head><p>GCNs can be considered as an adaptation of the conventional CNNs for encoding local information of unstructured data. For a given graph with k nodes, an adjacency matrix<ref type="foot" target="#foot_0">foot_0</ref> A ∈ R k×k is obtained through enumerating the graph. For convenience, we denote the output of the l-th layer for node i as h l i , where h 0 i represents the initial state of node i. For an L-layer GCN, l ∈ [1, 2, • • • , L] and h L i is the final state of node i. The graph convolution operated on the node representation can be written as:</p><formula xml:id="formula_0">h l i = σ( k j=1 A ij W l h l-1 j + b l ) (1)</formula><p>where W l is a linear transformation weight, b l is a bias term, and σ is a nonlinear function, e.g. ReLU. For a better illustration, an example of GCN layer is shown in Figure <ref type="figure" target="#fig_0">1</ref>.</p><p>As the graph convolution process only encodes information of immediate neighbors, a node in the graph can only be influenced by the neighbouring nodes within L steps in an L-layer GCN. In this way, the graph convolution over the dependency tree of a sentence provides syntactical constraints for an aspect within the sentence to identify descriptive words based on syntactical distances. Moreover, GCN is able to deal with the circumstances where the polarity of an aspect is described by non-consecutive words, as GCN over dependency tree will gather the non-consecutive words into a smaller scope and aggregate their features properly with graph convolution. Therefore, we are inspired to adopt GCN to leverage syntactical information and long-range word dependencies for aspect-based sentiment classification.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3">Aspect-specific Graph Convolutional Network</head><p>Figure <ref type="figure" target="#fig_1">2</ref> gives an overview of ASGCN. The components of ASGCN will be introduced separately in the rest of the section.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1">Embedding and Bidirectional LSTM</head><formula xml:id="formula_1">Given a n-word sentence c = {w c 1 , w c 2 , • • • , w c τ +1 , • • • , w c τ +m , • • • , w c n-1 , w c</formula><p>n } containing a corresponding m-word aspect starting from the (τ + 1)-th token, we embed each word token into a low-dimensional real-valued vector space <ref type="bibr" target="#b1">(Bengio et al., 2003)</ref> with embedding matrix E ∈ R |V |×de , where |V | is the size of vocabulary and d e denotes the dimensionality of word embeddings. With the word embeddings of the sentence, a bidirectional LSTM is constructed to produce hidden state vectors <ref type="figure">where h c</ref> t ∈ R 2d h represents the hidden state vector at time step t from the bidirectional LSTM, and d h is the dimensionality of a hidden state vector output by an unidirectional LSTM.</p><formula xml:id="formula_2">H c = {h c 1 , h c 2 , • • • , h c τ +1 , • • • , h c τ +m , • • • , h c n-1 , h c n },</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2">Obtaining Aspect-oriented Features</head><p>Different from general sentiment classification, aspect-based sentiment classification targets at judging sentiments from the view of aspects, and thus calls for an aspect-oriented feature extraction strategy. In this study, we obtain aspect-oriented features by applying multi-layer graph convolution over the syntactical dependency tree of a sentence, and imposing an aspect-specific masking layer on its top.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.1">Graph Convolution over Dependency</head><p>Trees Aiming to address the limitations of existing approaches (as discussed in previous sections), we leverage a graph convolutional network over dependency trees of sentences. Specifically, after the dependency tree<ref type="foot" target="#foot_1">foot_1</ref> of the given sentence is constructed, we first attain an adjacency matrix A ∈ R n×n according to the words in the sentence. It is important to note that dependency trees are directed graphs. While GCNs generally do not consider directions, they could be adapted to the direction-aware scenario. Accordingly, we propose two variants of ASGCN, i.e. ASGCN-DG on dependency graphs which are un-directional, and ASGCN-DT concerning dependency trees which are directional. Practically, the only difference between ASGCN-DG and ASGCN-DT lies in their adjacency matrices: The adjacency matrix of ASGCN-DT is much more sparse than that of ASGCN-DG. Such setting is in accordance with the phenomenon that parents nodes are broadly influenced by their children nodes. Furthermore, following the idea of self-looping in <ref type="bibr" target="#b10">Kipf and Welling (2017)</ref>, each word is manually set adjacent to itself, i.e. the diagonal values of A are all ones.</p><p>The ASGCN variants are performed in a multilayer fashion, on top of the bidirectional LSTM output in Section 3.1, i.e. H 0 = H c to make nodes aware of context <ref type="bibr" target="#b32">(Zhang et al., 2018)</ref>. Then the representation of each node is updated with graph convolution operation with normalization factor <ref type="bibr" target="#b10">(Kipf and Welling, 2017)</ref> as below:</p><formula xml:id="formula_3">hl i = n j=1 A ij W l g l-1 j (2)</formula><formula xml:id="formula_4">h l i = ReLU( hl i /(d i + 1) + b l ) (3)</formula><p>where g l-1 j ∈ R 2d h is the j-th token's representation evolved from the preceding GCN layer while h l i ∈ R 2d h is the product of current GCN layer, and d i = n j=1 A ij is degree of the i-th token in the tree. The weights W l and bias b l are trainable parameters.</p><p>It is worth noting that we do not have h l i immediately fed into successive GCN layer, but conduct a position-aware transformation in the first place: where F(•) is a function assigning position weights, widely adopted by previous works <ref type="bibr" target="#b13">(Li et al., 2018;</ref><ref type="bibr">Tang et al., 2016b;</ref><ref type="bibr" target="#b2">Chen et al., 2017)</ref>, for augmenting the importance of context words close to the aspect. By doing so we aim at reducing the noise and bias that may have naturally arisen from the dependency parsing process. Specifically, the function F(•) is:</p><formula xml:id="formula_5">g l i = F(h l i ) (4) … … … … … … Context Hidden States Attention Scores Embeddings … … … … … … … … … … … … … … … L-</formula><formula xml:id="formula_6">q i = ⎧ ⎪ ⎨ ⎪ ⎩ 1 -τ +1-i n 1 ≤ i &lt; τ + 1 0 τ + 1 ≤ i ≤ τ + m 1 -i-τ -m n τ + m &lt; i ≤ n (5) F(h l i ) = q i h l i (6)</formula><p>where q i ∈ R is the position weight to i-th token.</p><p>The final outcome of the L-layer GCN is</p><formula xml:id="formula_7">H L = {h L 1 , h L 2 , • • • , h L τ +1 , • • • , h L τ +m , • • • , h L n-1 , h L n }, h L t ∈ R 2d h .</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.2">Aspect-specific Masking</head><p>In this layer, we mask out hidden state vectors of non-aspect words and keep the aspect word states unchanged:</p><formula xml:id="formula_8">h L t = 0 1 ≤ t &lt; τ + 1, τ + m &lt; t ≤ n (7)</formula><p>The outputs of this zero-masking layer are the aspect-oriented features</p><formula xml:id="formula_9">H L mask = {0, • • • , h L τ +1 , • • • , h L τ +m , • • • , 0}. Through graph convolution,</formula><p>these features H L mask have perceived contexts around the aspect in such a way that considers both syntactical dependencies and long-range multiword relations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3">Aspect-aware Attention</head><p>Based on the aspect-oriented features, a refined representation of the hidden state vectors H c is produced via a novel retrieval-based attention mechanism. The idea is to retrieve significant features that are semantically relevant to the aspect words from the hidden state vectors, and accordingly set a retrieval-based attention weight for each context word. In our implementation, the attention weights are computed as below:</p><formula xml:id="formula_10">β t = n i=1 h c t h L i = τ +m i=τ +1 h c t h L i (<label>8</label></formula><formula xml:id="formula_11">)</formula><formula xml:id="formula_12">α t = exp(β t ) n i=1 exp(β i )<label>(9)</label></formula><p>Here, the dot product is used to measure the semantic relatedness between aspect component words and words in the sentence so that aspectspecific masking, i.e. zero masking, could take effect as shown in Equation <ref type="formula" target="#formula_10">8</ref>. The final representation for prediction is therefore formulated as:</p><formula xml:id="formula_13">r = n t=1 α t h c t (10)</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4">Sentiment Classification</head><p>Having obtained the representation r, it is then fed into a fully-connected layer, followed by a softmax normalization layer to yield a probability distribution p ∈ R dp over polarity decision space:</p><formula xml:id="formula_14">p = softmax(W p r + b p )<label>(11)</label></formula><p>where d p is the same as the dimensionality of sentiment labels while W p ∈ R dp×2d h and b p ∈ R dp are the learned weight and bias, respectively.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.5">Training</head><p>This model is trained by the standard gradient descent algorithm with the cross-entropy loss and L 2 -regularization:</p><formula xml:id="formula_15">Loss = - (c,p)∈C log p p + λ Θ 2 (12)</formula><p>where C denotes the collection of data sets, p is the label and p p means the p-th element of p, Θ represents all trainable parameters, and λ is the coefficient of L 2 -regularization.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4">Experiments</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1">Datasets and Experimental Settings</head><p>Our experiments are conducted on five datasets: one (TWITTER) is originally built by <ref type="bibr" target="#b3">Dong et al. (2014)</ref> containing twitter posts, while the other four (LAP14, REST14, REST15, REST16) are respectively from SemEval 2014 task 4 <ref type="bibr" target="#b21">(Pontiki et al., 2014)</ref>, SemEval 2015 task 12 <ref type="bibr" target="#b20">(Pontiki et al., 2015)</ref> and SemEval 2016 task 5 <ref type="bibr" target="#b19">(Pontiki et al., 2016)</ref>, consisting of data from two categories, i.e. laptop and restaurant. Following previous work <ref type="bibr">(Tang et al., 2016b)</ref>, we remove samples with conflicting 4 polarities or without explicit aspects in the sentences in REST15 and REST16.</p><p>The statistics of datasets are reported in Table <ref type="table" target="#tab_0">1</ref>. For all our experiments, 300-dimensional pretrained GloVe vectors <ref type="bibr" target="#b18">(Pennington et al., 2014)</ref> are used to initialize word embeddings. All model weights are initialized with uniform distribution. The dimensionality of hidden state vectors is set to 300. We use Adam as the optimizer with a learning rate of 0.001. The coefficient of L 2regularization is 10 5 and batch size is 32. Moreover, the number of GCN layers is set to 2, which is the best-performing depth in pilot studies.</p><p>The experimental results are obtained by averaging 3 runs with random initialization, where Accuracy and Macro-Averaged F1 are adopted as the evaluation metrics. We also carry out paired ttest on both Accuracy and Macro-Averaged F1 to verify whether the improvements achieved by our models over the baselines are significant.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2">Models for Comparison</head><p>In order to comprehensively evaluate the two variants of our model, namely, ASGCN-DG and ASGCN-DT, we compare them with a range of baselines and state-of-the-art models, as listed below:</p><p>• SVM <ref type="bibr" target="#b11">(Kiritchenko et al., 2014)</ref> is the model which has won SemEval 2014 task 4 with conventional feature extraction methods. • LSTM <ref type="bibr">(Tang et al., 2016a)</ref> uses the last hidden state vector of LSTM to predict sentiment polarity. • MemNet <ref type="bibr">(Tang et al., 2016b</ref>) considers contexts as external memories and benefits from a multi-hop architecture. • AOA <ref type="bibr" target="#b6">(Huang et al., 2018)</ref> borrows the idea of attention-over-attention from the field of machine translation. • IAN <ref type="bibr" target="#b16">(Ma et al., 2017)</ref> interactively models the relationships between aspects and their contexts. • TNet-LF <ref type="bibr" target="#b13">(Li et al., 2018)</ref> puts forward Context-Preserving Transformation (CPT) to preserve and strengthen the informative part of contexts.</p><p>In order to examine to what degrees GCN would outperform CNN, we also involve a model named ASCNN in the experiment, which replaces 2-layer GCN with 2-layer CNN in ASGCN<ref type="foot" target="#foot_2">foot_2</ref> .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3">Results</head><p>As is shown in Table <ref type="table" target="#tab_1">2</ref>, ASGCN-DG consistently outperforms all compared models on LAP14 and REST15 datasets, and achieves comparable results on TWITTER and REST16 datasets compared with baseline TNet-LF and on REST14 compared with ASCNN. The results demonstrate the effectiveness of ASGCN-DG and the insufficiency of directly integrating syntax information into attention mechanism as in <ref type="bibr" target="#b5">He et al. (2018)</ref>. Meanwhile, ASGCN-DG performs better than ASGCN-DT by a large margin on TWITTER, LAP14, Rest15 and REST16 datasets. And ASGCN-DT's result is lower than TNet-LF's on LAP14. A possible reason is that the information from parents nodes is as important as that from children nodes, so treating dependency trees as directed graphs leads to information loss. Additionally, ASGCN-DG outperforms ASCNN on all datasets except REST14, illustrating ASGCN is better at capturing long-range word dependencies, while to some extent ASCNN shows an impact brought by aspectspecific masking. We suspect REST14 dataset is not so sensitive to syntactic information. Moreover, the sentences from TWITTER dataset are less grammatical, restricting the efficacy. We conjecture this is likely the reason why ASGCN-DG and ASGCN-DT get sub-optimal results on TWITTER dataset.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.4">Ablation Study</head><p>To further examine the level of benefit that each component of ASGCN brings to the performance, an ablation study is performed on ASGCN-DG. The results are shown in Table <ref type="table" target="#tab_2">3</ref>. We also present the results of BiLSTM+Attn as a baseline, which uses two LSTMs for the aspect and the context respectively.</p><p>First, removal of position weights (i.e. ASGCN-DG w/o pos.) leads to performance drops on LAP14, REST15 and REST16 datasets but performance boosts on TWITTER and REST14 datasets. Recall the main results on REST14 dataset, we conclude that the integration of position weights is not helpful to reduce noise of user generated contents if syntax is not crucial for the data. Moreover, after we get rid of aspect-specific masking (i.e. ASGCN-DG w/o masking), the model could not keep as competitive as TNet-LF. This verifies the significance of aspect-specific masking.</p><p>Compared with ASGCN-DG, ASGCN-DG w/o GCN (i.e. preserving position weights and aspectspecific masking, but without using GCN layers) is much less powerful on all five datasets except F1 metric on TWITTER dataset. STM+Attn on all datasets except REST14 dataset, due to the strength of the aspect-specific masking mechanism.</p><p>Thus it could be concluded that GCN contributes to ASGCN to a considerable extent since GCN captures syntatic word dependencies and long-range word relations at the same time. Nevertheless, the GCN does not work well as expected on the datasets not sensitive to syntax information, as we have seen in TWITTER and REST14 datasets.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.5">Case Study</head><p>To better understand how ASGCN works, we present a case study with several testing examples. Particularly, we visualize the attention scores offered by MemNet, IAN, ASCNN and ASGCN-DG in Table <ref type="table" target="#tab_3">4</ref>, along with their predictions on these examples and the corresponding ground truth labels.</p><p>The first sample "great food but the service was dreadful!" has two aspects within one sentence, which may hinder attention-based models from aligning the aspects with their relevant descriptive words precisely. The second sample sentence "The staff should be a bit more friendly." uses a subjunctive word "should", bringing extra difficulty in detecting implicit semantics. The last example contains negation in the sentence, that can easily lead models to make wrong predictions.</p><p>MemNet fails in all three presented samples. While IAN is capable of differing modifiers for distinct aspects, it fails to infer sentiment polarities of sentences with special styles. Armed with position weights, ASCNN correctly predicts the label for the second sample as the phrase should be is close to the aspect staff, but failed for the third one with a longer-range word dependency. Our ASGCN-DG correctly handles all the three samples, implying that GCN effectively integrates syntactic dependency information into an enriched semantic representation. In particular, ASGCN-DG makes correct predictions on the second and the third sample, both having a seemingly biased focus. This shows ASGCN's capability of capturing long-range multi-word features.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5">Discussion</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.1">Investigation on the Impact of GCN Layers</head><p>As ASGCN involves an L-layer GCN, we investigate the effect of the layer number L on the final performance of ASGCN-DG. Basically, we vary the value of L in the set <ref type="bibr">{1,2,3,4,6,8,12}</ref> and check the corresponding Accuracy and Macro-Averaged F1 of ASGCN-DG on the LAP14 dataset. The results are illustrated in Figure <ref type="figure" target="#fig_2">3</ref>. On both metrics, ASGCN-DG achieves the best performance when L is 2, which justifies the selection on the number of layers in the experiment sec- tion. Moreover, a dropping trend on both metrics is present as L increases. For large L, especially when L equals to 12, ASGCN-DG basically becomes more difficult to train due to large amount of parameters.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2">Investigation on the Effect of Multiple Aspects</head><p>In the datasets, there might exist multiple aspect terms in one sentence. Thus, we intend to measure whether such phenomena would affect the effectiveness of ASGCN. We divide the training samples in LAP14 and REST14 datasets into different groups based on the number of aspect terms in the sentences and compute the training accuracy differences between these groups. It is worth noting that the samples with more than 7 aspect terms are removed as outliers because the sizes of these samples are too small for any meaningful comparison.</p><p>It can be seen in Figure <ref type="figure" target="#fig_3">4</ref> that when the number of aspects in the sentences is more than 3, the accuracy becomes fluctuated, indicating a low robustness in capturing multiple-aspect correlations and suggesting the need of modelling multi-aspect </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6">Related Work</head><p>Constructing neural network models over word sequences, such as CNNs <ref type="bibr" target="#b9">(Kim, 2014;</ref><ref type="bibr" target="#b8">Johnson and Zhang, 2015)</ref>, RNNs <ref type="bibr">(Tang et al., 2016a)</ref> and Recurrent Convolutional Neural Networks (RC-NNs) <ref type="bibr" target="#b12">(Lai et al., 2015)</ref>, has achieved promising performances in sentiment analysis. However, the importance but lack of an effective mechanism of leveraging dependency trees for capturing distant relations of words has also been recognized. <ref type="bibr" target="#b22">Tai et al. (2015)</ref> showed that LSTM with dependency trees or constituency trees outperformed CNNs. <ref type="bibr" target="#b3">Dong et al. (2014)</ref> presented an adaptive recursive neural network using dependency trees, which achieved competitive results compared with strong baselines. More recent research showed that general dependency-based models are difficult to achieve comparable results to the attentionbased models, as dependency trees are not capable of catching long-term contextualized semantic information properly. Our work overcomes this limitation by adopting Graph convolutional networks (GCNs) <ref type="bibr" target="#b10">(Kipf and Welling, 2017)</ref> .</p><p>GCN has recently attracted a growing attention in the area of artificial intelligence and has been applied to Natural Language Processing (NLP). <ref type="bibr" target="#b17">Marcheggiani and Titov (2017)</ref> claimed that GCN could be considered as a complement to LSTM, and proposed a GCN-based model for semantic role labeling. <ref type="bibr" target="#b25">Vashishth et al. (2018)</ref> and <ref type="bibr" target="#b32">Zhang et al. (2018)</ref> used graph convolution over dependency trees in document dating and relation classification, respectively. <ref type="bibr" target="#b31">Yao et al. (2018)</ref> introduced GCN to text classification utilizing documentword and word-word relations, and gained improvements over various state-of-the-art methods. Our work investigates the effect of dependency trees in depth via graph convolution, and develops aspect-specific GCN model that integrates with the LSTM architecture and attention mechanism for more effective aspect-based sentiment classification.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="7">Conclusions and Future Work</head><p>We have re-examined the challenges encountering existing models for aspect-specific sentiment classification, and pointed out the suitability of graph convolutional network (GCN) for tackling these challenges. Accordingly, we have proposed a novel network to adopt GCN for aspect-based sentiment classification. Experimental results have indicated that GCN brings benefit to the overall performance by leveraging both syntactical information and long-range word dependencies.</p><p>This study may be further improved in the following aspects. First, the edge information of the syntactical dependency trees, i.e. the label of each edge, is not exploited in this work. We plan to design a specific graph neural network that takes into consideration the edge labels. Second, domain knowledge can be incorporated. Last but not least, the ASGCN model may be extended to simultaneously judge sentiments of multiple aspects by capturing dependencies between the aspects words.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 :</head><label>1</label><figDesc>Figure 1: An example of GCN layer.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 :</head><label>2</label><figDesc>Figure 2: Overview of aspect-specific graph convolutional network.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 :</head><label>3</label><figDesc>Figure 3: Effect of the number of GCN layers. Accuracy and macro-F1 scores are the average value over 3 runs with random initialization.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 :</head><label>4</label><figDesc>Figure 4: Accuracy versus the number of aspects (# Aspects) in the sentences.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 :</head><label>1</label><figDesc>Dataset statistics.</figDesc><table><row><cell>4 An opinion target is associated with different sentiment</cell></row><row><cell>polarities.</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2 :</head><label>2</label><figDesc>DT 71.53 69.68  74.14 † 69.24 † 80.86 ‡ 72.19 ‡ 79.34 † ‡ 60.78 † ‡ 88.69 † 66.64 † ASGCN-DG 72.15 † 70.40 † 75.55 † ‡ 71.05 † ‡ 80.77 ‡ 72.02 ‡ 79.89 † ‡ 61.89 † ‡ 88.99 † 67.48 † Model comparison results (%). Average accuracy and macro-F1 score over 3 runs with random initialization. The best two results with each dataset are in bold. The results with are retrieved from the original papers and the results with are retrieved from Dong et al. (2014). The marker † refers p &lt; 0.05 by comparing with ASCNN in paired t-test and the marker ‡ refers p &lt; 0.05 by comparing with TNet-LF in paired t-test.</figDesc><table><row><cell>Model</cell><cell cols="2">TWITTER</cell><cell cols="2">LAP14</cell><cell cols="2">REST14</cell><cell cols="2">REST15</cell><cell cols="2">REST16</cell></row><row><cell/><cell>Acc.</cell><cell>F1</cell><cell>Acc.</cell><cell>F1</cell><cell>Acc.</cell><cell>F1</cell><cell>Acc.</cell><cell>F1</cell><cell>Acc.</cell><cell>F1</cell></row><row><cell>SVM</cell><cell cols="3">63.40 63.30 70.49</cell><cell>N/A</cell><cell cols="2">80.16 N/A</cell><cell>N/A</cell><cell>N/A</cell><cell>N/A</cell><cell>N/A</cell></row><row><cell>LSTM</cell><cell cols="3">69.56 67.70 69.28</cell><cell>63.09</cell><cell cols="3">78.13 67.47 77.37</cell><cell>55.17</cell><cell cols="2">86.80 63.88</cell></row><row><cell>MemNet</cell><cell cols="3">71.48 69.90 70.64</cell><cell>65.17</cell><cell cols="3">79.61 69.64 77.31</cell><cell>58.28</cell><cell cols="2">85.44 65.99</cell></row><row><cell>AOA</cell><cell cols="3">72.30 70.20 72.62</cell><cell>67.52</cell><cell cols="3">79.97 70.42 78.17</cell><cell>57.02</cell><cell cols="2">87.50 66.21</cell></row><row><cell>IAN</cell><cell cols="3">72.50 70.81 72.05</cell><cell>67.38</cell><cell cols="3">79.26 70.09 78.54</cell><cell>52.65</cell><cell cols="2">84.74 55.21</cell></row><row><cell>TNet-LF</cell><cell cols="3">72.98 71.43 74.61</cell><cell>70.14</cell><cell cols="3">80.42 71.03 78.47</cell><cell>59.47</cell><cell cols="2">89.07 70.43</cell></row><row><cell>ASCNN</cell><cell cols="3">71.05 69.45 72.62</cell><cell>66.72</cell><cell cols="3">81.73 73.10 78.47</cell><cell>58.90</cell><cell cols="2">87.39 64.56</cell></row><row><cell>ASGCN-</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 3 :</head><label>3</label><figDesc>However, ASGCN-DG w/o GCN is still slightly better than BiL-Ablation study results (%). Accuracy and macro-F1 scores are the average value over 3 runs with random initialization.</figDesc><table><row><cell>Model</cell><cell>TWITTER</cell><cell>LAP14</cell><cell>REST14</cell><cell>REST15</cell><cell>REST16</cell></row><row><cell/><cell>Acc. F1</cell><cell>Acc. F1</cell><cell>Acc. F1</cell><cell>Acc. F1</cell><cell>Acc. F1</cell></row><row><cell>BiLSTM+Attn</cell><cell cols="5">71.24 69.55 72.83 67.82 79.85 70.03 78.97 58.18 87.28 68.18</cell></row><row><cell>ASGCN-DG</cell><cell cols="5">72.15 70.40 75.55 71.05 80.77 72.02 79.89 61.89 88.99 67.48</cell></row><row><cell>ASGCN-DG w/o pos.</cell><cell cols="5">72.69 70.59 73.93 69.63 81.22 72.94 79.58 61.55 88.04 66.63</cell></row><row><cell cols="6">ASGCN-DG w/o mask 72.64 70.63 72.05 66.56 79.02 68.29 77.80 57.51 86.36 61.41</cell></row><row><cell cols="6">ASGCN-DG w/o GCN 71.92 70.63 73.51 68.83 79.40 69.43 79.40 61.18 87.55 66.19</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 4 :</head><label>4</label><figDesc>Case study. Visualization of attention scores from MemNet, IAN, ASCNN and ASGCN-DG on testing examples, along with their predictions and correspondingly, golden labels. The marker indicates correct prediction while the marker indicates incorrect prediction.</figDesc><table><row><cell>Model</cell><cell>Aspect</cell><cell>Attention visualization</cell><cell>Prediction</cell><cell>Label</cell></row><row><cell/><cell>food</cell><cell>great food but the service was dreadful !</cell><cell cols="2">negative positive</cell></row><row><cell>MemNet</cell><cell>staff Windows 8</cell><cell>The staff should be a bit more friendly . Did not enjoy the new Windows 8 and touchscreen functions .</cell><cell cols="2">positive negative positive negative</cell></row><row><cell/><cell>food</cell><cell>great food but the service was dreadful !</cell><cell cols="2">positive positive</cell></row><row><cell>IAN</cell><cell>staff Windows 8</cell><cell>The staff should be a bit more friendly . Did not enjoy the new Windows 8 and touchscreen functions .</cell><cell cols="2">positive negative neutral negative</cell></row><row><cell/><cell>food</cell><cell>great food but the service was dreadful !</cell><cell cols="2">positive positive</cell></row><row><cell>ASCNN</cell><cell>staff Windows 8</cell><cell>The staff should be a bit more friendly . Did not enjoy the new Windows 8 and touchscreen functions .</cell><cell cols="2">negative negative positive negative</cell></row><row><cell/><cell>food</cell><cell>great food but the service was dreadful !</cell><cell cols="2">positive positive</cell></row><row><cell>ASGCN-DG</cell><cell>staff Windows 8</cell><cell>The staff should be a bit more friendly . Did not enjoy the new Windows 8 and touchscreen functions .</cell><cell cols="2">negative negative negative negative</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2" xml:id="foot_0"><p>Aij indicates whether the i-th token is adjacent to the j-th token or not.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="3" xml:id="foot_1"><p>We use spaCy toolkit: https://spacy.io/.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="5" xml:id="foot_2"><p>In order to ensure the length of input and output is consistent, kernel length is set to 3 and padding is 1.</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>This work is supported by The <rs type="funder">National Key Research and Development Program of China</rs> (grant No. <rs type="grantNumber">2018YFC0831704</rs>), <rs type="funder">Natural Science Foundation of China</rs> (grant No. <rs type="grantNumber">U1636203</rs>, <rs type="grantNumber">61772363</rs>), <rs type="funder">Major Project of Zhejiang Lab</rs> (grant No. <rs type="grantNumber">2019DH0ZX01</rs>), and the <rs type="funder">European Unions</rs> <rs type="programName">Horizon 2020 Research and Innovation Programme</rs> under the <rs type="grantName">Marie Skodowska-Curie</rs> grant agreement No. <rs type="grantNumber">721321</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_VSYz6s4">
+					<idno type="grant-number">2018YFC0831704</idno>
+				</org>
+				<org type="funding" xml:id="_6cwgtva">
+					<idno type="grant-number">U1636203</idno>
+				</org>
+				<org type="funding" xml:id="_YCrkPg3">
+					<idno type="grant-number">61772363</idno>
+				</org>
+				<org type="funding" xml:id="_Cju3ajZ">
+					<idno type="grant-number">2019DH0ZX01</idno>
+				</org>
+				<org type="funding" xml:id="_CuMsVY7">
+					<idno type="grant-number">721321</idno>
+					<orgName type="grant-name">Marie Skodowska-Curie</orgName>
+					<orgName type="program" subtype="full">Horizon 2020 Research and Innovation Programme</orgName>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>datasets are available at <ref type="url" target="https://github.com/GeneZC/ASGCN">https://github.com/GeneZC/ASGCN</ref>.</p></div>
+			</div>
+
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<author>
+			<persName><forename type="first">Dzmitry</forename><surname>Bahdanau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kyunghyun</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1409.0473</idno>
+		<title level="m">Neural machine translation by jointly learning to align and translate</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">A neural probabilistic language model</title>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Réjean</forename><surname>Ducharme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pascal</forename><surname>Vincent</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christian</forename><surname>Jauvin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Machine Learning Research</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="1137" to="1155"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Recurrent attention network on memory for aspect sentiment analysis</title>
+		<author>
+			<persName><forename type="first">Peng</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhongqian</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lidong</forename><surname>Bing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Yang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2017 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="452" to="461"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Adaptive recursive neural network for target-dependent twitter sentiment classification</title>
+		<author>
+			<persName><forename type="first">Li</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Furu</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chuanqi</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Duyu</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ming</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ke</forename><surname>Xu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 52nd annual meeting of the association for computational linguistics</title>
+		<meeting>the 52nd annual meeting of the association for computational linguistics</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="49" to="54"/>
+		</imprint>
+	</monogr>
+	<note>Short papers</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Convolution-based memory network for aspectbased sentiment analysis</title>
+		<author>
+			<persName><forename type="first">Chuang</forename><surname>Fan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Qinghong</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiachen</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lin</forename><surname>Gui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ruifeng</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kam-Fai</forename><surname>Wong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The 41st International ACM SIGIR Conference on Research &amp; Development in Information Retrieval</title>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="1161" to="1164"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Effective attention modeling for aspect-level sentiment classification</title>
+		<author>
+			<persName><forename type="first">Ruidan</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sun</forename><surname>Wee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hwee Tou</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daniel</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Dahlmeier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 27th International Conference on Computational Linguistics</title>
+		<meeting>the 27th International Conference on Computational Linguistics</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="1121" to="1131"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Aspect level sentiment classification with attention-over-attention neural networks</title>
+		<author>
+			<persName><forename type="first">Binxuan</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yanglan</forename><surname>Ou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kathleen</forename><forename type="middle">M</forename><surname>Carley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Social Computing, Behavioral-Cultural Modeling and Prediction and Behavior Representation in Modeling and Simulation</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="197" to="206"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Target-dependent twitter sentiment classification</title>
+		<author>
+			<persName><forename type="first">Long</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mo</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ming</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaohua</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tiejun</forename><surname>Zhao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies</title>
+		<meeting>the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2011">2011</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="151" to="160"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Semi-supervised convolutional neural networks for text categorization via region embedding</title>
+		<author>
+			<persName><forename type="first">Rie</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tong</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in neural information processing systems</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="919" to="927"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Convolutional neural networks for sentence classification</title>
+		<author>
+			<persName><forename type="first">Yoon</forename><surname>Kim</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)</title>
+		<meeting>the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="1746" to="1751"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Semisupervised classification with graph convolutional networks</title>
+		<author>
+			<persName><forename type="first">Thomas</forename><forename type="middle">N</forename><surname>Kipf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Max</forename><surname>Welling</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Learning Representations (ICLR)</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Nrc-canada-2014: Detecting aspects and sentiment in customer reviews</title>
+		<author>
+			<persName><forename type="first">Svetlana</forename><surname>Kiritchenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaodan</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Colin</forename><surname>Cherry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Saif</forename><surname>Mohammad</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 8th International Workshop on Semantic Evaluation</title>
+		<meeting>the 8th International Workshop on Semantic Evaluation<address><addrLine>SemEval</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2014">2014. 2014</date>
+			<biblScope unit="page" from="437" to="442"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Recurrent convolutional neural networks for text classification</title>
+		<author>
+			<persName><forename type="first">Siwei</forename><surname>Lai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Liheng</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kang</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jun</forename><surname>Zhao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Twenty-ninth AAAI conference on artificial intelligence</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Transformation networks for target-oriented sentiment classification</title>
+		<author>
+			<persName><forename type="first">Xin</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lidong</forename><surname>Bing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wai</forename><surname>Lam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bei</forename><surname>Shi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 56th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="946" to="956"/>
+		</imprint>
+	</monogr>
+	<note>Long Papers</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Attention modeling for targeted sentiment</title>
+		<author>
+			<persName><forename type="first">Jiangming</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yue</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 15th Conference of the European Chapter of the Association for Computational Linguistics</title>
+		<title level="s">Short Papers</title>
+		<meeting>the 15th Conference of the European Chapter of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="572" to="577"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Effective approaches to attention-based neural machine translation</title>
+		<author>
+			<persName><forename type="first">Thang</forename><surname>Luong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hieu</forename><surname>Pham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2015 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="1412" to="1421"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Interactive attention networks for aspect-level sentiment classification</title>
+		<author>
+			<persName><forename type="first">Dehong</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sujian</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaodong</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Houfeng</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 26th International Joint Conference on Artificial Intelligence</title>
+		<meeting>the 26th International Joint Conference on Artificial Intelligence</meeting>
+		<imprint>
+			<publisher>AAAI Press</publisher>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="4068" to="4074"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Encoding sentences with graph convolutional networks for semantic role labeling</title>
+		<author>
+			<persName><forename type="first">Diego</forename><surname>Marcheggiani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ivan</forename><surname>Titov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2017 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="1506" to="1515"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Glove: Global vectors for word representation</title>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Pennington</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2014 conference on empirical methods in natural language processing (EMNLP)</title>
+		<meeting>the 2014 conference on empirical methods in natural language processing (EMNLP)</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="1532" to="1543"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Semeval-2016 task 5: Aspect based sentiment analysis</title>
+		<author>
+			<persName><forename type="first">Maria</forename><surname>Pontiki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dimitris</forename><surname>Galanis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Haris</forename><surname>Papageorgiou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ion</forename><surname>Androutsopoulos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Suresh</forename><surname>Manandhar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Al-Smadi</forename><surname>Mohammad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mahmoud</forename><surname>Al-Ayyoub</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yanyan</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Qin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Orphée</forename><surname>De Clercq</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 10th international workshop on semantic evaluation (SemEval-2016)</title>
+		<meeting>the 10th international workshop on semantic evaluation (SemEval-2016)</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="19" to="30"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Semeval-2015 task 12: Aspect based sentiment analysis</title>
+		<author>
+			<persName><forename type="first">Maria</forename><surname>Pontiki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dimitris</forename><surname>Galanis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Haris</forename><surname>Papageorgiou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Suresh</forename><surname>Manandhar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ion</forename><surname>Androutsopoulos</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 9th International Workshop on Semantic Evaluation</title>
+		<meeting>the 9th International Workshop on Semantic Evaluation<address><addrLine>SemEval</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2015">2015. 2015</date>
+			<biblScope unit="page" from="486" to="495"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Semeval-2014 task 4: Aspect based sentiment analysis</title>
+		<author>
+			<persName><forename type="first">Maria</forename><surname>Pontiki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dimitris</forename><surname>Galanis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John</forename><surname>Pavlopoulos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Harris</forename><surname>Papageorgiou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ion</forename><surname>Androutsopoulos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Suresh</forename><surname>Manandhar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 8th International Workshop on Semantic Evaluation</title>
+		<meeting>the 8th International Workshop on Semantic Evaluation<address><addrLine>SemEval</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2014">2014. 2014</date>
+			<biblScope unit="page" from="27" to="35"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Improved semantic representations from tree-structured long short-term memory networks</title>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Sheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tai</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing</title>
+		<meeting>the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="1556" to="1566"/>
+		</imprint>
+	</monogr>
+	<note>Long Papers</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Effective lstms for target-dependent sentiment classification</title>
+		<author>
+			<persName><forename type="first">Duyu</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Qin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaocheng</forename><surname>Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ting</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">;</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of COLING 2016, the 26th International Conference on Computational Linguistics: Technical Papers</title>
+		<meeting>COLING 2016, the 26th International Conference on Computational Linguistics: Technical Papers</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="3298" to="3307"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Aspect level sentiment classification with deep memory network</title>
+		<author>
+			<persName><forename type="first">Duyu</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Qin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ting</forename><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2016 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="214" to="224"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Dating documents using graph convolution networks</title>
+		<author>
+			<persName><forename type="first">Shikhar</forename><surname>Vashishth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shib</forename><surname>Sankar Dasgupta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Swayambhu</forename><surname>Nath Ray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Partha</forename><surname>Talukdar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 56th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="1605" to="1615"/>
+		</imprint>
+	</monogr>
+	<note>Long Papers</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Target-dependent twitter sentiment classification with rich automatic features</title>
+		<author>
+			<persName><forename type="first">Duy-Tin</forename><surname>Vo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yue</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Twenty-Fourth International Joint Conference on Artificial Intelligence</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Attention-based lstm for aspect-level sentiment classification</title>
+		<author>
+			<persName><forename type="first">Yequan</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Minlie</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Li</forename><surname>Zhao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2016 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="606" to="615"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Show, attend and tell: Neural image caption generation with visual attention</title>
+		<author>
+			<persName><forename type="first">Kelvin</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jimmy</forename><surname>Ba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ryan</forename><surname>Kiros</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kyunghyun</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aaron</forename><surname>Courville</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ruslan</forename><surname>Salakhudinov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rich</forename><surname>Zemel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International conference on machine learning</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="2048" to="2057"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Aspect based sentiment analysis with gated convolutional networks</title>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Xue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tao</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 56th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="2514" to="2523"/>
+		</imprint>
+	</monogr>
+	<note>Long Papers</note>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Attention based lstm for target dependent sentiment classification</title>
+		<author>
+			<persName><forename type="first">Min</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wenting</forename><surname>Tu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jingxuan</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fei</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaojun</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Thirty-First AAAI Conference on Artificial Intelligence</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<monogr>
+		<title level="m" type="main">Graph convolutional networks for text classification</title>
+		<author>
+			<persName><forename type="first">Liang</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chengsheng</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuan</forename><surname>Luo</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1809.05679</idno>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Graph convolution over pruned dependency trees improves relation extraction</title>
+		<author>
+			<persName><forename type="first">Yuhao</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peng</forename><surname>Qi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2018 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="2205" to="2215"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

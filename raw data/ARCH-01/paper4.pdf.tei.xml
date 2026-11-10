@@ -1,0 +1,1861 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Geo-information tools for participatory spatial planning: Fulfilling the criteria for 'good' governance?</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2011-08-30">30 August 2011</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Michael</forename><forename type="middle">K</forename><surname>Mccall</surname></persName>
+							<email>mccall@itc.nl</email>
+							<affiliation key="aff0">
+								<orgName type="department">Faculty of Geo-Information Science and Earth Observation</orgName>
+								<orgName type="laboratory">ITC</orgName>
+								<orgName type="institution">University of Twente</orgName>
+								<address>
+									<postBox>PO Box 217</postBox>
+									<postCode>7500 AE</postCode>
+									<settlement>Enschede</settlement>
+									<country key="NL">The Netherlands</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Centro de Investigaciones en Geografi ´a Ambiental</orgName>
+								<orgName type="laboratory">CIGA</orgName>
+								<orgName type="institution" key="instit1">UNAM</orgName>
+								<orgName type="institution" key="instit2">Universidad Nacional Auto ´noma de Me ´xico</orgName>
+								<address>
+									<addrLine>Antigua Carretera a Pa ´tzcuaro No. 8701 Col. Ex-Hacienda de San Jose ´de La Huerta C.</addrLine>
+									<postBox>P.</postBox>
+									<postCode>58190</postCode>
+									<settlement>Morelia</settlement>
+									<country key="MX">Mexico</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Christine</forename><forename type="middle">E</forename><surname>Dunn</surname></persName>
+							<email>c.e.dunn@durham.ac.uk</email>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Geography</orgName>
+								<orgName type="institution">Durham University</orgName>
+								<address>
+									<addrLine>South Road</addrLine>
+									<postCode>DH1 3LE</postCode>
+									<settlement>Durham</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Geo-information tools for participatory spatial planning: Fulfilling the criteria for 'good' governance?</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2011-08-30">30 August 2011</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">543D06CC08C8E7007A8F6C1D977BF293</idno>
+					<idno type="DOI">10.1016/j.geoforum.2011.07.007</idno>
+					<note type="submission">Received 6 January 2009 Received in revised form 10 June 2011</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-09-02T20:28+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Participatory spatial planning Good governance Geo-information tools Participatory GIS (PGIS) Local spatial knowledge Analyse</term>
+					<term>scope and forecast problems. Prioritise problem. Screening. Participatory problem identification and analysis. Joint problem analysis and scoping; Needs assessment. Priority-setting. Location of events</term>
+					<term>conflicts</term>
+					<term>and resources</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The last few decades have seen increasing attempts to foster 'collaborative' and 'participatory' approaches to spatial planning and decision-making, with a more sophisticated conceptualisation of the contested term, participation. Participatory, 'bottom-up' geo-information technologies have been concurrently developing and these are expected to strengthen participatory spatial planning; important among these has been the transformation of conventional mapping and GIS tools into Participatory GIS (PGIS). In this paper we explore the potential contributions of participatory geo-information tools towards participatory spatial planning, in terms of the principles and criteria of good governance. We discuss five fundamental principles of 'good' governance: accountability, legitimacy, respect, equity, and competence, and the potential of geo-information tools to contribute to, and detract from, such principles; although we focus especially on participation and the recognition and validation of local knowledge. We derive criteria for the five principles, and we identify a range of evaluation questions which can be operationalised so as to interrogate the criteria for judging the contribution of participatory tools and participatory spatial planning activities. We conclude by summarily assessing the potentials of participatory geo-information tools, particularly participatory mobile GIS, participatory 3-dimensional modelling, and visualisation features in PGIS.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p>participatory spatial planning, governance and geo-information 'Collaborative', 'participatory' approaches to planning, as in participatory spatial planning (PSP), are gaining credence among policy-setters and planners, as well as with community groups and civil society <ref type="bibr" target="#b14">(Cooke and Kothari, 2001;</ref><ref type="bibr">Lovan et al., 2004;</ref><ref type="bibr" target="#b39">Kim et al., 2005;</ref><ref type="bibr">Ribot and Larson, 2005)</ref>. PSP can be interpreted as the specifically participatory approach to a more generic model of cyclic spatial planning and management with four basic phases of exploration, assessment, design of mitigation alternatives, and action (Fig. <ref type="figure">1</ref>). It can be argued that PSP is a response to calls at national and international levels for some form of devolution of government and spatial decision-making, as with the UK Royal Town Planning Institute's vision of spatial planning in which one of the four pillars is 'participation' <ref type="bibr">(RTPI, 2007)</ref>.</p><p>In operational terms, participatory approaches in planning are promoted for reasons of efficiency and effectiveness, currency, relevance, responsiveness and their supposed low cost. Public participation should also foster a sense of ownership of a plan and commitment to its implementation. Although public participation in planning takes time and patience to conduct and to achieve results it also, arguably, increases the potential for the actions of government agencies to better reflect people's needs and for the benefits to be more equitably distributed. Through contributions to empowerment, legitimacy, participation and equity, the integration of participatory methods in spatial planning processes may therefore be expected to support good governance principles of openness, participation, accountability, effectiveness and coherence (Commission of the European <ref type="bibr">Communities, 2001)</ref>.</p><p>A central concern in PSP is generating effective knowledge from spatial data. Spatial information needs in PSP are commonly associated with resource management space, dedicated 'counter mapping' with specific groups, and mapping priority problems and spatial conflicts. To represent such spatial concerns by applying participatory inputs into maps and GIS (Geographical Information Systems) requires geo-information tools with special functional capabilities. Some of these tools are well-developed spatial techniques in Rapid Rural Appraisal (RRA) and Participatory Rural Appraisal (PRA), using oral, hieroglyphic, or graphic communication; or they are using newer geo-information technology (GIT) with digital data for communicating local spatial meanings.</p><p>In this paper we consider the match between values and goals of good governance in PSP and the functional capabilities of participatory geo-information tools or tools claiming so to be, exemplified by mobile Participatory GIS, P3DM (Participatory 3-Dimensional Modelling), together with visualisation features in Participatory GIS (PGIS). 1 Whilst examining the extent to which such emergent tools support or detract from good governance in PSP, we explore a set of criteria for 'good GIT in the context of good governance'. Central to these considerations of good governance are notions of participation in acquisition, analysis and validation of knowledge; ownership of information; equity in community control and accountability; tools and methodologies appropriate to local actors; and the legitimisation of the use of local knowledge. Local knowledge is a contested term -its derivation is from indigenous technical knowledge (ITK). As well as the knowledge of indigenous peoples, this paper recognises and includes local knowledge (mainly of resources and natural resource management systems) developed over time by individuals and communities in a specific locality.</p><p>The participatory tools selected here emerged from critiques of conventional externally-managed GIS and demands for more democratic forms of spatial decision-making <ref type="bibr" target="#b52">(Pickles, 1995;</ref><ref type="bibr" target="#b11">Clark, 1998;</ref><ref type="bibr" target="#b68">Sheppard, 1995)</ref>. Calls for enhanced public participation in spatial planning and critiques of traditional GIS have given rise to the concept and practice of 'Participatory GIS' (PGIS) which entails community involvement in creating and working with geographic information. The contexts and applications of PGIS are wide-ranging, including urban planning and community revitalisation <ref type="bibr" target="#b23">(Elwood, 2001</ref><ref type="bibr" target="#b24">(Elwood, , 2006;;</ref><ref type="bibr" target="#b17">Dennis, 2006;</ref><ref type="bibr" target="#b79">Vajjhala, 2006)</ref>; land-use and natural resource planning <ref type="bibr" target="#b66">(Scholz et al., 2004;</ref><ref type="bibr" target="#b18">Duncan and Lach, 2006)</ref>; conservation and environmental management <ref type="bibr" target="#b70">(Sieber, 2000)</ref>; managing conflict over access to land and natural resources <ref type="bibr" target="#b81">(Weiner and Harris, 2003;</ref><ref type="bibr" target="#b31">Gonda and Pommier, 2006;</ref><ref type="bibr" target="#b74">Suyanto et al., 2004)</ref>; and promoting the needs of First Nations in North America (AMN website; <ref type="bibr" target="#b76">Tobias, 2000;</ref><ref type="bibr" target="#b29">Flavelle, 2002)</ref> and indigenous populations and local communities in New Zealand, Australia, Brazil, the Philippines, India, Indonesia and Central America (see: e.g. <ref type="bibr">Poole, 1995a</ref><ref type="bibr">Poole, ,b, 2006;;</ref><ref type="bibr" target="#b10">Chapin et al., 2005;</ref><ref type="bibr">and extensive bibliography in McCall (2010)</ref>). In this paper we use the term PGIS consistently to refer to a form of participatory spatial planning which makes use of maps and other geo-information output, especially using GIS, thus incorporating the tools within the context of use. Participatory mapping and Participatory GIS are used as a single approach ('PGIS' is a convenient acronym) to represent the participatory local-level (community) use of spatial representations with sketch maps, topographic maps, remote sensing images, aerial photographs, GIS products, or other geo-referenced material. The technical tools of GIS, the GIT, are a value-addition to the wellpractised tools of traditional participatory mapping; the GIS element is not essential for PSP, but can add much. In PGIS the key lies in the 'P': 'Participation' comes first and last. The decision to map, the design, the knowledge generation, the knowledge acquisition and sharing, the validation, the analysis (as much of it as possible), the dissemination and the ownership -all are participatory. In the PGIS approach, these elements are also the property, responsibility and entitlement of the community <ref type="bibr" target="#b45">(McCall, 2003;</ref><ref type="bibr" target="#b59">Rambaldi et al., 2006;</ref><ref type="bibr" target="#b19">Dunn, 2007)</ref>.</p><p>In this paper we propose a framework for understanding the specific relationships between good governance and participatory geo-information technology. In so doing, we offer a new way in which to assess the real value of participatory geo-information tools and activities in spatial planning. In Section 2, we outline the concepts of governance before exploring the principles through which good governance in PSP can be understood. Each of the five primary principles can be disaggregated into more detailed components (as in Sections 3-6). In Section 7 we develop criteria from these principles to employ in judging selected geo-information tools and approaches to assess if they can promote good governance. Finally in Section 8 we review some operational evaluation questions to apply in assessing whether criteria are being met. These offer specific means for users of the proposed framework to reflect on how far individual applications meet the criteria for good governance.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Concepts of 'good governance' and values of geospatial information</head><p>Governance is the process of decision-making and the process by which decisions are implemented or not implemented <ref type="bibr">(UNDP, 1997)</ref>. It can be seen as a set of measures of the relationships between: the governed (the public/civil society/citizens and their institutions) and the governing (the government and its institutions, and large-scale private sector interests). The pertinent relationships are those involving the relative power applied in policy-setting, decision-making, planning and implementation. The notion of governance encompasses the rules of the game (the relationships between governing and governed), the players in the game, and the 'referee', if there is one. Active players are the state (government and its institutions) and elements of civil society. In addition, in some incarnations of governance, private (business) sector units are sufficiently powerful, autonomous and non-accountable to be independent additional players.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.">Good governance</head><p>The extensive literature in this sphere does not always distinguish between governance and good governance (see for example <ref type="bibr" target="#b3">Aubut, 2004;</ref><ref type="bibr" target="#b80">van Kersbergen and van Waarden, 2001;</ref><ref type="bibr" target="#b39">Kim et al., 2005</ref>; UNDP, 1997 2 ). 'Good governance' concepts can be criticised for vagueness: '. . . there is no single agreed-upon definition in GG [good governance]. In fact, the vagueness of its meaning is one reason why this term has increasingly been utilised, as it can convey a slightly different meaning depending on who uses it' <ref type="bibr">(Aubut, 2004, p. 8)</ref>. Thus, good governance is both a process and an outcome -an emergent property of a complex system that comprises governance. Here we explore good governance through the components of its main principles, and we derive criteria from these to provide a basis for assessing GIT tools and PGIS applications.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.">Accountability and its components</head><p>In Sections 3-6 we consider four principles of the relationships and processes between the governing and governed: legitimacy, respect, equity and competence, and the fifth, overarching, principle which is accountability. Accountability represents the essence of good governance and thus forms a central concept in which the other four principles meet (Fig. <ref type="figure">2</ref>). Legitimacy and respect (for local knowledge) are particularly pertinent since they both relate to the contested concept of participation. Accountability refers to the responsibility and answerability for activities. '. . .accountability is paramount to governance. It is part of the very definition of. . . ''good governance'' ' <ref type="bibr">(van Kersbergen and van Waarden, 2001, p. 22)</ref>. The 'governing' are those actors who should be accountable to the governed; and the 'governed' are the actors who will be affected by the decisions and actions of the governing. Accountability can be expressed in terms of: the transparency and visibility of government decisions and policies; accessibility; accountability mechanisms (formal procedures and civil society monitoring); lawfulness; control of corruption; and the responsiveness to lower levels. Though 'accountability' provides the primary context of good governance, it is not the end in itself; rather it is a means through which higher-level social values and goals may be achieved. We consider the principles of legitimacy, respect, equity and competence, and explore them in terms of the potential role of GIT in participatory spatial planning.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Legitimacy in good governance</head><p>Legitimacy refers to the acceptability of the position of the 'governing' over the 'governed'. Do the governed accept that they are being properly represented in their varied regional, social class, cultural, age, and gender interests? Do the governing recognise their responsibilities as well as their powers? Do the actors trust each other? In considering the extent to which geo-information tools support or detract from legitimacy, we explore three inter-related components of legitimacy: participation, empowerment, and 'ownership', of which the most important and most contested is participation <ref type="bibr" target="#b14">(Cooke and Kothari, 2001)</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.">Participation</head><p>Active participation by all stakeholders at all stages of any PSP activity, including those which involve geo-information technology, is a prime factor in fostering acceptability between governed and governing. In PSP and Participatory GIS terms, the essential questions are: Who is participating? Who controls the types and inputs of data and knowledge? Who handles and analyses the information? Who has access to tools and techniques? And who owns, uses, or has access to, the outputs? (cf. <ref type="bibr" target="#b59">Rambaldi et al., 2006)</ref>. In this context participation in local spatial planning can be characterised into degrees or intensities, or the 'steps of a ladder' (Fig. <ref type="figure" target="#fig_0">3</ref>)<ref type="foot" target="#foot_0">foot_0</ref> although the simile should not be taken too far. Participatory GIS projects do not usually move up or down the steps of a ladder, but rather enter the social arena on a particular 'rung' and remain there.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.1.">Participation ladders</head><p>A ladder does not imply that participation should strive always for the maximum intensity, but the intensity should be appropriate to the tasks, competencies and specific relationships between actors. Four intensities, from the least to the most participatory, can be categorised: (1) Information Sharing: where outsiders and local stakeholders engage in one-or two-way communication, primarily for gathering information such as in baseline surveys or status reports. Although the topics are pre-determined by outside agencies, even this level needs a small degree of participation in making maps, such as eliciting or extracting local people's data about their resources. (2) Consultation: where outsiders refer selected issues to local stakeholders for refinement or prioritising. Outside agencies pre-define the salient problems before consultation and control all analyses, such as mapping local needs or demands, and mapping ethnobotanical or ethnopedological knowledge. (3) Involvement in decision-making by all actors: outsiders and local stakeholders jointly identify priorities, analyse current status, select alternatives and implement plans. Participation is seen as a right, and not just as the means to achieve a project's goals; for example, jointly mapping a community's priority areas, or jointly setting the map legend. (4) Initiating Actions: this involves independent initiatives from, and 'owned' by, local people, and self-mobilisation. This is categorically different from simply implementation with local people's labour inputs. If full participation is construed at all stages, this implies control of the whole geo-information technology process -from problem prioritisation, geodata collection and spatial analysis, through to map representation, and subsequent decision-making.</p><p>These 'intensities' of participation are critically related to a continuum of underlying purposes or intentions of the agencies (external or internal) which are 'pushing' participatory spatial planning or participatory mapping as a strategy <ref type="bibr" target="#b45">(McCall, 2003)</ref>. At one limit, where the purpose is facilitation, participatory information collection and mapping are pushed in order to lubricate outside interventions, and to pass a share of the burden of costs onto the 'beneficiaries'. At the other limit, participation may be internalised to reinforce local decision-making and responsibilities leading towards local empowerment. In such cases, though rare, there are genuine moves towards empowering weaker groups in, for example, resource identification and priorities. Along the continuum between these limits lies collaboration or mediation between the 'external' purpose and 'internal' demands. Here participation in data collection, mapping and spatial planning is promoted to link outside interventions and local people's needs, aspirations and capacities. Whatever the benefits of participation, whether people choose to participate depends also on the costs, time, effort and the possible negative consequences for the individual or community <ref type="bibr" target="#b40">(Krek, 2005)</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.2.">Geo-information tools and participation</head><p>The significance of GIT for the degree and intensity of participation in PSP can be illustrated by considering the specific tools of Participatory 3-Dimensional Modelling (P3DM) and mobile GIS. P3DM integrates participatory mapping and local indigenous </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Rung of the Ladder</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Actors -insiders and outsiders</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Geospatial Information</head><p>Initiating  knowledge with 3-D geo-information, i.e. contour lines, into a physical, scaled, relief model. Since the models are at a detailed scale, around 1:5000-1:10000, they are substantial in size (e.g. 2 Â 3 m) and show sufficient vertical exaggeration, together with an array of local knowledge representations, to allow meaningful interpretation and discussion (cf. <ref type="bibr" target="#b58">Rambaldi and Callosa-Tarr, 2002;</ref><ref type="bibr" target="#b75">Tan-Kim-Yong, 1993)</ref>. The alternative visual perspectives, including the bird's eye view and the shadowing created by changing light sources, allow for broad participation whilst walking around the long perimeter of the models. P3DM can incorporate the local spatial knowledge (LSK) of local resource experts, traditional leaders, women, and experienced outsiders, such as teachers. Since model construction is undemanding in terms of language and quantitative skills, helping place insiders and outsiders on a more equal basis, the whole design and construction process of P3DM concomitantly buttresses local participation and integration of local knowledge. P3DM has been shown to be very effective in encouraging collaborative discussions about perceptions, priorities and demands in natural resource conflicts such as buffer zones and community boundary disputes <ref type="bibr" target="#b60">(Rambaldi et al., 2007)</ref>. Current mobile GIS configurations typically comprise a handheld Personal Digital Assistant (PDA) (e.g. Compaq-iPAQ) which run off-the-shelf GIS software, typically ESRI ArcPad, and linked with a Global Positioning System (GPS), or newer platforms which combine the features into one instrument, notably smartphones (e.g. Apple iPhone) with built-in GPS. (e.g. <ref type="bibr" target="#b19">Dunn, 2007;</ref><ref type="bibr" target="#b61">Reddy et al., 2008)</ref>. A pertinent development is the CyberTracker system, originally created for wildlife monitoring in southern Africa <ref type="bibr">(CyberTracker, 2007)</ref>. Its salient advantage is that the software was designed to be especially user-friendly for people unfamiliar with computers, even non-literate and non-numerate users. The interface design is straightforward, with a range of icons and thus relatively little need for technical skills. CyberTracker, as open source and free, combined with free satellite imagery e.g. Google Earth and free GIS software, e.g. ILWIS,<ref type="foot" target="#foot_2">foot_2</ref> creates financial advantages over expensive (Ikonos, SPOT) or low resolution (e.g. Landsat) remote sensing products and standard GIS software. Mobile GIS accommodates participation in that it is easy to learn and to apply <ref type="bibr" target="#b4">(Barry and Rüther, 2005;</ref><ref type="bibr">CyberTracker, 2007;</ref><ref type="bibr" target="#b83">Zahabu, 2008)</ref>, and ownership is feasible for a local NGO (Non-Governmental Organisation) or a network of communities. A drawback in multi-user work with a PDA or smartphone is the small screen size, making it difficult for more than a couple of people to view it. Tablet PCs are an alternative, having screen displays about 10 times that of a PDA, and working with active pens, and sketching and writing-conversion features appropriate for local participation.</p><p>Community participation in the use of geo-information tools such as P3DM and mobile GIS has clear potential to generate benefits for capacity-building, and management and planning initiatives by the communities. These include skills development and increased confidence in dealing with external economic and political powers, professionals and technical experts; and heightened attitudes of community 'ownership' of the data and maps produced, giving them a better opportunity to control the data and entitlement to any projects making use of the mapping.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.">Empowerment</head><p>Geo-information technology as a means for 'empowerment' through PSP should serve to give more voice to 'local people' and put them and their colloquial (geographical) knowledge on a more equal footing with external 'expert' and 'official' information couched in scientific discourse. The definition of the 'local people' is problematic, but not decisive. The arguments behind PSP in this paper are that good governance and democratic involvement require progressive enlargement of participation -in the categories and numbers of participants, in the frequency of participation, and in the range of issues of engagement. There are obvious limits to all three aspects, but the vision goal is towards more and deeper engagement. A natural corollary is the parallel increase in conflicts, as the interests, priorities and relative strengths of those participating do not match. Thus PSP with its tools of PGIS, and empowerment itself, are bound to stoke up latent or new internal conflicts <ref type="bibr">(Fox et al., 2005;</ref><ref type="bibr" target="#b72">Sletto, 2002)</ref> -that is a price to pay. ''Giving voice to local people'' is to encourage competing and discordant voices, not always singing to the same song sheet. The challenge is to bridge the gap between the many voices of indigenous and scientific spatial knowledge by providing a translation capability between local stakeholders and external decision-makers. The ability of a geo-information tool in PGIS to convince external decision-makers can therefore validate the tool in the eyes of both the governing and the governed groups (cf. <ref type="bibr" target="#b0">Abbot et al., 1998)</ref>.</p><p>Effective PSP should also serve to bolster the self-belief and selfconfidence not only of those individuals directly engaged in participatory planning or GIS, but of 'the community' as a whole. But the processes through which such 'communities' are represented may generate 'losers' as well as 'gainers' (c.f. <ref type="bibr" target="#b9">Chambers, 2006)</ref>. Thus although local associations such as civil society groups can be empowered by using geo-information technology for scenariobuilding and visualising alternative futures, the empowerment can be two-edged. Thus <ref type="bibr" target="#b23">Elwood (2001)</ref> explored how GIS utilisation by a neighbourhood association altered 'the language, information and practices of community decision-making' (p. 738) with consequences for the role and power of community organisations. After adopting GIS, the community association took a spatial decision-making approach more akin to that of state planners, emphasising quantitative data as opposed to local, informal knowledge. This empowered the community group as a valid partner, but concomitantly reinforced the official mode of spatial planning.</p><p>A fundamental issue then is how the introduction of geo-information tools into participatory spatial planning affects the local balance of power. Geo-information tools always have the capacity to alter the social perspectives of local users. This can be seen as a negative consequence of 'modern' information flows. <ref type="bibr" target="#b32">Gonzalez (2000)</ref>, however, credited local use of GIS for empowerment by enriching perspectives and mainstreaming communities into national society -the indigenous Ifugao people in the Philippines recognised the value of 'their' watershed in national energy interests.</p><p>Geo-information tools and their outputs can therefore provide a platform for legitimisation of local demands, such as the spatial targeting of 'hot spots' identified by local resource managers, including tribal demands for legalisation of territorial tenure and resource rights (e.g. <ref type="bibr">Poole, 1995a,b)</ref>. In Amazonia, Surui indigenous people upload GPS locations on Google Earth and digital photographs of outside forest encroachments onto YouTube <ref type="bibr" target="#b6">(Butler, 2009)</ref>; and in Cameroon, communities trained in participatory mobile GIS made better maps than the Forestry Ministry, and their familiarity with GIS tools and skills gave them confidence to challenge alienation of their village land <ref type="bibr" target="#b48">(McCall and Minang, 2005)</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.">Ownership of local knowledge</head><p>'Ownership' by the governed, although an abstract term, is a central element of legitimacy; and respecting the rights of ownership of geo-information technology output is a good governance condition. It implies all stages of holding the sources of data and processing the product, as well as the final information products themselves. The symbolic and practical concept of 'ownership' of geo-information is illustrated by the simple question of 'Who chooses the items depicted on the map, and decoded in the map legend?' <ref type="bibr" target="#b57">(Rambaldi, 2005)</ref>. There remain, though, crucial questions of just who in the community has provided the legend items, and what questions they were asked. Not only the symbology, but the semantics of the 'map' should be in the hands of those whose livelihoods and spaces will be changed by it. The legend has to be interpreted by a diverse audience, and there is the danger that, as with many interventions intended to promote participation, what was locally-owned knowledge becomes hi-jacked by outsiders. Ownership is reinforced by transferring output control from the conventionally powerful to the disadvantaged, by the use of counter maps that challenge the (spatial) views of the powerful <ref type="bibr" target="#b51">(Peluso, 1995;</ref><ref type="bibr" target="#b55">Poole, 2006;</ref><ref type="bibr" target="#b62">Rocheleau, 2005;</ref><ref type="bibr" target="#b38">Kalibo and Medley, 2007)</ref>.</p><p>'Ownership' is also related to the ethics of eliciting local knowledge, which is frequently treated as a 'free-for-all' resource for open exploitation. Ownership of LSK is generally following the path of conventional geospatial information, towards privatisation under market rules. However a strong alternative position on ownership, and therefore on protection, has been taken by limiting access to the 'secret', sacred spatial knowledge of indigenous peoples such as the Maori. Types of LSK data layers to be protected -with increasing determination include: traditional plant and food gathering; outer boundaries of clans and tribes; customary property delineations e.g. male and female areas; historic places and battlegrounds; sacred sites, burial grounds, ceremonial areas; and buried art and indigenous place names, cosmological locations, and songlines. Landcare Research in New Zealand <ref type="bibr" target="#b34">(Harmsworth, 1995)</ref> offered geo-information technology 'protection options' for recording sensitive, confidential spatial layers: as concealed files linked to a GIS but needing permission for access; as an overlay at a crude scale to prevent specific site identification; or by providing a hyperlink to a Maori iwi (clan) authority. First Nations in North America and Maoris investigated legal-political moves towards a 'communal right of privacy' which implies customary leadership taking responsibility for data protection, and thus control over sensitive GIS data layers. This could, however, be critically interpreted as privileging a small elite claiming privy knowledge of resource types, locations and potentials. The largest group of people likely to be disenfranchised by this are women; we consider spatial gender inequities in Section 5.2.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Respect and good governance</head><p>People's autonomous intelligence and knowledge are respected, if and when the geo-information tools are able to elicit and handle local spatial cognition and cognitive (mental) maps with their conceptualisations of space and spatial values. In practice, this means recognising and translating peoples' spatial concepts, and their knowledge of boundaries and locations, into mappable outputs. Respect for the governed is reinforced by the reverse skills flow of incorporating GIS into local knowledge-building processes. Moreover, a 'respectful' geo-information tool does not unrealistically raise expectations of local communities by over-selling the technology.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1.">Local spatial knowledge (LSK)</head><p>Grenier (1998, p. 1) defined indigenous knowledge with reference to 'the unique, traditional, local knowledge existing within and developed around the specific conditions of women and men indigenous to a particular geographic area'. But the distinctions between indigenous knowledge, local knowledge, popular knowledge, and folk knowledge are blurred <ref type="bibr" target="#b71">(Sillitoe, 1998)</ref>. It can be argued that local spatial knowledge is often more reliable than scientific knowledge 'because it embodies generations of practical essential knowledge, and it operates in interactive, holistic systems' <ref type="bibr">(McCall and Minang, 2005, p. 343)</ref>. The term 'local or indigenous spatial knowledge' conceals a range of meanings which show increasing divergence from geo-referenced 'scientific' information as represented on standard maps and GIS. Firstly, there is the spatial component of the technical knowledge of local people about resources, events and activities but which are unknown to external professionals or sciences. Such local knowledge is not very different to conventional scientific knowledge, but incorporates maybe generations of localised and experimental expert knowledge. Commonly, it is local knowledge of physical phenomena that external scientists and professionals do not yet hold. Much local technical knowledge has not only an embedded geographical context in which the natural environment is central, but also specific spatial associations. For example, knowledge of the location of resources, biomedicines, water sources, environmental hazards, ecosystem services, urban safety issues, and spatial correlations between groups and resources. Secondly, there is the knowledge of local actors' needs, interests, priorities and values. This includes local configurations of land and resource ownership with all the complexities of multiple user rights and communal property regimes which are frequently misunderstood by external researchers. Thirdly, there is knowledge of secret or sacred places, historical sites, cultural artefacts, treasures and holy locations which local people frequently do not want to become universal knowledge. Furthest away from conventional mapping, this level elides into cognitive maps which preserve a sacred, cultural and personal significance in terms of cosmological and creation myth explanations, where geography (relative location and space) as well as landscape hold deep significance for individuals and communities <ref type="bibr">(Barrera-Bassols et al., 2009;</ref><ref type="bibr" target="#b65">Rundstrom, 1995)</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2.">Respect for local cognitive maps</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2.1.">Cognitive maps as dynamic entities</head><p>People's cognitive maps are dynamic, incorporating history and experiences, both individual and group, and accumulated understanding. Representation of cognitive maps therefore needs to account for streams of physical resources, information and ideas, and flows of influence, power and control. In natural resource management, for instance, there are changes over time in locations and boundaries, and in conflicts. There are opportunities for GIT to meet this need to represent temporal change. Interactive maps have dynamics functionalities, such as temporal animation that can illustrate changes over time, sequence, duration, frequency, change in factors, or scenarios. Dynamic animation applied to PSP therefore allows for investigation of serendipitous or new knowledge or better understanding of process.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2.2.">Localness and scale</head><p>Some local knowledge can be easily placed on conventional maps, but in PGIS a defining characteristic is the respect for the local sources of the knowledge content. Eliciting local knowledge from community experts and key informants through employing Participatory Rural Appraisal (PRA) methods, including sketch mapping and participatory spatial analysis, has been widely applied for three decades (e.g. <ref type="bibr" target="#b33">Grenier, 1998;</ref><ref type="bibr">IIRR, 1996)</ref>. As well as the usual procedures of 'fully informed consent', there should be contractual agreements between providers and users, when such knowledge may be the main resource that disempowered groups hold, whilst their land, resources and labour are appropriated. The spatial resolution of the output therefore should be appropriate for local comprehension and manipulation of local spaces, and implies large scale, usually 1:5000-1:20,000 (although sometimes up to 1:50,000). There seems to be a window of 'natural' scale most appealing to users, which meets the competing demands of, and desires for, coverage, comprehensiveness and inclusion on the one hand, and on the other hand, information digestion (rather than overload), simplicity and comprehension. <ref type="bibr" target="#b1">Aitken (2002)</ref> and <ref type="bibr" target="#b22">Egenhofer and Mark (1995)</ref> discussed how people habitually operate at, and jump, scales that do not necessarily mesh with a logic of administrative or planning hierarchies.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2.3.">Ambiguity and fuzziness in local spatial knowledge</head><p>In their cognitive maps, people naturally deal with spatial ambiguity, equivocality and emotion, with fuzzy and multi-layered zones and zonal information; blurred, flexible and multiple boundaries; and uncertain, hidden or restricted spatial locations. <ref type="bibr" target="#b22">Egenhofer and Mark (1995)</ref> analysed and characterised the 'naïve geography' of cognitive or 'mental maps', as the spatial and locational reality inside people's heads, how people naturally identify, locate, navigate, remember, and evaluate spaces. Space and time are interlinked and n-dimensional, distances are asymmetric and non-linear, and areas are non-exclusive and synchronously multiscale. Sounds, smells and memories are also key indicators of place (cf. <ref type="bibr" target="#b67">Scott and Cutter, 1996;</ref><ref type="bibr" target="#b41">Kwan, 2002;</ref><ref type="bibr" target="#b7">Campbell et al., 2005)</ref>. Moreover, the communication of spatial knowledge amongst many indigenous peoples often makes use of 'incorporative' (stories, dance, etc.), rather than 'inscriptive' (documents, maps, etc.) modes <ref type="bibr" target="#b65">(Rundstrom, 1995;</ref><ref type="bibr" target="#b37">Jiang,</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3.">Ambiguity PGIS</head><p>There is an assumption that GIS cannot easily handle cognitive maps, especially indigenous/local spatial knowledge, because of a supposed dichotomy between the reductionism, positivism and ultra-precision (and oftentimes stationarity) of digitised geo-data, and the fuzziness, ambiguity and emotionality (often spirituality) of 'natural language' spatial knowledge. <ref type="bibr" target="#b65">Rundstrom (1995)</ref> was forcefully sceptical whether GIS can work with indigenous peoples using the cognitive concepts and 'incorporative' communication modes of their knowledge. However, the widespread and productive application of PGIS utilising LSK by indigenous peoples, first in North America, and increasingly in Latin America, Africa and elsewhere, provides a counter-argument <ref type="bibr">(Poole, 1995a</ref><ref type="bibr">(Poole, ,b, 2006;;</ref><ref type="bibr" target="#b13">Convis, 2001;</ref><ref type="bibr" target="#b47">McCall, 2010)</ref>.</p><p>Competing notions of precision and accuracy of information are relevant when the intention of the mapping is to integrate smallscale 'official' spatial data with local spatial knowledge. For instance, the fuzzy, indistinct boundaries derived from participatory mapping exercises cannot be directly compared with spatially precise lines from technical surveys. Yet it is important that GIT has the capacity to handle local spatial knowledge, both to maintain professional respect for local people's knowledge, and to produce spatial output that local people can utilise in negotiations with outside parties, or in defining new questions about their own home spaces.</p><p>'Standard' GIS approaches, especially those built on remotely sensed data, may place unnecessary emphasis on spatial preciseness of the output information. Moreover the flashiness of many GIS outputs can create a false precision and therefore legitimisation of what is actually 'bad data' <ref type="bibr" target="#b0">(Abbot et al., 1998;</ref><ref type="bibr" target="#b46">McCall, 2006)</ref>. High spatial accuracy does not necessarily equate with local perceptions or problems in use of resources and the 'official' spatial data may be 'inaccurate' from the perspective of a villager <ref type="bibr" target="#b20">(Dunn et al., 1997;</ref><ref type="bibr" target="#b82">Williams and Dunn, 2003)</ref>. That said, preciseness is vital in certain situations, especially where cadastral information is involved, such as in court actions for land rights. The most appropriate applications of geo-information tools, then, are those which recognise that different information needs correspond to different degrees of locational ambiguity or certitude (Fig. <ref type="figure" target="#fig_1">4</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">Equity amongst governed and governing</head><p>Geo-information tools can contribute to the equity goals of good governance by supporting disadvantaged groups in the distribution of private or public services and access to them, or by protecting the disadvantaged or inarticulate with respect to laws and property rights. We focus here on the potential to contribute, or otherwise, to socio-environmental and gender equity.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.1.">Mapping socio-environmental equity and power</head><p>The utilisation of GIT in spatial environmental injustices and equity has mostly focused on exposure to environmental hazards and health risks for people living near pollution sources <ref type="bibr" target="#b21">(Dunn et al., 2001;</ref><ref type="bibr" target="#b28">Fisher et al., 2006;</ref><ref type="bibr" target="#b44">Maantay, 2007)</ref>; and in 'regional political ecology', such as representing local conceptualisations of environmental risks and inequalities in post-apartheid South Africa <ref type="bibr" target="#b81">(Weiner and Harris, 2003)</ref>.</p><p>Difficulties in mapping equity identified by <ref type="bibr" target="#b67">Scott and Cutter (1996)</ref> included the common spatial statistical themes of comparable data availability and aggregation/scale distortions. Beyond this are issues of adequately representing the complex and dynamic political power context. The in-depth knowledge needed about fundamental power relations remains largely opaque to conventional GIT, even in PGIS. At the same time information per se does not create power. Respondents to a study of community planning participation in London showed a healthy scepticism of the ability of PGIS to alter power relations: '. . .there are things like the political process, the property market, property development. . .'. <ref type="bibr">(Harrison and Haklay, 2002, p. 856)</ref>. These are the significant 'things' that form the nexus and delivery mechanisms of social-political power, not simply the geo-information.</p><p>At its worst, PGIS and its technology can exacerbate unequal power relations and impair local relationships. The process of converting vaguely demarcated boundaries on the ground into clearly defined lines on a map, for example, is potentially highly damaging; local conflicts may be generated where previously they were latent, tacitly ignored by all actors, or even, did not exist. This is well documented in Southeast Asia for example by <ref type="bibr">Fox et al. (2005)</ref> and <ref type="bibr" target="#b63">Roth (2009)</ref>, and in Latin America and the Caribbean by <ref type="bibr" target="#b27">Finley-Brook and Offen (2009)</ref> and <ref type="bibr" target="#b72">Sletto (2002)</ref>. To reduce power imbalances through GIT, the inputs and outputs should be processed participatorily, in situ and as a deliberate means of empowering local people. Equity and legitimacy are supported when GIS is used to represent the authenticity and validity of the values of marginalised groups; conversely, inequities are reinforced when the GIS tools simply reiterate spatial allocations drawn up by community power groups.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2.">Gendered space</head><p>Gender inequities in space and spatial knowledge are commonplace -in the specialised gendered knowledge of resource locations, differential access to and ownership of resources, and the cultural-economic landscapes of men's and women's life spaces. Rural women throughout the global South have specific technical knowledge of economic resources and livelihoods -foods, medicinal herbs, and materials such as dyes or fibres. These are frequently denigrated as 'only' women's materials for women's work, and often remain invisible in official discourses, in local accounts and government statistics, and therefore also in conventional maps. The use and management of women's space remains equally invisible, reinforcing the exclusionary effects of women's restricted rights and entitlements to resources (see e.g. <ref type="bibr" target="#b62">Rocheleau, 2005)</ref>. Gendered mapping can effectively show limitations on women's space, whether the seclusion and female discomfort in male public spaces like Himalayan village tea shops <ref type="bibr" target="#b50">(Mehta, 1996)</ref>, or insecure youth spaces in urban Tanzania <ref type="bibr" target="#b42">(Lary et al., 2004)</ref>. There are numerous parallel situations in Northern countries where entitlements to spatial access are limited by safety or harassment, or simply economic disadvantage <ref type="bibr" target="#b41">(Kwan, 2002;</ref><ref type="bibr" target="#b49">McIntyre, 2003;</ref><ref type="bibr">UN-HABITAT, 2007)</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.">Competence in good governance</head><p>Competence in governance terms is promoted by reinforcing local communities' ability to sustainably manage a GIS, especially after any external support ends. Importantly, competence to achieve local manageability includes notions of feasibility. Specifically this involves considering the extent to which tools are adapted to local social, cultural, technical and climatic conditions, and the cost-effectiveness and long-term sustainability. The cultural and social feasibility encompass information inter-changeability, multi-application capacities, simplicity to learn and use, and the literacy, numeracy and computer-literacy requirements.</p><p>Technical aspects of GIT tools include their field reliability, usecomplexity, maintenance options, updating and upgrading, and training requirements. The technical difficulties may militate against easy use by local participants. Hardware and software settings are usually complex and laborious, and it is easy to make errors, for example with geo-projection settings on iPAQs. But prior training, literacy and quantitative and map-reading skills are found not to be defining barriers to participation in mobile GIS or in P3DM.</p><p>The tasks of maintaining the currency of information sets are often costly, time-consuming and liable to be overlooked in the enthusiasm of applying the new tools. Hi-tech instruments such as GPSs or PDAs may encourage users, whether researchers or local people, to focus on the device at the expense of 'seeing' the surroundings. There are temptations to use the tools as fashionable toys and generate flashy but unproductive outputs. Experienced common-sense practitioners are needed to get value-added material out of these approaches, when the technological expectations of promoters and early users have been too high.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="7.">Criteria of good governance and evaluation of PGIS methods</head><p>There are many criteria for deciding what makes an effective tool or method for handling spatial information for participatory planning. It is impossible to meet all the specifications, and it is overly idealistic to put them all forward. But they are visions towards which the selection of off-the-shelf geo-information tools, and the development of new PGIS tools, should be aimed. In previous sections we explored the principles and specifications of good governance to derive criteria for selecting sound GIT for participatory spatial planning. The array of criteria can be cast within the principles of good governance -legitimacy (especially participation and empowerment), respect for rights and for local knowledge, social and spatial equity, competence and efficiency, and centrally, the accountability of the governing to the governed. In Sections 7 and 8 we synthesise these criteria into an assessment of how effective participatory geo-information tools are in terms of good governance objectives in PSP; and in Section 8 we consider some questions which can be applied for testing the criteria.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="7.1.">Legitimacy: participation and empowerment</head><p>Legitimacy is created or reinforced in PGIS by the possibilities for actor interactions in the twin processes of executing various mapping actions, and then viewing the visualised results. PGIS and participatory mapping create opportunities to visualise the interests, needs and potentials of disparate groups in PSP. In this way the governing are provided with a mechanism to recognise and appreciate the legitimacy of the local interests of the governed.</p><p>The degree of ownership of input data and output results are very significant for legitimacy, and that ownership is stronger in PGIS than in conventional professional planning. PGIS always implies some degree of 'people's participation', though it depends on the intensity and purpose of the participation involved in handling the tools and the data. Participatory processes are by nature slow, in order to build up mutual trust through interaction and contemplation. Therefore the lengthy, intensive and enlightening process of developing a PGIS in a participatory manner is itself capacity-building and empowering.</p><p>With the potential to interact effectively and cheaply with vast numbers of users, Web-based GIS, including virtual globes like Google Earth might be closer to a democratic management of geo-information. Interactive mapping, like multimedia approaches, is able to show multiple views and voices, and layers of information and of time. In this way, it overcomes the typical spatial and temporal constraints of standard map or GIS representations (e.g. <ref type="bibr">Carver, 2003;</ref><ref type="bibr" target="#b8">Carver et al., 2004)</ref>, and contributes to better governance through participation and representation of different groups. Interactive visualisations can be set into multimedia packages and on the Web <ref type="bibr" target="#b73">(Steinmann et al., 2005;</ref><ref type="bibr" target="#b26">Elwood, 2009)</ref>.</p><p>The accessibility, creative freedom, potential inclusivity, focus and responsiveness proffered by environments such as Google Earth are potentially very promising for participatory spatial decision-making; although cautionary voices are raised about hidden bias in background code and information privatisation in general <ref type="bibr" target="#b83">(Zook and Graham, 2007;</ref><ref type="bibr" target="#b69">Sheppard and Cizek, 2009)</ref>. Questions always remain around the nature of the participation and participants. Where internet access is limited by income or is politically controlled, the exclusion of the marginalised from public decision-making processes is exacerbated, not diminished, by Web GIS <ref type="bibr" target="#b24">(Elwood, 2006;</ref><ref type="bibr" target="#b83">Zook and Graham, 2007)</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="7.2.">Respect for local spatial knowledge</head><p>PGIS tools should identify, analyse and represent the spatial cognition and traditions of people, and respect the integrity of local knowledge. A criterion for the tools is the ability to elicit and handle local conceptualisations of space and spatial values; thus the ability to represent uncertain and hidden locations, fuzzy and flexible areas and boundaries, and mutable, ambiguous long-term visions. Mobile GIS has the potential for cheap, user-friendly and locally-grounded mapping applications which incorporate local spatial knowledge. Dynamic GIS permits scale jumps and multidimensional linkages, enabling people to be involved at scales relevant to their daily lives or interests.</p><p>Visualisation and graphics software and interactive Web-based mapping are attuned to PSP characteristics of multi-actor viewpoints <ref type="bibr" target="#b26">(Elwood, 2009)</ref>. There are real opportunities for participatory, in-the-field, on-screen sketching (e.g. of counter maps), recordable to GIS formats. Effective visualisation of the outputs renders them more attractive and accessible to outsiders, and to insiders if the map symbologies are selected with sensitive local understanding. Ambiguity and implicit uncertainties may be served by functionalities in animated Web maps and in graphics software, for instance, by using multi-user transparent layers, by fuzzy symbols, and by blurring boundaries through spray-painting or soft-zoning or fading of areas and boundaries (Fig. <ref type="figure" target="#fig_2">5</ref>).</p><p>Ambiguity is multi-sensual and multi-medial and the use of sound is a powerful addition to an output display, such as street or landscape sounds, or traditional music, as well as voice-overs from local stakeholders (e.g. <ref type="bibr" target="#b7">Campbell et al., 2005)</ref>. There can be interactive links to other local material or Web-sites including photographs, music, texts and images. There are already efforts to represent smell in the maps outputs, but the full technology of 'smellovision' is not yet developed.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="7.3.">Equity</head><p>In the context of social and spatial equity, GIT is often considered 'neutral' technology, until actually used. The participatory element in PGIS does not allow that delusion: it does provide the functionality to transparently test the equity of a tool, in terms of service provision or response to needs. Counter maps can be  connected through layering, a basic GIS functionality for representing associations, allowing the perceived interest spaces and LSK of different groups to be recognised, presented and 'measured'. Comparisons between alternative representations of land claims and conflicts, and priorities between groups are easily analysed and applied in negotiations, as well as contributing to respect and legitimacy. P3DM models similarly can incorporate the spatial knowledge of local expert actors such as local female and male resource users, traditional leaders and experienced outsiders, but not simultaneously, because P3DM aims for a consensus viewpoint.</p><p>There are technical possibilities in animated and interactive visualisation tools including 'bring to life', zooming-in/out, 'looking glass', and panning to show the perceived significance of places and events or relative position.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="7.4.">Competence</head><p>The 'competence' of tools is judged in terms of feasibility, local manageability, technical sustainability, and currency, resulting also in cost-effectiveness. For example, although P3DM offers a 'low tech', collaborative, interactive approach which is relatively easy to manage locally, on the other hand the finished physical models tend to become static and not updated, if users are reluctant to begin rearranging information. There is a need for development of alternative plastic media such as gels or electronic paper to overcome the construction time and stagnation problems of P3DM.</p><p>PGIS tools of GPS, iPAQs or smartphones are easily taken up by enough community members, with short and low-cost training in the field. Computer training, literacy and numeracy are not hindrances to their use. Field experiences show that with the design of appropriate icons and function shortcuts on the screen, as in CyberTracker for instance, even non-literate users can easily operate a mobile GIS tool in the field <ref type="bibr">(CyberTracker, 2007;</ref><ref type="bibr" target="#b83">Zahabu, 2008)</ref>. Such mobile GIS allows dynamic data analysis in the field, with on-site opportunities for local actors to triangulate data. Web files with additional information, maps or images are downloadable to low-tech users in the field where the interaction and enhancement will be carried out. Mobile GIS is affected by limited battery life, however, where fieldwork requires day-long operations; improvements are needed for solar-charging and power-saving. In addition, cheaper versions of the PGIS tools do not function well in tropical climates under high humidity, dust, Virtual globes, Google Earth, etc. CyberTracker ACCOUNTABILITY</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>EQUITY Gender and human rights</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Transparency</head><p>Actor involvement in all stages. Simplicity, ease of understanding.</p><p>Transparent layers in GIS.</p><p>Visualisation.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Accountability mechanisms</head><p>Built-in procedures for monitoring the PSP.</p><p>Visibility of PGIS data collection; P3DM.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Accessibility (of governing to governed)</head><p>Take-up of the geo-information products.</p><p>Visualisation.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Lawfulness</head><p>Legality of local spatial knowledge -in land claims, etc.</p><p>Need for ethical guidelines. and cockroach damage. Ruggedised instruments, like Tablet PCs, withstand shocks, high temperatures and humidity, but are relatively expensive.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="7.5.">Accountability</head><p>Accountability can be expressed in terms of the degree of transparency and visibility of government, and the mechanisms and the responsiveness of the governing to lower levels. Central to participatory mapping approaches are the improved transparency and visibility of the relationships between people and the state or big business that are shown up by PGIS outputs. On-line tools have the ability to provide immediate access for all actors via the Web to spatial and other information. Visualisation software allows for mutually transparent forms of representation, e.g. of multiple land rights and entitlements, and this symbolically correlates with transparency of information and accountability. Improved transparency in this way can then serve to help local interests to be recognised. The 'governed' see the spatial implications of policies and actions, and the 'governing' receive essential feedback. However, given the ease with which digital information can be gathered and exploited by others, an ethical code for PGIS practice is essential <ref type="bibr" target="#b59">(Rambaldi et al., 2006;</ref><ref type="bibr">c.f. Elwood, 2007)</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="8.">Conclusions</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="8.1.">Interrogating the criteria</head><p>We have used five principles of good governance and their components as a set of reference points against which emerging GIT, in particular PGIS tools, can be assessed for use in participatory spatial planning. Not every new approach and practice demonstrably moves towards the principles of good governance. Therefore, we reformulated the principles into criteria, so as to be able to assess whether a GIT tool or PGIS process is addressing them. Each of the criteria can be interrogated by a variety of fundamental questions to explore the degree of good practice. Therefore here we put forward a range or checklist of questions (there can be many more) that interrogate whether the criteria of the five principles are being addressed.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="8.1.1.">Strengthening legitimacy</head><p>Legitimacy is strengthened by effective participation at all stages, participatory design of the process, participatory implementation, and decisions on the ownership of the inputs and products. Questions are: Who participates at each stage of a PGIS process? Who does not participate? Are participants selected by the community, or its leaders? Or is selection by external priorities, such as gender quotas? Do the disadvantaged and less articulate participate? What is the extent or intensity in terms of participation ladders (Section 3.1.1)? Who selects the information to be included? Who decides on the sources of information, including the choice of 'key informants'? Who analyses the spatial knowledge? Who will 'own', control, and have access and entitlements to the raw LSK, and the products as maps or databases? <ref type="bibr" target="#b59">Rambaldi et al. (2006)</ref> provide 40 or so of these 'Who' questions. They are not just conflicts between outsiders and insiders, but need addressing also within the community.</p><p>The empowerment criterion concerns processes of strengthening the less powerful; it is consciously directed towards particular groups. The criterion is questioned by: Who determines the purpose of the PGIS exercise? Who decides on the priorities between competing interests and issues? Are the tools and procedures user-friendly or do they disadvantage local community actors? Is subsequent empowerment an outcome? Does the PGIS process create and support more autonomous initiatives within the actors and community? A good practice is to check back with the community after some years.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="8.1.2.">Creating respect</head><p>Good practice in good governance implies legitimising respect for specificity (c.f. UNDP, 1997) and localness, and not enforcing blanket solutions. This depends on respect for local knowledge and its sources. Thus, criteria questions include: Does the design seek out LSK? Does it activate mechanisms to create respect for the richness and value of LSK? Does it function to validate the local knowledge? Do the products such as maps, models, and GIS displays represent local spatial knowledge? What efforts are made to represent local preferences, problems and priorities, such as in counter maps? What display efforts represent ambiguity and fuzziness in boundaries and local spaces? What scales are used for the output maps? What locational sensitivity and spatial heterogeneity are applied? Are local names and measures respected?</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="8.1.3.">Developing equity</head><p>Good practice strengthens equity and works against worsening inequalities. In terms of power and social equity, the interrogations of PGIS processes overlap with those of participation and empowerment discussed above. The criterion of 'inclusivity' requires questions such as: which actors are included?, which are excluded?, and who are given just token roles in the design or data collection? Is there equity in the results? Do they specifically support the more disadvantaged and weaker actors?; or, is the equity in results aiming to satisfy the powerful?, or just the majority? Is the design of the local results aimed towards raising awareness of outsiders? The equity questions above can also be re-phrased to address gender balance, or more specifically, towards ameliorating many discriminations against women, in participatory approaches.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="8.1.4.">Demonstrating competence</head><p>The fourth principle is that the PGIS activities should be competent. Interrogating competence means questioning the efficiency of the PGIS activities, in outputs, and in monetary, time and personnel terms. Does the PGIS process provide concrete useable output? Does it result in relevant geospatial information in effective formats, such as maps, GIS displays, dynamic presentations and videos? Questions of 'relevant output' need emphasis because chasing the participation goal of the process can squeeze out the goals of having concrete products useful to the community.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="8.1.5.">Creating accountability</head><p>Creating accountability in a process implies strengthening transparency, visibility of decisions, the accountability mechanisms themselves (both formal procedures and civil society monitoring), and lawfulness. Thus, these criteria are interrogated by questions about the transparency and visibility of decisions; and the ethical issues. Are proper procedures of fully informed voluntary consent followed? Is consideration given to involvement of children, older people or disadvantaged actors? Is care taken to avoid unwarranted harm to any actors? What are the accountability mechanisms -both the formal procedures and monitoring by civil society? Is the validation of the process performed in a participatory manner? What is the lawfulness of the whole process, including universal rights as well as national? What are the modalities of accessibility to information for lower levels?</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="8.2.">Do PGIS tools meet the criteria?</head><p>The framework proposed in the paper considers how the functional capabilities of geo-information tools map onto the criteria for good governance in PSP, and to what extent they meet the needs of a participatory process. In essence: do the tools have the potential to support a legitimate, respectful, equitable, competent and accountable system? Fig. <ref type="figure" target="#fig_3">6</ref> provides a first cut judgment of how these tools may meet the criteria.</p><p>The tools considered are not a panacea, but when applied in a sensitive and modest way they certainly help to achieve the objectives of PSP and community-based management by legitimising, analysing and representing local knowledge, values and priorities in multiple spatial realities. Overall, PGIS tools facilitate more direct interaction in and with communities as ''users'' of geo-information, in part through the substantial improvements in representing these multiple realities. Their use by GIS practitioners and communities deserves endorsement, though with a health warning that any participatory mapping and PGIS tools only obfuscate existing inequities unless the drivers behind the PSP actions are to promote participation and good governance.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="8.3.">Challenges</head><p>Whatever technology is being introduced, the kind of social dynamics in which it operates will determine whether it will empower or further marginalize poor communities; like the doublesided coin of accessibility and exclusion. It may never be feasible that geo-information tools reflect the full complexities of local spatial knowledge, human interaction with environment, or power relations. There must be significant technological advances as well as a fundamental mind-shift before external expert spatial information and local geographical knowledge could be regarded as truly complementary or integrated. <ref type="bibr">Carver (2003, p. 61</ref>) argued that efforts expended on participatory approaches are subject to '. . .the possibly false surmise that. . . those in positions of decision-making power actually value and therefore encourage public input'.</p><p>Early designs of GIS did not anticipate such inclusive types of geo-information tools, and the spatial data components were expected to consist only of spatially accurate datasets from 'official' sources. The integration of different types of knowledge (as opposed to data) was hardly foreseeable. The essential task for hardware and software designers is to develop system functionalities which better elicit, handle and represent local spatial knowledge, priorities and perceptions. NGOs and civil society organisations should equally participate, with active incentives for commercial organisations to engage with democratic forms of spatial information. In 2002 <ref type="bibr">Dangermond (2002, p. 297</ref>) stated that 'GIS technology is the golden thread that is weaving its way through the fabric of democracy', but the full promise of incorporating the needs and priorities of local participants has not yet been achieved.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 3 .</head><label>3</label><figDesc>Fig. 3. Participation ladder (starts from the bottom).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 4 .</head><label>4</label><figDesc>Fig. 4. PGIS and the need for ambiguity or preciseness.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 5 .</head><label>5</label><figDesc>Fig. 5. Visualisation of water conflicts, Lake Naivasha, Kenya. Source: Boix Fayos (2002), reproduced with permission.</figDesc><graphic coords="9,133.16,248.69,339.25,490.03" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 6 .</head><label>6</label><figDesc>Fig. 6. Good governance in PSP -can PGIS tools meet the criteria?</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 6</head><label>6</label><figDesc>Fig. 6 (continued)    </figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>LEGITIMACY Participation Empowerment Ownership of product and process Trust EQUITY Human rights Gender Future generations ('sustainable development') Social and cultural groups Conflict management RESPECT FOR: Rights and entitlements Local and indigenous knowledge Spatial grounding Relevance 'Naïve geography': • precision and ambiguity • flexi-scale • multi-sensory • dynamic COMPETENCE Local manageability Effectiveness in delivery Efficiency Currency Appropriate cost ACCOUNTABILITY Transparency Accountability mechanisms Accessibility Lawfulness Purposiveness</head><label/><figDesc/><table/><note><p>Fig. 2. Components of good governance in participatory spatial planning.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Sacred spatial knowledge (restricted sites, etc)</head><label/><figDesc/><table><row><cell>Good governance in PSP:</cell><cell>Criteria:</cell><cell>Suitability of PGIS Tools:</cell></row><row><cell>Principles and</cell><cell>Requirements to meet good</cell><cell>Capacities to deliver</cell></row><row><cell>Components</cell><cell>governance principles</cell><cell/></row><row><cell>LEGITIMACY</cell><cell/><cell/></row><row><cell>Participation</cell><cell>Participation at all phases of the PSP</cell><cell>Participation is feasible in PGIS</cell></row><row><cell/><cell>(see Figure 1 )</cell><cell>-mobile GIS, dynamic GIS.</cell></row><row><cell/><cell>Exploration</cell><cell>Virtual globes.</cell></row><row><cell/><cell>Assessment</cell><cell>P3DM.</cell></row><row><cell/><cell>Design</cell><cell>Interactive visualisation.</cell></row><row><cell/><cell>Action Implementation.</cell><cell/></row><row><cell/><cell>Participation needs a lot of time.</cell><cell>Slowness of PGIS, P3DM.</cell></row><row><cell>Empowerment</cell><cell>Ability to translate from 'governed' to</cell><cell>Local understanding of P3DM</cell></row><row><cell/><cell>'governing' -provide confidence.</cell><cell>and mobile GIS, e.g.</cell></row><row><cell/><cell>Ability to innovate with the GIT.</cell><cell>CyberTracker icons.</cell></row><row><cell/><cell>Ability to apply to other needs.</cell><cell/></row><row><cell>Ownership -of product</cell><cell>Control of maps and geo-information</cell><cell>Protocols on ownership and</cell></row><row><cell>and process</cell><cell>outputs.</cell><cell>ethics, e.g. confidential GIS</cell></row><row><cell/><cell>Control of process.</cell><cell>layers.</cell></row><row><cell>Trust</cell><cell>Time for interaction and contemplation.</cell><cell>Participation during slow</cell></row><row><cell/><cell>Transparency of information.</cell><cell>construction in P3DM.</cell></row><row><cell>RESPECT FOR :</cell><cell/><cell/></row><row><cell>Rights and entitlements</cell><cell>Legality of LSK -in land claims, etc.</cell><cell>Perceived precision of GIS</cell></row><row><cell/><cell>Recognition of customary law, etc.</cell><cell>outputs.</cell></row><row><cell/><cell/><cell>Counter maps of claims.</cell></row><row><cell>Multiple views</cell><cell>Multiple sources of information.</cell><cell>Layering in GIS.</cell></row><row><cell/><cell>Counter maps.</cell><cell>Multi-media in GIS.</cell></row><row><cell/><cell>Triangulation of evidence.</cell><cell>Smartphones and VGI</cell></row><row><cell/><cell/><cell>(Volunteered Geographic</cell></row><row><cell/><cell/><cell>Information).</cell></row><row><cell/><cell/><cell>P3DM stimulates multiple</cell></row><row><cell/><cell/><cell>views, but does not record.</cell></row><row><cell>Local and indigenous</cell><cell>a. Fuzzy points, lines, and zones; flexible</cell><cell>Graphics software for</cell></row><row><cell>knowledge ('naïve</cell><cell>geofeatures.</cell><cell>visualisation; fuzzy</cell></row><row><cell>geography')</cell><cell>b. Overlapping geofeatures, Jump scale.</cell><cell>representations.</cell></row><row><cell>a. Ambiguity</cell><cell>c. Sound, etc.</cell><cell>CyberTracker icons.</cell></row><row><cell>b. Flexi-scale</cell><cell>d. Dynamic GIS.</cell><cell>Cognitive maps.</cell></row><row><cell>c. Multi-sensory</cell><cell/><cell>Multi-media, sound.</cell></row><row><cell>d. Dynamic.</cell><cell/><cell/></row><row><cell/><cell>Protected GIS layers.</cell><cell>Layers in PGIS. Visualisation</cell></row><row><cell/><cell>Limited access, or coarse scale.</cell><cell>tools.</cell></row><row><cell/><cell/><cell>Not P3DM.</cell></row><row><cell>Spatial grounding and</cell><cell>Local spatial realities.</cell><cell>PGIS, cognitive maps.</cell></row><row><cell>temporal specificity</cell><cell/><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head/><label/><figDesc>Representation of power.</figDesc><table><row><cell/><cell/><cell>PGIS -local knowledge and</cell></row><row><cell/><cell>Gendered maps.</cell><cell>local analysis.</cell></row><row><cell/><cell>Counter maps.</cell><cell>GIS layers.</cell></row><row><cell>Future generations</cell><cell>Ability to represent ambiguous futures.</cell><cell>Visualisation tools.</cell></row><row><cell>('sustainable</cell><cell/><cell>Interactive GIS.</cell></row><row><cell>development')</cell><cell/><cell/></row><row><cell>Social &amp; cultural groups</cell><cell>Representation of power.</cell><cell>PGIS -local knowledge and</cell></row><row><cell/><cell>Multiple sources of information.</cell><cell>local analysis.</cell></row><row><cell/><cell>Counter maps.</cell><cell>GIS layers.</cell></row><row><cell>Conflict management</cell><cell>Representation of differential power.</cell><cell>Visualisation tools.</cell></row><row><cell/><cell>Recognition of legitimacy of counter</cell><cell>P3DM (slow) model-building.</cell></row><row><cell/><cell>claims.</cell><cell/></row><row><cell/><cell>Counter maps.</cell><cell/></row><row><cell>Capacity building</cell><cell>Ease of training in techniques. Local use</cell><cell>P3DM and mobile GIS.</cell></row><row><cell/><cell>by local actors.</cell><cell>Less easy for GIS &amp;</cell></row><row><cell/><cell/><cell>visualisation tools.</cell></row><row><cell>COMPETENCE</cell><cell/><cell/></row><row><cell>Local manageability</cell><cell>Reliable tools, local reparability.</cell><cell>Tablet PC, Virtual globes, e.g.</cell></row><row><cell>Local use</cell><cell>Survival in harsh conditions.</cell><cell>Google Earth, Smartphones,</cell></row><row><cell/><cell>Ease of use by community.</cell><cell>Mobile GIS, CyberTracker</cell></row><row><cell>Efficiency</cell><cell>Adaptability to new tasks, new actors,</cell><cell>Mobile GIS; Virtual globes (e.g.</cell></row><row><cell/><cell>new spaces.</cell><cell>mash-ups) highly adaptable.</cell></row><row><cell/><cell>Ability to upscale GIT.</cell><cell/></row><row><cell>Currency</cell><cell>Ability to update.</cell><cell>Need for ongoing LSK into</cell></row><row><cell/><cell/><cell>PGIS.</cell></row><row><cell/><cell/><cell>Not Google Earth image (at</cell></row><row><cell/><cell/><cell>present).</cell></row><row><cell/><cell/><cell>Not P3DM</cell></row><row><cell>Appropriate cost</cell><cell>Freeware.</cell><cell/></row><row><cell/><cell>Low cost and time.</cell><cell/></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="3" xml:id="foot_0"><p>Participation 'ladders' were introduced by Arnstein (1969) and have received much attention since, with relevant developments from e.g. Carver (2003), McCall (2003) and Ramasubramanian (2010).M.K. McCall, C.E. Dunn / Geoforum</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="43" xml:id="foot_1"><p>(2012) 81-94  </p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="4" xml:id="foot_2"><p>ILWIS 3.6 Open,</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_3"><p>52°North, Münster, Germany and ITC, Enschede, Netherlands.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_4"><p>M.K. McCall, C.E. Dunn / Geoforum 43 (2012)   </p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgment</head><p>We should like to thank <rs type="person">Rhodora Gonzalez</rs> for contributions to an earlier draft.</p></div>
+			</div>			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>INFORMATION NEEDS in PARTICIPATORY SPATIAL PLANNING (PSP)</head><p>GEO-SPATIAL INFORMATION Items Four phases, with continuing feedback</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>EXPLORATION phase:</head><p>Record, describe, and measure spatial (e.g. environmental) problems and conflicts.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Participatory GIS: opportunity or oxymoron? Participatory Learning and Action</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Abbot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Chambers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Dunn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Harris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>De Merode</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Porter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Townsend</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Weiner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLA) Notes</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="27" to="34"/>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Public participation, technological discourses and the scale of GIS</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">C</forename><surname>Aitken</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Community Participation and Geographic Information Systems</title>
+		<editor>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Craig</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Harris</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">D</forename><surname>Weiner</surname></persName>
+		</editor>
+		<meeting><address><addrLine>London</addrLine></address></meeting>
+		<imprint>
+			<publisher>Taylor and Francis</publisher>
+			<date type="published" when="2002">2002</date>
+			<biblScope unit="page" from="357" to="366"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">A ladder of citizen participation</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Arnstein</surname></persName>
+		</author>
+		<ptr target="//www.nativemaps.org/"/>
+	</analytic>
+	<monogr>
+		<title level="m">AMN Aboriginal Mapping Network Website</title>
+		<imprint>
+			<date type="published" when="1969">1969</date>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="216" to="224"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Participatory soil survey: experience in working with a Mesoamerican indigenous community</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Aubut</surname></persName>
+		</author>
+		<idno>04-48</idno>
+		<ptr target="&lt;http://www.lse.ac.uk/collections/DESTIN/pdf/WP48"/>
+	</analytic>
+	<monogr>
+		<title level="j">Soil Use and Management</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="43" to="56"/>
+			<date type="published" when="2001">2004. 2001. 2009</date>
+			<pubPlace>London,</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>LSE, Development Studies Institute</orgName>
+		</respStmt>
+	</monogr>
+	<note>The good governance agenda: who wins and who loses. Some empirical evidence for</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Data collection techniques for informal settlement upgrades in Cape Town, South Africa</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Barry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Rüther</surname></persName>
+		</author>
+		<ptr target="&lt;http://www.urisa.org/files/Barryvol17no1-5.pdf&gt;"/>
+	</analytic>
+	<monogr>
+		<title level="j">URISA Journal</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="43" to="52"/>
+			<date type="published" when="2005-10">2005. 10.06.11</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<author>
+			<persName><forename type="first">C</forename><surname>Boix Fayos</surname></persName>
+		</author>
+		<ptr target="//www.itc.nl/library/Papers/msc_2002/wrem/boix_fayos.pdf&gt;"/>
+	</analytic>
+	<monogr>
+		<title level="m">Competition over Water Resources: Analysis and Mapping of Water-Related Conflicts in the Catchment of Lake Naivasha (Kenya)</title>
+		<title level="s">Water Resources &amp; Environmental Management</title>
+		<meeting><address><addrLine>Enschede</addrLine></address></meeting>
+		<imprint>
+			<publisher>ITC</publisher>
+			<date type="published" when="2002-10">2002. 10.06.11</date>
+			<biblScope unit="page">151</biblScope>
+		</imprint>
+	</monogr>
+	<note type="report_type">MSc Thesis</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title level="m" type="main">Ethnographic maps built using cutting-edge technology may help Amazon tribes win forest carbon payments</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Butler</surname></persName>
+		</author>
+		<ptr target="&lt;http://news.mongabay.com/2009/1130-indigenous_mapping.html&gt;"/>
+		<imprint>
+			<date type="published" when="2009-10">2009. 10.06.11</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">The future of participatory approaches using geographic information: developing a research agenda for the 21st Century</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Campbell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Stanway</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Nishimoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Koelling</surname></persName>
+		</author>
+		<idno>CSCI 4838-6838</idno>
+		<ptr target="&lt;http://www.thesilence.org/documents/SOL_SoundscapeCommunity.pdf&gt;"/>
+	</analytic>
+	<monogr>
+		<title level="j">URISA Journal</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="61" to="71"/>
+			<date type="published" when="2003">2005. 2003</date>
+		</imprint>
+		<respStmt>
+			<orgName>Department of Computer Science, University of Colorado at Boulder</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">Final Report</note>
+	<note>Silence of the Lands. User Interface Design. APA I</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Developing and testing a web-based GIS for teaching the principles of spatial decision-making</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Carver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Evans</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kingston</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Geography in Higher Education</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="425" to="438"/>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Participatory mapping and Geographic Information Systems: whose map? Who is empowered and who disempowered? Who gains and who loses?</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Chambers</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Electronic Journal of Information Systems in Developing Countries</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="1" to="11"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Mapping indigenous lands</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Chapin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Lamb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Threlkeld</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annual Review of Anthropology</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="619" to="638"/>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">GIS-democracy or delusion?</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Clark</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Environment and Planning A</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="303" to="316"/>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<title level="m">Commission of the European Communities (CEC)</title>
+		<meeting><address><addrLine>Brussels</addrLine></address></meeting>
+		<imprint>
+			<publisher>CEC</publisher>
+			<date type="published" when="2001">2001. 2001</date>
+			<biblScope unit="volume">428</biblScope>
+		</imprint>
+	</monogr>
+	<note>European Governance: a White Paper</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">L</forename><surname>Convis</surname></persName>
+		</author>
+		<title level="m">Conservation Geography. Case Studies in GIS, Computer Mapping, and Activism</title>
+		<meeting><address><addrLine>Redlands, CA</addrLine></address></meeting>
+		<imprint>
+			<publisher>ESRI</publisher>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<title level="m" type="main">Participation: The New Tyranny? Zed</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Cooke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Kothari</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2001">2001</date>
+			<pubPlace>London</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<ptr target="&lt;http://www.cybertracker.co.za/CyberTracker%20EC%20Report%2020071105c.pdf&gt;"/>
+		<title level="m">CyberTracker Monitoring Programme</title>
+		<imprint>
+			<publisher>CyberTracker Conservation</publisher>
+			<date type="published" when="2007-10">2007. 10.06.11</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Final Report</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Mutualism in strengthening GIS technologies and democratic principles: perspectives from a GIS software vendor</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dangermond</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Community Participation and Geographic Information Systems</title>
+		<editor>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Craig</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Harris</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">D</forename><surname>Weiner</surname></persName>
+		</editor>
+		<meeting><address><addrLine>London</addrLine></address></meeting>
+		<imprint>
+			<publisher>Taylor and Francis</publisher>
+			<date type="published" when="2002">2002</date>
+			<biblScope unit="page" from="297" to="308"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Prospects for qualitative GIS at the intersection of youth development and participatory urban planning</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">F</forename><surname>Dennis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Environment &amp; Planning A</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page" from="2039" to="2054"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">GIS technology in natural resource management: process as a tool of change</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Duncan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Lach</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cartographica</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page" from="201" to="215"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Participatory GIS: a people's GIS?</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Dunn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Progress in Human Geography</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="616" to="637"/>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">GIS for development: a contradiction in terms?</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Dunn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Atkins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Townsend</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Area</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="151" to="159"/>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Analysing spatially referenced public health data: a comparison of three methodological approaches</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Dunn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Kingham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Rowlingson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Bhopal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Cockings</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J W</forename><surname>Foy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Acquilla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Halpin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Diggle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Walker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Health and Place</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="1" to="12"/>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Naïve geography</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Egenhofer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Mark</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Spatial Information Theory: A Theoretical Basis for GIS</title>
+		<title level="s">Lecture Notes in Computer Sciences</title>
+		<editor>
+			<persName><forename type="first">A</forename><forename type="middle">U</forename><surname>Frank</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">W</forename><surname>Kuhn</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Berlin</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="1995">1995</date>
+			<biblScope unit="volume">988</biblScope>
+			<biblScope unit="page" from="1" to="15"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">GIS and collaborative urban governance: understanding their implications for community action and power</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Elwood</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Urban Geography</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="737" to="759"/>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Critical issues in Participatory GIS: deconstructions, reconstructions, and new research directions</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Elwood</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Transactions in GIS</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="693" to="708"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Negotiating participatory ethics in the midst of institutional ethics</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Elwood</surname></persName>
+		</author>
+		<ptr target="//www.acme-journal.org/vol6/SE.pdf&gt;"/>
+	</analytic>
+	<monogr>
+		<title level="j">ACME: An International E-Journal for Critical Geographies</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="329" to="338"/>
+			<date type="published" when="2007-10">2007. 10.06.11</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Geographic Information Science: new geovisualization technologies -emerging questions and linkages with GIScience research</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Elwood</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Progress in Human Geography</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="256" to="263"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Bounding the commons: land demarcation in northeastern Nicaragua</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Finley-Brook</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Offen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bulletin of Latin American Research</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="343" to="363"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Scales of environmental justice: combining GIS and spatial analysis for air toxics in West Oakland, California</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Fisher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kelly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Romm</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Health &amp; Place</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="701" to="714"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<monogr>
+		<title level="m" type="main">Mapping Our Land: A Guide to Making Your Own Maps of Communities and Traditional Lands</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Flavelle</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2002">2002</date>
+			<publisher>Lone Pine Foundation</publisher>
+			<pubPlace>Edmonton</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<title level="m">Mapping Communities: Ethics, Values, Practices</title>
+		<editor>
+			<persName><forename type="first">J</forename><surname>Fox</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">K</forename><surname>Suryanata</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">P</forename><surname>Hershock</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Honolulu, HI</addrLine></address></meeting>
+		<imprint>
+			<publisher>East-West Center</publisher>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<monogr>
+		<author>
+			<persName><forename type="first">N</forename><surname>Gonda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Pommier</surname></persName>
+		</author>
+		<ptr target="&lt;http://www.iapad.org/mapeo.htm&gt;"/>
+		<title level="m">Prevención y Resolución de Conflictos en Torno a la Tierra y los Recursos Naturales: Manual Práctico de Mapeo Comunitario y Uso del GPS para Organizaciones Locales de Desarrollo</title>
+		<meeting><address><addrLine>Managua</addrLine></address></meeting>
+		<imprint>
+			<publisher>Unión Europea (European Union</publisher>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<monogr>
+		<title level="m" type="main">Platforms and Terraces: Bridging Participation and GIS in Joint-Learning for Watershed Management with the Ifugao of the Philippines</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Gonzalez</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2000">2000</date>
+			<pubPlace>Enschede</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>University, Wageningen</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">PhD Thesis</note>
+	<note>ITC Dissertation No. 72</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<monogr>
+		<title level="m" type="main">Working with Indigenous Knowledge</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Grenier</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1998">1998</date>
+			<publisher>International Development Research Centre</publisher>
+			<pubPlace>Ottawa</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<monogr>
+		<title level="m" type="main">Maori Values for Land-Use Planning</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Harmsworth</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1995">1995</date>
+			<publisher>Manaaki Whenua Landcare Research</publisher>
+			<biblScope unit="page">118</biblScope>
+			<pubPlace>Palmerston North</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">The potential of Public Participation Geographic Information Systems in UK environmental planning: appraisals by active publics</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Harrison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Haklay</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Environmental Planning and Management</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="page" from="841" to="863"/>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Recording and Using Indigenous Knowledge: A Manual</title>
+	</analytic>
+	<monogr>
+		<title level="m">International Institute of Rural Reconstruction (IIRR)</title>
+		<meeting><address><addrLine>Cavite</addrLine></address></meeting>
+		<imprint>
+			<publisher>Silang</publisher>
+			<date type="published" when="1996">1996</date>
+			<biblScope unit="page">211</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Stories remote sensing images can tell: integrating remote sensing analysis with ethnographic research in the study of cultural landscapes</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jiang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Human Ecology</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="215" to="232"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Participatory resource mapping for adaptive collaborative management at Mt. Kasigau, Kenya</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">W</forename><surname>Kalibo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">E</forename><surname>Medley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Landscape and Urban Planning</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page" from="145" to="158"/>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Toward participatory and transparent governance: report on the sixth global forum on reinventing government</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Halligan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Oh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Eikenberry</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Public Administration Review</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page" from="646" to="654"/>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Rational ignorance of the citizens in public participatory planning</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Krek</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of 10th International Conference on Information &amp; Communication Technologies (ICT) in Urban Planning and Spatial Development and Impacts of ICT on Physical Space, CORP 2005 &amp; Geomultimedia</title>
+		<editor>
+			<persName><forename type="first">M</forename><surname>Schrenk</surname></persName>
+		</editor>
+		<meeting>10th International Conference on Information &amp; Communication Technologies (ICT) in Urban Planning and Spatial Development and Impacts of ICT on Physical Space, CORP 2005 &amp; Geomultimedia</meeting>
+		<imprint>
+			<date type="published" when="2005">2005</date>
+			<biblScope unit="volume">05</biblScope>
+			<biblScope unit="page" from="165" to="169"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Feminist visualization: re-envisioning GIS as a method in feminist geographic research</title>
+		<author>
+			<persName><forename type="first">M.-P</forename><surname>Kwan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annals of the Association of American Geographers</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="page" from="645" to="661"/>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Exploring the association between HIV and violence: young people's experiences with infidelity, violence and forced sex in Dar es Salaam, Tanzania</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Maman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Katebalila</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mbwambo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">International Family Planning Perspectives</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="200" to="206"/>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<monogr>
+		<title level="m" type="main">Participatory Governance: Planning, Mediation and Public Decision-Making in Civil Society</title>
+		<editor>Lovan, W.R., Murray, M., Shaffer, R.</editor>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+			<publisher>Ashgate</publisher>
+			<pubPlace>Aldershot</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Asthma and air pollution in the Bronx: methodological and data considerations in using GIS for environmental justice and health research</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Maantay</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Health &amp; Place</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="32" to="56"/>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Seeking good governance in participatory-GIS: a review of processes and governance dimensions in applying GIS to participatory spatial planning</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">K</forename><surname>Mccall</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Habitat International</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="549" to="573"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Precision for whom? Mapping ambiguity and certainty in (Participatory) GIS</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">K</forename><surname>Mccall</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Participatory Learning and Action</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="114" to="119"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">pgis-psp-lsk: Applying Participatory-GIS and Participatory Mapping to Participatory Spatial Planning</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">K</forename><surname>Mccall</surname></persName>
+		</author>
+		<ptr target="&lt;http://www.ppgis.iapad.org/ppgis/pdf/PGIS_PSP_LSK_Biblio_may_2010.pdf&gt;"/>
+	</analytic>
+	<monogr>
+		<title level="m">Particular to Local-Level Land &amp; Resources Management) Utilising Local &amp; Indigenous Spatial Knowledge: A Bibliography</title>
+		<imprint>
+			<date type="published" when="2010-10">2010. 10.06.11</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Assessing participatory GIS for community-based natural resource management: claiming community forests in Cameroon</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">K</forename><surname>Mccall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Minang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Geographical Journal</title>
+		<imprint>
+			<biblScope unit="volume">171</biblScope>
+			<biblScope unit="page" from="340" to="356"/>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Through the eyes of women: photovoice and participatory research as tools for reimagining place</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mcintyre</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Gender, Place and Culture</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="47" to="66"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Our lives are no different from that of our buffaloes'': agricultural change and gendered spaces in a central Himalayan valley</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mehta</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Feminist Political Ecology. Global Issues and Local Experiences</title>
+		<editor>
+			<persName><forename type="first">D</forename><surname>Rocheleau</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">B</forename><surname>Thomas-Slayter</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">E</forename><surname>Wangari</surname></persName>
+		</editor>
+		<meeting><address><addrLine>London</addrLine></address></meeting>
+		<imprint>
+			<publisher>Routledge</publisher>
+			<date type="published" when="1996">1996</date>
+			<biblScope unit="page" from="180" to="208"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Whose woods are these? Counter-mapping forest territories in Kalimantan, Indonesia</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">L</forename><surname>Peluso</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Antipode</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="383" to="406"/>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Representations in an electronic age: geography, GIS, and democracy</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Pickles</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Ground Truth: The Social Implications of GIS</title>
+		<editor>
+			<persName><forename type="first">J</forename><surname>Pickles</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Guilford, New York</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="1995">1995</date>
+			<biblScope unit="page" from="1" to="30"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Geomatics: Who Needs It?</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Poole</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cultural Survival Quarterly</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+	<note>Special Issue</note>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Indigenous Peoples, Mapping and Biodiversity Conservation: An Analysis of Current Activities and Opportunities for Applying Geomatics Technologies</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Poole</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Biodiversity Support Programme</title>
+		<title level="s">People and Forests Program Discussion Paper</title>
+		<meeting><address><addrLine>Washington, DC</addrLine></address></meeting>
+		<imprint>
+			<publisher>World Wildlife Fund</publisher>
+			<date type="published" when="1995">1995</date>
+			<biblScope unit="page">83</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Is there life after tenure mapping?</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Poole</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Participatory Learning and Action</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="41" to="49"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<monogr>
+		<title level="m" type="main">Geographic Information Science and Public Participation</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ramasubramanian</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+			<publisher>Springer</publisher>
+			<pubPlace>Berlin</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Who owns the map legend?</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Rambaldi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">URISA Journal</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="5" to="13"/>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Participatory 3-Dimensional Modelling: Guiding Principles and Applications</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Rambaldi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Callosa-Tarr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ASEAN Regional Centre for Biodiversity Conservation (ARCBC)</title>
+		<meeting><address><addrLine>Los Banos</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Practical ethics for PGIS practitioners, facilitators, technology intermediaries and researchers</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Rambaldi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Chambers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mccall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Fox</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLA Notes</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="106" to="113"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Through the eyes of hunter-gatherers: participatory 3D modelling among Ogiek indigenous peoples in Kenya</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Rambaldi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Muchemi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Crawhall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Monaci</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Information Development</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">2-3</biblScope>
+			<biblScope unit="page" from="113" to="128"/>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Evaluating Participation and Performance in Participatory Sensing</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Reddy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shilton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Burke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Estrin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hansen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Srivastava</surname></persName>
+		</author>
+		<ptr target="&lt;http://www.sensorlab.cs.dartmouth.edu/urbansensing/papers/reddy_urbansense08.pdf&gt;"/>
+	</analytic>
+	<monogr>
+		<title level="m">International Workshop on Urban, Community, and Social Applications of Networked Sensing Systems, UrbanSense08</title>
+		<editor>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Ribot</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Larson</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Raleigh, North Carolina; London</addrLine></address></meeting>
+		<imprint>
+			<publisher>Routledge</publisher>
+			<date type="published" when="2005-11">2008. 10.06.11. 2005</date>
+		</imprint>
+	</monogr>
+	<note>Democratic Decentralisation through a Natural Resource Lens</note>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Maps as power tools: locating ''communities'' in space or situating people and ecologies in place?</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Rocheleau</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Communities and Conservation: Histories and Politics of Community-Based Natural Resource Management</title>
+		<editor>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Brosius</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">A</forename><surname>Lowenhaupt-Tsing</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">C</forename><surname>Zerner</surname></persName>
+		</editor>
+		<imprint>
+			<publisher>Rowman Altamira Press</publisher>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">The challenges of mapping complex indigenous spatiality: from abstract space to dwelling space</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Roth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cultural Geographies</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="207" to="227"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<monogr>
+		<title level="m" type="main">A New Vision for Planning: Delivering Sustainable Communities: An Agenda for Action</title>
+		<ptr target="//www.rtpi.org.uk/download/1877/new-vision-full.pdf&gt;"/>
+		<imprint>
+			<date type="published" when="2007-10">2007. 10.06.11</date>
+			<publisher>Royal Town Planning Institute</publisher>
+			<pubPlace>London</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">GIS, indigenous peoples and epistemological diversity</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Rundstrom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cartography and Geographic Information Science</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="45" to="57"/>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">Participatory socioeconomic analysis: drawing on fishermen's knowledge for marine protected area planning in California</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Scholz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Bonzon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Fujita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Benjamin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Woodling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Black</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Steinback</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Marine Policy</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="335" to="349"/>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">GIS and environmental equity: an analysis of the assumptions</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Scott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Cutter</surname></persName>
+		</author>
+		<ptr target="&lt;http://www.ncgia.ucsb.edu/Publications/Tech_Reports/96/96-7"/>
+	</analytic>
+	<monogr>
+		<title level="j">National Center for Geographic Information and Analysis Initiative</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<date type="published" when="1996-10">1996. 10.06.11</date>
+		</imprint>
+	</monogr>
+	<note>Position Paper</note>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">Sleeping with the enemy, or keeping the conversation going?</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Sheppard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Environment and Planning A</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="1026" to="1028"/>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title level="a" type="main">The ethics of Google Earth: crossing thresholds from spatial data to landscape visualisation</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R J</forename><surname>Sheppard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Cizek</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Environmental Management</title>
+		<imprint>
+			<biblScope unit="volume">90</biblScope>
+			<biblScope unit="page" from="2102" to="2117"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title level="a" type="main">Conforming (to) the opposition: the social construction of geographical information in conservation movements</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Sieber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Geographical Information Science</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="775" to="793"/>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<title level="a" type="main">The development of indigenous knowledge</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Sillitoe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Current Anthropology</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="223" to="252"/>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<analytic>
+		<title level="a" type="main">Boundary making and regional identities in a globalised environment: rebordering the Nariva Swamp, Trinidad</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">I</forename><surname>Sletto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Environment and Planning D</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="183" to="208"/>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<analytic>
+		<title level="a" type="main">Can online map-based applications improve citizen participation? E-Government: towards electronic democracy</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Steinmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Krek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Blaschke</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Lecture Notes in Computer Science</title>
+		<imprint>
+			<biblScope unit="volume">3416</biblScope>
+			<biblScope unit="page" from="25" to="35"/>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<analytic>
+		<title level="a" type="main">The role of fire in changing land use and livelihoods in Riau-Sumatra</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Suyanto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Applegate</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">P</forename><surname>Permana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Khususiyah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Kurniawan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ecology and Society</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">15</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b75">
+	<analytic>
+		<title level="a" type="main">Participatory land-use planning as a sociological methodology for natural resource management</title>
+		<author>
+			<persName><forename type="first">Tan-Kim-Yong</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Regional Development Dialogue</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="70" to="85"/>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b76">
+	<monogr>
+		<title level="m" type="main">Chief Kerry's Moose: A Guidebook to Land Use and Occupancy Mapping, Research Design and Data Collection</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">N</forename><surname>Tobias</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2000">2000</date>
+			<publisher>Union of British Columbia Indian Chiefs and Ecotrust Canada</publisher>
+			<pubPlace>Vancouver, BC</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b77">
+	<monogr>
+		<title level="m">Defining Core Characteristics of Good Governance, United Nations Development Programme, Management Development and Governance Division, Strengthening Capacity for People-Centred Development</title>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>UNDP</publisher>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b78">
+	<monogr>
+		<title level="m" type="main">Women's Safety Audits for a Safer Urban Design</title>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+			<publisher>UN-HABITAT</publisher>
+			<pubPlace>Warsaw, Poland</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>UNHABITAT Warsaw Office</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b79">
+	<analytic>
+		<title level="a" type="main">Ground Truthing'' policy: using participatory map-making to connect citizens and decision makers</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Vajjhala</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Resources</title>
+		<imprint>
+			<biblScope unit="volume">162</biblScope>
+			<biblScope unit="page" from="14" to="18"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b80">
+	<analytic>
+		<title level="a" type="main">Shifts in Governance: Problems of Legitimacy and Accountability</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Van Kersbergen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Van Waarden</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">MaGW (Social Science Research Council), for NWO</title>
+		<imprint>
+			<publisher>The Hague</publisher>
+			<date type="published" when="2001">2001</date>
+			<biblScope unit="page">59</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b81">
+	<analytic>
+		<title level="a" type="main">Community-integrated GIS for land reform in South Africa</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Weiner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Harris</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">URISA Journal</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="61" to="73"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b82">
+	<analytic>
+		<title level="a" type="main">GIS in participatory research: assessing the impact of landmines on communities in north-west Cambodia</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Dunn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Transactions in GIS</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="393" to="410"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b83">
+	<analytic>
+		<title level="a" type="main">The creative reconstruction of the Internet: Google and the privatization of cyberspace and DigiPlace</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Zahabu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Zook</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Graham</surname></persName>
+		</author>
+		<ptr target="&lt;http://www.communitycarbonforestry.org/NewPublications/Zahabu%20%20A%20strategy%20to%20involve%20Forest%20Communities"/>
+	</analytic>
+	<monogr>
+		<title level="m">Sinks and Sources: A Strategy to Involve Forest Communities in Tanzania in Global Climate Policy</title>
+		<imprint>
+			<date type="published" when="2007-11">2008. 18.04.11. 2007</date>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page" from="1322" to="1343"/>
+		</imprint>
+		<respStmt>
+			<orgName>University of Twente</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">PhD Thesis</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

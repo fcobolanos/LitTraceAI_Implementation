@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Ground Deformation Monitoring over the Entire Jiangsu Province, China using GACOS-Corrected InSAR Stacking</title>
+				<funder ref="#_PCDv493">
+					<orgName type="full">Fundamental Research Funds for the Central Universities</orgName>
+				</funder>
+				<funder ref="#_5VcKRMu">
+					<orgName type="full">Open Foundation of Key Laboratory of Reservoir Dam Safety, Ministry of Water Resources</orgName>
+				</funder>
+				<funder ref="#_sHHyx62">
+					<orgName type="full">unknown</orgName>
+				</funder>
+				<funder ref="#_YsQRK2f #_7svHfe9">
+					<orgName type="full">Natural Science Foundation of China</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Dezhi</forename><surname>Zhang</surname></persName>
+							<email>dezhizhang1025@163.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Ruya</forename><surname>Xiao</surname></persName>
+							<email>ruya.xiao@hhu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaofeng</forename><surname>Shi</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">School of Earth Science and Engineering</orgName>
+								<orgName type="department" key="dep2">Ministry of Water Resources</orgName>
+								<orgName type="institution">Hohai University Key Laboratory of Reservoir Dam Safety</orgName>
+								<address>
+									<country>People's Republic</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">School of Earth Science and Engineering</orgName>
+								<orgName type="institution">of China</orgName>
+								<address>
+									<settlement>Nanjing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Ministry of Water Resources</orgName>
+								<orgName type="institution">Hohai University Key Laboratory of Reservoir Dam Safety</orgName>
+								<address>
+									<country>People's Republic</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">of China</orgName>
+								<address>
+									<settlement>Nanjing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Jiangsu Province Surveying &amp; Mapping Engineering Institute</orgName>
+								<address>
+									<settlement>Nanjing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Ground Deformation Monitoring over the Entire Jiangsu Province, China using GACOS-Corrected InSAR Stacking</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">AB8E900636E2D5FFC1F49F43A532876B</idno>
+					<idno type="DOI">10.1109/BIGSARDATA53212.2021.9574294</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-09-01T12:22+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Deformation monitoring</term>
+					<term>Jiangsu</term>
+					<term>GACOS</term>
+					<term>InSAR Stacking I</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Jiangsu is one of the most developed provinces in China and it suffered from ground subsidence in the 1990s. Continuous deformation monitoring is important for early warning of hazards as well as a support to disaster prevention and reduction. Interferometric synthetic aperture radar (InSAR) has become a widely recognized tool to measure ground motions. In this work, we process 350 Sentinel-1 images within eight frames by GACOS-corrected InSAR Stacking over the entire Jiangsu Province covering an area of more than 100,000 km 2 . The proposed method aims to rapidly access the deformation velocity by stacking the multiple interferograms corrected with GACOS products, which is widely used for InSAR atmospheric correction. The derived line-of-sight mean velocity map presents an overall view of the areas affected by the ground subsidence in Jiangsu. 12 regions with significant deformation are detected, and results show that the ground subsidence in northern Jiangsu is greater than that in southern Jiangsu in 2019. With the preliminary detection results, we could locate the rapid deforming areas and further investigate the deformation process by the advanced InSAR time series analysis.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>INTRODUCTION</head><p>Jiangsu is one of the provinces with the highest comprehensive development level in China. The Suzhou-Wuxi-Changzhou region of southern Jiangsu, located in the Yangtze River Delta, is the most developed cities in China. It suffers from serious subsidence in the 1990s. The area with settlement exceeding 200mm reached more than 5,000 km 2 , and the maximum cumulative subsidence reached 2 m between 1960 and 2000 <ref type="bibr" target="#b0">[1]</ref>, <ref type="bibr" target="#b1">[2]</ref>. Continuous monitoring of ground deformation is an integral part for disaster early warning and a support to disaster prevention and reduction. A ground subsidence monitoring network has been constructed in the southern part of Jiangsu since the 1980s <ref type="bibr" target="#b2">[3]</ref>. It is composed of borehole extensometers, levelling and Global Positioning System (GPS) stations. Limited by construction and maintenance costs, however, these techniques cannot be densely and evenly deployed over the entire province. During the past three decades, Interferometric synthetic aperture radar (InSAR) has become a widely recognized tool to measure large-scale ground deformation from space, and has gained increasing attention in geo-hazards monitoring because of its resolution. Designed with short revisit times and wide swaths , the current Sentinel-1 and future NISAR missions will provide unprecedented huge SAR data volumes for the InSAR applications. In addition, as a future objective, Near-Real-Time (NRT) monitoring will be an important target in InSAR applications, e.g., in early warning systems. At present, although the computation speed could be improved through parallelized computation and improved computational capacity, the time series analysis is still timeconsuming. For the assessment of deformation from such Big SAR Data, the current available time series interferometric synthetic aperture radar (TSInSAR) algorithms would be infeasible. For example, even though running in the cloud (using a large number of physical CPUs), it took about three months to process the 1,100 Sentinel-1 SAR images acquired over Japan using SqueeSAR TM <ref type="bibr" target="#b3">[4]</ref>, <ref type="bibr" target="#b4">[5]</ref>. In fact, at the early stage of deformation monitoring, the globally detailed deformation time series are not essential. In most cases, the majority of study areas are stable and the detection of potential deforming areas is more important. Therefore, it is necessary to make a trade-off between the estimation optimality and processing run time. In this work, we apply the GACOS-corrected InSAR stacking method and obtain a deformation mean velocity map of the entire Jiangsu province. The stacking strategy could provide a general view over a large area with high algorithm efficiency. With the derived mean velocity map, the rapid deforming areas are detected and the deformation time series are further investigated by LiCSBAS.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. STUDY AREA AND DATASETS</head><p>Jiangsu province is located at the eastern-central coast of China and in the Yangtze River Delta, with a total area of 107,200 km 2 . In the 1990s, Jiangsu suffered from serious ground subsidence due to the overexploitation of groundwater. With the groundwater mining prohibition implemented since 2005 <ref type="bibr" target="#b5">[6]</ref>, the hydrogeological environment has improved sustainably and the subsidence rate in southern Jiangsu has slowed down significantly. But the threat is still posed by the increasingly expanding ground subsidence over the whole province. In 2014, the provincial government of Jiangsu proposed a 10-year plan aiming to mitigate ground subsidence, including enhancing the monitoring capability of ground subsidence as a preventive strategy. After stacking these GACOS-corrected interferograms, the mean velocity maps coming from three tracks are then combined into one deformation dataset.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. INSAR DATA PROCESSING</head><p>In InSAR data processing, decorrelation and atmospheric effects are the main critical issues that limit the accuracy of deformation results. To overcome these limitations, time series InSAR methods are developed. They focus on pixels with different scattering characteristics, referred to as the persistent scatterers (PSs) and the distributed scatterers (DSs). However, the processing of PS or DS is very computationally demanding. Furthermore, the computational time is increasing due to the huge SAR data volumes over wide areas (&gt; 10,000km 2 ). To improve the computational efficiency, we apply a new method based on InSAR stacking and GACOS products. In time-series InSAR analysis, InSAR stacking is a simple and straightforward way to retrieve the deformation signal by averaging multiple interferograms. In this model, it is assumed that the deformation signals are systematic in the interferograms, while the noise, e.g., the atmospheric delay errors, are random <ref type="bibr" target="#b6">[7]</ref>, <ref type="bibr" target="#b7">[8]</ref>. Thus, the random noise could be reduced by the method of least squares used in stacking, and the signal-to-noise ratio would increase significantly. The mean velocity is estimated by the temporal baseline weighted sum of the unwrapped interferometric phases. The velocity map would intuitively show the deformation distribution of the study area.</p><p>The assumption of the atmospheric noise being random does not always hold. It varies significantly with time and location, could cause an error of ~20 cm in the interferograms <ref type="bibr" target="#b8">[9]</ref>. The deformation signals could even be obscured by the atmospheric phase component, such as the long-wavelength signals. To generate high quality interferograms, it is extremely important to mitigate the atmospheric effects <ref type="bibr" target="#b9">[10]</ref>. GACOS, which is a free, near real-time and globally available tool to generate high-resolution zenith total delay maps <ref type="bibr" target="#b10">[11]</ref>- <ref type="bibr" target="#b13">[14]</ref>, is now widely used for atmospheric delay correction. Together with DEM data, it utilizes High RESolution weather model (HERS) at 0.1-degree and 6-hour resolutions, which released by the European Center for Medium-Range Weather Forecasts (ECMWF) <ref type="bibr" target="#b14">[15]</ref>. GACOS implements the Iterative Tropospheric Decomposition (ITD) model <ref type="bibr" target="#b11">[12]</ref> to separate the stratified and turbulent signals from the tropospheric delays, and generate high spatial resolution (default 90 m) ZTD maps. GACOS is also an easy-to-implement tool. The users can request online with their demands, and the products will be available within several minutes. More information can be found on <ref type="url" target="http://www.gacos.net/">http://www.gacos.net/</ref>. Therefore, InSAR stacking can be applied with interferometric phases corrected by GACOS products to mitigate atmospheric effects and estimate more reliable deformation rate results. Xiao et al. <ref type="bibr" target="#b8">[9]</ref> first proposed the GACOS-corrected InSAR stacking method, and demonstrated that this method could largely mitigate the atmospheric effects compared to the traditional stacking method. According to this method, the interferograms are obtained similar to the small baseline subset (SBAS) method, which could avoid the influence of decorrelation. The unwrapped interferograms are corrected with GACOS differential ZTDs (dZTDs) <ref type="bibr" target="#b15">[16]</ref>. The mean velocity map could be estimated by averaging the multiple GACOScorrected interferograms and used for rapid assessment of the ground deformation. In this work, we apply the GACOScorrected InSAR stacking method over the entire Jiangsu province and detect the deforming areas using the mean velocity map. With the preliminary detection results, LiCSBAS <ref type="bibr" target="#b16">[17]</ref>, which is an open-source package for multitemporal InSAR developed by the LiCS team at University of Leeds, is applied to obtain the detailed deformation time series of the deforming areas for further analysis.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. RESULTS AND DISCUSSION</head><p>The mean line-of-sight (LOS) velocity map of the entire Jiangsu province is shown as Fig. <ref type="figure" target="#fig_1">2</ref>. It is observed that the subsidence in northern Jiangsu was significant, such as in the city of Lianyungang, Xuzhou, and Yancheng. These cities are in a rapid urbanization process in recent years. It is consistent with the facts that the implemented groundwater mining prohibition works on the prevention of subsidence occurred in southern Jiangsu. In addition, 12 rapid deforming areas were detected, the deformation rate in eight of them is over 10 cm/yr. The maximum mean LOS velocity occurs in Lianyungang City, reaching 16.7 cm/yr. With the preliminary detection results mentioned above, the detailed deformation time series of the deforming areas can be further retrieved by LiCSBAS. We select a region in the southern part of the city of Lianyungang to show the time series results (see the white dash-line rectangle in Fig. <ref type="figure" target="#fig_1">2</ref>). The deformation velocity map shows that the area is suffering from significant subsidence. Two obvious settling funnel areas could be found on the map, located on the north bank of Yihe River and in the south of Sidui Town. The maximum LOS deformations in the two settling funnel areas are both over 200 mm. We select two typical points at the center of two settling funnel to further investigate the process of the ground motion, which are marked as A and B in Fig. <ref type="figure" target="#fig_2">3</ref>. Site C is in the stable area and shown for reference. The LOS deformation time series of the three sites are plotted in Fig. <ref type="figure" target="#fig_3">4</ref>. In the first three months (January to the beginning of April), all the three sites are quite stable. The curves of the deformation time series at A and B show significant subsidence happened from April to July, 2019. In July and August, the deformation rates of A and B both tend to be gentle, and subsidence occurs again from September to November. The temporal pattern of the deformation may be related to the local agricultural irrigation measures. Two settling funnel areas are surrounded by farmland. The spring irrigation of winter wheat, which is widely planted in this area, starts in March, and requires a large amount of water <ref type="bibr" target="#b17">[18]</ref>. Until the harvest ended in June, groundwater is pumped out for the growth of wheat. There could be a half-month time lag between groundwater withdrawal and ground deformation, and this may be the reason for the subsidence observed during the period from March to June. In addition, July and August are the months with the largest volume of rainfall in the city of Lianyungang. In 2019, the annual precipitation of Guanyun County reaches 948.3 mm, of which approximately 50% are in July and August. Less demand for groundwater causes the slowdown of land subsidence, shown as the gentle process in the deformation time series in Fig. <ref type="figure" target="#fig_3">4</ref>. The agriculture in the study area is a rice-wheat annual rotation system, and the rice irrigation leads to the subsidence in September to November. No irrigation is needed in the winter season, and the ground surface tends to be stable or even uplift.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>V. CONCLUSION</head><p>In this paper, GACOS-corrected InSAR stacking method was used with 350 Sentinel-1 images to detect and characterize ground deformation over Jiangsu province in 2019. The obtained results provide an important database of ground deformation measurements covering the entire Jiangsu territory, and demonstrate the capability and efficiency of this method in mapping ground deformation over wide areas. The derived mean velocity map presents a general survey of the areas affected by deformation in Jiangsu. Besides the historical subsidence areas in southern Jiangsu, northern part of Jiangsu (e.g., the city of Lianyungang, Xuzhou, Yancheng) was experiencing severe subsidence and 12 rapid deforming areas were detected. The detailed deformation time series in Lianyungang is further obtained by LiCSBAS to reveal a temporal pattern in the deformation process. The land subsidence in the study area has an obvious phased characteristic, and the main reason for this phenomenon is agricultural irrigation by extracting groundwater.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. Sentinel-1 frames covering the entire territory of Jiangsu province. Background colors denote the elevation data from SRTM DEM.In this study, the archived C-band Sentinel-1 Interferometric Wide-swath (IW) datasets are analyzed to detect and monitor the potential deforming areas in Jiangsu. The datasets consist of 350 Sentinel-1 images within eight frames in 2019 covering the entire province, as shown in Fig.1. Shuttle Radar Topography Mission (SRTM) digital elevation model (DEM) with 1 arc-sec is used to remove the topographic component from the interferometric phase. 585 unwrapped interferograms and the corresponding Generic Atmospheric Correction Online Service for InSAR (GACOS) differential zenith total delay (ZTD) maps are generated. After stacking these GACOS-corrected interferograms, the mean velocity maps coming from three tracks are then combined into one deformation dataset.</figDesc><graphic coords="2,45.12,81.60,242.16,232.32" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 2. Geocoded LOS mean velocity of Jiangsu derived from Sentinel-1 images acquired in 2019, where positive values imply the movement toward the satellite. Selected subsidence zone in the city of Lianyungang is marked with the white dash-line rectangle. The prefecture-level administrative boundaries are highlighted by white solid lines.</figDesc><graphic coords="3,45.12,53.04,242.16,194.16" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 3 .</head><label>3</label><figDesc>Fig. 3. The deformation time series of the subsidence region detected in Lianyungang city, where positive value means movement toward the satellite.</figDesc><graphic coords="3,45.12,429.60,242.16,215.04" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 4</head><label>4</label><figDesc>Fig.4 Deformation time series in the LOS direction of selected three sites whose locations are denoted as black triangles in Figure 3.</figDesc><graphic coords="3,308.16,218.16,241.92,181.92" type="bitmap"/></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>Authorized licensed use limited to: ESCUELA POLITECNICA DEL LITORAL (ESPOL). Downloaded on August 19,2025 at 17:43:20 UTC from IEEE Xplore. Restrictions apply.</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENT</head><p>We thank <rs type="institution">European Space Agency</rs> for providing the Sentinel-1 images. Thank GACOS (www.gacos.net) which is developed at <rs type="institution">Newcastle University, UK</rs>, and <rs type="institution">Chang'an University, China</rs>, for providing the InSAR atmospheric correction products. Thank the <rs type="institution">LiCS team at Centre for the Observation and Modelling of Earthquakes, Volcanoes and Tectonics (COMET)</rs> and <rs type="institution">University of Leeds</rs> for providing the LiCSAR products and LiCSBAS.</p></div>
+			</div>
+			<div type="funding">
+<div><p><rs type="person">Ruya Xiao</rs> This research was supported by <rs type="funder">Natural Science Foundation of China</rs> (grant Nos. <rs type="grantNumber">41804005</rs>, <rs type="grantNumber">42174018</rs>); the <rs type="funder">Fundamental Research Funds for the Central Universities</rs> (grant No. <rs type="grantNumber">B210202111</rs>); <rs type="funder">Open Foundation of Key Laboratory of Reservoir Dam Safety, Ministry of Water Resources</rs> (grant No. <rs type="grantNumber">YK321008</rs>). 2021 <rs type="projectName">SAR in Big Data Era</rs> (<rs type="projectName">BIGSARDATA</rs>) | <rs type="grantNumber">978-1-6654-0123-4/21/$</rs></p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_YsQRK2f">
+					<idno type="grant-number">41804005</idno>
+				</org>
+				<org type="funding" xml:id="_7svHfe9">
+					<idno type="grant-number">42174018</idno>
+				</org>
+				<org type="funding" xml:id="_PCDv493">
+					<idno type="grant-number">B210202111</idno>
+				</org>
+				<org type="funded-project" xml:id="_5VcKRMu">
+					<idno type="grant-number">YK321008</idno>
+					<orgName type="project" subtype="full">SAR in Big Data Era</orgName>
+				</org>
+				<org type="funded-project" xml:id="_sHHyx62">
+					<idno type="grant-number">978-1-6654-0123-4/21/$</idno>
+					<orgName type="project" subtype="full">BIGSARDATA</orgName>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Land subsidence in China and its problems</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Quat. Sci</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="585" to="593"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Problems and discussions in the study of land subsidence in the Suzhou-Wuxi-Changzhou area</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jiang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Quat. Sci</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="29" to="33"/>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Preliminary design of establishment of land subsidence monitoring network system in Suzhou-Wuxi-Changzhou (Su-Xi-Chang) area</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chinese J. Geol. Harzard Control</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="82" to="85"/>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">A new algorithm for processing interferometric data-stacks: SqueeSAR</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ferretti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fumagalli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Novali</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Prati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Rocca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rucci</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="3460" to="3470"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">A Squeesar Database Over the Entire Japanese Territory</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ferretti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Novali</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Giannico</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Uttini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Iannicella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mizuno</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">IGARSS 2019 -2019 IEEE Int. Geosci. Remote Sens. Symp</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="2078" to="2080"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Land subsidence and countermeasures for its prevention in China</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chinese J. Geol. Harzard Control</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="1" to="8"/>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Phase gradient approach to stacking interferograms</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">T</forename><surname>Sandwell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Price</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Geophys. Res. Solid Earth</title>
+		<imprint>
+			<biblScope unit="volume">103</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="30183" to="30204"/>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Measurement of interseismic strain accumulation across the North Anatolian Fault by satellite radar interferometry InSAR data</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wright</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Parsons</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Fielding</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Geophys. Res. Lett</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="2117" to="2120"/>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">General Survey of Largescale Land Subsidence by GACOS-Corrected InSAR Stacking: Case Study in North China Plain</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>He</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Int. Assoc. Hydrol. Sci</title>
+		<meeting>Int. Assoc. Hydrol. Sci</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="volume">382</biblScope>
+			<biblScope unit="page" from="213" to="218"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Interferometric Processing of Sentinel-1 TOPS Data</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Yague-Martinez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="2220" to="2234"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Generic Atmospheric Correction Model for Interferometric Synthetic Aperture Radar Observations</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">T</forename><surname>Penna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Crippa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Geophys. Res. Solid Earth</title>
+		<imprint>
+			<biblScope unit="volume">123</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="9202" to="9222"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Interferometric synthetic aperture radar atmospheric correction using a GPS-based iterative tropospheric decomposition model</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">T</forename><surname>Penna</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens. Environ</title>
+		<imprint>
+			<biblScope unit="volume">204</biblScope>
+			<biblScope unit="page" from="109" to="121"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Generation of real-time mode highresolution water vapor fields from GPS observations</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">T</forename><surname>Penna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Geophys. Res</title>
+		<imprint>
+			<biblScope unit="volume">122</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="2008" to="2025"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">International Journal of Applied Earth Observations and Geoinformation Statistical assessment metrics for InSAR atmospheric correction : Applications to generic atmospheric correction online service for InSAR ( GACOS ) in Eastern China</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>He</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Appl. Earth Obs. Geoinf</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page">102289</biblScope>
+			<date type="published" when="2020-08">August 2020. 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Systematic InSAR tropospheric phase delay corrections from global meteorological reanalysis data</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jolivet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Grandin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lasserre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Doin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Peltzer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Geophys. Res. Lett</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="issue">17</biblScope>
+			<biblScope unit="page" from="1" to="6"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Triggered afterslip on the southern Hikurangi subduction interface following the 2016 Kaikōura earthquake from InSAR time series with atmospheric corrections</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">T</forename><surname>Penna</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens. Environ</title>
+		<imprint>
+			<biblScope unit="volume">251</biblScope>
+			<biblScope unit="page">112097</biblScope>
+			<date type="published" when="2020-08">August. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">LiCSBAS: An open-source insar time series analysis package integrated with the LiCSAR automated sentinel-1 InSAR processor</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Morishita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lazecky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Wright</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Weiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hooper</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="5" to="8"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Effects of time of spring one irrigation on the grain filling characteristics and water use efficiency of winter wheat</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chinese J. Eco-Agriculture</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="1296" to="1304"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A Reconductoring Approach for Efficient Long-Term Planning of the Ecuadorian Power Grid</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>IEEE</publisher>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2024-10-17">2024-10-17</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Wilian</forename><surname>Guamán</surname></persName>
+							<idno type="ORCID">0000-0002-9905-8231</idno>
+							<affiliation key="aff0">
+								<orgName type="department">Facultad de Ingeniería Eléctrica y Computación Escuela Superior</orgName>
+								<orgName type="institution">Politécnica del Litoral</orgName>
+								<address>
+									<postCode>0000-0002-9905-8231 2 nd</postCode>
+									<settlement>Guayaquil</settlement>
+									<country key="EC">Ecuador</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pablo</forename><surname>Benalcazar</surname></persName>
+							<idno type="ORCID">0000-0001-9578-8299</idno>
+							<affiliation key="aff1">
+								<orgName type="department">Mineral and Energy Economy Research Institute</orgName>
+								<orgName type="institution">Polish Academy of Sciences</orgName>
+								<address>
+									<postCode>0000-0001-9578</postCode>
+									<settlement>Kraków</settlement>
+									<country key="PL">Poland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">José</forename><surname>Córdova-García</surname></persName>
+							<idno type="ORCID">0000-0003-1624-8521</idno>
+							<affiliation key="aff2">
+								<orgName type="department">Facultad de Ingeniería Eléctrica y Computación Escuela Superior</orgName>
+								<orgName type="institution">Politécnica del Litoral</orgName>
+								<address>
+									<postCode>0000-0003-1624-8521 4 th</postCode>
+									<settlement>Guayaquil</settlement>
+									<country key="EC">Ecuador</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Miguel</forename><surname>Torres</surname></persName>
+							<idno type="ORCID">0000-0002-3315-3279</idno>
+							<affiliation key="aff3">
+								<orgName type="department">Facultad de Ingeniería Eléctrica y Computación Escuela Superior</orgName>
+								<orgName type="institution">Politécnica del Litoral</orgName>
+								<address>
+									<postCode>0000-0002-3315-3279</postCode>
+									<settlement>Guayaquil</settlement>
+									<country key="EC">Ecuador</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">A Reconductoring Approach for Efficient Long-Term Planning of the Ecuadorian Power Grid</title>
+					</analytic>
+					<monogr>
+						<title level="m">2024 10th International Conference on Optimization and Applications (ICOA)</title>
+						<imprint>
+							<publisher>IEEE</publisher>
+							<biblScope unit="page" from="1" to="7"/>
+							<date type="published" when="2024-10-17"/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">1D69D958F31CD32B17F98E5819E7410A</idno>
+					<idno type="DOI">10.1109/icoa62581.2024.10754524</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-01T11:59+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Reconductoring</term>
+					<term>Generation</term>
+					<term>Planning</term>
+					<term>MILP</term>
+					<term>Ecuador</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Since 2023, Ecuador has faced significant challenges in the energy sector due to regional droughts impacting hydroelectric capacity and increasing reliance on energy imports. In this context, planning the expansion of the infrastructure that generates and transmits electricity to end consumers should focus on strategies that optimize the use of available resources. This paper presents a Mixed Integer Linear Programming (MILP) approach for multistage combined electricity generation and transmission planning (GTEP). The model employs a reconductoring strategy for existing 230 kV transmission lines, integrating higher-capacity conductors. The practicality and effectiveness of the model are validated through a case study of Ecuador's power system, which features a 21-bus system. The results confirm that the model provides cost-efficient solutions, with a projected investment of $4417.40 MUSD to diversify energy sources and reduce reliance on imports, a crucial step towards achieving Ecuador's energy independence by 2030.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>NOMENCLATURE</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Sets</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>AL</head><p>Set of all branches i, j </p><formula xml:id="formula_0">n i,j</formula><p>Maximum number of branches that can be added to i, j P l i,j Maximum power flow of branch i, j, (MW) Af y,g Availability factor of generator g in stage y, (%) Minimum active power of generator g in stage y, (MW) P l R i,j Maximum power flow of branch i, j after reconductoring, (MW)</p><formula xml:id="formula_1">c</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Rm</head><p>Reserve margin, (MW) Sb</p><p>Base power, (MVA) T b i Type of node i, (slack, PV, or PQ) x i,j</p><p>Reactance of branch i, j, (p.u.)</p><formula xml:id="formula_2">x R i,j</formula><p>Reactance of branch i, j after reconductoring, (p.u.) Variables δ y,i</p><p>Phase angle of node i in stage y, (radians) P gen y,g Active power generated by generator g, in stage y, (MW) P y,i,j Active power flow on new branch i, j, in stage y, (MW) P E y,i,j </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>The planning of electric system expansion faces increasingly significant challenges due to the growing energy demands in emerging and developing economies and the rapid adoption of advanced technologies with high electrical consumption in developed countries, including the expansion of electric vehicles and the integration of smart energy grids across various industrial sectors. According to the "Energy Outlook 2023", final electricity demand is projected to increase by approximately 75% by 2050 <ref type="bibr" target="#b0">[1]</ref>.</p><p>The efficiency and reliability of electrical systems are crucial for managing this increase in energy consumption. Annual costs associated with investment and operation represent only a fraction of the total costs of energy and auxiliary services traded each year. Given this, any failure in the generation or transmission system can have significant consequences for the stability of the electrical system, making it essential to have infrastructure that is not only efficient but also robust and strategically planned.</p><p>To address these challenges, planning entities utilize optimization models focused on minimizing costs, including investment, operation, and maintenance. The Generation Expansion Planning (GEP) problem addresses the identification of an investment schedule for new generation units, specifying their location and technology to meet the projected demand throughout the planning period <ref type="bibr" target="#b1">[2]</ref>. On the other hand, Transmission Network Expansion Planning (TNEP) determines when, where, and how many new infrastructures, such as transmission lines, are necessary to meet reliability standards, economic efficiency, and sustainability <ref type="bibr" target="#b2">[3]</ref>.</p><p>Traditionally, GEP and TNEP have been treated as separate optimization problems, tackled by different market agents: producers in the case of GEP and regulated planners in the case of TNEP <ref type="bibr" target="#b3">[4]</ref>. However, integrated planning for expanding generation and transmission (GTEP) provides significant added value, as transmission constraints can considerably influence the location and size of new generation units <ref type="bibr" target="#b4">[5]</ref>.</p><p>Research in TNEP has significantly evolved since the initial mixed integer linear disjunctive formulation proposed by Bahiense et al. <ref type="bibr" target="#b5">[6]</ref>. The relaxation of the alternating current load flow equations presented in <ref type="bibr" target="#b6">[7]</ref>, allowed TNEP to address challenges related to reactive compensation <ref type="bibr" target="#b7">[8]</ref>, <ref type="bibr" target="#b8">[9]</ref>, security constraints <ref type="bibr" target="#b9">[10]</ref>, <ref type="bibr" target="#b10">[11]</ref>, resilience <ref type="bibr" target="#b11">[12]</ref>, distributed generation <ref type="bibr" target="#b12">[13]</ref>, and even GTEP models <ref type="bibr" target="#b13">[14]</ref>, <ref type="bibr" target="#b14">[15]</ref>. The works of <ref type="bibr" target="#b15">[16]</ref> and <ref type="bibr" target="#b16">[17]</ref> tackle the TNEP problem from a different perspective, considering the repowering or reconductoring of existing transmission lines as a cost-effective alternative, given that under certain circumstances, it may be less costly to repower an existing transmission line rather than build a new circuit. For example, replacing ACSR conductors with HTLS can result in exceptional performance under a Dynamic Thermal Line Rating (DTLR) approach <ref type="bibr" target="#b17">[18]</ref>.</p><p>Although reconductoring has been discussed in the literature, to the best of the authors' knowledge, no prior studies have explored this approach for the Ecuadorian electricity system. This work develops a multistage joint generation and transmission planning model that uniquely considers the specific characteristics of Ecuador's energy mix and transmission network. The applicability of the model is demonstrated through the case study of the Ecuadorian power system, proposed as a test system (21-Bus-EC System), showcasing its potential impact and relevance to the country's electrical infrastructure.</p><p>The rest of this paper is structured as follows: Section 2 describes the mathematical model for generation and transmission expansion. It also outlines the data for constructing the proposed 21-Bus-EC System case study. Section 3 discusses the results obtained regarding the generation and transmission expansion strategy, along with total costs. Finally, Section 4 presents the conclusions and future research directions.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. METHODOLOGY</head><p>This section describes the MILP model developed to cooptimize generation and transmission in the power grid, focusing specifically on reconductoring existing lines.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Formulation of the Problem</head><p>The problem involves optimizing the transmission network's efficiency by strategically reconductoring existing lines and integrating new generation resources where necessary. The MILP model considers the operational, construction, and upgrading costs associated with transmission and generation assets over a specified planning horizon.</p><p>1) Objective Function: The objective function, showing in Eq. ( <ref type="formula">1</ref>), is designed to minimize the total cost of expanding and operating the transmission and generation network over a planning horizon. It incorporates the total discounted costs associated with the construction of new transmission lines cl i,j , the reconductoring of existing lines c R i,j , and the operation of generators c opg y,g , as a function of their availability and energy demand throughout the year. Additionally, the costs derived from the investment in new generators c ng and the cost of unsupplied energy c ens are considered, reflecting the economic impact of not meeting the energy demand. The costs are adjusted by a discount factor, α y , applied to each stage, reflecting the time value of money.</p><p>(1)</p><formula xml:id="formula_3">Minimize Cost = y (α y • ( i,j,ALi,j (cl i,j • cl w line y,i,j,cl ) + i,j,ALi,j (n E i,j • c R i,j • rpw y,i,j ) + i,j,ALi,j (c Rnew i,j • cl w Rnew y,i,j,cl ) + g (c opg y,g • p gen y,g • Af y,g • 8760 * Sb) + g (c ng y,g • z build y,g ) + i (P N S y,i • c ens • 8760 * Sb)))</formula><p>2) Constraints: The MILP model is framed by a comprehensive set of constraints to ensure the system's operational feasibility and reliability across various scenarios. The constraints encapsulate load balancing (Eq. 2), which ensures that power generation matches demand at all nodes. Power flow constraints (Eqs. 3-6) regulate the electricity flow through existing and reconductored lines, ensuring that the transmission does not exceed physical and safety thresholds.</p><p>(2) i,ALi,j</p><formula xml:id="formula_4">(P E y,i,j + P r E y,i,j + cl (P y,i,j,cl + P r R y,i,j,cl )) - j,ALj,i</formula><p>(P E y,j,i + P r E y,j,i + cl (P y,j,i,cl + P r R y,j,i,cl )) + g (p gen y,g )</p><formula xml:id="formula_5">+ P N S y,i = (1 + Rm) • Pd y,i Sb ; ∀y, i -(2 • δi • rpw y,i,j ) ≤ P E y,i,j • x i,j n E i,j * Sb -(δ y,i -δ y,j ≤ 2 • δi • rpw y,i,j ; ); ∀y, i, j | (n E i,j &gt; 0)<label>(3)</label></formula><formula xml:id="formula_6">-(2 • δi • (1 -rpw y,i,j )) ≤ P r E y,i,j • x R i,j n E i,j * Sb -(δ y,i -y,j ≤ 2 • δi • (1 -rpw y,i,j ); ∀y, i, j | ((n E i,j &gt; 0) ∧ (x R i,j = 0))<label>(4)</label></formula><formula xml:id="formula_7">-(2 • δi • (1 -w line y,i,j,cl )) ≤ P y,i,j,cl • x i,j Sb -(δ y,i -δ y,j ≤ 2 • δi • (1 -w line y,i,j,cl ); ∀y, i, j, cl<label>(5)</label></formula><formula xml:id="formula_8">-(2 • δi • (1 -w Rnew y,i,j,cl )) ≤ P r R y,i,j,cl • x R i,j Sb -(δ y,i -δ y,j ) ≤ 2 • δi • (1 -w Rnew y,i,j,cl ); ∀y, i, j, cl | (x R i,j = 0)<label>(6)</label></formula><p>Constraints on new line installations (Eqs. 7-10) control the introduction and operation of new infrastructure based on strategic needs and capacity limits. Generation capacity and operational safety are governed by Eqs. 18-19, imposing limits on the output of power plants to align with demand and safety standards. Further constraints (Eqs. 11-17, 20-23) address system-wide parameters such as voltage levels, phase angles, and the stability of power flows under varying conditions, ensuring comprehensive coverage of all technical aspects necessary for robust power system operation. ( <ref type="formula">7</ref>)</p><formula xml:id="formula_9">-(n E i,j • P l i,j Sb • (1 -rpw y,i,j )) ≤ P E y,i,j ≤ n E i,j • P l i,j Sb • (1 -rpw y,i,j ); ∀y, i, j<label>(8)</label></formula><formula xml:id="formula_10">-(n E i,j • P l R i,j Sb • rpw y,i,j ) ≤ P r E y,i,j ≤ n E i,j • P l R i,j Sb • rpw y,i,j ; ∀y, i, j<label>(9)</label></formula><p>-(w line y,i,j,cl • P l i,j Sb ) ≤ P y,i,j,cl ≤ w line y,i,j,cl • P l i,j Sb ; ∀y, i, j, cl</p><formula xml:id="formula_11">-(w Rnew y,i,j,cl • P l R i,j Sb ) ≤ P r R y,i,j,cl ≤ w Rnew y,i,j,cl • P l R i,j Sb ; ∀y, i, j, cl<label>(10)</label></formula><p>y,cl Ecuador's electricity system relies heavily on hydroelectricity. In 2023, of the total effective power of 8,254.45 MW, hydroelectric plants constituted 62.42%. That year, the total net energy production was 31,903.26 GWh, composed of 59.02% hydroelectricity, 26.2% thermal sources, 1.7% nonconventional renewable sources, and 8.1% imported electricity from Colombia and Peru. Additionally, 4.7% of the energy demand was not satisfied due to load-shedding protocols implemented by the system operator <ref type="bibr" target="#b18">[19]</ref>.</p><formula xml:id="formula_13">w line y,i,j,cl ≤ n i,j ; ∀i, j<label>(12)</label></formula><p>This strong dependence on hydroelectricity makes the system particularly vulnerable to water resource variability, exacerbated by drought scenarios linked to climate change. This vulnerability was exposed in 2023, when electricity imports from Colombia reached $285.88 MUSD, a figure ten times higher than in 2022, highlighting the critical need to diversify energy sources and strengthen the system's resilience to severe droughts <ref type="bibr" target="#b19">[20]</ref>.</p><p>The MILP model proposed in Section A will be used to investigate and address the above-mentioned challenges. The applicability of the model is illustrated by a simplified 21-node network representing the National Interconnected System of Ecuador, referred to as the 21-Bus-EC System. This network includes a 230 kV transmission ring with 15 nodes, two 138 kV nodes, and a 500 kV backbone system with four additional nodes, as shown in Figure <ref type="figure" target="#fig_2">1</ref>. To ensure the accuracy of power flow calculations within this network, the results were validated using DigSilent PowerFactory, confirming the reliability and effectiveness of the proposed modeling approach.</p><p>The planning scenario for expanding Ecuador's electricity system extends from 2024 to 2030 maintaining a reserve margin of 15%. A multivariate linear regression model was used to determine the maximum demand to be satisfied, using GDP and population projections showing in Table <ref type="table">I</ref> as predictor variables. The projections reveal that the demand for electric power will increase by 14.53% by the year 2030. Then, this demand is distributed among the 21 nodes according to a participation factor designated for each node as a parameter. The data used to model the thechnical and economic characteristics of the generators and loads were obtained from openaccess sources, including the Electricity Master Plan (PME) <ref type="bibr" target="#b20">[21]</ref>, reports from the electricity system operator CENACE <ref type="bibr" target="#b18">[19]</ref>, ARCERNRR <ref type="bibr" target="#b19">[20]</ref> report and Lazard's Levelized Cost of Energy Analysis report <ref type="bibr" target="#b21">[22]</ref>.</p><p>The subset of candidate generation facilities includes three hydroelectric plants as proposed in the PME: Santiago, Cardenillo, and Toachi Pilatón. Furthermore, four generic generation plants are outlined in Table <ref type="table" target="#tab_4">II</ref> , which includes two thermal and two photovoltaic facilities strategically positioned at the Totoras, Pascuales and Santa Rosa nodes to meet the high energy demands of Ecuador's largest cities, Ambato, Guayaquil and Quito, respectively. These generation facilities are assumed to be integral components of the strategies devised by planners to mitigate the energy crisis in the short term.</p><p>To quantitatively assess the impact of climatic variations on hydroelectric generation, this study incorporates an availability factor that reflects the variability in water resources. This factor adjusts the expected output from hydroelectric facilities. It is applied to compensate for both seasonal fluctuations and long-term climatic trends, ensuring that the model accurately reflects real-world conditions. This approach is thoroughly documented in the recent academic literature, including references <ref type="bibr" target="#b22">[23]</ref> and <ref type="bibr" target="#b23">[24]</ref>.</p><p>On the other hand, the reconductoring approach involves the replacement of existing transmission line conductors (ACSR Bluejay 1113 conductor) with higher capacity conductors (ACSS Bluejay 1113). The latter offers an ampacity 22% higher than the original conductor, as cited in <ref type="bibr" target="#b16">[17]</ref>. This change is intended to increase the efficiency and capacity of these specific lines. Table III illustrates the lines selected for reconductoring.</p><p>The optimization model was developed using the General Algebraic Modeling System (GAMS) and solved with the   Gurobi solver. All computational tasks were executed on a high-performance computing platform equipped with an Intel i9-13900K processor and 128 GB of RAM. To quantify the computational demands of the model, the average CPU time recorded for solving the base scenario was approximately 11.52 seconds. Table <ref type="table" target="#tab_6">IV</ref> provides a detailed summary of the model's computational statistics. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. RESULTS</head><p>The application of the proposed optimization model to the 21-Bus-EC System case study reveals that the budget required to address Ecuador's energy crisis through 2030 is projected to be $7169.31 MUSD. It is crucial to note that the variable costs applied in the model provide an approximation and do not necessarily reflect the exact operational reality of each power plant. Consequently, the model results are intended to provide decision support and not to define the planner's policy actions directly.</p><p>The cost breakdown for the period 2024-2030 is detailed in Table <ref type="table" target="#tab_6">V</ref>. Investments in six new power plants account for 59.33% of the total budget. Costs associated with the operation of existing power plants represent 38.38%, underscoring the continuous need for maintaining and optimizing current assets. A smaller portion of the budget is allocated to the transmission system, including the construction of new lines and the reconductoring of existing lines, which collectively account for approximately 2.07% of the total budget. As shown in Figure <ref type="figure" target="#fig_3">2</ref>, the 2024-2030 period underlines a sustained dependence on hydropower. By 2030, hydropower is expected to cover 72.01% of Ecuador's electricity demand. Thermal power plants are expected to contribute 25.26%, while photovoltaic generation will contribute a modest 1.75%. It is worth noting that imports from Colombia drop from 8.69% to 0.99% at the end of the planning period, indicating that even with investments in electricity generation, dependence on generation from Colombia would remain, especially in Ecuador's dry season, where availability factors tend to be lower. Although reconductoring represents a minimal cost in the total investment, the results presented in Fig. <ref type="figure" target="#fig_4">3</ref> suggest that increasing the transmission capacity of existing lines may result in a more cost-efficient solution. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>CONCLUSIONS</head><p>This study presents optimal planning for the expansion of Ecuador's electrical system using a MILP model that incorporates a reconductoring approach. Key findings from the application of this model include:</p><p>The MILP model effectively integrates reconductoring strategies within a multistage planning framework for generation and transmission systems. By accounting for the comprehensive costs of construction, reconductoring, and operational dynamics, the model strategically minimizes the total cost of electricity supply over multiple planning periods.</p><p>The application of the MILP model to the 21-Bus-EC System demonstrates its utility in planning under Ecuador's heavy reliance on hydropower. The model indicates necessary investments totaling $4,253.77 MUSD for new power plants by 2030, emphasizing the shift towards diversifying energy sources. Additionally, $163.33 MUSD is allocated for enhancing the transmission system, including new constructions and reconductoring. This represents a strategic effort to reduce the system's dependence on imported electricity, which is expected to decrease to 0.99% of the energy mix by 2030.</p><p>Future research will aim to enhance the model by incorporating the stochastic nature of water resources, and climate change factors. These enhancements will allow the model to provide more comprehensive solutions that align with sustainable development goals.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head/><label/><figDesc>ens Cost of energy not served, ($/MWh) C ng y,g Investment cost of new generator g in stage y, (M$) C opg y,g Operating cost of generator g, in stage y ($/MWh) c R i,j Cost of reconductoring branch i, j, (MUSD) c R i,j n Cost of constructing a new branch identical to i, j post-reconductoring, (MUSD) cl i,j Construction cost of a new branch i, j, (MUSD) Load of node i in stage y, (MW) P max y,g Maximum active power of generator g in stage y, (MW) P min y,g</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head/><label/><figDesc>Authorized licensed use limited to: ESCUELA POLITECNICA DEL LITORAL (ESPOL). Downloaded on August 22,2025 at 20:04:05 UTC from IEEE Xplore. Restrictions apply.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Representation of the National Interconnected System of Ecuador as a 21-bus network.</figDesc><graphic coords="5,55.05,50.54,501.90,360.44" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Ecuador's electricity mix for the period 2024-2030.</figDesc><graphic coords="6,47.49,480.11,254.02,179.61" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. New Transmission Lines for the period 2024-2030.</figDesc><graphic coords="6,314.45,86.76,246.11,129.71" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table II CANDIDATE</head><label>II</label><figDesc>POWER PLANTS PARAMETERS</figDesc><table><row><cell>Candidate Power Plant</cell><cell>P max y,g</cell><cell>C opg y,g</cell><cell/><cell>C ng y,g</cell><cell>Afy,g</cell></row><row><cell/><cell>[MW]</cell><cell cols="2">[MUSD]</cell><cell>[MUSD]</cell><cell>[%]</cell></row><row><cell>N HP ToachiPilaton</cell><cell>254.00</cell><cell>2.00</cell><cell/><cell>100.00</cell><cell>60.00</cell></row><row><cell>N TP Generic Gas</cell><cell>300.00</cell><cell>47.50</cell><cell/><cell>350.00</cell><cell>85.00</cell></row><row><cell>N HP Cardenillo</cell><cell>596.00</cell><cell>2.00</cell><cell/><cell>1300.00</cell><cell>60.00</cell></row><row><cell>N Photovoltaic Generic1</cell><cell>200.00</cell><cell>0.00</cell><cell/><cell>300.00</cell><cell>25.00</cell></row><row><cell>N TP Generic FuelOil</cell><cell>300.00</cell><cell>37.93</cell><cell/><cell>350.00</cell><cell>80.00</cell></row><row><cell>N HP Santiago</cell><cell>2400.00</cell><cell>2.00</cell><cell/><cell>3000.00</cell><cell>60.00</cell></row><row><cell>N Photovoltaic Generic2</cell><cell>200.00</cell><cell>0.00</cell><cell/><cell>300.00</cell><cell>25.00</cell></row><row><cell/><cell>Table III</cell><cell/><cell/><cell/></row><row><cell cols="5">CANDIDATE LINES FOR RECONDUCTORING</cell></row><row><cell>from node</cell><cell>to node</cell><cell cols="2">n E i,j</cell><cell cols="2">Pl R i,j [MW]</cell></row><row><cell>B14 Taday</cell><cell cols="2">B10 Totoras</cell><cell>1</cell><cell>322.99</cell></row><row><cell>B12 Pomasqui</cell><cell cols="2">B11 SantaRosa</cell><cell>2</cell><cell>303.78</cell></row><row><cell>B9 Riobamba</cell><cell>B14 Taday</cell><cell/><cell>2</cell><cell>312.93</cell></row><row><cell>B1 SantoDomingo</cell><cell cols="2">B11 SantaRosa</cell><cell>2</cell><cell>312.93</cell></row><row><cell>B2 Baba</cell><cell cols="2">B3 Quevedo</cell><cell>1</cell><cell>322.99</cell></row><row><cell>B4 Pascuales</cell><cell cols="2">B6 Milagro</cell><cell>1</cell><cell>322.99</cell></row><row><cell>B5 Dos Cerritos</cell><cell cols="2">B6 Milagro</cell><cell>1</cell><cell>322.99</cell></row><row><cell>B7 Zhoray</cell><cell>B8 Molino</cell><cell/><cell>1</cell><cell>312.75</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_6"><head>Table V COST</head><label>V</label><figDesc>BREAKDOWN FOR THE PERIOD 2024-2030</figDesc><table><row><cell>Cost Item</cell><cell>Cost [MUSD]</cell></row><row><cell>Power Not Served</cell><cell>0.00</cell></row><row><cell>New Line Built</cell><cell>125.98</cell></row><row><cell>Reconductoring</cell><cell>35.58</cell></row><row><cell>New Line post-reconductoring</cell><cell>2.07</cell></row><row><cell>New Power Plants</cell><cell>4253.77</cell></row><row><cell>Operational Power Plants</cell><cell>2751.92</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>Authorized licensed use limited to: ESCUELA POLITECNICA DEL LITORAL (ESPOL). Downloaded on August 22,2025 at 20:04:05 UTC from IEEE Xplore. Restrictions apply.</p></note>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">bp Energy Outlook 2023 edition 2023 explores the key trends and uncertainties</title>
+		<author>
+			<persName><forename type="first">British</forename><surname>Petroleum</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Statistical Review of World Energy</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="53"/>
+			<date type="published" when="2023-07">July. 2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">A comprehensive sequential review study through the generation expansion planning</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sadeghi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rashidinejad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Abdollahi</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.rser.2016.09.046</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.rser.2016.09.046"/>
+	</analytic>
+	<monogr>
+		<title level="j">Renewable and Sustainable Energy Reviews</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="page" from="1369" to="1394"/>
+			<date type="published" when="2016-05">May 2016. 2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Transmission Expansion Planning: Literature Review and Classification</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mahdavi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Sabillon Antunez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ajalli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Romero</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Systems Journal</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="3129" to="3140"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Mixed-integer linear programming models and algorithms for generation and transmission expansion planning of power systems</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Conejo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">P</forename><surname>Omell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Siirola</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">E</forename><surname>Grossmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">European Journal of Operational Research</title>
+		<imprint>
+			<biblScope unit="volume">297</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1071" to="1082"/>
+			<date type="published" when="2022-03">mar 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">State-of-the-art generation expansion planning: A review</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">E</forename><surname>Koltsaklis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Dagoumas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Applied Energy</title>
+		<imprint>
+			<biblScope unit="volume">230</biblScope>
+			<biblScope unit="page" from="563" to="589"/>
+			<date type="published" when="2018-04">April. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">A mixed integer disjunctive model for transmission network expansion</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bahiense</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">C</forename><surname>Oliveira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pereira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Granville</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Power Systems</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="560" to="565"/>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Transmission expansion planning using an ac model: Formulations and possible relaxations</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">T</forename><surname>Heydt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vittal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">D</forename><surname>Mittelmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Power and Energy Society General Meeting</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="8"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Expansion planning for smart transmission grids using ac model and shunt compensation</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Torres</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Castro</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IET Generation, Transmission and Distribution</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="966" to="975"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Unified AC Transmission Expansion Planning Formulation incorporating VSC-MTDC, FACTS devices, and Reactive Power compensation</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>De Araujo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Torres</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Filho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Castro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Van Hertem</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Electric Power Systems Research</title>
+		<imprint>
+			<biblScope unit="volume">216</biblScope>
+			<biblScope unit="page">109017</biblScope>
+			<date type="published" when="2023-03">mar 2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Security constrained AC transmission network expansion planning</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Das</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Verma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">R</forename><surname>Bijwe</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.epsr.2019.03.020</idno>
+		<ptr target="https://doi.org/10.1016/j.epsr.2019.03.020"/>
+	</analytic>
+	<monogr>
+		<title level="j">Electric Power Systems Research</title>
+		<imprint>
+			<biblScope unit="volume">172</biblScope>
+			<biblScope unit="page" from="277" to="289"/>
+			<date type="published" when="2019-04">April. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Transmission Network Expansion Planning Considering Line Switching</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Meneses</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Nascimento</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">H</forename><surname>Macedo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Romero</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="115" to="148"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Long term transmission expansion planning to improve power system resilience against cascading outages</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Qorbani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Amraee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Electric Power Systems Research</title>
+		<imprint>
+			<biblScope unit="volume">192</biblScope>
+			<date type="published" when="2021-03">mar 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Transmission Expansion Planning Considering the Impact of Distributed Generation</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">E</forename><surname>Matute</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Torres</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Castro</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of 2019 IEEE PES Innovative Smart Grid Technologies Europe</title>
+		<meeting>2019 IEEE PES Innovative Smart Grid Technologies Europe<address><addrLine>ISGT-Europe</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2019">2019. 2019</date>
+			<biblScope unit="page" from="1" to="6"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<title level="m" type="main">Co-optimization of electricity transmission and generation resources for planning and policy analysis: review of concepts and modeling approaches</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Krishnan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">F</forename><surname>Hobbs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Mccalley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shahidehpour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><forename type="middle">P</forename><surname>Zheng</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<publisher>Springer</publisher>
+			<biblScope unit="volume">7</biblScope>
+			<pubPlace>Berlin Heidelberg</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Multi-objective resilient-constrained generation and transmission expansion planning against natural disasters</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hamidpour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Pirouzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Safaee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Norouzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lehtonen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Electrical Power and Energy Systems</title>
+		<imprint>
+			<biblScope unit="volume">132</biblScope>
+			<date type="published" when="2021-11">nov 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Transmission network expansion planning considering repowering and reconfiguration</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Tejada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>López-Lezama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Rider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Vinasco</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijepes.2015.01.008</idno>
+		<ptr target="http://dx.doi.org/10.1016/j.ijepes.2015.01.008"/>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Electrical Power and Energy Systems</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="page" from="213" to="221"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Geography-based Transmission Network Expansion Strategies for Andean Electrical Systems</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Guamán</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Benalcazar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ñacato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Vaca</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ject.2024.04.001</idno>
+		<ptr target="https://doi.org/10.1016/j.ject.2024.04.001"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Economy and Technology</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Dynamic thermal rating of transmission lines: A review</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Karimi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Musilek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Knight</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.rser.2018.04.001</idno>
+		<ptr target="https://doi.org/10.1016/j.rser.2018.04.001"/>
+	</analytic>
+	<monogr>
+		<title level="j">Renewable and Sustainable Energy Reviews</title>
+		<imprint>
+			<biblScope unit="volume">91</biblScope>
+			<biblScope unit="page" from="600" to="612"/>
+			<date type="published" when="2016-08">August 2016. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<author>
+			<persName><surname>Cenace</surname></persName>
+		</author>
+		<ptr target="https://www.cenace.gob.ec/wp-content/uploads/downloads/2024/04/Parte-1-Informe-Anual-CENACE-2023.pdf"/>
+		<title level="m">Informe Anual del Operador Nacional de Electricidad de Ecuador</title>
+		<meeting><address><addrLine>Quito, Tech. Rep.</addrLine></address></meeting>
+		<imprint>
+			<publisher>Operador Nacional de Electricidad</publisher>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<monogr>
+		<author>
+			<persName><surname>Arcernnr</surname></persName>
+		</author>
+		<ptr target="https://www.controlrecursosyenergia.gob.ec/wp-content/uploads/downloads/2024/04/EstadisticaAnual2023-WEB-2.pdf"/>
+		<title level="m">Estadística Anual y Multianual del Sector Eléctrico Ecuatoriano 2023</title>
+		<meeting><address><addrLine>Quito, Tech. Rep</addrLine></address></meeting>
+		<imprint>
+			<publisher>Agencia de Regulación y Control de Energía y Recursos Naturales No Renovables</publisher>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<ptr target="https://www.recursosyenergia.gob.ec/plan-maestro-de-electricidad/"/>
+		<title level="m">Plan Maestro de Electricidad 2018-2027</title>
+		<meeting><address><addrLine>Quito</addrLine></address></meeting>
+		<imprint>
+			<publisher>Agencia de Regulación y Control de Energía y Recursos Naturales No Renovables</publisher>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="49" to="58"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<title level="m" type="main">LCOE Lazard</title>
+		<author>
+			<persName><surname>Lazard</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2023-04">April. 2023</date>
+			<biblScope unit="page" from="1" to="57"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Optimal Sizing and Scheduling of Hybrid Energy Systems: The Cases of Morona Santiago and the Galapagos Islands</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Benalcazar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Suski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kaminski</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energies</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">15</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Driving the clean energy transition in Cameroon: A sustainable pathway to meet the Paris climate accord and the power supply/demand gap</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Iweh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">J A</forename><surname>Ayuketah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Gyamfi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Tanyi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Effah-Donyina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">A</forename><surname>Diawuo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Frontiers in Sustainable Cities</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

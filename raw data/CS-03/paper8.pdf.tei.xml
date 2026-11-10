@@ -1,0 +1,1206 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A Preliminary Analysis of Web Accessibility, Usability, and Security on the Front-Facing Webpages of Leading Universities</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>IGI Global</publisher>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2025-06-05">2025-06-05</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Sophia</forename><surname>Alim</surname></persName>
+							<email>sophiaalim66@gmail.com</email>
+							<idno type="ORCID">0000-0002-0413-3893</idno>
+							<affiliation key="aff0">
+								<orgName type="institution">Independent Researcher</orgName>
+								<address>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="institution">Independent Researcher</orgName>
+								<address>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">A Preliminary Analysis of Web Accessibility, Usability, and Security on the Front-Facing Webpages of Leading Universities</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">International Journal of Web Portals</title>
+						<idno type="ISSN">1938-0194</idno>
+						<idno type="eISSN">1938-0208</idno>
+						<imprint>
+							<publisher>IGI Global</publisher>
+							<biblScope unit="volume">15</biblScope>
+							<biblScope unit="issue">1</biblScope>
+							<biblScope unit="page" from="1" to="30"/>
+							<date type="published" when="2025-06-05"/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">0E532821E43B355248FCA3B72A7CC962</idno>
+					<idno type="DOI">10.4018/ijwp.379681</idno>
+					<note type="submission">Received: April 11, 2025, Accepted: May 1, 2025</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-10-11T13:37+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Front-Facing Webpages</term>
+					<term>Universities</term>
+					<term>Web Accessibility</term>
+					<term>Web Security</term>
+					<term>Web Usability</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>University front-facing webpages, such as homepages and course entry details, provide essential information to prospective students and external stakeholders, necessitating accessibility, usability, and security. This study evaluates the web accessibility, usability, and security of 242 front-facing webpages from the top 10 higher education institutions in the UK, Africa, and Israel, based on Webometrics rankings. Automated tools were employed for assessment. Findings indicate that African universities require more work on web accessibility than those in the UK and Israel. All three regions violated accessibility success criteria, with most issues occurring at level A, the minimum standard for accessibility conformance. Over 80% of webpages scored at or above average in usability. The security analysis revealed numerous vulnerabilities in African and Israeli institutions' webpages, including outdated architecture, missing certificates, and lack of encryption. This study suggests that strict web accessibility legislation does not necessarily guarantee improved webpage accessibility.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>INTRODUCTION</head><p>Web accessibility plays an important role in higher education, due to the rise in the use of digital services. Web accessibility equates to inclusion: An accessible website that adapts to the evolution of technologies (such as voice recognition, mobile accessibility, and artificial intelligence assistants), caters to different audiences, has a design that is inclusive to all, is linguistically diverse, and meets ethical and legal obligations can make a big difference to the experience of the user <ref type="bibr" target="#b40">(Repasky, 2023)</ref>.</p><p>University websites present information not only to current staff and students but also to prospective students and internal/external stakeholders, which may include donors. An exploration of the influence of university websites and a prospective student's decision to attend a given university found that websites needed to be attractive and to contain clearly understood content and readily navigable information on topics such as course offerings, locations, accreditation, and programs <ref type="bibr" target="#b42">(Schimmel et al., 2010)</ref>. These websites present the identity and the image of the university to the world <ref type="bibr" target="#b33">(Macakoğlu &amp; Peker, 2022)</ref>. In 2022, researchers from Wiley University Services surveyed 2,500 prospective, current, and recently graduated online learners regarding what they looked for in in Israel or Africa were not explored. Research by <ref type="bibr" target="#b5">Akgül (2021)</ref> focused on Turkish universities, whereas <ref type="bibr" target="#b34">Macakoğlu et al. (2023)</ref> covered the prospective student webpages of 330 universities from three continents, namely Europe, North America, and Oceania, including U.K. universities.</p><p>This study used automated tools to evaluate the accessibility, usability, and security of university websites in the United Kingdom, Africa, and Israel, comparing relevant legislation in these regions. The structure of the paper is: Section 2 explores the web accessibility legislation in the respective regions in this study and related work on university webpages. Section 3 outlines the methodology used in the study. Section 4 presents the results, Section 5 provides a discussion, Section 6 lists the study limitations, and Section 7 concludes the study.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>LITERATURE REVIEW Web Accessibility Legislation</head><p>Many countries around the world have web accessibility legislation, as reported by Web Accessibility <ref type="bibr">Initiative (n.d.-c)</ref>; in most countries, this legislation is based on versions of WCAG 2.0. In this study, we explored the accessibility, usability, and security of higher education webpages in the United Kingdom, Africa, and Israel. These regions were chosen due to the wide disparity in their positions regarding web accessibility compliance and web accessibility legislation.</p><p>Israel's digital accessibility law, Israel Standard (IS) 5568, is based on the 1998 Equal Rights for Persons with Disabilities Act (Government of <ref type="bibr">Israel, 2018)</ref>, which prohibits disability-based discrimination in public places, public services, products, and employment. This act was amended to include web accessibility and took effect in October 2017.</p><p>IS 5568 is also based on conformance to WCAG 2.0, Level AA, and applies to all public and private institutions, including government. Medium and large companies established after October 2017, with an average revenue of £66,000 in U.K. pounds, were required to comply immediately, as were small business with an average revenue of under £66,000. The only exemptions to the law were private contractors with an average revenue of £22,000 or less. This legislation is seen as one of the most strictly enforced web accessibility laws in the world <ref type="bibr">(Bureau of Internet Accessibility, 2022)</ref>.</p><p>Noncompliance penalties are very strict and differ from European law in that a complainant can seek statutory damages of up to £11,000 whereas, in most countries, the court can order a website owner to adjust the website to make it accessible. The imposition of a financial penalty acts as a deterrent to website owners. In addition, the complainant is only required to demonstrate that the website is not compliant with IS 5568 and does not need to prove that the website caused them any injury or loss, for example, loss of income <ref type="bibr" target="#b44">(Udosoh, 2022)</ref>.</p><p>In comparison to Israel, there is a lack of web accessibility legislation in Africa. The government communications department in South Africa offers limited guidance on web accessibility, such as a definition of web accessibility, themes for accessible design (ensuring graceful transformation and making content understandable and navigable), various checkpoints/guidelines based on WCAG guidelines, and information on how to validate web accessibility using human and automated tools <ref type="bibr">(Government of South Africa, n.d.)</ref>. There is no guidance on noncompliance.</p><p>A digital transformation project <ref type="bibr">(2020)</ref><ref type="bibr">(2021)</ref><ref type="bibr">(2022)</ref><ref type="bibr">(2023)</ref><ref type="bibr">(2024)</ref><ref type="bibr">(2025)</ref><ref type="bibr">(2026)</ref><ref type="bibr">(2027)</ref><ref type="bibr">(2028)</ref><ref type="bibr">(2029)</ref><ref type="bibr">(2030)</ref> for the African Union considered the building of a digital single market in Africa by 2030 but made no reference to web accessibility or any legislation (African Union, 2020). The strengths, weaknesses, opportunities, and threats analysis in this report highlighted the opportunity to onboard the 200 million people currently without internet access, which would result in significant gains in gross domestic product, economic productivity, and gender equality. The United Nations (n.d.) toolkit on disability for Africa mentioned accessibility in terms of information barriers and communication barriers for disabled users and referred to web accessibility through the universal accessibility of online communities; however, no reference was made in detail to legislation on accessibility standards. The U.K. government (Government of United Kingdom, 2010) introduced the Equality Act, which forms a key piece of the web accessibility legislation. Under this act, U.K. goods and service providers (including both public and private sector organizations) have a legal obligation to avoid discriminating against people based on several protected characteristics, including disability, which covers people with visual, motor, hearing, cognitive, and learning disabilities. The act focuses on universal accessibility and requires website owners to provide an equal website experience to all users. Compliance with the act means that website owners must therefore make "reasonable adjustments" so that their web content is accessible to people with disabilities. Website owners are required to be proactive and should not wait for disabled people to inform them that their site is inaccessible. The act does not cover the technical accessibility standards required to meet compliance but, in general, organizations aim to meet the WCAG 2.1 Level AA standards.</p><p>The Public Sector Bodies (Websites and Mobile Applications) Accessibility Regulations were introduced in 2018 ( <ref type="bibr">Legislation.gov.uk, n.d.)</ref> to strengthen the existing web accessibility legislation and to ensure that the services provided by public sector bodies are accessible to people with disabilities. Unlike the 2010 Equality Act, these regulations stated that a website must be meet WCAG 2.1 Level AA standards. Public sector bodies must also publish an accessibility statement listing any areas of their sites that do not meet WCAG 2.1 Level AA standards. This is a more stringent requirement than Israel's IS 5568, which is based on conformance to WCAG 2.0 Level AA.</p><p>In terms of enforcement, these regulations identified the specific government bodies that were responsible for reporting and fining organizations with noncompliant websites and applications. However, <ref type="bibr" target="#b21">Christopherson (2024)</ref> highlighted the issues that would arise for a disabled user taking a company to court over an inaccessible website: If the legal fees were more than the damages awarded, the complainant would still have to pay those fees.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Related Work on University Webpages</head><p>Since 2017, studies from around the world have analyzed the accessibility and usability of university webpages. Table <ref type="table" target="#tab_0">2</ref> summarizes these studies and shows that a vast number of the webpages analyzed did not meet WCAG 2.0 compliance requirements. All of the studies involved automated assessment of web accessibility, and only two analyzed different types of webpages at universities, with the most popular automated accessibility tool being AChecker. The number of universities considered in these studies ranged from four to 348. These findings were highlighted in a systematic review by <ref type="bibr" target="#b19">Campoverde-Molina et al. (2023)</ref> of studies covering the web accessibility of university webpages around the world. Subsequently, we describe studies of webpages in the three regions selected for this study that are not covered in Table <ref type="table" target="#tab_0">2</ref>.  United Kingdom <ref type="bibr" target="#b34">Macakoğlu et al. (2023)</ref> analyzed the web accessibility of 10 webpages for prospective students from 330 universities around the world, including the United Kingdom. The automated web accessibility tool Test de Accesibilidad Web (TAW) was used to assess web accessibility, and the results showed that the United Kingdom had the lowest number of accessibility errors per website. This finding was also emphasized in a study by <ref type="bibr" target="#b37">Ohaju (2022)</ref>, which compared the accessibility of university homepages across Europe (four universities from the United Kingdom, Poland, Denmark, and Italy) against the best homepage of a university in Africa, which was located in Nigeria. A total of 17 websites were compared using six automated tools, namely CheckMyColours, TAW, Web Accessibility Versatile Evaluator (WAVE), AChecker, W3C HTML validator and Cascading Style Sheets validator, to obtain accessibility reports for the websites based on WCAG 2.0. The results indicated that none of the 17 websites fully met the WCAG 2.0 criteria. The U.K. university websites were found to have the lowest percentages of errors/known problems when tested with WAVE, TAW, and AChecker tools, but not with the HTML validator or Cascading Style Sheets validator. Only one university from the whole sample passed the CheckMyColours tests, and this was based in the United Kingdom.</p><p>Alim et al. ( <ref type="formula">2021</ref>) considered the homepages of 66 research intensive universities in the United Kingdom, and the automated tools TAW, WAVE and Elll Page Checker were used to assess web accessibility. The results of the EIII Page Checker tool showed that 10.6% of university webpages failed many tests. WAVE highlighted that 74.2% of university webpages contained contrast errors and, when TAW was used, the average number of accessibility errors was 34. Despite the variance in the types of webpages involved, the results of this study agree with the observation of <ref type="bibr" target="#b34">Macakoğlu et al. (2023)</ref> that universities in the United Kingdom have a lower number of accessibility errors compared to those in other countries. <ref type="bibr" target="#b15">Benaida et al. (2018)</ref> compared the usability of U.K. universities' homepages against those in Saudi Arabia, and user testing was carried out with Saudi students rather than via automated testing. A system usability questionnaire and the thinking aloud method were used to gather the opinions of students. The results indicated that, compared to U.K. universities, all three Saudi universities suffered from various usability problems in areas such as satisfaction, design concepts, confidence, integration, inconsistency, ease of use of websites, and comfort of students. The system usability questionnaire did not focus on the backend of the webpage or compliance with WCAG.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Africa</head><p>There are several studies that have looked at the accessibility of webpages for universities in Africa. <ref type="bibr" target="#b37">Ohaju (2022)</ref> compared the accessibility of university homepages across Europe against the best in Africa, which was based in Nigeria, and found that none of the 17 websites fully met the WCAG 2.0 standards. Overall, a university based in Poland delivered the best website in terms of the lowest number of errors, and the university in Nigeria had a high number of errors. Similarly, <ref type="bibr" target="#b45">Verkijika and De Wet (2020)</ref> explored the accessibility of the homepages of 26 South African universities and discovered that none of these websites met all of the WCAG 2.0 criteria, especially at Level A, which all websites were required to meet. The TAW and AChecker automated tools were used for this analysis. There were also broken links on some websites, indicating a lack of resources dedicated to website maintenance.</p><p>The findings of <ref type="bibr" target="#b45">Verkijika and De Wet (2020)</ref> were similar to those of <ref type="bibr" target="#b2">Adepoju and Shehu (2014)</ref>, who described accessibility as a subset of usability. These authors used AChecker, TAW, and Hera to assess the accessibility of 36 university homepages from Nigeria and reported that none of the universities fully satisfied the criteria for WCAG 1.0 and WCAG 2.0. The AChecker tool highlighted the greatest number of errors.</p><p>Several African countries were explored by <ref type="bibr" target="#b11">Alhassan and Okwum (2018)</ref>, who carried out a usability and accessibility analysis of three universities from each of four countries (Tunisia, South Africa, Kenya, and Nigeria). Tools such as Colour Contract Check and WAVE were used. TAW and AChecker were also used for a comparison against the WCAG 2.0 criteria. The results showed that when WAVE was applied, Tunisian universities had the highest numbers of errors. Errors included empty links (containing no text), empty buttons (where a button is empty/has no value text), missing form labels (where a form control does not correspond to a label), and linked images missing alternative text (where images without alternative text result in an empty link). TAW showed that South African universities had the highest number of problems, whereas AChecker indicated that Tunisian universities had the most problems. Based on all the automated tools, a university in Nigeria had the best website, with the lowest number of errors, but did not totally comply with WCAG 2.0. These results are similar to those of <ref type="bibr" target="#b2">Adepoju and Shehu (2014)</ref>, who looked at Nigerian universities and found that none of them satisfied the criteria for WCAG 1.0 and 2.0. Several automated tools were used in the evaluation, but the sample size for each country was small compared to other studies of universities in Africa and around the world. <ref type="bibr" target="#b4">Agangiba and Agangiba (2019)</ref> assessed the accessibility of the homepages of 15 university websites in Ghana using the automated tool aDesigner and compared the results against WCAG 2.0. They found that most of the websites violated the principles of perceivability and operability, and none conformed to an acceptable level of web accessibility. Rather than focusing on accessibility, <ref type="bibr" target="#b36">Muswazi (2009)</ref> considered the usability of the homepages of eight South African university libraries. Using the Wayback Machine, WAVE, readability testing tools and manual checks, the authors examined the evaluation criteria of readability, user interaction, accessibility, visual appeal, and innovativeness for each homepage. The results highlighted that there were barriers such as a lack of alternative text for images, misunderstood terminology, content that could not be understood by all users, a lack of availability of cutting-edge resources and services, outdated information, and inappropriate use of color schemes.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Israel</head><p>Compared to the United Kingdom and Africa, there have been few studies that examined the web accessibility of Israeli university webpages, despite Israel having enacted strict legislation. Laufer Nir and Rimmerman (2018) focused on the University of Haifa and analyzed the homepage, library homepage, two additional webpages from the library, and the course entry webpage using the WAVE automated tool. The accessibility was checked against Israel's IS 5568 web content accessibility guidelines and WCAG 2.0. The study identified 12 types of errors that, despite the strict sanctions for noncompliance, represented a departure from WCAG 2.0 and IS 5568. These created severe barriers to accessibility. Missing alternative text and contrast issues were the most frequent problems, in addition to broken links and poor responsiveness when using a mobile. The library webpages exhibited a better level of accessibility.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Security</head><p>Of the studies conducted since 2017 on the security of university webpages, those of <ref type="bibr" target="#b48">Zheng et al. (2021)</ref> and <ref type="bibr" target="#b34">Macakoğlu et al. (2023)</ref> are the most recent. <ref type="bibr" target="#b48">Zheng et al. (2021)</ref> designed a tool called WebHunt to analyze the security of seven Chinese university campus networks. This tool had integrated functions including reverse resolution of domain names, active network detection, and fingerprint identification for software assets; it was adapted to the campus networks by building an intelligence database with a knowledge graph structure, and vulnerabilities were located though matching knowledge graph information. The results showed that there were many security risks in campus networks, such as system vulnerabilities and noncompliant IP addresses and domain names. <ref type="bibr" target="#b34">Macakoğlu et al. (2023)</ref> took a different approach and utilized the Sucuri tool (<ref type="url" target="https://sitecheck">https:// sitecheck</ref> .sucuri .net/ ) to test the security of 330 university webpages for prospective students. Sucuri assesses the risk level of the website; Transport Layer Security (TLS), or Secure Sockets Layer (SSL), usage; status of the website server or the programming language used to develop it; server type; and</p><p>version. An analysis of the SSL encryption results showed that more than 90% of websites provided secure communication.</p><p>This literature review identifies the need for more research on the accessibility, usability, and security of university front-facing webpages, specifically those of U.K., Israeli, and African universities. It aims to determine whether these universities present information effectively to prospective students and external stakeholders and whether their webpages are accessible, usable, and secure. The study's research questions (RQs) are: RQ1. How does the accessibility, usability, and security of top-ranking front-facing university webpages compare in the United Kingdom, Africa, and Israel? RQ2. Does the presence of strict legislation correspond to better accessibility, usability, and security for front-facing university webpages of top-ranking universities?</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>METHODOLOGY</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data</head><p>In this study, we evaluated the accessibility, usability, and security of a variety of front-facing university webpages (including the homepage, "About us," "Contact us," entry details for undergraduate and postgraduate students, lists of all courses for undergraduates and postgraduates, library homepage, and accommodation details) of the top 10 ranked universities from three regions (Israel, United Kingdom, and Africa) as of December 24, 2023. For webpages with information such as entry details and lists of courses, the links for both undergraduate and postgraduate students were collected where required.</p><p>In the same way as in the studies by <ref type="bibr" target="#b34">Macakoğlu et al. (2023)</ref> and Acosta-Vargas et al. ( <ref type="formula">2018</ref>), the universities were selected via Webometrics, which ranks the world's universities according to impact, openness, and excellence. Impact is given a 50% weighting and relates to the number of external networks (normalized and average values) linked to the university's webpages. Openness is based on the number of citations from the top 310 authors at the university and is weighted at 10%. Excellence is assessed by the number of papers in the top 10% most cited authors for each of the 26 disciplines in the database and is weighted at 40%. The universities for Africa via Webometrics were mainly located in South Africa and Egypt.</p><p>Visibility and web presence are indicators of global performance of a university. Other indicators include research results, teaching commitment, and links with the community and industry <ref type="bibr" target="#b30">(Jomir, 2022)</ref>; however, what these indicators do not reflect is the impact on the students, from their point of view.</p><p>The relevant URLs for the university webpages were identified, resulting in a total of 242 links gathered for analysis across the three regions. Figure <ref type="figure" target="#fig_0">1</ref> shows the Prisma diagram for the selected URLs and indicates the various reasons for exclusion from the study. Only webpages in English were considered in this study.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Tools Used</head><p>Following the studies listed in Table <ref type="table" target="#tab_0">2</ref>, automated tools such as TAW were applied to assess the accessibility of the webpages. TAW assesses webpages against WCAG 2.1 at Level AA, and checks are divided into two categories: automatic, where the tool detects accessibility problems to solve automatically, and manual, where the tool detects the existence of a problem, but the evaluator (a human) must confirm or deny this (TAW, 2023).</p><p>When a webpage has been tested, the results are divided into three areas: problems, warnings, and not analyzed. Issues marked as warnings require some human review, whereas issues that are not analyzed require a full manual review, as the tool is unable to evaluate them.</p><p>Items in all three categories are compared against the checklist in the WCAG 2.1 guidelines in all four areas (perceivability, operability, understandability, and robustness). This allows an evaluator to assess information about each checkpoint and to identify where modifications need to be made to meet the success criteria for the relevant category (A, AA, or AAA).</p><p>The GTmetrix online tool (<ref type="url" target="https://gtmetrix">https:// gtmetrix</ref> .com/ ) was used for usability testing. This tool uses Google Lighthouse, which focuses on user metrics, to analyze the performance of a website, thus enabling the user to identify areas which are slow in terms of performance, and also offers methods of optimizing performance <ref type="bibr">(GTmetrix, n.d.)</ref>. The features highlighted by the tool in this study are detailed in Table <ref type="table" target="#tab_3">3</ref>. GTmetrix was also utilized in other studies, such as those by <ref type="bibr" target="#b34">Macakoğlu et al. (2023)</ref> and Al-Sakran and Alsudairi (2021). </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Feature Units Description</head><p>GTmetrix grade -This represents how fast the webpage performs (in terms of loading, interactivity, and visual stability) and how well it is built for optimal performance. The grade reflects the overall webpage experience, as it accounts for both frontend structures and the actual performance experienced by the user.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>First contentful paint (FCP) ms</head><p>This measures how quickly the text, images, videos etc. can be viewed on the webpage by the user. It represents the total time taken from the beginning of the webpage loading to the point any content is rendered on the screen. A good user experience requires a value of 0.9 s or less. A lower time means that the user will perceive the webpage loads faster due to content being delivered sooner.</p><p>Fully loaded time (FLT) s This is the maximum time after the FCP has fired, OnLoad has been triggered, and the CPU/network has been idle for (5.25 s each) after the last request has been captured. Onload time refers to when the resources on the page (images, CSS, etc.) have finished downloading and processing of the webpage is complete. It is also the time required for the JavaScript window OnLoad event to fire.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Speed index (S) ms</head><p>This measures how quickly the webpage becomes visually complete and is dependent on the size of the browser view port. The calculation is a frame-by-frame analysis of the webpage's load behaviour. A good user experience requires a value of 1.3 s or less.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Cumulative layout shift (CLS) -</head><p>This measures how far the web elements shift as the webpage is being rendered. It is an aggregate score of all the individual layout shifts on the webpage. A good user experience requires a score of 0.1 or less.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Total blocking time (TBT) ms</head><p>This measures the total amount of time for which the webpage was blocked by scripts whilst loading, thereby preventing the user from interacting with the webpage.</p><p>A good user experience requires a value of 150 ms or less</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Largest contentful paint (LCP) ms</head><p>This measures how long the largest content element (e.g., heading, text, hero image, etc.) takes to become visible to the user. For a good user experience, an LCP of 1.2 s or less is required.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Time to interactive (TOI) ms</head><p>This measures the webpage's load response to identify the period for which a page appears to be interactive but is not. This metric is no longer used to calculate the performance of a webpage. A good user experience requires a value of 2.5 s or less.</p><p>Note. s = seconds; ms = milliseconds. "Time to interactive" does not contribute to the performance grade but gives a good indication of the user experience.</p><p>The Sucuri tool (<ref type="url" target="https://sitecheck">https:// sitecheck</ref> .sucuri .net/ ) was used to assess the security of the websites. This tool assesses a webpage for known viruses, malware, backlisting status, out of date software, errors, and malicious code <ref type="bibr">(Sucuri, n.d.)</ref>. <ref type="bibr" target="#b22">Csontos and Heckl (2021)</ref> utilized Sucuri to assess the security of webpages from 25 Hungarian public sector bodies and noted that this testing tool examines websites in sufficient detail to help determine whether a particular one represents a security risk to users.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RESULTS</head><p>Of the 242 links of university front-facing webpages analyzed in this study, 92 were from universities in the United Kingdom, 79 were from Africa, and 71 were from Israel. The results of the automated tests are presented.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Accessibility Results</head><p>Using TAW, we find that none of the webpages are fully compliant with WCAG 2.1 AA. Although four webpages from UK universities and one from Israel contain zero problems, 14-20 warnings and 18-20 unverified criteria are highlighted. Figure <ref type="figure" target="#fig_1">2</ref> shows that university webpages from Africa have the highest number of problems in terms of meeting WCAG 2.1 AA success criteria of the three countries. For African universities, most of the problems fall into the "operability" category, whereas most of the problems for U.K. and Israeli universities fall into the "robustness" category.</p><p>On average, the U.K. universities generate 15.2 problems across the categories, compared to 28.3 for Africa and 15.3 for Israel, suggesting that African university webpages in particular need to become compliant. The higher standard deviation (𝜎) value for the total number of problems for Africa (22.53) compared to Israel (19.37) and the United Kingdom (16.65) highlights the varying standards of webpages. Africa has the most warnings overall. Most of the warnings fall into the perceivability and operability categories, with the United Kingdom containing the most operability warnings. Africa and Israel contain more webpages with access errors. Table <ref type="table" target="#tab_4">4</ref> shows a breakdown of the problems in terms of success criteria violations by region. The most common violations across the three countries are in WCAG 2.1 Level A, including 1.1.1 -non-text content, 1.3.1 -info and relationships, 2.4.4 -link purpose (in context), 3.3.2 -labels or instructions, and 4.1.2 -name, role, value.</p><p>Violation 1.1.1 (non-text content) focuses on making non-text content accessible using an alternative to text. A user who is unable to see a picture can have alternative text read to them aloud through speech. Violation 1.3.1 is associated with the preservation of information and relationships when the presentation format changes. Structure and relationships are perceived by sighted users through visual cues; for example, larger leadings are shown in bolder font and are separated from paragraphs by blank lines; bullet points and indentation are used for lists; items that share common characteristics are organized into columns and rows. Violation 2.44 refers to the purpose of each link, ensuring that each link can be determined from the link text alone or the link text combined with the link context determined programmatically. The text used for a link should enable the purpose of the link to be identified without additional context (Web Accessibility Initiative, n.d.-b).</p><p>Violation 3.32 centers on presenting labels or instructions that identify form controls, so that the user knows what input data are expected, whereas Violation 4.1.2 (name, role, value) ensures that assistive technologies can gather information, stay up to date, and activate user interface controls.</p><p>Each region has varying numbers of violations. For example, some African webpages have violations of 4.1.1 (parsing), which refers to content implemented using markup languages such as XML. The start and end tags must be present for each element, elements must not contain duplicate attributes, and IDs must be unique. This criterion was removed from WCAG 2.2 but ensures that assistive technology can interpret and parse content accurately. Both Africa and Israel have instances of Violation 2.4.2 (page titled), which relates to the users' ability to orient themselves. Each webpage should have a descriptive title that describes the purpose of the page.</p><p>Figure <ref type="figure">3</ref> shows a breakdown of the types of webpages and the numbers of problems, and it can be seen that webpages for admissions and university homepages contain the most violations. For the U.K. universities, lists of courses generate the most violations, and the same is found for Israeli universities. However, violations for African universities center on admissions and homepages.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Table 4. Continued Figure 3. Total numbers of problems for different types of webpages by country</head><p>Overall, the accessibility tests show the variance in the quality of webpage construction by examining the WCAG 2.1 violations and how these affect the types of webpages presented to external users.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Usability Results</head><p>A total of 231 webpages were assessed regarding their loading times using GTmetrix, from a total of 242 in the data set. The remainder could not be analyzed due to timeout, security issues, and broken links that occurred after the start of the study. Table <ref type="table" target="#tab_5">5</ref> shows the performance grades for the webpages, with "A" being the best and "F" the worst. Table <ref type="table" target="#tab_5">5</ref> shows that 65% of the webpages fall into the top three performance grades (A, B and C). Webpages in the C, D, and E brackets offer a poor user experience, which impacts the university in terms of enabling users to get the relevant information needed to make decisions.</p><p>Figure <ref type="figure" target="#fig_2">4</ref> shows a breakdown of the performance grades by country. Israel has a high number of webpages that fall into the range average to very poor, indicating a need to focus on the user experience in more detail. Africa has a higher number of webpages with good performance than Israel; however, like Israel, there is a need to focus on improving the overall user experience so that more webpages fall into the A and B performance brackets. Most U.K. webpages fall into the A to C range, although there are several webpages that are below average and need immediate improvement. Compared to Africa, the United Kingdom and Israel have fewer very poor webpages. The admissions and course description webpages score more A and B grades than any other type of webpage. To enable a closer examination of the performance based on the user metrics, Table <ref type="table" target="#tab_6">6</ref> shows the variance in different performance metrics among the regions. The metrics considered in the overall performance score are: first contentful paint (FCP) 10%, speed index 10%, largest contentful paint (LCP) 45%, total blocking time (TBT) 30%, and cumulative layout shift (CLS) 25%. Israel has the lowest FCP on average, meaning that users are able to view actual content on the webpage sooner and perceive it to load faster. However, no webpages from any of the regions meet the target of 0.9 ms or less. A total of 127 of the university webpages have FCP values of below 2 s (61 from the United Kingdom, 32 from Israel, and 34 from Africa).</p><p>Africa has the lowest LCP on average, meaning that the time taken for the largest content element to load within the webpage is short. This finding also highlights the use of simple web development elements in these pages.</p><p>All of the webpages from the three countries meet the threshold for good performance of 1,200 ms or less. The United Kingdom has a longer time for the LCP, reflecting the complexity of elements that are loaded. Compared to webpages from the other regions, U.K. pages have a greater use of images and interactivity. The U.K. webpages also have a lower CLS, reflecting the increased quality of web design and stability, which translates to a better experience when the page is viewed on devices such as mobile phones and tablets.</p><p>Africa has the fastest speed index on average, representing the time taken for the webpage to be visually complete. All university webpages from all regions meet the threshold for good performance (with no improvement required), which is 1311 ms or less. An assessment of all the webpages, which meet the good user experience threshold of 150 ms or less, indicates that 80 webpages from the United Kingdom, 65 webpages from Africa, and 48 webpages from Israel meet this criterion. The university webpage with the highest TBT of 501 ms has issues, such as long JavaScript execution times and high numbers of long-thread tasks, which causes high memory usage.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Security Results</head><p>As part of the security analysis, the risk levels of the webpages were analyzed and categorized as minimal, low, medium, high, and critical. Several webpages could not be analyzed due to unexpected errors. Table <ref type="table">7</ref> shows the details of the security risks of the webpages from each country. The web server details are not recorded in this study despite them being available. No webpages are blacklisted, but 4% contain malware. All of the webpages have security risks of some degree, even if these are classified as low. Examples of issues associated with low risk across all three regions include:</p><p>• No web application firewalls detected, which are needed to protect webpages from DDOS attacks and hacks. • Incorrect security headers (e.g., the "unsafe-inline" keyword in content security policy <ref type="bibr">[CSP]</ref> is not recommended, and designers should consider using "unsafe-hashes" or nonces instead). • Missing security header, which is needed to prevent content type sniffing. The header prevents multipurpose internet mail extensions based attacks, which involve the execution of malicious code. This code leads to the browser interpreting a file differently, thereby enabling cross-site scripting attacks where the attacker can steal sensitive information or perform actions on behalf of the user. • Missing security header for protection against clickjacking. Clickjacking involves tricking the user to click a given webpage element or one that is disguised as another element. This causes the user to unknowingly visit malicious webpages, download malware, provide sensitive information, provide credentials, transfer money, or purchase products online (Imperva, n.d.). • Missing strict-transport-security header. This can result in communication over hypertext transfer protocol (HTTP) being allowed to a specific domain, making the webpage vulnerable to a man-in-the-middle attack. This allows perpetrators to position themselves in the conversation between a user and the application, to eavesdrop or impersonate one of the parties. The aim of the attack is to steal personal details.</p><p>A large majority of U.K. webpages have low levels of security risk, while those in Africa have a greater overall risk level (medium level), and Israel has a mixture. Medium-level security risks include:</p><p>• Outdated web servers.</p><p>• Outdated scripting languages that are no longer supported.</p><p>• Default server banners displayed, which can expose web server information that can be used by attackers to launch attacks on the web server. • No redirect from HTTP to hypertext transfer protocol secure (HTTPS): A redirection should occur from HTTP to HTTPS to secure the data and provide encryption. • HTTPS mixed content found, where an HTTPS website refers to an HTTP resource, indicating a mixed content page that is not partially encrypted and where the unencrypted sections can be targets for man-in-the-middle attacks. • Missing intermediate TLS certificates: TLS certificates encrypt data between the website the user is visiting and the server for the website, providing a secure internet connection; without a certificate, there may be data loss, theft, or modification of the data.</p><p>• Missing CSP directives: The CSP is an HTTP header containing the set of security rules defined by the site owner that the browser follows to render the webpage, which can be used to mitigate clickjacking attacks and cross-site scripting <ref type="bibr">(Probely, n.d.)</ref>.</p><p>The most common medium-level risk found for the U.K. university webpages is the presence of HTTPS mixed content whereas, for Africa, this is a lack of a redirect from HTTP to HTTPS and, for Israel, it is a missing CSP directive.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>DISCUSSION</head><p>RQ1. How does the accessibility, usability, and security of top-ranking front-facing university webpages compare in the United Kingdom, Africa, and Israel?</p><p>The results highlight areas of improvement for all three regions in terms of accessibility, usability, and security.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Accessibility</head><p>Universities based in Africa have the greatest number of problems, a finding that is aligned with those of <ref type="bibr" target="#b11">Alhassan and Okwum (2018)</ref> from their study of university webpages around Africa. They found that four university webpages had more than 100 problems, as identified by TAW. In total, 1,059 problems were identified across 12 webpages. The paper did not delve into the types of errors or the areas of web accessibility they corresponded to, although Africa was also found to have the highest number of errors, with an average of 28. A study by <ref type="bibr" target="#b45">Verkijika and De Wet (2020)</ref>, which looked specifically at South African university homepages, found that an average of eight rules were violated. In our study, 71 webpages violate more than eight rules, indicating a consistent issue with web accessibility of university webpages across African universities.</p><p>More webpages were sampled for the United Kingdom compared to the other regions, and the average number of problems (15.3) is slightly higher than for Israel (15.2). The United Kingdom has a higher total number of problems, but Israeli webpages contain more broken links, bad gateways, and timeout issues. Studies by <ref type="bibr" target="#b37">Ohaju (2022)</ref> and <ref type="bibr" target="#b34">Macakoğlu et al. (2023)</ref> also showed that the average number of errors for U.K. university webpages is lower than for webpages from other parts of Europe (e.g., Denmark, Finland, and Italy) or Africa (Nigeria).</p><p>Few studies have focused on the web accessibility of Israeli university webpages. Laufer (2018) considered one university and surveyed the homepage, library homepage page, and two additional pages from the library and course entry webpage. Although a different automated accessibility tool called WAVE was used in this study, 12 types of errors were discovered when WCAG 2.0 criteria were applied. In this study, 28 university webpages have more than 12 types of errors, and 43 have fewer than 12.</p><p>When the types of violations are explored, we find that the most common ones across the university webpages are 1.1.1 -non-text content, 1.3.1 -info and relationships, 2.4.4 -link purpose (in context), 3.1.1 -language of page, 3.2.2 -on input, and 3.3.2 -labels or instructions. All the violations match those identified by <ref type="bibr" target="#b34">Macakoğlu et al. (2023)</ref>. <ref type="bibr" target="#b19">Campoverde-Molina et al. (2023)</ref> carried out a systematic literature review and measured violations against WCAG 2.1. Their study identified that the criteria 1.4.4 -resize text and 2.1.1 -keyboard are commonly violated, although this finding is not reproduced in our study.</p><p>The most frequent violations in the United Kingdom and Africa relate to 1.1.1 -non-text content, as found in a study by <ref type="bibr" target="#b34">Macakoğlu et al. (2023)</ref>, where 85% of the webpages violated this success criterion. In our study, 77% of webpages violate this criterion. The most common violation for Israeli pages is 1.3.1 -info and relationships, which is the second most success criteria violation identified by <ref type="bibr" target="#b34">Macakoğlu et al. (2023)</ref>. A high percentage of African websites violated several success criteria, which included 3.3.2 -labels or instructions and 4.1.2 -name, role, value. These findings are aligned with those of <ref type="bibr" target="#b4">Agangiba and Agangiba (2019)</ref> in their study of Ghanaian universities, which indicated that most of the webpages violated the principles of perceivability and operability. However, in this study, there are also frequent violations of the principles of understandability and robustness.</p><p>The accessibility results across the three regions show that the presence of inaccessible webpages means that stakeholders and potential students cannot interact with the pages properly.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Usability</head><p>The distributions of performance grades across the countries were plotted to explore the variance in the performance of the webpages. There are few studies that have focused on university webpage usability. In this study, over 80% of the university webpages are spread across A, B, and C performance grades, with the most frequent grades being B (31%) and A (25%).</p><p>The usability results from the study by <ref type="bibr" target="#b34">Macakoğlu et al. (2023)</ref> showed that grades C and D were the most common performance grades for European pages, with only 2% of webpages being classed as A and 10% as B. This demonstrates that most U.K. webpages perform very well against university webpages from other European countries. The usability principles are generally followed, and the customer's experience is prioritized.</p><p>The average FLT for the U.K. webpages in this study is 18.3, higher than the value of 12.31 reported by <ref type="bibr" target="#b33">Macakoğlu and Peker (2022)</ref>. The finding in that study was that the country with the longest FLT was the United Kingdom. However, our study finds that Africa has the longest average FLT of 41.7. Africa also has the most webpages classified as grades B or D. Over 50% of the webpages are classed as grades A, B, or C.</p><p>Israel has the lowest average FLT of 5.90, which is lower than values found for the Russian Federation, Hungary, Turkey, and the United Kingdom in the study by <ref type="bibr" target="#b34">Macakoğlu et al. (2023)</ref>. Israel had the highest number of webpages classified as C and E. In total, 55% of webpages were classed as A, B, or C.</p><p>In regard to the speed index, we note that the average values for the webpages in the United Kingdom, Israel, and Africa are on average shorter than the recommended time. Compared to the values reported by <ref type="bibr" target="#b34">Macakoğlu et al. (2023)</ref>, which were measured in seconds, all three regions had average values that were lower than the averages for the respective continent.</p><p>The average total blocking times are above the threshold (50 ms) for all three regions. The United Kingdom and Africa were found to have average blocking times similar to Europe and North America in the study by <ref type="bibr" target="#b34">Macakoğlu et al. (2023)</ref>. Israel's average blocking time was slightly greater than for Oceania. However, there were webpages that were above acceptable threshold levels: The United Kingdom had 25 webpages that were over the threshold, Africa had 21, and Israel had 24.</p><p>The average FCP values demonstrate that all three regions are well within the threshold for good performance. In addition, these regions have lower average values compared to the continents considered in the study by <ref type="bibr" target="#b33">Macakoğlu and Peker (2022)</ref>. Only one webpage in the United Kingdom had an FCP that was acceptable but needed improvement. The results indicate a positive user experience.</p><p>In contrast to our study and that of <ref type="bibr" target="#b34">Macakoğlu et al. (2023)</ref>, Akgül (2021) used 19 dichotomous web usability principles to assess the usability of webpages for private and public Turkish universities. The areas considered included design standards, conventions for hyperlinked text in the main text, navigation standards, findability, and readability. The results indicated a mean response time of 9.72 s for private universities and 43.80 s for public universities. This can be compared to mean times to interactivity in this study of 0.0792 s for the United Kingdom, 0.0372 s for Israel, and 0.0565 s for Africa.</p><p>Overall, the usability metrics show that more than 50% of the webpages have metrics indicating below good performance, and that these institutions have some way to go in order to ensure that customers have a good experience. Despite the United Kingdom having the longest average FLT, this country performes better in terms of the other metrics contributing to loading performance, interactivity, and visual stability.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Security</head><p>A security analysis of the webpages highlights that the U.K. webpages are the most secure. From the data set, we find that 4% of university webpages contain malware, and these are based in Africa. The figure of 4% can be compared with values of 0.06% for state university websites and 0.09% for private university websites in Turkey that were infected with malware <ref type="bibr" target="#b5">(Akgül, 2021)</ref>. No webpages were recorded as being blacklisted, meaning that the visibility of the webpages is not affected.</p><p>All of the university webpages have security issues, compared to only 0.04% of the Turkish state university websites and 0.09% of the private university websites, which had no security issues. More than half the websites in the study by <ref type="bibr" target="#b34">Macakoğlu et al. (2023)</ref> had low security, a similar finding to this study.</p><p>In terms of firewall use, we note that 9% of the university webpages considered in this study have no firewall. These are mainly in Africa, although several are in Israel. This value is significantly lower than those reported by <ref type="bibr" target="#b5">Akgül (2021)</ref>, where 96% of the state university websites in Turkey and 95% of the private university websites were not using firewalls. An investigation of TLS-SSL encryption indicates that 19% of university webpages have recommendations to improve TLS due to not using SSL encryption and, hence, unsecure communication. This is higher than the 8% of university webpages identified by <ref type="bibr" target="#b34">Macakoğlu et al. (2023)</ref>. <ref type="bibr" target="#b5">Akgül (2021)</ref> did not specify the number of university webpages that did not have SSL encryption.</p><p>An analysis of outdated architecture shows that 11% of the webpages considered in this study have outdated web servers or scripting, as compared to 20% of the webpage servers identified by <ref type="bibr" target="#b34">Macakoğlu et al. (2023)</ref> that were outdated. In addition, 2% of university webpages were found to have outdated software by <ref type="bibr" target="#b5">Akgül (2021)</ref>; this study analyzed fewer webpages than in the current work and that of <ref type="bibr" target="#b34">Macakoğlu et al. (2023)</ref>, although it presented a more in-depth analysis of areas other than accessibility, usability, and security.</p><p>After analyzing the types of errors causing security vulnerabilities, we find that Africa and Israel have a wide range of security vulnerabilities that have a major impact, such as outdated architecture, missing certificates, and a lack of encryption. This can affect the university, as users do not want to access webpages with security vulnerabilities in case it puts them at risk, for example by transferring malware to the users' systems and devices and spreading from there. Overall, although the U.K. webpages score highly in accessibility, usability, and security, all countries have scope for improvement in accessibility, usability, and security. RQ2. Does the presence of strict legislation correspond to better accessibility, usability, and security for front-facing university webpages of top-ranking universities?</p><p>The results of our study show that strict legislation does not equate to better accessibility of webpages. Israel, which has high financial sanctions for noncompliance with accessibility standards, accounts for 15% of the webpages that contain broken links and gateway time outs. There is a high percentage of success criteria violations in certain areas, although this is also true for the United Kingdom and Africa. The TAW analysis indicates that only five webpages have no problems (four from the United Kingdom and one from Israel). These webpages include an "About Us" page, a contact page, an admissions page, a research page, and a list of courses, and all have warnings and unverified errors. There are no webpages that fully meet the WCAG 2.1 criteria, and most of the success criteria violations are at Level A. Legislation in Israel (IS 5568) is based on conformance to WCAG 2.0 Level AA, and the web accessibility results in this study indicate that this legislation needs to be updated in accordance with the WCAG accessibility guidelines.</p><p>The U.K. legislation requires WCAG 2.1 Level AA standards to be met; however, the TAW results indicate that, despite performing better than Israel and Africa in terms of accessibility, the United Kingdom has some way to go before these requirements are met. Africa has the furthest to go due to a lack of central legislation and focus on accessibility. The TAW results highlight this in regard to the large number of problems and warnings for the webpages. A lack of enforcement of accessibility regulations for all countries is an area that needs further exploration. The impact of this lack of enforcement on the university is indicated by the fact that webpages such as homepages, lists of courses, and admissions webpages generate the most violations. This affects end users and their experiences when searching for information, which is important in decision making.</p><p>Usability and security are intertwined with accessibility legislation but are not explicitly explained in detail in legislation. A checklist of best practices for usability and security needs to be included in all accessibility legislation around the world. This would highlight the importance of both and assist with identifying areas to consider when developing webpages.</p><p>The usability results of this study indicate that 65% of the webpages perform at an average level or above. There are still webpages across all three countries that need work, and more can be done to enhance performance, for example, decreasing webpage file sizes by using web optimization tools to optimize image file sizes, reducing the dimensions of images, and minimizing queries <ref type="bibr" target="#b6">(Akgül et al., 2023)</ref>. The enhancement in performance would improve the experience for the user.</p><p>The security analysis highlights areas in which web development needs to be improved. There are a variety of issues, from out-of-date webservers to a lack of firewall use and encryption. This can make pages easier for hackers to target, and the impact can be detrimental to the university and its reputation.</p><p>Identifying the webserver and content management system details, from the analysis of security for university webpages, poses a danger, and more should be done to protect these details. This aspect was previously highlighted by <ref type="bibr" target="#b6">Akgül et al. (2023)</ref>, <ref type="bibr" target="#b22">Csontos and Heckl (2021)</ref>, and <ref type="bibr" target="#b33">Macakoğlu and Peker (2022)</ref>. The importance of encryption (SSL) is another area with scope for improvement, with only 81% of university webpages using SSL. Sensitive information can be leaked and forwarded without encryption, and a hacker can easily extract this information and utilize it.</p><p>The link between accessibility and security measures to improve security was highlighted by the National Crime Security Centre (2023). If awareness campaigns, security policies, and training manuals are not written in accessible formats, this can prevent people absorbing the information needed to do their jobs. Complicated interfaces, a lack of accessible error messages or feedback once a configuration change has been made, and inappropriate color schemes for users with color blindness can impact security professionals.</p><p>The results of this study highlight that more work needs to be done at the educational and governmental levels to update and enforce legislation regarding web accessibility. Although there is information stating that there are bodies to enforce this legislation, it is difficult to know how well it is actually being enforced. The Central Digital and Data Office in the United Kingdom can do spot checks on universities and can act on complaints from users when websites are not accessible <ref type="bibr" target="#b21">(Christopherson, 2024)</ref>; however, there is no transparency in terms of enforcement data.</p><p>Frequent (annual) auditing of front-facing webpages and existing webpages at the university level in areas such as web accessibility, usability, and security would help to identify areas that need further improvement. Automated tools and human evaluation by a variety of users with different devices can be used to assess accessibility, usability, and security, as illustrated by <ref type="bibr" target="#b8">Al-Sakran and AlSudairi (2021)</ref>.</p><p>The results of this study highlight that developing countries in Africa have poor website infrastructure, which leads to a higher number of accessibility violations, security vulnerabilities, broken links, and access issues. This can frustrate users and offer them a poor experience, regardless of whether they have a disability. This issue was also highlighted by <ref type="bibr" target="#b6">Akgül et al. (2023)</ref>.</p><p>Web accessibility, security, and usability are all global issues. Knowledge sharing and investment in effective technology infrastructure for higher education establishments would help developing countries to provide good user experiences. This may then translate into increased interest from students and other stakeholders, resulting in better financial outcomes.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Research Implications</head><p>As the world becomes increasingly digital, and universities worldwide compete for funding and attract international students, ensuring accurate web accessibility, security, and usability will become paramount. This will not just apply to the education sector but other sectors that use digital products and systems. Universities have a social responsibility in how they conduct themselves ethically. If webpages do not meet web accessibility regulations, this can result in social consequences through exclusion and legal consequences. Web accessibility can be considered an aspect of the corporate social responsibility of an organization <ref type="bibr" target="#b32">(Lorca et al., 2018)</ref>.</p><p>Africa has the most work to do in terms of updating website infrastructure and creating and implementing centralized robust unified web accessibility legislation, with minimal funding across Africa. Prioritizing research into web accessibility, user-centered design and cybersecurity measures would help universities build more inclusive, safer, and more user-friendly digital environments. This would attract more students and enhance the student experience as well as impact society outside the university.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Cultural and Social Contexts</head><p>The preference in terms of webpage design and user needs vary significantly across the countries sampled in this study. In the UK, the webpage design is influenced by regulatory frameworks such as the Web Content Accessibility Guidelines (WCAG) and the Equality Act 2010. The WCAG guidelines are usable by users with diverse needs, highlighting a commitment to a culture is inclusivity. The UK educational system prioritises equal access to information and resources.</p><p>In contrast, Israel maintains a balance between strong technological innovation and longstanding traditions. A study by <ref type="bibr" target="#b17">Bitar and Davidovitch (2024)</ref> introduced the Cultural-Adaptation Digital Learning Integration (CADLI) Framework, designed to support the implementation of culturally responsive digital pedagogy within Israeli higher education. The framework emerged from a qualitative case study undertaken by the authors, which examined how lecturers perceive and adapt digital learning tools in culturally diverse academic contexts.</p><p>The CADLI Framework comprises four key components:</p><p>• Cultural Resonance -ensuring that digital learning tools reflect students' cultural values and educational traditions. • Pedagogical Integration -harmonising traditional teaching methods with digital innovation to preserve effective educational practices. • Technological Adaptation -tailoring digital tools to suit the specific cultural and educational needs of learners. • Institutional Support -providing organisational backing to enable the successful integration of culturally adapted digital learning.</p><p>Africa increasingly utilises mobile technology to enhance educational access, largely in response to limitations in infrastructure. Studies by <ref type="bibr" target="#b28">Jantjies (2014)</ref> and <ref type="bibr" target="#b29">Jibrin, Oyinvwi, and Ibrahim (2024)</ref> emphasise how mobile learning can improve access, flexibility, and affordability in delivering educational content. <ref type="bibr" target="#b29">Jibrin et al. (2024)</ref> explored how mobile technologies-such as tablets and smartphones-enable students in remote or under-resourced regions to develop digital literacy through participation in online learning. Nonetheless, several barriers persist, including high internet costs, inadequate infrastructure, and limited access to devices. <ref type="bibr" target="#b28">Jantjies (2014)</ref> developed the M-Thuto mobile application for South African learners and found that educational outcomes can be significantly improved by providing content in multiple languages. This approach addresses linguistic diversity and resource limitations, while also allowing educational materials to be tailored to the local context. Learners reported feeling empowered when given the opportunity to study in their own language.</p><p>Overall, the differences across the countries underscore the importance of web designers accounting for cultural context, technological infrastructure, and educational backgrounds when creating higher education websites and digital learning platforms in general.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Enforcement of Legislation</head><p>Only the UK has published statistics available regarding enforcement of web accessibility legislation. The (Government Digital Service, 2024) study into accessibility compliance monitored over 1,200 websites and 21 mobile applications from January 2022-September 2024. The sites were randomly tested using automated and manual techniques based on WCAG 2.1 AA standards. Follow ups were conducted to see whether accessibility issues were resolved. The findings highlighted that 29,787 accessibility issues were identified, 55.3% were resolved during the review period and 68% of organisations had committed to improvements.</p><p>31.4% of the 1,151 websites tested through simplified testing belonged to the education sector, which encompasses higher education institutions. The statistics showed that 32% of websites were deemed acceptable at the 12-week retest and 64% were recommended for no further action to the equality body. The remaining cases were either under review or referred for potential enforcement action. This highlighted that despite progress being made, there was still room for improvement.</p><p>The report by AbilityNet (2024) demonstrated that higher education establishments have high motivation for compliance but challenges such as budgets, lack of staff training, consistent implementation of adjustments and proactive monitoring remain.</p><p>Regarding Israel and Africa, there has been limited data in terms of compliance statistics. For Africa, this is due to limited or no enforcement mechanisms.</p><p>This research study has highlighted how web accessibility regulations must be centralised, made transparent, easy to follow, with compliance being closely monitored and sanctions imposed where necessary. All three countries have work to do especially on monitoring compliance, imposing sanctions when compliance is not met and publishing compliance data. This can have an impact on finance not just for the universities to meet compliance but for the setting up, staffing and training of compliance bodies. The incorporation of cultural nuances, education background of the country and technical infrastructure by web designers will help meet the needs of the users.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Limitations</head><p>Automated tests were used in this study to assess the accessibility, usability, and security of webpages, although human testing can help to simulate user behavior and view aspects from a human point of view. A manual evaluation of webpages, focusing on aspects such as visual design, user navigation, and security and trust as well as information architecture, will facilitate a more comprehensive analysis alongside the automated tools.</p><p>The usability testing in this study focused on the performance of the webpages rather than the experience of the user, whereas a combination of both would result in a more rounded analysis. Only the webpages from the top 10 ranked universities in each country were analyzed; a wider/larger sample of university webpages across more countries would allow for a more in-depth analysis of how accessibility, usability, and security of university webpages varies across countries and continents. A focus on emerging markets and developing countries can provide more insight into the challenges posed by web accessibility, usability and security of webpages.</p><p>The selection of the top ten ranked universities in Africa utilised in this study does not encompass the full diversity of African nations; consequently, a more representative sample would yield a deeper and more comprehensive insight.</p><p>Overall, delving into the cultural, social, and educational backgrounds would show how this affects webpage design.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>CONCLUSION AND AVENUES FOR FUTURE RESEARCH</head><p>The accessibility, usability, and security of front-facing university webpages play a significant role in how information is consumed by potential students and external stakeholders. Many countries have enacted web accessibility legislation.</p><p>This study has evaluated the web accessibility, usability, and security of the front-facing webpages of the top 10 higher education establishments in the United Kingdom, Africa, and Israel, according to Webometrics. The selection of regions includes countries with strict web accessibility legislation and a country with no central legislation. Automated tools such as TAW, GTmetrix, and Sucuri were used to assess accessibility, usability, and security.</p><p>Our analysis of web accessibility indicates that universities based in Africa perform the worst in terms of the total number of success criteria violations, due to a lack of central web accessibility legislation. However, in all three regions, there are high percentages of violations of certain criteria. The most common violations in WCAG 2.1, across the three regions considered here, are at Level A, and cover all four principles. A usability analysis shows that over 80% of the university webpages have performance grades of A, B, or C, indicating that the user experience is considered when creating these websites but that there is room for improvement across all three regions. Our security analysis shows that the U.K. webpages are more secure than those from Africa and Israel, which has a wide range of security vulnerabilities such as outdated architecture, missing certificates, and a lack of encryption.</p><p>Overall, this study shows that enacting strict web accessibility legislation does not equate to better accessibility of webpages. Usability and security go hand in hand with web accessibility. More research needs to be done into how these three aspects are enforced in universities, what can be done to improve enforcement, making comparisons of the results of this study to other countries, and how security and usability can be integrated into web accessibility legislation and how these components change over time for front facing university webpages.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Prisma diagram to demonstrate reasons for university front page URL exclusion</figDesc><graphic coords="12,127.50,91.82,231.00,255.00" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Test de Accesibilidad Web violations by accessibility area and country</figDesc><graphic coords="14,45.00,179.38,396.00,174.36" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. Breakdown of GTmetrix performance grade by country</figDesc><graphic coords="17,63.00,151.10,396.00,225.45" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head/><label/><figDesc/><graphic coords="16,45.00,91.82,396.00,224.51" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 2 . Summary of accessibility evaluations of university webpages based on web standards and automated tools Author(s) Year Country/ countries in which universities are based University webpages analyzed No. of universities Web standards applied Automated tools used Results</head><label>2</label><figDesc/><table><row><cell>Of 110 state university</cell><cell>homepages and 69 private</cell><cell>university homepages, only</cell><cell>10 and four, respectively, met</cell><cell>WCAG 2.0 Level A</cell><cell>For 180 webpages, there were</cell><cell>a total of 30,944 home page</cell><cell>errors, 24,433 admission</cell><cell>page errors and 27,308 course</cell><cell>description page errors</cell><cell>Only 8% of the university</cell><cell>homepages complied fully with</cell><cell>WCAG 2.0</cell><cell>No details regarding</cell><cell>compliance of university</cell><cell>homepages to WCAG 2.0</cell><cell>guidelines</cell><cell>None of the websites fully</cell><cell>conformed to WCAG 2.0 Level</cell><cell>A standard</cell><cell>Most errors, at both WCAG</cell><cell>2.0 levels A and AA, fell under</cell><cell>the perceivable success criteria</cell><cell>for web accessibility.</cell><cell>continued on following page</cell></row><row><cell>AChecker</cell><cell/><cell/><cell/><cell/><cell>AChecker</cell><cell/><cell/><cell/><cell/><cell>AChecker, WAVE,</cell><cell>PageSpeed, Insights,</cell><cell>Similarweb</cell><cell>WAVE, AccessMonitor,</cell><cell>EIII Page Checker</cell><cell/><cell/><cell>AChecker, Total</cell><cell>Validator, WAVE,</cell><cell>HTML/CSS/ARIA</cell><cell/><cell/><cell/><cell/><cell/></row><row><cell>WCAG 2.0</cell><cell/><cell/><cell/><cell/><cell>WCAG 2.0 AA</cell><cell/><cell/><cell/><cell/><cell>WCAG 2.0</cell><cell/><cell/><cell>WCAG 2.0</cell><cell/><cell/><cell/><cell>WCAG 2.0</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>179</cell><cell/><cell/><cell/><cell/><cell>20</cell><cell/><cell/><cell/><cell/><cell>58</cell><cell/><cell/><cell>27</cell><cell/><cell/><cell/><cell>41</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>Homepage</cell><cell/><cell/><cell/><cell/><cell>Homepage, admission</cell><cell>page and course</cell><cell>description page from</cell><cell>each university analysed</cell><cell/><cell>Homepage</cell><cell/><cell/><cell>Homepage</cell><cell/><cell/><cell/><cell>Homepage and college</cell><cell>landing page</cell><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>Turkey</cell><cell/><cell/><cell/><cell/><cell>World, Oceania,</cell><cell>Arab countries</cell><cell/><cell/><cell/><cell>Kingdom of Saudi</cell><cell>Arabia</cell><cell/><cell>Jordan</cell><cell/><cell/><cell/><cell>Kuwait</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>2020</cell><cell/><cell/><cell/><cell/><cell>2017</cell><cell/><cell/><cell/><cell/><cell>2023</cell><cell/><cell/><cell>2018</cell><cell/><cell/><cell/><cell>2021</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row><row><cell>Akgul</cell><cell/><cell/><cell/><cell/><cell>Alahmadi and Drew</cell><cell/><cell/><cell/><cell/><cell>Alhadreti</cell><cell/><cell/><cell>Al-Kabi</cell><cell/><cell/><cell/><cell>AlMeraj et al.</cell><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2 . Continued continued on following page Author(s) Year Country/ countries in which universities are based University webpages analyzed No. of universities Web standards applied Automated tools used Results</head><label>2</label><figDesc/><table><row><cell>Parajuli and Eika 2020 Norway Homepage, Contact 4 WCAG 2.1 First phase: WAVE, Total There were checkpoint</cell><cell>page, About us Validator, questionnaires issues at Level A for all four</cell><cell>Second phase: universities, meaning that they</cell><cell>16 visually impaired users did not meet the minimum</cell><cell>took part in accessibility standards for WCAG 2.1</cell><cell>and usability tasks based</cell><cell>on the four university</cell><cell>webpages</cell><cell>Rahmatizadeh and 2018 Iran Homepage 50 WCAG 2.0 AChecker, Functional Of the 50 university websites,</cell><cell>Valizadeh-Haghi only two did not display any Accessibility Evaluator</cell><cell>accessibility problems based (FAE)</cell><cell>on AChecker</cell><cell>The FAE tool score highlighted</cell><cell>that all websites were in the</cell><cell>NI-R category, indicating a</cell><cell>lack of accessibility</cell><cell>Websites had frequent Acosta-Vargas et al. 2018 Latin America Homepages 348 WCAG 2.0 WAVE</cell><cell>problems related to a lack of and Website</cell><cell>alternative image text Accessibility</cell><cell>The university websites Conformance</cell><cell>included in the study violated Evaluation</cell><cell>WCAG 2.0 guidelines Methodology</cell><cell>(WCAG-EM)</cell><cell>Test de Accesibilidad Web; NI-R = accessi-Note. WCAG = Web Content Accessibility Guidelines; WAVE = Web Accessibility Versatile Evaluator; CSS = cascading style sheets; ARIA = accessible rich internet applications; TAW =</cell><cell>bility requirements were not included in the design of the website, the-R means manual checks are required to determine if accessibility requirements have been met.</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 2 . Continued</head><label>2</label><figDesc/><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 3 . Features and descriptions from GTmetrix (2023)</head><label>3</label><figDesc/><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 4 . Violations of success criteria</head><label>4</label><figDesc/><table><row><cell>Success Criteria Violation</cell><cell/><cell>Region</cell><cell/></row><row><cell/><cell>UK (n=92)</cell><cell>Africa (n=79</cell><cell>Israel (n=71)</cell></row><row><cell/><cell>%</cell><cell>%</cell><cell>%</cell></row><row><cell>1.1.1 -Non-text content</cell><cell>70</cell><cell>99</cell><cell>62</cell></row><row><cell>1.3.1 -Info and relationships</cell><cell>58</cell><cell>99</cell><cell>89</cell></row><row><cell>2.4.4 -Link purpose (in context)</cell><cell>40</cell><cell>91</cell><cell>42</cell></row><row><cell>3.1.1 -Language of page</cell><cell>10</cell><cell>19</cell><cell>51</cell></row><row><cell/><cell/><cell cols="2">continued on following page</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5"><head>Table 5 . Breakdown of GTmetrix performance grades GTmetrix performance grade Number/percentage of webpages</head><label>5</label><figDesc/><table><row><cell>A (Excellent)</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_6"><head>Table 6 . Performance metric statistics</head><label>6</label><figDesc/><table><row><cell>Performance Metric</cell><cell/><cell>Region</cell><cell/></row><row><cell/><cell>UK (n=93)</cell><cell>Israel (n=64)</cell><cell>Africa (n=74)</cell></row><row><cell>Fully loaded time (s) Mean</cell><cell>18.3</cell><cell>5.90</cell><cell>41.7</cell></row><row><cell>Fully loaded time (s) SD</cell><cell>98.3</cell><cell>3.35</cell><cell>169.6</cell></row><row><cell>First contentful paint (ms) Mean</cell><cell>92.4</cell><cell>62.7</cell><cell>74.4</cell></row><row><cell>First contentful paint (ms) SD</cell><cell>199.0</cell><cell>212.0</cell><cell>187.1</cell></row><row><cell>Speed index (ms) Mean</cell><cell>82.5</cell><cell>41.0</cell><cell>36.0</cell></row><row><cell>Speed index (ms) SD</cell><cell>240.0</cell><cell>179.0</cell><cell>159.0</cell></row><row><cell/><cell/><cell/><cell>continued on following page</cell></row></table><note><p>Note. SD = standard deviation; s = seconds; ms = milliseconds.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_7"><head>Table 6 . Continued Table 7. Levels of security risk by region</head><label>6</label><figDesc/><table><row><cell>Security risk</cell><cell/><cell>Region</cell><cell/></row><row><cell/><cell>U.K. (n = 92)</cell><cell>Africa (n = 83)</cell><cell>Israel (n = 67)</cell></row><row><cell>Low</cell><cell>87%</cell><cell>17%</cell><cell>59%</cell></row><row><cell>Medium</cell><cell>12%</cell><cell>83%</cell><cell>41%</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>International Journal of Web PortalsVolume 15 • Issue 1 • January-December 2025</p></note>
+		</body>
+		<back>
+
+			
+			<div type="funding">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>FUNDING STATEMENT</head><p>This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors. Funding for this research was covered by the author(s) of the article.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>COMPETING INTERESTS</head><p>The author of this publication declare there are no competing interests</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">Attitudes to Digital Accessibility Survey</title>
+		<ptr target="https://abilitynet.org.uk/sites/abilitynet.org.uk/files/Attitudes-report-2024-FINAL-v2.pdf"/>
+		<imprint>
+			<date type="published" when="2024">2024. 2024</date>
+			<publisher>AbilityNet</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Toward a combined method for evaluation of web accessibility</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Acosta-Vargas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Luján-Mora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Acosta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Salvador-Ullauri</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-319-73450-7_57</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the International Conference on Information Technology &amp; Systems (ICITS 2018)</title>
+		<meeting>the International Conference on Information Technology &amp; Systems (ICITS 2018)</meeting>
+		<imprint>
+			<publisher>Springer International Publishing</publisher>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="602" to="613"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Usability evaluation of academic websites using automated tools</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Adepoju</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">S</forename><surname>Shehu</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/IUSER.2014.7002700</idno>
+	</analytic>
+	<monogr>
+		<title level="m">2014 3rd International Conference on User Science and Engineering (i-USEr)</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2014-09">2014, September</date>
+			<biblScope unit="page" from="186" to="191"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<ptr target="https://au.int/sites/default/files/documents/38507-doc-dts-english.pdf"/>
+		<title level="m">The Digital Transformation Strategy for Africa</title>
+		<imprint>
+			<publisher>African Union</publisher>
+			<date type="published" when="2020">2020. 2020-2030</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Evaluation of accessibility for the visually impaired: The case of higher education institutions' websites in Ghana</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Agangiba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Agangiba</surname></persName>
+		</author>
+		<ptr target="https://www2.umat.edu.gh/gjt/index.php/gjt/article/view/201"/>
+	</analytic>
+	<monogr>
+		<title level="j">Ghana Journal of Technology</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="58" to="64"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Accessibility, usability, quality performance, and readability evaluation of university websites of Turkey: A comparative study of state and private universities</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Akgül</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-020-00715-w</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Universal Access in the Information Society</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="157" to="170"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Accessibility, usability, readability, and security analysis of company websites</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Akgül</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">O</forename><surname>Uymaz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Baba</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-020-00715-w</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Research Square</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Exploring the relationships between web accessibility, web traffic, and university rankings: A case study of Jordanian universities</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Al-Kabi</surname></persName>
+		</author>
+		<idno type="DOI">10.1504/IJHPCN.2018.094955</idno>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of High Performance Computing and Networking</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="235" to="250"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Usability and accessibility assessment of Saudi Arabia mobile e-government websites</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">O</forename><surname>Al-Sakran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Alsudairi</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/ACCESS.2021.3068917</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access : Practical Innovations, Open Solutions</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="48254" to="48275"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Accessibility evaluation of top-ranking university websites in world, Oceania, and Arab categories for home, admission, and course description webpages</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Alahmadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Drew</surname></persName>
+		</author>
+		<ptr target="https://jofdl.nz/index.php/JOFDL/article/view/273/214"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Open, Flexible and Distance Learning</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="7" to="24"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Accessibility, performance and engagement evaluation of Saudi higher education websites: A comparative study of state and private institutions</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Alhadreti</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-023-00971-6</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Universal Access in the Information Society</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1671" to="1688"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Evaluating the accessibility of higher education institution websites in the State of Kuwait: Empirical evidence</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Alhassan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">O</forename><surname>Okwum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>_Africa Almeraj</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Boujarwah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Alhuwail</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Qadri</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-020-00717-8</idno>
+		<idno type="PMID">34483807</idno>
+		<ptr target="https://www.academia.edu/43778386"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of African Interdisciplinary Studies</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="121" to="138"/>
+			<date type="published" when="2018">2018. 2021</date>
+		</imprint>
+	</monogr>
+	<note>Universal Access in the Information Society</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Automated evaluation of accessibility issues of webpage content: Tool and evaluation</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Sik-Lanyi</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41598-025-92192-5</idno>
+		<idno type="PMID">40108199</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Scientific Reports</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<date type="published" when="2025">2025. 9516</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">An analysis of website accessibility in higher education in Indonesia based on WCAG 2.0 guidelines</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Arasid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Abdullah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wahyudin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">U</forename><surname>Abdullah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Widiaty</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Zakaria</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Amelia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Juhana</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/1757-899X/306/1/012130</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Materials Science and Engineering</title>
+		<imprint>
+			<biblScope unit="volume">306</biblScope>
+			<biblScope unit="page">12130</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>IOP Conference Series</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Evaluation of accessibility and usability of higher education institutions' websites of Jordan</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Baroudi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Alia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">W</forename><surname>Marashdih</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/ICICS49469.2020.239565</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2020 11th International Conference on Information and Communication Systems (ICICS)</title>
+		<meeting>the 2020 11th International Conference on Information and Communication Systems (ICICS)</meeting>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="125" to="130"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Evaluation of the impact of usability in Arabic university websites: Comparison between Saudi Arabia and the UK</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Benaida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Namoun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Taleb</surname></persName>
+		</author>
+		<idno type="DOI">10.14569/IJACSA.2018.090848</idno>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Advanced Computer Science and Applications</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Evaluating accessibility of university websites in the Gulf region: A comparative study</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Binyamin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">R</forename><surname>Arabnia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Alelyani</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-024-01160-9</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Universal Access in the Information Society</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note>Advance online</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Cultural adaptation of digital learning tools in Israeli higher education: A case study of lecturer perceptions and practices</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Bitar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Davidovitch</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11528-024-01007-3</idno>
+	</analytic>
+	<monogr>
+		<title level="j">TechTrends</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="1152" to="1165"/>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note>Advance online publication</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<ptr target="https://www.boia.org/blog/israels-digital-accessibility-laws-an-overview"/>
+		<title level="m">Israel's digital accessibility laws: An overview</title>
+		<imprint>
+			<publisher>Bureau of Internet Accessibility</publisher>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Accessibility of university websites worldwide: A systematic literature review</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Campoverde-Molina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Luján-Mora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Valverde</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-021-00825-zPMID:34248456</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Universal Access in the Information Society</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="133" to="168"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<author>
+			<persName><forename type="first">D</forename><surname>Capranos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Dyers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Magda</surname></persName>
+		</author>
+		<ptr target="https://universityservices.wiley.com/webinar-voice-of-the-online-learner-2022/"/>
+		<title level="m">Voice of the online learner 2022: Shifting preferences in post-pandemic online learning</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+		<respStmt>
+			<orgName>Wiley University Services</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<author>
+			<persName><forename type="first">R</forename><surname>Christopherson</surname></persName>
+		</author>
+		<ptr target="https://abilitynet.org.uk/news-blogs/how-well-have-public-sector-accessibility-regulations-been-applied"/>
+		<title level="m">How well have public sector accessibility regulations been applied? AbilityNet</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Accessibility, usability, and security evaluation of Hungarian government websites</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Csontos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Heckl</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-020-00716-9</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Universal Access in the Information Society</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="139" to="156"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<monogr>
+		<ptr target="https://www.imperva.com/learn/application-security/clickjacking/"/>
+		<title level="m">Accessibility monitoring of public sector websites and mobile apps from 2022 to 2024</title>
+		<imprint>
+			<publisher>Government of United Kingdom</publisher>
+			<date type="published" when="2010">2024. 2018. 2010</date>
+		</imprint>
+	</monogr>
+	<note>Equality Act 2010: Guidance</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">The accessibility of Cyprus Islands' higher education institution websites</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">İ</forename><surname>İşeri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Uyar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ü</forename><surname>İlhan</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.procs.2017.11.333</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Procedia Computer Science</title>
+		<imprint>
+			<biblScope unit="volume">120</biblScope>
+			<biblScope unit="page" from="967" to="974"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Web accessibility investigation and identification of major issues of higher education websites with statistical measures: A case study of college websites</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ismail</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Kuppusamy</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jksuci.2019.03.011</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of King Saud University. Computer and Information Sciences</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="901" to="911"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Accessibility analysis of higher education institution websites of Portugal</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ismail</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Kuppusamy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Paiva</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-019-00653-2</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Universal Access in the Information Society</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="685" to="700"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Accessibility evaluation of top university websites: A comparative study of Kyrgyzstan, Azerbaijan, Kazakhstan, and Turkey</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ismailova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Inal</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-017-0541-0</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Universal Access in the Information Society</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="437" to="445"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<monogr>
+		<title level="m" type="main">The role of mobile learning in developing South African education</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jantjies</surname></persName>
+		</author>
+		<ptr target="https://wrap.warwick.ac.uk/id/eprint/62611/"/>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+		<respStmt>
+			<orgName>University of Warwick) ; University of Warwick Research Archive Portal</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">Doctoral thesis</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Innovative educational technologies for Africa: Bridging the digital divide</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Jibrin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Oyinvwi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Ibrahim</surname></persName>
+		</author>
+		<idno type="DOI">10.70382/tijerls.v06i8.008</idno>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Educational Research and Library Science</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="99" to="108"/>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<author>
+			<persName><forename type="first">E</forename><surname>Jomir</surname></persName>
+		</author>
+		<ptr target="https://irek.ase.md/xmlui/handle/123456789/2447"/>
+		<title level="m">The role of university image and its impact to competitive advantage</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Evaluation of web content accessibility in an Israeli institution of higher education</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Laufer Nir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rimmerman</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-018-0615-7Legislation.gov.uk</idno>
+		<ptr target="https://www.legislation.gov.uk/uksi/2018/635/contents/made"/>
+	</analytic>
+	<monogr>
+		<title level="j">Universal Access in the Information Society</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="663" to="673"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>The renewable heat incentive scheme and domestic renewable heat incentive scheme (amendment) regulations 2018</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">The relationship between web content and web accessibility at universities: The influence of social and cultural factors</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Lorca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Andrés</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">B</forename><surname>Martínez</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/0894439317710435</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Social Science Computer Review</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="311" to="330"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Web accessibility performance analysis using web content accessibility guidelines and automated tools: A systematic literature review</title>
+		<author>
+			<persName><forename type="first">Ş</forename><forename type="middle">S</forename><surname>Macakoğlu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Peker</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/HORA55278.2022.9799981</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2022 International Congress on Human-Computer Interaction, Optimization and Robotic Applications (HORA)</title>
+		<meeting>the 2022 International Congress on Human-Computer Interaction, Optimization and Robotic Applications (HORA)</meeting>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2022-06">2022, June</date>
+			<biblScope unit="page" from="1" to="8"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Accessibility, usability, and security evaluation of universities' prospective student web pages: A comparative study of Europe, North America, and Oceania</title>
+		<author>
+			<persName><forename type="first">Ş</forename><forename type="middle">S</forename><surname>Macakoğlu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Peker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">İ</forename><forename type="middle">T</forename><surname>Medeni</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-022-00869-9</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Universal Access in the Information Society</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="671" to="683"/>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Evaluating web accessibility of Spanish universities</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Máñez-Carvajal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Fernández Piqueras</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Cervera Mérida</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Engineering and Applied Sciences</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">14</biblScope>
+			<biblScope unit="page" from="4876" to="4881"/>
+			<date type="published" when="2019">2019</date>
+			<publisher>Asian Research Publishing Network</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Usability of university library home pages in southern Africa: A case study</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Muswazi</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/0266666908101264</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Information Development</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="51" to="60"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Comparative evaluation of the usability and accessibility of selected university websites</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">O</forename><surname>Ohaju</surname></persName>
+		</author>
+		<idno type="DOI">10.2139/ssrn.4118355</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Social Science Research Network</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">A comparative study of accessibility and usability of Norwegian university websites for screen reader users based on user experience and automated assessment</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Parajuli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Eika</surname></persName>
+		</author>
+		<ptr target="https://probely.com/vulnerabilities/missing-content-security-policy-header"/>
+	</analytic>
+	<monogr>
+		<title level="m">Universal Access in Human-Computer Interaction. Design Approaches and Supporting Technologies: 14th International Conference, UAHCI 2020, Held as Part of the 22nd HCI International Conference, HCII 2020</title>
+		<meeting><address><addrLine>Copenhagen, Denmark</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer. Probely</publisher>
+			<date type="published" when="2020-07-19">2020. July 19-24, 2020</date>
+			<biblScope unit="page" from="300" to="310"/>
+		</imprint>
+	</monogr>
+	<note>Missing content security policy header</note>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Monitoring for accessibility in medical university websites: Meeting the needs of people with disabilities</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rahmatizadeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">V H</forename><surname>Valizadeh-Haghi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Accessibility and Design for All</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="102" to="124"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<monogr>
+		<author>
+			<persName><forename type="first">C</forename><surname>Repasky</surname></persName>
+		</author>
+		<ptr target="https://reciteme.com/us/news/the-power-of-web-accessibility-in-education/"/>
+		<title level="m">The power of web accessibility in education. Recite</title>
+		<imprint>
+			<date type="published" when="2023-11-15">2023, November 15</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<monogr>
+		<title level="m" type="main">Web accessibility: Web standards and regulatory compliance</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rutter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">H</forename><surname>Lauke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Waddell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Thatcher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Henry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Lawson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kirkpatrick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Heilmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Burks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Regan</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+			<publisher>Apress</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">The importance of university web pages in selecting a higher education institution</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Schimmel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Motley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Racic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Marco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Eschenfelder</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Research in Higher Education</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="1" to="16"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<monogr>
+		<author>
+			<persName><surname>Sucuri</surname></persName>
+		</author>
+		<ptr target="https://www.tawdis.net"/>
+		<title level="m">Free website malware and security checker</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note>TAW: Web accessibility evaluation tool</note>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<monogr>
+		<author>
+			<persName><forename type="first">V</forename><surname>Udosoh</surname></persName>
+		</author>
+		<ptr target="https://accessibility.uncg.edu/for-all/why-important/"/>
+		<title level="m">IS 5568: Everything on Israel's Accessibility Law</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+		<respStmt>
+			<orgName>University of North Carolina at Greensboro</orgName>
+		</respStmt>
+	</monogr>
+	<note>Why is web accessibility important</note>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Accessibility of South African university websites</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">F</forename><surname>Verkijika</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>De Wet</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10209-018-0632-6</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Universal Access in the Information Society</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="201" to="210"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<monogr>
+		<title level="m" type="main">Web content accessibility guidelines</title>
+		<ptr target="https://www.w3.org/TR/wcag-3"/>
+		<imprint>
+			<date type="published" when="2024">2024. 2024</date>
+			<publisher>Web Accessibility Initiative</publisher>
+		</imprint>
+	</monogr>
+	<note>WCAG) 2.2. Web content accessibility guidelines (WCAG) 3.0</note>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<monogr>
+		<ptr target="https://www.w3.org/WAI/policies/"/>
+		<title level="m">Web accessibility laws and policies</title>
+		<imprint>
+			<publisher>Web Accessibility Initiative</publisher>
+		</imprint>
+	</monogr>
+	<note>Introduction to web accessibility</note>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Assessing the security of campus networks: The case of seven universities</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Fu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Jiang</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/s21010306</idno>
+		<idno type="PMID">33466335</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Sensors</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">306</biblScope>
+			<date type="published" when="2021">2021</date>
+			<pubPlace>Basel</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Areas include research ethics, education, cyberbullying, health, and privacy. She has a PhD from the University of Bradford in the area of online social networks and privacy</title>
+	</analytic>
+	<monogr>
+		<title level="m">Sophia Alim is an independent researcher in social media</title>
+		<meeting><address><addrLine>Salford, United Kingdom</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>Her research focused on calculating the vulnerability of online social network profiles in terms of information disclosing behavior of a profile owner and the owner's network of friends. In 2006, she was awarded a BSc (Hons) in business information systems from the University of. she received her MSc in computing from the University of Bradford U.K.</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

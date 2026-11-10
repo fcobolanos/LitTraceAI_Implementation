@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">The impact of artificial intelligence on labor markets in developing countries: a new method with an illustration for Lao PDR and urban Viet Nam</title>
+				<funder ref="#_ztNSsMc">
+					<orgName type="full">unknown</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2023-02-17">17 February 2023</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Francesco</forename><surname>Carbonero</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jeremy</forename><surname>Dav</surname></persName>
+							<idno type="ORCID">0000-0002-6876-5961</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Ekkehard</forename><surname>Ernst</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Frank</forename><forename type="middle">M</forename><surname>Fossen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Daniel</forename><surname>Samaan</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Alina</forename><surname>Sorgner</surname></persName>
+							<email>asorgner@johncabot.edu</email>
+							<idno type="ORCID">0000-0002-6876-5961</idno>
+						</author>
+						<title level="a" type="main">The impact of artificial intelligence on labor markets in developing countries: a new method with an illustration for Lao PDR and urban Viet Nam</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2023-02-17">17 February 2023</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7E42B8A1DF3613224458FF36E6D39BD6</idno>
+					<idno type="DOI">10.1007/s00191-023-00809-7</idno>
+					<note type="submission">Accepted: 28 January 2023 /</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.1" ident="GROBID" when="2025-08-21T16:30+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Artificial intelligence</term>
+					<term>Machine learning</term>
+					<term>Digitalization</term>
+					<term>Labor</term>
+					<term>Skills</term>
+					<term>Developing countries JEL classification J22</term>
+					<term>J23</term>
+					<term>O14</term>
+					<term>O33</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>AI is transforming labor markets around the world. Existing research has focused on advanced economies but has neglected developing economies. Different impacts of AI on labor markets in different countries arise not only from heterogeneous occupational structures, but also from the fact that occupations vary across countries in their composition of tasks. We propose a new methodology to translate existing measures of AI impacts that were developed for the US to countries at various levels of economic development. Our method assesses semantic similarities between textual descriptions of work activities in the US and workers' skills elicited in surveys for other countries. We implement the approach using the measure of suitability of work activities for machine learning provided by Brynjolfsson et al. (Am Econ Assoc Pap Proc 108:43-47, 2018) for the US and the World Bank's STEP survey for Lao PDR and Viet Nam. Our approach allows characterizing the extent to which workers and occupations in a given country are subject to destructive digitalization, which puts workers at risk of being displaced, in contrast to transformative digitalization, which tends to benefit workers. We find that workers in urban Viet Nam, in comparison to Lao PDR, are more concentrated in occupations affected by AI, which requires them to adapt or puts them at risk of being partially displaced. Our method based on semantic textual similarities using SBERT is advantageous compared to approaches transferring AI impact scores across countries using crosswalks of occupational codes.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">Introduction</head><p>The impacts of digitalization and artificial intelligence (AI) technologies on labor markets are multifaceted. Workers performing predominantly work activities that can be automated are at risk of being displaced by digital machines. However, occupations combining activities that cannot be automated with those that can are likely to be transformed. Workers in these occupations may benefit from working closely with new digital technologies rather than being displaced by machines <ref type="bibr" target="#b1">(Acemoglu and Restrepo 2018;</ref><ref type="bibr" target="#b21">Lane and Saint-Martin 2021)</ref>.</p><p>Prior research has investigated the impact of new digital technologies on occupations primarily in the United States <ref type="bibr" target="#b17">(Frey and Osborne 2017;</ref><ref type="bibr" target="#b8">Brynjolfsson et al. 2018;</ref><ref type="bibr" target="#b13">Felten et al. 2019;</ref><ref type="bibr" target="#b0">Acemoglu et al. 2020;</ref><ref type="bibr">Fossen and</ref><ref type="bibr">Sorgner 2021, 2022)</ref> and in some cases in other developed countries <ref type="bibr" target="#b5">(Arntz et al. 2016</ref><ref type="bibr" target="#b4">(Arntz et al. , 2017;;</ref><ref type="bibr" target="#b18">Georgieff and Hyee 2021)</ref>. These papers develop measures of the impact of digitalization on occupations in these countries and proceed by testing effects on wages and unemployment <ref type="bibr" target="#b13">(Felten et al. 2019;</ref><ref type="bibr" target="#b14">Fossen and Sorgner 2022)</ref>. Few papers in the literature investigate the impacts of digitalization in developing countries. <ref type="bibr" target="#b10">Carbonero et al. (2020)</ref> evaluate the impacts of robotization on employment in supply chains in developing countries. <ref type="bibr" target="#b3">Aly (2022)</ref> looks at various digitalization indices in developing countries and their associations with macroeconomic variables including employment. Although many developing countries, including some of the world's poorest, are already using basic AI technologies, for instance, in smart farming, credit scoring and targeted advertising, advanced AI technologies are not yet widely adopted there. Yet, there exists a substantial potential for adoption of such technologies to leapfrog traditional development models <ref type="bibr" target="#b19">(IFC 2020;</ref><ref type="bibr" target="#b26">Soto 2020)</ref>. The use of digital technologies has accelerated in developing and even the poorest countries, not least due to lockdown measures that governments implemented during the COVID-19 crisis. In the service sector in Lao PDR, for example, the lockdowns have led many enterprises to switch to digital processes <ref type="bibr" target="#b19">(Homsombath 2020)</ref>. Similar efforts were made in the education sectors in which many activities were held online. These developments may have been a trigger for further digitalization efforts in the near future. Research applying occupation-level data for the United States to other countries typically points to a substantial risk of job destruction and an imminent job crisis, especially when analyzing developing countries (Balliester and <ref type="bibr" target="#b6">Elsheiki 2018)</ref>.</p><p>There are several issues that need to be considered when analyzing the impacts of digitalization in the context of developing countries. Applying the occupational digitalization scores computed for the United States in the context of developing countries might lead to significantly biased results, since the occupational tasks in developing countries might differ considerably from the occupational tasks of a similarly coded occupation in the United States <ref type="bibr" target="#b4">(Arntz et al. 2017</ref>). <ref type="foot" target="#foot_0">1</ref> Alternatively, 1 3</p><p>The impact of artificial intelligence on labor markets in… reproducing approaches that assign AI impact scores to occupations based on extensive surveys of AI experts <ref type="bibr" target="#b17">(Frey and Osborne 2017;</ref><ref type="bibr" target="#b8">Brynjolfsson et al. 2018)</ref> in developing countries would be very costly. Several studies have therefore relied on correction procedures. In particular, <ref type="bibr" target="#b5">Arntz et al. (2016</ref><ref type="bibr" target="#b4">Arntz et al. ( , 2017) )</ref> adjust occupationlevel computerization risk calculated for the US occupations <ref type="bibr" target="#b17">(Frey and Osborne 2017)</ref> by regressing them on individual-and job-specific characteristics from the OECD's Survey of Adult Skills (PIAAC) or other national surveys available in the US and the country of interest. Then they use the estimated coefficients to make predictions of computerization risk for individual jobs and occupations in other countries. While the correction procedure partly accounts for peculiarities of national labor markets, it has several drawbacks. First, before the regression can be estimated, the occupational codes used in O*NET (6-digit level of SOC) must be translated to the occupational codes in PIAAC (ISCO) using a crosswalk, and the latter codes are only available at the imprecise 2-digit level. <ref type="bibr" target="#b5">Arntz et al. (2016</ref><ref type="bibr" target="#b4">Arntz et al. ( , 2017) )</ref> use a multiple imputation method to deal with this issue. Second, the approach starts with digitalization scores at the occupation level, whereas we suggest starting with scores directly attributed to the much finer level of detailed work activities to enhance accuracy and precision. Third, predictions from a regression have a lower variance than the original data, which is likely to be reflected in the results.</p><p>In this paper, we rely on the main advantage of previous cross-country adjustment methods, namely the use of individual-level survey data, but aim to overcome the drawbacks of prior approaches mentioned above. We develop a methodology that allows translating existing scores of AI impacts, most of which were developed using data for the U.S., to the contexts of other countries at the level of work activities. Our method allows comparing AI impacts on workers in countries at vastly different levels of development, including low-income and least-developed economies.</p><p>In a nutshell, we propose to use individual-level surveys of workers' skills, such as the World Bank's Skills Measurement Program (STEP) for developing countries or PIAAC (for OECD countries). We use the state-of-the-art method SBERT to assess semantic similarities between textual descriptions of detailed work activities (DWA) from the O*NET occupational database for the US, 2 for which AI impact scores are available, and the textual descriptions of workers' skills elicited in surveys available for developing countries, in particular the World Bank's STEP Skills Measurement Program. We then use the matrix of relatedness to translate the AI impact scores to the level of individual workers' skills in a given country. In this way, an additional advantage of our method is that it supports different levels of analysis of AI impact on labor markets: at the individual level distinguishing by workers' characteristics such as age or gender, at the skill level, or at the occupation level.</p><p>2 O*NET is a database of quantitative indicators about a variety of attributes for 1016 occupations in the United States. Based on expert opinions or worker surveys, these indicators cover various job-oriented attributes (occupational requirements, workforce characteristics, occupation-specific information) and worker-oriented attributes (worker characteristics, worker requirements and experience requirements).</p><p>States is filled to a larger extent with accounting work. Therefore, the impact of AI on farmers may be different across countries.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Footnote 1 (continued)</head><p>We illustrate the method using the cases of two neighboring Asian countries: Lao PDR, a least developed country according to the United Nations classification,<ref type="foot" target="#foot_1">foot_1</ref> and urban areas in Viet Nam, a developing country that has transformed from one of the poorest countries in the 1980s into a lower middle-income country today. Among the digitalization measures available, we choose the suitability of work activities for machine learning as reported by <ref type="bibr" target="#b8">Brynjolfsson et al. (2018)</ref>.</p><p>The picture that emerges from our approach is insightful and shows that the impact of AI on individual workers is more heterogeneous in urban Viet Nam than in Lao PDR. While most respondents in urban Viet Nam are moderately affected, a significant number of workers are at high risk of being displaced by digital technologies; in Lao PDR, the impact is more evenly distributed. The most common occupation reported by STEP respondents in Lao PDR, subsistence crop farming, has a comparably low suitability for machine learning, presumably due to the importance of non-routine manual tasks in this occupation. The most common occupations in urban Viet Nam are more suitable for machine learning, in particular the occupations of shop salespersons and textile machine operators, but also of crop growers (according to the tasks they perform in Viet Nam). At the same time, workers in these occupations perform a relatively large variety of tasks in Viet Nam, some of which cannot be automated; this makes it likely that these occupations will be transformed rather than completely automated.</p><p>It should be noted that these results only make an assessment regarding the impact of machine learning on jobs, not about the overall risk of automation due to other types of technologies, such as non-AI software and robots. Non-digital mechanization, for instance, might affect occupations such as subsistence crop farming in Lao PDR more immediately than digitalization and AI.</p><p>We also compare results obtained with the proposed method to the results from a naïve approach when the AI impact scores are transferred from the United States to Lao PDR and Viet Nam at the level of occupations. In comparison to our proposed method based on semantic textual similarity matching, the naïve approach seems to produce too much noise to derive meaningful insights.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2">Data and methodology</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1">AI impact measures</head><p>Several measures of AI impacts on occupations in the United States have been suggested by recent literature. To illustrate our method, among the available digitalization measures that we will briefly discuss below, we choose the suitability of work activities for machine learning (ML) provided by <ref type="bibr" target="#b8">Brynjolfsson et al. (2018)</ref>. The main reason for this choice is that this measure is available at the very detailed level of work activities, while other measures are usually available at the less disaggregated level of workers' abilities, work tasks or occupations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">3</head><p>The impact of artificial intelligence on labor markets in… <ref type="bibr" target="#b7">Brynjolfsson and Mitchell (2017)</ref> identify eight key criteria that specify conditions under which ML techniques can be employed as substitutes or complements to human labor. <ref type="foot" target="#foot_2">4</ref> The authors emphasize that these criteria are developed solely on the basis of technical feasibility, and that other factors, such as the elasticity of labor supply, price and income elasticities, determine the economic feasibility of implementation of ML applications. <ref type="bibr" target="#b8">Brynjolfsson et al. (2018)</ref> create a rubric of 23 questions that aim at estimating the degree to which a detailed work activity (DWA) as defined in the O*NET database (compiled by the US Department of Labor) falls under the eight above criteria, and hence, is "suitable for machine learning" (SML). Corresponding to the eight criteria, this rubric also only concentrates on technical feasibility, not on the economic, organizational, legal, cultural, and societal factors influencing ML adoption. Based on a survey, the authors evaluate the potential for applying machine learning to the 2,069 DWAs, 18,156 tasks, and 964 occupations in the O*NET database. The authors use Crowdflower, a Human Intelligence Task (HIT) crowdsourcing platform, where each DWA is scored by 7 to 10 respondents with knowledge in the area. Through the 23 questions respondents are asked to evaluate each DWA based on the eight criteria. <ref type="bibr" target="#b8">Brynjolfsson et al. (2018)</ref> then aggregate their scores from the DWA level to the task level and further to the occupation level in the United States weighted by importance as recorded in O*NET. The result is an average SML score for each US occupation.</p><p>Since the SML scores reported by these authors focus on the possibility of automation of activities currently performed by human workers, the average SML of the work activities performed in an occupation can be interpreted as destructive digitalization in the sense of putting workers at risk of being displaced (see also <ref type="bibr" target="#b14">Fossen and Sorgner 2022)</ref>. In contrast, the standard deviation of SML scores across work activities performed within an occupation reflects transformative digitalization, because occupations combining activities that can be automated with activities that cannot be automated are likely to be reorganized <ref type="bibr" target="#b8">(Brynjolfsson et al. 2018)</ref> and transformed rather than to displace workers. Workers in these occupations are more likely to benefit from their close interaction with new digital technologies than to lose their jobs. The SML scores have the advantage that they are first generated at the level of DWAs in O*NET. These DWAs resemble the skills and work activities elicited in surveys like STEP or PIAAC, which facilitates the translation of these scores to other countries. We elaborate further on the conceptual differences and similarities between the DWAs from O*NET and the skills questions from STEP in Section 2. 3.</p><p>Alternative currently available AI impact measures could also be applied within our methodological framework, but some adaption would be necessary. A second option are the AI Occupational Impact (AIOI) scores provided by <ref type="bibr" target="#b12">Felten et al. (2018)</ref>, potentially as a measure of transformative digitalization (as argued by Fossen <ref type="bibr" target="#b16">and Sorgner 2021</ref><ref type="bibr" target="#b14">and Sorgner , 2022))</ref>. These scores are constructed at the ability level in O*NET. Although our approach could be suitable to use the AIOI scores in combination with individual-level surveys measuring workers' abilities, there are only 52 abilities in O*NET, much less than DWAs. Moreover, the textual descriptions of abilities in O*NET seem to be quite dissimilar to the textual descriptions of skills provided in STEP, reflecting different concepts underlying these measures and, therefore, making the AIOI scores less suitable for applying our approach in combination with the STEP surveys. <ref type="foot" target="#foot_3">5</ref>A third option are the computerization probability scores provided by <ref type="bibr" target="#b17">Frey and Osborne (2017)</ref> as a measure of destructive digitalization. However, these probability scores are only available at the occupation level, so one would have to break these down to the level of work activities, implying imprecision. One way to do so could be to regress the computerization probabilities at the occupation level on the nine bottleneck skills from O*NET identified by <ref type="bibr" target="#b17">Frey and Osborne (2017)</ref>. This would allow the prediction of computerization risk at the occupation level in countries where data on occupations linked to the bottleneck skills are available. <ref type="bibr" target="#b5">Arntz et al. (2016</ref><ref type="bibr" target="#b4">Arntz et al. ( , 2017) )</ref> pursue a similar approach by regressing the automation probability as provided by <ref type="bibr" target="#b17">Frey and Osborne (2017)</ref> on a set of individual job-related characteristics (including tasks and skills) from the PIAAC survey. Yet, the assessment of which tasks are automatable is ultimately derived from the expert opinions assembled by <ref type="bibr" target="#b17">Frey and Osborne (2017)</ref> on the occupational level. Alternatively, one would have to resort to the simple approach of transferring the measure to other countries at the occupation level, which does not seem to be accurate, as argued above.</p><p>A fourth option is provided by <ref type="bibr" target="#b28">Webb (2020)</ref>. He develops a measure of exposure of occupations to AI technology by matching descriptions of work tasks in O*NET to the text of patents using text similarity measures. This procedure generates AI exposure scores at the O*NET task level; however, the author currently only provides the data aggregated to the occupation level.</p><p>It should be noted that the different measures capture different technologies within digitalization and AI; <ref type="bibr" target="#b14">Fossen and Sorgner (2022)</ref> provide a detailed discussion. In particular, machine learning is a subfield of AI from a technological perspective. Therefore, the rankings and relative positions of occupationsare not necessarily expected to be similar when using the different scores. Table <ref type="table" target="#tab_4">3</ref> in the Appendix shows the mean SML score and its within-occupation standard deviation provided by <ref type="bibr" target="#b8">Brynjolfsson et al. (2018)</ref>, the computerization probability provided by <ref type="bibr" target="#b17">Frey and Osborne (2017)</ref>, and the AIOI scores provided by <ref type="bibr" target="#b12">Felten et al. (2018)</ref>, which were all developed for the United States, for the 10 largest occupations in the United States in terms of employment. Cashiers have the highest SML score among these occupations, and also the highest computerization probability, but a moderate 1 3</p><p>The impact of artificial intelligence on labor markets in… AIOI score. Laborers and freight, stock and material movers (by hand) have the lowest SML score and AIOI score, but a high computerization probability. Therefore, analyses using different scores would be interesting as they would answer different research questions, but they are not suitable as robustness checks.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2">Individual-level data on skills in developing countries: STEP survey</head><p>The STEP skills measurement program is provided by the World Bank. The goal of the survey is to provide representative individual-level data on the skills of the workforce and the usage of these skills in the individuals' jobs that can be compared across countries. STEP is based on the adult population aged between 15 and 64 residing in urban municipalities<ref type="foot" target="#foot_4">foot_4</ref> in developing countries and is comparable to the PIAAC survey by the OECD. While the focus of PIAAC is primarily on highincome developed countries, the STEP survey focuses on developing and transition economies. So far, STEP has been administered in two waves, in 2012 and 2013, in 13 countries, including Lao PDR and Viet Nam (surveys in these two countries were conducted in 2012). STEP surveys provide detailed information on individuals' socio-demographic characteristics (e.g., age, gender, formal education level) and job characteristics.</p><p>The STEP survey specifically targets the measurement of skills of the workforce, broadly defined as "abilities to do certain things". STEP distinguishes three types of skills: cognitive skills (e.g., reading and writing proficiency), socio-emotional skills (referring to social and emotional behaviors, personality, and attitudes), and job-relevant (technical) skills (see <ref type="bibr" target="#b23">Pierre et al. 2014</ref>, for more details). For the purpose of our study, we use a subsection of STEP questions that attempt to measure cognitive skills and job-relevant skills through self-reported information on respondents' use of these skills in work-related activities (see Table <ref type="table" target="#tab_5">4</ref> in the Appendix). These questions therefore link the relevant skills to typical work activities. These activities in the STEP questions resemble direct work activities (DWA) as defined in O*NET. We call these 44 activities "STEP skills" throughout the paper, even though, strictly speaking, these questions mostly relate to certain activities that are supposed to reveal information about underlying skills of the respondents in the three categories mentioned above (cognitive skills, socio-emotional skills, and job-relevant skills). We exclude respondents from the sample who did not work during the last 12 months before the interview because they are not asked about their work-related skills.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3">Matching O*NET work activities to skills in STEP</head><p>A major challenge regards matching the descriptions of work activities in O*NET, for which we have AI impact scores such as the SML scores, to skills in STEP. Even at the level of abilities, which is more aggregated than the level of DWAs, a manual approach seems infeasible. For example, there are 52 O*NET abilities and 44 skills in STEP, so a translation matrix would require determining 2,288 weighting scores. Furthermore, this approach would be entirely subjective.</p><p>Alternatively, one could conduct a new expert survey specific to a country of interest, similar to the approach of <ref type="bibr" target="#b8">Brynjolfsson et al. (2018)</ref> or <ref type="bibr" target="#b17">Frey and Osborne (2017)</ref>, to produce new digitalization scores instead of using the existing scores developed for the United States. Although we consider this approach as a possible avenue for further research, a disadvantage is that it requires substantial resources (e.g., conducting a survey and collecting expert judgments), and it would be limited to a single country or region.</p><p>In this paper, we suggest and illustrate a third approach. We directly match 2,069 detailed work activities (DWAs) in O*NET to the 44 STEP skills creating a matrix of relatedness. The PIAAC survey could also be used instead of the STEP to target a different set of countries. O*NET uses its "Content Model" as its conceptual foundation and provides clear definitions for abilities ("enduring attributes of the individual that influence performance"), for skills ("developed or acquired attributes of an individual that may be related to work performance"), and for detailed work activities ("specific work activities that are performed across a small to moderate number of occupations within a job family"). The O*NET model defines a set of generic skills, for example, basic skills like "active listening", "mathematics", or cross-functional skills like "social skills" or "technical skills", which can be further broken down into a total of 35 more detailed skills. Workers then need some of these 35 skills to successfully carry out tasks or activities in their occupations. These activities are described in detail as 2069 DWAs, which are then linked to the 1014 U.S. occupations. As we explained more elaborately in the previous section, the STEP survey collects a wide range of variables including questions about performed activities at work. It does not provide a detailed typology and rather asks the interviewee about actual activities he or she has performed recently (which may allow to draw conclusions on the skills of the surveyed person). The 44 "STEP skills" from the utilized questions resemble more the DWAs than the generic skills in O*NET. Thus, our approach works better at the DWA level than the abilities or skills level. This has affected the choice of the AI impact measure that we use to illustrate our method: since the SML scores of <ref type="bibr" target="#b8">Brynjolfsson et al. (2018)</ref> are available at the work activities level, the application of our approach at the work activities level using the SML scores is straightforward.</p><p>To find semantic similarities between the textual descriptions of O*NET work activities and the STEP skill measures, we apply automated semantic textual similarity matching techniques (SBERT). By using SBERT, we avoid a manual assignment of similarity as discussed above. The main advantages of this approach are the following: it is systematic rather than subjective; it is automated; there is no need to conduct new surveys; and the same method can be used with different data sources such as STEP and PIAAC for many countries. As our method is based on activities performed within the occupation, it has the additional advantage that occupations not included in the original set of occupations with AI impact scores can be examined as well, including new or reorganized occupations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">3</head><p>The impact of artificial intelligence on labor markets in…</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.4">A new method based on semantic textual similarity matching using SBERT</head><p>In this section, we describe our method in detailed steps. The first step involves processing the textual descriptions of the DWAs in O*NET and the descriptions of the skills used by employed STEP respondents in their main job. The latter are the questions from the STEP questionnaire that aim at assessing the skills of employed respondents (see Table <ref type="table" target="#tab_5">4</ref> in the Appendix). We combine the textual descriptions to a single string vector. Then we preprocess the string data stored in this vector. This includes removal of accents, consecutive whitespaces, substitutions of various text characters (e.g., "-", "," and "."), and text conversion to lowercase. In the next step, word (semantic) embeddings are created for both DWAs and STEP questions using the Sentence-BERT (SBERT) method <ref type="bibr" target="#b24">(Reimers &amp; Gurevych 2019)</ref>. 7 The model we apply is provided by MS Marco, which is pre-trained with real user search queries from the Bing search engine, a corpus that consists of 8.8 million passages.</p><p>In the second step, we create a similarity matrix that contains cosine measures of similarity 8 between all documents in the sample using the semantic word embeddings created in the previous step. These similarity measures account for semantic similarity between the textual descriptions of 2069 DWAs from O*NET and 44 STEP questions. 9 O*NET also provides broader, less occupation-specific activity descriptions in a hierarchy. General work activities (GWAs) are the broadest category, followed by intermediate work activities (IWAs), and DWAs are the finest categories. In addition to the first cosine similarity matrix using the DWAs, we create a second cosine similarity matrix using the GWAs to add more information on the nature of each work activity. For example, consider the DWA "Prepare forms or applications." We improve similarity matching results by adding information that this DWA belongs to the broader GWA category "Documenting/Recording Information". This way we distinguish this DWA clearly from the DWA "Position construction forms or molds", which also contains the word "form", but belongs to the different GWA category "Handling and moving objects". Our final similarity measure is built as the average between the two similarity measures: between STEP skills and DWAs on the one hand and STEP skills and GWAs on the other hand. The 7 SBERT is a state-of-the-art method in Natural Language Processing (NLP). It performs significantly better than alternative methods, such as averaging over a sentence's individual word embeddings and BERT <ref type="bibr" target="#b24">(Reimers and Gurevych 2019)</ref>. The method has been applied, for instance, in the context of patent applications (Jansson and Navrozidis 2020) and gender differences in Covid-19 discourse on online discussion platforms <ref type="bibr" target="#b2">(Aggarwal et al. 2020</ref>). 8 Cosine similarity measure can take values between -1 and 1, where 1 means that two vectors of word embeddings point in exactly the same direction, -1 means that the vectors point in opposite directions, and 0 means that the. vectors are perpendicular. We normalize the cosine similarity measures to take values between 0 and 1, which allows us to use them as weights later when translating the SML scores from the level of DWAs to the level of STEP skills. 9 Consider the example of the final similarity scores for the STEP question "Do you (did you) read anything at this work, including very short notes or instructions that are only a few sentences long?" The highest similarity score (0.749) is obtained for the DWA "Receive information or instructions for performing work assignments" and the lowest similarity score (0.181) is obtained for the DWA "Drive passenger vehicles." overall patterns of results are not very sensitive to the choice of whether the similarity scores of the DWAs are averaged with any similarity scores of higher-level categories: with the GWAs as done here, with the IWAs, with both the GWAs and IWAs, or with none of these higher-level categories. After this second step, we have for each of the 44 STEP skills 2069 similarity scores that link the particular STEP skill to the DWAs.</p><p>In the third step, we use these final similarity measures as weights to create SML scores at the level of STEP skills. We do so by calculating for each of the 44 STEP skills a weighted average of the SML scores at the O*NET DWA activity level: While larger SML scores signify better suitability of the skills for machine learning, the units of the original SML scores provided by <ref type="bibr" target="#b8">Brynjolfsson et al. (2018)</ref> do not have a direct interpretation. Therefore, we standardize the SML scores at this level of STEP skills, with each skill receiving the same weight. Table <ref type="table" target="#tab_5">4</ref> in the Appendix shows the standardized SML score for each of the 44 skills in STEP. For example, 'using databases' and 'searching for information on the internet' are the skills most suitable for machine learning, as indicated by the largest SML scores, which seems very plausible. In contrast, 'physically demanding work' has the lowest SML score. An example for physically demanding work from the STEP questionnaire is 'construction' and one for physically not demanding work is 'sitting at a desk answering a phone'; it is plausible that the latter task is much more suitable for machine learning (an example would be automated call centers using AI) than the former.</p><p>Fourth, we merge the SML scores calculated at the level of STEP skills with the individual-level STEP surveys for Lao PDR and Viet Nam conducted in 2012, the latest available year for both countries. There are three types of questions in STEP that are used to measure the skills respondents use in their jobs: yes/no questions about whether a certain skill is relevant in one's job (e.g., if a job requires reading books); cards questions that measure on a 10-point Likert scale the extent to which a particular job characteristic is relevant for one's main job (e.g., the extent to which a job is physically demanding); and frequency questions that measure (on a 4-or 5-point Likert scale) the time that a person dedicates to a particular skill or task in his or her main job. In order to make the responses to the different types of questions comparable, we normalize them such that the responses can take values within an interval between 0 and 1. Now we use the normalized individual responses to create a score capturing the SML of the skills each individual uses in his or her job. More precisely, we create an SML score for each individual i averaged over the skills and weighted by the normalized individual responses to the questions on the usage of these skills. This is our measure of labor-displacing (destructive) AI technology at the level of the individuals' jobs:</p><p>(1) (2)</p><formula xml:id="formula_0">SML</formula><formula xml:id="formula_1">SML i = ∑ skills usage i,skill SML skill ∕ ∑ skills usage i,skill 1 3</formula><p>The impact of artificial intelligence on labor markets in… Fifth, we create mean SML scores at the occupation level and the within-occupation standard deviation of the SML scores. We follow the method by <ref type="bibr" target="#b8">Brynjolfsson et al. (2018)</ref> as closely as possible. These authors start with SML scores for each DWA in O*NET, then they aggregate them to a broader level of tasks and then to the level of occupations by building weighted averages (they call this mSML). In addition, they calculate the standard deviation of SML across tasks within each occupation (sdmSML). Both mSML and sdmSML are weighted by the importance of the tasks in the occupation as provided in O*NET. Since detailed occupation databases like O*NET are unavailable for most countries, including Lao PDR and Viet Nam, we use the STEP survey to derive the task composition of occupations in these countries. To do so, we calculate the average of the usage of each skill, obtained from questions in STEP, over individuals i in each occupation occ in a country:</p><p>Then we create an SML score for each occupation as the average SML score over the skills, weighted by the average usage of the skills in the occupation. This is our measure of labor-displacing (destructive) AI technology at the level of occupations:</p><p>Finally, we calculate the standard deviation of the SML scores across the skills in each occupation, weighted by the average usage of the skills in the occupation in the country ( usage occ,skill ):</p><p>A large standard deviation of the SML scores within an occupations indicates that an occupation combines work activities that are suitable for machine learning with work activities that are not suitable for machine learning. This suggests that human workers will still be needed in the occupation but could closely collaborate with AI technologies in reorganized occupations <ref type="bibr" target="#b8">(Brynjolfsson et al. 2018)</ref>. Therefore, we interpret this measure as transformative AI technology at the level of occupations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3">Results for Lao PDR and Viet Nam</head><p>To better understand the occupational structure of the labor markets in Lao PDR and Viet Nam, we first provide descriptive statistics based on data from the Labour Force Surveys (LFS) provided by the International Labour Organization (Table <ref type="table" target="#tab_2">1</ref>). Since the STEP data is available for both urban and rural areas in Lao PDR, but only for urban areas in Viet Nam, we show corresponding statistics in this table; (5) sdmSML occ = SML skill the largest occupations in urban areas are service and sales workers (28%) followed by elementary occupations and professionals (15% each). Elementary occupations comprise many different simple tasks, like door-to-door sale, cleaning and home care activities, simple farming tasks and steering animal-drawn vehicles. According to the information provided by the LFS, we do not observe a significant gender employment gap at the aggregate level, although large differences occur at the occupational level. In particular, women are under-represented among plant and machine operators and assemblers in both countries, among technicians and elementary occupations in Lao PDR and among managers and craft workers in Viet Nam.</p><p>Next, we present the measures of destructive and transformative digitalization estimated for Lao PDR and urban Viet Nam following our proposed methodology. Figure <ref type="figure" target="#fig_0">1</ref> shows the kernel density of the SML of the skills reported by individuals in the STEP survey ( SML i ) in both countries. For Viet Nam, there is a bimodal distribution: Most respondents have a mix of skills that is moderately suitable for machine learning, which shows that these individuals are at moderate risk of being displaced by digital machines. However, a significant number of individuals also exhibit skills that are highly suitable for machine learning. This points toward the fact that the labor market in urban Viet Nam is more heterogeneous than in Lao PDR in terms of susceptibility of individual workers' jobs to labor-displacing machine learning technologies.</p><p>Overall, the mean SML score across workers is -0.619 in Lao PDR and -0.398 in Viet Nam, indicating that workers in urban Viet Nam are more affected by machine learning on average (see Table <ref type="table" target="#tab_3">2</ref>); the difference is significant at the 1% level. The scores are comparable across countries because they were standardized at the level of skills in STEP, which are the same in both countries. The fact that the scores are 1 3</p><p>The impact of artificial intelligence on labor markets in… negative in both countries indicates that workers in both countries use skills that are less suitable for machine learning than the average across the skills elicited in the STEP survey; in Lao PDR, the average SML score is 62% of a standard deviation away from the average across STEP skills.</p><p>The comparison between urban Viet Nam and Lao PDR shows that the level of development is not necessarily an indicator for the suitability of jobs for machine learning. Lao PDR is less developed than Viet Nam with the largest share of workers in Lao PDR engaged in the agricultural sector as crop growers, subsistence crop farmers or animal producers. These are all occupations that have relatively low standardized SML scores, ranging from -0.147 to -0.570, and may not be easily replaced by digital machines. In urban Viet Nam, the largest share of workers are service workers, for example, street and market salespersons (-0.048), shop salespersons (0.075), or finance professionals (0.201), who all have considerably   <ref type="table" target="#tab_4">1 3</ref> higher standardized SML scores. Informality also tends to be higher in the previous job categories in Lao PDR, which might correlate negatively with SML scores.</p><p>Our method also allows us to disaggregate by demographic characteristics such as gender or age. Figure <ref type="figure" target="#fig_1">2</ref> suggests that in both Lao PDR and urban Viet Nam, women use skills in their jobs that are somewhat more suitable for machine learning than men. However, the mean difference between genders is insignificant in both countries (Table <ref type="table" target="#tab_3">2</ref>). An interesting observation from the figure is that heterogeneity of AI impacts on occupations in urban Viet Nam is not specific to male or female workers.</p><p>Several results emerge when the data are disaggregated by workers in different age cohorts (Fig. <ref type="figure">3</ref>). In Lao PDR, workers in the youngest age cohort (less than 25 years old) use skills in their jobs that are less suitable for machine learning than older cohorts. This is different in urban Viet Nam, where high SML scores are most concentrated among individuals between the ages of 25 and 35. 10 The differences in SML scores between age cohorts are significant at the 1% level in both countries (Table <ref type="table" target="#tab_3">2</ref>). 10 Workers in this age cohort in Lao PDR are more likely to be in physically demanding jobs that are less suitable for machine learning than workers in this age cohort in urban Viet Nam. Young workers in urban Viet Nam are more likely to be in service occupations where they perform tasks that are more suitable for machine learning, for example involving various mathematical calculations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">3</head><p>The impact of artificial intelligence on labor markets in… Next, we aggregate the SML scores at the occupation level (mSML) in Lao PDR and Viet Nam. This tilts the distribution more to higher SML scores in urban Viet Nam (Fig. <ref type="figure" target="#fig_2">4</ref>). The mass of individuals with moderate SML scores we saw in Fig. <ref type="figure" target="#fig_0">1</ref> seems to be concentrated in a few occupations, such that more of the mass of occupations is concentrated at higher SML scores.</p><p>Aggregation at the occupation level enables us to not only estimate the mean SML score (mSML) of the skills used in an occupation, but also the standard deviation of the SML scores (sdmSML) of the skills used within an occupation. As argued above, if the skills used in an occupation can be automated on average, workers are at risk of displacement, so mSML is a measure of destructive digitalization. However, if some skills used in an occupation can be automated whereas others cannot, resulting in a high sdmSML score, the occupation will be likely transformed <ref type="bibr" target="#b8">(Brynjolfsson et al. 2018</ref>) and workers may benefit from increased productivity. Thus, sdmSML is a measure of transformative digitalization. Transformative digitalization may also be an indicator for required training or re-training on the job or within an occupation, which may have to be supported or enabled by policy makers and employers. Destructive digitalization or displacement risk of workers may require different policy responses such as re-training to different occupations, measures to support job creation in different sectors, or income support to allow workers to make transitions to other jobs. Figure <ref type="figure">5</ref> shows that the distribution of sdmSML is shifted toward higher scores in Viet Nam in comparison to Lao PDR, which reveals that more occupations in urban Viet Nam are likely to be transformed or reorganized due to AI than occupations in Lao PDR.</p><p>To visualize the effects of machine learning technologies on occupations in both countries, we map how much occupations in Lao PDR and Viet Nam are affected by destructive (mSML) and transformative (sdmSML) digitalization. We depict each occupation in Lao PDR (Fig. <ref type="figure">6</ref>) and in urban Viet Nam (Fig. <ref type="figure" target="#fig_4">7</ref>) as a bubble on a two-dimensional pane. Each bubble represents one occupation, and the size of the bubbles reflects the relative number of workers in the occupation in Lao PDR and urban Viet Nam, respectively, based on the LFS for both countries. <ref type="foot" target="#foot_5">11</ref> In Figure <ref type="figure" target="#fig_8">11</ref> in the Appendix, the size of the bubbles reflects the relative number of workers in the occupation based on the LFS for both urban and rural areas in Viet Nam. This The impact of artificial intelligence on labor markets in… makes the bubble sizes more directly comparable to those for Lao PDR; however, the underlying STEP data for Viet Nam only covers urban areas.</p><p>We observe a tendency for significant labor market transformation in both countries: Occupations in the northeast corner are characterized by high transformative and destructive digitalization technologies, which puts pressure on workers to adapt, combined with a risk of partial displacement ('machine terrain'). On the contrary, occupations close to the southwest corner show low SML scores and a low standard deviation in SML scores. These occupations can be considered to be in 'human terrain', with little expected impact from AI. Few occupations are present in the northwest corner, which represent 'rising stars' occupations, with limited risk of destruction and high potential for transformation. Similarly, very few occupations are placed in the southeast corner of 'collapsing occupations' with high risk of destruction and little potential for transformation involving human workers (see <ref type="bibr" target="#b15">Fossen and Sorgner 2019</ref>, for the characterization of the four sectors in the US context).</p><p>By comparing the two countries, we note that the same occupation can have very different mSML and sdmSML scores in different countries because of different work activities workers perform. This indicates that our method has a valuable discriminating power among different pools of workers in different country contexts.</p><p>Many occupations in Viet Nam that are important in terms of employment are more suitable for machine learning than many important occupations in Lao PDR and, therefore, they are potentially subject to destructive digitalization. At the same time, many of these occupations in Viet Nam are subject to transformative digitalization, thus, characterizing these occupations as within 'machine terrain' for the near future with high levels of both transformative and destructive digitalization (they are in the upper right corner of the chart). The most common occupations in urban areas in Viet Nam, represented by the largest bubbles in Fig. <ref type="figure" target="#fig_4">7</ref>, have relatively high SML scores in Viet Nam due to the activities performed in these occupations there. Among these occupations, the activities of textile machine operators are most suitable for machine learning on average. At the same time, the activities performed within this occupation have the highest standard deviation of SML, which suggests that the occupation will be reorganized, and human workers will still be needed in this occupation in the future to perform some of the activities.</p><p>In contrast, in Lao PDR, by far the largest share of STEP respondents work as subsistence crop farmers (large bubble in Fig. <ref type="figure">6</ref>). The suitability for machine learning is lower in comparison to the above-mentioned occupations due to the manual non-routine tasks performed. In Viet Nam, some occupations are also located in the lower left quadrant, for example building frame workers, characterizing them as within 'human terrain' for the near future in this country with low levels of both destructive and transformative digitalization. The results suggest that Viet Nam is currently undergoing a significant shift from traditional occupations to those affected by industrialization and digitalization. In contrast, employment in Lao PDR is still dominated to a large extent by agricultural occupations that lie somewhere in the middle on the scales of both transformative and destructive digitalization. Therefore, workers in Lao PDR are currently less affected by AI, as the labor market there has not yet fully absorbed previous waves of automation.</p><p>In a nutshell, the gap between 'machine terrain' and 'human terrain' occupations is clearly more pronounced in Viet Nam than in Lao PDR. At the same time, none of the two countries have many occupations that must be characterized as 'collapsing' occupations, which are strongly affected by labor-displacing AI with little prospect of transformation involving human workers, or that fall into the category of 'rising stars' occupations, which have low displacement risk but at the same time a high potential for occupational transformation.</p><p>How do the measures of destructive and transformative digitalization for Lao PDR and Viet Nam compare to those for a developed economy? Fig. <ref type="figure" target="#fig_5">8</ref> shows the SML scores and their within-occupation standard deviation across tasks for the United States. These scores are directly provided by <ref type="bibr" target="#b8">Brynjolfsson et al. (2018)</ref> for the US, so in contrast to Lao PDR and Viet Nam, no translation was necessary. <ref type="bibr" target="#b8">Brynjolfsson et al. (2018)</ref> aggregate the SML scores from tasks to occupations weighted by importance in the O*NET database, which is analogous to our procedure. We standardized the scores for Lao PDR and Viet Nam at the level of skills in the STEP survey, but we cannot do this for the US because the STEP survey is not conducted in the US. Therefore, we show the original scores here. Also note that the figure for the US is based on the SOC classification of occupations (6 digits) used by <ref type="bibr" target="#b8">Brynjolfsson et al. (2018)</ref>, whereas the figures for Lao PDR and Viet Nam are based on the ISCO-08 classification (3 digits) used in the STEP surveys with less detailed occupations. While the scores cannot be directly compared between the US and the other two countries, the patterns can be compared. Retail or shop salespersons have 1 3</p><p>The impact of artificial intelligence on labor markets in… a relatively high mSML score both in the US and in urban Viet Nam, indicating that these occupations are suitable for machine learning. Laborers doing physically demanding manual work (freight, construction) have relatively low mSML scores in these two countries, indicating that this work is not very suitable for machine learning. The patterns in Lao PDR are more different from those in the US. This may reflect that Viet Nam is closer to the US in terms of economic development, so tasks performed within occupations are more similar to the US in urban Viet Nam than in Lao PDR.</p><p>Finally, we compare the SML scores translated from the US to Lao PDR and Viet Nam at the work activities and skills level following our approach to the SML scores simply transferred at the occupation level (naïve approach). The naïve approach requires applying a crosswalk between the SOC occupation codes provided for the SML scores by <ref type="bibr" target="#b8">Brynjolfsson et al. (2018)</ref> and the ISCO-08 occupation codes available in the STEP survey. When we use this naïve approach and transfer the SML scores (not standardized) from the US to Lao PDR and Viet Nam at the occupation level (Figs. 9 and 10), the maps show no clear patterns or different patterns between the two countries, despite heterogeneous economic conditions and different organization of occupations.  <ref type="bibr" target="#b8">Brynjolfsson et al. (2018)</ref>. mSML denotes the mean suitability for machine learning of skills used in an occupation (not standardized), which we interpret as a measure for destructive digitalization. sdmSML denotes the standard deviation of the SML over tasks within each occupation, which we interpret as a measure of transformative digitalization. The size of the bubbles represents employment in the occupations as provided by the Bureau of Labor Statistics (2018) for the US. The largest occupations are labeled The impact of artificial intelligence on labor markets in…</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4">Discussion</head><p>We proposed a methodology that allows meaningfully assessing AI impacts on individuals, jobs, and occupations in different countries. So far, the analysis of AI impacts on labor markets in countries other than the United States has been rather limited, particularly so in developing countries. While the implementation of AI technologies is still rather low in developing countries, basic AI technologies are already in use in these countries, and substantial potential for adoption of more advanced AI technologies has been identified (IFC 2020). Pronounced interest in enhancing the implementation rate of AI technologies in developing countries is further driven by the promise of these technologies to help leapfrog development. <ref type="foot" target="#foot_6">12</ref>Hence, understanding the impacts of AI on labor markets in developing countries, including in least developed countries, is crucial, but is dependent on the availability of appropriate methods. Previous methods that we discussed in this paper do not sufficiently account for the fact that occupations are organized in different ways and comprise different work activities across countries. This has been the main challenge to the study of impacts of digitalization on occupations in various countries.</p><p>The novel method we propose in this paper relies on the assessment of the suitability for machine learning of 2,069 detailed work activities that constitute occupations. These detailed work activities are reasonably universal activities that can be considered relevant in all labor markets including those in developing and least developed countries. This highly disaggregated level of analysis allows us to overcome the main challenge described above. In a nutshell, our method is based on the SBERT assessment of semantic similarities between textual descriptions of detailed work activities in the occupational database O*NET in the United States, for which digitalization measures are available, and skills elicited in household surveys available in a wide range of countries, such as STEP or PIAAC. This makes it possible to translate measures of digitalization to other countries at the level of work activities and to compare the impact of digitalization across countries and for various groups of individual workers within countries. This method builds on and advances prior approaches such as that suggested by <ref type="bibr" target="#b5">Arntz et al. (2016</ref><ref type="bibr" target="#b4">Arntz et al. ( , 2017))</ref>, which starts from occupation-level digitalization scores instead of detailed work activities and relies on a crosswalk to 2-digit-level occupational scores.</p><p>We illustrate our approach using the suitability of work activities for machine learning (SML) provided by <ref type="bibr" target="#b8">Brynjolfsson et al. (2018)</ref> as the AI impact measure, STEP as the survey of individual skills used at work, and the country cases of Lao PDR, a least developed country, and its neighbor Viet Nam, a developing country. Our methodology allows calculating AI impact scores at the level of individuals rather than at the level of occupations, and it provides less noisy and more insightful results than the naïve approach when digitalization measures are translated to other countries at the occupation level. While the mean of the suitability of work activities for machine learning in an occupation reflects destructive (potentially labor-displacing) AI technology, we also calculate the within-occupational variation of this measure to account for transformative effects of AI technology or the extent to which an occupation can be reorganized rather than replaced by technology.</p><p>The main insights from our analysis for Lao PDR and Viet Nam can be summarized as follows. First, we find that a larger share of individuals and occupations in urban areas in Viet Nam are exposed to labor-displacing machine learning technologies than in Lao PDR (where the data covers both urban and rural areas). This observation might reflect the differences in skill use between the two countries but also the fact that Viet Nam has already seen a larger transformation of its labor market through previous waves of mechanization, thus, making implementation of machine learning technologies easier. A significant share of workers in Lao PDR are employed in subsistence crop farming where the immediate implementation of AI technologies is challenging given the current state of technology and human capital in the country. This reduces the threat of rising unemployment due to this specific type of technology, but at the same time casts doubt on the feasibility of leapfrogging the current development path by means of AI technologies in Lao PDR. In Viet Nam, where the potential for labor-displacing automation is greater, policy responses could consist, for instance, in implementing measures to support job creation in less affected sectors or supporting workers in obtaining skills that will allow them to make transitions to jobs in these sectors.</p><p>Second, the urban labor market in Viet Nam is pronouncedly more heterogeneous with respect to the impacts of AI on individual workers, as compared to the labor market in Lao PDR. Both countries have a rather high share of workers in occupations that are characterized by high suitability of work activities for machine learning technologies, and, at the same time, have a high potential for re-organization of tasks within occupations. However, in Viet Nam there are some relatively highly populated occupations, such as building frame workers, that mainly consist of work activities that are not very suitable for machine learning technologies. While these occupations can be considered as safe in terms of labor-displacing effects of AI on them, there are not many opportunities for workers employed in these occupations to improve their productivity by means of AI. Thus, policy makers should monitor the aspects of inequality that may be due to unequally distributed opportunities for productive work using AI technologies across occupations.</p><p>Third, the results of gender-disaggregated analysis indicate that in both countries female workers are slightly more affected by labor-displacing AI technologies than their male counterparts. This is in line with previous research on the impacts of digital technologies on women in the context of developing countries (e.g., <ref type="bibr" target="#b25">Sorgner 2019)</ref>. We further show that heterogeneity of AI impact on occupations in urban Viet Nam does not seem to be driven by male or female workers, but that it is a rather general phenomenon in this country. Given that the digital gender gap is particularly pronounced in developing countries <ref type="bibr" target="#b22">(Mariscal et al. 2019)</ref>, policy makers should design and promote educational programs designed for girls and women, to increase their participation in STEM fields and prevent the aggravation of the digital gender gap.</p><p>Fourth, several insights emerge from our analysis disaggregated by workers in different age cohorts. We find substantial differences in both countries regarding 1 3</p><p>The impact of artificial intelligence on labor markets in… the impact of AI technologies on younger workers. In Lao PDR, younger workers appear to be least affected by suitability of their work activities for machine learning technologies, while in urban Viet Nam younger workers seem to be among the most affected by this type of AI technology. This suggests that there are large differences in skill use among young workers in both countries, which deserves a more in-depth analysis given that particularly in Lao PDR the share of young individuals in the population is substantial.</p><p>Our analysis is not without limitations. Some limitations can be attributed to the methodology, while others are due to the data used in our analysis. In terms of methodology, we were able to improve earlier methods by significantly disaggregating the level of analysis and breaking it down to the level of detailed work activities. Still, one may wonder in how far the detailed work activities are comparable across countries, given different stages of economic development. We argue that using more than 2,000 detailed work activities is currently the most disaggregated level of analysis used in the literature, which represents an important advantage of our method. The highly disaggregated level of work activities makes them rather universal and applicable in various contexts. Moreover, our methodology is based on the application of semantic similarity matching techniques with textual data. We rely on the state-of-the-art Natural Language Processing technique, namely SBERT, to create semantic word embeddings to be used later for finding similar textual descriptions of work activities and skills. Should more advanced methods become available in the future, the method can be adjusted accordingly.</p><p>There are several limitations in terms of data used in the analysis. First, surveys like STEP and PIAAC elicit a rather restricted number of skills, which might lead to imprecise results of similarity matching with work activities, as some of the latter might be relevant for one's job but corresponding information is missing in the survey. Therefore, household survey programs should ensure to include comprehensive information about skills and tasks that do not miss important areas.</p><p>Second, for illustration purposes we used the measure of suitability of work activities for machine learning provided by <ref type="bibr" target="#b8">Brynjolfsson et al. (2018)</ref>. If other measures, for instance, of other types of AI technologies will be developed in the future that are available at this narrow level of analysis, they can be adopted with our methodology in a straightforward way. In addition, future surveys should also attempt to distinguish between work activities, tasks, and abilities in a more systematic way, because some existing AI measures are available at the level of abilities (e.g., <ref type="bibr" target="#b12">Felten et al. 2018)</ref>, which were not measured in the STEP survey and therefore could not be analyzed with our method. Moreover, considering the speed at which new AI technologies are being developed to automate tasks hitherto not feasible, a more forward-looking approach could be to translate patent data on AI to identify tasks and skills susceptible to be replaced in the future, similar to the approach undertaken by <ref type="bibr" target="#b28">Webb (2020)</ref>. In addition, it would be desirable to have measures of technology adoption in addition to the task suitability measures to assess the actual impact of digital technologies on job tasks. The actual impact of machine learning technologies on jobs in developing countries could be diminished by many barriers to automation, such as the availability of a young and relatively cheap labor force, the presence of tariffs on digital goods, a lack of high-quality human capital that is needed to adopt new digital technologies, and a relatively high cost of technology adoption given a high share of SMEs and informal businesses, among others (World Bank 2016).</p><p>Third, the STEP surveys for Lao PDR and Viet Nam are only available for the year 2012. It would be very useful to have similar surveys of adult's skills in developing countries that are more recent, representative and include a sufficient number of respondents to allow for a meaningful analysis of different categories of workers. In addition, the measure of suitability of job tasks to machine learning technologies <ref type="bibr" target="#b8">(Brynjolfsson et al. 2018</ref>) that we use in our analysis is slightly more recent than the STEP data. Thus, our results show how the occupations of individuals, captured in the structure that existed in Lao PDR and Viet Nam in 2012, were expected to become suitable for machine learning in subsequent years. If in the relatively short period between the collection of the STEP data and the construction of the SML measure the adoption of machine learning technologies in developing countries already affected the composition of job tasks individuals performed, our estimation would still be relevant because it demonstrates the potential impact of machine learning technologies on the structures that existed in 2012. Availability of more recent data on job tasks in developing countries would allow to estimate the extent to which job tasks have changed over the last decade and to relate these changes to the availability of machine learning technologies. In addition, the STEP survey was mainly conducted in urban areas of developing countries but given a strong urban-rural regional divide in these countries, it would be desirable to have data that also includes respondents residing in rural areas. In this paper, only data for Lao PDR covered population residing both in urban and rural areas.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5">Conclusion</head><p>Our proposed methodology opens avenues for future research by allowing the estimation of digitalization impact measures of choice for a wide range of different countries, both developing and developed countries. While our illustrative example focuses on SML scores, the STEP survey and the cases of Lao PDR and Viet Nam, other digitalization measures, other surveys such as PIAAC, and other countries should be investigated in the future. The full value of our approach will become visible when applying it to various countries, because the methodology allows using the same digitalization measures across countries, which makes the results comparable. This research will inform policymakers about challenges and opportunities that new digital technologies deliver to different labor markets outside of the United States in a more targeted and precise way than current approaches do. Comparing the impact of digitalization between developed and developing countries will allow adjusting economic development strategies in a timely manner. Future research will also be able to apply our methodology to regions within countries as far as representative surveys with sufficient sample sizes are available. This research will reveal regional digital divides due to digitalization and AI and allow policymakers to develop mitigating and enabling labor market policies such as targeted training programs.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">3</head><p>The impact of artificial intelligence on labor markets in… The impact of artificial intelligence on labor markets in…    </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6">Appendix</head></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1</head><label>1</label><figDesc>Fig. 1 Suitability for Machine Learning of Individual Jobs in Lao PDR (Left) and Viet Nam (Right)</figDesc><graphic coords="13,53.85,58.11,331.68,120.84" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2</head><label>2</label><figDesc>Fig. 2 SML of Individual Jobs in Lao PDR (Left) and Viet Nam (Right) by Gender</figDesc><graphic coords="14,53.85,58.11,331.68,121.08" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 4</head><label>4</label><figDesc>Fig. 4 SML of Occupations in Lao PDR (Left) and Viet Nam (Right)</figDesc><graphic coords="15,53.85,58.11,331.68,121.08" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 5 Fig. 6</head><label>56</label><figDesc>Fig. 5 Within-occ. Standard Deviation of SML in Lao PDR (Left) and Viet Nam (Right)</figDesc><graphic coords="16,53.85,58.11,331.68,121.08" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 7</head><label>7</label><figDesc>Fig. 7 Destructive and Transformative Digitalization in Viet Nam. Notes: Each bubble represents an occupation in Viet Nam. mSML denotes the mean suitability for machine learning of skills used in an occupation (standardized at the level of STEP skills) and is a measure for destructive digitalization. sdmSML denotes the standard deviation of the SML of skills used within each occupation and is a measure of transformative digitalization. The size of the bubbles represents employment in urban areas in the occupations based on the 2016 Labour Force Survey for Viet Nam. The largest occupations are labeled</figDesc><graphic coords="17,92.25,58.88,289.82,190.34" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 8</head><label>8</label><figDesc>Fig. 8 Destructive and Transformative Digitalization in the United States. Notes: Each bubble represents an occupation in the United States. mSML and sdmSML are provided by<ref type="bibr" target="#b8">Brynjolfsson et al. (2018)</ref>. mSML denotes the mean suitability for machine learning of skills used in an occupation (not standardized), which we interpret as a measure for destructive digitalization. sdmSML denotes the standard deviation of the SML over tasks within each occupation, which we interpret as a measure of transformative digitalization. The size of the bubbles represents employment in the occupations as provided by the Bureau of Labor Statistics (2018) for the US. The largest occupations are labeled</figDesc><graphic coords="19,75.63,58.73,309.98,204.02" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Fig. 9</head><label>9</label><figDesc>Fig. 9 Transferring SML Scores from the US to Lao PDR at the Occupation Level. Notes: Each dot represents an occupation in Lao PDR. The SML scores were translated from the United States to Lao PDR at the occupation level (naïve approach). The size of the bubbles represents employment in the occupations based on the 2017 Labour Force Survey for Lao PDR</figDesc><graphic coords="20,53.85,58.11,331.68,216.36" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head/><label/><figDesc>your work, how much freedom do you (did you) have to decide how to do your work in your own way, rather than following a fixed procedure or a supervisor's instructions? Use any number from 1 to 10 where 1 is no freedom and 10 is complete freedom -0.91 How often does (did) this work involve carrying out short, repetitive tasks? -1.41 How often does (did) this work involve learning new things? -0.53 As part of this work do you (did you) regularly use A TELEPHONE, MOBILE PHONE, PAGER OR OTHER COMMUNICATION DEVICE? -0.78 As a part of your work do you (did you) use a computer? 0.70 As part of this work do you (did you) regularly use A BAR CODE READER? 0.38 Does (did) your work as [OCCUPATION] require the use of EMAIL 0.81 Does (did) your work as [OCCUPATION] require the use of SEARCHING FOR INFORMATION ON THE INTERNET 2.12 Does (did) your work as [OCCUPATION] require the use of DATA ENTRY 1.50 Does (did) your work as [OCCUPATION] require the use of WORD PROCESSING 0.99 Does (did) your work as [OCCUPATION] require the use of SPREADSHEETS (such as EXCEL) 0.81 Does (did) your work as [OCCUPATION] require the use of DATABASES (such as ACCESS) 2.36 Does (did) your work as [OCCUPATION] require the use of other software packages, designing websites or doing programming or managing networks? -0.10 Does (did) your work require the use of ADVANCED FUNCTIONS IN SPREADSHEETS SUCH AS MACROS AND COMPLEX EQUATIONS 0.21 Does (did) your work require the use of BOOK-KEEPING, ACCOUNTING OR FINANCIAL SOFTWARE 1.13 Does (did) your work require the use of PRESENTATION, GRAPHICS SOFTWARE (such as POWERPOINT) -0.32 Does (did) your work require the use of DESIGNING WEBSITES 0.10 Does (did) your work require the use of CAD SOFTWARE (computer aided design) -0.06 Does (did) your work require the use of STATISTICAL ANALYSIS OR OTHER ANALYSIS 0.97 Does (did) your work require the use of SOFTWARE PROGRAMMING -0.19 Does (did) your work require the use of MANAGING COMPUTER NETWORKS 0.14 Note: Questions to measure skills in 2012 STEP questionnaire. The SML (suitability for machine learning) scores are standardized at the level of these STEP skills</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Fig. 11</head><label>11</label><figDesc>Fig. 11 Destructive and Transformative Digitalization in Viet Nam (Urban and Rural Areas). Notes: Each bubble represents an occupation in Viet Nam. mSML denotes the mean suitability for machine learning of skills used in an occupation (standardized at the level of STEP skills) and is a measure for destructive digitalization. sdmSML denotes the standard deviation of the SML of skills used within each occupation and is a measure of transformative digitalization. The size of the bubbles represents employment in the occupations based on the 2016 Labour Force Survey for Viet Nam (both urban and rural areas). The largest occupations are labeled</figDesc><graphic coords="28,53.85,310.87,328.22,189.98" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head/><label/><figDesc>skill = ∑</figDesc><table><row><cell>similarity activity,skill SML activity ∕</cell><cell>∑</cell><cell>similarity activity,skill</cell></row><row><cell>activities</cell><cell>activities</cell><cell/></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head/><label/><figDesc>Table 5 in the Appendix shows the occupational structure for both urban and rural areas in Viet Nam. According to the LFS, 44% of the workers in Lao PDR and 32% in Viet Nam reside in urban areas. Referring to Table 1, 40% of the workers in Lao PDR work in agricultural occupations. In Viet Nam,</figDesc><table><row><cell/><cell>usage occ,skill = usage i,skill occ i =occ</cell><cell>(3)</cell></row><row><cell>mSML occ =</cell><cell>∑</cell><cell>(4)</cell></row></table><note><p>skills usage occ,skill SML skill ∕ ∑ skills usage occ,skill</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 1</head><label>1</label><figDesc>Occupational Structure in Lao PDR and Viet Nam Source: Labour Force Survey 2017 for Lao PDR, Labour Force Survey 2016 for Viet Nam (urban areas)</figDesc><table><row><cell/><cell>Lao PDR</cell><cell/><cell cols="2">Viet Nam (Urban Areas)</cell></row><row><cell>Occupations ISCO 1-digit</cell><cell cols="4">Employees Share Female share Employees Share Female share</cell></row><row><cell>Armed forces</cell><cell>53,366 3%</cell><cell>14%</cell><cell>92,632 1%</cell><cell>14%</cell></row><row><cell>Managers</cell><cell cols="2">189,436 11% 59%</cell><cell>336,762 2%</cell><cell>27%</cell></row><row><cell>Professionals</cell><cell>138,341 8%</cell><cell>55%</cell><cell cols="2">2,582,741 15% 53%</cell></row><row><cell>Technicians and associate</cell><cell>46,110 3%</cell><cell>36%</cell><cell>865,973 5%</cell><cell>54%</cell></row><row><cell>professionals</cell><cell/><cell/><cell/><cell/></row><row><cell>Clerical support workers</cell><cell>33,574 2%</cell><cell>38%</cell><cell>589,804 3%</cell><cell>53%</cell></row><row><cell>Service and sales workers</cell><cell cols="2">180,285 10% 64%</cell><cell cols="2">4,695,661 28% 62%</cell></row><row><cell>Skilled agricultural, forestry and</cell><cell cols="2">696,720 40% 47%</cell><cell>701,367 4%</cell><cell>35%</cell></row><row><cell>fishers</cell><cell/><cell/><cell/><cell/></row><row><cell>Craft and related trades workers</cell><cell cols="2">198,077 11% 41%</cell><cell cols="2">2,296,696 14% 30%</cell></row><row><cell>Plant &amp; machine operators &amp;</cell><cell>77,375 4%</cell><cell>17%</cell><cell cols="2">2,156,798 13% 37%</cell></row><row><cell>assemblers</cell><cell/><cell/><cell/><cell/></row><row><cell>Elementary occupations</cell><cell>135,366 8%</cell><cell>34%</cell><cell cols="2">2,603,557 15% 50%</cell></row><row><cell>Total</cell><cell cols="2">1,748,650 100% 46%</cell><cell cols="2">16,921,990 100% 48%</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 2</head><label>2</label><figDesc>Individual-level SML Scores by Country, Gender and</figDesc><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 3</head><label>3</label><figDesc>Measures of AI Impact on the Largest Occupations in the United StatesNotes: The table lists the 10 occupations that have the largest employment numbers in the United States (Bureau of Labor Statistics 2018). The mean suitability for machine learning of tasks in an occupation (SML) and its within-occupation standard deviation (sdSML) are adopted from<ref type="bibr" target="#b8">Brynjolfsson et al. (2018)</ref>, the AI Occupational Impact scores from<ref type="bibr" target="#b13">Felten et al. (2019)</ref>, and the computerization probabilities from<ref type="bibr" target="#b17">Frey and Osborne (2017)</ref>.<ref type="bibr" target="#b16">Fossen and Sorgner (2021)</ref> provide a similar table and discuss the differences and similarities between the scores in detail SOC 2010 Code As a normal part of this work, do you (did you) PERFORM ANY OTHER MULTIPLICATION OR DIVISION -1.20 As a normal part of this work, do you (did you) USE OR CALCULATE FRACTIONS, DECIMALS OR PERCENTAGES 0.59 As a normal part of this work, do you (did you) USE MORE ADVANCED MATH, SUCH AS ALGEBRA, GEOMETRY, TRIGONOMETRY, ETC -0.27 As part of this work, do you regularly have to lift or pull anything weighing at least 50 pounds [25 kilos]? -1.75 Using any number from 1 to 10 where 1 is not at all physically demanding (such as sitting at a desk answering a telephone) and 10 is extremely physically demanding (such as carrying heavy loads, construction worker, etc.), what number would you use to rate how physically demanding your work is? -2.00 As part of this work, do you (did you) have any contact with people other than co-workers, for example with customers, clients, students, or the public? -0.63 Using any number from 1 to 10, where 1 is little involvement or short routine involvements, and 10 means much of the work involves meeting or interacting for at least 10-15 min at a time with a customer, client, student or the public, what number would you use to rate this work? -0.92 As part of this work, do you drive a car, truck or three-wheeler? -1.12 As part of this work, do you (did you) repair/maintain electronic equipment? (cell phones, computers, printers, other electronic equipment…) -0.68 As part of this work, do you (did you) operate or work with any heavy machines or industrial equipment? For example, machines/equipment in factories, construction sites, warehouses, repair shops or machine shops, industrial kitchens, some farming (tractors, harvesters, milking machine) -1.49 As part of this work, how often do you have to undertake tasks that require at least 30 min of thinking (examples: mechanic figuring out a car problem, budgeting for a business, teacher making a lesson plan, restaurant owner creating a new menu/dish for restaurant, dress maker designing a new dress) -0.13 As part of this work, do you (did you) have to make formal presentations to clients or colleagues to provide information or persuade them of your point of view? -1.07 As a normal part of this work do you direct and check the work of other workers (supervise)?</figDesc><table><row><cell>Comput. prob</cell><cell/><cell>0.92</cell><cell>0.92</cell><cell/><cell>0.97</cell><cell>0.96</cell><cell>0.009</cell><cell>0.85</cell><cell/><cell>0.55</cell><cell>0.94</cell><cell>0.16</cell><cell>0.74</cell></row><row><cell>AI Occ. Impact</cell><cell/><cell>0.666</cell><cell>0.642</cell><cell/><cell>0.649</cell><cell>0.699</cell><cell>0.661</cell><cell>0.622</cell><cell/><cell>0.713</cell><cell>0.626</cell><cell>0.683</cell><cell>0.650</cell></row><row><cell>Std. dev</cell><cell>SML</cell><cell>0.486</cell><cell>0.593</cell><cell/><cell>0.465</cell><cell>0.574</cell><cell>0.556</cell><cell>0.627</cell><cell/><cell>0.558</cell><cell>0.703</cell><cell>0.508</cell><cell>0.510</cell></row><row><cell>Mean SML</cell><cell/><cell>3.574</cell><cell>3.451</cell><cell/><cell>3.670</cell><cell>3.613</cell><cell>3.428</cell><cell>3.314</cell><cell/><cell>3.597</cell><cell>3.447</cell><cell>3.473</cell><cell>3.483</cell></row><row><cell>Employment in</cell><cell>the US</cell><cell>4,448,120</cell><cell>3,676,180</cell><cell/><cell>3,635,550</cell><cell>2,972,930</cell><cell>2,951,960</cell><cell>2,893,180</cell><cell/><cell>2,871,400</cell><cell>2,582,410</cell><cell>2,289,770</cell><cell>2,211,950</cell></row><row><cell>Occupation</cell><cell/><cell>Retail Salespersons</cell><cell>Combined Food Preparation &amp; Serving</cell><cell>Workers, Including Fast Food</cell><cell>Cashiers</cell><cell>Office Clerks, General</cell><cell>Registered Nurses</cell><cell>Laborers and Freight, Stock, &amp; Material</cell><cell>Movers, Hand</cell><cell>Customer Service Representatives</cell><cell>Waiters &amp; Waitresses</cell><cell>General &amp; Operations Managers</cell><cell>Personal Care Aides</cell></row><row><cell/><cell/><cell>41-2031</cell><cell>35-3021</cell><cell/><cell>41-2011</cell><cell>43-9061</cell><cell>29-1141</cell><cell>53-7062</cell><cell/><cell>43-4051</cell><cell>35-3031</cell><cell>11-1021</cell><cell>39-9021</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5"><head>Table 4</head><label>4</label><figDesc/><table/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_6"><head>Table 5</head><label>5</label><figDesc>Occupational Structure in Viet Nam (Urban and Rural Areas) Source: Labour Force Survey 2016 for Viet Nam (both urban and rural areas)</figDesc><table><row><cell>Occupations ISCO 1-digit</cell><cell>Employees</cell><cell>Share</cell><cell>Female share</cell></row><row><cell>Armed forces</cell><cell>126,201</cell><cell>0,2%</cell><cell>14%</cell></row><row><cell>Managers</cell><cell>554,950</cell><cell>1,0%</cell><cell>26%</cell></row><row><cell>Professionals</cell><cell>3,658,961</cell><cell>6,9%</cell><cell>54%</cell></row><row><cell>Technicians and associate professionals</cell><cell>1,639,040</cell><cell>3,1%</cell><cell>56%</cell></row><row><cell>Clerical support workers</cell><cell>991,888</cell><cell>1,9%</cell><cell>49%</cell></row><row><cell>Service and sales workers</cell><cell>8,861,432</cell><cell>16,6%</cell><cell>62%</cell></row><row><cell>Skilled agricultural, forestry and fishers</cell><cell>5,470,903</cell><cell>10,3%</cell><cell>40%</cell></row><row><cell>Craft and related trades workers</cell><cell>6,826,970</cell><cell>12,8%</cell><cell>29%</cell></row><row><cell>Plant &amp; machine operators &amp; assemblers</cell><cell>4,921,601</cell><cell>9,2%</cell><cell>43%</cell></row><row><cell>Elementary occupations</cell><cell>20,247,997</cell><cell>38,0%</cell><cell>52%</cell></row><row><cell>Total</cell><cell>53,299,943</cell><cell>100%</cell><cell>49%</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="1" xml:id="foot_0"><p>Consider the following examples for differences between countries: Teaching is an important part of the occupation of craftspeople in Germany because they teach apprentices, whereas teaching crafts is performed by teachers in schools in other countries. Another example is farmers: A large share of a farmer's work in a developing country may be manual field labor, whereas a farmer's workday in the United</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="3" xml:id="foot_1"><p>https:// www. un. org/ devel opment/ desa/ dpad/ least-devel oped-count ry-categ ory. html.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="4" xml:id="foot_2"><p>The following eight criteria are mentioned by the authors: (i) Learning a function that maps welldefined inputs to well-defined outputs, (ii) large (digital) data sets exist or can be created containing input-output pairs, (iii) the task provides clear feedback with clearly definable goals and metrics, (iv) no long chains of logic or reasoning that depend on diverse background knowledge or common sense, (v) no need for detailed explanation of how the decision was made, (vi) a tolerance for error and no need for provably correct or optimal solutions, (vii) the phenomenon or function being learned should not change rapidly over time, (viii) no specialized dexterity, physical skills, or mobility required.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="5" xml:id="foot_3"><p>In a related study,<ref type="bibr" target="#b27">Tolan et al. (2021)</ref> map 59 generic tasks from worker surveys, such as PIAAC, to 14 cognitive abilities, and then to 328 AI evaluation tasks that they identify from the literature. They also rely on experts' judgements to relate tasks to abilities and abilities to AI evaluation tasks.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="6" xml:id="foot_4"><p>For Lao PDR, the survey covered also rural areas.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="11" xml:id="foot_5"><p>Merging the LFS to the STEP is unproblematic because both datasets use the ISCO occupational codes. We make one manual adjustment: In Lao PDR, we merge the occupation "market gardeners and crop farmers" in the LFS to the occupation "subsistence crop farmers" in STEP.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="12" xml:id="foot_6"><p>See Ernst et al. (2019)  for a discussion of the potential for AI technologies to support developing countries in their quest to catch up.</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><p>Acknowledgements We thank <rs type="person">Fabrizio Colella</rs>, <rs type="person">Rafael Lalive</rs>, and participants at the 2021 International Joseph A. Schumpeter Society Conference in Rome, the 2021 United Nations "<rs type="projectName">Least Developed Countries Future Forum" in Helsinki, the 2022 International Centre for Economic Analysis virtual "Future of Work" conference</rs>, the <rs type="programName">2022 "AI in Strategic Management</rs>" workshop at the <rs type="institution">Center for the Future of Management</rs> at the <rs type="institution">NYU Stern School of Business</rs>, and seminar participants at the <rs type="institution">International Labor Organization and ESAI Business School</rs>, for valuable comments.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funded-project" xml:id="_ztNSsMc">
+					<orgName type="project" subtype="full">Least Developed Countries Future Forum" in Helsinki, the 2022 International Centre for Economic Analysis virtual "Future of Work" conference</orgName>
+					<orgName type="program" subtype="full">2022 "AI in Strategic Management</orgName>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data Availability</head><p>The datasets generated during and/or analyzed during the current study are available from the corresponding author on reasonable request.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Age</head><p>The SML scores were standardized at the level of STEP skills. We excluded individuals from the sample who did not work during the last 12 months before the interview 1 3</p><p>The impact of artificial intelligence on labor markets in…</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Declarations</head><p>Conflict of interest The authors have no relevant or material financial or non-financial interests that relate to the research described in this paper.</p><p>The authors have no competing interests to declare that are relevant to the content of this article. Any view expressed or conclusions drawn represent the views of the authors and donot necessarily represent ILO views or ILO policy. The views expressed herein should be attributed to the authors and not to the ILO, its management or its constituents.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Authors and Affiliations</head><p>Francesco Carbonero </p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">AI and Jobs: Evidence from Online Vacancies</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Acemoglu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Autor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hazell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Restrepo</surname></persName>
+		</author>
+		<idno>No. 28257</idno>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">NBER Working Paper</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">The Race between Man and Machine: Implications of Technology for Growth, Factor Shares, and Employment</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Acemoglu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Restrepo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am Econ Rev</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="1488" to="1542"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title level="m" type="main">Exploration of Gender Differences in COVID-19 Discourse on Reddit</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Aggarwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Rabinovich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Stevenson</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2008.05713v1</idno>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Digital Transformation, Development and Productivity in Developing Countries: Is Artificial Intelligence a Curse or a Blessing?</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Aly</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Rev Econ Polit Sci</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="238" to="256"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Revisiting the Risk of Automation</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Arntz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Gregory</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Zierahn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Econ Lett</title>
+		<imprint>
+			<biblScope unit="volume">159</biblScope>
+			<biblScope unit="page" from="157" to="160"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">The Risk of Automation for Jobs in OECD Coun-tries: A Comparative Analysis</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Arntz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Gregory</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Zierahn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">OECD Social, Employment and Migration Working Papers</title>
+		<imprint>
+			<biblScope unit="issue">189</biblScope>
+			<date type="published" when="2016">2016</date>
+			<publisher>OECD Publishing</publisher>
+			<pubPlace>Paris</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title level="m" type="main">The Future of Work: A Literature Review</title>
+		<author>
+			<persName><forename type="first">Balliester</forename><surname>Elsheiki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<publisher>International Labour Organisation</publisher>
+			<pubPlace>Geneva</pubPlace>
+		</imprint>
+	</monogr>
+	<note type="report_type">ILO Research Department Working Paper</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">What Can Machine Learning Do?</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Brynjolfsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mitchell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Workforce Impl Sci</title>
+		<imprint>
+			<biblScope unit="volume">358</biblScope>
+			<biblScope unit="issue">6370</biblScope>
+			<biblScope unit="page" from="1530" to="1534"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">What Can Machines Learn, and What Does It Mean for Occupations and the Economy?</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Brynjolfsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mitchell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rock</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am Econ Assoc Pap Proc</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="page" from="43" to="47"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<monogr>
+		<title level="m" type="main">Occupational Employment Statistics</title>
+		<ptr target="https://www.bls.gov/oes/home.htm"/>
+		<imprint>
+			<date type="published" when="2018-02-14">2018. May 2018. 14 Feb 2023</date>
+			<publisher>Bureau of Labor Statistics</publisher>
+		</imprint>
+	</monogr>
+	<note>Data</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Robots Worldwide: The Impact of Automation on Employment and Trade</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Carbonero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Ernst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Weber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IAB Discussion Paper</title>
+		<imprint>
+			<biblScope unit="page" from="7" to="2020"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">The Economics of Artificial Intelligence: Implications for the Future of Work</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Ernst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Merola</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Samaan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IZA J Labor Policy</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="35"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">A Method to Link Advances in Artificial Intelligence to Occupational Abilities</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">W</forename><surname>Felten</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Raj</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Seamans</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am Econ Assoc Papers Proc</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="page" from="54" to="57"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<title level="m" type="main">The Occupational Impact of Artificial Intelligence: Labor, Skills, and Polarization</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">W</forename><surname>Felten</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Raj</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Seamans</surname></persName>
+		</author>
+		<idno type="DOI">10.2139/ssrn.3368605</idno>
+		<ptr target="https://doi.org/10.2139/ssrn.33686"/>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note>Working Paper</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">New Digital Technologies and Heterogeneous Wage and Employment Dynamics in the United States: Evidence from Individual-level Data</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">M</forename><surname>Fossen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sorgner</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.techfore.2021.121381</idno>
+		<ptr target="https://doi.org/10.1016/j.techfore.2021.121381"/>
+	</analytic>
+	<monogr>
+		<title level="j">Technological Forecasting and Social Change</title>
+		<imprint>
+			<biblScope unit="volume">175</biblScope>
+			<biblScope unit="page">121381</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Mapping the Future of Occupations: Transformative and Destructive Effects of New Digital Technologies on Jobs</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">M</forename><surname>Fossen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sorgner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Foresight and STI Governance</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="10" to="18"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Digitalization of Work and Entry into Entrepreneurship</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">M</forename><surname>Fossen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sorgner</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jbusres.2019.09.019</idno>
+		<ptr target="https://doi.org/10.1016/j.jbusres.2019.09.019"/>
+	</analytic>
+	<monogr>
+		<title level="j">J Bus Res</title>
+		<imprint>
+			<biblScope unit="volume">125</biblScope>
+			<biblScope unit="page" from="548" to="563"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">The Future of Employment: How Susceptible are Jobs to Computerization?</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">B</forename><surname>Frey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Osborne</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Technol Forecast Soc Chang</title>
+		<imprint>
+			<biblScope unit="volume">114</biblScope>
+			<biblScope unit="page" from="254" to="280"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Artificial intelligence and employment: New cross-country evidence</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Georgieff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Hyee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">OECD Social, Employment and Migration Working Papers</title>
+		<imprint>
+			<biblScope unit="issue">265</biblScope>
+			<date type="published" when="2021">2021</date>
+			<publisher>OECD Publishing</publisher>
+			<pubPlace>Paris</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">MOD= AJPER ES&amp; CVID= nhLrs Rc</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Homsombath</surname></persName>
+		</author>
+		<ptr target="/AI-Report_Web"/>
+	</analytic>
+	<monogr>
+		<title level="m">Artificial Intelligence in Emerging Markets: Opportunities, Trends, and Emerging Business Models</title>
+		<imprint>
+			<date type="published" when="2020-02-14">2020. 14 Feb 2023 IFC. 2020. b4c-7768a e6a53 a2. 14 Feb 2023</date>
+		</imprint>
+	</monogr>
+	<note>How COVID19 Could Accelerate Digitalization in Laos, United Nations Development Programme</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jansson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Navrozidis</surname></persName>
+		</author>
+		<ptr target="https://lup.lub.lu.se/luur/download?func=downloadFile&amp;recordOId=9008699&amp;fileOId=9026407"/>
+		<title level="m">Using Natural Language Processing to Identify Similar Patent Documents</title>
+		<imprint>
+			<date type="published" when="2020-02-14">2020. 14 Feb 2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">The Impact of Artificial Intelligence on the Labour Market: What Do We Know So Far? OECD Social</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Saint-Martin</surname></persName>
+		</author>
+		<idno type="DOI">10.1787/7c895724-en</idno>
+		<ptr target="https://doi.org/10.1787/7c895724-en"/>
+	</analytic>
+	<monogr>
+		<title level="j">Employment and Migration Working Papers</title>
+		<imprint>
+			<biblScope unit="volume">256</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Bridging the Gender Digital Gap</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mariscal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Mayne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Aneja</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sorgner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Econ Open-Access Open-Assessment E-J</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="1" to="12"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">STEP Skills Measurement Surveys: Innovative Tools for Assessing Skills</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pierre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sanchez</forename><surname>Puerta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Valerio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rajadel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="s">Social Protection and Labor Discussion Paper</title>
+		<imprint>
+			<date type="published" when="1421">2014. 1421</date>
+			<publisher>World Bank</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<title level="m" type="main">Sentence-BERT: Sentence Embeddings Using Siamese BERT-Networks</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Reimers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Gurevych</surname></persName>
+		</author>
+		<idno>ArXiv, abs/1908.10084</idno>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">The Impact of New Digital Technologies on Gender Equality in Developing Countries</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sorgner</surname></persName>
+		</author>
+		<idno>#20/2019</idno>
+	</analytic>
+	<monogr>
+		<title level="s">Inclusive and Sustainable Industrial Development Working Paper Series</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Technology and the future of work in emerging economies: What is different</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Soto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">OECD Social, Employment and Migration Working Papers</title>
+		<imprint>
+			<biblScope unit="issue">236</biblScope>
+			<date type="published" when="2020">2020</date>
+			<publisher>OECD Publishing</publisher>
+			<pubPlace>Paris</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Measuring the Occupational Impact of AI: Tasks, Cognitive Abilities and AI Benchmarks</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tolan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pesole</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Martínez-Plumed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Fernández-Macías</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hernández-Orallo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Gómez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Artif Intelli Res</title>
+		<imprint>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="page" from="191" to="236"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><surname>Webb</surname></persName>
+		</author>
+		<idno type="DOI">10.1596/978-1-4648-0671-1</idno>
+		<ptr target="CCBY3"/>
+		<title level="m">The Impact of Artificial Intelligence on the Labor Market</title>
+		<meeting><address><addrLine>Washington, DC</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer Nature or its licensor</publisher>
+			<date type="published" when="2016">2020. 2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Working Paper</note>
+	<note>World Development Report 2016: Digital Dividends. .0 IGO Publisher's note Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations. e.g. a society or other partner) holds exclusive rights to this article under a publishing agreement with the author(s) or other rightsholder(s); author self-archiving of the accepted manuscript version of this article is solely governed by the terms of such publishing agreement and applicable law</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

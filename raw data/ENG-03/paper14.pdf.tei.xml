@@ -1,0 +1,1321 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">An Underground Goaf Locating Framework Based on D-InSAR with Three Different Prior Geological Information Conditions</title>
+				<funder ref="#_MzBHXga">
+					<orgName type="full">National Key R&amp;D Program of China</orgName>
+				</funder>
+				<funder ref="#_GF7TX6H #_GcM2xWc #_jmF9shN">
+					<orgName type="full">unknown</orgName>
+				</funder>
+				<funder ref="#_TxpSjdh">
+					<orgName type="full">CAST</orgName>
+				</funder>
+				<funder ref="#_s9naRpM">
+					<orgName type="full">China Postdoctoral Science Foundation</orgName>
+				</funder>
+				<funder ref="#_xHxsNKf #_2jRB2QP">
+					<orgName type="full">National Natural Science Foundation of China</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2025-08-05">5 August 2025</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Kewei</forename><surname>Zhang</surname></persName>
+							<idno type="ORCID">0000-0002-2484-2590</idno>
+							<affiliation key="aff0">
+								<orgName type="laboratory" key="lab1">Key Laboratory of Land Environment and Disaster Monitoring</orgName>
+								<orgName type="laboratory" key="lab2">Ministry of Natural Resources (MNR)</orgName>
+								<orgName type="institution">China University of Mining and Technology (CUMT)</orgName>
+								<address>
+									<postCode>221116</postCode>
+									<settlement>Xuzhou</settlement>
+									<country>China;</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Environment Science and Spatial Informatics</orgName>
+								<orgName type="institution">China University of Mining and Technology (CUMT)</orgName>
+								<address>
+									<postCode>221116</postCode>
+									<settlement>Xuzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yunjia</forename><surname>Wang</surname></persName>
+							<idno type="ORCID">0000-0002-2484-2590</idno>
+							<affiliation key="aff0">
+								<orgName type="laboratory" key="lab1">Key Laboratory of Land Environment and Disaster Monitoring</orgName>
+								<orgName type="laboratory" key="lab2">Ministry of Natural Resources (MNR)</orgName>
+								<orgName type="institution">China University of Mining and Technology (CUMT)</orgName>
+								<address>
+									<postCode>221116</postCode>
+									<settlement>Xuzhou</settlement>
+									<country>China;</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Environment Science and Spatial Informatics</orgName>
+								<orgName type="institution">China University of Mining and Technology (CUMT)</orgName>
+								<address>
+									<postCode>221116</postCode>
+									<settlement>Xuzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Feng</forename><surname>Zhao</surname></persName>
+							<email>feng.zhao@cumt.edu.cn</email>
+							<idno type="ORCID">0000-0001-8750-5340</idno>
+							<affiliation key="aff0">
+								<orgName type="laboratory" key="lab1">Key Laboratory of Land Environment and Disaster Monitoring</orgName>
+								<orgName type="laboratory" key="lab2">Ministry of Natural Resources (MNR)</orgName>
+								<orgName type="institution">China University of Mining and Technology (CUMT)</orgName>
+								<address>
+									<postCode>221116</postCode>
+									<settlement>Xuzhou</settlement>
+									<country>China;</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Environment Science and Spatial Informatics</orgName>
+								<orgName type="institution">China University of Mining and Technology (CUMT)</orgName>
+								<address>
+									<postCode>221116</postCode>
+									<settlement>Xuzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhanguo</forename><surname>Ma</surname></persName>
+							<email>zgma@cumt.edu.cn</email>
+							<idno type="ORCID">0000-0001-8750-5340</idno>
+							<affiliation key="aff2">
+								<orgName type="laboratory">State Key Laboratory of Intelligent Construction and Healthy Operation and Maintenance of Deep Underground Engineering</orgName>
+								<orgName type="institution">China University of Mining and Technology (CUMT)</orgName>
+								<address>
+									<postCode>221116</postCode>
+									<settlement>Xuzhou</settlement>
+									<country>China;</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Guangqian</forename><surname>Zou</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Guizhou First Institute of Surveying and Mapping</orgName>
+								<address>
+									<postCode>550001</postCode>
+									<settlement>Guiyang</settlement>
+									<country>China;</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Teng</forename><surname>Wang</surname></persName>
+							<idno type="ORCID">0000-0002-7322-2822</idno>
+							<affiliation key="aff0">
+								<orgName type="laboratory" key="lab1">Key Laboratory of Land Environment and Disaster Monitoring</orgName>
+								<orgName type="laboratory" key="lab2">Ministry of Natural Resources (MNR)</orgName>
+								<orgName type="institution">China University of Mining and Technology (CUMT)</orgName>
+								<address>
+									<postCode>221116</postCode>
+									<settlement>Xuzhou</settlement>
+									<country>China;</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Environment Science and Spatial Informatics</orgName>
+								<orgName type="institution">China University of Mining and Technology (CUMT)</orgName>
+								<address>
+									<postCode>221116</postCode>
+									<settlement>Xuzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nianbin</forename><surname>Zhang</surname></persName>
+							<email>nianbin_zhang@cumt.edu.cn</email>
+							<idno type="ORCID">0000-0002-7322-2822</idno>
+							<affiliation key="aff0">
+								<orgName type="laboratory" key="lab1">Key Laboratory of Land Environment and Disaster Monitoring</orgName>
+								<orgName type="laboratory" key="lab2">Ministry of Natural Resources (MNR)</orgName>
+								<orgName type="institution">China University of Mining and Technology (CUMT)</orgName>
+								<address>
+									<postCode>221116</postCode>
+									<settlement>Xuzhou</settlement>
+									<country>China;</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Environment Science and Spatial Informatics</orgName>
+								<orgName type="institution">China University of Mining and Technology (CUMT)</orgName>
+								<address>
+									<postCode>221116</postCode>
+									<settlement>Xuzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wenqi</forename><surname>Huo</surname></persName>
+							<email>huowenqi@cumt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory" key="lab1">Key Laboratory of Land Environment and Disaster Monitoring</orgName>
+								<orgName type="laboratory" key="lab2">Ministry of Natural Resources (MNR)</orgName>
+								<orgName type="institution">China University of Mining and Technology (CUMT)</orgName>
+								<address>
+									<postCode>221116</postCode>
+									<settlement>Xuzhou</settlement>
+									<country>China;</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Environment Science and Spatial Informatics</orgName>
+								<orgName type="institution">China University of Mining and Technology (CUMT)</orgName>
+								<address>
+									<postCode>221116</postCode>
+									<settlement>Xuzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xinpeng</forename><surname>Diao</surname></persName>
+							<email>xpdiao@cumt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory" key="lab1">Key Laboratory of Land Environment and Disaster Monitoring</orgName>
+								<orgName type="laboratory" key="lab2">Ministry of Natural Resources (MNR)</orgName>
+								<orgName type="institution">China University of Mining and Technology (CUMT)</orgName>
+								<address>
+									<postCode>221116</postCode>
+									<settlement>Xuzhou</settlement>
+									<country>China;</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Environment Science and Spatial Informatics</orgName>
+								<orgName type="institution">China University of Mining and Technology (CUMT)</orgName>
+								<address>
+									<postCode>221116</postCode>
+									<settlement>Xuzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dawei</forename><surname>Zhou</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory" key="lab1">Key Laboratory of Land Environment and Disaster Monitoring</orgName>
+								<orgName type="laboratory" key="lab2">Ministry of Natural Resources (MNR)</orgName>
+								<orgName type="institution">China University of Mining and Technology (CUMT)</orgName>
+								<address>
+									<postCode>221116</postCode>
+									<settlement>Xuzhou</settlement>
+									<country>China;</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Environment Science and Spatial Informatics</orgName>
+								<orgName type="institution">China University of Mining and Technology (CUMT)</orgName>
+								<address>
+									<postCode>221116</postCode>
+									<settlement>Xuzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhongwei</forename><surname>Shen</surname></persName>
+							<email>shenzhongwei@cumt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory" key="lab1">Key Laboratory of Land Environment and Disaster Monitoring</orgName>
+								<orgName type="laboratory" key="lab2">Ministry of Natural Resources (MNR)</orgName>
+								<orgName type="institution">China University of Mining and Technology (CUMT)</orgName>
+								<address>
+									<postCode>221116</postCode>
+									<settlement>Xuzhou</settlement>
+									<country>China;</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Environment Science and Spatial Informatics</orgName>
+								<orgName type="institution">China University of Mining and Technology (CUMT)</orgName>
+								<address>
+									<postCode>221116</postCode>
+									<settlement>Xuzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">An Underground Goaf Locating Framework Based on D-InSAR with Three Different Prior Geological Information Conditions</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2025-08-05">5 August 2025</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">89C0BA774BE7D1202BDDB32B3E218861</idno>
+					<idno type="DOI">10.3390/rs17152714</idno>
+					<note type="submission">Received: 1 July 2025 Revised: 1 August 2025 Accepted: 2 August 2025</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-09-01T12:25+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>D-InSAR</term>
+					<term>underground goaf locating</term>
+					<term>PIM</term>
+					<term>ODM</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>2 of 25 on varying information scenarios, thereby enhancing the reliability of disaster evaluation and mitigation strategies related to illegal mining.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Illegal mining operations induce cascading ecosystem degradation by causing extensive ground subsidence, necessitating accurate underground goaf localization for effectively induced-hazard mitigation. The conventional locating method applied the synthetic aperture radar interferometry (InSAR) technique to obtain ground deformation to estimate underground goaf parameters, and the locating accuracy was crucially contingent upon the appropriateness of nonlinear deformation function models selection and the precision of geological parameters acquisition. However, conventional model-driven underground goaf locating frameworks often fail to sufficiently integrate prior geological information during the model selection process, potentially leading to increased positioning errors. In order to enhance the operational efficiency and locating accuracy of underground goaf, deformation model selection must be aligned with site-specific geological conditions under varying cases of prior information. To address these challenges, this study categorizes prior geological information into three different hierarchical levels (detailed, moderate, and limited) to systematically investigate the correlations between model selection and prior information. Subsequently, field validation was carried out by applying two different non-linear deformation function models, Probability Integral Model (PIM) and Okada Dislocation Model (ODM), with three different prior geological information conditions. The quantitative performance results indicate that, (1) under a detailed prior information condition, PIM achieves enhanced dimensional parameter estimation accuracy with 6.9% reduction in maximum relative error; (2) in a moderate prior information condition, both models demonstrate comparable estimation performance; and (3) for a limited prior information condition, ODM exhibits superior parameter estimation capability showing 3.4% decrease in maximum relative error. Furthermore, this investigation discusses the influence of deformation spatial resolution, the impacts of azimuth determination methodologies, and performance comparisons between non-hybrid and hybrid optimization algorithms. This study demonstrates that aligning the selection of deformation models with different types of prior geological information significantly improves the accuracy of underground goaf detection. The findings offer practical guidelines for selecting optimal models based</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>The total global coal production surpassed 9 billion tons in 2024, with China contributing over 52% of the total output <ref type="bibr" target="#b0">[1]</ref>. This underscores coal's persistent dominance as the primary global energy resource and the substantial economic incentives driving mining activities. This phenomenon explains why illegal mining activities are globally prevalent, particularly in China <ref type="bibr" target="#b1">[2]</ref>. According to official data released by the Ministry of Natural Resources of the People's Republic of China (MNR), over 20 illegal mining incidents have been documented in recent years, resulting in fatalities and large-scale ground subsidence accompanied by land collapse <ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref>. The particular concern is not only active illegal mining areas but also numerous unrecorded historic closed underground goaves, which pose a significant environmental threat globally as well. A peer-reviewed study in 'Nature' revealed that more than 56% of global underground goaves remain unrecorded in official documents <ref type="bibr" target="#b5">[6]</ref>. Consequently, it is a critical imperative to detect and locate underground goaves, especially unrecorded ones.</p><p>Traditional approaches for underground space detection predominantly rely on geophysical and geochemical methodologies, such as microgravimetric analysis <ref type="bibr" target="#b6">[7]</ref>, electromagnetic induction <ref type="bibr" target="#b7">[8]</ref>, ground-penetrating radar <ref type="bibr" target="#b7">[8]</ref>, noble gas monitoring, and thermometric techniques. While these methods achieve high precision accuracy in spatial coordinate determination and cavity dimension characterization, their practical implementation faces three critical constraints: (1) limited scalability in intellectualization, (2) elevated labor intensity, and (3) temporal inefficiency during extended surveys. Significantly, recent investigations reveal that numerous unrecorded underground goaves are extensively distributed widely across mining industrial areas <ref type="bibr" target="#b5">[6]</ref>. Consequently, the geospatial mapping of these unrecorded underground goaves across multi-kilometer scales through conventional geophysical/geochemical methodologies presents prohibitively resource-intensive processes, particularly when operationalizing field activity under constrained temporal budgets.</p><p>In contrast with these traditional approaches, satellite-based Interferometric Synthetic Aperture Radar (InSAR) technology enables continuous large-area monitoring with superior operational efficiency and cost-effectiveness <ref type="bibr" target="#b8">[9]</ref>. These technical advantages have established InSAR as a pre-eminent tool for detecting and analyzing diverse geohazards, ranging from seismic events and volcanic activity to slope instability, underground mininginduced deformation, and coal fire recognition <ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref>.</p><p>The current InSAR-based underground goaf locating framework can be summarized in two steps. First, the InSAR technique is used to estimate the line-of-sight (LOS) ground displacement <ref type="bibr" target="#b16">[17]</ref>. Then some studies directly use spatial geometric relationships to roughly locate underground goaf <ref type="bibr" target="#b16">[17,</ref><ref type="bibr" target="#b17">18]</ref> and show significant computational efficiency. However, these methods are poorly robust and are not applicable under supercritical extraction conditions due to over-reliance on the extraction and analysis of subsidence profile information. Addressing this limitation, a theoretical model-driven methodology for goaf localization is established. This category of methods locates underground goaf through constructing a nonlinear theoretical model, generally based on mathematical or mechanical principles, to fit the relationship between underground goaf and ground deformation and applying intelligent optimization algorithms to iteratively minimize the fit effect. The optimal parameters after iteration are considered as the final locating result <ref type="bibr" target="#b18">[19]</ref>. To make this framework applicable to more situations, many studies improved the theoretical model. Wang et al. integrated probability density functions with probabilistic integral models (PIMs), developing a new improved probabilistic integral model (IPIM) to adapt to deep small deformation cases <ref type="bibr" target="#b19">[20]</ref>. Zhang et al. considered that the probabilistic integral model requires too many geological parameters and applied the Okada Dislocation Model (ODM) for underground goaf locating, successfully locating the underground goaf <ref type="bibr" target="#b20">[21,</ref><ref type="bibr" target="#b21">22]</ref>.</p><p>However, existing InSAR-based model-driven underground goaf locating frameworks have demonstrated significant limitations in adequately integrating prior geological information during the model selection process. Additionally, these frameworks often lack a comprehensive theoretical performance evaluation under varying geological conditions, leading to locating errors. Actually, it is essential to note that the two theoretical models are both constrained by geological conditions. Specifically, PIM necessitates multi-dimensional geologic parameters as references, while ODM simplifies the coal overlying strata into a single, homogeneous unit <ref type="bibr" target="#b22">[23,</ref><ref type="bibr" target="#b23">24]</ref>. This highlights the performance disparity between the two models under different prior geological information conditions. Consequently, a robust and quantitative evaluation of the model's applicability under diverse geological conditions is imperative. In response to this challenge, we systematically evaluated the performance of PIM and ODM under three distinct levels of prior geological information, namely, detailed, moderate, and limited, within the InSAR-based model-driven framework.</p><p>Specifically, in this study, the framework was implemented following the steps outlined below: (1) selection of two typical mining working faces with comprehensive drilling data as the study area; (2) application of the Differential InSAR (D-InSAR) technique to capture mining-induced ground deformation; (3) definition of the azimuth values and range of geometric parameters for underground goaf based on the InSAR-derived deformation data; and (4) application of both PIM and ODM models for goaf location using a Genetic Algorithm-Particle Swarm Optimization (GA-PSO <ref type="bibr" target="#b24">[25]</ref>) method, under the three levels of prior geological information conditions (detailed, moderate, and limited). Based on the related quantitative experiments, the main innovations of this study are summarized as follows:</p><p>(1) Quantitative evaluation for model applicability in different prior information. Quantifying the suitability of these two models under different conditions is fundamental for ensuring their reliability in operational applications. To this end, this study uses an InSAR-derived deformation dataset and theoretical-model-driven underground goaf locating framework to systematically quantify the performance of different models under three different prior information conditions in real situations, which indicates that PIM performs better in the detailed information condition, while ODM performs better in the limited information condition, and the two models perform similarly in the moderate condition. The validation results further establish a reference for an underground goaf locating problem.</p><p>(2) Systematic performance analysis of critical factors. In order to evaluate the performance of the underground goaf locating framework applied in this paper, three critical operational factors are quantitatively investigated: the impact of SAR spatial resolution on goaf locating accuracy, the influence of determining azimuth in advance, and comparisons of non-hybrid optimization algorithms.</p><p>This manuscript adopts the following organizational structure: Section 2 delineates the geographical context and data sources, while Section 3 elucidates the methodological framework. Section 4 systematically examines experimental outcomes derived from both simulated environments and empirical observations. The culminating Sections 5 and 6 respectively provide a critical synthesis of findings and overarching summative conclusions.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Study Area and Datasets</head><p>As shown in Figure <ref type="figure" target="#fig_1">1</ref>, the investigations were conducted in the Fengfeng Coalfield, located in Southern Hebei Province (113 • 15 ′ -114 • 30 ′ E, 36 • 03 ′ -36 • 50 ′ N), China. Area I corresponds to the 132,610 working faces and Area II corresponds to the 15,325 working faces. (In China, these numbers represent the spatial coding of the working faces. The coding rules follow the sequence: mining area, sub-mining area, coal seam, section, serial number). Both study areas were processed using the same series of SAR image orbits, as they are sufficiently close to be covered by identical imaging swaths. The Fengfeng Coalfield is situated within the North China coalfield, where the primary coal seams include the Shanxi and Taiyuan Formations, with an annual raw coal production exceeding 15 million tons. This region has been extensively mined, resulting in numerous abandoned goaves. Additionally, the study area is characterized by faults and other geological structures influenced by the Taihang Mountain fault zone. Specifically, the following geometric parameters (strike length, dip length, thickness, depth, azimuth, and inclination) of Area  Previous studies have demonstrated that high-precision ground deformation data are essential for accurate underground goaf localization <ref type="bibr" target="#b19">[20]</ref>. Furthermore, the spatial resolution of SAR data is a critical factor influencing the quality of InSAR deformation monitoring. RADARSAT-2, a C-band commercial SAR sensor with a spatial resolution of 3 m, is particularly effective for monitoring small-scale deformations in mining areas. Consequently, RADARSAT-2 data were utilized in this study. As presented in Table <ref type="table" target="#tab_0">1</ref>, six temporally sequential ascending RADARSAT-2 acquisitions (13 October 2015 to 5 March 2016; their orbit IDs are as follows: 427956, 433878, 439472, 444822, 450248, 461088) encompassing the active coal mining interval were applied to interferometric processing for ground deformation estimation. The 30 m resolution SRTM Digital Elevation Model was applied for topographic phase removal during data processing. Atmospheric phase distortions were considered insignificant due to the constrained spatial coverage of the monitored area. Systematic orbital phase errors were mitigated through rigorous orbit corrections compliant with RADARSAT-2's operational calibration protocols. Phase unwrapping was subsequently implemented using the minimum cost flow algorithm to obtain the deformation phases. The derived displacement signals were ultimately transformed into georeferenced products aligned with the WGS-84 geographic reference framework.  Model parameter definition under three different prior geological information conditions (detailed/moderate/limited); 3.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Technical Principles</head><p>Use the RM-DBC for estimating azimuth and establishing constraint boundaries of PIM and ODM; 4.</p><p>Estimate other parameters by using the GA-PSO algorithm to estimate goaf parameters. In the proposed locating framework, the inversion mechanism operates through iterative discrepancy minimization between InSAR-derived deformation fields (serving as ground truth reference) and forward-modeled deformation generated by PIM/ODM simulations with different model parameters under three different prior information conditions.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.">Differential InSAR</head><p>This investigation employs Differential InSAR (D-InSAR) to monitor surface deformation through sequential SAR image analysis. The methodology leverages satellite-based synthetic aperture radar (SAR) systems that systematically acquire single-look complex (SLC) imagery over target areas at fixed temporal intervals <ref type="bibr" target="#b25">[26]</ref>. Interferometric processing involves cross-multiplying co-registered SLC pairs to generate phase-difference maps, where the resultant interferometric phase φ encapsulates five constituent components <ref type="bibr" target="#b26">[27]</ref>, as follows:</p><formula xml:id="formula_0">φ = φ de f + φ top + φ f lt + φ atm + φ noi<label>(1)</label></formula><p>Here, φ de f quantifies line-of-sight (LOS) deformation, φ top corresponds to residual topography, φ f lt denotes flat-earth geometric effects, φ atm arises from atmospheric delays, and φ noi represents stochastic noise. The D-InSAR workflow isolates deformation signals by computationally mitigating the latter four non-deformation phase terms.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.">Probability Integral Model</head><p>The Probability Integral Model (PIM), grounded in stochastic medium mechanics, establishes an analytical framework for simulating subsidence dynamics in mining environments. This approach conceptualizes particulate motion (e.g., fragmented rock or sand) as a spatially uncorrelated stochastic process, enabling subsidence predictions through superposition of differential unit effects. Specifically, the total subsidence is derived by integrating incremental deformations across infinitesimal extraction units within the underground goaf.</p><p>For a rectangular goaf defined by the geometric parameters length L, width D, mining height m, dip angle δ, azimuth angle φ, mining depth H, and central geodetic coordinates (X, Y), the three-dimensional ground surface displacements induced by coal mining along the direction of vertical d u (x, y), north d n (x, y), and east d e (x, y) at the point (x, y) can be formulated as</p><formula xml:id="formula_1">               d u (x, y) = W 0 (x)W 0 (y) mq cos δ , d e (x, y, α) = U 0 (x)W 0 (y) cos α + U 0 (y)W 0 (x) sin α mq cos δ , d n (x, y, φ) = U 0 (x)W 0 (y) cos φ + U 0 (y)W 0 (x) sin φ mq cos δ .<label>(2)</label></formula><p>with</p><formula xml:id="formula_2">W 0 (x) = mq cos δ 2 erf √ π tan β H x -erf √ π tan β H (x -l 1 ) , W 0 (y) = mq cos δ 2 erf √ π tan β H 1 y -erf √ π tan β H 2 (y -l 2 ) , U 0 (x) = b • mq cos δ • exp - π(tan β) 2 H 2 1 x 2 -exp - π(tan β) 2 H 2 (x -l 1 ) 2 , U 0 (y) = b • mq cos δ • exp - π(tan β) 2 H 2 1 y 2 -exp - π(tan β) 2 H 2 2 (y -l 2 ) 2 -cot θ 0 • W 0 (y).<label>(3)</label></formula><formula xml:id="formula_3">     l 1 = L -2s 3 , l 2 = (D -s 1 -s 2 ) sin(θ 0 + δ) sin θ 0 . (<label>4</label></formula><formula xml:id="formula_4">) erf(x) = 2 √ π x 0 e -u 2 du (<label>5</label></formula><formula xml:id="formula_5">)</formula><p>where q represent the subsidence factor, b corresponds to the horizontal displacement factor, θ 0 accounts for the mining propagation angle, β encapsulates the mining major influence and propagation angle, s 3 is the strike offsets to inflection points, and s 2 , s 1 are the goaf lower ribside and upper ribside ones <ref type="bibr" target="#b18">[19,</ref><ref type="bibr" target="#b19">20]</ref>. W 0 (x), W 0 (y) represent vertical displacements induced by finite extractions along the strike/dip directions, while U 0 (x), U 0 (y) characterize horizontal movements.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.">Okada Dislocation Model</head><p>The Okada Dislocation Model (ODM) has become an essential tool for geophysical deformation analysis, particularly in volcanic and seismic investigations <ref type="bibr" target="#b27">[28]</ref>. To optimize computational performance, this approach approximates the geological strata as an elastic half-space constrained by free-surface boundary conditions <ref type="bibr" target="#b28">[29]</ref>. Given that underground space can be effectively approximated by rectangular dislocation sources, the rectangularsource Okada Dislocation Model is selected in this research. The mapping relationships among multiple coordinate systems for the model computation are illustrated in Figure <ref type="figure" target="#fig_4">3</ref>. The primary geodetic coordinate system (0xyz) employs a localized Cartesian framework where the x-axis is aligned along a true north, the y-axis is oriented eastward, and the z-axis is defined as vertically upward normal to the xy-plane. The source-oriented ground coordinate system ( ôx ŷ ẑ) maintains specific geometric relationships: its xaxis corresponds to the strike direction of the dislocation, the ŷ-axis aligns with the dip direction, and the ẑ-axis preserves vertical orientation. This system originates at (x 0 , y 0 ) within (0xyz), with angular displacement φ quantifying the azimuthal rotation between the x-axis and the primary geodetic x-axis.</p><p>The underground coordinate system o 1ξ p q characterizes the three-dimensional dislocation geometry through orthogonal axes: the ξ-axis extends along the strike direction, the p-axis follows the dip direction, and the q-axis remains normal to the dislocation plane, where parameter δ specifies the dip angle.</p><p>Coordinate transformation between surface systems follows the rotational relationship, as follows:</p><formula xml:id="formula_6">( x, ŷ, ẑ) = (x -x 0 , y -y 0 , 0)    cos φ sin φ 0 sin φ -cos φ 0 0 0 1   <label>(6)</label></formula><p>For subsurface mapping applications, the origin of o 1ξ p q corresponds to the bottomleft corner of the underground goaf space at depth d. The corresponding coordinate transformation is derived through geometric projection accounting for both rotational and translational components.</p><formula xml:id="formula_7">(ξ, p, q) = ( x, ŷ, d)    1 0 0 0 cos δ -sin δ 0 sin δ cos δ   <label>(7)</label></formula><p>The surface deformation field generated by underground coal mining can be mathematically described through a set of displacement components. Following the Okada dislocation framework, the east-west d e , north-south d n , and vertical d u displacements are expressed as superposition integrals of rectangular dislocation elements <ref type="bibr" target="#b28">[29]</ref>, as follows:</p><formula xml:id="formula_8">     d e = f x (p, q) -f x (p, q -W) -f x (p -L, q) -f x (p -L, q -W) d n = f y (p, q) -f y (p, q -W) -f y (p -L, q) -f y (p -L, q -W) d u = f z (p, q) -f z (p, q -W) -f z (p -L, q) -f z (p -L, q -W) (8) with                                    f x ( x, ŷ) = U 2π q 2 R(R + ŷ) -I 2 sin δ 2 f y ( x, ŷ) = U 2π [ -( ŷ sin δ -q cos δ)q R(R + x) -sin δ xq R(R + ŷ) -tan -1 x ŷ qR ] -I 1 sin δ 2 f z ( x, ŷ) = U 2π [ -( ŷ sin δ -q cos δ)q R(R + x) + cos δ( xq R(R + ŷ) -tan -1 x ŷ qR )] -I 4 sin δ 2 (9)                            I 1 = µ λ + µ -1 cos δ ξ R + (η sin δ -q cos δ) - sin δ cos δ I 4 I 2 = µ λ + µ -1 cos δ ŷ cos δ + q sin δ R + ( ŷ sin δ -q cos δ) -ln(R + ŷ) + sin δ cos δ I 3 I 3 = µ λ + µ 1 cos δ</formula><p>[ln(R + ( ŷ sin δq cos δ))sin δ ln(R + ŷ)]</p><formula xml:id="formula_9">I 4 = µ λ + µ 2 cos δ tan -1 ŷ(X -q cos δ) + X(R + X) sin δ x(R + X) cos δ (10)                                  p = y cos δ + d sin δ q = -y sin δ + d cos δ R = ξ 2 + p 2 + q 2 X = ξ 2 + q 2 µ = E 2(1 + ν) λ = Eν (1 -2ν)(1 + ν) (11)</formula><p>where E and ν denote the elastic modulus and Poisson's ratio of the overburden, respectively. The parameter U quantifies the vertical dislocation magnitude, physically corresponding to the subsidence induced by underground space <ref type="bibr" target="#b20">[21]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4.">Underground Goaf Locating</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4.1.">Geologic Parameter Acquisition</head><p>The accessibility of priori geologic information is variable in practical underground goaf locating cases, leading to different approaches to estimating the geological parameters. To address this challenge, parameters are estimated using different methods under three different prior information conditions (detailed, moderate, limited). This method enables quantitative assessment of information completeness on goaf localization accuracy. As Sections 3.2 and 3.3 show, the critical geological parameters required for these two models are [q, b, β, θ 0 , ν]. These parameters are derived through rock-weighted composite evaluation factor P, as follows:</p><formula xml:id="formula_10">P = ∑ n i=1 m i Q i ∑ n i=1 m i<label>(12)</label></formula><p>where m denotes the thickness of the rock layer along the normal direction, and Q represents rock property parameters, which were established as shown in Table <ref type="table" target="#tab_1">2</ref>. Furthermore, the geological parameters can be defined as follows: q = 0.5 * (0.9 + P)</p><formula xml:id="formula_11">tan β = (D rock + 0.0032H) * (1 -0.0038δ) (<label>13</label></formula><formula xml:id="formula_12">)</formula><p>where D rock is the rock influence coefficient, which maps from a rock-weighted composite evaluation factor, as shown in Table <ref type="table" target="#tab_2">3</ref>. Specifically, the detailed prior information refers to the availability of the 'Coal Resource Exploration and Geological Report', which includes comprehensive geologic drilling data, stratigraphic histograms, and the thickness of each rock stratum from the coal seam to the ground surface, which can be obtained. Such detailed data allow for the application of distinct parameters to different strata, thereby improving the accuracy of the model fit.</p><p>Moderate prior information, in contrast, occurs when the 'Coal Resource Exploration and Geological Report' is unavailable. In this case, geological references can be derived from regional geological surveys, such as the 'Regulations for Coal Pillars Preservation and Coal Mine Extraction under Buildings, Water Bodies, Railways, and Major Mine Shafts conditions', an official report issued by the National Energy Administration of China that provides regional geological data on typical coalfields across the country. Un-der this scenario, the distribution of the rock strata can be approximated to define the geologic parameters.</p><p>Limited prior information indicates the absence of both detailed and regional geological reports for the study area. In such cases, model parameters are typically estimated based on open-source, global-scale geological maps, such as the 1:50,000-scale geological map from the 'Atlas of China's Natural Geography'.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4.2.">Mining Azimuth Estimation</head><p>In multi-face mining systems, old goaf frequently envelops active coal seams, inducing subsidence superposition that biases deformation vectors toward historical working faces. Addressing this challenge, we develop the Ray Method with Deformation Binary Conversion (RM-DBC)-a novel approach leveraging time-series InSAR deformation patterns for robust orientation detection (Figure <ref type="figure" target="#fig_5">4</ref>) <ref type="bibr" target="#b20">[21]</ref>. The workflow comprises the following four critical stages:</p><p>1.</p><p>Select a stable region (considered to be deformation-free) from the InSAR-derived accumulated deformation results, and establish adaptive thresholds according to the average value of this region; 2.</p><p>Convert LOS displacement maps into binary matrices based on the thresholds to highlight subsidence features; 3.</p><p>Define the the maximum subsidence point as the origin, and then 1 • -stepped ray projections from the origin point were applied for accumulating activated pixel counts along each azimuthal path; 4.</p><p>The direction with the highest sum of pixel values is regarded as the azimuth angle. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4.3.">Goaf Parameters Estimation</head><p>The InSAR-derived line-of-sight (LOS) projection of 3D ground deformations (W, d e , d n ) is expressed as</p><formula xml:id="formula_13">D LOS = W cos θ s -sin θ s (d n cos α s + d n sin α s )<label>(14)</label></formula><p>where θ s denotes the radar incidence angle and α s is the satellite heading angle. By integrating the mechanics and mathematics principles of mining-induced subsidence from both PIM and Okada models, the physically constrained equation linking subsurface deformation with InSAR observations can be established, as follows: (15)   The equation employs nine crucial dimensions to solve this eight-dimensional (strike length, dip length, depth, mining height, central geodetic coordinates, dip angle, and azimuth angle: L, W, H, h, X, Y, δ, φ) nonlinear inverse problem. We applied a Genetic Algorithm-Particle Swarm Optimization (GA-PSO) algorithm (Figure <ref type="figure" target="#fig_6">5</ref>), which exhibits enhanced convergence properties for rapid computation and optimal parameter search globally. </p><formula xml:id="formula_14">D LOS = W cos θ s -sinθ s ( f N (L, W, H, . . . φ) cos α s + f E (L, W, H, . . . φ) sin α s )</formula><formula xml:id="formula_15">f it = ∑ n i=1 D LOS i -D los i 2 n<label>(16)</label></formula><p>where f it serves as the particle fitness metric driving directional exploration in parameter space. Finally, The optimal parameter after iteration is considered as the final locating result <ref type="bibr" target="#b18">[19]</ref>. To make this framework applicable to more situations, many studies improved the theoretical model <ref type="bibr" target="#b19">[20,</ref><ref type="bibr" target="#b20">21]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Results Analysis</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1.">InSAR-Derived Deformation Result</head><p>In this study, the mining-induced ground deformation in Area I and the Area II was derived through multi-temporal D-InSAR processing, as Figures <ref type="figure" target="#fig_7">6</ref> and<ref type="figure" target="#fig_8">7</ref> present.</p><p>From Figures <ref type="figure" target="#fig_7">6</ref> and<ref type="figure" target="#fig_8">7</ref>, the displacement field exhibits southwestward and southeastward propagation patterns in Area I and Area II, respectively. The maximum subsidence values reached -442 mm in Area I and -267 mm in Area II. To assess measurement accuracy, 168 leveling points, arranged along the strike and dip directions of 2 working faces, were cross-validated against contemporaneous InSAR observations. Specifically, 91 leveling points were deployed in Area I, and 77 in Area II. The results of the quantitative monitoring comparison are presented in Figures <ref type="figure" target="#fig_9">8</ref> and<ref type="figure" target="#fig_10">9</ref>.  According to the comparison, the root mean square errors (RMSEs) between InSAR observations and leveling measurements are 20.265 mm and 28.575 mm in the dip and strike directions, respectively, for Area I and 12.386 mm and 14.167 mm for Area II. These results confirm the operational reliability of InSAR-derived deformation for quantifying mining-induced hazards. It is important to note that, prior to comparing InSAR-derived deformation with leveling measurements, the leveling data were projected from the vertical to the line-of-sight (LOS) direction to align with the InSAR deformation results based on the satellite's incidence angle and heading.  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2.">Azimuth Estimation and Model Parameters Selection</head><p>Before the underground goaf locating process, the azimuth was estimated by using RM-DBC. First, a binary filter (threshold = 5.6 mm in Area I and threshold = 2.6 mm in Area II) was applied to RM-DBC based on the average value of a stable region without mining-induced subsidence. Then according to the ground deformation results at the time series approaching the beginning of mining, a reference point can be established. Finally, the azimuth of both areas was estimated. The process is shown in Figures <ref type="figure" target="#fig_12">10</ref> and<ref type="figure" target="#fig_13">11</ref>   As described in Figures <ref type="figure" target="#fig_12">10</ref> and<ref type="figure" target="#fig_13">11</ref>, the highest sum of pixel values occurred at the direction 167 • and 234 • in Area I and Area II, respectively. This means that the azimuths of the two study areas were estimated as 167 • and 234 • using RM-DBC.</p><p>For the study area, we actually have a detailed engineering geology report (including detailed geologic drilling data and stratigraphic histograms). However, in order to analyze the underground goaf localization accuracy under different priori information conditions, we use the methods corresponding to the different prior information conditions to obtain the parameters.</p><p>Given that both study areas are located within the Fengfeng Coalfield and are geographically close, the same high-resolution drilling data were used to characterize the stratigraphic distribution, with only minor numerical differences. Specifically, under the detailed prior information condition, the drilling data revealed a three-layered structure:</p><p>(1) a 20 m quaternary overburden, consisting of unconsolidated topsoil (identical for both Area I and Area II); (2) a 400 m intermediate stratum, composed of alternating sandy mudstone and siltstone (again, the same for both areas); and (3) a basal formation of 354 m in Area I and 320 m in Area II, dominated by sandstone-sandy mudstone interbeds. The quantitative lithological parameters, including Young's modulus, Poisson's ratio, and density distributions, are systematically cataloged in Table <ref type="table" target="#tab_3">4</ref>. As show in Table <ref type="table" target="#tab_3">4</ref>, the model geological parameters [q, b, tanβ, θ 0 , ν] in the detailed information condition were calculated as [0.512, 0.25, 1.98, 85, 0.16].</p><p>For moderate prior information, regional analogs from the Shanxi-Taiyuan Formation coal measures were employed, extracting characteristic parameter ranges from the North China Coalfield Engineering Manual. Based on this, the model geological parameters [q, b, tanβ, θ 0 , ν] in the moderate condition can be set as [0.4, 0.25, 1.79, 85, 0.28].</p><p>In limited prior information, according to the global-scale geologic map, the two study areas are formed by Carboniferous-Permian strata, mainly consisting of sandstones and sandy mudstones, which are defined as having medium hardness. Based on this, the model geological parameters [q, b, tanβ, θ 0 , ν] in the limited information condition can be set as [0.35, 0.25, 2.37, 85, 0.22].</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3.">Goaf Locating Under Different Priori Information</head><p>Geological parameters for all a priori information conditions are determined in Section 4.2. Consequently, the underground goaf can be inverse using the process proposed in Section 3.4.3 with the geological parameters. The results are presented in Figures <ref type="figure" target="#fig_14">12</ref> and<ref type="figure" target="#fig_15">13</ref> and Tables <ref type="table" target="#tab_4">5</ref> and<ref type="table" target="#tab_5">6</ref>.  As shown in Tables <ref type="table" target="#tab_4">5</ref> and<ref type="table" target="#tab_5">6</ref>, the accuracy of underground goaf locating improves with the abundance of priori geological information. Specifically, in a detailed information condition, the maximum relative errors of dimensional parameters (length, width, and depth) in the two areas using PIM and ODM are 7.9% (length of Area I) and 14.8% (width of Area II). In a moderate information condition, the results are 12.4% (length of Area I) and 13.4% (width of Area II). Additionally, in a limited information condition, the results are 19.0% (width of Area II) and 15.6% (length of Area II). It should be noticed that the maximum center point locating errors of three different information conditions are all distributed around 25 m (25.24 m, 27.47 m, and 23.36 m) in Area I and around 32 m (32.45 m, 31.89 m, and 33.39 m) in Area II, which demonstrates the weak correlation between the center point locating and the priori geological information conditions. Additionally, the absolute error of depth in a detailed information condition is 0 since the applied field drilling data can accurately measure the depth of the coal seam. The estimated errors in the azimuth are consistent among all cases since they were all obtained through the RM-DBC proposed in Section 3.4.2.</p><p>Furthermore, the core aspect of the proposed underground locating methods is the congruence between models (PIM and ODM) and InSAR-derived deformation. To explicitly quantify this relationship, synthetic displacement fields were generated using three-dimensional geometric parameters (as shown in Section 2) and condition-specific geomechanical parameters (as shown in Section 4.3). Subsequently, the simulation results were compared with InSAR-derived deformation in both Area I and Area II of both strike and dip direction under different priori geological information conditions. Figures <ref type="figure" target="#fig_5">14</ref><ref type="figure" target="#fig_16">15</ref><ref type="figure" target="#fig_17">16</ref>present spatially resolved comparisons between simulated and observed deformation under three prior information conditions in the two areas.</p><p>Detailed information condition analysis (Figure <ref type="figure" target="#fig_5">14</ref>) reveals superior PIM performance with an average RMSE of 4.97 cm in Area I and 1.78 cm in Area II, compared with ODM, which yields RMSEs of 7.21 cm in Area I and 3.77 cm in Area II. This improvement is attributed to PIM's ability to capture subsidence gradients more effectively. The 31.07% and 52.79% RMSE reductions in the two areas highlight the critical importance of highresolution lithological constraints for improving PIM performance. </p><formula xml:id="formula_16">• 2/1 • - 12 • 15 • 1/2 • - 8 • 17 • 5/4 • - φ 236 • 234 • 234 • 2 • - 236 • 236 • 2 • - 236 • 236 • 2 • - Figure 14.</formula><p>Comparison results of the simulation results with the InSAR-derived deformation in a detailed information condition. Specifically, with the application of PIM, the RMSE values for strike and dip directions in Area I are 3.64 cm and 6.29 cm, while those for Area II are 1.87 cm and 1.69 cm. For ODM, the RMSE values in Area I are 6.95 cm and 7.47 cm, and in Area II are 3.25 cm and 4.29 cm.</p><p>In the moderate information conditions (Figure <ref type="figure" target="#fig_16">15</ref>), we demonstrate a convergent model performance with PIM achieving average RMSE values of 8.02 cm in Area I and 5.63 cm in Area II, and ODM producing RMSEs of 7.98 cm in Area I and 5.65 cm in Area II, suggesting equivalent predictive capability of PIM and ODM under regional-scale geological priors.</p><p>Under limited information constraints (Figure <ref type="figure" target="#fig_17">16</ref>), ODM achieves 14.09% and 39.06% precision enhancement in the two study areas (average RMSEs of PIM are 10.08 cm in Area I and 7.22 cm in Area II, while those of ODM are 8.66 cm in Area I and 4.40 cm in Area II), highlighting its robustness in priori geological information-scarce environments. This inversion stability stems from ODM's elasticity physics principle, which can minimize reliance on complex geological constraints.</p><p>Furthermore, to more effectively demonstrate the fitness between the model-forward simulations and the observed ground deformation, we calculated the residuals between the InSAR-derived observations and the forward simulation results (obtained using the actual geometric parameters and detailed prior information) for Area I, expressed as root mean square error (RMSE). The results are presented in Figure <ref type="figure" target="#fig_18">17</ref>. Specifically, the full-pixel RMSE values for Area I are 38.56 mm (for PIM) and 73.15 mm (for ODM), indicating that both models can effectively capture mining-induced ground deformation. Notably, Figure <ref type="figure" target="#fig_18">17</ref> reveals relatively large residuals for both models in the western part of the study area. This discrepancy is attributed to the presence of old goaf in that direction, which induces residual deformation affecting the target area. Region I (red) demonstrates that PIM provides a better fit to the subsidence center, as its underlying mechanism aligns more closely with the coal mining process. Conversely, Region II shows that the simulated deformation influence range of ODM is more extensive. This occurs because ODM treats the overlying strata as a single elastic unit, enabling deformation to propagate over a wider area.</p><p>Collectively, the comparative analysis reveals distinct performance characteristics of PIM and ODM across varying prior information availabilities. Under detailed information conditions, where high-resolution stratigraphic constraints are accessible, PIM demonstrates superior accuracy in parameter estimation. Conversely, in a limited information condition, characterized only by global-scale geologic data, ODM exhibits enhanced precision. A moderate information condition, with regional geological investigations data, exhibits comparable performance of the two models.   </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">Discussion</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.1.">Impact of SAR Spatial Resolution on Goaf Locating Accuracy</head><p>The application of underground goaf detection in illegal mining monitoring is a routine, long-term, and large-scale operation, which underscores the critical importance of considering the economic cost of SAR data. While commercial RADARSAT-2 SAR data provide enhanced spatial resolution compared with open-access SAR data (e.g., Sentinel-1A) observations, their operational costs pose challenges for illegal mining monitoring operations. Consequently, to evaluate the cost-precision trade-off, this study conducts systematic simulations assessing resolution-dependent locating errors.  Figure <ref type="figure" target="#fig_20">18</ref> illustrates that sub-20 m resolutions maintain sub-meter stability in strike length (δ = 0.74 m) and dip width (δ = 0.77 m) estimation, with depth errors constrained to δ = 1.83 m. Beyond the 20 m resolution, error variances surge by 266% (L), 589% (W), and 170% (H). This nonlinear error escalation reveals the spatial resolution thresholds affecting inversion robustness. A conclusion can therefore be drawn that the underground goaf locating accuracy using the proposed framework has certain robustness when the spatial resolution is better than 20 m, and once the resolution is more than 20 m, the accuracy will decrease significantly.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2.">Influence of Determining Azimuth in Advance</head><p>The surrounding old goaves introduce complex deformation interference patterns, compromising conventional azimuth estimation approaches that rely on non-temporal deformation signatures. To quantify this effect, comparative inversion experiments were conducted in Area I: (1) RM-DBC-guided azimuth estimation (Section 3.4.2) versus (2) full-parameter joint inversion treating azimuth as a free variable.</p><p>As quantified in Table <ref type="table" target="#tab_6">7</ref>, RM-DBC pre-determination achieved sub-2°azimuth precision, while unconstrained inversion reached an error of 18 • (RM-DBC 167 • and unconstrained inversion 151 • ). In addition, determining the azimuth in advance using RM-DBC reduces dimensional estimation errors by 5.8% in dimensional estimation accuracy and 11.86 m in center positioning accuracy compared with unconstrained inversion. This suggests that determining the azimuth in advance can significantly improve the accuracy of underground goaf locating. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3.">Comparisons of Non-Hybrid and Hybrid Optimization Algorithms</head><p>Underground goaf locating constitutes a high-dimensional nonlinear inverse problem requiring global optimization techniques to search a complex solution space. While singlestrategy optimizers (e.g., Particle Swarm Optimization, PSO) demonstrate rapid initial convergence, they exhibit premature convergence in complex nonlinear solution spaces due to gradient estimation limitations <ref type="bibr" target="#b24">[25]</ref>.</p><p>To address this challenge, a hybrid GA-PSO optimization algorithm, synergizing genetic algorithm (GA) exploration with PSO exploitation mechanisms, is applied to search for the global optimum. To compare the impacts of non-hybrid and hybrid optimization algorithms, convergence tests were conducted using the case of this study (refer to Section 4.3 for model parameter settings), comparing standalone PSO against GA-PSO using 1000 iterations and a population size of 200. The convergence results are depicted in Figure <ref type="figure" target="#fig_21">19</ref>. From Figure <ref type="figure" target="#fig_21">19</ref>, it is demonstrated that when the hybrid algorithm falls into a local optimum, it continues to search for the global optimum as the iterations proceed. While the non-hybrid algorithm will directly output the local optimal solution. This performance enhancement relies on GA's niche preservation maintaining solution space diversity. Therefore, in the underground goaf locating project, hybrid algorithms are more suitable to be selected for estimating parameters.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.">Conclusions</head><p>This study proposed an underground goaf locating framework based on D-InSAR with three different prior geological information conditions. Specifically, this framework classifies priori geological information into three categories to evaluate PIM and ODM across varying data availabilities, providing references into model selection criteria, which indicates that PIM performs better in the detailed information condition, while ODM performs better in the limited information condition, and the two models perform similarly in the moderate condition. On this basis, several conclusions have been drawn.</p><p>Model performance exhibits strong dependency on prior geological information. In a detailed prior information condition, PIM demonstrates better accuracy in dimensional parameter estimation than ODM, achieving a 6.9% reduction in maximum relative error, attributable to its capacity to integrate layer-specific lithological properties. Conversely, in a limited prior information condition, ODM achieves 3.4% precision enhancement in maximum relative error than PIM, relying on ODM's elasticity physics principle, which can minimize reliance on complex geological constraints. Moderate prior information conditions reveal model equivalency, suggesting the equivalent predictive capability of PIM and ODM under regional-scale geological priors.</p><p>Notably, centroid positioning accuracy remains consistent across all prior information conditions distributed around 25 m (25.24 m, 27.47 m, 23.36 m) in Area I and around 32 m (32.45 m, 31.89 m, 33.39 m) in Area II, which demonstrates the weak correlation between the center point locating and different priori geological information conditions. Additionally, the RM-DBC methodology reduces azimuth errors and improves dimensional accuracy compared with unconstrained inversions. Algorithmically, hybrid GA-PSO optimization proves effective for searching solutions in high-dimensional nonlinear space.</p><p>Collectively, this framework establishes a reference for underground goaf locating problem. Future extensions could integrate multi-source remote sensing data to further explore complex ground deformation and lithologic characteristics in coal mining areas.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head/><label/><figDesc>I and II are presented as follows: ({291 m, 165 m, 4.5 m, 774 m, 169 • , 31 • } ∈ Area I and {493 m, 142 m, 4.5 m, 740 m, 236 • , 13 • } ∈ Area II).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Geospatial context of the study area showing (a) regional location within Hebei Province, (b) local Digital Elevation Model (DEM), (c) Area II mining layout schematic, and (d) Area I mining layout schematic.</figDesc><graphic coords="4,166.39,308.77,353.59,310.02" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 2</head><label>2</label><figDesc>Figure 2 depicts the multi-stage locating framework comprising four principal computational phases: 1. Time-series line-of-sight (LOS) deformation retrieval through D-InSAR process (Differential Interferometric Synthetic Aperture Radar); 2.Model parameter definition under three different prior geological information conditions (detailed/moderate/limited); 3.Use the RM-DBC for estimating azimuth and establishing constraint boundaries of PIM and ODM; 4.Estimate other parameters by using the GA-PSO algorithm to estimate goaf parameters.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Workflow of the theoretical-model-driven underground goaf locating framework.</figDesc><graphic coords="5,166.39,498.27,379.85,198.55" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. Spatial relationships of coordinate systems: (a) three-dimensional configuration of reference frames and (b) planar projection of surface coordinate systems. (The schematic was prepared with the reference of another published paper [21] by the authors).</figDesc><graphic coords="7,166.39,285.29,235.71,144.56" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. Architecture of RM-DBC: (a) synthetic subsidence profile with stable reference area; (b) binarization results, the star represents the calculation origin which is usually the point of maximum subsidence. (The figure was prepared with the reference of another published paper [21] by the authors).</figDesc><graphic coords="10,166.39,407.05,314.29,103.46" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. The optimization process of GA-PSO. P n 0 (n ∈ 1, 2, • • • , size) constructs an eight-dimensional initial parametric population space. Q n i (i represent the iterations number, n ∈ 0, 1, • • • ) corresponds to the sorted result by P n 0 . (The flowchart was referenced from another published paper [21] by the authors). The optimization function minimizes the root mean square error (RMSE) between InSAR observations D LOSj and model predictions Dlos j , as follows:</figDesc><graphic coords="11,166.39,125.43,235.75,265.63" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. Time-series cumulative subsidence result of Area I. A total of 91 leveling points were set, and the maximum cumulative deformation is -442 mm in this area.</figDesc><graphic coords="12,61.77,334.17,471.48,225.08" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 7 .</head><label>7</label><figDesc>Figure 7. Time-series cumulative subsidence result of Area II. A total of 77 leveling points were set, and the maximum cumulative deformation is -267 mm in this area.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Figure 8 .</head><label>8</label><figDesc>Figure 8. Cross-validation of D-InSAR measurements against leveling in Area I (InSAR process from 13 October 2015 to 5 December 2015 and leveling measurement from 10 October 2015 to 19 December 2015) (a) is dip direction and (b) strike direction. The RMSEs between InSAR observations and leveling measurements in the dip direction and strike direction are 20.265 mm and 28.575 mm.</figDesc><graphic coords="13,166.39,71.87,275.02,240.72" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>Figure 9 .</head><label>9</label><figDesc>Figure 9. Cross-validation of D-InSAR measurements against leveling in Area II (InSAR process from 13 October 2015 to 5 December 2015 and leveling measurement from 10 October 2015 to 19 December 2015) (a) is dip direction and (b) strike direction. The RMSEs between InSAR observations and leveling measurements in the dip direction and strike direction are 12.386 mm and 14.167 mm.</figDesc><graphic coords="13,166.39,389.64,275.02,244.08" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head/><label/><figDesc>.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><head>Figure 10 .</head><label>10</label><figDesc>Figure 10. (a-d) are the Area I deformation binary conversion results at four time points. (e) Ray method (RM-DBC) azimuth estimation result; the maximum number of pixels reached 201 at an azimuth of 167 • .</figDesc><graphic coords="14,166.39,124.82,314.32,181.42" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_13"><head>Figure 11 .</head><label>11</label><figDesc>Figure 11. (a-d) are the Area II deformation binary conversion results at four time points. (e) Ray method (RM-DBC) azimuth estimation result; the maximum number of pixels reached 422 at an azimuth of 234 • .</figDesc><graphic coords="14,166.39,357.03,314.30,159.67" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_14"><head>Figure 12 .</head><label>12</label><figDesc>Figure 12. Underground goaf locating results of Area I using PIM and ODM. (a-c) represent the parameter estimation results using both PIM and ODM under the detailed, moderate, and limited conditions, respectively. The top and bottom of the figure are 3D/2D presentations of the InSARderived deformation of study area.</figDesc><graphic coords="15,61.77,466.34,471.46,152.82" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_15"><head>Figure 13 .</head><label>13</label><figDesc>Figure 13. Underground goaf locating results of Area II using PIM and ODM. (a-c) represent the parameter estimation results using both PIM and ODM under the detailed, moderate, and limited conditions, respectively. The top and bottom of the figure are 3D/2D presentations of the InSARderived deformation of the study area.</figDesc><graphic coords="16,61.77,71.86,471.46,152.80" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_16"><head>Figure 15 .</head><label>15</label><figDesc>Figure 15. Comparison results of the simulation results with the InSAR-derived deformation in a moderate information condition. Specifically, for PIM, the RMSE values for strike and dip directions in Area I are 7.01 cm and 9.04 cm, and in Area II are 5.49 cm and 5.77 cm. For ODM, the RMSE values for strike and dip directions in Area I are 7.76 cm and 8.20 cm, and in Area II are 5.69 cm and 5.60 cm.</figDesc><graphic coords="19,81.41,306.50,432.19,389.43" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_17"><head>Figure 16 .</head><label>16</label><figDesc>Figure 16. Comparison results of the simulation results with the InSAR-derived deformation in a limited information condition. Specifically, for PIM, the RMSE values for strike and dip directions in Area I are 9.02 cm and 11.13 cm, and in Area II are 6.11 cm and 8.33 cm. For ODM, the RMSE values for strike and dip directions in Area I are 8.23 cm and 9.09 cm, and in Area II are 3.57 cm and 5.22 cm.</figDesc><graphic coords="20,81.41,71.87,432.17,391.64" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_18"><head>Figure 17 .</head><label>17</label><figDesc>Figure 17. Residuals between model-forward simulation results of two models and InSAR-derived observations for Area I. (a) is the InSAR-derived observations. (b,c) represent the forward simulation results of PIM and ODM, respectively. (d,e) represent their residuals.</figDesc><graphic coords="20,166.39,529.74,314.30,186.53" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_19"><head/><label/><figDesc>To evaluate the cost-precision trade-off, this study conducts systematic simulations assessing resolutiondependent localization errors. Synthetic goaf geometries (the strike length L = 500 m, the dip length W = 100 m, the depth H = 500 m, the dip angle φ = 20 • , the azimuth angle α = 60 • , the goaf height h = 3 m, and the central coordinates were (0 m, 0 m)) were forwardmodeled under satellite geometry (incident angle = 35.5 • and heading angles = 349.6 • ), with progressive spatial degradation (1-80 m) applied to simulate multi-resolution ground deformation. Then the inversion framework proposed in Section 3.4.3 was applied for parameter estimation. The inversion results are shown in Figure 18.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_20"><head>Figure 18 .</head><label>18</label><figDesc>Figure 18. The parameters' (L, W, D) estimated results of progressively coarsened resolutions (1 m-80 m) using simulation data and GA-PSO algorithms.</figDesc><graphic coords="21,166.39,325.29,275.02,233.26" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_21"><head>Figure 19 .</head><label>19</label><figDesc>Figure 19. Convergence results of PSO and GA-PSO. The red box is an zoom-in view of the key parts.</figDesc><graphic coords="22,166.39,500.26,275.02,221.85" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head/><label/><figDesc/><graphic coords="18,81.41,71.86,432.17,391.49" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 .</head><label>1</label><figDesc>Interferometric baseline parameters.</figDesc><table><row><cell>Interferogram Pairs</cell><cell>Spatial Baseline</cell><cell>Time Baseline</cell></row><row><cell>20151013-20151106</cell><cell>47.1835 m</cell><cell>24 d</cell></row><row><cell>20151106-20151130</cell><cell>3.8988 m</cell><cell>24 d</cell></row><row><cell>20151130-20151224</cell><cell>13.3323 m</cell><cell>24 d</cell></row><row><cell>20151224-20160117</cell><cell>-43.7693 m</cell><cell>24 d</cell></row><row><cell>20160117-20160305</cell><cell>-37.7825 m</cell><cell>48 d</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2 .</head><label>2</label><figDesc>Rock property parameters correspondence.</figDesc><table><row><cell>Rock Properties</cell><cell>Rock Category</cell><cell>Q</cell><cell>Poisson's Ratio</cell></row><row><cell>soft</cell><cell>topsoil/loam</cell><cell>1</cell><cell>0.35-0.5</cell></row><row><cell>medium soft</cell><cell>sandy mudstone/mudstone</cell><cell>0.6</cell><cell>0.25-0.35</cell></row><row><cell>medium hard</cell><cell>medium sandstone/siltstone</cell><cell>0.4</cell><cell>0.15-0.25</cell></row><row><cell>hard</cell><cell>granite/fine-grained sandstone</cell><cell>0.2</cell><cell>0.1-0.15</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 3 .</head><label>3</label><figDesc>Correspondence between rock property parameters and rock-weighted composite evaluation factor.</figDesc><table><row><cell>soft</cell><cell>P D rock 0.76 0.82 0.88 0.95 1.01 1.08 1.14 1.20 1.25 0.00 0.03 0.07 0.11 0.15 0.19 0.23 0.27 0.3</cell></row><row><cell>medium hard</cell><cell>P D rock 1.26 1.35 1.45 1.54 1.64 1.73 1.82 1.91 2.00 0.3 0.35 0.40 0.45 0.50 0.55 0.60 0.65 0.70</cell></row><row><cell>hard</cell><cell>P D rock 2.00 2.10 2.20 2.30 2.40 2.50 2.60 2.70 2.80 0.70 0.75 0.80 0.85 0.910 0.95 1.00 1.05 1.10</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 4 .</head><label>4</label><figDesc>Stratification parameters for the study area.</figDesc><table><row><cell>Rock Properties</cell><cell>Thickness</cell><cell>p</cell><cell>q</cell><cell>Poisson's Ratio</cell></row><row><cell>soft</cell><cell>20 m</cell><cell>0.03</cell><cell>0.465</cell><cell>0.4</cell></row><row><cell>medium hard</cell><cell>400 m</cell><cell>0.22</cell><cell>0.56</cell><cell>0.18</cell></row><row><cell>hard</cell><cell>344/320 m</cell><cell>0.12</cell><cell>0.51</cell><cell>0.12</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 5 .</head><label>5</label><figDesc>Area I: underground goaf locating results, absolute error, and relative error.</figDesc><table><row><cell/><cell>Detailed</cell><cell>Moderate</cell></row><row><cell>-</cell><cell>True</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5"><head>Table 6 .</head><label>6</label><figDesc>Area II: underground goaf locating results, absolute error, and relative error.</figDesc><table><row><cell/><cell>Detailed</cell><cell>Moderate</cell></row><row><cell>-</cell><cell>True</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_6"><head>Table 7 .</head><label>7</label><figDesc>Influence of determining azimuth in advance.</figDesc><table><row><cell>Method</cell><cell>Azimuth</cell><cell>Length</cell><cell>Width</cell><cell>Depth</cell><cell cols="2">Center Coordinate Inclined Angle</cell></row><row><cell>True Value</cell><cell>169 •</cell><cell>291 m</cell><cell>165 m</cell><cell>774 m</cell><cell>(563, 480)</cell><cell>31 •</cell></row><row><cell>RM-DBC</cell><cell>167 •</cell><cell>314 m</cell><cell>174 m</cell><cell>774 m</cell><cell>(568, 475)</cell><cell>28 •</cell></row><row><cell cols="2">Direct Inversion 151 •</cell><cell>332 m</cell><cell>183 m</cell><cell>774 m</cell><cell>(575, 471)</cell><cell>33 •</cell></row></table></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><p>Acknowledgments: Some figures were prepared using the public domain GMT software [Wessel and Smith, 1998]. Optical images were provided by <rs type="institution">Google Earth</rs>.</p></div>
+			</div>
+			<div type="funding">
+<div><p>Funding: This work has been supported in part by the <rs type="funder">National Key R&amp;D Program of China</rs> (Grant No. <rs type="grantNumber">2022YFE0102600</rs>), in part by the <rs type="funder">National Natural Science Foundation of China</rs> (Grant No. <rs type="grantNumber">52474184</rs>, No. <rs type="grantNumber">42474018</rs>, No. <rs type="grantNumber">U22A20598</rs>, No. <rs type="grantNumber">52104174</rs>), in part by the <rs type="programName">Young Elite Scientists Sponsorship Program</rs> by <rs type="funder">CAST</rs> (Grant No. <rs type="grantNumber">2023QNRC001-YESS20230599</rs>) and in part by the <rs type="funder">China Postdoctoral Science Foundation</rs> (Grant No. <rs type="grantNumber">2023T160685</rs>, No. <rs type="grantNumber">2020M671646</rs>).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_MzBHXga">
+					<idno type="grant-number">2022YFE0102600</idno>
+				</org>
+				<org type="funding" xml:id="_xHxsNKf">
+					<idno type="grant-number">52474184</idno>
+				</org>
+				<org type="funding" xml:id="_2jRB2QP">
+					<idno type="grant-number">42474018</idno>
+				</org>
+				<org type="funding" xml:id="_GF7TX6H">
+					<idno type="grant-number">U22A20598</idno>
+				</org>
+				<org type="funding" xml:id="_TxpSjdh">
+					<idno type="grant-number">52104174</idno>
+					<orgName type="program" subtype="full">Young Elite Scientists Sponsorship Program</orgName>
+				</org>
+				<org type="funding" xml:id="_s9naRpM">
+					<idno type="grant-number">2023QNRC001-YESS20230599</idno>
+				</org>
+				<org type="funding" xml:id="_GcM2xWc">
+					<idno type="grant-number">2023T160685</idno>
+				</org>
+				<org type="funding" xml:id="_jmF9shN">
+					<idno type="grant-number">2020M671646</idno>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data Availability Statement:</head><p>The original contributions presented in the study are included in the article, further inquiries can be directed to the corresponding author.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Author Contributions: Conceptualization, K.Z., Y.W. and F.Z.; methodology, K.Z. and Y.W.; software, K.Z. and Z.S.; validation, K.Z., F.Z., T.W. and Y.W.; formal analysis, K.Z. and N.Z.; investigation, D.Z., X.D., Z.M. and G.Z.; writing-original draft preparation, K.Z.; writing-review and editing, K.Z., F.Z., Y.W. and W.H.; visualization, K.Z.; supervision, K.Z.; project administration, K.Z. All authors have read and agreed to the published version of the manuscript.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conflicts of Interest:</head><p>The authors declare no conflicts of interest.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m">Statistical Review of World Energy</title>
+		<meeting><address><addrLine>London, UK</addrLine></address></meeting>
+		<imprint>
+			<publisher>The Energy Institute</publisher>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+		<respStmt>
+			<orgName>The Energy Institute</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m" type="main">Research on the Key Technologies of InSAR/GIS Monitoring for Illegal Underground Mining in Coal Mining Area</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xia</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<pubPlace>Xuzhou, China</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>China University of Mining and Technology</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">Ph.D Thesis</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Subsidence monitoring using D-InSAR and probability integral prediction modelling in deep mining areas</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">D</forename><surname>Fan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">Z</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">Q</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Zhu</surname></persName>
+		</author>
+		<idno type="DOI">10.1179/1752270614Y.0000000153</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Emp. Surv. Rev</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page" from="438" to="445"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Use of SAR/InSAR in mining deformation monitoring, parameter inversion, and forward predictions: A review</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Wu</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/MGRS.2019.2954824</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Geosci. Remote Sens. Mag</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="71" to="90"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Position inversion of goafs in deep coal seams based on DS-InSAR data and the probability integral methods</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Fan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/rs13152898</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<date type="published" when="2021">2021. 2898</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Impacts for half of the world's mining areas are undocumented</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Maus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">T</forename><surname>Werner</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/d41586-023-04090-3</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">625</biblScope>
+			<biblScope unit="page" from="26" to="29"/>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Mapping hazardous cavities over collapsed coal mines: Case study experiences using the microgravity method</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Zahorec</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Pašteka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Papčo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Putiška</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mojzeš</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kušnirák</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Plakinger</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/nsg.12139</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Near Surf. Geophys</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="353" to="364"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Detection of water-filled mining goaf using mining transient electromagnetic method</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Su</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Malekian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Xing</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TII.2019.2901856</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Ind. Inform</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="2977" to="2984"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Research Progress and Methods of InSAR for Deformation Monitoring</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hu</surname></persName>
+		</author>
+		<idno type="DOI">10.11947/j.AGCS.2017.20170350</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Geod. Cartogr. Sin</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="page" from="1717" to="1733"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Source geometry and causes of the 2019 Ms6. 0 Changning earthquake in Sichuan, China based on InSAR</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Liao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Fang</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/rs14092082</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<date type="published" when="2022">2022. 2082</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">A deep learning approach to detecting volcano deformation from satellite imagery using synthetic datasets</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Anantrasirichai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Biggs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Albino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Bull</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.rse.2019.04.032</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens. Environ</title>
+		<imprint>
+			<biblScope unit="volume">230</biblScope>
+			<biblScope unit="page">111179</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note>CrossRef</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">A new algorithm for landslide dynamic monitoring with high temporal resolution by Kalman filter integration of multiplatform time-series InSAR processing</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Fu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Xiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jag.2022.102812</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Appl. Earth Obs. Geoinf</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<biblScope unit="page">102812</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note>CrossRef</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Monitoring and Analysis of the Collapse at Xinjing Open-Pit Mine, Inner Mongolia, China, Using Multi-Source Remote Sensing</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Fan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Diao</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/rs16060993</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page">993</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Ground subsidence characteristics associated with urbanization in East China analyzed with a Sentinel-1A-based InSAR time series approach</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Shao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10064-018-1383-6</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Bull. Eng. Geol. Environ</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<biblScope unit="page" from="4003" to="4015"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Ground Deformation Monitoring over Xinjiang Coal Fire Area by an Adaptive ERA5-Corrected Stacking-InSAR Method</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Huo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Fernández</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/rs15051444</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page">1444</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Research on Multi-source Remote Sensing Detection of Concealed Fire Sources in Coalfields</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Yuan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Dang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="DOI">10.13203/j.whugis20220184</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Geomat. Inf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page" from="1651" to="1661"/>
+			<date type="published" when="2022">2022</date>
+			<pubPlace>Wuhan Univ</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">An underground-mining detection system based on DInSAR</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TGRS.2012.2202243</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page" from="615" to="625"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Goaf locating based on InSAR and probability integration method</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xia</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/rs11070812</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">812</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Locating and defining underground goaf caused by coal mining from space-borne SAR interferometry</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Preusse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Papst</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.isprsjprs.2017.11.020</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ISPRS J. Photogramm. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">135</biblScope>
+			<biblScope unit="page" from="112" to="126"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">An Algorithm for Locating Subcritical Underground Goaf Based on InSAR Technique and Improved Probability Integral Model</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Diao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhao</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TGRS.2023.3308565</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Geosci. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page">5214914</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">A Goaf-Locating Method Based on the D-InSAR Technique and Stratified Okada Dislocation Model</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Diao</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/rs16152741</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page">2741</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Time series interferometric synthetic aperture radar-based modeling and analysis of complex land subsidence caused by multi-seam coal mining on the Liaohe Plain, China</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>He</surname></persName>
+		</author>
+		<idno type="DOI">10.1117/1.JRS.16.024512</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page">24512</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note>CrossRef</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">A novel method of monitoring surface subsidence law based on probability integral model combined with active and passive remote sensing data</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wu</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/rs14020299</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">299</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Slow slip event displacement on 2018 offshore Boso Peninsula detected by Sentinel-1 InSAR time-series analysis with numerical weather model assistance</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kinoshita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Furuta</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/gji/ggae028</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Geophys. J. Int</title>
+		<imprint>
+			<biblScope unit="volume">237</biblScope>
+			<biblScope unit="page" from="75" to="89"/>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">A hybrid GA-PSO approach for reliability optimization in redundancy allocation problem</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sheikhalishahi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Ebrahimipour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Shiri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zaman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jeihoonian</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s00170-013-4730-6</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Adv. Manuf. Technol</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page" from="317" to="338"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Persistent scatterer interferometry: A review</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Crosetto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Monserrat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cuevas-González</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Devanthéry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Crippa</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.isprsjprs.2015.10.011</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ISPRS J. Photogramm. Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<biblScope unit="page" from="78" to="89"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Monitoring and analysis of surface deformation in mining area based on InSAR and GRACE</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Fan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Du</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/rs10091392</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sens</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">1392</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Analysis of a model of elastic dislocations in geophysics</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aspri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Beretta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Mazzucato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">V</forename><surname>De Hoop</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s00205-019-01462-w</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Arch. Ration. Mech. Anal</title>
+		<imprint>
+			<biblScope unit="volume">236</biblScope>
+			<biblScope unit="page" from="71" to="111"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Surface deformation due to shear and tensile faults in a half-space</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Okada</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bull. Seismol. Soc. Am</title>
+		<imprint>
+			<biblScope unit="volume">75</biblScope>
+			<biblScope unit="page" from="1135" to="1154"/>
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1785/BSSA0750041135</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<title level="m">The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of</title>
+		<imprint/>
+	</monogr>
+	<note>Disclaimer/Publisher's Note. MDPI and/or the editor(s. MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods, instructions or products referred to in the content</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

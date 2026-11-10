@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">DETECTION OF VERTICAL GROUND DEFORMATION CAUSED BY THE 2018 HOKKAIDO EASTERN IBURI EARTHQUAKE USING SENTINEL1 DINSAR DATA</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yotaro</forename><surname>Yoshine</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Department of Environmental Sciences</orgName>
+								<orgName type="department" key="dep2">College of Agriculture</orgName>
+								<orgName type="department" key="dep3">Food and Environment Sciences</orgName>
+								<orgName type="institution">Rakuno Gakuen University</orgName>
+								<address>
+									<postCode>069-8501</postCode>
+									<settlement>Ebetsu</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Christopher</forename><surname>Mccarthy</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Zanvyl Krieger School of Arts &amp; Sciences</orgName>
+								<orgName type="institution">Johns Hopkins University</orgName>
+								<address>
+									<postCode>21218</postCode>
+									<settlement>Baltimore</settlement>
+									<region>MD</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Buho</forename><surname>Hoshino</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Department of Environmental Sciences</orgName>
+								<orgName type="department" key="dep2">College of Agriculture</orgName>
+								<orgName type="department" key="dep3">Food and Environment Sciences</orgName>
+								<orgName type="institution">Rakuno Gakuen University</orgName>
+								<address>
+									<postCode>069-8501</postCode>
+									<settlement>Ebetsu</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">DETECTION OF VERTICAL GROUND DEFORMATION CAUSED BY THE 2018 HOKKAIDO EASTERN IBURI EARTHQUAKE USING SENTINEL1 DINSAR DATA</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">3C405E8192D762233FE17BDF67FEEB52</idno>
+					<idno type="DOI">10.1109/IGARSS52108.2023.10282490</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-09-01T12:21+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>DInSAR</term>
+					<term>Displacement</term>
+					<term>Hokkaido Eastern Iburi Earthquake</term>
+					<term>Landslide</term>
+					<term>Sentinel-</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The endogenetic processes, such as earthquakes, volcanic eruptions, landslides, or more generally, deformation phenomena of the earth's surface, such as exogenetic processes like subsidence, open pit mining, deforestation can be monitored through the use of Synthetic Aperture Radar (SAR) sensors. Because, SAR signal contains amplitude and phase information, and amplitude is the strength of the radar response and phase is the fraction of one complete sine wave cycle. Interferometric SAR (InSAR) exploits the phase difference between two complex radar SAR observations of the same area, taken from slightly different sensor positions, and extracts distance information about the Earth's terrain. By using the differential interferometric synthetic aperture radar (DInSAR) technique, which compares two images acquired from different temporal baselines, we can obtain vertical displacement images of the Earth's surface, measuring earthquakes or landslides. The 2018 Hokkaido Eastern Iburi Earthquake (Mw 6.6), which occurred on September 6, 2018, in northern Japan, caused crustal deformation along with a large number of landslides and sediment-related disasters. In this study, we use the DinSAR technique with Sentinel 1 images in band C to monitor ground deformations (displacement) caused by earthquakes.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">INTRODUCTION</head><p>The 2018 Hokkaido Eastern Iburi Earthquake (Mw 6.6), which occurred on September 6, 2018, in northern Japan, caused crustal deformation along with a large number of landslides and sediment-related disasters. However, the depth of the main earthquake's hypocenter (obtained from the seismic wave) was 35.4 km (© Earthquake Research Committee 2018), and no exposed fault has been identified <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref>. Although surface displacements were widespread, and the vertical amplitude was small at a few centimeters, comprehensive surveys using ground surveys and aerial photographs were difficult <ref type="bibr" target="#b3">[4]</ref>. Satellite remote sensing can allow detailed investigations of various kinds of surface displacement caused by earthquakes in such situations. InSAR uses radar images to measure millimeter-level surface displacements. In the images, the ground resolution can be relatively high, with each data point representing the average displacement over an area of several square meters <ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref>. An earthquake measuring 6.6 Mw on the moment magnitude scale struck Iburi Subprefecture in southern Hokkaido, Japan, on September 6, 2018, at 3:08 a.m. JST. The earthquake's epicenter was near Tomakomai and occurred at a depth of 35.0 kilometers <ref type="bibr" target="#b0">[1]</ref>. The day before the earthquake, strong Typhoon No. 21 (2018) had hit and passed Hokkaido. About 200 mm of heavy rain fell in one day around Lake Shikotsu, about 50 km west of the epicenter of Atsuma-cho, but only light rain was reported at the epicenter. These rainfalls may have adversely affected slope stability, causing landslides on more than 6000 slopes in these areas <ref type="bibr" target="#b6">[7]</ref>.</p><p>Many studies have been conducted on the 2018 Hokkaido Eastern Iburi Earthquake, and among them, there are many studies on landslides caused by this earthquake, but few research cases that study ground deformation <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref>. Against this background, the purpose of this study is to create a vertical displacement map to detect the extent and scale of large-scale ground deformation during the Hokkaido Eastern Iburi Earthquake using Sentinel-1 DInSAR data. The accuracy of the created vertical displacement map is verified by referring to the data provided by the Geospatial Information Authority of Japan. A differential interferometric synthetic aperture radar (DInSAR) is used to create the vertical displacement map. By using two phase interferometry images and vertical displacement images generated by applying DInSAR analysis to two SAR data before and after the earthquake, we compare the results with the Geospatial Information Authority of Japan (GIAJ) data and other geological maps. We then clarify the problem of low coherence and the cause of error distribution in forested areas.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">METHOD AND MATERIALS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1">The study area and epicenter</head><p>The Hokkaido Eastern Iburi earthquake occurred on September 6, 2018, and the parameters of the hypocenter given by the Japan Meteorological Agency (JMA) are as follows: origin time = 03:07:59.3 JST, epicenter = (42.691°N, 142.007°E), depth = 37.0 km, and MJMA = 6.7. This earthquake occurred in the Hokkaido corner region, where the northern Japan island arcs connect to the Kurile Islands <ref type="bibr">[1][7]</ref>. In August 2018, before the earthquake, typhoons No. 20 and No. 21 brought heavy rains to Hokkaido, causing water to accumulate underground in the focal region, and this earthquake caused a wide range of surface landslides in the mountains. According to the Cabinet Office, Government of Japan, 42 people were killed, and 762 were seriously injured in the earthquake (see Fig. <ref type="figure">1</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Fig. 1 Damage caused by slope failures during an earthquake near the epicenter (Photo taken by ©Shin Engineering</head><p>Consultant Co., Ltd., on Sep. 6, 2018).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2">SAR Data and Interferometric SAR (InSAR) processing</head><p>In this study, we used SAR data from Sentinel-1A (Descending), which covers two main areas: the epicenter area and the Sapporo city area. As shown in Table <ref type="table" target="#tab_0">1</ref>, we downloaded data for two periods: one before and one after 18:08 (UTC) on September 5, 2018, when the earthquake occurred. The interferogram contains phase variations φ due to many factors, which are expressed by the following equation <ref type="bibr" target="#b0">(1)</ref>.</p><p>Here, φDEM represents the terrain phase (surface topography), φflat represents the earth plane phase (earth curvature), φdisp represents the surface deformation phase (displacement phase) between the two acquired periods, φatm represents the atmospheric conditions (humidity, temperature, air pressure), and φnoise represents other noise phases (volume scattering, etc.)</p><p>In DInSAR, by estimating φflat and φDEM, which are equally visible in both acquired epochs, and removing them from the interferogram, the remaining phase variation is obtained as the change in surface elevation between the two epochs. This is shown by the following equation ( <ref type="formula">2</ref>)</p><formula xml:id="formula_0">(1) (2)</formula><p>In this study, φdisp is obtained by subtracting only φflat and φDEM, while φatm and φnoise are ignored for now. The values of φflat and φDEM to be subtracted, and φdisp, which is the final two-period surface deformation to be obtained, are expressed by the following equations ( <ref type="formula">3</ref>)-( <ref type="formula">5</ref>).</p><p>(3)</p><p>(5) The variables in the equation are defined as follows: λ is the wavelength (approximately 5.5 cm for the Sentinel-1 Cband), Bn is the vertical baseline, s is the slant-range displacement of the point target, R is the radar-to-target distance, q is the altitude difference between the point targets with respect to the horizontal reference plane, and θ is the radiation incidence-angle with respect to the reference plane. Additionally, d denotes the relative scatterer displacement projected in the slant-range direction, which represents the surface deformation phase.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3">Differential radar interferometry (DInSAR) analysis process</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Fig. 2. Processing flowchart for DInSAR analysis</head><p>The processing flowchart for DInSAR analysis used in this study is shown in Fig. <ref type="figure">2</ref>. The main processes include SAR image coregistration, interferogram formation, topographic phase removal, SNAPHU export/import, and terrain correction. The SAR image and differential interferometry processes were carried out using the three-STEP approach, with the ©ESA SNAP software (see Fig. <ref type="figure">2</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">RESULTS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1">Coherence image</head><p>Fig. <ref type="figure">3(a,</ref><ref type="figure">b</ref>) shows a coherence image, where dark colors represent low coherence and light colors represent high coherence. It was found that coherence values in the target area of this study vary greatly depending on the location. Peri-urban areas such as Sapporo City, Tomakomai City, Eniwa City, and Chitose City have high coherence values (0.4 or above). In the forested area around the epicenter, many low coherence bands below 0.2 are noticeable. In this study, many low-coherence pixels appeared in both VH and VV, greatly affecting the unwrapping results.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Fig. 3. Coherence image (where, (left) is the coherence image of VH and (right) is the coherence image of VV).</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2">Interferogram image before unwrapping</head><p>Fig. <ref type="figure">4</ref> shows the interferogram image before unwrapping. The most notable feature of this image is the discovery of seismic fringes. In both the VH and VV images in Fig. <ref type="figure">4</ref>, a sharp upward trend can be observed in the southeast direction of the epicenter. The land uplift trend indicated by this fringe is consistent with the data published by the Geospatial Information Authority of Japan. However, noise occurs in the low coherence region (forest region).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Fig. 4 Interferogram image before unwrapping (where, (left) is the Interferogram image of VH and (right) is the Interferogram image of VV).</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3">Interferogram image after unwrapping</head><p>Fig. <ref type="figure" target="#fig_0">5</ref> shows an interferogram image after unwrapping. In the VV interferogram image after unwrapping, a tendency of ground uplift was observed along with the fringe pattern. However, in the VH image, there was little tendency of ground uplift, and conversely, a tendency to show ground subsidence was partially observed. The difference between the interferogram images of VH and VV results is thought to be due to the difference in transmittance in the forest area caused by the difference in polarization characteristics. However, low coherent noise in the forest area is also caused by the C-band transmittance of Sentinel-1, and it is considered to have a significant impact.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4">Vertical displacement image before mask</head><p>In the VH image, an uplift of about 2-8 cm was observed in the southeast direction of the epicenter (including Mukawa Town and Biratori Town), as well as an uplift of about 2-9 cm in the northwest direction (including northern Atsuma Town) and southwest direction from the epicenter. Furthermore, an uplift of about 2-9 cm was observed in the north-northwest direction (eastern part of Chitose City) from the epicenter, and an uplift of about 2-12 cm in the northern part of the epicenter (around Yubari City) and in the southeast direction (Hidaka Mountains side) from the epicenter.</p><p>On the other hand, a subsidence of about 2-10 cm can be seen in the vicinity of the epicenter from the north to the south of the epicenter, and a subsidence of about 2-16 cm can also be seen in the northeast direction from the epicenter (east and southeast of Shimukappu Village). In the urban areas around Sapporo city, there is a trend of uplift or subsidence of about 2 cm at maximum, or areas with no change.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Fig. 6 Vertical displacement image before mask (where, (left)image is the interferogram image of VH and (right) image is the interferogram image of VV).</head><p>In the VV image, an uplift of about 2-7 cm was observed in the southeast and northwest of the epicenter. On the other hand, subsidence of about 4-15 cm was observed in the northern and northeastern areas of the epicenter.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.5">Vertical displacement image after mask</head><p>We applied a coherence mask to the interferogram image before unwrapping and to the vertical displacement image generated after unwrapping. The former process aims mainly to reduce processing errors that may occur during the unwrap processing, while the latter process of applying a mask to the vertically displaced image after unwrapping is intended to make it easier to identify pixels with more accurate variation values. Before applying the mask, the thresholds were set at -0.099 to +0.198 for VV and -0.167 to +0.140 for VH. After applying the mask, the thresholds changed to -0.082 to +0.113 for VV when the coherence threshold was set at 0.1, while VH ranged from -0.076 to +0.081 with a small standard deviation. In this study, we set the coherence value for the pixel with the lowest confidence level as 0.2, the optimal value as 0.5, and the coherence threshold in the interval of 0.2-0.5. Fig. <ref type="figure">7</ref>. The vertical displacement image with the mask applied after the unwrapping process is shown in (left) as the VH image and (right) as a magnified image near the epicenter. Ground uplift caused by the earthquake can be observed.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">DISCUSSION AND CONCLUSIONS</head><p>From the phase and vertical displacement images generated by the DInSAR processing, we were able to detect earthquake fringes (rapid deformation points) and estimate ground deformation around the epicenter and in nearby urban areas. However, it turned out to be a multifactorial problem that affects its accuracy. The first issue is the low coherence of the two periods. The target area of this research includes urban areas with high coherence (0.3 or higher) and forest areas with low coherence (less than 0.3), including many areas near the epicenter. In forest areas, coherence is significantly reduced due to Sentinel-1 C-band interference with vegetation. InSAR processing, which is dominated by low-coherence regions, may not accurately recognize displacements even in regions where large displacements have occurred <ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref>. Additionally, most of the forest area is a noise area containing speckle noise, which has a significant effect on subsequent processing of DInSAR processing.</p><p>The unwrapping process requires high-quality interferograms with minimal noise, but in the target area of this study, interferograms have low coherence regions containing significant noise, resulting in many unwrapping errors. The effects of unwrapping errors can be seen in the vertical displacement image. In this study's vertical displacement image, compared to the data published by the Geospatial Information Authority of Japan, the uplift trend on the east side of the epicenter is consistent, but the west side shows the opposite uplift trend. Unlike the displacement of the Geospatial Information Authority of Japan, which shows a subsidence trend in rice fields, the area showing a trend of subsidence flows into the area showing a trend of uplift (VV image). It is necessary to perform the same data processing using ALOS/PALSAR-2 L-band data in the future.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">ACKNOWLEDGMENT</head><p>This work was supported by JSPS KAKENHI Grant Numbers (JP) 19H04362 (Risk assessment of the regional impact of the China "One-Belt-One-Road" (OBOR) project).</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 5</head><label>5</label><figDesc>Fig. 5 Interferogram images after unwrapping (where, (left) is the interferogram image of VH and (right) is the interferogram image of VV).</figDesc><graphic coords="3,312.00,70.55,231.75,91.00" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 .</head><label>1</label><figDesc>Characteristics of Sentinel-1 InSAR pairs used for this study.</figDesc><table><row><cell>SAR Data</cell><cell>Product ID</cell><cell>Track</cell><cell>Date</cell><cell>Incidence angle</cell></row><row><cell>Master image</cell><cell cols="2">IW_SLC Descending</cell><cell>24-Aug-2018</cell><cell>32.9 (IW1), 38.3 (IW2)</cell></row><row><cell>Slave image</cell><cell cols="2">IW_SLC Descending</cell><cell>5-Sep-2018</cell><cell>32.9 (IW1), 38.3 (IW2)</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>Authorized licensed use limited to: ESCUELA POLITECNICA DEL LITORAL (ESPOL). Downloaded on August 13,2025 at 16:53:59 UTC from IEEE Xplore. Restrictions apply.</p></note>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">The 2018 Hokkaido Eastern Iburi earthquake (MJMA = 6.7) was triggered by a strike-slip faulting in a stepover segment: insights from the aftershock distribution and the focal mechanism solution of the main shock</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Katsumata</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ichiyanagi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ohzono</surname></persName>
+		</author>
+		<idno type="DOI">10.1186/s40623-019-1032-8</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Earth Planets Space</title>
+		<imprint>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="page">53</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Characteristics of relocated hypocenters of the 2018 M6.7 Hokkaido Eastern Iburi earthquake and its aftershocks with a three-dimensional seismic velocity structure</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kita</surname></persName>
+		</author>
+		<idno type="DOI">10.1186/s40623-019-1100-0</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Earth Planets Space</title>
+		<imprint>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="page">122</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Characteristics of landslides caused by the 2018 Hokkaido Eastern Iburi Earthquake</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Osanai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Yamada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Si</forename><surname>Hayashi</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10346-019-01206-7</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Landslides</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1517" to="1528"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Detection and interpretation of local surface deformation from the 2018 Hokkaido Eastern Iburi Earthquake using ALOS-2 SAR data</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Fujiwara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Nakano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Morishita</surname></persName>
+		</author>
+		<idno type="DOI">10.1186/s40623-019-1046-2</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Earth Planets Space</title>
+		<imprint>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="page">64</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Improving the resolving power of InSAR for earthquakes using time series: A case study in Iran</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Craig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hooper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Wright</surname></persName>
+		</author>
+		<idno type="DOI">10.1029/2021GL093043</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Geophysical Research Letters</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page">93043</biblScope>
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Reassessment of earthquakes, 1900-1999, in the Eastern Mediterranean and the Middle East</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">N</forename><surname>Ambraseys</surname></persName>
+		</author>
+		<idno type="DOI">10.1046/j.0956-540x.2001.01396.x</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Geophysical Journal International</title>
+		<imprint>
+			<biblScope unit="volume">145</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="471" to="485"/>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title level="m" type="main">Geological features of landslides caused by the 2018 Hokkaido Eastern Iburi Earthquake in Japan</title>
+		<author>
+			<persName><forename type="first">Yoshihiko</forename><surname>Ito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shusaku</forename><surname>Yamazaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Toshiyuki</forename><surname>Kurahashi</surname></persName>
+		</author>
+		<idno type="DOI">10.1144/SP501-2019-122</idno>
+		<imprint>
+			<date type="published" when="2021">2021. 2021</date>
+			<publisher>Special Publications</publisher>
+			<biblScope unit="volume">501</biblScope>
+			<biblScope unit="page">171</biblScope>
+			<pubPlace>London</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Synthetic aperture radar interferometry</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Rosen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. IEEE</title>
+		<meeting>IEEE</meeting>
+		<imprint>
+			<date type="published" when="2000">2000</date>
+			<biblScope unit="volume">88</biblScope>
+			<biblScope unit="page" from="333" to="382"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">An approach to persistent scatterer interferometry</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Devanthéry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Crosetto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Monserrat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cuevas-González</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Crippa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sensing</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="6662" to="6679"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Sentinel-1 A-DInSAR Approaches to Map and Monitor Ground Displacements</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Krishnakumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Qiu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Monserrat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Barra</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/rs13061120</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Remote Sensing</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page">1120</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>
