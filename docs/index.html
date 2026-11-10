@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LitTraceAI | Literature Reviews</title>
+  <style>
+    * { box-sizing: border-box; }
+    :root { --ink: #25293a; --muted: #535a70; --accent: #4b429c; --tint: #eeebfb; --line: #dedee8; }
+    body { margin: 0; background: #f7f7fa; color: var(--ink); font: 1rem/1.55 system-ui, sans-serif; }
+    .wrap { max-width: 72rem; margin: auto; padding-inline: clamp(1rem, 4vw, 3rem); }
+    .bar { background: white; border-bottom: 1px solid var(--line); }
+    .wordmark { font-size: clamp(1.25rem, 3vw, 1.5rem); letter-spacing: -.02em; line-height: 1.2; }
+    .bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: .5rem .8rem; flex-wrap: wrap; min-height: 4rem; padding-block: .5rem; font-weight: 700; }
+    main { padding-block: 2rem 3rem; }
+    h1 { margin: 0 0 .35rem; font-size: clamp(1.45rem, 4vw, 2rem); letter-spacing: -.025em; }
+    .intro { margin: 0 0 1.5rem; color: var(--muted); }
+    h2 { margin: 0 0 .75rem; font-size: 1.15rem; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; align-items: start; }
+    details { background: white; border: 1px solid var(--line); border-radius: .65rem; box-shadow: 0 2px 4px #25293a08; }
+    details[open] { border-color: #b8afe0; }
+    summary { display: flex; align-items: center; gap: .65rem; cursor: pointer; padding: .85rem 1rem; font-weight: 650; border-radius: .6rem; list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+    summary:hover, details[open] summary { background: #f5f3fc; }
+    .chevron { margin-left: auto; flex: 0 0 1rem; width: 1rem; height: 1rem; color: var(--accent); }
+    details[open] .chevron { transform: rotate(180deg); }
+    ul { margin: 0; padding: 0 1rem; list-style: none; }
+    li { border-top: 1px solid var(--line); }
+    a { display: flex; align-items: center; justify-content: space-between; gap: .8rem; padding: .7rem 0; color: var(--accent); text-underline-offset: .18em; }
+    li a { justify-content: flex-start; }
+    .review-code { flex: 0 0 auto; padding: .15rem .4rem; border-radius: .3rem; background: var(--tint); color: #403582; font-size: .8125rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+    a:hover { color: #312764; text-decoration-thickness: 2px; }
+    button, summary, li a { min-block-size: 44px; }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+    .about-button { border: 0; border-radius: 99px; padding: .45rem .9rem; background: var(--accent); color: white; font: inherit; font-size: .9375rem; cursor: pointer; }
+    .about-button:hover { background: #3d347f; }
+    dialog { width: min(37rem, calc(100% - 2rem)); max-height: calc(100% - 2rem); padding: 0; border: 1px solid var(--line); border-radius: .85rem; color: var(--ink); box-shadow: 0 16px 48px #25293a40; }
+    dialog::backdrop { background: #25293a70; }
+    .dialog-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 1.25rem; border-bottom: 1px solid var(--line); }
+    .dialog-heading h2 { margin: 0; font-size: 1.25rem; }
+    .close { padding: .3rem .65rem; border: 0; border-radius: .35rem; background: var(--tint); color: #403582; font: inherit; cursor: pointer; }
+    .about-copy { padding: .15rem 1.25rem 1.25rem; }
+    .about-copy p { margin: .8rem 0; }
+    .about-copy dl { margin: 0; }
+    .about-copy dt { font-weight: 650; margin-top: .55rem; }
+    .about-copy dd { margin: 0; color: var(--muted); }
+    .viewer-toolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .5rem 1rem; margin-bottom: 1rem; }
+    .viewer-toolbar a { padding: .65rem 0; }
+    .review-frame { display: block; width: 100%; height: 70vh; margin-top: 1rem; border: 1px solid var(--line); border-radius: .65rem; background: white; }
+    @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="bar">
+    <div class="wrap">
+      <div class="wordmark">LitTraceAI</div>
+      <button class="about-button" id="open-about" type="button" aria-haspopup="dialog" aria-controls="about">About LitTraceAI</button>
+    </div>
+  </header>
+  <dialog id="about" aria-labelledby="about-title">
+      <div class="dialog-heading">
+        <h2 id="about-title">About LitTraceAI</h2>
+        <form method="dialog"><button class="close" autofocus>Close</button></form>
+      </div>
+      <div class="about-copy">
+        <p><strong>LitTraceAI</strong> stands for <strong>Literature Traceability using Artificial Intelligence</strong>. It generates structured literature reviews from a predefined collection of research papers and lets researchers inspect the evidence behind the generated text.</p>
+        <dl>
+          <dt>Lit: Literature</dt>
+          <dd>Organises research papers into a structured literature review.</dd>
+          <dt>Trace: Traceability</dt>
+          <dd>Links each generated sentence to its supporting source sentences through citations and provenance identifiers.</dd>
+          <dt>AI: Artificial Intelligence</dt>
+          <dd>Uses AI models to analyse, compare and synthesise research, and to evaluate how source information is transformed and whether citations support the generated text.</dd>
+        </dl>
+      </div>
+  </dialog>
+  <main class="wrap" id="catalogue">
+    <h1>Explore literature reviews</h1>
+    <p class="intro">Browse 26 literature reviews generated by LitTraceAI across 12 research fields.</p>
+    <h2>Research fields</h2>
+    <div class="grid">
+    <details>
+      <summary>Architecture <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <ul>
+        <li><a href="https://harmonious-sunflower-0d360f.netlify.app"><span class="review-code">ARCH-01</span> <span>Participatory Urban Planning</span></a></li>
+        <li><a href="https://sparkling-arithmetic-13d9d2.netlify.app"><span class="review-code">ARCH-02</span> <span>Urban Green Spaces and Well-being</span></a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Biology <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <ul>
+        <li><a href="https://kaleidoscopic-centaur-38acb0.netlify.app"><span class="review-code">BIO-01</span> <span>Crustacean Geometric Morphometrics</span></a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Business <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <ul>
+        <li><a href="https://fabulous-sundae-2f44cc.netlify.app"><span class="review-code">BUS-01</span> <span>Customer Experience and Sustainability</span></a></li>
+        <li><a href="https://rainbow-druid-ea3baf.netlify.app"><span class="review-code">BUS-02</span> <span>Innovation in Family Businesses</span></a></li>
+        <li><a href="https://calm-gecko-3b9b3e.netlify.app"><span class="review-code">BUS-03</span> <span>Knowledge Management in Projects</span></a></li>
+        <li><a href="https://serene-duckanoo-2dc2ca.netlify.app"><span class="review-code">BUS-04</span> <span>Organisational Culture and Innovation</span></a></li>
+        <li><a href="https://creative-queijadas-b7e98b.netlify.app"><span class="review-code">BUS-05</span> <span>Service Value Co-Creation</span></a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Computer Science <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <ul>
+        <li><a href="https://precious-strudel-b5b5ec.netlify.app"><span class="review-code">CS-01</span> <span>Graph Neural Networks for Sentiment Analysis</span></a></li>
+        <li><a href="https://thunderous-monstera-3337b8.netlify.app/"><span class="review-code">CS-02</span> <span>Scientific Knowledge Graphs</span></a></li>
+        <li><a href="https://celadon-semolina-d1121c.netlify.app"><span class="review-code">CS-03</span> <span>Web Accessibility</span></a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Economics <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <ul>
+        <li><a href="https://zesty-lamington-595a7c.netlify.app"><span class="review-code">ECON-01</span> <span>Digital Skills and Platform Work</span></a></li>
+        <li><a href="https://nimble-liger-95da8a.netlify.app/"><span class="review-code">ECON-02</span> <span>Entrepreneurship and Informality</span></a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Education <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <ul>
+        <li><a href="https://beautiful-cocada-b9f24d.netlify.app"><span class="review-code">EDU-01</span> <span>Student Questioning and Learning</span></a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Engineering <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <ul>
+        <li><a href="https://thriving-kelpie-70f07a.netlify.app"><span class="review-code">ENG-01</span> <span>AI for Building Energy Efficiency</span></a></li>
+        <li><a href="https://super-phoenix-a5e1e6.netlify.app/"><span class="review-code">ENG-02</span> <span>Power System Expansion Planning</span></a></li>
+        <li><a href="https://strong-cendol-3b2638.netlify.app"><span class="review-code">ENG-03</span> <span>Radar-Based Deformation Monitoring</span></a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Information Science <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <ul>
+        <li><a href="https://guileless-semifreddo-0e4541.netlify.app"><span class="review-code">IS-01</span> <span>Citations to Retracted Papers</span></a></li>
+        <li><a href="https://radiant-smakager-e9cd7b.netlify.app/"><span class="review-code">IS-02</span> <span>Open Access Publishing</span></a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Medicine <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <ul>
+        <li><a href="https://tranquil-rugelach-4bb4f7.netlify.app/"><span class="review-code">MED-01</span> <span>Respiratory Sarcopenia: Diagnosis and Management</span></a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Microbiology <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <ul>
+        <li><a href="https://snazzy-queijadas-efd155.netlify.app"><span class="review-code">MICRO-01</span> <span>Antimicrobial Resistance in Poultry</span></a></li>
+        <li><a href="https://velvety-eclair-ebea08.netlify.app"><span class="review-code">MICRO-02</span> <span>Bacterial Antimicrobial Resistance</span></a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Occupational Safety <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <ul>
+        <li><a href="https://delightful-sundae-065af5.netlify.app"><span class="review-code">OS-01</span> <span>Healthcare Worker Mental Health</span></a></li>
+        <li><a href="https://statuesque-alpaca-8e07a2.netlify.app"><span class="review-code">OS-02</span> <span>Occupational Ergonomics</span></a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Psychology <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <ul>
+        <li><a href="https://luminous-narwhal-2fa2e4.netlify.app"><span class="review-code">PSY-01</span> <span>AI Adoption and Innovation</span></a></li>
+        <li><a href="https://stunning-crostata-315f45.netlify.app"><span class="review-code">PSY-02</span> <span>Unethical Pro-organisational Behaviour</span></a></li>
+      </ul>
+    </details>
+    </div>
+  </main>
+  <main class="wrap" id="viewer" hidden>
+    <div class="viewer-toolbar">
+      <button class="close" id="back-to-reviews" type="button">← Back to reviews</button>
+      <a id="original-review" target="_blank" rel="noopener">Open original (new tab)</a>
+    </div>
+    <h1 id="review-title" tabindex="-1"></h1>
+    <iframe class="review-frame" id="review-frame" title="Literature review"></iframe>
+  </main>
+  <script>
+    const about = document.querySelector('#about');
+    document.querySelector('#open-about').addEventListener('click', () => about.showModal());
+    const catalogue = document.querySelector('#catalogue');
+    const viewer = document.querySelector('#viewer');
+    const title = document.querySelector('#review-title');
+    const frame = document.querySelector('#review-frame');
+    const original = document.querySelector('#original-review');
+    let selectedReview;
+
+    catalogue.addEventListener('click', event => {
+      const link = event.target.closest('.grid a');
+      if (!link || event.defaultPrevented || event.button !== 0 ||
+          event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+      event.preventDefault();
+      selectedReview = link;
+      history.pushState({ review: true }, '');
+      title.textContent = link.textContent.trim();
+      frame.title = title.textContent;
+      original.href = link.href;
+      frame.src = link.href;
+      catalogue.hidden = true;
+      viewer.hidden = false;
+      title.focus();
+      window.scrollTo(0, 0);
+    });
+
+    function showCatalogue() {
+      viewer.hidden = true;
+      frame.removeAttribute('src');
+      catalogue.hidden = false;
+      selectedReview.focus();
+    }
+
+    document.querySelector('#back-to-reviews').addEventListener('click', () => {
+      history.replaceState(null, '');
+      showCatalogue();
+    });
+    window.addEventListener('popstate', () => {
+      if (!selectedReview) return;
+      if (history.state?.review) {
+        frame.src = selectedReview.href;
+        catalogue.hidden = true;
+        viewer.hidden = false;
+        title.focus();
+        return;
+      }
+      showCatalogue();
+    });
+  </script>
+</body>
+</html>
