@@ -1,11 +1,21 @@
 # LitTraceAI
 
-This repository implements LitTraceAI (Literature Traceability using Artificial Intelligence), a research prototype based on retrieval-augmented generation (RAG). It drafts literature review sections from researcher-selected papers. LitTraceAI supports **researcher agency** through sentence-level inspection of source evidence, its rhetorical roles and transformations, and citation support.
+This repository implements LitTraceAI (Literature Traceability using Artificial Intelligence), a prototype tool based on retrieval-augmented generation (RAG). It drafts literature review sections based on the papers researchers selected to conduct the literature review. LitTraceAI supports **researcher agency** through sentence-level inspection of source evidence, its rhetorical roles and transformations, and citation support.
 
 ## 📖 Overview
 
-LitTraceAI combines AI-Assisted Literature Review (AILR), the rhetorical structure of scientific writing, and trustworthiness principles to guide evidence organisation, synthesis, and researcher inspection.
+LitTraceAI combines AI-Assisted Literature Review (AILR) principales, the rhetorical structure of scientific writing, and trustworthiness principles to guide evidence organisation, synthesis, and researcher inspection.
 
+<ul>
+  <li>
+    <strong>AILR foundation.</strong> Supports Literature Review Planning
+    and Critical Synthesis and Knowledge Organisation, with researcher
+    agency guiding draft inspection.
+    <a href="https://github.com/fcobolanos/RWG_Survey/tree/main"
+       target="_blank"
+       rel="noopener noreferrer">Explore the AILR framework</a>.
+  </li>
+</ul>
 - **AILR foundation.** Supports Literature Review Planning and Critical Synthesis and Knowledge Organisation, with researcher agency guiding draft inspection. [Explore the AILR framework](https://github.com/fcobolanos/RWG_Survey/tree/main).
 - **Rhetorical structure.** Uses a fine-tuned Gemma 2 9B classifier to identify the roles of sentences in source literature review sections, including study descriptions, results, limitations, and research gaps. [Explore the classifier](https://github.com/fcobolanos/Classifying-the-Components-of-a-Literature-Review).
 - **Thematic organisation.** Groups evidence under topic headings, following a concept-centric approach (Webster and Watson, 2002), and ranks sentences by relevance.
