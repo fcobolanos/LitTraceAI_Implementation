@@ -84,6 +84,8 @@ This flow connects paper preparation in Module 1, review generation in Module 2,
 
 The LitTraceAI processing pipeline is implemented using customised Python and R scripts, a fine-tuned Gemma 2 9B classifier, and large language models (LLMs). The table maps each procedure to its implementation. [Browse the implementation code](https://github.com/fcobolanos/LitTraceAI_Implementation/tree/main/code).
 
+The selected papers for each generated literature review and their corresponding TEI-XML files are available in the [raw data directory](https://github.com/fcobolanos/LitTraceAI_Implementation/tree/main/raw%20data).
+
 | Module | Functional unit | Procedure | Implementation |
 | --- | --- | --- | --- |
 | 1. Data Ingestion & Preprocessing | Document Parsing & Structuring | M1-P1 Document Parsing | Python script |
@@ -108,6 +110,8 @@ The LitTraceAI processing pipeline is implemented using customised Python and R 
 **Sentence Role Classification.** The fine-tuned Gemma 2 9B script classifies each segmented sentence into one of the seven rhetorical categories defined by the annotation schema in Section 3.2.2. [View the Gemma classifier notebook](https://github.com/fcobolanos/Classifying-the-Components-of-a-Literature-Review/blob/main/code/fine-tuning/LRO_ft_Gemma.ipynb).
 
 **Model selection.** GPT-4o implements the procedures that rely on an LLM, with DeepSeek-R1 used for Sentence Relevance Assessment. During development, a preliminary heuristic evaluation for model selection ran the complete LitTraceAI pipeline on ten cases across three disciplines (five in computer science, three in business, and two in psychology). It considered Mistral, Sonnet, OLMo, GPT-4o, and DeepSeek-R1. GPT-4o and DeepSeek-R1 gave the best results for their respective procedures. The expert evaluation reported in subsequent chapters was conducted separately.
+
+**LLM calls.** Each procedure that uses an LLM makes exactly one call to its assigned model per execution.
 
 **Prompt design and temperature.** The prompt template for each LLM-based procedure was refined iteratively following Berryman and Ziegler (2024). The temperature was set to `0` for consistency. During the preliminary evaluation, values above `0` changed the scientific terminology in generated content, altering its intended meaning and reducing the quality of the affected procedures.
 
