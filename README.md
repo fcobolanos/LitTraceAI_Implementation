@@ -1,6 +1,6 @@
 # LitTraceAI
 
-This repository implements **LitTraceAI (Literature Traceability using Artificial Intelligence)**, a research prototype based on **retrieval-augmented generation (RAG)**. It drafts literature review sections from researcher-selected papers. LitTraceAI supports **researcher agency** through sentence-level inspection of source evidence, its rhetorical roles and transformations, and citation support.
+This repository implements LitTraceAI (Literature Traceability using Artificial Intelligence), a research prototype based on retrieval-augmented generation (RAG). It drafts literature review sections from researcher-selected papers. LitTraceAI supports **researcher agency** through sentence-level inspection of source evidence, its rhetorical roles and transformations, and citation support.
 
 ## 📖 Overview
 
