@@ -84,7 +84,8 @@ This flow connects paper preparation in Module 1, review generation in Module 2,
 
 The LitTraceAI processing pipeline is implemented using customised Python and R scripts, a fine-tuned Gemma 2 9B classifier, and large language models (LLMs). The table maps each procedure to its implementation. [Browse the implementation code](https://github.com/fcobolanos/LitTraceAI_Implementation/tree/main/code).
 
-The selected papers for each generated literature review and their corresponding TEI-XML files are available in the [raw data directory](https://github.com/fcobolanos/LitTraceAI_Implementation/tree/main/raw%20data).
+To see which sources the pipeline used for each generated literature review, consult the selected papers and their corresponding TEI-XML files in the  [raw data directory](https://github.com/fcobolanos/LitTraceAI_Implementation/tree/main/raw%20data).
+
 
 | Module | Functional unit | Procedure | Implementation |
 | --- | --- | --- | --- |
