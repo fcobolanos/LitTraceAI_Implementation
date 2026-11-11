@@ -12,7 +12,7 @@ LitTraceAI combines AI-Assisted Literature Review (AILR) principales, the rhetor
     and Critical Synthesis and Knowledge Organisation, with researcher
     agency guiding draft inspection.
     <a href="https://github.com/fcobolanos/RWG_Survey/tree/main"
-       target="_blank"
+       target="https://github.com/fcobolanos/RWG_Survey/tree/main"
        rel="noopener noreferrer">Explore the AILR framework</a>.
   </li>
 </ul>
