@@ -80,7 +80,36 @@ This flow connects paper preparation in Module 1, review generation in Module 2,
 
 ![LitTraceAI Module 3 architecture](./images/LitTraceAI_Architecture_Module3.png)
 
-[Browse the implementation code](./code) · [View the Gemma classifier notebook](https://github.com/fcobolanos/Classifying-the-Components-of-a-Literature-Review/blob/main/code/fine-tuning/LRO_ft_Gemma.ipynb)
+## 💻 Code Information
+
+The LitTraceAI processing pipeline is implemented using customised Python and R scripts, a fine-tuned Gemma 2 9B classifier, and large language models (LLMs). The table maps each procedure to its implementation. [Browse the implementation code](https://github.com/fcobolanos/LitTraceAI_Implementation/tree/main/code).
+
+| Module | Functional unit | Procedure | Implementation |
+| --- | --- | --- | --- |
+| 1. Data Ingestion & Preprocessing | Document Parsing & Structuring | M1-P1 Document Parsing | Python script |
+| | | M1-P2 Data Extraction | Python script |
+| | | M1-P3 Literature Review Aggregation | R script |
+| | Cross-Dataset Identifier Integration | M1-P4 Reference Identifier Standardisation | R script |
+| | | M1-P5 Publication Identifier Standardisation | R script |
+| | Text Normalisation & Segmentation | M1-P6 Coreference Resolution | GPT-4o |
+| | | M1-P7 Sentence Segmentation Preprocessing | R script |
+| | | M1-P8 Sentence Segmentation and Change Detection | R script |
+| 2. Literature Analysis & Synthesis | Sentence Annotation & Traceability | M2-P1 Sentence Role Classification | Fine-tuned Gemma 2 9B script |
+| | | M2-P2 Provenance Identification & Validation | R script |
+| | Thematic Organisation & Relevance Evaluation | M2-P3 Section Heading Discovery | GPT-4o |
+| | | M2-P4 Sentence-to-Section Heading Mapping | GPT-4o |
+| | | M2-P5 Sentence Relevance Assessment | DeepSeek-R1 |
+| | Comparative Relationship Identification | M2-P6 Sentence Pair Validation & Relationship Classification | GPT-4o |
+| | Section Synthesis & Composition | M2-P7 Evidence-Grounded Section Construction | GPT-4o |
+| 3. Content Transparency & Inspection | Generated Content Inspection | M3-P1 Text Transformation Analysis | GPT-4o |
+| | | M3-P2 Citation Support Evaluation | GPT-4o |
+| | Content Preparation & Interactive Inspection | M3-P3 Interactive Content Rendering | Python script |
+
+**Sentence Role Classification.** The fine-tuned Gemma 2 9B script classifies each segmented sentence into one of the seven rhetorical categories defined by the annotation schema in Section 3.2.2. [View the Gemma classifier notebook](https://github.com/fcobolanos/Classifying-the-Components-of-a-Literature-Review/blob/main/code/fine-tuning/LRO_ft_Gemma.ipynb).
+
+**Model selection.** GPT-4o implements the procedures that rely on an LLM, with DeepSeek-R1 used for Sentence Relevance Assessment. During development, a preliminary heuristic evaluation for model selection ran the complete LitTraceAI pipeline on ten cases across three disciplines (five in computer science, three in business, and two in psychology). It considered Mistral, Sonnet, OLMo, GPT-4o, and DeepSeek-R1. GPT-4o and DeepSeek-R1 gave the best results for their respective procedures. The expert evaluation reported in subsequent chapters was conducted separately.
+
+**Prompt design and temperature.** The prompt template for each LLM-based procedure was refined iteratively following Berryman and Ziegler (2024). The temperature was set to `0` for consistency. During the preliminary evaluation, values above `0` changed the scientific terminology in generated content, altering its intended meaning and reducing the quality of the affected procedures.
 
 ## 🚀 Explore the Interactive Examples
 
