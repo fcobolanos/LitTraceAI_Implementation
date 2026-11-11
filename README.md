@@ -5,17 +5,6 @@ This repository implements LitTraceAI (Literature Traceability using Artificial 
 ## 📖 Overview
 
 LitTraceAI combines AI-Assisted Literature Review (AILR) principales, the rhetorical structure of scientific writing, and trustworthiness principles to guide evidence organisation, synthesis, and researcher inspection.
-
-<ul>
-  <li>
-    <strong>AILR foundation.</strong> Supports Literature Review Planning
-    and Critical Synthesis and Knowledge Organisation, with researcher
-    agency guiding draft inspection.
-    <a href="https://github.com/fcobolanos/RWG_Survey/tree/main"
-       target="https://github.com/fcobolanos/RWG_Survey/tree/main"
-       rel="noopener noreferrer">Explore the AILR framework</a>.
-  </li>
-</ul>
 - **AILR foundation.** Supports Literature Review Planning and Critical Synthesis and Knowledge Organisation, with researcher agency guiding draft inspection. [Explore the AILR framework](https://github.com/fcobolanos/RWG_Survey/tree/main).
 - **Rhetorical structure.** Uses a fine-tuned Gemma 2 9B classifier to identify the roles of sentences in source literature review sections, including study descriptions, results, limitations, and research gaps. [Explore the classifier](https://github.com/fcobolanos/Classifying-the-Components-of-a-Literature-Review).
 - **Thematic organisation.** Groups evidence under topic headings, following a concept-centric approach (Webster and Watson, 2002), and ranks sentences by relevance.
