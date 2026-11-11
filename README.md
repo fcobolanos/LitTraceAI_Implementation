@@ -116,6 +116,21 @@ To see which sources the pipeline used for each generated literature review, con
 
 **Prompt design and temperature.** The prompt template for each LLM-based procedure was refined iteratively following Berryman and Ziegler (2024). The temperature was set to `0` for consistency. During the preliminary evaluation, values above `0` changed the scientific terminology in generated content, altering its intended meaning and reducing the quality of the affected procedures.
 
+## 🚀 Usage Instructions
+
+**1. Prerequisites**
+
+- Python 3.9 or higher for the Python scripts and notebooks.
+- R for the R scripts.
+- An OpenAI API key for GPT-4o calls.
+- Amazon Bedrock access with permission to invoke DeepSeek-R1 for Sentence Relevance Assessment (M2-P5).
+
+**2. Execution**
+
+1. Select the papers for your literature review. To reproduce a provided example, use the selected papers and their corresponding TEI-XML files in the [raw data directory](./raw%20data).
+2. Run the procedures sequentially in the order listed in the [Code Information table](#-code-information), from M1-P1 through M3-P3. Use the outputs of earlier procedures as inputs to later procedures where required. The [code directory](./code) contains the available scripts and notebooks.
+3. At **M2-P1 · Sentence Role Classification**, follow the **Fine-Tuning** instructions in the classifier repository before running the classification notebook. See [the classifier’s Usage Instructions](https://github.com/fcobolanos/Classifying-the-Components-of-a-Literature-Review#-usage-instructions).
+
 ## 🚀 Explore the Interactive Examples
 
 The interface catalogue lists **26 LitTraceAI-generated literature reviews across 12 research fields**. Choose a review to explore the generated sections, the source sentences behind individual claims, and the citation-support assessments.
