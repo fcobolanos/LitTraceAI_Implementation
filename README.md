@@ -89,7 +89,7 @@ To see which sources the pipeline used for each generated literature review, con
 
 | Module | Functional unit | Procedure | Implementation |
 | --- | --- | --- | --- |
-| 1. Data Ingestion & Preprocessing | Document Parsing & Structuring | M1-P1 Document Parsing | Python script |
+| 1. Data Ingestion & Preprocessing | Document Parsing & Structuring | M1-P1 Document Parsing | [GROBID web interface](https://kermitt2-grobid.hf.space/) |
 | | | M1-P2 Data Extraction | Python script |
 | | | M1-P3 Literature Review Aggregation | R script |
 | | Cross-Dataset Identifier Integration | M1-P4 Reference Identifier Standardisation | R script |
